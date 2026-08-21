@@ -1,0 +1,2641 @@
+{
+  "catalogue": {
+    "library": false,
+    "id": "e85f-5832-af6e-845f",
+    "name": "Harlequins 3.3.3",
+    "gameSystemId": "sys-b298-09dc-9597-23fd",
+    "gameSystemRevision": 1,
+    "revision": 3,
+    "battleScribeVersion": "2.03",
+    "type": "catalogue",
+    "selectionEntries": [
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Troupe Master",
+        "hidden": false,
+        "id": "217c-3b14-778d-b90f",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 50
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "14a0-8aad-6edd-4e56",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "1792-9322-61a7-8cf1",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "7676-9198-afa8-08de",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          }
+        ],
+        "sortIndex": 1,
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "roster",
+            "childId": "d590-4471-8103-5479",
+            "name": "Attaches To",
+            "id": "fd6d-cfe3-ac2f-5618",
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "label": "Leader",
+            "defaultSelectionEntryId": "none",
+            "childName": "May Attach To: Troupe Master"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Attached Leader",
+            "id": "0651-2971-38ff-ef19",
+            "hidden": false,
+            "description": "This unit must attach to one of:\n1) LIGHT TROUPE\n2) DARK TROUPE\n3) TWILIGHT TROUPE",
+            "noindex": false
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout",
+            "id": "6165-bf13-8a18-9a2a",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "f671-c344-5f6a-d8ec",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "39ab-62dd-b44b-f24e",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "4092-354b-9373-f929",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Shuriken Pistol",
+                    "hidden": false,
+                    "id": "2e4d-3ecb-4b30-cd98",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Neuro Disruptor",
+                    "hidden": false,
+                    "id": "657d-0191-ffb9-e1ea",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Fusion Pistol",
+                    "hidden": false,
+                    "id": "c1ab-c147-993b-799b",
+                    "sortIndex": 3
+                  }
+                ],
+                "defaultSelectionEntryId": "2e4d-3ecb-4b30-cd98"
+              },
+              {
+                "name": "​",
+                "id": "15ce-a5e5-4041-483b",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "f0ab-363e-018d-61dc",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "96c7-acbe-3a41-20e8",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Harlequin's Kiss",
+                    "hidden": false,
+                    "id": "eb30-f09c-6de3-5b14",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Power Sword",
+                    "hidden": false,
+                    "id": "db06-9fb9-fd1f-91b3",
+                    "sortIndex": 2
+                  }
+                ],
+                "defaultSelectionEntryId": "eb30-f09c-6de3-5b14"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "faa7-f25a-6df3-6706",
+            "hidden": false,
+            "sortIndex": 2,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "9b0c-a876-d30f-52f9",
+                "includeChildSelections": false
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Plasma Grenade",
+                "hidden": false,
+                "id": "9058-96c9-a1e3-8a9d",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "4c5e-cd30-317c-216f",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Haywire Grenade",
+                "hidden": false,
+                "id": "1ff5-aed2-4686-8eae",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "d583-863c-9ed0-2634",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Prismatic Grenade",
+                "hidden": false,
+                "id": "007f-b9c3-87f3-5611",
+                "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "afed-1e22-82a7-6f58",
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "comment": "PHASE 0.1 WARGEAR: decision-oriented V5 grammar. Mandatory loadout choices are rendered as visually separated exclusivity islands with the first source option selected by default. Fixed mandatory equipment is preselected. Optional paid wargear is unit-level and unselected by default. No weapon profiles are included."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Shadowseer",
+        "hidden": false,
+        "id": "ba23-6f4f-cd58-a417",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 50
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "bdc2-89b5-fbf7-e4e9",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "1703-cb91-4d44-7c74",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "6c46-dc19-c472-72c3",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          }
+        ],
+        "sortIndex": 2,
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "roster",
+            "childId": "6109-af9c-8ab7-0e46",
+            "name": "Attaches To",
+            "id": "b5ac-f957-aa91-d8b7",
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "label": "Leader",
+            "defaultSelectionEntryId": "none",
+            "childName": "May Attach To: Shadowseer"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Attached Leader",
+            "id": "886d-bd00-4978-4c38",
+            "hidden": false,
+            "description": "This unit must attach to one of:\n1) LIGHT TROUPE\n2) DARK TROUPE\n3) TWILIGHT TROUPE",
+            "noindex": false
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout",
+            "id": "1e59-f77c-dea7-e99e",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "5dd1-b1de-1902-9b58",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "d602-f6d9-027f-9c63",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "35e9-c1ac-48e0-3279",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Shuriken Pistol",
+                    "hidden": false,
+                    "id": "bda8-15f6-037b-7824",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Neuro Disruptor",
+                    "hidden": false,
+                    "id": "a93b-5131-5731-50e7",
+                    "sortIndex": 2
+                  }
+                ],
+                "defaultSelectionEntryId": "bda8-15f6-037b-7824"
+              },
+              {
+                "name": "​",
+                "id": "c3f9-6330-29eb-3ab6",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "9eff-aecc-2a64-563d",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "513b-8619-08c8-ea93",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Miststave",
+                    "hidden": false,
+                    "id": "1a0c-c7f7-d187-6c7d",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "1a0c-c7f7-d187-6c7d"
+              },
+              {
+                "name": "​",
+                "id": "b16b-a7e9-e74b-d5a6",
+                "hidden": false,
+                "sortIndex": 3,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "f9d9-a0b1-a7df-3d04",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "016b-e104-186f-7fc1",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Creidann Grenade Launcher",
+                    "hidden": false,
+                    "id": "ba2b-a81a-321b-5b90",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "ba2b-a81a-321b-5b90"
+              }
+            ]
+          }
+        ],
+        "comment": "PHASE 0.1 WARGEAR: decision-oriented V5 grammar. Mandatory loadout choices are rendered as visually separated exclusivity islands with the first source option selected by default. Fixed mandatory equipment is preselected. Optional paid wargear is unit-level and unselected by default. No weapon profiles are included."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Light Troupe",
+        "hidden": false,
+        "id": "0263-e721-5014-6588",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 160
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "1f85-4f85-d07e-1af5",
+            "id": "ef35-24a3-9fd3-e021",
+            "primary": true,
+            "name": "Troop"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "ea6f-f294-1a8c-10e6",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "d590-4471-8103-5479",
+            "id": "ab47-23d0-b28b-b910",
+            "primary": false,
+            "name": "May Attach To: Troupe Master"
+          },
+          {
+            "targetId": "6109-af9c-8ab7-0e46",
+            "id": "3852-9dac-0795-5bf3",
+            "primary": false,
+            "name": "May Attach To: Shadowseer"
+          }
+        ],
+        "sortIndex": 3,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "df42-f332-912e-5785",
+            "childId": "any",
+            "includeChildSelections": false
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout",
+            "id": "6678-b5e0-7edd-aca9",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Models 1-3",
+                "id": "252d-af74-3cf1-aa09",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "83a6-eb85-1546-d30d",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "b03a-1b4d-7221-28af",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ce62-04ee-d884-27a5",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "3x Shuriken Pistol",
+                        "hidden": false,
+                        "id": "c178-653a-5f20-38da",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "c178-653a-5f20-38da"
+                  },
+                  {
+                    "name": "Choose either:",
+                    "id": "5810-1542-e27a-3ce5",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4df2-ae4b-6380-5358",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "253b-5335-91b9-1a6e",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "3x Harlequin's Kiss",
+                        "hidden": false,
+                        "id": "b139-33c0-f16e-1e69",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "3x Power Sword",
+                        "hidden": false,
+                        "id": "da80-00ad-b445-0f98",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b139-33c0-f16e-1e69"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Special Weapon Loadouts",
+            "id": "97af-d49f-8219-8799",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "Model 4",
+                "id": "b638-ab81-a12c-2eb5",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "99de-a09d-aa66-baa8",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "28b5-abc0-b678-1fa4",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ff57-3192-193d-29b1",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Shuriken Pistol",
+                        "hidden": false,
+                        "id": "6b8e-910c-b9c8-ad34",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Fusion Pistol",
+                        "hidden": false,
+                        "id": "eb26-83d2-4081-d4b8",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Neuro Disruptor",
+                        "hidden": false,
+                        "id": "ab28-da4f-678e-e156",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "6b8e-910c-b9c8-ad34"
+                  },
+                  {
+                    "name": "​",
+                    "id": "bde1-2ec2-3353-3b3d",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1e9e-c930-4cbc-65c1",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d579-c0a5-2f12-1d49",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Harlequin's Kiss",
+                        "hidden": false,
+                        "id": "e2d1-e916-15d0-b3a8",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "70d4-cd80-cd28-6514",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "e2d1-e916-15d0-b3a8"
+                  }
+                ]
+              },
+              {
+                "name": "Model 5",
+                "id": "36d0-f4d6-d09b-48b5",
+                "hidden": false,
+                "sortIndex": 2,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "a59f-f2e0-62d5-58e3",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "52b6-eb35-eefe-893c",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5634-1fee-a46c-ed3f",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Shuriken Pistol",
+                        "hidden": false,
+                        "id": "3ebd-e90f-ffce-4f1e",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Fusion Pistol",
+                        "hidden": false,
+                        "id": "e6bf-59e1-be54-1789",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Neuro Disruptor",
+                        "hidden": false,
+                        "id": "15a3-6ade-8982-63fa",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "3ebd-e90f-ffce-4f1e"
+                  },
+                  {
+                    "name": "​",
+                    "id": "78b5-7479-c9bb-e5f9",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "43c2-7c31-a77f-1b36",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4b50-bc80-dfff-ad79",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Harlequin's Kiss",
+                        "hidden": false,
+                        "id": "5c36-e8e6-acaa-d557",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "49cd-de76-01f8-f65d",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "5c36-e8e6-acaa-d557"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "4b88-7f35-c139-e663",
+            "hidden": false,
+            "sortIndex": 3,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "7872-7abe-013e-8918",
+                "includeChildSelections": false
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Plasma Grenade",
+                "hidden": false,
+                "id": "fd78-27d0-6cbe-ce9f",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "ffc1-8cc9-db5e-7532",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Haywire Grenade",
+                "hidden": false,
+                "id": "b240-2455-faff-c65d",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "7fb1-ed66-544c-6bd0",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Prismatic Grenade",
+                "hidden": false,
+                "id": "f379-074b-8da0-07dc",
+                "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "70d5-4fb6-5af4-ce3a",
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "comment": "PHASE 0.1 LOADOUT PROTOTYPE V4: decision-oriented display. Models 1-3 are consolidated into one baseline loadout block; its melee selection applies to all three baseline models together. Models 4-5 remain separate under Special Weapon Loadouts to expose the two-model pistol replacement allowance. Paid grenade wargear remains unit-level max 1. First option in mandatory choice groups is selected by default."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Dark Troupe",
+        "hidden": false,
+        "id": "10cc-b7dd-6b20-9193",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 160
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "1f85-4f85-d07e-1af5",
+            "id": "000f-fb53-1e97-367d",
+            "primary": true,
+            "name": "Troop"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "0e39-b481-1507-a3fb",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "d590-4471-8103-5479",
+            "id": "4c24-e2e9-0e64-f8be",
+            "primary": false,
+            "name": "May Attach To: Troupe Master"
+          },
+          {
+            "targetId": "6109-af9c-8ab7-0e46",
+            "id": "6d54-c42f-7622-eb24",
+            "primary": false,
+            "name": "May Attach To: Shadowseer"
+          }
+        ],
+        "sortIndex": 4,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "f3b9-f1d7-1426-c67c",
+            "childId": "any",
+            "includeChildSelections": false
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout",
+            "id": "cff7-b638-f44b-2537",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Models 1-3",
+                "id": "7e8b-99b4-9844-4eae",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "1782-893f-db33-70f7",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1f82-6b0a-b806-4709",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "b2be-ef51-de62-8e96",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "3x Shuriken Pistol",
+                        "hidden": false,
+                        "id": "99ed-e6af-2265-d3f0",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "99ed-e6af-2265-d3f0"
+                  },
+                  {
+                    "name": "Choose either:",
+                    "id": "6f89-3cc7-29f1-2903",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6e53-838b-d874-1a39",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c740-9b90-1332-efea",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "3x Harlequin's Kiss",
+                        "hidden": false,
+                        "id": "d912-fae4-c7b6-9979",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "3x Power Sword",
+                        "hidden": false,
+                        "id": "d35d-2a16-9ec4-e5e9",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d912-fae4-c7b6-9979"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Special Weapon Loadouts",
+            "id": "154c-6b6f-9ee9-5cfa",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "Model 4",
+                "id": "32ba-5061-bdb8-7dda",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "26b0-0098-45c9-e7e9",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e28c-178b-1046-93f8",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4a0c-0f8a-680c-5977",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Shuriken Pistol",
+                        "hidden": false,
+                        "id": "07d7-6626-1535-83a9",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Fusion Pistol",
+                        "hidden": false,
+                        "id": "0776-f784-e7a4-f33f",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Neuro Disruptor",
+                        "hidden": false,
+                        "id": "9bc4-66a4-7281-cf64",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "07d7-6626-1535-83a9"
+                  },
+                  {
+                    "name": "​",
+                    "id": "4397-2c3a-825b-1b38",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f793-89e6-c0c0-c54a",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c75d-c076-a947-b294",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Harlequin's Kiss",
+                        "hidden": false,
+                        "id": "743e-f204-6ed2-35fd",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "8811-762a-c0dc-c6b7",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "743e-f204-6ed2-35fd"
+                  }
+                ]
+              },
+              {
+                "name": "Model 5",
+                "id": "6bb1-97ee-cfc8-9ed5",
+                "hidden": false,
+                "sortIndex": 2,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "cb71-edc5-68ad-fe6c",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a6c9-ddb9-90dd-21b4",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "79fb-4e01-2ac7-9471",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Shuriken Pistol",
+                        "hidden": false,
+                        "id": "f7c3-6a2b-f9e2-da41",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Fusion Pistol",
+                        "hidden": false,
+                        "id": "70e2-1b64-d42a-54dc",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Neuro Disruptor",
+                        "hidden": false,
+                        "id": "b04b-2764-e0f1-0bbb",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "f7c3-6a2b-f9e2-da41"
+                  },
+                  {
+                    "name": "​",
+                    "id": "6258-d011-59ef-e4c9",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f535-55fc-be59-b1bd",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "64c4-0080-7d35-29ce",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Harlequin's Kiss",
+                        "hidden": false,
+                        "id": "b808-de95-4792-c76c",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "9c55-67b9-0e6f-a6e4",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b808-de95-4792-c76c"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "246f-c775-4181-fdb9",
+            "hidden": false,
+            "sortIndex": 3,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "8898-a97c-4780-d17c",
+                "includeChildSelections": false
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Plasma Grenade",
+                "hidden": false,
+                "id": "2a39-034f-d047-2219",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "0b54-d025-14e9-b112",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Haywire Grenade",
+                "hidden": false,
+                "id": "fa60-d2bd-f2c5-d33d",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "1159-197f-11ba-d3f4",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Prismatic Grenade",
+                "hidden": false,
+                "id": "ad83-d38e-ec28-6a3c",
+                "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "a837-39be-5348-68cb",
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "comment": "PHASE 0.1 LOADOUT PROTOTYPE V4: decision-oriented display. Models 1-3 are consolidated into one baseline loadout block; its melee selection applies to all three baseline models together. Models 4-5 remain separate under Special Weapon Loadouts to expose the two-model pistol replacement allowance. Paid grenade wargear remains unit-level max 1. First option in mandatory choice groups is selected by default."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Twilight Troupe",
+        "hidden": false,
+        "id": "5c4d-4c21-ffd4-1f5c",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 150
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "1f85-4f85-d07e-1af5",
+            "id": "e9dc-cb7f-4d65-674f",
+            "primary": true,
+            "name": "Troop"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "3308-0b03-91d1-978a",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "d590-4471-8103-5479",
+            "id": "24a3-b544-28e2-64b4",
+            "primary": false,
+            "name": "May Attach To: Troupe Master"
+          },
+          {
+            "targetId": "6109-af9c-8ab7-0e46",
+            "id": "a2d3-91f9-6970-220c",
+            "primary": false,
+            "name": "May Attach To: Shadowseer"
+          }
+        ],
+        "sortIndex": 5,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "5da8-98ae-64ac-1569",
+            "childId": "any",
+            "includeChildSelections": false
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout",
+            "id": "f087-7442-88af-29c9",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Models 1-3",
+                "id": "8dee-d6e1-31da-ec4e",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "85b8-d84d-0d5b-e4a7",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8aee-9b7f-30b5-55d8",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8960-3946-6d9b-21d8",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "3x Shuriken Pistol",
+                        "hidden": false,
+                        "id": "04ea-f2bc-5aff-c183",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "04ea-f2bc-5aff-c183"
+                  },
+                  {
+                    "name": "Choose either:",
+                    "id": "8ffa-3b2b-a003-9240",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "83e6-ac0c-a7d8-e842",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c9e4-a704-da96-57d4",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "3x Harlequin's Kiss",
+                        "hidden": false,
+                        "id": "1184-cfc6-b640-dca8",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "3x Power Sword",
+                        "hidden": false,
+                        "id": "b41a-a5f4-9481-fccb",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "1184-cfc6-b640-dca8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Special Weapon Loadouts",
+            "id": "f6c3-85e2-afbc-67f8",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "Model 4",
+                "id": "3262-83f7-269b-5a13",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "1578-406e-a3e3-8d21",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "13b0-e2cf-e74c-6a92",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3cb1-95c7-f079-3e87",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Shuriken Pistol",
+                        "hidden": false,
+                        "id": "65e0-f0f5-c3f0-8579",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Fusion Pistol",
+                        "hidden": false,
+                        "id": "b0e1-39a1-80c9-6aee",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Neuro Disruptor",
+                        "hidden": false,
+                        "id": "e24f-6adb-c32e-3ecb",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "65e0-f0f5-c3f0-8579"
+                  },
+                  {
+                    "name": "​",
+                    "id": "1a3c-46de-6650-1c21",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8ddd-7005-5421-985b",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c8c8-b43a-0a01-8def",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Harlequin's Kiss",
+                        "hidden": false,
+                        "id": "00b9-456a-2813-45d3",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "740d-9fa9-5bd2-7be9",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "00b9-456a-2813-45d3"
+                  }
+                ]
+              },
+              {
+                "name": "Model 5",
+                "id": "88a5-30d9-df32-bf43",
+                "hidden": false,
+                "sortIndex": 2,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "a1ff-fa4d-dcc2-8d17",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "183d-6e5d-ed0f-3647",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ea68-3974-8be7-1a04",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Shuriken Pistol",
+                        "hidden": false,
+                        "id": "9939-467d-b2d9-234d",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Fusion Pistol",
+                        "hidden": false,
+                        "id": "91c5-d7ae-dc17-f9fc",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Neuro Disruptor",
+                        "hidden": false,
+                        "id": "e61d-e111-43af-fd1a",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "9939-467d-b2d9-234d"
+                  },
+                  {
+                    "name": "​",
+                    "id": "7631-cbd1-2c28-311b",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "50d4-7eb4-ae2a-33c7",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1c93-070b-d6f2-81bd",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Harlequin's Kiss",
+                        "hidden": false,
+                        "id": "ac47-6788-5cc9-cff3",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "b40a-2a59-ce99-1ff0",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "ac47-6788-5cc9-cff3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "0b5e-30ff-059b-3403",
+            "hidden": false,
+            "sortIndex": 3,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "9646-b4b1-6888-5cfa",
+                "includeChildSelections": false
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Plasma Grenade",
+                "hidden": false,
+                "id": "fa63-b2ed-1657-ab58",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "e381-1545-c782-f76f",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Haywire Grenade",
+                "hidden": false,
+                "id": "8775-6236-418c-60a7",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "808a-c2f4-e5ae-a125",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Prismatic Grenade",
+                "hidden": false,
+                "id": "2a41-23cf-d6e4-aaf0",
+                "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "9cc4-8748-3731-e7ae",
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "comment": "PHASE 0.1 LOADOUT PROTOTYPE V4: decision-oriented display. Models 1-3 are consolidated into one baseline loadout block; its melee selection applies to all three baseline models together. Models 4-5 remain separate under Special Weapon Loadouts to expose the two-model pistol replacement allowance. Paid grenade wargear remains unit-level max 1. First option in mandatory choice groups is selected by default."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Solitaire",
+        "hidden": false,
+        "id": "30e9-6fb4-5180-5bab",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 200
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "8852-92b4-e0d8-b77f",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "23ab-542a-f998-1d51",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "c417-3a43-73d4-f4bf",
+            "id": "b312-1da3-bdae-2cd4",
+            "primary": false,
+            "name": "Rare"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "36b8-4996-d868-144f",
+            "includeChildSelections": true
+          }
+        ],
+        "sortIndex": 6,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout",
+            "id": "8578-7760-9d43-9ea5",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "f76e-82a4-ce98-f61e",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "6ce9-5e13-fd32-9d6b",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "b47b-fd83-15b1-b1a6",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Solitaire's Caress",
+                    "hidden": false,
+                    "id": "a2ee-c206-3da9-37b4",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "a2ee-c206-3da9-37b4"
+              },
+              {
+                "name": "​",
+                "id": "7cb6-c1a0-f841-7398",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "49ab-1d23-6819-46cd",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "dbe2-5da5-6b32-7e4c",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Solitaire's Embrace",
+                    "hidden": false,
+                    "id": "b42d-0113-a39b-842d",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "b42d-0113-a39b-842d"
+              }
+            ]
+          }
+        ],
+        "comment": "PHASE 0.1 WARGEAR: decision-oriented V5 grammar. Mandatory loadout choices are rendered as visually separated exclusivity islands with the first source option selected by default. Fixed mandatory equipment is preselected. Optional paid wargear is unit-level and unselected by default. No weapon profiles are included."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Death Jester",
+        "hidden": false,
+        "id": "04b8-acd2-a5bf-e9d8",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 120
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "8670-0356-ea31-31f9",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "7d7c-671b-90b0-8e6c",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "c417-3a43-73d4-f4bf",
+            "id": "b2ec-08dd-cc46-93bf",
+            "primary": false,
+            "name": "Rare"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "82ae-0c05-ca97-2801",
+            "includeChildSelections": true
+          }
+        ],
+        "sortIndex": 7,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout",
+            "id": "7c2a-88ba-5946-21db",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "5305-9e65-7250-713a",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "9854-c2b5-ec0a-f251",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "cbfa-bc5f-053c-8a9b",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Jester's Blade",
+                    "hidden": false,
+                    "id": "e12c-b1cc-ee59-27c5",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "e12c-b1cc-ee59-27c5"
+              },
+              {
+                "name": "​",
+                "id": "7020-1bed-7b66-e754",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "0d26-eec8-7ada-0eb2",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "e57b-cc7e-3e9a-00f0",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Shrieker Cannon",
+                    "hidden": false,
+                    "id": "0eb2-f23f-aafd-a41d",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Firepike",
+                    "hidden": false,
+                    "id": "e217-60fd-b348-d73b",
+                    "sortIndex": 2
+                  }
+                ],
+                "defaultSelectionEntryId": "0eb2-f23f-aafd-a41d"
+              }
+            ]
+          }
+        ],
+        "comment": "PHASE 0.1 WARGEAR: decision-oriented V5 grammar. Mandatory loadout choices are rendered as visually separated exclusivity islands with the first source option selected by default. Fixed mandatory equipment is preselected. Optional paid wargear is unit-level and unselected by default. No weapon profiles are included."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Skyweaver",
+        "hidden": false,
+        "id": "3468-3f0a-a805-f22b",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 120
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "1fd7-4e96-5709-1612",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "4402-e8b0-d3a6-4f3c",
+            "primary": false,
+            "name": "Infantry"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "max",
+            "value": 2,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "b765-4680-857f-d7d6",
+            "includeChildSelections": true
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "b765-4680-857f-d7d6",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "b765-4680-857f-d7d6",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              }
+            ]
+          }
+        ],
+        "sortIndex": 8,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout",
+            "id": "7282-5b08-fdfc-c1c9",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "3a3f-df07-26fa-dbe3",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "eb56-ac3d-ff55-46f5",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "1218-e5e0-cbb2-6b48",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Shuriken Cannon",
+                    "hidden": false,
+                    "id": "5017-ad15-b9c3-80e7",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Haywire Cannon",
+                    "hidden": false,
+                    "id": "eaac-bd79-cd3e-7d8b",
+                    "sortIndex": 2
+                  }
+                ],
+                "defaultSelectionEntryId": "5017-ad15-b9c3-80e7"
+              },
+              {
+                "name": "​",
+                "id": "dc60-56a3-5dfd-7447",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "2a82-d82c-ea03-a9fa",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "034d-8f0d-8aa0-95f1",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Zephyrglaive",
+                    "hidden": false,
+                    "id": "cb2c-3618-f95d-d590",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Star Bolas",
+                    "hidden": false,
+                    "id": "ccae-1484-ef7a-e7ad",
+                    "sortIndex": 2
+                  }
+                ],
+                "defaultSelectionEntryId": "cb2c-3618-f95d-d590"
+              }
+            ]
+          }
+        ],
+        "comment": "PHASE 0.1 WARGEAR: decision-oriented V5 grammar. Mandatory loadout choices are rendered as visually separated exclusivity islands with the first source option selected by default. Fixed mandatory equipment is preselected. Optional paid wargear is unit-level and unselected by default. No weapon profiles are included."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Voidweaver",
+        "hidden": false,
+        "id": "6637-ad91-396b-5fbf",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 120
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "d8c2-897a-d5b1-a9a0",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "377b-09f7-ed4a-0767",
+            "id": "1814-1c09-ca72-4dc4",
+            "primary": false,
+            "name": "Vehicle"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "max",
+            "value": 2,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "138e-a791-a7f7-b407",
+            "includeChildSelections": true
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "138e-a791-a7f7-b407",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "138e-a791-a7f7-b407",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              }
+            ]
+          }
+        ],
+        "sortIndex": 9,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout",
+            "id": "a678-c59a-e930-5644",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "d08d-304c-fd34-b56e",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "cc69-f163-f083-2b31",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "bd5f-42ef-46b3-45b5",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Shuriken Cannons",
+                    "hidden": false,
+                    "id": "54c9-5cef-98af-8756",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "54c9-5cef-98af-8756"
+              },
+              {
+                "name": "​",
+                "id": "c1fb-38a8-f1ba-e11c",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "4c0a-930f-8527-be58",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "e42c-2dc0-59d1-d283",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Haywire Cannon",
+                    "hidden": false,
+                    "id": "421c-d148-bbcd-2e42",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Prismatic Cannon",
+                    "hidden": false,
+                    "id": "241a-3be9-38ba-1de2",
+                    "sortIndex": 2
+                  }
+                ],
+                "defaultSelectionEntryId": "421c-d148-bbcd-2e42"
+              }
+            ]
+          }
+        ],
+        "comment": "PHASE 0.1 WARGEAR: decision-oriented V5 grammar. Mandatory loadout choices are rendered as visually separated exclusivity islands with the first source option selected by default. Fixed mandatory equipment is preselected. Optional paid wargear is unit-level and unselected by default. No weapon profiles are included."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Starweaver",
+        "hidden": false,
+        "id": "0e67-0338-4edd-0d3c",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 80
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "f3d4-514c-d725-408f",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "377b-09f7-ed4a-0767",
+            "id": "271e-4605-2deb-565e",
+            "primary": false,
+            "name": "Vehicle"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "max",
+            "value": 2,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "6ef7-9f54-6b51-d6ac",
+            "includeChildSelections": true
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "6ef7-9f54-6b51-d6ac",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "6ef7-9f54-6b51-d6ac",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              }
+            ]
+          }
+        ],
+        "sortIndex": 10,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout",
+            "id": "fb74-3af8-6af2-28c5",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "a67f-d253-968e-c209",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "3b7f-b206-5584-e38e",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "5977-b4dc-168a-9b22",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Shuriken Cannons",
+                    "hidden": false,
+                    "id": "52ad-86ea-05db-963e",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "52ad-86ea-05db-963e"
+              }
+            ]
+          }
+        ],
+        "comment": "PHASE 0.1 WARGEAR: decision-oriented V5 grammar. Mandatory loadout choices are rendered as visually separated exclusivity islands with the first source option selected by default. Fixed mandatory equipment is preselected. Optional paid wargear is unit-level and unselected by default. No weapon profiles are included."
+      }
+    ],
+    "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
+    "authorName": "Varmint",
+    "categoryEntries": [
+      {
+        "name": "May Attach To: Troupe Master",
+        "id": "d590-4471-8103-5479",
+        "hidden": true
+      },
+      {
+        "name": "May Attach To: Shadowseer",
+        "id": "6109-af9c-8ab7-0e46",
+        "hidden": true
+      }
+    ]
+  }
+}

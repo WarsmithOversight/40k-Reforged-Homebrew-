@@ -1,0 +1,807 @@
+{
+  "catalogue": {
+    "library": false,
+    "id": "2153-1bee-cbe2-cea0",
+    "name": "World Eaters 3.3.3",
+    "gameSystemId": "sys-b298-09dc-9597-23fd",
+    "gameSystemRevision": 1,
+    "revision": 1,
+    "battleScribeVersion": "2.03",
+    "type": "catalogue",
+    "selectionEntries": [
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Great Traitors’ Arsenal",
+        "hidden": false,
+        "id": "80b0-7e6f-9b23-b895",
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "a261-111b-6627-b02d"
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "c44c-0b85-f5d8-f535",
+            "id": "e4fb-d51b-6794-810e",
+            "primary": true,
+            "name": "Configuration"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Great Traitors’ Arsenal",
+            "id": "bc3c-4dc6-f8c7-7fb3",
+            "hidden": false,
+            "description": "You may add units to your Army List from the “Chaos Space\nMarine Arsenal” document.",
+            "noindex": false
+          }
+        ],
+        "comment": "PHASE 0.1 ARSENAL PLACEHOLDER: this opt-in configuration is intentionally unchecked by default. The future Chaos Space Marine Arsenal reusable library must be linked with importRootEntries=false. World Eaters entry links to Arsenal units must be hidden until this exact configuration selection is present. No unresolved catalogue target is emitted here, so the native World Eaters catalogue remains loadable before the Arsenal library exists.",
+        "sortIndex": 0
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "World Eaters Terminator Chaos Lord",
+        "hidden": false,
+        "id": "ab6b-31b3-5ff5-7afb",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 120
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "dd45-baa3-63c9-c4ac",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "ab67-a6af-8e41-aba8",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "0b06-bba8-38c9-bc36",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          }
+        ],
+        "sortIndex": 1,
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "9d46-dd57-0589-b01b",
+            "hidden": false,
+            "description": "This unit cannot attach to anything.",
+            "noindex": false
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "World Eaters Juggernaut Chaos Lord",
+        "hidden": false,
+        "id": "3ddb-ea5e-68fc-d49b",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 120
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "777f-6952-d9d0-2638",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "345f-8010-ec3f-047c",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "fbbb-9036-514e-e2e3",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          }
+        ],
+        "sortIndex": 2,
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "54f0-d674-39e8-099e",
+            "hidden": false,
+            "description": "This unit cannot attach to anything.",
+            "noindex": false
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "World Eaters Chaos Lord",
+        "hidden": false,
+        "id": "da82-ccd2-24de-e256",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 60
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "79aa-2c28-14cf-ac49",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "bb46-1edd-61be-c051",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "0ba8-fb7d-f592-ae8c",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          }
+        ],
+        "sortIndex": 3,
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "roster",
+            "childId": "4de8-8596-5da0-0d02",
+            "name": "Attaches To",
+            "id": "c827-7b41-09e9-ce6d",
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "label": "Leader",
+            "defaultSelectionEntryId": "none",
+            "childName": "May Attach To: World Eaters Chaos Lord"
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Glorious Jump Pack",
+            "id": "7bd1-4fd1-e9c6-55fb",
+            "hidden": false,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "965a-0abb-9272-1d60"
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Glorious Jump Pack",
+                "hidden": false,
+                "id": "2333-3de7-5cb2-417d",
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 20
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Glorious Jump Pack",
+                    "id": "8729-fe4c-bdbe-384b",
+                    "hidden": false,
+                    "description": "This unit gains Fly and must attach to RAPTORS.",
+                    "noindex": false
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "type": "add",
+                    "value": "ARSENAL PLACEHOLDER: Glorious Jump Pack requires RAPTORS. The Chaos Space Marine Arsenal library target is not yet linked in this Phase 0.1 file.",
+                    "field": "error"
+                  }
+                ],
+                "comment": "PHASE 0.1 ARSENAL PLACEHOLDER: once the Arsenal library is wired, selecting this upgrade must replace the Chaos Lord's base attachment candidates (LEGIONAIRES, KHORNE BERZERKERS, CULTISTS, CHOSEN) with RAPTORS only, and this temporary placeholder error must be removed."
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "4391-6805-8d47-ccc3",
+            "hidden": false,
+            "description": "This unit must attach to either:\na) LEGIONAIRES\nb) KHORNE BERZERKERS\nc) CULTISTS\nd) CHOSEN",
+            "noindex": false
+          }
+        ],
+        "comment": "PHASE 0.1 ARSENAL PLACEHOLDER: the verbatim base attachment rule includes LEGIONAIRES, CULTISTS, and CHOSEN from the future Chaos Space Marine Arsenal library. Only KHORNE BERZERKERS is mechanically resolvable in this native-only file."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Butcher Surgeon",
+        "hidden": false,
+        "id": "f4a7-1544-1d79-5c9b",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 130
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "4852-0b77-80a4-c7b4",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "4bf8-5235-7741-bddf",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "c417-3a43-73d4-f4bf",
+            "id": "b56f-a8c4-2b18-5a21",
+            "primary": false,
+            "name": "Rare"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "1b98-dae3-32c1-3c49",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          }
+        ],
+        "sortIndex": 4,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "55da-0f6d-752a-d361",
+            "includeChildSelections": true
+          }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "roster",
+            "childId": "9a64-f3d5-6a4d-30a7",
+            "name": "Attaches To",
+            "id": "1bcf-ae22-8565-7f47",
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "label": "Leader",
+            "defaultSelectionEntryId": "none",
+            "childName": "May Attach To: Butcher Surgeon"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Fresh Initiates",
+            "id": "d710-672b-1217-daab",
+            "hidden": false,
+            "description": "The unit this unit attaches to adds 0 points to your Army List.",
+            "noindex": false
+          },
+          {
+            "name": "Leader Attachment",
+            "id": "9f18-ab02-85de-6322",
+            "hidden": false,
+            "description": "This unit must attach to:\n● KHORNE BERSERKERS",
+            "noindex": false
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Sage of Slaughter",
+        "hidden": false,
+        "id": "c667-c2dc-59a1-85d3",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 20
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "8253-f6d1-9189-7e1c",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "8d74-eb27-d8a6-c9e7",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "ca89-03e8-2507-00a4",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          }
+        ],
+        "sortIndex": 5,
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "roster",
+            "childId": "9d1c-4ded-c7a4-ca5e",
+            "name": "Attaches To",
+            "id": "a94d-0740-53b2-dda6",
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "label": "Leader",
+            "defaultSelectionEntryId": "none",
+            "childName": "May Attach To: Sage of Slaughter"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "838e-047d-a03d-257b",
+            "hidden": false,
+            "description": "This unit must attach to:\na) KHORNE BERSERKERS",
+            "noindex": false
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Slaughterbound",
+        "hidden": false,
+        "id": "f1f0-84d1-0b03-64a7",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 100
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "17a8-5f05-d345-2ac1",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "2599-2f9d-b622-c678",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "3157-bfe9-ba0c-ddb9",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          }
+        ],
+        "sortIndex": 6,
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "roster",
+            "childId": "73c2-6f65-9a6f-1e38",
+            "name": "Attaches To",
+            "id": "81af-2e85-5b8a-6449",
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "label": "Leader",
+            "defaultSelectionEntryId": "none",
+            "childName": "May Attach To: Slaughterbound"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "cb19-be6c-e9b2-d848",
+            "hidden": false,
+            "description": "This unit must attach to:\n● EIGHTBOUND",
+            "noindex": false
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Khorne Berzerkers",
+        "hidden": false,
+        "id": "dbbb-3b08-8547-5e2b",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 130
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "1f85-4f85-d07e-1af5",
+            "id": "2dd0-7a2e-3992-6f20",
+            "primary": true,
+            "name": "Troop"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "3d86-85aa-4551-4356",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "4de8-8596-5da0-0d02",
+            "id": "6390-0a6f-f93f-7db8",
+            "primary": false,
+            "name": "May Attach To: World Eaters Chaos Lord"
+          },
+          {
+            "targetId": "9a64-f3d5-6a4d-30a7",
+            "id": "2f6b-642a-95fa-dc09",
+            "primary": false,
+            "name": "May Attach To: Butcher Surgeon"
+          },
+          {
+            "targetId": "9d1c-4ded-c7a4-ca5e",
+            "id": "5da5-73dd-799a-c87f",
+            "primary": false,
+            "name": "May Attach To: Sage of Slaughter"
+          }
+        ],
+        "sortIndex": 7,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "d3fc-55b4-cd43-defe",
+            "childId": "any",
+            "includeChildSelections": false
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 0,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "1bcf-ae22-8565-7f47",
+                "shared": true,
+                "includeChildSelections": false,
+                "childName": "Butcher Surgeon"
+              }
+            ]
+          }
+        ],
+        "comment": "FRESH INITIATES COST CONTRACT: when this exact KHORNE BERZERKERS instance is associated with BUTCHER SURGEON, its Phase 0.1 base Points cost is set to 0. Confirmed future behavior: every paid wargear/configuration cost belonging to this attached unit must also resolve to 0 while Fresh Initiates applies. Phase 0.1 has no paid Berzerker wargear nodes yet; when those enter scope, each descendant Points cost must use the same Butcher Surgeon association condition rather than charging separately."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Jakhals",
+        "hidden": false,
+        "id": "4d3f-0d3f-a5d4-04ce",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 70
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "1f85-4f85-d07e-1af5",
+            "id": "a710-9322-2336-6e89",
+            "primary": true,
+            "name": "Troop"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "7326-7914-ee8e-7519",
+            "primary": false,
+            "name": "Infantry"
+          }
+        ],
+        "sortIndex": 8
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Red Butchers",
+        "hidden": false,
+        "id": "fbb8-0db2-6878-0c30",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 80
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "6347-c59d-9e1c-6026",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "e713-eaf4-570d-e25a",
+            "primary": false,
+            "name": "Infantry"
+          }
+        ],
+        "sortIndex": 9,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 2,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "cf2d-c4a2-f188-53a6",
+            "includeChildSelections": true
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "cf2d-c4a2-f188-53a6",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "cf2d-c4a2-f188-53a6",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              }
+            ]
+          }
+        ],
+        "comment": "PHASE 0.1 MIN-SIZE SHELL: represented at the minimum legal size of 2 models (2 × 40 pts/model = 80 Points). TODO: replace this fixed min-size shell with proper unit-size/model-count selection when variable unit sizes enter scope."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Eightbound",
+        "hidden": false,
+        "id": "969c-ed8d-9e2a-a087",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 100
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "98ef-1c26-6a51-0074",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "86c1-bb75-c228-2035",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "73c2-6f65-9a6f-1e38",
+            "id": "323f-1626-3c37-fecf",
+            "primary": false,
+            "name": "May Attach To: Slaughterbound"
+          }
+        ],
+        "sortIndex": 10,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 2,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "1186-8ddc-737b-3eb3",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1f80-f5b4-1dd7-8ba2",
+            "childId": "any",
+            "includeChildSelections": false
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "1186-8ddc-737b-3eb3",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "1186-8ddc-737b-3eb3",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              }
+            ]
+          }
+        ],
+        "comment": "PHASE 0.1 MIN-SIZE SHELL: represented at the minimum legal size of 2 models (2 × 50 pts/model = 100 Points). TODO: replace this fixed min-size shell with proper unit-size/model-count selection when variable unit sizes enter scope."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Khârne, the Betrayer",
+        "hidden": false,
+        "id": "7e0e-a3a1-66c8-31f5",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 170
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "4c7a-50a3-0e6b-6e41",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "fcb6-1482-2b94-57eb",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "c417-3a43-73d4-f4bf",
+            "id": "9783-c45e-e63d-2ed5",
+            "primary": false,
+            "name": "Rare"
+          }
+        ],
+        "sortIndex": 11,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "7fcf-872a-1cfa-7855",
+            "includeChildSelections": true
+          }
+        ]
+      }
+    ],
+    "categoryEntries": [
+      {
+        "name": "Configuration",
+        "id": "c44c-0b85-f5d8-f535",
+        "hidden": false
+      },
+      {
+        "name": "May Attach To: World Eaters Chaos Lord",
+        "id": "4de8-8596-5da0-0d02",
+        "hidden": true
+      },
+      {
+        "name": "May Attach To: Butcher Surgeon",
+        "id": "9a64-f3d5-6a4d-30a7",
+        "hidden": true
+      },
+      {
+        "name": "May Attach To: Sage of Slaughter",
+        "id": "9d1c-4ded-c7a4-ca5e",
+        "hidden": true
+      },
+      {
+        "name": "May Attach To: Slaughterbound",
+        "id": "73c2-6f65-9a6f-1e38",
+        "hidden": true
+      }
+    ],
+    "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
+    "authorName": "Varmint",
+    "comment": "PHASE 0.1 WORLD EATERS. Great Traitors’ Arsenal is implemented as an opt-in Configuration selection, unchecked by default. The external Chaos Space Marine Arsenal library is intentionally NOT represented by an unresolved catalogueLink in this file. When that reusable library is generated, add a catalogueLink with importRootEntries=false, then add World Eaters-local entryLinks for Arsenal units whose hidden state is controlled by the Great Traitors’ Arsenal configuration selection. Imported units should retain their normal Leader/Troop/Other categories and list-building constraints.\nFresh Initiates is mechanically implemented for the current Khorne Berzerkers base Points cost. Future paid wargear/configuration descendants on that attached host must also be set to 0 under the same Butcher Surgeon association condition."
+  }
+}
