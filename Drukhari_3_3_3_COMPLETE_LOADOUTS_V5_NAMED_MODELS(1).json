@@ -5,7 +5,7 @@
     "name": "Drukhari 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 2,
-    "revision": 8,
+    "revision": 11,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -148,7 +148,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "0a86-54ad-0098-0e34",
             "hidden": false,
             "sortIndex": 1,
@@ -350,7 +350,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "6109-091c-2404-b7a0",
             "hidden": false,
             "sortIndex": 1,
@@ -530,7 +530,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "ae5e-6969-2ae5-768d",
             "hidden": false,
             "sortIndex": 1,
@@ -674,7 +674,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "1935-1a2e-40b2-1e34",
             "hidden": false,
             "sortIndex": 1,
@@ -793,10 +793,36 @@
         "sortIndex": 5,
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Additional Leader",
+            "id": "ed90-9390-038a-d708",
+            "hidden": false,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "2989-e334-3058-cf31"
+              }
+            ],
+            "entryLinks": [
+              {
+                "import": true,
+                "name": "Lhamaean",
+                "hidden": false,
+                "id": "ff3f-a04f-6952-9234",
+                "type": "selectionEntry",
+                "targetId": "6b68-8b42-856c-8592"
+              }
+            ],
+            "sortIndex": 1
+          },
+          {
+            "name": "Loadout Options",
             "id": "d85e-ae97-b94f-d096",
             "hidden": false,
-            "sortIndex": 1,
+            "sortIndex": 2,
             "selectionEntryGroups": [
               {
                 "name": "Sybarite",
@@ -806,106 +832,98 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "bd94-0e8b-6345-2fbc",
+                    "id": "aa0f-356d-3bcd-4d4f",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "aa0f-356d-3bcd-4d4f",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "cf28-70f0-f0e8-1d2b",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "a99b-cfec-054d-61d0",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Splinter Pistol",
-                            "hidden": false,
-                            "id": "9ffc-07e3-2430-b082",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Blast Pistol",
-                            "hidden": false,
-                            "id": "ff9b-5a4e-3351-bc2e",
-                            "sortIndex": 2
-                          }
-                        ],
-                        "defaultSelectionEntryId": "9ffc-07e3-2430-b082"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "cf28-70f0-f0e8-1d2b",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "352e-7aed-7f16-52b0",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "f21b-5615-7281-5d6c",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "44eb-3d19-3d7a-a7e1",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Agoniser",
-                            "hidden": false,
-                            "id": "2282-75ba-b276-a702",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Power Sword",
-                            "hidden": false,
-                            "id": "bb89-617a-295b-22d5",
-                            "sortIndex": 2
-                          }
-                        ],
-                        "defaultSelectionEntryId": "2282-75ba-b276-a702"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a99b-cfec-054d-61d0",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Splinter Pistol",
+                        "hidden": false,
+                        "id": "9ffc-07e3-2430-b082",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Blast Pistol",
+                        "hidden": false,
+                        "id": "ff9b-5a4e-3351-bc2e",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "9ffc-07e3-2430-b082"
+                  },
+                  {
+                    "name": "​",
+                    "id": "352e-7aed-7f16-52b0",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f21b-5615-7281-5d6c",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "44eb-3d19-3d7a-a7e1",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Agoniser",
+                        "hidden": false,
+                        "id": "2282-75ba-b276-a702",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "bb89-617a-295b-22d5",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "2282-75ba-b276-a702"
                   }
                 ]
               },
               {
-                "name": "Models 2-8",
+                "name": "Kabalite Warriors 2-8",
                 "id": "67c4-9d62-1927-f2bf",
                 "hidden": false,
                 "sortIndex": 2,
@@ -955,10 +973,10 @@
             "name": "Special Weapon Loadouts",
             "id": "ff52-1d46-c4df-717b",
             "hidden": false,
-            "sortIndex": 2,
+            "sortIndex": 3,
             "selectionEntryGroups": [
               {
-                "name": "Model 9",
+                "name": "Kabalite Warrior 9",
                 "id": "cc34-59d6-94f3-836b",
                 "hidden": false,
                 "sortIndex": 1,
@@ -1035,7 +1053,7 @@
                 ]
               },
               {
-                "name": "Model 10",
+                "name": "Kabalite Warrior 10",
                 "id": "bf4a-76c5-4e13-ee96",
                 "hidden": false,
                 "sortIndex": 2,
@@ -1117,7 +1135,7 @@
             "name": "Paid Wargear",
             "id": "c0bf-48f1-3950-68bf",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 4,
             "selectionEntryGroups": [
               {
                 "name": "Grenade 1",
@@ -1248,32 +1266,6 @@
                 ]
               }
             ]
-          },
-          {
-            "name": "Additional Leader",
-            "id": "ed90-9390-038a-d708",
-            "hidden": false,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "2989-e334-3058-cf31"
-              }
-            ],
-            "entryLinks": [
-              {
-                "import": true,
-                "name": "Lhamaean",
-                "hidden": false,
-                "id": "ff3f-a04f-6952-9234",
-                "type": "selectionEntry",
-                "targetId": "6b68-8b42-856c-8592"
-              }
-            ],
-            "sortIndex": 4
           }
         ],
         "modifiers": [
@@ -1308,7 +1300,7 @@
           }
         ],
         "rules": [],
-        "comment": "LOADOUT UI: Sybarite is represented directly as pistol + melee choices, omitting the intermediate Splinter Rifle replacement step. Seven ordinary Kabalites are consolidated as Models 2-8. Models 9 and 10 are independent special-weapon slots and MAY choose identical special weapons. Paid Wargear uses two independent optional grenade slots so the player can take two identical or two different grenades. Existing Additional Leader/Lhamaean logic is preserved."
+        "comment": "LOADOUT UI: Sybarite is represented directly as pistol + melee choices, omitting the intermediate Splinter Rifle replacement step. Seven ordinary Kabalites are consolidated as Kabalite Warriors 2-8. Kabalite Warriors 9 and 10 are independent special-weapon slots and MAY choose identical special weapons. Paid Wargear uses two independent optional grenade slots so the player can take two identical or two different grenades. Existing Additional Leader/Lhamaean logic is preserved."
       },
       {
         "type": "unit",
@@ -1346,10 +1338,36 @@
         "sortIndex": 6,
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Additional Leader",
+            "id": "ddf9-62de-d89d-8c48",
+            "hidden": false,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "f2da-49ff-2714-d93e"
+              }
+            ],
+            "entryLinks": [
+              {
+                "import": true,
+                "name": "Lhamaean",
+                "hidden": false,
+                "id": "ffda-4629-41a3-2fef",
+                "type": "selectionEntry",
+                "targetId": "6b68-8b42-856c-8592"
+              }
+            ],
+            "sortIndex": 1
+          },
+          {
+            "name": "Loadout Options",
             "id": "0e22-bb82-940a-3d2d",
             "hidden": false,
-            "sortIndex": 1,
+            "sortIndex": 2,
             "selectionEntryGroups": [
               {
                 "name": "Hekatrix",
@@ -1359,199 +1377,183 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "1e3d-d0ab-9d93-bdd1",
+                    "id": "55fc-c81a-b5a9-4f57",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "55fc-c81a-b5a9-4f57",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "ce40-f7be-32c3-453e",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "c7b0-c6c5-322b-5fdd",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Hekatrix Splinter Pistol",
-                            "hidden": false,
-                            "id": "8172-ce42-8550-8af2",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Blast Pistol",
-                            "hidden": false,
-                            "id": "2c00-e0e8-102f-d7ec",
-                            "sortIndex": 2
-                          }
-                        ],
-                        "defaultSelectionEntryId": "8172-ce42-8550-8af2"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ce40-f7be-32c3-453e",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "c839-49ce-5b26-9005",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "624c-8323-a7ca-b347",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "c133-aacc-5d64-40e3",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Hekatarix Blades",
-                            "hidden": false,
-                            "id": "b8dc-f202-3a09-b5dc",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Agoniser",
-                            "hidden": false,
-                            "id": "85bd-fae8-9587-77cd",
-                            "sortIndex": 2
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Power Sword",
-                            "hidden": false,
-                            "id": "5e90-9e4a-2964-d54d",
-                            "sortIndex": 3
-                          }
-                        ],
-                        "defaultSelectionEntryId": "b8dc-f202-3a09-b5dc"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c7b0-c6c5-322b-5fdd",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hekatrix Splinter Pistol",
+                        "hidden": false,
+                        "id": "8172-ce42-8550-8af2",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Blast Pistol",
+                        "hidden": false,
+                        "id": "2c00-e0e8-102f-d7ec",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "8172-ce42-8550-8af2"
+                  },
+                  {
+                    "name": "​",
+                    "id": "c839-49ce-5b26-9005",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "624c-8323-a7ca-b347",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c133-aacc-5d64-40e3",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hekatarix Blades",
+                        "hidden": false,
+                        "id": "b8dc-f202-3a09-b5dc",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Agoniser",
+                        "hidden": false,
+                        "id": "85bd-fae8-9587-77cd",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "5e90-9e4a-2964-d54d",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b8dc-f202-3a09-b5dc"
                   }
                 ]
               },
               {
-                "name": "Models 2-10",
+                "name": "Wyches 2-10",
                 "id": "fb16-8290-78d0-e922",
                 "hidden": false,
                 "sortIndex": 2,
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "3ba6-91db-d414-95a6",
+                    "id": "d4d7-2035-a406-75c6",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "d4d7-2035-a406-75c6",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "8c9f-f96e-0f7f-18b6",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "efb5-594f-b353-155c",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "9x Splinter Pistol",
-                            "hidden": false,
-                            "id": "bce5-d8d8-625b-5171",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "bce5-d8d8-625b-5171"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8c9f-f96e-0f7f-18b6",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "c295-3ad8-3104-4528",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "528c-61ee-2fcf-9336",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "1df5-223a-df9c-5821",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "9x Hekatarii Blades",
-                            "hidden": false,
-                            "id": "2c03-34c1-2ccd-391a",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "2c03-34c1-2ccd-391a"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "efb5-594f-b353-155c",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "9x Splinter Pistol",
+                        "hidden": false,
+                        "id": "bce5-d8d8-625b-5171",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "bce5-d8d8-625b-5171"
+                  },
+                  {
+                    "name": "​",
+                    "id": "c295-3ad8-3104-4528",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "528c-61ee-2fcf-9336",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1df5-223a-df9c-5821",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "9x Hekatarii Blades",
+                        "hidden": false,
+                        "id": "2c03-34c1-2ccd-391a",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "2c03-34c1-2ccd-391a"
                   }
                 ]
               }
@@ -1561,7 +1563,7 @@
             "name": "Paid Wargear",
             "id": "2f5c-1704-a150-9a70",
             "hidden": false,
-            "sortIndex": 2,
+            "sortIndex": 3,
             "selectionEntryGroups": [
               {
                 "name": "Grenade 1",
@@ -1692,32 +1694,6 @@
                 ]
               }
             ]
-          },
-          {
-            "name": "Additional Leader",
-            "id": "ddf9-62de-d89d-8c48",
-            "hidden": false,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "f2da-49ff-2714-d93e"
-              }
-            ],
-            "entryLinks": [
-              {
-                "import": true,
-                "name": "Lhamaean",
-                "hidden": false,
-                "id": "ffda-4629-41a3-2fef",
-                "type": "selectionEntry",
-                "targetId": "6b68-8b42-856c-8592"
-              }
-            ],
-            "sortIndex": 3
           }
         ],
         "modifiers": [
@@ -1801,7 +1777,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "b370-1369-5480-42c2",
             "hidden": false,
             "sortIndex": 1,
@@ -1814,90 +1790,82 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "82d5-1f67-20d3-a375",
+                    "id": "0406-2bc1-34fa-08a8",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "0406-2bc1-34fa-08a8",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "2f39-c751-0378-3e14",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "5a82-db74-107f-7c8d",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Acothyst Tools",
-                            "hidden": false,
-                            "id": "1316-a83c-edfe-d586",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Venom Blade",
-                            "hidden": false,
-                            "id": "c3cd-ef0c-ece3-170b",
-                            "sortIndex": 2
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Electrocorrosive Whip",
-                            "hidden": false,
-                            "id": "2620-5eeb-dd3c-b22f",
-                            "sortIndex": 3
-                          }
-                        ],
-                        "defaultSelectionEntryId": "1316-a83c-edfe-d586"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2f39-c751-0378-3e14",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5a82-db74-107f-7c8d",
+                        "includeChildSelections": false
                       }
                     ],
                     "selectionEntries": [
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Stinger Pistol",
+                        "name": "Acothyst Tools",
                         "hidden": false,
-                        "id": "d32e-bcc5-88f0-9a63",
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "82f9-d0ac-7f50-c307",
-                            "includeChildSelections": false
-                          }
-                        ]
+                        "id": "1316-a83c-edfe-d586",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Venom Blade",
+                        "hidden": false,
+                        "id": "c3cd-ef0c-ece3-170b",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Electrocorrosive Whip",
+                        "hidden": false,
+                        "id": "2620-5eeb-dd3c-b22f",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "1316-a83c-edfe-d586"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Stinger Pistol",
+                    "hidden": false,
+                    "id": "d32e-bcc5-88f0-9a63",
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "82f9-d0ac-7f50-c307",
+                        "includeChildSelections": false
                       }
                     ]
                   }
                 ]
               },
               {
-                "name": "Models 2-8",
+                "name": "Wracks 2-8",
                 "id": "36de-c366-ce13-b6f6",
                 "hidden": false,
                 "sortIndex": 2,
@@ -1950,192 +1918,176 @@
             "sortIndex": 2,
             "selectionEntryGroups": [
               {
-                "name": "Model 9",
+                "name": "Wrack 9",
                 "id": "f6ea-82d7-d612-c8f8",
                 "hidden": false,
                 "sortIndex": 1,
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "f0c5-825e-2c29-2c8d",
+                    "id": "d180-5bd9-ecb3-7cc3",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "d180-5bd9-ecb3-7cc3",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "04d5-1cbd-a41c-32ed",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "3676-59dc-dadf-a453",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Wrack Blades",
-                            "hidden": false,
-                            "id": "0e81-7ddd-6f3d-6914",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "0e81-7ddd-6f3d-6914"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "04d5-1cbd-a41c-32ed",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "b366-1e56-ec5c-db5e",
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3676-59dc-dadf-a453",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Wrack Blades",
                         "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "cb55-7e32-b6d8-8597",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Liquifier Gun",
-                            "hidden": false,
-                            "id": "46fb-522d-7f47-0839",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Ossefactor",
-                            "hidden": false,
-                            "id": "aa2e-6f31-1a1e-4ea8",
-                            "sortIndex": 2
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Hexrifle",
-                            "hidden": false,
-                            "id": "0bb4-139d-46db-5946",
-                            "sortIndex": 3
-                          }
-                        ]
+                        "id": "0e81-7ddd-6f3d-6914",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "0e81-7ddd-6f3d-6914"
+                  },
+                  {
+                    "name": "​",
+                    "id": "b366-1e56-ec5c-db5e",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "cb55-7e32-b6d8-8597",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Liquifier Gun",
+                        "hidden": false,
+                        "id": "46fb-522d-7f47-0839",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Ossefactor",
+                        "hidden": false,
+                        "id": "aa2e-6f31-1a1e-4ea8",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hexrifle",
+                        "hidden": false,
+                        "id": "0bb4-139d-46db-5946",
+                        "sortIndex": 3
                       }
                     ]
                   }
                 ]
               },
               {
-                "name": "Model 10",
+                "name": "Wrack 10",
                 "id": "1819-3774-2132-60ab",
                 "hidden": false,
                 "sortIndex": 2,
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "8d53-eb9b-9f18-eaf2",
+                    "id": "1b31-b676-11c8-9e9b",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "1b31-b676-11c8-9e9b",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "486e-2686-a5b2-243d",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "f605-d073-01a0-0300",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Wrack Blades",
-                            "hidden": false,
-                            "id": "6faa-6aa2-0890-a6a7",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "6faa-6aa2-0890-a6a7"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "486e-2686-a5b2-243d",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "17c4-3fe3-cb7a-2c55",
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f605-d073-01a0-0300",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Wrack Blades",
                         "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "7bf5-61b9-b968-bb1c",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Liquifier Gun",
-                            "hidden": false,
-                            "id": "6ad7-d3f4-2671-27b9",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Ossefactor",
-                            "hidden": false,
-                            "id": "bd67-e704-0f6d-d667",
-                            "sortIndex": 2
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Hexrifle",
-                            "hidden": false,
-                            "id": "7e52-49de-81ec-7340",
-                            "sortIndex": 3
-                          }
-                        ]
+                        "id": "6faa-6aa2-0890-a6a7",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "6faa-6aa2-0890-a6a7"
+                  },
+                  {
+                    "name": "​",
+                    "id": "17c4-3fe3-cb7a-2c55",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7bf5-61b9-b968-bb1c",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Liquifier Gun",
+                        "hidden": false,
+                        "id": "6ad7-d3f4-2671-27b9",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Ossefactor",
+                        "hidden": false,
+                        "id": "bd67-e704-0f6d-d667",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hexrifle",
+                        "hidden": false,
+                        "id": "7e52-49de-81ec-7340",
+                        "sortIndex": 3
                       }
                     ]
                   }
@@ -2182,10 +2134,36 @@
         "sortIndex": 8,
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Additional Leader",
+            "id": "8ea4-16fe-21f6-2210",
+            "hidden": false,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "19bc-ffdb-ac40-baa5"
+              }
+            ],
+            "entryLinks": [
+              {
+                "import": true,
+                "name": "Lhamaean",
+                "hidden": false,
+                "id": "f45a-e33b-f94a-f9e8",
+                "type": "selectionEntry",
+                "targetId": "6b68-8b42-856c-8592"
+              }
+            ],
+            "sortIndex": 1
+          },
+          {
+            "name": "Loadout Options",
             "id": "fece-b6a5-7c39-47d0",
             "hidden": false,
-            "sortIndex": 1,
+            "sortIndex": 2,
             "selectionEntryGroups": [
               {
                 "name": "Dracon",
@@ -2195,106 +2173,98 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "ce4c-98a2-ec9f-e6a0",
+                    "id": "8eb5-f13e-2291-9336",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "8eb5-f13e-2291-9336",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "ca00-a161-41b8-bd5e",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "3c78-8ec8-cc23-b7b8",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Splinter Pistol",
-                            "hidden": false,
-                            "id": "9296-380d-251b-4326",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Blast Pistol",
-                            "hidden": false,
-                            "id": "8d02-a037-da83-4287",
-                            "sortIndex": 2
-                          }
-                        ],
-                        "defaultSelectionEntryId": "9296-380d-251b-4326"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ca00-a161-41b8-bd5e",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "f18d-964e-ef60-27e0",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "cf71-9f9b-cc4f-fbe7",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "3224-c156-239e-c9b8",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Agoniser",
-                            "hidden": false,
-                            "id": "70c2-09ad-2668-029e",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Power Sword",
-                            "hidden": false,
-                            "id": "152e-41ea-698e-bf20",
-                            "sortIndex": 2
-                          }
-                        ],
-                        "defaultSelectionEntryId": "70c2-09ad-2668-029e"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3c78-8ec8-cc23-b7b8",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Splinter Pistol",
+                        "hidden": false,
+                        "id": "9296-380d-251b-4326",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Blast Pistol",
+                        "hidden": false,
+                        "id": "8d02-a037-da83-4287",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "9296-380d-251b-4326"
+                  },
+                  {
+                    "name": "​",
+                    "id": "f18d-964e-ef60-27e0",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "cf71-9f9b-cc4f-fbe7",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3224-c156-239e-c9b8",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Agoniser",
+                        "hidden": false,
+                        "id": "70c2-09ad-2668-029e",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "152e-41ea-698e-bf20",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "70c2-09ad-2668-029e"
                   }
                 ]
               },
               {
-                "name": "Models 2-4",
+                "name": "Kabalite Trueborn 2-4",
                 "id": "2f2e-211b-6bc9-f971",
                 "hidden": false,
                 "sortIndex": 2,
@@ -2344,10 +2314,10 @@
             "name": "Special Weapon Loadouts",
             "id": "e907-974f-54a3-00c6",
             "hidden": false,
-            "sortIndex": 2,
+            "sortIndex": 3,
             "selectionEntryGroups": [
               {
-                "name": "Model 5",
+                "name": "Kabalite Trueborn 5",
                 "id": "6d26-fc2c-c0e9-e3f6",
                 "hidden": false,
                 "sortIndex": 1,
@@ -2429,7 +2399,7 @@
             "name": "Paid Wargear",
             "id": "54e3-a945-9bab-be9b",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 4,
             "selectionEntryGroups": [
               {
                 "name": "Grenade 1",
@@ -2560,32 +2530,6 @@
                 ]
               }
             ]
-          },
-          {
-            "name": "Additional Leader",
-            "id": "8ea4-16fe-21f6-2210",
-            "hidden": false,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "19bc-ffdb-ac40-baa5"
-              }
-            ],
-            "entryLinks": [
-              {
-                "import": true,
-                "name": "Lhamaean",
-                "hidden": false,
-                "id": "f45a-e33b-f94a-f9e8",
-                "type": "selectionEntry",
-                "targetId": "6b68-8b42-856c-8592"
-              }
-            ],
-            "sortIndex": 4
           }
         ],
         "modifiers": [
@@ -2619,7 +2563,7 @@
             "includeChildSelections": false
           }
         ],
-        "comment": "LOADOUT UI: the squad leader is Dracon and is simplified directly to pistol + melee selections. Three ordinary Trueborn are consolidated; Model 5 is the special-weapon slot. Paid Wargear uses two grenade slots."
+        "comment": "LOADOUT UI: the squad leader is Dracon and is simplified directly to pistol + melee selections. Three ordinary Trueborn are consolidated; Kabalite Trueborn 5 is the special-weapon slot. Paid Wargear uses two grenade slots."
       },
       {
         "type": "unit",
@@ -2657,10 +2601,36 @@
         "sortIndex": 9,
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Additional Leader",
+            "id": "a701-08fc-7e28-28bb",
+            "hidden": false,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "057b-b867-af64-a8e1"
+              }
+            ],
+            "entryLinks": [
+              {
+                "import": true,
+                "name": "Lhamaean",
+                "hidden": false,
+                "id": "ff95-1528-5e09-6b75",
+                "type": "selectionEntry",
+                "targetId": "6b68-8b42-856c-8592"
+              }
+            ],
+            "sortIndex": 1
+          },
+          {
+            "name": "Loadout Options",
             "id": "5af2-5b35-03c0-1375",
             "hidden": false,
-            "sortIndex": 1,
+            "sortIndex": 2,
             "selectionEntryGroups": [
               {
                 "name": "Syren",
@@ -2670,199 +2640,183 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "9aed-306f-b5eb-02b0",
+                    "id": "21d7-778a-0322-9234",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "21d7-778a-0322-9234",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "9dff-53cb-954b-7be4",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "eb74-c212-4435-8e49",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Syren Splinter Pistol",
-                            "hidden": false,
-                            "id": "4892-647d-7755-d1b2",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Blast Pistol",
-                            "hidden": false,
-                            "id": "c700-be86-cf8d-a33b",
-                            "sortIndex": 2
-                          }
-                        ],
-                        "defaultSelectionEntryId": "4892-647d-7755-d1b2"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9dff-53cb-954b-7be4",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "9ea0-a134-05a5-089f",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "a834-7cb8-99a9-4be3",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "1d5e-07ae-e454-2339",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Syren Blades",
-                            "hidden": false,
-                            "id": "111d-66a9-8cf5-2fa7",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Agoniser",
-                            "hidden": false,
-                            "id": "efc2-a17a-cbc8-8064",
-                            "sortIndex": 2
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Power Sword",
-                            "hidden": false,
-                            "id": "6948-cf4b-b84c-4c2b",
-                            "sortIndex": 3
-                          }
-                        ],
-                        "defaultSelectionEntryId": "111d-66a9-8cf5-2fa7"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "eb74-c212-4435-8e49",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Syren Splinter Pistol",
+                        "hidden": false,
+                        "id": "4892-647d-7755-d1b2",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Blast Pistol",
+                        "hidden": false,
+                        "id": "c700-be86-cf8d-a33b",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "4892-647d-7755-d1b2"
+                  },
+                  {
+                    "name": "​",
+                    "id": "9ea0-a134-05a5-089f",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a834-7cb8-99a9-4be3",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1d5e-07ae-e454-2339",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Syren Blades",
+                        "hidden": false,
+                        "id": "111d-66a9-8cf5-2fa7",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Agoniser",
+                        "hidden": false,
+                        "id": "efc2-a17a-cbc8-8064",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "6948-cf4b-b84c-4c2b",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "111d-66a9-8cf5-2fa7"
                   }
                 ]
               },
               {
-                "name": "Models 2-5",
+                "name": "Hekatrix Bloodbrides 2-5",
                 "id": "135e-04b6-55bc-582e",
                 "hidden": false,
                 "sortIndex": 2,
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "a385-44fe-1a4e-90cd",
+                    "id": "36d5-7349-b282-38de",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "36d5-7349-b282-38de",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "3fe6-1150-8aff-d70d",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "3f4f-f956-4b54-d28b",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "4x Splinter Pistol",
-                            "hidden": false,
-                            "id": "3363-7210-ecf1-a1e7",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "3363-7210-ecf1-a1e7"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3fe6-1150-8aff-d70d",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "15f0-44c2-c27f-6a7b",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "dded-f708-5c9f-6199",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "7606-c0d8-e805-9994",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "4x Hekatarii Blades",
-                            "hidden": false,
-                            "id": "2204-aad0-1915-13f9",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "2204-aad0-1915-13f9"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3f4f-f956-4b54-d28b",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "4x Splinter Pistol",
+                        "hidden": false,
+                        "id": "3363-7210-ecf1-a1e7",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "3363-7210-ecf1-a1e7"
+                  },
+                  {
+                    "name": "​",
+                    "id": "15f0-44c2-c27f-6a7b",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "dded-f708-5c9f-6199",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7606-c0d8-e805-9994",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "4x Hekatarii Blades",
+                        "hidden": false,
+                        "id": "2204-aad0-1915-13f9",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "2204-aad0-1915-13f9"
                   }
                 ]
               }
@@ -2872,7 +2826,7 @@
             "name": "Paid Wargear",
             "id": "f289-ef6b-14e8-3478",
             "hidden": false,
-            "sortIndex": 2,
+            "sortIndex": 3,
             "selectionEntryGroups": [
               {
                 "name": "Grenade 1",
@@ -3003,32 +2957,6 @@
                 ]
               }
             ]
-          },
-          {
-            "name": "Additional Leader",
-            "id": "a701-08fc-7e28-28bb",
-            "hidden": false,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "057b-b867-af64-a8e1"
-              }
-            ],
-            "entryLinks": [
-              {
-                "import": true,
-                "name": "Lhamaean",
-                "hidden": false,
-                "id": "ff95-1528-5e09-6b75",
-                "type": "selectionEntry",
-                "targetId": "6b68-8b42-856c-8592"
-              }
-            ],
-            "sortIndex": 3
           }
         ],
         "modifiers": [
@@ -3112,7 +3040,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "e16a-7cc3-47f7-4b82",
             "hidden": false,
             "sortIndex": 1,
@@ -3125,90 +3053,82 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "63cf-22b1-166b-e7c1",
+                    "id": "30e4-ddf9-c5cd-e046",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "30e4-ddf9-c5cd-e046",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "ca18-d44e-7bf4-22f9",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "3e54-3a17-f999-a5ee",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Acothyst Tools",
-                            "hidden": false,
-                            "id": "d7a7-e080-10c1-b37c",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Venom Blade",
-                            "hidden": false,
-                            "id": "1945-f56f-6a40-25f9",
-                            "sortIndex": 2
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Electrocorrosive Whip",
-                            "hidden": false,
-                            "id": "a63e-59b5-c043-93bf",
-                            "sortIndex": 3
-                          }
-                        ],
-                        "defaultSelectionEntryId": "d7a7-e080-10c1-b37c"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ca18-d44e-7bf4-22f9",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3e54-3a17-f999-a5ee",
+                        "includeChildSelections": false
                       }
                     ],
                     "selectionEntries": [
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Stinger Pistol",
+                        "name": "Acothyst Tools",
                         "hidden": false,
-                        "id": "383a-46e7-a372-ef8e",
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "e57e-3455-edb9-120b",
-                            "includeChildSelections": false
-                          }
-                        ]
+                        "id": "d7a7-e080-10c1-b37c",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Venom Blade",
+                        "hidden": false,
+                        "id": "1945-f56f-6a40-25f9",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Electrocorrosive Whip",
+                        "hidden": false,
+                        "id": "a63e-59b5-c043-93bf",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d7a7-e080-10c1-b37c"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Stinger Pistol",
+                    "hidden": false,
+                    "id": "383a-46e7-a372-ef8e",
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e57e-3455-edb9-120b",
+                        "includeChildSelections": false
                       }
                     ]
                   }
                 ]
               },
               {
-                "name": "Models 2-4",
+                "name": "Haemoxytes 2-4",
                 "id": "a157-fb05-a564-c19c",
                 "hidden": false,
                 "sortIndex": 2,
@@ -3261,96 +3181,88 @@
             "sortIndex": 2,
             "selectionEntryGroups": [
               {
-                "name": "Model 5",
+                "name": "Haemoxyte 5",
                 "id": "1bb3-71a6-476e-a58d",
                 "hidden": false,
                 "sortIndex": 1,
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "9e49-b075-c85c-8990",
+                    "id": "895d-23e1-ba84-3ea8",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "895d-23e1-ba84-3ea8",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "be9e-cea4-2742-0540",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "ecc9-4594-39f1-ae4f",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Wrack Blades",
-                            "hidden": false,
-                            "id": "310a-60b6-89b2-1c9a",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "310a-60b6-89b2-1c9a"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "be9e-cea4-2742-0540",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "fdbe-1f39-63cb-e4ac",
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ecc9-4594-39f1-ae4f",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Wrack Blades",
                         "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "2f6d-f8f5-20e1-b0f5",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Liquifier Gun",
-                            "hidden": false,
-                            "id": "24e9-aa13-4dbd-d366",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Ossefactor",
-                            "hidden": false,
-                            "id": "1a52-bb13-c58d-8c21",
-                            "sortIndex": 2
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Hexrifle",
-                            "hidden": false,
-                            "id": "95d3-e52d-1555-cf01",
-                            "sortIndex": 3
-                          }
-                        ]
+                        "id": "310a-60b6-89b2-1c9a",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "310a-60b6-89b2-1c9a"
+                  },
+                  {
+                    "name": "​",
+                    "id": "fdbe-1f39-63cb-e4ac",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2f6d-f8f5-20e1-b0f5",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Liquifier Gun",
+                        "hidden": false,
+                        "id": "24e9-aa13-4dbd-d366",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Ossefactor",
+                        "hidden": false,
+                        "id": "1a52-bb13-c58d-8c21",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hexrifle",
+                        "hidden": false,
+                        "id": "95d3-e52d-1555-cf01",
+                        "sortIndex": 3
                       }
                     ]
                   }
@@ -3359,7 +3271,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: the squad leader is Acothyst and goes directly to its special melee choice, with optional Stinger Pistol. Three ordinary Haemoxytes are consolidated; Model 5 carries the optional additional special weapon."
+        "comment": "LOADOUT UI: the squad leader is Acothyst and goes directly to its special melee choice, with optional Stinger Pistol. Three ordinary Haemoxytes are consolidated; Haemoxyte 5 carries the optional additional special weapon."
       },
       {
         "type": "unit",
@@ -3438,7 +3350,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "3dcb-0f22-5e64-97c2",
             "hidden": false,
             "sortIndex": 1,
@@ -3606,7 +3518,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "9b49-7eb6-f2bd-aab5",
             "hidden": false,
             "sortIndex": 1,
@@ -3827,7 +3739,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "b47d-9bf1-625a-2ba9",
             "hidden": false,
             "sortIndex": 1,
@@ -3886,7 +3798,7 @@
                 ]
               },
               {
-                "name": "Models 2-5",
+                "name": "Incubi 2-5",
                 "id": "0232-026a-5c48-e79c",
                 "hidden": false,
                 "sortIndex": 2,
@@ -3933,7 +3845,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: the squad leader is presented as Klaivex at the top of Loadout. Klaivex chooses Klaive or Demiklaives; the remaining four models are consolidated as Models 2-5 with 4x Klaive."
+        "comment": "LOADOUT UI: Klaivex is presented first as the squad leader, with Klaive or Demiklaives. The remaining four Incubi are consolidated as Incubi 2-5."
       },
       {
         "type": "unit",
@@ -4012,7 +3924,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "5bd2-5b6d-3b84-c7af",
             "hidden": false,
             "sortIndex": 1,
@@ -4135,7 +4047,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "ba3f-5728-c04a-e1be",
             "hidden": false,
             "sortIndex": 1,
@@ -4311,302 +4223,278 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "ba88-f326-4362-2aa0",
             "hidden": false,
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Model 1",
+                "name": "Grotesque 1",
                 "id": "b73b-73f1-d57e-8b9e",
                 "hidden": false,
                 "sortIndex": 1,
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "32ce-e9fe-8ff6-03ea",
+                    "id": "3451-82aa-23c5-dc3d",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "3451-82aa-23c5-dc3d",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "28e1-b782-40c2-2426",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "aacf-fca6-cf94-bee8",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Flesh Gauntlet",
-                            "hidden": false,
-                            "id": "4934-3520-13de-e941",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "4934-3520-13de-e941"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "28e1-b782-40c2-2426",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "070a-953a-cb48-1db7",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "19db-5d49-bbe6-0c7a",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "f328-f0c5-12f2-0c0b",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Liquifier Gun",
-                            "hidden": false,
-                            "id": "aa45-8e7e-a5da-2644",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Monstrous Cleaver",
-                            "hidden": false,
-                            "id": "2194-4181-3b35-7afc",
-                            "sortIndex": 2
-                          }
-                        ],
-                        "defaultSelectionEntryId": "aa45-8e7e-a5da-2644"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "aacf-fca6-cf94-bee8",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Flesh Gauntlet",
+                        "hidden": false,
+                        "id": "4934-3520-13de-e941",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "4934-3520-13de-e941"
+                  },
+                  {
+                    "name": "​",
+                    "id": "070a-953a-cb48-1db7",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "19db-5d49-bbe6-0c7a",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f328-f0c5-12f2-0c0b",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Liquifier Gun",
+                        "hidden": false,
+                        "id": "aa45-8e7e-a5da-2644",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Monstrous Cleaver",
+                        "hidden": false,
+                        "id": "2194-4181-3b35-7afc",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "aa45-8e7e-a5da-2644"
                   }
                 ]
               },
               {
-                "name": "Model 2",
+                "name": "Grotesque 2",
                 "id": "caec-486a-0b67-c7aa",
                 "hidden": false,
                 "sortIndex": 2,
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "0a86-8a77-2c88-9860",
+                    "id": "c51f-123e-24fd-8116",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "c51f-123e-24fd-8116",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "5692-83fa-fea0-5f8e",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "0a9b-8b8e-da4a-56f6",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Flesh Gauntlet",
-                            "hidden": false,
-                            "id": "f094-3f00-6baa-5345",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "f094-3f00-6baa-5345"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5692-83fa-fea0-5f8e",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "59b1-1253-b560-7434",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "c5ca-172d-14fb-2b1d",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "e54e-d308-9ecb-f663",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Liquifier Gun",
-                            "hidden": false,
-                            "id": "895d-3a74-9390-5193",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Monstrous Cleaver",
-                            "hidden": false,
-                            "id": "394e-5d5d-c8b0-9bd5",
-                            "sortIndex": 2
-                          }
-                        ],
-                        "defaultSelectionEntryId": "895d-3a74-9390-5193"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0a9b-8b8e-da4a-56f6",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Flesh Gauntlet",
+                        "hidden": false,
+                        "id": "f094-3f00-6baa-5345",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "f094-3f00-6baa-5345"
+                  },
+                  {
+                    "name": "​",
+                    "id": "59b1-1253-b560-7434",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c5ca-172d-14fb-2b1d",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e54e-d308-9ecb-f663",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Liquifier Gun",
+                        "hidden": false,
+                        "id": "895d-3a74-9390-5193",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Monstrous Cleaver",
+                        "hidden": false,
+                        "id": "394e-5d5d-c8b0-9bd5",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "895d-3a74-9390-5193"
                   }
                 ]
               },
               {
-                "name": "Model 3",
+                "name": "Grotesque 3",
                 "id": "10af-b53d-ac54-2817",
                 "hidden": false,
                 "sortIndex": 3,
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "c931-356e-141f-c061",
+                    "id": "fb8c-18bb-51d1-5e1e",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "fb8c-18bb-51d1-5e1e",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "2f31-c074-e395-7584",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "3fe9-01ba-d3d0-eb57",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Flesh Gauntlet",
-                            "hidden": false,
-                            "id": "6a3a-3775-d383-0234",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "6a3a-3775-d383-0234"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2f31-c074-e395-7584",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "8c0f-6048-cb92-87fd",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "4c11-2bee-e3db-750c",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "d0aa-aabc-57c8-2c86",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Liquifier Gun",
-                            "hidden": false,
-                            "id": "fd6a-afd3-3da9-c137",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Monstrous Cleaver",
-                            "hidden": false,
-                            "id": "84eb-f563-5aa4-c120",
-                            "sortIndex": 2
-                          }
-                        ],
-                        "defaultSelectionEntryId": "fd6a-afd3-3da9-c137"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3fe9-01ba-d3d0-eb57",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Flesh Gauntlet",
+                        "hidden": false,
+                        "id": "6a3a-3775-d383-0234",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "6a3a-3775-d383-0234"
+                  },
+                  {
+                    "name": "​",
+                    "id": "8c0f-6048-cb92-87fd",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4c11-2bee-e3db-750c",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d0aa-aabc-57c8-2c86",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Liquifier Gun",
+                        "hidden": false,
+                        "id": "fd6a-afd3-3da9-c137",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Monstrous Cleaver",
+                        "hidden": false,
+                        "id": "84eb-f563-5aa4-c120",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "fd6a-afd3-3da9-c137"
                   }
                 ]
               }
@@ -4691,7 +4579,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "ab7f-7a20-93b8-ef1a",
             "hidden": false,
             "sortIndex": 1,
@@ -4704,93 +4592,85 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "6498-009b-e3ad-3d92",
+                    "id": "8e8e-1d71-c8b0-6759",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "8e8e-1d71-c8b0-6759",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "1bc1-1832-cc08-1d1a",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "aebe-b384-48e0-a577",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Splinter Pistol",
-                            "hidden": false,
-                            "id": "63d5-b0e6-e554-d234",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Blast Pistol",
-                            "hidden": false,
-                            "id": "a4af-e6a2-23dc-df59",
-                            "sortIndex": 2
-                          }
-                        ],
-                        "defaultSelectionEntryId": "63d5-b0e6-e554-d234"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1bc1-1832-cc08-1d1a",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "3f37-f64f-f0c2-d40a",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "be51-0742-25c1-4ca3",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "11d5-53a3-3a0c-24d3",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Power Lance",
-                            "hidden": false,
-                            "id": "d6bf-c89b-57e3-20bc",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "d6bf-c89b-57e3-20bc"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "aebe-b384-48e0-a577",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Splinter Pistol",
+                        "hidden": false,
+                        "id": "63d5-b0e6-e554-d234",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Blast Pistol",
+                        "hidden": false,
+                        "id": "a4af-e6a2-23dc-df59",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "63d5-b0e6-e554-d234"
+                  },
+                  {
+                    "name": "​",
+                    "id": "3f37-f64f-f0c2-d40a",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "be51-0742-25c1-4ca3",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "11d5-53a3-3a0c-24d3",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Lance",
+                        "hidden": false,
+                        "id": "d6bf-c89b-57e3-20bc",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d6bf-c89b-57e3-20bc"
                   }
                 ]
               }
@@ -4803,7 +4683,7 @@
             "sortIndex": 2,
             "selectionEntryGroups": [
               {
-                "name": "Model 2",
+                "name": "Scourge 2",
                 "id": "f3d5-ec43-3f82-d7d4",
                 "hidden": false,
                 "sortIndex": 1,
@@ -4896,7 +4776,7 @@
                 ]
               },
               {
-                "name": "Model 3",
+                "name": "Scourge 3",
                 "id": "78a9-538a-3c1f-4934",
                 "hidden": false,
                 "sortIndex": 2,
@@ -5031,7 +4911,7 @@
                 ]
               },
               {
-                "name": "Model 4",
+                "name": "Scourge 4",
                 "id": "2d65-1b33-58be-edea",
                 "hidden": false,
                 "sortIndex": 3,
@@ -5166,7 +5046,7 @@
                 ]
               },
               {
-                "name": "Model 5",
+                "name": "Scourge 5",
                 "id": "6d65-08ab-8625-6259",
                 "hidden": false,
                 "sortIndex": 4,
@@ -5439,7 +5319,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: the squad leader is Solarite and is represented directly as pistol + Power Lance. Models 2-5 each expose a Shard Carbine / special weapon decision. Model 2 takes a special weapon for free; Models 3-5 pay +10 points for any special weapon. Paid Wargear uses two grenade slots."
+        "comment": "LOADOUT UI: the squad leader is Solarite and is represented directly as pistol + Power Lance. Models 2-5 each expose a Shard Carbine / special weapon decision. Scourge 2 takes a special weapon for free; Scourges 3-5 pay +10 points for any special weapon. Paid Wargear uses two grenade slots."
       },
       {
         "type": "unit",
@@ -5518,7 +5398,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "5942-015d-8a50-29dc",
             "hidden": false,
             "sortIndex": 1,
@@ -5531,363 +5411,339 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "332f-df5f-2066-762e",
+                    "id": "5f7c-9fdf-a7b0-1ca9",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "5f7c-9fdf-a7b0-1ca9",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "b3fb-4261-f5cc-aa73",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "60f8-ccf2-2b71-7b41",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Splinter Rifle",
-                            "hidden": false,
-                            "id": "d6db-bd6d-5287-dbb2",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "d6db-bd6d-5287-dbb2"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "b3fb-4261-f5cc-aa73",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "8f85-a7fd-214f-79f1",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "877f-b4ea-1f31-fda5",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "44a2-52dd-08fa-81ac",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Bladevanes",
-                            "hidden": false,
-                            "id": "4f10-ade8-1c48-e4ab",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "4f10-ade8-1c48-e4ab"
-                      },
-                      {
-                        "name": "​",
-                        "id": "021a-045b-a75b-b667",
-                        "hidden": false,
-                        "sortIndex": 3,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "fbe0-3dcb-b58b-e0e4",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "e426-e6de-92b2-deb5",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Splinter Pistol",
-                            "hidden": false,
-                            "id": "d2f5-5ed9-6293-b707",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "d2f5-5ed9-6293-b707"
-                      },
-                      {
-                        "name": "​",
-                        "id": "e919-158e-07b8-c7e2",
-                        "hidden": false,
-                        "sortIndex": 4,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "485c-50d0-56ca-d142",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "75b3-46a3-0772-bca3",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Power Sword",
-                            "hidden": false,
-                            "id": "e1fa-13b4-30bd-ac62",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Agoniser",
-                            "hidden": false,
-                            "id": "7a11-9aee-588b-04aa",
-                            "sortIndex": 2
-                          }
-                        ],
-                        "defaultSelectionEntryId": "e1fa-13b4-30bd-ac62"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "60f8-ccf2-2b71-7b41",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Splinter Rifle",
+                        "hidden": false,
+                        "id": "d6db-bd6d-5287-dbb2",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d6db-bd6d-5287-dbb2"
+                  },
+                  {
+                    "name": "​",
+                    "id": "8f85-a7fd-214f-79f1",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "877f-b4ea-1f31-fda5",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "44a2-52dd-08fa-81ac",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Bladevanes",
+                        "hidden": false,
+                        "id": "4f10-ade8-1c48-e4ab",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "4f10-ade8-1c48-e4ab"
+                  },
+                  {
+                    "name": "​",
+                    "id": "021a-045b-a75b-b667",
+                    "hidden": false,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "fbe0-3dcb-b58b-e0e4",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e426-e6de-92b2-deb5",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Splinter Pistol",
+                        "hidden": false,
+                        "id": "d2f5-5ed9-6293-b707",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d2f5-5ed9-6293-b707"
+                  },
+                  {
+                    "name": "​",
+                    "id": "e919-158e-07b8-c7e2",
+                    "hidden": false,
+                    "sortIndex": 4,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "485c-50d0-56ca-d142",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "75b3-46a3-0772-bca3",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "e1fa-13b4-30bd-ac62",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Agoniser",
+                        "hidden": false,
+                        "id": "7a11-9aee-588b-04aa",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "e1fa-13b4-30bd-ac62"
                   }
                 ]
               },
               {
-                "name": "Model 2",
+                "name": "Reaver 2",
                 "id": "33c0-afee-c65b-3b82",
                 "hidden": false,
                 "sortIndex": 2,
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "efae-46cc-5db1-9c9c",
+                    "id": "331a-c363-53a2-dc4f",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "331a-c363-53a2-dc4f",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "6b7f-df75-4a1a-aa33",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "4815-7c19-1325-4dbd",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Bladevanes",
-                            "hidden": false,
-                            "id": "96d2-b073-6762-559a",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "96d2-b073-6762-559a"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6b7f-df75-4a1a-aa33",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "7443-8259-b4ce-b64f",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "d360-7e75-0828-d037",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "a335-4f2d-f9c3-a9b0",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Splinter Rifle",
-                            "hidden": false,
-                            "id": "52d5-308b-3d39-096a",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Heat Lance",
-                            "hidden": false,
-                            "id": "03dd-4079-75b7-c402",
-                            "sortIndex": 2
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Blaster",
-                            "hidden": false,
-                            "id": "8009-55b8-66ea-a05a",
-                            "sortIndex": 3
-                          }
-                        ],
-                        "defaultSelectionEntryId": "52d5-308b-3d39-096a"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4815-7c19-1325-4dbd",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Bladevanes",
+                        "hidden": false,
+                        "id": "96d2-b073-6762-559a",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "96d2-b073-6762-559a"
+                  },
+                  {
+                    "name": "​",
+                    "id": "7443-8259-b4ce-b64f",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d360-7e75-0828-d037",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a335-4f2d-f9c3-a9b0",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Splinter Rifle",
+                        "hidden": false,
+                        "id": "52d5-308b-3d39-096a",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heat Lance",
+                        "hidden": false,
+                        "id": "03dd-4079-75b7-c402",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Blaster",
+                        "hidden": false,
+                        "id": "8009-55b8-66ea-a05a",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "52d5-308b-3d39-096a"
                   }
                 ]
               },
               {
-                "name": "Model 3",
+                "name": "Reaver 3",
                 "id": "2df3-3684-087e-c87f",
                 "hidden": false,
                 "sortIndex": 3,
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "0e8e-7aca-b768-138a",
+                    "id": "d1b5-1f89-d5b1-5144",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "d1b5-1f89-d5b1-5144",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "58e0-bb5e-80af-471e",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "c317-6493-7481-6447",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Splinter Rifle",
-                            "hidden": false,
-                            "id": "e780-1b0f-10c6-4ed3",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "e780-1b0f-10c6-4ed3"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "58e0-bb5e-80af-471e",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "4290-1dfd-3def-7640",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "5e0c-3825-983b-c503",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "4a87-9625-4dc1-a2ac",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Bladevanes",
-                            "hidden": false,
-                            "id": "d7ea-369a-03f2-95d3",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "d7ea-369a-03f2-95d3"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c317-6493-7481-6447",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Splinter Rifle",
+                        "hidden": false,
+                        "id": "e780-1b0f-10c6-4ed3",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "e780-1b0f-10c6-4ed3"
+                  },
+                  {
+                    "name": "​",
+                    "id": "4290-1dfd-3def-7640",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5e0c-3825-983b-c503",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4a87-9625-4dc1-a2ac",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Bladevanes",
+                        "hidden": false,
+                        "id": "d7ea-369a-03f2-95d3",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d7ea-369a-03f2-95d3"
                   }
                 ]
               }
@@ -5973,7 +5829,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "8d07-a2a7-53ee-5f91",
             "hidden": false,
             "sortIndex": 1,
@@ -6096,7 +5952,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "05ba-5677-2c99-062f",
             "hidden": false,
             "sortIndex": 1,
@@ -6219,7 +6075,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "18bc-54d0-41e4-a804",
             "hidden": false,
             "sortIndex": 1,
@@ -6357,7 +6213,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "d66d-9f52-4183-3436",
             "hidden": false,
             "sortIndex": 1,
@@ -6517,7 +6373,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "2055-2046-5ad1-1bed",
             "hidden": false,
             "sortIndex": 1,
@@ -6530,236 +6386,220 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "b222-c2b5-c092-d2a3",
+                    "id": "c6d1-ce1a-3fd0-9083",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "c6d1-ce1a-3fd0-9083",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "cc1c-ff35-117d-01a5",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "46c0-3e9f-da32-67dd",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Splinter Pods",
-                            "hidden": false,
-                            "id": "999f-284d-cd76-d556",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "999f-284d-cd76-d556"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "cc1c-ff35-117d-01a5",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "3c29-8275-a3df-892f",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "ae2f-488a-e08c-e059",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "4714-f3eb-ff70-b7a1",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Splinter Pistol",
-                            "hidden": false,
-                            "id": "298f-fff3-cbd1-4f9c",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Blast Pistol",
-                            "hidden": false,
-                            "id": "f283-3321-3e00-1d13",
-                            "sortIndex": 2
-                          }
-                        ],
-                        "defaultSelectionEntryId": "298f-fff3-cbd1-4f9c"
-                      },
-                      {
-                        "name": "​",
-                        "id": "ad52-308c-cb37-22ce",
-                        "hidden": false,
-                        "sortIndex": 3,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "a12e-d93b-0787-f405",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "7dcb-8646-8a72-9208",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Power Sword",
-                            "hidden": false,
-                            "id": "b361-ecba-eef1-a56c",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Agoniser",
-                            "hidden": false,
-                            "id": "3e55-a66b-1af8-ec56",
-                            "sortIndex": 2
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Stunclaw",
-                            "hidden": false,
-                            "id": "8a47-758a-6573-2bfb",
-                            "sortIndex": 3
-                          }
-                        ],
-                        "defaultSelectionEntryId": "b361-ecba-eef1-a56c"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "46c0-3e9f-da32-67dd",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Splinter Pods",
+                        "hidden": false,
+                        "id": "999f-284d-cd76-d556",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "999f-284d-cd76-d556"
+                  },
+                  {
+                    "name": "​",
+                    "id": "3c29-8275-a3df-892f",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ae2f-488a-e08c-e059",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4714-f3eb-ff70-b7a1",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Splinter Pistol",
+                        "hidden": false,
+                        "id": "298f-fff3-cbd1-4f9c",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Blast Pistol",
+                        "hidden": false,
+                        "id": "f283-3321-3e00-1d13",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "298f-fff3-cbd1-4f9c"
+                  },
+                  {
+                    "name": "​",
+                    "id": "ad52-308c-cb37-22ce",
+                    "hidden": false,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a12e-d93b-0787-f405",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7dcb-8646-8a72-9208",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "b361-ecba-eef1-a56c",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Agoniser",
+                        "hidden": false,
+                        "id": "3e55-a66b-1af8-ec56",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Stunclaw",
+                        "hidden": false,
+                        "id": "8a47-758a-6573-2bfb",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b361-ecba-eef1-a56c"
                   }
                 ]
               },
               {
-                "name": "Models 2-5",
+                "name": "Hellions 2-5",
                 "id": "72ea-caed-8db7-ed35",
                 "hidden": false,
                 "sortIndex": 2,
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "4972-b113-579b-8f14",
+                    "id": "3b3b-d8f7-6d23-0b8c",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "3b3b-d8f7-6d23-0b8c",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "0f7b-dee1-9484-babb",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "6f0b-bfe4-1a63-4b52",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "4x Splinter Pods",
-                            "hidden": false,
-                            "id": "d020-3363-e6c4-82e1",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "d020-3363-e6c4-82e1"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0f7b-dee1-9484-babb",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "8a55-07ea-8f34-307f",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "04d9-c238-b53f-f099",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "776e-ea8a-a7b5-3425",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "4x Hellglaive",
-                            "hidden": false,
-                            "id": "3b8a-eba7-d456-5311",
-                            "sortIndex": 1
-                          }
-                        ],
-                        "defaultSelectionEntryId": "3b8a-eba7-d456-5311"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6f0b-bfe4-1a63-4b52",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "4x Splinter Pods",
+                        "hidden": false,
+                        "id": "d020-3363-e6c4-82e1",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d020-3363-e6c4-82e1"
+                  },
+                  {
+                    "name": "​",
+                    "id": "8a55-07ea-8f34-307f",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "04d9-c238-b53f-f099",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "776e-ea8a-a7b5-3425",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "4x Hellglaive",
+                        "hidden": false,
+                        "id": "3b8a-eba7-d456-5311",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "3b8a-eba7-d456-5311"
                   }
                 ]
               }
@@ -6845,7 +6685,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "ac21-8308-8eda-0724",
             "hidden": false,
             "sortIndex": 1,
@@ -7013,7 +6853,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "b544-0d6b-78e2-44d5",
             "hidden": false,
             "sortIndex": 1,
@@ -7222,7 +7062,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "7821-b335-cfd5-7f36",
             "hidden": false,
             "sortIndex": 1,
