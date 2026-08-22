@@ -3,7 +3,7 @@
     "id": "sys-b298-09dc-9597-23fd",
     "name": "40k Reforged 3.3.1 (Homebrew)",
     "battleScribeVersion": "2.03",
-    "revision": 1,
+    "revision": 2,
     "categoryEntries": [
       {
         "name": "Configuration",
@@ -96,6 +96,36 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Roaming Leader",
+        "id": "b926-68a2-34b2-e7d5",
+        "hidden": false,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "5702-6e4c-9ed2-3a40"
+          }
+        ]
+      },
+      {
+        "name": "Roaming Troop",
+        "id": "51b1-f9a0-378a-0ebd",
+        "hidden": false,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "38e4-7613-eb85-2343"
+          }
+        ]
       }
     ],
     "forceEntries": [
@@ -127,6 +157,58 @@
             "hidden": false,
             "id": "7b0e-ed47-9241-b86f",
             "targetId": "5c3b-2012-fca1-7b34"
+          },
+          {
+            "name": "Roaming Leader",
+            "hidden": false,
+            "id": "c9e4-183f-a85d-bdc0",
+            "targetId": "b926-68a2-34b2-e7d5",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "true",
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "roster",
+                    "childId": "8aff-2bab-1ce1-5300",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "childName": "Not Included"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Roaming Troop",
+            "hidden": false,
+            "id": "155f-1524-74a5-51c0",
+            "targetId": "51b1-f9a0-378a-0ebd",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "true",
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "roster",
+                    "childId": "8aff-2bab-1ce1-5300",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "childName": "Not Included"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
