@@ -5,7 +5,7 @@
     "name": "Tyranids 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 8,
-    "revision": 7,
+    "revision": 10,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -3188,7 +3188,7 @@
           }
         ],
         "sortIndex": 2,
-        "comment": "PHASE 0.1 COMPILER NOTE: UUS marks this as a counted Leader, but generic counted-Leader enforcement is omitted here because the faction-specific rule 'Your army list may have only one HIVE TYRANT or TERVIGON or NEUROTYRANT.' is strictly stronger for the current faction roster. Rare remains descriptive; its local max-1 constraint is likewise redundant and omitted.\nLIVING INCUBATOR LISTBUILDER IMPLEMENTATION: there is one multi-select association picker for the active Game Size, with max 1 / 2 / 3 at 800 / 1200 / 1600. Each Termagant unit therefore appears only once in the active picker and cannot be selected as more than one granted brood. The individual picker has min 0; unit-level dynamic association constraints require exactly 1 / 2 / 3.",
+        "comment": "PHASE 0.1 COMPILER NOTE: UUS marks this as a counted Leader, but generic counted-Leader enforcement is omitted here because the faction-specific rule 'Your army list may have only one HIVE TYRANT or TERVIGON or NEUROTYRANT.' is strictly stronger for the current faction roster. Rare remains descriptive; its local max-1 constraint is likewise redundant and omitted.\nLIVING INCUBATOR WARRIOR INTEGRATION: auto-granted broods use the same Additional Leader box as normal Termagant units. The Warrior is nested directly inside the brood.",
         "rules": [
           {
             "name": "Leader Attachment",
@@ -3214,10 +3214,1538 @@
         ],
         "selectionEntryGroups": [
           {
+            "name": "Living Incubator",
+            "id": "ee45-389b-1b82-6aa1",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Living Incubator",
+                "id": "089c-fa21-0eae-9994",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 2,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "0e45-4312-a0f7-c9fc",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 2,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "72c3-f87f-0fb3-ca27",
+                    "includeChildSelections": false
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "type": "decrement",
+                    "value": 1,
+                    "field": "0e45-4312-a0f7-c9fc",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 1,
+                    "field": "72c3-f87f-0fb3-ca27",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 1,
+                    "field": "0e45-4312-a0f7-c9fc",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 1,
+                    "field": "72c3-f87f-0fb3-ca27",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      }
+                    ]
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "unit",
+                    "import": true,
+                    "name": "Termagants (10) - Brood 1",
+                    "hidden": false,
+                    "id": "ccfb-5431-8da4-752a",
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 0
+                      }
+                    ],
+                    "categoryLinks": [
+                      {
+                        "targetId": "1f85-4f85-d07e-1af5",
+                        "id": "ba1f-c142-2abd-798c",
+                        "primary": true,
+                        "name": "Troop"
+                      },
+                      {
+                        "targetId": "eac7-32d5-ecd7-ce9e",
+                        "id": "4edc-40b9-a84a-7318",
+                        "primary": false,
+                        "name": "Infantry"
+                      }
+                    ],
+                    "sortIndex": 1,
+                    "selectionEntryGroups": [
+                      {
+                        "name": "Additional Leader",
+                        "id": "3d5d-a669-2e5d-b5c5",
+                        "hidden": false,
+                        "sortIndex": 1,
+                        "constraints": [
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "cf52-0c79-2adf-78fe"
+                          }
+                        ],
+                        "entryLinks": [
+                          {
+                            "import": true,
+                            "name": "Warrior",
+                            "hidden": false,
+                            "id": "05a6-3480-1307-ed39",
+                            "type": "selectionEntry",
+                            "targetId": "95e6-81e5-2943-cbac"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Loadout Options",
+                        "id": "772d-6d10-641a-47a0",
+                        "hidden": false,
+                        "sortIndex": 2,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "Termagants 1-7",
+                            "id": "5016-bf21-068d-3bd1",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "selectionEntryGroups": [
+                              {
+                                "name": "​",
+                                "id": "42a8-35af-b318-8e99",
+                                "hidden": false,
+                                "sortIndex": 1,
+                                "constraints": [
+                                  {
+                                    "type": "min",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "99af-2525-51e8-d966"
+                                  },
+                                  {
+                                    "type": "max",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "d8f0-a4f8-4639-f627"
+                                  }
+                                ],
+                                "selectionEntries": [
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "7x Devourer",
+                                    "hidden": false,
+                                    "id": "c26c-a2d8-f0d3-b86d",
+                                    "sortIndex": 1
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "7x Spinefists",
+                                    "hidden": false,
+                                    "id": "4f74-0777-e124-50a7",
+                                    "sortIndex": 2
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "7x Fleshborer",
+                                    "hidden": false,
+                                    "id": "d034-fa25-67c4-5665",
+                                    "sortIndex": 3
+                                  }
+                                ],
+                                "defaultSelectionEntryId": "c26c-a2d8-f0d3-b86d"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Special Weapon Loadouts",
+                        "id": "1df5-d302-b8d8-9c39",
+                        "hidden": false,
+                        "sortIndex": 3,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "Termagant 8",
+                            "id": "e746-f667-47db-edf7",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "selectionEntryGroups": [
+                              {
+                                "name": "​",
+                                "id": "50a3-6422-aa64-cc21",
+                                "hidden": false,
+                                "sortIndex": 1,
+                                "constraints": [
+                                  {
+                                    "type": "min",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "e461-2cb2-8e47-0288"
+                                  },
+                                  {
+                                    "type": "max",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "2286-8a9c-f835-a2c6"
+                                  }
+                                ],
+                                "selectionEntries": [
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Devourer",
+                                    "hidden": false,
+                                    "id": "5eca-8d64-eef6-75d7",
+                                    "sortIndex": 1
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spinefists",
+                                    "hidden": false,
+                                    "id": "8ee9-c392-5f0b-0ea5",
+                                    "sortIndex": 2
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Fleshborer",
+                                    "hidden": false,
+                                    "id": "f659-9517-410d-1652",
+                                    "sortIndex": 3
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Strangleweb",
+                                    "hidden": false,
+                                    "id": "2304-b561-bdda-283a",
+                                    "sortIndex": 4,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spike Rifle",
+                                    "hidden": false,
+                                    "id": "fff0-da94-9cea-6d0d",
+                                    "sortIndex": 5,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Shardlauncher",
+                                    "hidden": false,
+                                    "id": "1a1c-888f-78fd-a48a",
+                                    "sortIndex": 6,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "defaultSelectionEntryId": "5eca-8d64-eef6-75d7"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Termagant 9",
+                            "id": "fc05-72df-523d-43a2",
+                            "hidden": false,
+                            "sortIndex": 2,
+                            "selectionEntryGroups": [
+                              {
+                                "name": "​",
+                                "id": "9b18-4648-b63e-b998",
+                                "hidden": false,
+                                "sortIndex": 1,
+                                "constraints": [
+                                  {
+                                    "type": "min",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "0caf-0707-d6d7-7af2"
+                                  },
+                                  {
+                                    "type": "max",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "e62c-559e-a3c9-a752"
+                                  }
+                                ],
+                                "selectionEntries": [
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Devourer",
+                                    "hidden": false,
+                                    "id": "4485-bcd8-e4d3-4928",
+                                    "sortIndex": 1
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spinefists",
+                                    "hidden": false,
+                                    "id": "a115-976e-d4d5-ead6",
+                                    "sortIndex": 2
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Fleshborer",
+                                    "hidden": false,
+                                    "id": "97c3-128b-b484-76d9",
+                                    "sortIndex": 3
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Strangleweb",
+                                    "hidden": false,
+                                    "id": "fe42-ce88-a7eb-be72",
+                                    "sortIndex": 4,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spike Rifle",
+                                    "hidden": false,
+                                    "id": "bab6-cbdd-e821-fefa",
+                                    "sortIndex": 5,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Shardlauncher",
+                                    "hidden": false,
+                                    "id": "2e1e-99c5-9d66-6d10",
+                                    "sortIndex": 6,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "defaultSelectionEntryId": "4485-bcd8-e4d3-4928"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Termagant 10",
+                            "id": "cec3-761a-f899-176f",
+                            "hidden": false,
+                            "sortIndex": 3,
+                            "selectionEntryGroups": [
+                              {
+                                "name": "​",
+                                "id": "cc08-4b89-5342-e6a4",
+                                "hidden": false,
+                                "sortIndex": 1,
+                                "constraints": [
+                                  {
+                                    "type": "min",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "dfc3-2d6f-e138-9b9e"
+                                  },
+                                  {
+                                    "type": "max",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "e2a1-75db-6679-ec85"
+                                  }
+                                ],
+                                "selectionEntries": [
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Devourer",
+                                    "hidden": false,
+                                    "id": "b5f1-abe1-18e0-a241",
+                                    "sortIndex": 1
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spinefists",
+                                    "hidden": false,
+                                    "id": "dd4a-6221-3b28-dd92",
+                                    "sortIndex": 2
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Fleshborer",
+                                    "hidden": false,
+                                    "id": "81ef-49bf-856c-4d34",
+                                    "sortIndex": 3
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Strangleweb",
+                                    "hidden": false,
+                                    "id": "f63e-27e3-eea8-7619",
+                                    "sortIndex": 4,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spike Rifle",
+                                    "hidden": false,
+                                    "id": "ac68-bd99-dde5-e2a3",
+                                    "sortIndex": 5,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Shardlauncher",
+                                    "hidden": false,
+                                    "id": "5be2-c5ba-c5db-d083",
+                                    "sortIndex": 6,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "defaultSelectionEntryId": "b5f1-abe1-18e0-a241"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "comment": "LIVING INCUBATOR GRANTED BROOD 1: generated from the normal Termagants unit tree. This nested unit and all of its paid loadout choices cost 0 Points. The normal Warrior attachment category is intentionally preserved for the nested-association test.\nADDITIONAL LEADER: this granted brood may include one nested Warrior through its Additional Leader box. No external association is required.",
+                    "modifiers": [
+                      {
+                        "type": "set",
+                        "value": "1",
+                        "field": "defaultAmount"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "unit",
+                    "import": true,
+                    "name": "Termagants (10) - Brood 2",
+                    "hidden": false,
+                    "id": "7aac-0b27-10ba-63da",
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 0
+                      }
+                    ],
+                    "categoryLinks": [
+                      {
+                        "targetId": "1f85-4f85-d07e-1af5",
+                        "id": "d724-9f4d-7282-4799",
+                        "primary": true,
+                        "name": "Troop"
+                      },
+                      {
+                        "targetId": "eac7-32d5-ecd7-ce9e",
+                        "id": "a180-75ba-0f9c-5ad1",
+                        "primary": false,
+                        "name": "Infantry"
+                      }
+                    ],
+                    "sortIndex": 2,
+                    "selectionEntryGroups": [
+                      {
+                        "name": "Additional Leader",
+                        "id": "166e-c811-f0e9-c58c",
+                        "hidden": false,
+                        "sortIndex": 1,
+                        "constraints": [
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "1be3-b45c-4218-02aa"
+                          }
+                        ],
+                        "entryLinks": [
+                          {
+                            "import": true,
+                            "name": "Warrior",
+                            "hidden": false,
+                            "id": "b1b3-2f79-87aa-c8cf",
+                            "type": "selectionEntry",
+                            "targetId": "95e6-81e5-2943-cbac"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Loadout Options",
+                        "id": "ba01-31a2-856a-ad52",
+                        "hidden": false,
+                        "sortIndex": 2,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "Termagants 1-7",
+                            "id": "23a6-de01-7d28-5b6b",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "selectionEntryGroups": [
+                              {
+                                "name": "​",
+                                "id": "4894-e3a5-0964-3b2a",
+                                "hidden": false,
+                                "sortIndex": 1,
+                                "constraints": [
+                                  {
+                                    "type": "min",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "1fd8-f41e-25da-d61e"
+                                  },
+                                  {
+                                    "type": "max",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "6495-7e0f-9853-8354"
+                                  }
+                                ],
+                                "selectionEntries": [
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "7x Devourer",
+                                    "hidden": false,
+                                    "id": "b791-da42-a542-41a4",
+                                    "sortIndex": 1
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "7x Spinefists",
+                                    "hidden": false,
+                                    "id": "fc18-5b07-b5c7-2980",
+                                    "sortIndex": 2
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "7x Fleshborer",
+                                    "hidden": false,
+                                    "id": "7360-4d3a-33e8-8f0d",
+                                    "sortIndex": 3
+                                  }
+                                ],
+                                "defaultSelectionEntryId": "b791-da42-a542-41a4"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Special Weapon Loadouts",
+                        "id": "df32-84f6-1056-d30d",
+                        "hidden": false,
+                        "sortIndex": 3,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "Termagant 8",
+                            "id": "4e58-2161-1cc7-3958",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "selectionEntryGroups": [
+                              {
+                                "name": "​",
+                                "id": "5ef9-fb7b-a188-ee63",
+                                "hidden": false,
+                                "sortIndex": 1,
+                                "constraints": [
+                                  {
+                                    "type": "min",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "ca00-9c3f-b7ec-54b5"
+                                  },
+                                  {
+                                    "type": "max",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "de4e-160c-c1d7-3508"
+                                  }
+                                ],
+                                "selectionEntries": [
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Devourer",
+                                    "hidden": false,
+                                    "id": "f9d5-2a4d-b957-9023",
+                                    "sortIndex": 1
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spinefists",
+                                    "hidden": false,
+                                    "id": "da5f-b05d-3f4b-ff63",
+                                    "sortIndex": 2
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Fleshborer",
+                                    "hidden": false,
+                                    "id": "d9a5-008e-87ba-fbc6",
+                                    "sortIndex": 3
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Strangleweb",
+                                    "hidden": false,
+                                    "id": "4d23-d142-0083-1638",
+                                    "sortIndex": 4,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spike Rifle",
+                                    "hidden": false,
+                                    "id": "d98b-ce5e-c04d-74c9",
+                                    "sortIndex": 5,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Shardlauncher",
+                                    "hidden": false,
+                                    "id": "845a-1bfe-9dbf-ab6a",
+                                    "sortIndex": 6,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "defaultSelectionEntryId": "f9d5-2a4d-b957-9023"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Termagant 9",
+                            "id": "565a-6a8a-f3db-5398",
+                            "hidden": false,
+                            "sortIndex": 2,
+                            "selectionEntryGroups": [
+                              {
+                                "name": "​",
+                                "id": "b220-3e82-0fd8-4221",
+                                "hidden": false,
+                                "sortIndex": 1,
+                                "constraints": [
+                                  {
+                                    "type": "min",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "ee7d-1dff-cb4b-5ba1"
+                                  },
+                                  {
+                                    "type": "max",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "eaec-112c-89de-01c3"
+                                  }
+                                ],
+                                "selectionEntries": [
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Devourer",
+                                    "hidden": false,
+                                    "id": "e221-d9d2-b798-5f1d",
+                                    "sortIndex": 1
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spinefists",
+                                    "hidden": false,
+                                    "id": "d05f-b673-2b1b-40f0",
+                                    "sortIndex": 2
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Fleshborer",
+                                    "hidden": false,
+                                    "id": "95cd-e158-e717-c0c6",
+                                    "sortIndex": 3
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Strangleweb",
+                                    "hidden": false,
+                                    "id": "cfc6-af06-efcb-2efc",
+                                    "sortIndex": 4,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spike Rifle",
+                                    "hidden": false,
+                                    "id": "b1ef-14f1-8917-3029",
+                                    "sortIndex": 5,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Shardlauncher",
+                                    "hidden": false,
+                                    "id": "c49e-0d7c-5ab2-645b",
+                                    "sortIndex": 6,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "defaultSelectionEntryId": "e221-d9d2-b798-5f1d"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Termagant 10",
+                            "id": "6929-575a-c54e-cdcd",
+                            "hidden": false,
+                            "sortIndex": 3,
+                            "selectionEntryGroups": [
+                              {
+                                "name": "​",
+                                "id": "41dd-6fcb-dafe-4c26",
+                                "hidden": false,
+                                "sortIndex": 1,
+                                "constraints": [
+                                  {
+                                    "type": "min",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "b3cc-d12b-14b7-8313"
+                                  },
+                                  {
+                                    "type": "max",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "39e9-172c-1d1e-b546"
+                                  }
+                                ],
+                                "selectionEntries": [
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Devourer",
+                                    "hidden": false,
+                                    "id": "c936-1fd0-3774-0d42",
+                                    "sortIndex": 1
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spinefists",
+                                    "hidden": false,
+                                    "id": "2c90-466c-c4ef-2ec2",
+                                    "sortIndex": 2
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Fleshborer",
+                                    "hidden": false,
+                                    "id": "20b3-d2c2-403d-469b",
+                                    "sortIndex": 3
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Strangleweb",
+                                    "hidden": false,
+                                    "id": "9219-db3f-c6f2-d3d4",
+                                    "sortIndex": 4,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spike Rifle",
+                                    "hidden": false,
+                                    "id": "ba1e-39fd-63c4-923c",
+                                    "sortIndex": 5,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Shardlauncher",
+                                    "hidden": false,
+                                    "id": "eb6d-e06f-3a1b-6d49",
+                                    "sortIndex": 6,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "defaultSelectionEntryId": "c936-1fd0-3774-0d42"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "comment": "LIVING INCUBATOR GRANTED BROOD 2: generated from the normal Termagants unit tree. This nested unit and all of its paid loadout choices cost 0 Points. The normal Warrior attachment category is intentionally preserved for the nested-association test.\nADDITIONAL LEADER: this granted brood may include one nested Warrior through its Additional Leader box. No external association is required.",
+                    "modifiers": [
+                      {
+                        "type": "set",
+                        "value": "true",
+                        "field": "hidden",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "roster",
+                            "childId": "0b81-3579-ad7e-49b2",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "childName": "800 Points (Quick)"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "set",
+                        "value": "1",
+                        "field": "defaultAmount",
+                        "conditions": [
+                          {
+                            "type": "equalTo",
+                            "value": 0,
+                            "field": "selections",
+                            "scope": "roster",
+                            "childId": "0b81-3579-ad7e-49b2",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "childName": "800 Points (Quick)"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "unit",
+                    "import": true,
+                    "name": "Termagants (10) - Brood 3",
+                    "hidden": false,
+                    "id": "9321-d2e9-a8ee-8371",
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 0
+                      }
+                    ],
+                    "categoryLinks": [
+                      {
+                        "targetId": "1f85-4f85-d07e-1af5",
+                        "id": "fae6-6f15-f081-5053",
+                        "primary": true,
+                        "name": "Troop"
+                      },
+                      {
+                        "targetId": "eac7-32d5-ecd7-ce9e",
+                        "id": "6f8b-8290-3fbb-c22e",
+                        "primary": false,
+                        "name": "Infantry"
+                      }
+                    ],
+                    "sortIndex": 3,
+                    "selectionEntryGroups": [
+                      {
+                        "name": "Additional Leader",
+                        "id": "db6f-fada-1962-9836",
+                        "hidden": false,
+                        "sortIndex": 1,
+                        "constraints": [
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "cba2-be4e-77c4-519c"
+                          }
+                        ],
+                        "entryLinks": [
+                          {
+                            "import": true,
+                            "name": "Warrior",
+                            "hidden": false,
+                            "id": "a3df-8a37-fc57-9f68",
+                            "type": "selectionEntry",
+                            "targetId": "95e6-81e5-2943-cbac"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Loadout Options",
+                        "id": "4ee0-7803-7ea1-b793",
+                        "hidden": false,
+                        "sortIndex": 2,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "Termagants 1-7",
+                            "id": "ed3b-ce7d-eefb-8ab6",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "selectionEntryGroups": [
+                              {
+                                "name": "​",
+                                "id": "0ef7-2b8d-f2b5-c060",
+                                "hidden": false,
+                                "sortIndex": 1,
+                                "constraints": [
+                                  {
+                                    "type": "min",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "d135-f5b0-f2e7-8c4e"
+                                  },
+                                  {
+                                    "type": "max",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "f751-8818-ce24-27e5"
+                                  }
+                                ],
+                                "selectionEntries": [
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "7x Devourer",
+                                    "hidden": false,
+                                    "id": "242b-6930-647a-a19e",
+                                    "sortIndex": 1
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "7x Spinefists",
+                                    "hidden": false,
+                                    "id": "058e-8744-7b8d-c687",
+                                    "sortIndex": 2
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "7x Fleshborer",
+                                    "hidden": false,
+                                    "id": "6023-545f-89b6-d4e2",
+                                    "sortIndex": 3
+                                  }
+                                ],
+                                "defaultSelectionEntryId": "242b-6930-647a-a19e"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Special Weapon Loadouts",
+                        "id": "abaf-c714-af69-4b87",
+                        "hidden": false,
+                        "sortIndex": 3,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "Termagant 8",
+                            "id": "4c14-ecf0-67cc-4894",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "selectionEntryGroups": [
+                              {
+                                "name": "​",
+                                "id": "5256-a124-5cc0-c22f",
+                                "hidden": false,
+                                "sortIndex": 1,
+                                "constraints": [
+                                  {
+                                    "type": "min",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "d89b-2d8d-9a72-7ce6"
+                                  },
+                                  {
+                                    "type": "max",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "2591-8e28-eb47-fc33"
+                                  }
+                                ],
+                                "selectionEntries": [
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Devourer",
+                                    "hidden": false,
+                                    "id": "686f-8b99-c0e6-60da",
+                                    "sortIndex": 1
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spinefists",
+                                    "hidden": false,
+                                    "id": "583d-27ef-e259-8cd1",
+                                    "sortIndex": 2
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Fleshborer",
+                                    "hidden": false,
+                                    "id": "cd12-88fa-8a3c-6432",
+                                    "sortIndex": 3
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Strangleweb",
+                                    "hidden": false,
+                                    "id": "0c3d-19d5-3a80-5a52",
+                                    "sortIndex": 4,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spike Rifle",
+                                    "hidden": false,
+                                    "id": "a079-71da-9a0b-5802",
+                                    "sortIndex": 5,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Shardlauncher",
+                                    "hidden": false,
+                                    "id": "a70a-fe47-34b7-b452",
+                                    "sortIndex": 6,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "defaultSelectionEntryId": "686f-8b99-c0e6-60da"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Termagant 9",
+                            "id": "c2eb-9d14-d4c9-67cf",
+                            "hidden": false,
+                            "sortIndex": 2,
+                            "selectionEntryGroups": [
+                              {
+                                "name": "​",
+                                "id": "db5d-b7e7-7fd8-873f",
+                                "hidden": false,
+                                "sortIndex": 1,
+                                "constraints": [
+                                  {
+                                    "type": "min",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "e8d3-1050-45d6-0122"
+                                  },
+                                  {
+                                    "type": "max",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "a2d9-aed8-c3ae-b0ec"
+                                  }
+                                ],
+                                "selectionEntries": [
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Devourer",
+                                    "hidden": false,
+                                    "id": "4d5b-5a8e-72c1-ed0a",
+                                    "sortIndex": 1
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spinefists",
+                                    "hidden": false,
+                                    "id": "f862-853b-b6a2-1c37",
+                                    "sortIndex": 2
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Fleshborer",
+                                    "hidden": false,
+                                    "id": "7e80-01f8-f42d-55ae",
+                                    "sortIndex": 3
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Strangleweb",
+                                    "hidden": false,
+                                    "id": "e5ec-802a-b64f-6de1",
+                                    "sortIndex": 4,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spike Rifle",
+                                    "hidden": false,
+                                    "id": "1044-e53c-2e54-7112",
+                                    "sortIndex": 5,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Shardlauncher",
+                                    "hidden": false,
+                                    "id": "8ed5-bab9-0da6-42cd",
+                                    "sortIndex": 6,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "defaultSelectionEntryId": "4d5b-5a8e-72c1-ed0a"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Termagant 10",
+                            "id": "3a84-2560-c380-4db1",
+                            "hidden": false,
+                            "sortIndex": 3,
+                            "selectionEntryGroups": [
+                              {
+                                "name": "​",
+                                "id": "7b22-da17-a414-c9f9",
+                                "hidden": false,
+                                "sortIndex": 1,
+                                "constraints": [
+                                  {
+                                    "type": "min",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "da1f-8c26-81bf-9592"
+                                  },
+                                  {
+                                    "type": "max",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "shared": true,
+                                    "id": "dc8d-914c-c78c-7346"
+                                  }
+                                ],
+                                "selectionEntries": [
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Devourer",
+                                    "hidden": false,
+                                    "id": "72d0-c4ea-64e6-a571",
+                                    "sortIndex": 1
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spinefists",
+                                    "hidden": false,
+                                    "id": "bae6-5546-f266-af8b",
+                                    "sortIndex": 2
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Fleshborer",
+                                    "hidden": false,
+                                    "id": "3553-501d-fce8-b7a2",
+                                    "sortIndex": 3
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Strangleweb",
+                                    "hidden": false,
+                                    "id": "6e11-f697-8d84-436e",
+                                    "sortIndex": 4,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Spike Rifle",
+                                    "hidden": false,
+                                    "id": "6115-2917-8681-3604",
+                                    "sortIndex": 5,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "upgrade",
+                                    "import": true,
+                                    "name": "Shardlauncher",
+                                    "hidden": false,
+                                    "id": "1181-9e34-0c9e-01d5",
+                                    "sortIndex": 6,
+                                    "costs": [
+                                      {
+                                        "name": "Points",
+                                        "typeId": "121e-e068-ad7a-3063",
+                                        "value": 0
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "defaultSelectionEntryId": "72d0-c4ea-64e6-a571"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "comment": "LIVING INCUBATOR GRANTED BROOD 3: generated from the normal Termagants unit tree. This nested unit and all of its paid loadout choices cost 0 Points. The normal Warrior attachment category is intentionally preserved for the nested-association test.\nADDITIONAL LEADER: this granted brood may include one nested Warrior through its Additional Leader box. No external association is required.",
+                    "modifiers": [
+                      {
+                        "type": "set",
+                        "value": "true",
+                        "field": "hidden",
+                        "conditions": [
+                          {
+                            "type": "equalTo",
+                            "value": 0,
+                            "field": "selections",
+                            "scope": "roster",
+                            "childId": "91f0-51d4-3148-07c8",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "childName": "1600 Points (Long)"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "set",
+                        "value": "1",
+                        "field": "defaultAmount",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "roster",
+                            "childId": "91f0-51d4-3148-07c8",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "childName": "1600 Points (Long)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "name": "Loadout Options",
             "id": "cdc0-b49c-9442-a1ff",
             "hidden": false,
-            "sortIndex": 1,
+            "sortIndex": 2,
             "selectionEntryGroups": [
               {
                 "name": "​",
@@ -3261,185 +4789,6 @@
                   }
                 ],
                 "defaultSelectionEntryId": "16dc-dafb-2ea4-5579"
-              }
-            ]
-          }
-        ],
-        "associations": [
-          {
-            "min": 0,
-            "max": 1,
-            "scope": "roster",
-            "childId": "eadc-1a3e-be9d-d078",
-            "name": "Living Incubator",
-            "id": "3a10-2cff-9003-5eec",
-            "includeChildSelections": true,
-            "includeChildForces": true,
-            "label": "Granted Termagant Brood",
-            "defaultSelectionEntryId": "none",
-            "childName": "May Attach To: Tervigon",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "queryFromSelf": false,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "min": 0,
-            "max": 2,
-            "scope": "roster",
-            "childId": "eadc-1a3e-be9d-d078",
-            "name": "Living Incubator",
-            "id": "0b62-a1f0-4b6d-0252",
-            "includeChildSelections": true,
-            "includeChildForces": true,
-            "label": "Granted Termagant Brood",
-            "defaultSelectionEntryId": "none",
-            "childName": "May Attach To: Tervigon",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "queryFromSelf": false,
-                "childName": "1200 Points (Standard)"
-              }
-            ]
-          },
-          {
-            "min": 0,
-            "max": 3,
-            "scope": "roster",
-            "childId": "eadc-1a3e-be9d-d078",
-            "name": "Living Incubator",
-            "id": "3425-1a3a-2f4e-d81f",
-            "includeChildSelections": true,
-            "includeChildForces": true,
-            "label": "Granted Termagant Brood",
-            "defaultSelectionEntryId": "none",
-            "childName": "May Attach To: Tervigon",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "queryFromSelf": false,
-                "childName": "1600 Points (Long)"
-              }
-            ]
-          }
-        ],
-        "constraints": [
-          {
-            "type": "min",
-            "value": 2,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "68ab-de9d-e1b9-6bf3",
-            "childId": "any",
-            "includeChildSelections": false
-          },
-          {
-            "type": "max",
-            "value": 2,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "8e93-bb6d-ce3c-5c39",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "68ab-de9d-e1b9-6bf3",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "68ab-de9d-e1b9-6bf3",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "8e93-bb6d-ce3c-5c39",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "8e93-bb6d-ce3c-5c39",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
               }
             ]
           }
@@ -3588,259 +4937,6 @@
       {
         "type": "unit",
         "import": true,
-        "name": "Warrior",
-        "hidden": false,
-        "id": "95e6-81e5-2943-cbac",
-        "costs": [
-          {
-            "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
-            "value": 30
-          }
-        ],
-        "categoryLinks": [
-          {
-            "targetId": "ec16-a3ad-02de-9bf1",
-            "id": "3e66-59b2-7b0f-a690",
-            "primary": true,
-            "name": "Leader"
-          },
-          {
-            "targetId": "eac7-32d5-ecd7-ce9e",
-            "id": "99e8-8ba8-3f9d-d44d",
-            "primary": false,
-            "name": "Infantry"
-          }
-        ],
-        "sortIndex": 5,
-        "associations": [
-          {
-            "min": 1,
-            "max": 1,
-            "scope": "roster",
-            "childId": "e490-ed66-4b22-f7c5",
-            "name": "Attaches To",
-            "id": "3d91-8d40-d48b-9c95",
-            "includeChildSelections": true,
-            "includeChildForces": true,
-            "label": "Leader",
-            "defaultSelectionEntryId": "none",
-            "childName": "May Attach To: Warrior"
-          }
-        ],
-        "rules": [
-          {
-            "name": "Leader Attachment",
-            "id": "2dc6-c3e0-8318-f3f0",
-            "hidden": false,
-            "description": "This unit must attach to either:\n● HORMAGAUNTS\n● TERMAGANTS",
-            "noindex": false
-          },
-          {
-            "name": "Leader Capacity",
-            "id": "5fc6-d025-2883-79f2",
-            "hidden": false,
-            "description": "This unit does not count towards the army list’s leader unit capacity.",
-            "noindex": false
-          }
-        ],
-        "selectionEntryGroups": [
-          {
-            "name": "Loadout Options",
-            "id": "1a65-df6d-28e2-28da",
-            "hidden": false,
-            "sortIndex": 1,
-            "selectionEntryGroups": [
-              {
-                "name": "Arm Pair 1",
-                "id": "7a2a-bc47-a51a-446d",
-                "hidden": false,
-                "sortIndex": 1,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "61a2-3e6c-f0e1-9800"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "6498-cc71-7592-d438"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Scything Talons",
-                    "hidden": false,
-                    "id": "d53e-b462-24dc-c530",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "2x Warrior Bone Sword",
-                    "hidden": false,
-                    "id": "705c-f79c-71f5-3e4e",
-                    "sortIndex": 2
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Warrior Bone Sword + Lash Whip",
-                    "hidden": false,
-                    "id": "f5e6-5f90-b16d-47dc",
-                    "sortIndex": 3
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Death Spitter",
-                    "hidden": false,
-                    "id": "770b-e364-be8c-ded5",
-                    "sortIndex": 4
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Venom Cannon",
-                    "hidden": false,
-                    "id": "6e51-fd92-2a4e-d99f",
-                    "sortIndex": 5
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Barbed Strangler",
-                    "hidden": false,
-                    "id": "a08b-9f87-9ee3-1603",
-                    "sortIndex": 6
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Devourer",
-                    "hidden": false,
-                    "id": "3a79-4912-c7e8-eadc",
-                    "sortIndex": 7
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Spinefists",
-                    "hidden": false,
-                    "id": "1081-67a2-7c86-20f5",
-                    "sortIndex": 8
-                  }
-                ],
-                "defaultSelectionEntryId": "d53e-b462-24dc-c530"
-              },
-              {
-                "name": "Arm Pair 2",
-                "id": "3ce7-1f34-14ca-8212",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "0bf2-8fd8-5e75-c477"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "e51c-a0f8-9a6f-a91a"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Scything Talons",
-                    "hidden": false,
-                    "id": "811a-cf55-3d2c-1d85",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "2x Warrior Bone Sword",
-                    "hidden": false,
-                    "id": "e627-dca0-4870-a38e",
-                    "sortIndex": 2
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Warrior Bone Sword + Lash Whip",
-                    "hidden": false,
-                    "id": "b541-f26e-684d-44c7",
-                    "sortIndex": 3
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Death Spitter",
-                    "hidden": false,
-                    "id": "9a54-a160-8a04-a536",
-                    "sortIndex": 4
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Venom Cannon",
-                    "hidden": false,
-                    "id": "1c32-65de-8ace-7aed",
-                    "sortIndex": 5
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Barbed Strangler",
-                    "hidden": false,
-                    "id": "5454-eedb-869b-5ba6",
-                    "sortIndex": 6
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Devourer",
-                    "hidden": false,
-                    "id": "514f-a8ca-8387-7b72",
-                    "sortIndex": 7
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Spinefists",
-                    "hidden": false,
-                    "id": "074b-5e89-03be-08f8",
-                    "sortIndex": 8
-                  }
-                ],
-                "defaultSelectionEntryId": "811a-cf55-3d2c-1d85"
-              }
-            ]
-          }
-        ],
-        "comment": "LOADOUT UI: the Warrior is represented as two final-state arm-pair lists. Each arm pair can record one melee package or one ranged bio-weapon."
-      },
-      {
-        "type": "unit",
-        "import": true,
         "name": "Hormagaunts (10)",
         "hidden": false,
         "id": "f696-e4dc-e97e-42c1",
@@ -3863,33 +4959,41 @@
             "id": "f6d4-cdc8-d213-c194",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "e490-ed66-4b22-f7c5",
-            "id": "d70f-0d66-5651-28a4",
-            "primary": false,
-            "name": "May Attach To: Warrior"
           }
         ],
         "sortIndex": 6,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "c157-94f8-12d6-96a2",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
+          {
+            "name": "Additional Leader",
+            "id": "b3c5-745b-9b5e-5315",
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "c0f5-89d7-f5cd-3337"
+              }
+            ],
+            "entryLinks": [
+              {
+                "import": true,
+                "name": "Warrior",
+                "hidden": false,
+                "id": "f9c6-9503-2f33-e9fc",
+                "type": "selectionEntry",
+                "targetId": "95e6-81e5-2943-cbac"
+              }
+            ]
+          },
           {
             "name": "Loadout Options",
             "id": "2466-ecf9-cb94-d43d",
             "hidden": false,
-            "sortIndex": 1,
+            "sortIndex": 2,
             "selectionEntryGroups": [
               {
                 "name": "​",
@@ -3955,39 +5059,41 @@
             "id": "2253-4b8b-a030-52cf",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "e490-ed66-4b22-f7c5",
-            "id": "805b-0c7c-460c-4ae4",
-            "primary": false,
-            "name": "May Attach To: Warrior"
-          },
-          {
-            "targetId": "eadc-1a3e-be9d-d078",
-            "id": "faba-e266-948e-f939",
-            "primary": false,
-            "name": "May Attach To: Tervigon"
           }
         ],
         "sortIndex": 7,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "572f-549f-9c84-ee1e",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
+          {
+            "name": "Additional Leader",
+            "id": "a0ea-613b-f4a0-e726",
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "be13-1208-a545-5fb4"
+              }
+            ],
+            "entryLinks": [
+              {
+                "import": true,
+                "name": "Warrior",
+                "hidden": false,
+                "id": "8932-e46c-37d1-84df",
+                "type": "selectionEntry",
+                "targetId": "95e6-81e5-2943-cbac"
+              }
+            ]
+          },
           {
             "name": "Loadout Options",
             "id": "29aa-7677-4f3c-d355",
             "hidden": false,
-            "sortIndex": 1,
+            "sortIndex": 2,
             "selectionEntryGroups": [
               {
                 "name": "Termagants 1-7",
@@ -4054,7 +5160,7 @@
             "name": "Special Weapon Loadouts",
             "id": "5b11-c2f2-41cc-bce3",
             "hidden": false,
-            "sortIndex": 2,
+            "sortIndex": 3,
             "selectionEntryGroups": [
               {
                 "name": "Termagant 8",
@@ -4123,59 +5229,6 @@
                             "typeId": "121e-e068-ad7a-3063",
                             "value": 10
                           }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3a10-2cff-9003-5eec",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "0b62-a1f0-4b6d-0252",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3425-1a3a-2f4e-d81f",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          }
                         ]
                       },
                       {
@@ -4191,59 +5244,6 @@
                             "typeId": "121e-e068-ad7a-3063",
                             "value": 10
                           }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3a10-2cff-9003-5eec",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "0b62-a1f0-4b6d-0252",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3425-1a3a-2f4e-d81f",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          }
                         ]
                       },
                       {
@@ -4258,59 +5258,6 @@
                             "name": "Points",
                             "typeId": "121e-e068-ad7a-3063",
                             "value": 10
-                          }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3a10-2cff-9003-5eec",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "0b62-a1f0-4b6d-0252",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3425-1a3a-2f4e-d81f",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
                           }
                         ]
                       }
@@ -4386,59 +5333,6 @@
                             "typeId": "121e-e068-ad7a-3063",
                             "value": 10
                           }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3a10-2cff-9003-5eec",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "0b62-a1f0-4b6d-0252",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3425-1a3a-2f4e-d81f",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          }
                         ]
                       },
                       {
@@ -4454,59 +5348,6 @@
                             "typeId": "121e-e068-ad7a-3063",
                             "value": 10
                           }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3a10-2cff-9003-5eec",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "0b62-a1f0-4b6d-0252",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3425-1a3a-2f4e-d81f",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          }
                         ]
                       },
                       {
@@ -4521,59 +5362,6 @@
                             "name": "Points",
                             "typeId": "121e-e068-ad7a-3063",
                             "value": 10
-                          }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3a10-2cff-9003-5eec",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "0b62-a1f0-4b6d-0252",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3425-1a3a-2f4e-d81f",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
                           }
                         ]
                       }
@@ -4649,59 +5437,6 @@
                             "typeId": "121e-e068-ad7a-3063",
                             "value": 10
                           }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3a10-2cff-9003-5eec",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "0b62-a1f0-4b6d-0252",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3425-1a3a-2f4e-d81f",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          }
                         ]
                       },
                       {
@@ -4716,59 +5451,6 @@
                             "name": "Points",
                             "typeId": "121e-e068-ad7a-3063",
                             "value": 10
-                          }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3a10-2cff-9003-5eec",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "0b62-a1f0-4b6d-0252",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3425-1a3a-2f4e-d81f",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
                           }
                         ]
                       },
@@ -4785,59 +5467,6 @@
                             "typeId": "121e-e068-ad7a-3063",
                             "value": 10
                           }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3a10-2cff-9003-5eec",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "0b62-a1f0-4b6d-0252",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": 0,
-                            "field": "121e-e068-ad7a-3063",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "associations",
-                                "scope": "ancestor",
-                                "childId": "3425-1a3a-2f4e-d81f",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "childName": "Tervigon"
-                              }
-                            ]
-                          }
                         ]
                       }
                     ],
@@ -4848,141 +5477,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Termagants 1-7 share one squad-wide ordinary weapon choice to avoid bookkeeping-only splits between Devourers, Spinefists, and Fleshborers. Termagants 8-10 are the three paid specialist slots; because the special weapons cost points, each specialist retains the three ordinary weapon states alongside Strangleweb / Spike Rifle / Shardlauncher +10.\nLIVING INCUBATOR COST CONTRACT: when this Termagant unit is selected in the active Tervigon Living Incubator association picker, its base Points cost and all paid specialist-weapon costs resolve to 0.",
-        "modifiers": [
-          {
-            "type": "set",
-            "value": 0,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "3a10-2cff-9003-5eec",
-                "shared": true,
-                "includeChildSelections": false,
-                "childName": "Tervigon"
-              }
-            ]
-          },
-          {
-            "type": "set",
-            "value": 0,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "0b62-a1f0-4b6d-0252",
-                "shared": true,
-                "includeChildSelections": false,
-                "childName": "Tervigon"
-              }
-            ]
-          },
-          {
-            "type": "set",
-            "value": 0,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "3425-1a3a-2f4e-d81f",
-                "shared": true,
-                "includeChildSelections": false,
-                "childName": "Tervigon"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "572f-549f-9c84-ee1e",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "3d91-8d40-d48b-9c95",
-                "shared": true,
-                "includeChildSelections": false,
-                "childName": "Warrior"
-              },
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "3a10-2cff-9003-5eec",
-                "shared": true,
-                "includeChildSelections": false,
-                "childName": "Tervigon"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "572f-549f-9c84-ee1e",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "3d91-8d40-d48b-9c95",
-                "shared": true,
-                "includeChildSelections": false,
-                "childName": "Warrior"
-              },
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "0b62-a1f0-4b6d-0252",
-                "shared": true,
-                "includeChildSelections": false,
-                "childName": "Tervigon"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "572f-549f-9c84-ee1e",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "3d91-8d40-d48b-9c95",
-                "shared": true,
-                "includeChildSelections": false,
-                "childName": "Warrior"
-              },
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "3425-1a3a-2f4e-d81f",
-                "shared": true,
-                "includeChildSelections": false,
-                "childName": "Tervigon"
-              }
-            ]
-          }
-        ]
+        "comment": "LOADOUT UI: Termagants 1-7 share one squad-wide ordinary weapon choice to avoid bookkeeping-only splits between Devourers, Spinefists, and Fleshborers. Termagants 8-10 are the three paid specialist slots; because the special weapons cost points, each specialist retains the three ordinary weapon states alongside Strangleweb / Spike Rifle / Shardlauncher +10."
       },
       {
         "type": "unit",
@@ -7715,16 +8210,6 @@
             "id": "033d-bc3a-d488-d525"
           }
         ]
-      },
-      {
-        "name": "May Attach To: Warrior",
-        "id": "e490-ed66-4b22-f7c5",
-        "hidden": true
-      },
-      {
-        "name": "May Attach To: Tervigon",
-        "id": "eadc-1a3e-be9d-d078",
-        "hidden": true
       }
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
@@ -7861,8 +8346,245 @@
             ]
           }
         ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Warrior",
+        "hidden": false,
+        "id": "95e6-81e5-2943-cbac",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 30
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "3e66-59b2-7b0f-a690",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "99e8-8ba8-3f9d-d44d",
+            "primary": false,
+            "name": "Infantry"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "2dc6-c3e0-8318-f3f0",
+            "hidden": false,
+            "description": "This unit must attach to either:\n● HORMAGAUNTS\n● TERMAGANTS",
+            "noindex": false
+          },
+          {
+            "name": "Leader Capacity",
+            "id": "5fc6-d025-2883-79f2",
+            "hidden": false,
+            "description": "This unit does not count towards the army list’s leader unit capacity.",
+            "noindex": false
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "1a65-df6d-28e2-28da",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Arm Pair 1",
+                "id": "7a2a-bc47-a51a-446d",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "61a2-3e6c-f0e1-9800"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "6498-cc71-7592-d438"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Scything Talons",
+                    "hidden": false,
+                    "id": "d53e-b462-24dc-c530",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "2x Warrior Bone Sword",
+                    "hidden": false,
+                    "id": "705c-f79c-71f5-3e4e",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Warrior Bone Sword + Lash Whip",
+                    "hidden": false,
+                    "id": "f5e6-5f90-b16d-47dc",
+                    "sortIndex": 3
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Death Spitter",
+                    "hidden": false,
+                    "id": "770b-e364-be8c-ded5",
+                    "sortIndex": 4
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Venom Cannon",
+                    "hidden": false,
+                    "id": "6e51-fd92-2a4e-d99f",
+                    "sortIndex": 5
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Barbed Strangler",
+                    "hidden": false,
+                    "id": "a08b-9f87-9ee3-1603",
+                    "sortIndex": 6
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Devourer",
+                    "hidden": false,
+                    "id": "3a79-4912-c7e8-eadc",
+                    "sortIndex": 7
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Spinefists",
+                    "hidden": false,
+                    "id": "1081-67a2-7c86-20f5",
+                    "sortIndex": 8
+                  }
+                ],
+                "defaultSelectionEntryId": "d53e-b462-24dc-c530"
+              },
+              {
+                "name": "Arm Pair 2",
+                "id": "3ce7-1f34-14ca-8212",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "0bf2-8fd8-5e75-c477"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "e51c-a0f8-9a6f-a91a"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Scything Talons",
+                    "hidden": false,
+                    "id": "811a-cf55-3d2c-1d85",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "2x Warrior Bone Sword",
+                    "hidden": false,
+                    "id": "e627-dca0-4870-a38e",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Warrior Bone Sword + Lash Whip",
+                    "hidden": false,
+                    "id": "b541-f26e-684d-44c7",
+                    "sortIndex": 3
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Death Spitter",
+                    "hidden": false,
+                    "id": "9a54-a160-8a04-a536",
+                    "sortIndex": 4
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Venom Cannon",
+                    "hidden": false,
+                    "id": "1c32-65de-8ace-7aed",
+                    "sortIndex": 5
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Barbed Strangler",
+                    "hidden": false,
+                    "id": "5454-eedb-869b-5ba6",
+                    "sortIndex": 6
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Devourer",
+                    "hidden": false,
+                    "id": "514f-a8ca-8387-7b72",
+                    "sortIndex": 7
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Spinefists",
+                    "hidden": false,
+                    "id": "074b-5e89-03be-08f8",
+                    "sortIndex": 8
+                  }
+                ],
+                "defaultSelectionEntryId": "811a-cf55-3d2c-1d85"
+              }
+            ]
+          }
+        ],
+        "comment": "LOADOUT UI: the Warrior is represented as two final-state arm-pair lists. Each arm pair can record one melee package or one ranged bio-weapon.\nNESTED COUNTLESS LEADER: Warrior is no longer a root Leader selection. Eligible Hormagaunt and Termagant units offer it through an Additional Leader box. It remains Countless and does not consume Leader capacity."
       }
     ],
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTyranids now use the final-state fancy-notepad loadout grammar. Hive Tyrant Wings are inline loadout alternatives; Warrior and Warrior Brood use two arm-pair lists; Termagants 1-7 use one shared ordinary weapon slot while 8-10 are paid specialist slots. Ripper Swarms, Hive Guard, and Tyrant Guard use variable-size controls. All native non-Rare Other units use Additional Copy Costs. The existing Tervigon Living Incubator free-Termagant TODO remains intentionally untouched.\n\nRIPPER SWARM VARIABLE-SIZE UI FIX\nRipper Swarms now use one quantity-style +20 Point Additional Model entry capped at two, rather than separate Ripper Swarm 5 and Ripper Swarm 6 model subtrees.\n\nRIPPER SWARM ADDITIONAL-MODEL UI CORRECTION\nRipper Swarms now use the same max-1 optional-model radio pattern as Hive Guard. Ripper Swarm 5 is the first optional +20 model; when selected it exposes Ripper Swarm 6 as a second optional +20 model.\n\nTERVIGON LIVING INCUBATOR IMPLEMENTATION\nLiving Incubator now uses required Tervigon-to-Termagant associations: 1 brood at 800, 2 at 1200, 3 at 1600. Associated Termagant units and their paid specialist weapons cost 0 Points. The full Living Incubator rule text is displayed on the Tervigon.\n\nTERVIGON HIDDEN-ASSOCIATION MINIMUM FIX\nLiving Incubator association slots now have min 0 individually. A single dynamic association-count constraint enforces 1 / 2 / 3 attached broods by Game Size, preventing hidden Brood 3 from generating a phantom requirement at 1200 Points.\n\nTERVIGON DISTINCT-BROOD PICKER FIX\nLiving Incubator now uses one game-size-specific multi-select association picker rather than separate Brood 1/2/3 pickers. Each Termagant unit appears once, so the same unit cannot be selected for multiple granted broods."
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTyranids now use the final-state fancy-notepad loadout grammar. Hive Tyrant Wings are inline loadout alternatives; Warrior and Warrior Brood use two arm-pair lists; Termagants 1-7 use one shared ordinary weapon slot while 8-10 are paid specialist slots. Ripper Swarms, Hive Guard, and Tyrant Guard use variable-size controls. All native non-Rare Other units use Additional Copy Costs. The existing Tervigon Living Incubator free-Termagant TODO remains intentionally untouched.\n\nRIPPER SWARM VARIABLE-SIZE UI FIX\nRipper Swarms now use one quantity-style +20 Point Additional Model entry capped at two, rather than separate Ripper Swarm 5 and Ripper Swarm 6 model subtrees.\n\nRIPPER SWARM ADDITIONAL-MODEL UI CORRECTION\nRipper Swarms now use the same max-1 optional-model radio pattern as Hive Guard. Ripper Swarm 5 is the first optional +20 model; when selected it exposes Ripper Swarm 6 as a second optional +20 model.\n\nTERVIGON LIVING INCUBATOR IMPLEMENTATION\nLiving Incubator now uses required Tervigon-to-Termagant associations: 1 brood at 800, 2 at 1200, 3 at 1600. Associated Termagant units and their paid specialist weapons cost 0 Points. The full Living Incubator rule text is displayed on the Tervigon.\n\nTERVIGON HIDDEN-ASSOCIATION MINIMUM FIX\nLiving Incubator association slots now have min 0 individually. A single dynamic association-count constraint enforces 1 / 2 / 3 attached broods by Game Size, preventing hidden Brood 3 from generating a phantom requirement at 1200 Points.\n\nTERVIGON DISTINCT-BROOD PICKER FIX\nLiving Incubator now uses one game-size-specific multi-select association picker rather than separate Brood 1/2/3 pickers. Each Termagant unit appears once, so the same unit cannot be selected for multiple granted broods.\n\nTERVIGON PLAYER-FACING ERROR MESSAGE\nReplaced New Recruit's generic 'requires N associations more' minimum error with explicit Living Incubator errors for 800 / 1200 / 1600 Points. The messages tell the player how many free Termagant broods are required, to add Termagant units first, where to select them, and that the selected broods cost 0 Points.\n\nTERVIGON AUTO-GRANTED BROODS PROTOTYPE\nLiving Incubator now prototypes Neuroloid-style nested Termagant broods. The Tervigon automatically selects 1 / 2 / 3 zero-point brood units according to Game Size. Each brood preserves the normal Warrior attachment category so nested association targeting can be tested.\n\nNESTED WARRIOR COUNTLESS LEADER\nWarrior has been removed from the root Leader section and moved into sharedSelectionEntries. Hormagaunts, normal Termagants, and Tervigon-granted Termagant broods now expose Warrior through an Additional Leader box, matching the proven nested Nob-style architecture."
   }
 }
