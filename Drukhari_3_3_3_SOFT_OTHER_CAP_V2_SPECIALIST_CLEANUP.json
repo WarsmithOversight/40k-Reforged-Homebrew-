@@ -5,7 +5,7 @@
     "name": "Drukhari 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 6,
-    "revision": 12,
+    "revision": 13,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -4136,18 +4136,10 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Splinter Rifle",
-                        "hidden": false,
-                        "id": "5d83-c854-e682-b0cd",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
                         "name": "Blaster",
                         "hidden": false,
                         "id": "46e0-e1ec-9627-2a57",
-                        "sortIndex": 2
+                        "sortIndex": 1
                       },
                       {
                         "type": "upgrade",
@@ -4155,7 +4147,7 @@
                         "name": "Shredder",
                         "hidden": false,
                         "id": "7955-a816-e1f5-cf98",
-                        "sortIndex": 3
+                        "sortIndex": 2
                       },
                       {
                         "type": "upgrade",
@@ -4163,7 +4155,7 @@
                         "name": "Splinter Cannon",
                         "hidden": false,
                         "id": "261b-3143-5a73-986d",
-                        "sortIndex": 4
+                        "sortIndex": 3
                       },
                       {
                         "type": "upgrade",
@@ -4171,10 +4163,10 @@
                         "name": "Dark Lance",
                         "hidden": false,
                         "id": "fd5e-2dc3-350e-11dc",
-                        "sortIndex": 5
+                        "sortIndex": 4
                       }
                     ],
-                    "defaultSelectionEntryId": "5d83-c854-e682-b0cd"
+                    "defaultSelectionEntryId": "46e0-e1ec-9627-2a57"
                   }
                 ]
               },
@@ -4213,18 +4205,10 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Splinter Rifle",
-                        "hidden": false,
-                        "id": "1bdc-7902-e275-3f88",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
                         "name": "Blaster",
                         "hidden": false,
                         "id": "6a19-d79a-42cc-5977",
-                        "sortIndex": 2
+                        "sortIndex": 1
                       },
                       {
                         "type": "upgrade",
@@ -4232,7 +4216,7 @@
                         "name": "Shredder",
                         "hidden": false,
                         "id": "8cc3-307f-bcb4-019a",
-                        "sortIndex": 3
+                        "sortIndex": 2
                       },
                       {
                         "type": "upgrade",
@@ -4240,7 +4224,7 @@
                         "name": "Splinter Cannon",
                         "hidden": false,
                         "id": "217a-c245-670b-7c1d",
-                        "sortIndex": 4
+                        "sortIndex": 3
                       },
                       {
                         "type": "upgrade",
@@ -4248,10 +4232,10 @@
                         "name": "Dark Lance",
                         "hidden": false,
                         "id": "1fec-c9db-89f4-8781",
-                        "sortIndex": 5
+                        "sortIndex": 4
                       }
                     ],
-                    "defaultSelectionEntryId": "1bdc-7902-e275-3f88"
+                    "defaultSelectionEntryId": "6a19-d79a-42cc-5977"
                   }
                 ]
               }
@@ -4966,27 +4950,43 @@
                       }
                     ],
                     "defaultSelectionEntryId": "1316-a83c-edfe-d586"
-                  }
-                ],
-                "selectionEntries": [
+                  },
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Stinger Pistol",
+                    "name": "​",
+                    "id": "d32e-bcc5-88f0-fixd",
                     "hidden": false,
-                    "id": "d32e-bcc5-88f0-9a63",
                     "sortIndex": 2,
                     "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d32e-bcc5-88f0-min1",
+                        "includeChildSelections": false
+                      },
                       {
                         "type": "max",
                         "value": 1,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "82f9-d0ac-7f50-c307",
+                        "id": "d32e-bcc5-88f0-max1",
                         "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Stinger Pistol",
+                        "hidden": false,
+                        "id": "d32e-bcc5-88f0-9a63",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d32e-bcc5-88f0-9a63"
                   }
                 ]
               },
@@ -5093,6 +5093,15 @@
                     "sortIndex": 2,
                     "constraints": [
                       {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "cb55-7e32-b6d8m1",
+                        "includeChildSelections": false
+                      },
+                      {
                         "type": "max",
                         "value": 1,
                         "field": "selections",
@@ -5127,7 +5136,8 @@
                         "id": "0bb4-139d-46db-5946",
                         "sortIndex": 3
                       }
-                    ]
+                    ],
+                    "defaultSelectionEntryId": "46fb-522d-7f47-0839"
                   }
                 ]
               },
@@ -5181,6 +5191,15 @@
                     "sortIndex": 2,
                     "constraints": [
                       {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7bf5-61b9-b968m1",
+                        "includeChildSelections": false
+                      },
+                      {
                         "type": "max",
                         "value": 1,
                         "field": "selections",
@@ -5215,7 +5234,8 @@
                         "id": "7e52-49de-81ec-7340",
                         "sortIndex": 3
                       }
-                    ]
+                    ],
+                    "defaultSelectionEntryId": "6ad7-d3f4-2671-27b9"
                   }
                 ]
               }
@@ -5477,18 +5497,10 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Splinter Rifle",
-                        "hidden": false,
-                        "id": "7f01-0db5-bfa8-dc8e",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
                         "name": "Blaster",
                         "hidden": false,
                         "id": "c224-e40b-660d-2eb8",
-                        "sortIndex": 2
+                        "sortIndex": 1
                       },
                       {
                         "type": "upgrade",
@@ -5496,7 +5508,7 @@
                         "name": "Shredder",
                         "hidden": false,
                         "id": "95b4-d185-75fb-3086",
-                        "sortIndex": 3
+                        "sortIndex": 2
                       },
                       {
                         "type": "upgrade",
@@ -5504,7 +5516,7 @@
                         "name": "Splinter Cannon",
                         "hidden": false,
                         "id": "ee1f-a7d7-0cb2-5e8a",
-                        "sortIndex": 4
+                        "sortIndex": 3
                       },
                       {
                         "type": "upgrade",
@@ -5512,10 +5524,10 @@
                         "name": "Dark Lance",
                         "hidden": false,
                         "id": "7690-e3ab-affe-a89f",
-                        "sortIndex": 5
+                        "sortIndex": 4
                       }
                     ],
-                    "defaultSelectionEntryId": "7f01-0db5-bfa8-dc8e"
+                    "defaultSelectionEntryId": "c224-e40b-660d-2eb8"
                   }
                 ]
               }
@@ -6229,27 +6241,43 @@
                       }
                     ],
                     "defaultSelectionEntryId": "d7a7-e080-10c1-b37c"
-                  }
-                ],
-                "selectionEntries": [
+                  },
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Stinger Pistol",
+                    "name": "​",
+                    "id": "383a-46e7-a372-fixd",
                     "hidden": false,
-                    "id": "383a-46e7-a372-ef8e",
                     "sortIndex": 2,
                     "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "383a-46e7-a372-min1",
+                        "includeChildSelections": false
+                      },
                       {
                         "type": "max",
                         "value": 1,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "e57e-3455-edb9-120b",
+                        "id": "383a-46e7-a372-max1",
                         "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Stinger Pistol",
+                        "hidden": false,
+                        "id": "383a-46e7-a372-ef8e",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "383a-46e7-a372-ef8e"
                   }
                 ]
               },
@@ -6356,6 +6384,15 @@
                     "sortIndex": 2,
                     "constraints": [
                       {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2f6d-f8f5-20e1m1",
+                        "includeChildSelections": false
+                      },
+                      {
                         "type": "max",
                         "value": 1,
                         "field": "selections",
@@ -6390,7 +6427,8 @@
                         "id": "95d3-e52d-1555-cf01",
                         "sortIndex": 3
                       }
-                    ]
+                    ],
+                    "defaultSelectionEntryId": "24e9-aa13-4dbd-d366"
                   }
                 ]
               }
@@ -10005,6 +10043,6 @@
         ]
       }
     ],
-    "comment": "\n\nADDITIONAL COPY COSTS\nNative non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Rare Other units retain their existing hard cap."
+    "comment": "\n\nADDITIONAL COPY COSTS\nNative non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Rare Other units retain their existing hard cap.\n\nSPECIALIST / DEFAULT-EQUIPMENT CLEANUP\nNamed champions consume model slot 1; numbering therefore continues from model 2. Kabalite Trueborn 5 and Kabalite Warriors 9-10 are treated as dedicated special-weapon models and no longer advertise Splinter Rifle. Wrack 9-10 and Haemoxyte 5 no longer expose a None choice for their special weapon. Acothyst Stinger Pistols are represented as fixed default equipment."
   }
 }

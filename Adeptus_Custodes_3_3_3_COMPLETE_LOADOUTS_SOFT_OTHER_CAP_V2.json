@@ -1,0 +1,4190 @@
+{
+  "catalogue": {
+    "library": false,
+    "id": "a774-9ea6-9b60-31af",
+    "name": "Adeptus Custodes 3.3.3",
+    "gameSystemId": "sys-b298-09dc-9597-23fd",
+    "gameSystemRevision": 6,
+    "revision": 3,
+    "battleScribeVersion": "2.03",
+    "type": "catalogue",
+    "selectionEntries": [
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Left Hand of the Emperor",
+        "hidden": false,
+        "id": "be34-ee32-6474-ceb6",
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "82c2-2555-4b10-d517"
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "7c87-14a7-ad9a-1842",
+            "id": "06f7-c5a0-56a1-ecbc",
+            "primary": true,
+            "name": "Configuration"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Left Hand of the Emperor",
+            "id": "9ea2-16b6-64ca-2565",
+            "hidden": false,
+            "description": "You may also add units to your Army List from the “Sisters of\nSilence” document.",
+            "noindex": false
+          }
+        ],
+        "comment": "PHASE 0.1 SISTERS OF SILENCE PLACEHOLDER: optional and unchecked by default. When the reusable Sisters of Silence library exists, link it with importRootEntries=false and reveal Adeptus Custodes-local Sisters entryLinks only while this configuration is selected. No unresolved external catalogue target is emitted here.",
+        "sortIndex": 0
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Additional Copy Costs",
+        "hidden": false,
+        "id": "a1e1-3065-146b-b1c7",
+        "sortIndex": 1,
+        "categoryLinks": [
+          {
+            "targetId": "default-category",
+            "id": "68c1-36db-117b-98c0",
+            "primary": true,
+            "name": "Configuration"
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "faeb-a7a9-7166-7706",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "80a9-6b43-631f-5a4f"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "7898-ae77-68eb-95f4",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "753e-49e2-0c6a-a6a2",
+            "includeChildSelections": true
+          }
+        ],
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 0
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "1",
+            "field": "defaultAmount"
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "cdc7-9601-07f8-859f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Allarus Custodian"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "cdc7-9601-07f8-859f",
+                "childName": "Allarus Custodian",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "cdc7-9601-07f8-859f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Allarus Custodian"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "cdc7-9601-07f8-859f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Allarus Custodian"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "cdc7-9601-07f8-859f",
+                "childName": "Allarus Custodian",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "cdc7-9601-07f8-859f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Allarus Custodian"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "cdc7-9601-07f8-859f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Allarus Custodian"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "cdc7-9601-07f8-859f",
+                "childName": "Allarus Custodian",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "cdc7-9601-07f8-859f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Allarus Custodian"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7653-c635-3850-3a5f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vexilla Allarus Custodian"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "7653-c635-3850-3a5f",
+                "childName": "Vexilla Allarus Custodian",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7653-c635-3850-3a5f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vexilla Allarus Custodian"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7653-c635-3850-3a5f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vexilla Allarus Custodian"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "7653-c635-3850-3a5f",
+                "childName": "Vexilla Allarus Custodian",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7653-c635-3850-3a5f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vexilla Allarus Custodian"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7653-c635-3850-3a5f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vexilla Allarus Custodian"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "7653-c635-3850-3a5f",
+                "childName": "Vexilla Allarus Custodian",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7653-c635-3850-3a5f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vexilla Allarus Custodian"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d9ae-1a36-50cb-1134",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Custodian Warden"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "d9ae-1a36-50cb-1134",
+                "childName": "Custodian Warden",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d9ae-1a36-50cb-1134",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Custodian Warden"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d9ae-1a36-50cb-1134",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Custodian Warden"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "d9ae-1a36-50cb-1134",
+                "childName": "Custodian Warden",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d9ae-1a36-50cb-1134",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Custodian Warden"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d9ae-1a36-50cb-1134",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Custodian Warden"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "d9ae-1a36-50cb-1134",
+                "childName": "Custodian Warden",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d9ae-1a36-50cb-1134",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Custodian Warden"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e011-d5cf-127e-df39",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vertus Praetor"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "e011-d5cf-127e-df39",
+                "childName": "Vertus Praetor",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e011-d5cf-127e-df39",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vertus Praetor"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e011-d5cf-127e-df39",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vertus Praetor"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "e011-d5cf-127e-df39",
+                "childName": "Vertus Praetor",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e011-d5cf-127e-df39",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vertus Praetor"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e011-d5cf-127e-df39",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vertus Praetor"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "e011-d5cf-127e-df39",
+                "childName": "Vertus Praetor",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e011-d5cf-127e-df39",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vertus Praetor"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0471-ace8-695f-9963",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Decaptis Blade Champion"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0471-ace8-695f-9963",
+                "childName": "Decaptis Blade Champion",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0471-ace8-695f-9963",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Decaptis Blade Champion"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0471-ace8-695f-9963",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Decaptis Blade Champion"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0471-ace8-695f-9963",
+                "childName": "Decaptis Blade Champion",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0471-ace8-695f-9963",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Decaptis Blade Champion"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0471-ace8-695f-9963",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Decaptis Blade Champion"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0471-ace8-695f-9963",
+                "childName": "Decaptis Blade Champion",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0471-ace8-695f-9963",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Decaptis Blade Champion"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0fcb-6352-d0c0-b543",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Hurricanus Blade Champion"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0fcb-6352-d0c0-b543",
+                "childName": "Hurricanus Blade Champion",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0fcb-6352-d0c0-b543",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Hurricanus Blade Champion"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0fcb-6352-d0c0-b543",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Hurricanus Blade Champion"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0fcb-6352-d0c0-b543",
+                "childName": "Hurricanus Blade Champion",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0fcb-6352-d0c0-b543",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Hurricanus Blade Champion"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0fcb-6352-d0c0-b543",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Hurricanus Blade Champion"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0fcb-6352-d0c0-b543",
+                "childName": "Hurricanus Blade Champion",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0fcb-6352-d0c0-b543",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Hurricanus Blade Champion"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0289-ad65-bce3-6f80",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sagittarum Guard"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0289-ad65-bce3-6f80",
+                "childName": "Sagittarum Guard",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0289-ad65-bce3-6f80",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sagittarum Guard"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0289-ad65-bce3-6f80",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sagittarum Guard"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0289-ad65-bce3-6f80",
+                "childName": "Sagittarum Guard",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0289-ad65-bce3-6f80",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sagittarum Guard"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0289-ad65-bce3-6f80",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sagittarum Guard"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0289-ad65-bce3-6f80",
+                "childName": "Sagittarum Guard",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0289-ad65-bce3-6f80",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sagittarum Guard"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "272d-de27-ce62-6719",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Venerable Land Raider"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "272d-de27-ce62-6719",
+                "childName": "Venerable Land Raider",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "272d-de27-ce62-6719",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Venerable Land Raider"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "272d-de27-ce62-6719",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Venerable Land Raider"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "272d-de27-ce62-6719",
+                "childName": "Venerable Land Raider",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "272d-de27-ce62-6719",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Venerable Land Raider"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "272d-de27-ce62-6719",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Venerable Land Raider"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "272d-de27-ce62-6719",
+                "childName": "Venerable Land Raider",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "272d-de27-ce62-6719",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Venerable Land Raider"
+              }
+            ]
+          }
+        ],
+        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of every native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Shield-Captain",
+        "hidden": false,
+        "id": "7a6d-f141-fe63-63b1",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 190
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "16ac-dca9-0a27-54cf",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "fdcd-a14f-b072-5ba5",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "c417-3a43-73d4-f4bf",
+            "id": "93f9-e556-f2f6-1df6",
+            "primary": false,
+            "name": "Rare"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "3a64-9513-da2b-cea2",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          },
+          {
+            "targetId": "c6bf-210a-4b2b-b2c7",
+            "id": "b3c1-b489-1edc-2226",
+            "primary": false,
+            "name": "SHIELD-CAPTAIN Limit"
+          }
+        ],
+        "sortIndex": 1,
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "e404-e579-f708-eec0",
+            "hidden": false,
+            "description": "This unit cannot attach to anything.",
+            "noindex": false
+          },
+          {
+            "name": "Army List Restriction",
+            "id": "4abd-40f2-140d-8a3e",
+            "hidden": false,
+            "description": "Your army list may have only one SHIELD-CAPTAIN, ALLARUS ARMOUR SHIELD-CAPTAIN or\nDAWNEAGLE JETBIKE SHIELD-CAPTAIN.",
+            "noindex": false
+          }
+        ],
+        "comment": "PHASE 0.1 COUNTER CLEANUP: Rare remains a visible descriptive category, but the redundant individual Rare max-1 constraint is omitted. The explicit shared SHIELD-CAPTAIN max-1 restriction is stronger, avoiding duplicate (1/1) counters.",
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "568f-2d48-8205-0dd5",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "9696-d2bf-6534-7a65",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "665a-1084-e9cc-6b6e"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "0f9c-b038-c911-53e3"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Guardian Weapon",
+                    "hidden": false,
+                    "id": "af14-e557-6a54-b9fe",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Castellan Axe",
+                    "hidden": false,
+                    "id": "4137-3d14-73bf-3e06",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Pyrithite Spear",
+                    "hidden": false,
+                    "id": "157a-d2ce-bc6b-b299",
+                    "sortIndex": 3
+                  }
+                ],
+                "defaultSelectionEntryId": "af14-e557-6a54-b9fe"
+              },
+              {
+                "name": "​",
+                "id": "024c-68e1-34f6-5eab",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "4719-0f1e-1896-e4e9"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "9610-8263-223f-e34c"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Praesidium Shield",
+                    "hidden": false,
+                    "id": "eda6-891c-b7fb-bd2e",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "eda6-891c-b7fb-bd2e"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "6f3d-56f7-ca2e-b4a7",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "6fb1-bd3a-d035-667c",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "6c6c-a0be-bacd-e5be"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Arae-Shrike",
+                    "hidden": false,
+                    "id": "5b91-16dc-9d52-a673",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 20
+                      }
+                    ],
+                    "rules": [
+                      {
+                        "name": "Arae-Shrike",
+                        "id": "5f13-c986-0b28-0b8e",
+                        "hidden": false,
+                        "description": "After an enemy unit is Activated within 6” of this unit, you may roll a D6. On a 5+, that unit becomes ready, skip the Move and Attacks steps of this turn, and you cannot roll for this ability until the next battle round.",
+                        "noindex": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "​",
+                "id": "6154-bd3e-f947-4c78",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "7b2a-3dc1-8a63-41d2"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Misericordia",
+                    "hidden": false,
+                    "id": "8a64-389b-47f4-8ac2",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 20
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Allarus Armour Shield-Captain",
+        "hidden": false,
+        "id": "6a55-05dc-394e-3b51",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 240
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "3276-b0b9-4782-28ee",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "28b8-c999-ecbe-aa21",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "c417-3a43-73d4-f4bf",
+            "id": "38fe-61ba-d6c7-30ef",
+            "primary": false,
+            "name": "Rare"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "88f5-f5aa-5da8-213b",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          },
+          {
+            "targetId": "c6bf-210a-4b2b-b2c7",
+            "id": "ec82-c156-4663-c562",
+            "primary": false,
+            "name": "SHIELD-CAPTAIN Limit"
+          }
+        ],
+        "sortIndex": 2,
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "bc8e-c235-d154-450e",
+            "hidden": false,
+            "description": "This unit cannot attach to anything.",
+            "noindex": false
+          },
+          {
+            "name": "Army List Restriction",
+            "id": "7565-f472-a65d-2f7b",
+            "hidden": false,
+            "description": "Your army list may have only one SHIELD-CAPTAIN, ALLARUS ARMOUR SHIELD-CAPTAIN or\nDAWNEAGLE JETBIKE SHIELD-CAPTAIN.",
+            "noindex": false
+          }
+        ],
+        "comment": "PHASE 0.1 COUNTER CLEANUP: Rare remains a visible descriptive category, but the redundant individual Rare max-1 constraint is omitted. The explicit shared SHIELD-CAPTAIN max-1 restriction is stronger, avoiding duplicate (1/1) counters.\nLOADOUT UI: the +10 Pyrithite Spear replacement is represented as a complete loadout, so choosing it removes the Ballistus Grenade Launcher from the represented equipment state.",
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "e4f3-d0bc-08d9-cfa6",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "6789-7887-c15e-4de1",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "8284-9525-9cfe-7a05"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "75c0-9e4c-1cfd-4701"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Ballistus Grenade Launcher + Castellan Axe",
+                    "hidden": false,
+                    "id": "f349-a353-0890-b99e",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Ballistus Grenade Launcher + Guardian Spear",
+                    "hidden": false,
+                    "id": "258b-7663-c882-c3ce",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Pyrithite Spear",
+                    "hidden": false,
+                    "id": "ff79-1b3e-7ad7-a206",
+                    "sortIndex": 3,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ],
+                    "comment": "Complete replacement loadout. Selecting this represents replacing the Ballistus Grenade Launcher and the model's other weapons with Pyrithite Spear Melta + Pyrithite Spear."
+                  }
+                ],
+                "defaultSelectionEntryId": "f349-a353-0890-b99e"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "e631-6a84-2a07-ed2b",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "32f1-540d-0a82-f516",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "ed82-604f-fb92-8e6c"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Arae-Shrike",
+                    "hidden": false,
+                    "id": "8114-7680-7f2c-e908",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 20
+                      }
+                    ],
+                    "rules": [
+                      {
+                        "name": "Arae-Shrike",
+                        "id": "db82-b7fb-28f8-a0fe",
+                        "hidden": false,
+                        "description": "After an enemy unit is Activated within 6” of this unit, you may roll a D6. On a 5+, that unit becomes ready, skip the Move and Attacks steps of this turn, and you cannot roll for this ability until the next battle round.",
+                        "noindex": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "​",
+                "id": "3669-e3c8-ba89-72f9",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "d0aa-a6b1-de5c-7964"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Misericordia",
+                    "hidden": false,
+                    "id": "be8a-8c9e-f9c3-896e",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 20
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Dawneagle Jetbike Shield-Captain",
+        "hidden": false,
+        "id": "4318-6e55-688f-0fab",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 250
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "252a-0365-d01c-44cc",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "9905-5e73-b3c4-4ac7",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "c417-3a43-73d4-f4bf",
+            "id": "53d3-6795-5c9c-b7d3",
+            "primary": false,
+            "name": "Rare"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "c39c-1201-f64d-a0c7",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          },
+          {
+            "targetId": "c6bf-210a-4b2b-b2c7",
+            "id": "7543-938f-645d-d011",
+            "primary": false,
+            "name": "SHIELD-CAPTAIN Limit"
+          }
+        ],
+        "sortIndex": 3,
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "6630-b791-e57e-652f",
+            "hidden": false,
+            "description": "This unit cannot attach to anything.",
+            "noindex": false
+          },
+          {
+            "name": "Army List Restriction",
+            "id": "59eb-8e18-e73c-3db7",
+            "hidden": false,
+            "description": "Your army list may have only one SHIELD-CAPTAIN, ALLARUS ARMOUR SHIELD-CAPTAIN or\nDAWNEAGLE JETBIKE SHIELD-CAPTAIN.",
+            "noindex": false
+          }
+        ],
+        "comment": "PHASE 0.1 COUNTER CLEANUP: Rare remains a visible descriptive category, but the redundant individual Rare max-1 constraint is omitted. The explicit shared SHIELD-CAPTAIN max-1 restriction is stronger, avoiding duplicate (1/1) counters.",
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "53fe-bd67-a906-3bba",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "0f33-c7eb-0948-7c37",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "5e2b-36d8-dbe8-356e"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "5a81-178a-1a15-02c5"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Interceptor Lance",
+                    "hidden": false,
+                    "id": "79e8-19c5-3727-6f5a",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "79e8-19c5-3727-6f5a"
+              },
+              {
+                "name": "​",
+                "id": "7948-4f63-2a28-4694",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "ef7d-54ab-d1fc-eeb7"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "1578-5786-64e8-3123"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Hurricane Bolter",
+                    "hidden": false,
+                    "id": "2465-6785-b421-f4a6",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Salvo Launcher",
+                    "hidden": false,
+                    "id": "79e2-fadc-6517-b786",
+                    "sortIndex": 2,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ],
+                "defaultSelectionEntryId": "2465-6785-b421-f4a6"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "5408-67a2-f4b9-868f",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "3f4c-b828-5f6e-571a",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "100a-6d19-a962-e636"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Arae-Shrike",
+                    "hidden": false,
+                    "id": "0084-cca1-9357-9aff",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 20
+                      }
+                    ],
+                    "rules": [
+                      {
+                        "name": "Arae-Shrike",
+                        "id": "3419-a8f2-a7db-2ac0",
+                        "hidden": false,
+                        "description": "After an enemy unit is Activated within 6” of this unit, you may roll a D6. On a 5+, that unit becomes ready, skip the Move and Attacks steps of this turn, and you cannot roll for this ability until the next battle round.",
+                        "noindex": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "​",
+                "id": "03af-bbe9-7165-764c",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "32e8-28b1-6ba9-d107"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Misericordia",
+                    "hidden": false,
+                    "id": "de8f-61c5-2ec8-5f0c",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 20
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Custodian Guard",
+        "hidden": false,
+        "id": "eb91-c8e9-6aca-cb3b",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 140
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "1f85-4f85-d07e-1af5",
+            "id": "e32e-c5aa-df58-1078",
+            "primary": true,
+            "name": "Troop"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "ccc2-1078-b36a-ae06",
+            "primary": false,
+            "name": "Infantry"
+          }
+        ],
+        "sortIndex": 4,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "7d07-8fd5-5e9e-be83",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "c7ed-9e30-aa97-0e13",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "db71-a20c-fd6e-a45f"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "23bf-468a-7d2b-eda1"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Guardian Weapon",
+                    "hidden": false,
+                    "id": "ddc2-0546-41f7-00fb",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Castellan Axe",
+                    "hidden": false,
+                    "id": "97b0-6783-2b49-1f60",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Pyrithite Spear",
+                    "hidden": false,
+                    "id": "b767-fd9b-d7ac-a8fd",
+                    "sortIndex": 3
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Vexilla",
+                    "hidden": false,
+                    "id": "c773-55cd-22b9-73e1",
+                    "sortIndex": 4,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ],
+                    "rules": [
+                      {
+                        "name": "Teleport Beacon",
+                        "id": "3085-014c-f6e4-ba2b",
+                        "hidden": false,
+                        "description": "While this unit is in the battlefield, each time you use the Teleport Homer ability for any of your other units, you may instead use ‘teleport beacon’. If you do, Deploy that unit wholly within 2D6+2” of and visible to this unit. Then, during this turn's Move step, do not make a Move Roll and this unit cannot Advance or Reposition.",
+                        "noindex": false
+                      }
+                    ],
+                    "comment": "Complete replacement loadout. This represents replacing Guardian Weapon Bolter + Guardian Weapon with Vexilla and gaining Teleport Beacon."
+                  }
+                ],
+                "defaultSelectionEntryId": "ddc2-0546-41f7-00fb"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "011a-0f84-d2af-8148",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "8c6a-5f0e-3001-dc4e",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "9881-4ea0-348c-3b1c"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Praesidium Shield",
+                    "hidden": false,
+                    "id": "81ab-6ebf-5a1e-5b89",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 20
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "​",
+                "id": "68c2-b6ed-0565-5ed1",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "3353-e57a-be4c-d81e"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Misericordia",
+                    "hidden": false,
+                    "id": "3e6b-3bc1-8b84-a5bd",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Allarus Custodian",
+        "hidden": false,
+        "id": "cdc7-9601-07f8-859f",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 240
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "6896-01f2-ea7c-8b09",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "955c-7e7a-6bb9-2334",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "0651-098b-8327-5929",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
+          }
+        ],
+        "sortIndex": 5,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "dfd9-d0ed-5fde-8987",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "7f4c-2b8a-2c52-df7c",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "8feb-7c1a-0cb4-228d"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "f96b-3ffa-e1f8-5a06"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Ballistus Grenade Launcher",
+                    "hidden": false,
+                    "id": "96a2-a707-efaa-954d",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "96a2-a707-efaa-954d"
+              },
+              {
+                "name": "​",
+                "id": "8071-db17-4918-c89c",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "4a6a-cae5-bed8-595b"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "3c80-8818-3ada-886a"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Castellan Axe",
+                    "hidden": false,
+                    "id": "b075-90dd-424f-91c3",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Guardian Spear",
+                    "hidden": false,
+                    "id": "f9df-ee16-e9a7-5842",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Pyrithite Spear",
+                    "hidden": false,
+                    "id": "6b7f-634d-ce5f-e2c9",
+                    "sortIndex": 3
+                  }
+                ],
+                "defaultSelectionEntryId": "b075-90dd-424f-91c3"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "873b-8deb-4881-19dc",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "1cc1-8b97-5092-ad6d",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "4217-4230-12a3-bd82"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Misericordia",
+                    "hidden": false,
+                    "id": "a528-7269-d68b-b340",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 20
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "fbd2-c7e5-f2e6-cf0f",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Vexilla Allarus Custodian",
+        "hidden": false,
+        "id": "7653-c635-3850-3a5f",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 200
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "c358-1c4e-35c5-1b6f",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "b929-3147-9061-7d9b",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "61e5-94c4-fab3-801c",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
+          }
+        ],
+        "sortIndex": 6,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "279a-3cb8-994a-940e",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "3c36-3bae-1634-99d7",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "00d7-6332-adf2-cd3b"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "9bad-481b-98c4-0f8c"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Ballistus Grenade Launcher",
+                    "hidden": false,
+                    "id": "ac66-944a-5a6f-3c75",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "ac66-944a-5a6f-3c75"
+              },
+              {
+                "name": "​",
+                "id": "ef54-7524-1fd8-603e",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "9b89-ca73-9635-25f0"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "0ea6-7fc5-ced6-a021"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Vexilla Magnifica",
+                    "hidden": false,
+                    "id": "b647-acf9-50ef-db77",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "b647-acf9-50ef-db77"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "f8e8-9f80-0c03-52bb",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "e393-c9c6-4c01-fcba",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "8e0b-13f8-3819-2db8"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Misericordia",
+                    "hidden": false,
+                    "id": "8ef6-61b3-cd8b-678e",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "e448-86a1-d81c-1002",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Custodian Warden",
+        "hidden": false,
+        "id": "d9ae-1a36-50cb-1134",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 170
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "f475-d3f7-87c4-2e80",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "5c3e-eeb5-70bd-19d0",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "d3da-a2a2-5438-71c9",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
+          }
+        ],
+        "sortIndex": 7,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "084e-1493-9ee6-2aa4",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "98b9-b0b8-8545-4425",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "703b-02c7-ff55-3965"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "4412-a4b2-a075-0dd5"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Guardian Weapon",
+                    "hidden": false,
+                    "id": "d30b-ef45-b802-a7e2",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Castellan Axe",
+                    "hidden": false,
+                    "id": "905e-34ee-a0f5-ba73",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Pyrithite Spear",
+                    "hidden": false,
+                    "id": "b86f-0e35-ef31-2e71",
+                    "sortIndex": 3
+                  }
+                ],
+                "defaultSelectionEntryId": "d30b-ef45-b802-a7e2"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "7ea5-983a-8402-a643",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "66c0-bc2f-7362-c35f",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "a965-c4d8-f255-d967"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Misericordia",
+                    "hidden": false,
+                    "id": "831b-de7f-bf0f-6784",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "b8ac-2cf9-a102-9eb6",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Vertus Praetor",
+        "hidden": false,
+        "id": "e011-d5cf-127e-df39",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 160
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "045f-f39e-67bf-a4fc",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "2c2f-d361-7130-4dd9",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "4227-0ff0-88cc-38d0",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
+          }
+        ],
+        "sortIndex": 8,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "fe8a-35b8-733e-0141",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "0ca2-b187-5131-287c",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "f6de-2bf0-0f2b-f93f"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "4024-6554-6782-fba4"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Interceptor Lance",
+                    "hidden": false,
+                    "id": "68e2-2d3b-7423-1bfb",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "68e2-2d3b-7423-1bfb"
+              },
+              {
+                "name": "​",
+                "id": "7f92-0c92-bd66-168e",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "39e1-9f72-c5eb-376c"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "0f1b-3b1d-69e3-3dd2"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Hurricane Bolter",
+                    "hidden": false,
+                    "id": "c7e2-a922-e9ea-1f53",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Salvo Launcher",
+                    "hidden": false,
+                    "id": "0d0f-cb09-3365-0dc2",
+                    "sortIndex": 2
+                  }
+                ],
+                "defaultSelectionEntryId": "c7e2-a922-e9ea-1f53"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "dfc5-5c44-0e6e-d4aa",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "d6e5-3482-a2ba-dcee",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "3aad-5953-10a8-7f24"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Misericordia",
+                    "hidden": false,
+                    "id": "157f-b0a8-fa48-8922",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "4a4f-b9c6-fddf-e162",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Decaptis Blade Champion",
+        "hidden": false,
+        "id": "0471-ace8-695f-9963",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 160
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "d1b5-26cd-73e6-56a6",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "f9ce-73ce-f473-861b",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "7955-3796-7898-48d0",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
+          }
+        ],
+        "sortIndex": 9,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "9bf3-dce8-2a27-d423",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "e1e5-9135-a544-69aa",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "bd33-c6e2-cb94-d65c"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "a1d0-fb3e-80c1-641c"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Vaultsword Scythe",
+                    "hidden": false,
+                    "id": "6726-37a8-26af-52cf",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "6726-37a8-26af-52cf"
+              },
+              {
+                "name": "​",
+                "id": "8a95-18dd-410b-0e87",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "c896-750e-904d-a32f"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "0c45-d29b-0ba0-db58"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Vaultsword Cleave",
+                    "hidden": false,
+                    "id": "2f13-88eb-b45a-4c24",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "2f13-88eb-b45a-4c24"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "06a0-59be-6b6a-07a1",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "e002-79fb-8678-4b1b",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "5619-d0b0-b127-6d25"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Misericordia",
+                    "hidden": false,
+                    "id": "27c4-885a-db8f-7e1a",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "6f33-1744-75c1-a370",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Hurricanus Blade Champion",
+        "hidden": false,
+        "id": "0fcb-6352-d0c0-b543",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 160
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "67e5-5351-1a93-84f7",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "2bec-d3ec-250e-8df4",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "465c-ca17-21d5-ce38",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
+          }
+        ],
+        "sortIndex": 10,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "1cb1-9ec4-d4be-a365",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "ea13-db49-05c7-fe79",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "2535-aed5-fd52-236e"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "61e7-4dde-bfa1-662f"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Vaultsword Scythe",
+                    "hidden": false,
+                    "id": "30ae-c633-8321-f7df",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "30ae-c633-8321-f7df"
+              },
+              {
+                "name": "​",
+                "id": "5ca1-facb-a5dd-0895",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "740f-5c41-e7a4-cb4d"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "6fbc-7051-c9a3-e1b5"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Vaultsword Cleave",
+                    "hidden": false,
+                    "id": "e8d2-d61a-60c4-45df",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "e8d2-d61a-60c4-45df"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "cf98-e0a4-ca22-624b",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "934a-6d39-d7d3-55d0",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "bdc8-6fc3-aa0c-9873"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Misericordia",
+                    "hidden": false,
+                    "id": "8ffc-4ce8-6bef-90ce",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "a8f4-ad77-5cad-4427",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Sagittarum Guard",
+        "hidden": false,
+        "id": "0289-ad65-bce3-6f80",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 150
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "4d8c-21b4-3156-68bf",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "addc-4d47-9aac-71b5",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "6bab-94fa-446e-62c3",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
+          }
+        ],
+        "sortIndex": 11,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "3447-c7a3-5dc3-8af8",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "7f21-8432-7296-afe1",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "389a-a689-261e-dc36"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "0903-3c2b-592a-93d1"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Adrastus Bolt Caliver",
+                    "hidden": false,
+                    "id": "71d2-2f9b-1e98-fde5",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "71d2-2f9b-1e98-fde5"
+              },
+              {
+                "name": "​",
+                "id": "dfc6-f1f4-defa-93b8",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "8144-0b70-4648-18e4"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "a8dd-1384-b43a-1f00"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Adrathic Destructor",
+                    "hidden": false,
+                    "id": "87d9-333f-802d-b7a7",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "87d9-333f-802d-b7a7"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "65a5-6f09-460c-77c7",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "9073-e497-5c9b-f250",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "f382-aae0-7cf1-6960"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Misericordia",
+                    "hidden": false,
+                    "id": "52a3-22a0-b12c-8589",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "7318-efb2-a038-cc93",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Venerable Land Raider",
+        "hidden": false,
+        "id": "272d-de27-ce62-6719",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 190
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "7570-49e3-0b46-c1cb",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "377b-09f7-ed4a-0767",
+            "id": "71bb-b61a-126f-43db",
+            "primary": false,
+            "name": "Vehicle"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "bd7c-0998-fd6e-34e6",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
+          }
+        ],
+        "sortIndex": 12,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "d050-4569-e9dd-1142",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "ec0f-c95f-115f-1ecb",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "d11d-b744-9075-eaaa"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "1a71-478b-ecbc-bf75"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Sponson Lascannons",
+                    "hidden": false,
+                    "id": "0681-1757-8b72-ed0e",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Sponson Hurricane Bolters",
+                    "hidden": false,
+                    "id": "f6c2-fe1d-429a-bf70",
+                    "sortIndex": 2
+                  }
+                ],
+                "defaultSelectionEntryId": "0681-1757-8b72-ed0e"
+              },
+              {
+                "name": "​",
+                "id": "a317-5172-deeb-9d69",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "da02-0cf6-73c3-17f5"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "758b-628f-81dd-ddfd"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Heavy Bolters",
+                    "hidden": false,
+                    "id": "b9ac-94e4-21d6-a2d4",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Assault Cannons",
+                    "hidden": false,
+                    "id": "2a36-b531-44d5-f816",
+                    "sortIndex": 2
+                  }
+                ],
+                "defaultSelectionEntryId": "b9ac-94e4-21d6-a2d4"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "a568-3e5e-afb8-a601",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "10e6-7dca-91b7-53be",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "f0ae-2e2d-93a8-4071"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Pintle Hunter-Killer Missile",
+                    "hidden": false,
+                    "id": "e1c3-39e7-13be-7fe2",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ]
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Pintle Multi-Melta",
+                    "hidden": false,
+                    "id": "eec5-94c0-4496-3dd7",
+                    "sortIndex": 2,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 20
+                      }
+                    ]
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Pintle Storm Bolter",
+                    "hidden": false,
+                    "id": "af9b-5c29-6a39-b99f",
+                    "sortIndex": 3,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 20
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "​",
+                "id": "3afb-164f-bb5d-98f0",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "f76b-b83e-31b1-dc10"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Smoke Launchers",
+                    "hidden": false,
+                    "id": "05c6-c8c5-98b5-9ecb",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ],
+                    "rules": [
+                      {
+                        "name": "Smoke Launchers",
+                        "id": "0ee0-ce87-4a14-e2a6",
+                        "hidden": false,
+                        "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, until the end of the battle round, for each ranged attack that targets this unit, the Hit Roll for that attack is worsened by 1, and you cannot roll for this ability until the next battle round.",
+                        "noindex": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "6371-ae53-6ef8-4003",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
+      }
+    ],
+    "categoryEntries": [
+      {
+        "name": "Configuration",
+        "id": "7c87-14a7-ad9a-1842",
+        "hidden": false
+      },
+      {
+        "name": "SHIELD-CAPTAIN Limit",
+        "id": "c6bf-210a-4b2b-b2c7",
+        "hidden": true,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "5cfc-7e48-7dd0-b922"
+          }
+        ]
+      }
+    ],
+    "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
+    "authorName": "Varmint",
+    "comment": "PHASE 0.1 ADEPTUS CUSTODES. All 12 native datasheets are fixed one-model selections. The three Shield-Captains are counted Rare Leaders, cannot attach, and share one explicit army-wide SHIELD-CAPTAIN max-1 restriction. Redundant individual Rare max constraints are omitted so New Recruit shows the mutual-exclusion counter plus Leader-cap counter only. Left Hand of the Emperor is an optional unchecked Configuration placeholder for a future Sisters of Silence reusable library.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nAll 12 native Adeptus Custodes datasheets now expose their simple loadouts and paid wargear. Arae-Shrike and other ability-only paid options include their player-facing rules. Left Hand of the Emperor remains a Sisters of Silence placeholder. All native non-Rare Other units use the soft 1/2/3 Additional Copy Cost system."
+  }
+}
