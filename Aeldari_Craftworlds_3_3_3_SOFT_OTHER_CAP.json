@@ -4,8 +4,8 @@
     "id": "fd74-d141-8051-8e7f",
     "name": "Aeldari Craftworlds 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 3,
-    "revision": 4,
+    "gameSystemRevision": 6,
+    "revision": 13,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -84,6 +84,3570 @@
             "type": "set",
             "value": "1",
             "field": "defaultAmount"
+          }
+        ]
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Additional Copy Costs",
+        "hidden": false,
+        "id": "3fc2-1752-8945-1c41",
+        "sortIndex": 1,
+        "categoryLinks": [
+          {
+            "targetId": "default-category",
+            "id": "732a-297f-be0f-bab0",
+            "primary": true,
+            "name": "Configuration"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "1",
+            "field": "defaultAmount"
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15b4-93a7-02ff-73e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dire Avengers"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "15b4-93a7-02ff-73e5",
+                "childName": "Dire Avengers",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15b4-93a7-02ff-73e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dire Avengers"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15b4-93a7-02ff-73e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dire Avengers"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "15b4-93a7-02ff-73e5",
+                "childName": "Dire Avengers",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15b4-93a7-02ff-73e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dire Avengers"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15b4-93a7-02ff-73e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dire Avengers"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "15b4-93a7-02ff-73e5",
+                "childName": "Dire Avengers",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15b4-93a7-02ff-73e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dire Avengers"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0fcf-1a1f-76cf-eaed",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Fire Dragons"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0fcf-1a1f-76cf-eaed",
+                "childName": "Fire Dragons",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0fcf-1a1f-76cf-eaed",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Fire Dragons"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0fcf-1a1f-76cf-eaed",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Fire Dragons"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0fcf-1a1f-76cf-eaed",
+                "childName": "Fire Dragons",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0fcf-1a1f-76cf-eaed",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Fire Dragons"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0fcf-1a1f-76cf-eaed",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Fire Dragons"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0fcf-1a1f-76cf-eaed",
+                "childName": "Fire Dragons",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0fcf-1a1f-76cf-eaed",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Fire Dragons"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "07b9-d59c-fc80-0f65",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Howling Banshees"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "07b9-d59c-fc80-0f65",
+                "childName": "Howling Banshees",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "07b9-d59c-fc80-0f65",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Howling Banshees"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "07b9-d59c-fc80-0f65",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Howling Banshees"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "07b9-d59c-fc80-0f65",
+                "childName": "Howling Banshees",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "07b9-d59c-fc80-0f65",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Howling Banshees"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "07b9-d59c-fc80-0f65",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Howling Banshees"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "07b9-d59c-fc80-0f65",
+                "childName": "Howling Banshees",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "07b9-d59c-fc80-0f65",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Howling Banshees"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-ea03-ce51-1cad",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Swooping Hawks"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "d0e1-ea03-ce51-1cad",
+                "childName": "Swooping Hawks",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-ea03-ce51-1cad",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Swooping Hawks"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-ea03-ce51-1cad",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Swooping Hawks"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "d0e1-ea03-ce51-1cad",
+                "childName": "Swooping Hawks",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-ea03-ce51-1cad",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Swooping Hawks"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-ea03-ce51-1cad",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Swooping Hawks"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "d0e1-ea03-ce51-1cad",
+                "childName": "Swooping Hawks",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-ea03-ce51-1cad",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Swooping Hawks"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "649f-3293-7cd2-5aba",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dark Reapers"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "649f-3293-7cd2-5aba",
+                "childName": "Dark Reapers",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "649f-3293-7cd2-5aba",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dark Reapers"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "649f-3293-7cd2-5aba",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dark Reapers"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "649f-3293-7cd2-5aba",
+                "childName": "Dark Reapers",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "649f-3293-7cd2-5aba",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dark Reapers"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "649f-3293-7cd2-5aba",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dark Reapers"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "649f-3293-7cd2-5aba",
+                "childName": "Dark Reapers",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "649f-3293-7cd2-5aba",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dark Reapers"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6b32-f539-9503-1ba8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Shining Spears"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "6b32-f539-9503-1ba8",
+                "childName": "Shining Spears",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6b32-f539-9503-1ba8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Shining Spears"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6b32-f539-9503-1ba8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Shining Spears"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "6b32-f539-9503-1ba8",
+                "childName": "Shining Spears",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6b32-f539-9503-1ba8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Shining Spears"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6b32-f539-9503-1ba8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Shining Spears"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "6b32-f539-9503-1ba8",
+                "childName": "Shining Spears",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6b32-f539-9503-1ba8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Shining Spears"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "cfd4-5346-53f0-a24a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Warp Spiders"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "cfd4-5346-53f0-a24a",
+                "childName": "Warp Spiders",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "cfd4-5346-53f0-a24a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Warp Spiders"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "cfd4-5346-53f0-a24a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Warp Spiders"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "cfd4-5346-53f0-a24a",
+                "childName": "Warp Spiders",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "cfd4-5346-53f0-a24a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Warp Spiders"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "cfd4-5346-53f0-a24a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Warp Spiders"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "cfd4-5346-53f0-a24a",
+                "childName": "Warp Spiders",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "cfd4-5346-53f0-a24a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Warp Spiders"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a1f4-42ce-0db4-d31b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Shadow Spectres"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "a1f4-42ce-0db4-d31b",
+                "childName": "Shadow Spectres",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a1f4-42ce-0db4-d31b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Shadow Spectres"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a1f4-42ce-0db4-d31b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Shadow Spectres"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "a1f4-42ce-0db4-d31b",
+                "childName": "Shadow Spectres",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a1f4-42ce-0db4-d31b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Shadow Spectres"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a1f4-42ce-0db4-d31b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Shadow Spectres"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "a1f4-42ce-0db4-d31b",
+                "childName": "Shadow Spectres",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a1f4-42ce-0db4-d31b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Shadow Spectres"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2e25-7edc-0537-ca54",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Striking Scorpions"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "2e25-7edc-0537-ca54",
+                "childName": "Striking Scorpions",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2e25-7edc-0537-ca54",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Striking Scorpions"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2e25-7edc-0537-ca54",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Striking Scorpions"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "2e25-7edc-0537-ca54",
+                "childName": "Striking Scorpions",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2e25-7edc-0537-ca54",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Striking Scorpions"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2e25-7edc-0537-ca54",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Striking Scorpions"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "2e25-7edc-0537-ca54",
+                "childName": "Striking Scorpions",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2e25-7edc-0537-ca54",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Striking Scorpions"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "373d-f922-a4e7-04cc",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wave Serpent"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "373d-f922-a4e7-04cc",
+                "childName": "Wave Serpent",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "373d-f922-a4e7-04cc",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wave Serpent"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "373d-f922-a4e7-04cc",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wave Serpent"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "373d-f922-a4e7-04cc",
+                "childName": "Wave Serpent",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "373d-f922-a4e7-04cc",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wave Serpent"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "373d-f922-a4e7-04cc",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wave Serpent"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "373d-f922-a4e7-04cc",
+                "childName": "Wave Serpent",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "373d-f922-a4e7-04cc",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wave Serpent"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "3d4a-e20e-337e-4a8f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithlord"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "3d4a-e20e-337e-4a8f",
+                "childName": "Wraithlord",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "3d4a-e20e-337e-4a8f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithlord"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "3d4a-e20e-337e-4a8f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithlord"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "3d4a-e20e-337e-4a8f",
+                "childName": "Wraithlord",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "3d4a-e20e-337e-4a8f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithlord"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "3d4a-e20e-337e-4a8f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithlord"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "3d4a-e20e-337e-4a8f",
+                "childName": "Wraithlord",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "3d4a-e20e-337e-4a8f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithlord"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d049-7353-e175-093d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithguards"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "d049-7353-e175-093d",
+                "childName": "Wraithguards",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d049-7353-e175-093d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithguards"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d049-7353-e175-093d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithguards"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "d049-7353-e175-093d",
+                "childName": "Wraithguards",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d049-7353-e175-093d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithguards"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d049-7353-e175-093d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithguards"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "d049-7353-e175-093d",
+                "childName": "Wraithguards",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d049-7353-e175-093d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithguards"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1597-4a8e-15ab-a90d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithblades"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "1597-4a8e-15ab-a90d",
+                "childName": "Wraithblades",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1597-4a8e-15ab-a90d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithblades"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1597-4a8e-15ab-a90d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithblades"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "1597-4a8e-15ab-a90d",
+                "childName": "Wraithblades",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1597-4a8e-15ab-a90d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithblades"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1597-4a8e-15ab-a90d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithblades"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "1597-4a8e-15ab-a90d",
+                "childName": "Wraithblades",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1597-4a8e-15ab-a90d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithblades"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "770b-16b1-009a-e92b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Falcon"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "770b-16b1-009a-e92b",
+                "childName": "Falcon",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "770b-16b1-009a-e92b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Falcon"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "770b-16b1-009a-e92b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Falcon"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "770b-16b1-009a-e92b",
+                "childName": "Falcon",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "770b-16b1-009a-e92b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Falcon"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "770b-16b1-009a-e92b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Falcon"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "770b-16b1-009a-e92b",
+                "childName": "Falcon",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "770b-16b1-009a-e92b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Falcon"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ded3-141a-5f4a-d348",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vyper"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "ded3-141a-5f4a-d348",
+                "childName": "Vyper",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ded3-141a-5f4a-d348",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vyper"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ded3-141a-5f4a-d348",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vyper"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "ded3-141a-5f4a-d348",
+                "childName": "Vyper",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ded3-141a-5f4a-d348",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vyper"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ded3-141a-5f4a-d348",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vyper"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "ded3-141a-5f4a-d348",
+                "childName": "Vyper",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ded3-141a-5f4a-d348",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vyper"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9c69-926c-0c26-2dc8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithknight"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "9c69-926c-0c26-2dc8",
+                "childName": "Wraithknight",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9c69-926c-0c26-2dc8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithknight"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9c69-926c-0c26-2dc8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithknight"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "9c69-926c-0c26-2dc8",
+                "childName": "Wraithknight",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9c69-926c-0c26-2dc8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithknight"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9c69-926c-0c26-2dc8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithknight"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "9c69-926c-0c26-2dc8",
+                "childName": "Wraithknight",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9c69-926c-0c26-2dc8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wraithknight"
+              }
+            ]
+          }
+        ],
+        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of every native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance. Player-facing wording is linked from the canonical Game System shared rule.",
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "14b5-b4c3-eaae-0943",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "0cab-d2b2-5422-26ff",
+            "includeChildSelections": true
+          }
+        ],
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 0
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "a7a9-bbc1-a1f0-6f37",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "80a9-6b43-631f-5a4f"
           }
         ]
       },
@@ -1913,19 +5477,16 @@
             "id": "b695-e0e9-26a7-d1bf",
             "primary": false,
             "name": "May Attach To: Autarch"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "13e3-f1af-2685-ae83",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 10,
         "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "8e75-b63b-75c0-08ec",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 1,
@@ -1935,44 +5496,6 @@
             "id": "d96c-2b3c-9bca-8fe4",
             "childId": "any",
             "includeChildSelections": false
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "8e75-b63b-75c0-08ec",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "8e75-b63b-75c0-08ec",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
           }
         ],
         "selectionEntryGroups": [
@@ -2120,6 +5643,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "7f3d-169f-6655-aaf4",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -2153,19 +5685,16 @@
             "id": "edb7-054d-a23d-a4a0",
             "primary": false,
             "name": "May Attach To: Autarch"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "97e6-64dd-4c30-4978",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 11,
         "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "374b-f663-e088-686c",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 1,
@@ -2175,44 +5704,6 @@
             "id": "d27c-f676-7d2e-3801",
             "childId": "any",
             "includeChildSelections": false
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "374b-f663-e088-686c",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "374b-f663-e088-686c",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
           }
         ],
         "selectionEntryGroups": [
@@ -2508,6 +5999,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "8ee8-98c6-9736-a578",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -2541,19 +6041,16 @@
             "id": "3784-f4e2-540e-5f3b",
             "primary": false,
             "name": "May Attach To: Autarch"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "e275-c9ec-454f-2299",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 12,
         "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "6080-6d0c-6bc0-3c7f",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 1,
@@ -2563,44 +6060,6 @@
             "id": "9474-1c6b-c947-3d84",
             "childId": "any",
             "includeChildSelections": false
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "6080-6d0c-6bc0-3c7f",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "6080-6d0c-6bc0-3c7f",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
           }
         ],
         "selectionEntryGroups": [
@@ -2755,6 +6214,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "7bb7-a4b1-623a-2419",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -2788,19 +6256,16 @@
             "id": "5431-541e-ca35-1efd",
             "primary": false,
             "name": "May Attach To: Autarch"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "0b6c-1e26-dc15-7ca9",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 13,
         "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "75d3-0431-a7d4-329c",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 1,
@@ -2810,44 +6275,6 @@
             "id": "6ebd-7616-73f5-a1d5",
             "childId": "any",
             "includeChildSelections": false
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "75d3-0431-a7d4-329c",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "75d3-0431-a7d4-329c",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
           }
         ],
         "selectionEntryGroups": [
@@ -3099,6 +6526,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "2160-d032-ea98-aea2",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -3132,19 +6568,16 @@
             "id": "c210-02f4-8c4d-4e98",
             "primary": false,
             "name": "May Attach To: Autarch"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "7791-380d-f42a-091f",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 14,
         "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "e85d-d015-6daa-211e",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 1,
@@ -3154,44 +6587,6 @@
             "id": "7136-9c69-1616-3ea9",
             "childId": "any",
             "includeChildSelections": false
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "e85d-d015-6daa-211e",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "e85d-d015-6daa-211e",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
           }
         ],
         "selectionEntryGroups": [
@@ -3346,6 +6741,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "bdeb-ab7c-d753-263a",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -3385,19 +6789,16 @@
             "id": "929c-e7e2-8431-8421",
             "primary": false,
             "name": "May Attach To: Skyrunner Farseer"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "1302-9352-e422-ef1f",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 15,
         "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "7c35-cadb-ec7d-d207",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 1,
@@ -3407,44 +6808,6 @@
             "id": "0389-c89e-20e1-418b",
             "childId": "any",
             "includeChildSelections": false
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "7c35-cadb-ec7d-d207",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "7c35-cadb-ec7d-d207",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
           }
         ],
         "comment": "PHASE 0.1 MIN-SIZE SHELL: represented at the minimum legal size of 2 models (2 × 60 pts/model = 120 Points). TODO: replace this fixed min-size shell with proper unit-size/model-count selection when variable unit sizes enter scope.MIN-SIZE LOADOUT SHELL: shown at the current Phase 0.1 minimum of 2 models: Exarch + Shining Spear 2.",
@@ -3663,6 +7026,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "07bd-a350-dbb1-a791",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -3696,19 +7068,16 @@
             "id": "0b13-d1d1-1f43-8e8b",
             "primary": false,
             "name": "May Attach To: Autarch"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "bcbc-5220-d9af-954a",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 16,
         "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "9f04-1ae9-79fe-018f",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 1,
@@ -3718,44 +7087,6 @@
             "id": "4ff0-75dc-7a8f-c2b2",
             "childId": "any",
             "includeChildSelections": false
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "9f04-1ae9-79fe-018f",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "9f04-1ae9-79fe-018f",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
           }
         ],
         "selectionEntryGroups": [
@@ -3881,6 +7212,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "f7be-4052-c56b-5230",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -3914,19 +7254,16 @@
             "id": "1a12-640c-be77-f5dc",
             "primary": false,
             "name": "May Attach To: Autarch"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "8721-649b-bf1c-f893",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 17,
         "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "d0c3-b091-8531-e991",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 1,
@@ -3936,44 +7273,6 @@
             "id": "5066-b9b9-b8d2-b4cf",
             "childId": "any",
             "includeChildSelections": false
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "d0c3-b091-8531-e991",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "d0c3-b091-8531-e991",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
           }
         ],
         "comment": "PHASE 0.1 MIN-SIZE SHELL: represented at the minimum legal size of 2 models (2 × 40 pts/model = 80 Points). TODO: replace this fixed min-size shell with proper unit-size/model-count selection when variable unit sizes enter scope.MIN-SIZE LOADOUT SHELL: shown at the current Phase 0.1 minimum of 2 models: Exarch + Shadow Spectre 2.",
@@ -4076,6 +7375,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "4532-6f39-0cc3-bca9",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -4109,19 +7417,16 @@
             "id": "8f92-a1bf-ab41-0b16",
             "primary": false,
             "name": "May Attach To: Autarch"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "db48-884b-1c96-efcc",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 18,
         "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "813b-c57f-a10f-1157",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 1,
@@ -4131,44 +7436,6 @@
             "id": "24b9-8ed7-a0c2-efd6",
             "childId": "any",
             "includeChildSelections": false
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "813b-c57f-a10f-1157",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "813b-c57f-a10f-1157",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
           }
         ],
         "selectionEntryGroups": [
@@ -4386,6 +7653,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "d24d-690e-5130-72e5",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -4413,58 +7689,15 @@
             "id": "859f-f2d4-ce22-8877",
             "primary": false,
             "name": "Vehicle"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "789b-8539-bfab-6e6e",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 19,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "2766-ac02-2884-40a1",
-            "includeChildSelections": true
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "2766-ac02-2884-40a1",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "2766-ac02-2884-40a1",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -4588,6 +7821,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "7da2-2c91-33db-e2fa",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -4615,58 +7857,15 @@
             "id": "a036-b827-4223-fac9",
             "primary": false,
             "name": "Monster"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "878f-9c35-6dec-b9fe",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 20,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "0c5e-34b1-77e3-d115",
-            "includeChildSelections": true
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "0c5e-34b1-77e3-d115",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "0c5e-34b1-77e3-d115",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -4970,6 +8169,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "4947-ced6-d328-aa42",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -5003,19 +8211,16 @@
             "id": "8019-51ab-6659-cb16",
             "primary": false,
             "name": "May Attach To: Spiritseer"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "3dd0-98aa-0b62-130f",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 21,
         "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "02d3-7cb5-07ea-d5ef",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 1,
@@ -5025,44 +8230,6 @@
             "id": "45c8-4274-1abc-6537",
             "childId": "any",
             "includeChildSelections": false
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "02d3-7cb5-07ea-d5ef",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "02d3-7cb5-07ea-d5ef",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
           }
         ],
         "comment": "PHASE 0.1 MIN-SIZE SHELL: represented at the minimum legal size of 2 models (2 × 50 pts/model = 100 Points). TODO: replace this fixed min-size shell with proper unit-size/model-count selection when variable unit sizes enter scope.MIN-SIZE LOADOUT SHELL: shown at the current Phase 0.1 minimum of 2 models.",
@@ -5181,6 +8348,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "a395-3fe3-df8a-b05d",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -5214,19 +8390,16 @@
             "id": "c081-0d95-e664-0cb8",
             "primary": false,
             "name": "May Attach To: Spiritseer"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "358f-db3e-6c57-1dd4",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 22,
         "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "f788-101a-b58c-b3a3",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 1,
@@ -5236,44 +8409,6 @@
             "id": "a310-04c6-74ef-801e",
             "childId": "any",
             "includeChildSelections": false
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "f788-101a-b58c-b3a3",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "f788-101a-b58c-b3a3",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
           }
         ],
         "comment": "PHASE 0.1 MIN-SIZE SHELL: represented at the minimum legal size of 2 models (2 × 50 pts/model = 100 Points). TODO: replace this fixed min-size shell with proper unit-size/model-count selection when variable unit sizes enter scope.MIN-SIZE LOADOUT SHELL: shown at the current Phase 0.1 minimum of 2 models.",
@@ -5392,6 +8527,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "3877-0193-fe93-dc8e",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -5419,58 +8563,15 @@
             "id": "4d71-a930-e63e-bb75",
             "primary": false,
             "name": "Vehicle"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "51f2-741a-7016-ef51",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 23,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "ea27-1b14-f9bc-85a5",
-            "includeChildSelections": true
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "ea27-1b14-f9bc-85a5",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "ea27-1b14-f9bc-85a5",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -5631,6 +8732,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "231e-a9ce-c540-9493",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -5658,58 +8768,15 @@
             "id": "95d2-76f2-393e-5224",
             "primary": false,
             "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "1bb4-6006-565e-a59e",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 24,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "fab0-e255-a74c-4106",
-            "includeChildSelections": true
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "fab0-e255-a74c-4106",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "fab0-e255-a74c-4106",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -5841,6 +8908,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "0bcc-a60f-300b-7e1b",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -5868,58 +8944,15 @@
             "id": "6d01-2498-88e9-64d6",
             "primary": false,
             "name": "Vehicle"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "3f0b-6f91-a6e5-3d14",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 25,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "de8e-5f8a-07f1-dc5f",
-            "includeChildSelections": true
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "de8e-5f8a-07f1-dc5f",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "de8e-5f8a-07f1-dc5f",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -6132,6 +9165,15 @@
                 "defaultSelectionEntryId": "5b16-d1bc-2dbc-0872"
               }
             ]
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "54d4-33a9-3026-499f",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ]
       }
@@ -6360,6 +9402,7 @@
           }
         ]
       }
-    ]
+    ],
+    "comment": "\n\nADDITIONAL COPY COSTS\nAll native non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Affected units link to the canonical Game System unit-reminder rule."
   }
 }

@@ -3,7 +3,7 @@
     "id": "sys-b298-09dc-9597-23fd",
     "name": "40k Reforged 3.3.1 (Homebrew)",
     "battleScribeVersion": "2.03",
-    "revision": 3,
+    "revision": 6,
     "categoryEntries": [
       {
         "name": "Configuration",
@@ -126,6 +126,11 @@
             "id": "38e4-7613-eb85-2343"
           }
         ]
+      },
+      {
+        "name": "Counts Toward Other Soft Copy Cost",
+        "id": "5fc2-c0ae-4fa3-59b9",
+        "hidden": true
       }
     ],
     "forceEntries": [
@@ -301,7 +306,7 @@
                     "name": "Army List - 800 Points",
                     "id": "3ff5-5b53-0be7-829e",
                     "hidden": false,
-                    "description": "Rapid & lethal - this is the size for quick action. 1-2 hours.\nYou can only bring two leader units.\nFor each unit in the Elites, Transports, and Support sections, you can only bring one of that unit."
+                    "description": "Rapid & lethal - this is the size for quick action. 1-2 hours.\nYou can only bring two leader units.\nFor each non-Rare unit in the Other section, the first copy costs its normal points; each additional copy costs 20 additional points."
                   }
                 ]
               },
@@ -316,7 +321,7 @@
                     "name": "Army List - 1200 Points",
                     "id": "0321-7fc0-37f8-659a",
                     "hidden": false,
-                    "description": "Bold, tactical play is key at this size as you adapt to the dice and the battlefield. This is the\nrecommended size for 1v1 games. 2-3 hours.\nYou can only bring three leader units.\nFor each unit in the Elites, Transports, and Support sections, you can only bring two of that unit."
+                    "description": "Bold, tactical play is key at this size as you adapt to the dice and the battlefield. This is the\nrecommended size for 1v1 games. 2-3 hours.\nYou can only bring three leader units.\nFor each non-Rare unit in the Other section, the first two copies cost their normal points; each additional copy costs 20 additional points."
                   }
                 ]
               },
@@ -331,7 +336,7 @@
                     "name": "Army List - 1600pts",
                     "id": "e621-ac47-9399-02d7",
                     "hidden": false,
-                    "description": "Strategy takes the spotlight as you battle to extend advantages over the long term. 3+ hours.\nYou can only bring four leader units.\nFor each unit in the Elites, Transports, and Support sections, you can only bring three of that unit."
+                    "description": "Strategy takes the spotlight as you battle to extend advantages over the long term. 3+ hours.\nYou can only bring four leader units.\nFor each non-Rare unit in the Other section, the first three copies cost their normal points; each additional copy costs 20 additional points."
                   }
                 ]
               }
@@ -358,6 +363,20 @@
     ],
     "comment": "CATEGORY ARCHITECTURE\n\nNew Recruit categories MUST NOT be treated as the semantic source of unit identity.\n\nCategories are divided into two classes:\n\nPresentation Categories\n\nVisible to the player.\nMay be used as primary categories.\nDetermine organization in the New Recruit builder.\nMUST NOT be relied upon for list-building semantics.\n\nInternal Semantic Categories\n\nUsed only where New Recruit requires or benefits from grouping multiple semantic objects.\nMUST be hidden from the player where possible.\nMUST NOT be primary categories.\nMUST NOT determine where a unit appears in the builder.\nMUST describe genuine reusable semantic sets, not one-off implementation accidents.\n\nPrefer direct stable-ID references over creating an internal category when a rule refers to specific named objects.\n\nAttachment behavior MUST be represented through attachment/Association semantics, not inferred from presentation category.\n\nUnit limits MUST derive from UUS semantic fields such as unit_class, counts_toward_unit_type_limit, restrictions and list-building effects, not from the unit's visible New Recruit category.\n\n\nGAME SIZE AND POINTS LIMITS\n\nThe New Recruit Points cost type MUST have no preselected roster cost limit.\n\nPlayers MUST NOT be required to specify an army points limit when creating a roster.\n\nThe Points cost type therefore uses an unlimited/default limit (-1).\n\nArmy size is selected after roster creation through the mandatory Game Size configuration choice.\n\nThe available Game Size options are:\n\n800 Points (Quick)\n1200 Points (Standard)\n1600 Points (Long)\n\nThe selected Game Size is the semantic source of all game-size-dependent list-building restrictions, including the maximum permitted army points and any unit-copy or Leader limits.\n\nThe generic New Recruit roster cost-limit field MUST NOT be treated as authoritative game-size information.\n\n\n\n\n\nPREFER DIRECT REPRESENTATION OVER ARTIFICIAL CODIFICATION\n\nThe compiler MUST choose the simplest exact New Recruit representation for each semantic rule.\n\nRepeated local constraints, conditions, modifiers, or explicit unit references are acceptable, even when they occur on many objects.\n\nShared categories, tags, helper entries, or other abstractions SHOULD be introduced only when they represent a meaningful reusable concept or materially simplify the resulting implementation.\n\nThe number of objects affected is not, by itself, a reason to create or avoid an abstraction.\n\nDo not create a keyword merely because several objects happen to share the same implementation.\n\nDo not duplicate logic merely because only one object currently uses an existing meaningful concept.\n\nPrefer whichever representation has fewer dependencies, less indirection, and clearer correspondence to the UUS semantics.\n\n\nCATALOGUE DATA AUTHORING CONVENTION: DETERMINISTIC IDS\n\nAll AI-authored or compiler-generated catalogue objects MUST use deterministic IDs.\n\nID algorithm\n\nConstruct the object's canonical semantic path.\nCanonical paths MUST describe semantic identity, never array position, display order, or other incidental structure.\nWhere stable source IDs exist, such as UUS unit IDs, model-group IDs, selection-group IDs, option IDs, or configuration IDs, those IDs MUST be used in the canonical path rather than display names.\nThe path MUST identify the object type and enough semantic ancestry to uniquely identify the object.\nConvert the complete path to lowercase.\nUse / as the separator.\nHash the UTF-8 path using SHA-256.\nTake the first 16 hexadecimal characters.\nFormat as xxxx-xxxx-xxxx-xxxx.\n\nExisting catalogue IDs are authoritative and MUST NOT be regenerated.\nReferences to existing objects MUST reuse their existing IDs.\nOnly newly created catalogue objects receive deterministic IDs.\nEvery distinct object MUST have exactly one distinct canonical semantic path.\nCompiler-generated helper objects MUST use paths describing their semantic purpose, not numeric counters or creation order.\nRenaming an existing object does NOT automatically change its ID.\nIf two distinct objects produce the same canonical path, compilation MUST fail.\nIf two different canonical paths produce the same deterministic ID, compilation MUST fail.\nNever resolve references by display name when an ID exists.\nNever generate random IDs for AI-authored or compiler-generated catalogue data.\n\nGAME SYSTEM ID STABILITY\n\nGame System IDs do not need to be regenerated deterministically.\nOnce a Game System object is adopted into the canonical system, its ID is authoritative and MUST remain stable because faction catalogues may reference it.\nNew AI-authored Game System objects MAY use deterministic IDs as a safe default, but deterministic regeneration of existing Game System IDs is not required or desired.",
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
-    "authorName": "Varmint"
+    "authorName": "Varmint",
+    "sharedRules": [
+      {
+        "name": "Additional Copy Costs",
+        "id": "80a9-6b43-631f-5a4f",
+        "hidden": false,
+        "description": "PROTOTYPE — NON-RARE OTHER UNITS\nAt 800 Points, the first copy of each affected unit costs its normal points. At 1200 Points, the first two copies cost their normal points. At 1600 Points, the first three copies cost their normal points. Each additional copy of that same unit costs 20 additional points.\nThe total surcharge is applied automatically to the Additional Copy Costs Configuration entry."
+      },
+      {
+        "name": "Additional Copy Costs",
+        "id": "e02a-f56c-ccaa-b1a9",
+        "hidden": false,
+        "description": "This unit uses the Additional Copy Costs rule. Copies beyond the normal allowance for the selected Game Size cost 20 additional points each."
+      }
+    ]
   }
 }

@@ -4,8 +4,8 @@
     "id": "8663-2a1b-7470-d347",
     "name": "Harlequins 3.3.3 - Library",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 2,
-    "revision": 2,
+    "gameSystemRevision": 6,
+    "revision": 3,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [],
@@ -2186,55 +2186,12 @@
             "id": "4402-e8b0-d3a6-4f3c",
             "primary": false,
             "name": "Infantry"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "b765-4680-857f-d7d6",
-            "includeChildSelections": true
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "b765-4680-857f-d7d6",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
           },
           {
-            "type": "increment",
-            "value": 1,
-            "field": "b765-4680-857f-d7d6",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "7262-8d4e-808c-db92",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 8,
@@ -2338,7 +2295,16 @@
             ]
           }
         ],
-        "comment": "SHARED HARLEQUINS LIBRARY ENTRY: intrinsic unit data lives here. Host catalogues own availability and primary presentation category. PHASE 0.1 WARGEAR: decision-oriented V5 grammar. Mandatory loadout choices are rendered as visually separated exclusivity islands with the first source option selected by default. Fixed mandatory equipment is preselected. Optional paid wargear is unit-level and unselected by default. No weapon profiles are included."
+        "comment": "SHARED HARLEQUINS LIBRARY ENTRY: intrinsic unit data lives here. Host catalogues own availability and primary presentation category. PHASE 0.1 WARGEAR: decision-oriented V5 grammar. Mandatory loadout choices are rendered as visually separated exclusivity islands with the first source option selected by default. Fixed mandatory equipment is preselected. Optional paid wargear is unit-level and unselected by default. No weapon profiles are included. SOFT OTHER COPY COST: no hard roster copy cap; this unit contributes to the catalogue-level Additional Copy Costs surcharge.",
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "fba3-13e4-d8ee-c488",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
       },
       {
         "type": "unit",
@@ -2365,55 +2331,12 @@
             "id": "1814-1c09-ca72-4dc4",
             "primary": false,
             "name": "Vehicle"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "138e-a791-a7f7-b407",
-            "includeChildSelections": true
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "138e-a791-a7f7-b407",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
           },
           {
-            "type": "increment",
-            "value": 1,
-            "field": "138e-a791-a7f7-b407",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "f3ac-f47f-21eb-70f2",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 9,
@@ -2509,7 +2432,16 @@
             ]
           }
         ],
-        "comment": "SHARED HARLEQUINS LIBRARY ENTRY: intrinsic unit data lives here. Host catalogues own availability and primary presentation category. PHASE 0.1 WARGEAR: decision-oriented V5 grammar. Mandatory loadout choices are rendered as visually separated exclusivity islands with the first source option selected by default. Fixed mandatory equipment is preselected. Optional paid wargear is unit-level and unselected by default. No weapon profiles are included."
+        "comment": "SHARED HARLEQUINS LIBRARY ENTRY: intrinsic unit data lives here. Host catalogues own availability and primary presentation category. PHASE 0.1 WARGEAR: decision-oriented V5 grammar. Mandatory loadout choices are rendered as visually separated exclusivity islands with the first source option selected by default. Fixed mandatory equipment is preselected. Optional paid wargear is unit-level and unselected by default. No weapon profiles are included. SOFT OTHER COPY COST: no hard roster copy cap; this unit contributes to the catalogue-level Additional Copy Costs surcharge.",
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "69a5-a7d0-7870-d457",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
       },
       {
         "type": "unit",
@@ -2536,55 +2468,12 @@
             "id": "271e-4605-2deb-565e",
             "primary": false,
             "name": "Vehicle"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "6ef7-9f54-6b51-d6ac",
-            "includeChildSelections": true
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "6ef7-9f54-6b51-d6ac",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
           },
           {
-            "type": "increment",
-            "value": 1,
-            "field": "6ef7-9f54-6b51-d6ac",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "3875-27b8-1f13-3538",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 10,
@@ -2635,7 +2524,16 @@
             ]
           }
         ],
-        "comment": "SHARED HARLEQUINS LIBRARY ENTRY: intrinsic unit data lives here. Host catalogues own availability and primary presentation category. PHASE 0.1 WARGEAR: decision-oriented V5 grammar. Mandatory loadout choices are rendered as visually separated exclusivity islands with the first source option selected by default. Fixed mandatory equipment is preselected. Optional paid wargear is unit-level and unselected by default. No weapon profiles are included."
+        "comment": "SHARED HARLEQUINS LIBRARY ENTRY: intrinsic unit data lives here. Host catalogues own availability and primary presentation category. PHASE 0.1 WARGEAR: decision-oriented V5 grammar. Mandatory loadout choices are rendered as visually separated exclusivity islands with the first source option selected by default. Fixed mandatory equipment is preselected. Optional paid wargear is unit-level and unselected by default. No weapon profiles are included. SOFT OTHER COPY COST: no hard roster copy cap; this unit contributes to the catalogue-level Additional Copy Costs surcharge.",
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "a3c9-d287-2b09-0f2a",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
       }
     ],
     "comment": "SHARED CATALOGUE LIBRARY\n\nThis catalogue is a compiled reusable artifact for Harlequin units. It is not a semantic source of truth; the Universal Unit Skeleton remains authoritative.\n\nThe library owns intrinsic unit data: points, loadout trees, paid wargear, unit-internal list-building rules, attachment associations, and reusable semantic categories.\n\nConsumer catalogues own availability, configuration gating, primary presentation categories, and host-army-specific restrictions. Consumer catalogues should link these sharedSelectionEntries instead of copying the unit trees."
