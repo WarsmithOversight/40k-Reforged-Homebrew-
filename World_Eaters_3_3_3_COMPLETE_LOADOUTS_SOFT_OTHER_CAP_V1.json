@@ -1,0 +1,3310 @@
+{
+  "catalogue": {
+    "library": false,
+    "id": "2153-1bee-cbe2-cea0",
+    "name": "World Eaters 3.3.3",
+    "gameSystemId": "sys-b298-09dc-9597-23fd",
+    "gameSystemRevision": 8,
+    "revision": 2,
+    "battleScribeVersion": "2.03",
+    "type": "catalogue",
+    "selectionEntries": [
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Great Traitors’ Arsenal",
+        "hidden": false,
+        "id": "80b0-7e6f-9b23-b895",
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "a261-111b-6627-b02d"
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "default-category",
+            "id": "e4fb-d51b-6794-810e",
+            "primary": true,
+            "name": "Configuration"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Great Traitors’ Arsenal",
+            "id": "bc3c-4dc6-f8c7-7fb3",
+            "hidden": false,
+            "description": "You may add units to your Army List from the “Chaos Space\nMarine Arsenal” document.",
+            "noindex": false
+          }
+        ],
+        "comment": "PHASE 0.1 ARSENAL PLACEHOLDER: this opt-in configuration is intentionally unchecked by default. The future Chaos Space Marine Arsenal reusable library must be linked with importRootEntries=false. World Eaters entry links to Arsenal units must be hidden until this exact configuration selection is present. No unresolved catalogue target is emitted here, so the native World Eaters catalogue remains loadable before the Arsenal library exists.",
+        "sortIndex": 2
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Additional Copy Costs",
+        "hidden": false,
+        "id": "7604-30ab-4074-57e8",
+        "sortIndex": 3,
+        "categoryLinks": [
+          {
+            "targetId": "default-category",
+            "id": "1bcc-c567-7561-af3f",
+            "primary": true,
+            "name": "Configuration"
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "462c-3ce7-a0eb-0bd0",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "80a9-6b43-631f-5a4f"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "d1c6-ee6a-a3a1-a058",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "0956-4d6e-77c9-4282",
+            "includeChildSelections": true
+          }
+        ],
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 0
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "1",
+            "field": "defaultAmount"
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "fbb8-0db2-6878-0c30",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Red Butchers"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "fbb8-0db2-6878-0c30",
+                "childName": "Red Butchers",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "fbb8-0db2-6878-0c30",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Red Butchers"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "fbb8-0db2-6878-0c30",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Red Butchers"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "fbb8-0db2-6878-0c30",
+                "childName": "Red Butchers",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "fbb8-0db2-6878-0c30",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Red Butchers"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "fbb8-0db2-6878-0c30",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Red Butchers"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "fbb8-0db2-6878-0c30",
+                "childName": "Red Butchers",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "fbb8-0db2-6878-0c30",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Red Butchers"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "969c-ed8d-9e2a-a087",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Eightbound"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "969c-ed8d-9e2a-a087",
+                "childName": "Eightbound",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "969c-ed8d-9e2a-a087",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Eightbound"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "969c-ed8d-9e2a-a087",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Eightbound"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "969c-ed8d-9e2a-a087",
+                "childName": "Eightbound",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "969c-ed8d-9e2a-a087",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Eightbound"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "969c-ed8d-9e2a-a087",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Eightbound"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "969c-ed8d-9e2a-a087",
+                "childName": "Eightbound",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "969c-ed8d-9e2a-a087",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Eightbound"
+              }
+            ]
+          }
+        ],
+        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of each native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "World Eaters Terminator Chaos Lord",
+        "hidden": false,
+        "id": "ab6b-31b3-5ff5-7afb",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 120
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "dd45-baa3-63c9-c4ac",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "ab67-a6af-8e41-aba8",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "0b06-bba8-38c9-bc36",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          }
+        ],
+        "sortIndex": 1,
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "9d46-dd57-0589-b01b",
+            "hidden": false,
+            "description": "This unit cannot attach to anything.",
+            "noindex": false
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "c2f9-b181-dc53-2f53",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "73a2-8134-2f56-dfab",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "1441-c945-4fc4-42e4"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "854d-0eab-c967-566b"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "2 Combi-Bolter",
+                    "hidden": false,
+                    "id": "96c8-97d6-c277-bf50",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Combi-Bolter + Combi-Melta",
+                    "hidden": false,
+                    "id": "5bad-d119-c52e-26bc",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Combi-Bolter + Combi-Flamer",
+                    "hidden": false,
+                    "id": "d74a-dbf5-0b77-9fb0",
+                    "sortIndex": 3
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Combi-Bolter + Combi-Plasma",
+                    "hidden": false,
+                    "id": "86f7-f7a0-6b3d-f347",
+                    "sortIndex": 4
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Lightning Claw",
+                    "hidden": false,
+                    "id": "ee45-a7e5-d68a-a985",
+                    "sortIndex": 5
+                  }
+                ],
+                "defaultSelectionEntryId": "96c8-97d6-c277-bf50"
+              },
+              {
+                "name": "​",
+                "id": "e292-18f7-4c37-d638",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "577b-43ae-3e24-8319"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "0258-8c19-223e-8a8d"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Power Weapon",
+                    "hidden": false,
+                    "id": "b2ba-378c-385b-2a04",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Power Fist",
+                    "hidden": false,
+                    "id": "28c9-8b0f-02a7-1231",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Daemon Hammer",
+                    "hidden": false,
+                    "id": "0fc6-a139-427a-f5a8",
+                    "sortIndex": 3
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Lightning Claw",
+                    "hidden": false,
+                    "id": "2534-3b21-395e-b531",
+                    "sortIndex": 4
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Chainfist",
+                    "hidden": false,
+                    "id": "0948-b724-45dc-d05a",
+                    "sortIndex": 5
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Chainblade",
+                    "hidden": false,
+                    "id": "9943-6208-24fa-8e3f",
+                    "sortIndex": 6
+                  }
+                ],
+                "defaultSelectionEntryId": "b2ba-378c-385b-2a04"
+              }
+            ]
+          }
+        ],
+        "comment": "LIGHTNING CLAWS SHORTHAND: the separate Lightning Claws replacement branch is not represented. Lightning Claw appears in both exclusive lists; selecting it in both records the paired-claw loadout."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "World Eaters Juggernaut Chaos Lord",
+        "hidden": false,
+        "id": "3ddb-ea5e-68fc-d49b",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 120
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "777f-6952-d9d0-2638",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "345f-8010-ec3f-047c",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "fbbb-9036-514e-e2e3",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          }
+        ],
+        "sortIndex": 2,
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "54f0-d674-39e8-099e",
+            "hidden": false,
+            "description": "This unit cannot attach to anything.",
+            "noindex": false
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "e7b0-ddc2-2517-7b0d",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "8081-543e-b339-1f1b",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "0d34-065a-2389-db41"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "2b31-f253-4fe1-0d10"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Iron Horn",
+                    "hidden": false,
+                    "id": "acc1-3a43-eace-dfd4",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "acc1-3a43-eace-dfd4"
+              },
+              {
+                "name": "​",
+                "id": "0c88-1164-936c-dee2",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "2ccd-5a55-ee67-91dc"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "d086-6f70-cd1f-3495"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Plasma Pistol",
+                    "hidden": false,
+                    "id": "08df-1b51-f489-4ead",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Bolt Pistol",
+                    "hidden": false,
+                    "id": "66f2-419e-a9e0-5269",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Lightning Claw",
+                    "hidden": false,
+                    "id": "8924-7136-476f-ea33",
+                    "sortIndex": 3
+                  }
+                ],
+                "defaultSelectionEntryId": "08df-1b51-f489-4ead"
+              },
+              {
+                "name": "​",
+                "id": "bf6d-385a-04d1-0972",
+                "hidden": false,
+                "sortIndex": 3,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "bfc7-049a-a5bb-dd3b"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "06c9-b2a7-4228-f3f4"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Power Weapon",
+                    "hidden": false,
+                    "id": "fb58-46f4-39e5-82e0",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Power Fist",
+                    "hidden": false,
+                    "id": "0c08-fb10-8d8c-9199",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Daemon Hammer",
+                    "hidden": false,
+                    "id": "662e-b204-d21f-edde",
+                    "sortIndex": 3
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Lightning Claw",
+                    "hidden": false,
+                    "id": "fa1d-35e4-92be-dad6",
+                    "sortIndex": 4
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Chainblade",
+                    "hidden": false,
+                    "id": "7cf2-db35-44bf-f3d7",
+                    "sortIndex": 5
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Chainfist",
+                    "hidden": false,
+                    "id": "7f5d-c2b2-8310-0ade",
+                    "sortIndex": 6
+                  }
+                ],
+                "defaultSelectionEntryId": "fb58-46f4-39e5-82e0"
+              }
+            ]
+          }
+        ],
+        "comment": "LIGHTNING CLAWS SHORTHAND: Lightning Claw is available in both weapon lists instead of a separate Lightning Claws replacement control."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "World Eaters Chaos Lord",
+        "hidden": false,
+        "id": "da82-ccd2-24de-e256",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 60
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "79aa-2c28-14cf-ac49",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "bb46-1edd-61be-c051",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "0ba8-fb7d-f592-ae8c",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          }
+        ],
+        "sortIndex": 3,
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "roster",
+            "childId": "4de8-8596-5da0-0d02",
+            "name": "Attaches To",
+            "id": "c827-7b41-09e9-ce6d",
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "label": "Leader",
+            "defaultSelectionEntryId": "none",
+            "childName": "May Attach To: World Eaters Chaos Lord"
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "d935-518d-f2d8-382c",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "ec33-e783-687f-17d4",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "b3a7-db4b-4669-fce4"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "91e9-1305-b898-a761"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Plasma Pistol",
+                    "hidden": false,
+                    "id": "2e21-1fe9-2351-175a",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Bolt Pistol",
+                    "hidden": false,
+                    "id": "d17a-cc91-52e0-3ac8",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Lightning Claw",
+                    "hidden": false,
+                    "id": "5961-8e17-02c7-8220",
+                    "sortIndex": 3
+                  }
+                ],
+                "defaultSelectionEntryId": "2e21-1fe9-2351-175a"
+              },
+              {
+                "name": "​",
+                "id": "1293-2a9b-fc29-37cc",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "9f52-0977-bb36-33e6"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "228e-4baa-296e-7e7f"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Power Weapon",
+                    "hidden": false,
+                    "id": "97cd-53bd-f8dc-0021",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Power Fist",
+                    "hidden": false,
+                    "id": "a2be-c64d-c779-74a2",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Daemon Hammer",
+                    "hidden": false,
+                    "id": "0801-d0e7-0d7c-4292",
+                    "sortIndex": 3
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Lightning Claw",
+                    "hidden": false,
+                    "id": "4524-7b87-3dce-a281",
+                    "sortIndex": 4
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Chainblade",
+                    "hidden": false,
+                    "id": "fa6f-cfb6-6298-baa0",
+                    "sortIndex": 5
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Chainfist",
+                    "hidden": false,
+                    "id": "3560-a8c0-30d0-60e5",
+                    "sortIndex": 6
+                  }
+                ],
+                "defaultSelectionEntryId": "97cd-53bd-f8dc-0021"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "4002-b2cf-8442-2b1e",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "Glorious Jump Pack",
+                "id": "7bd1-4fd1-e9c6-55fb",
+                "hidden": false,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "965a-0abb-9272-1d60"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Glorious Jump Pack",
+                    "hidden": false,
+                    "id": "2333-3de7-5cb2-417d",
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 20
+                      }
+                    ],
+                    "rules": [
+                      {
+                        "name": "Glorious Jump Pack",
+                        "id": "8729-fe4c-bdbe-384b",
+                        "hidden": false,
+                        "description": "This unit gains Fly and must attach to RAPTORS.",
+                        "noindex": false
+                      }
+                    ],
+                    "modifiers": [
+                      {
+                        "type": "add",
+                        "value": "ARSENAL PLACEHOLDER: Glorious Jump Pack requires RAPTORS. The Chaos Space Marine Arsenal library target is not yet linked in this Phase 0.1 file.",
+                        "field": "error"
+                      }
+                    ],
+                    "comment": "PHASE 0.1 ARSENAL PLACEHOLDER: once the Arsenal library is wired, selecting this upgrade must replace the Chaos Lord's base attachment candidates (LEGIONAIRES, KHORNE BERZERKERS, CULTISTS, CHOSEN) with RAPTORS only, and this temporary placeholder error must be removed."
+                  }
+                ],
+                "sortIndex": 1
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "4391-6805-8d47-ccc3",
+            "hidden": false,
+            "description": "This unit must attach to either:\na) LEGIONAIRES\nb) KHORNE BERZERKERS\nc) CULTISTS\nd) CHOSEN",
+            "noindex": false
+          }
+        ],
+        "comment": "PHASE 0.1 ARSENAL PLACEHOLDER: the verbatim base attachment rule includes LEGIONAIRES, CULTISTS, and CHOSEN from the future Chaos Space Marine Arsenal library. Only KHORNE BERZERKERS is mechanically resolvable in this native-only file.\nLIGHTNING CLAWS SHORTHAND: Lightning Claw is available in both exclusive weapon lists. The Great Traitors’ Arsenal / RAPTORS placeholder for Glorious Jump Pack is preserved unchanged."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Butcher Surgeon",
+        "hidden": false,
+        "id": "f4a7-1544-1d79-5c9b",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 130
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "4852-0b77-80a4-c7b4",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "4bf8-5235-7741-bddf",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "c417-3a43-73d4-f4bf",
+            "id": "b56f-a8c4-2b18-5a21",
+            "primary": false,
+            "name": "Rare"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "1b98-dae3-32c1-3c49",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          }
+        ],
+        "sortIndex": 4,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "55da-0f6d-752a-d361",
+            "includeChildSelections": true
+          }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "roster",
+            "childId": "9a64-f3d5-6a4d-30a7",
+            "name": "Attaches To",
+            "id": "1bcf-ae22-8565-7f47",
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "label": "Leader",
+            "defaultSelectionEntryId": "none",
+            "childName": "May Attach To: Butcher Surgeon"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Fresh Initiates",
+            "id": "d710-672b-1217-daab",
+            "hidden": false,
+            "description": "The unit this unit attaches to adds 0 points to your Army List.",
+            "noindex": false
+          },
+          {
+            "name": "Leader Attachment",
+            "id": "9f18-ab02-85de-6322",
+            "hidden": false,
+            "description": "This unit must attach to:\n● KHORNE BERSERKERS",
+            "noindex": false
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "02fc-cc0a-ec09-3400",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "7410-e38f-fb44-8724",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "3ca6-db10-c562-310f"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "1dea-1c7c-3ad8-67df"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Bolt Pistol",
+                    "hidden": false,
+                    "id": "c357-aba3-dd03-f3bd",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Plasma Pistol",
+                    "hidden": false,
+                    "id": "14f6-a864-1282-e3fb",
+                    "sortIndex": 2
+                  }
+                ],
+                "defaultSelectionEntryId": "c357-aba3-dd03-f3bd"
+              },
+              {
+                "name": "​",
+                "id": "9ce6-aa80-08a2-e8e9",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "120e-f095-3d88-4b4a"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "c414-fa82-b321-9900"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Berserker Chainblade",
+                    "hidden": false,
+                    "id": "688a-efee-b92c-c92f",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Eviscerator",
+                    "hidden": false,
+                    "id": "7a46-b82d-0aba-afa5",
+                    "sortIndex": 2
+                  }
+                ],
+                "defaultSelectionEntryId": "688a-efee-b92c-c92f"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Sage of Slaughter",
+        "hidden": false,
+        "id": "c667-c2dc-59a1-85d3",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 20
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "8253-f6d1-9189-7e1c",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "8d74-eb27-d8a6-c9e7",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "ca89-03e8-2507-00a4",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          }
+        ],
+        "sortIndex": 5,
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "roster",
+            "childId": "9d1c-4ded-c7a4-ca5e",
+            "name": "Attaches To",
+            "id": "a94d-0740-53b2-dda6",
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "label": "Leader",
+            "defaultSelectionEntryId": "none",
+            "childName": "May Attach To: Sage of Slaughter"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "838e-047d-a03d-257b",
+            "hidden": false,
+            "description": "This unit must attach to:\na) KHORNE BERSERKERS",
+            "noindex": false
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "b808-52c6-8505-1d79",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "394a-9760-4fe2-e857",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "7068-1933-8425-f64e"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "d4d6-cbd0-a7d0-37d9"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Bolt Pistol",
+                    "hidden": false,
+                    "id": "e2ef-d2bd-d6b2-82ee",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Plasma Pistol",
+                    "hidden": false,
+                    "id": "2ab1-9386-f04b-cce3",
+                    "sortIndex": 2
+                  }
+                ],
+                "defaultSelectionEntryId": "e2ef-d2bd-d6b2-82ee"
+              },
+              {
+                "name": "​",
+                "id": "c83c-ac66-788d-4bb6",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "bbb0-e060-4278-d642"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "674e-3406-a3c4-dca6"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Berserker Chainblade",
+                    "hidden": false,
+                    "id": "eda4-a2b8-41a0-1075",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Eviscerator",
+                    "hidden": false,
+                    "id": "f52b-4234-abe5-633f",
+                    "sortIndex": 2
+                  }
+                ],
+                "defaultSelectionEntryId": "eda4-a2b8-41a0-1075"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Slaughterbound",
+        "hidden": false,
+        "id": "f1f0-84d1-0b03-64a7",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 100
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "17a8-5f05-d345-2ac1",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "2599-2f9d-b622-c678",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "3157-bfe9-ba0c-ddb9",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
+          }
+        ],
+        "sortIndex": 6,
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "roster",
+            "childId": "73c2-6f65-9a6f-1e38",
+            "name": "Attaches To",
+            "id": "81af-2e85-5b8a-6449",
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "label": "Leader",
+            "defaultSelectionEntryId": "none",
+            "childName": "May Attach To: Slaughterbound"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "cb19-be6c-e9b2-d848",
+            "hidden": false,
+            "description": "This unit must attach to:\n● EIGHTBOUND",
+            "noindex": false
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "8db0-9b93-fcd0-ecfa",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "9310-9396-d58d-7978",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "2249-28f4-6baf-d58c"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "e8ac-c5b6-e8d0-6812"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Slaughterbound Claw",
+                    "hidden": false,
+                    "id": "bcee-13a9-f6b3-86af",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "bcee-13a9-f6b3-86af"
+              },
+              {
+                "name": "​",
+                "id": "440d-0bad-6f62-4327",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "5646-e356-02d2-4bec"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "91b3-e16b-9d98-ccc7"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Chainblade",
+                    "hidden": false,
+                    "id": "cb22-7dcf-8183-c816",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "cb22-7dcf-8183-c816"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Khorne Berzerkers",
+        "hidden": false,
+        "id": "dbbb-3b08-8547-5e2b",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 130
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "1f85-4f85-d07e-1af5",
+            "id": "2dd0-7a2e-3992-6f20",
+            "primary": true,
+            "name": "Troop"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "3d86-85aa-4551-4356",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "4de8-8596-5da0-0d02",
+            "id": "6390-0a6f-f93f-7db8",
+            "primary": false,
+            "name": "May Attach To: World Eaters Chaos Lord"
+          },
+          {
+            "targetId": "9a64-f3d5-6a4d-30a7",
+            "id": "2f6b-642a-95fa-dc09",
+            "primary": false,
+            "name": "May Attach To: Butcher Surgeon"
+          },
+          {
+            "targetId": "9d1c-4ded-c7a4-ca5e",
+            "id": "5da5-73dd-799a-c87f",
+            "primary": false,
+            "name": "May Attach To: Sage of Slaughter"
+          }
+        ],
+        "sortIndex": 7,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "d3fc-55b4-cd43-defe",
+            "childId": "any",
+            "includeChildSelections": false
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 0,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "1bcf-ae22-8565-7f47",
+                "shared": true,
+                "includeChildSelections": false,
+                "childName": "Butcher Surgeon"
+              }
+            ]
+          }
+        ],
+        "comment": "FRESH INITIATES COST CONTRACT: when this exact KHORNE BERZERKERS instance is associated with BUTCHER SURGEON, its Phase 0.1 base Points cost is set to 0. Confirmed future behavior: every paid wargear/configuration cost belonging to this attached unit must also resolve to 0 while Fresh Initiates applies. Phase 0.1 has no paid Berzerker wargear nodes yet; when those enter scope, each descendant Points cost must use the same Butcher Surgeon association condition rather than charging separately.\nLOADOUT UI: Berzerker Champion is the canonical Plasma Pistol model; Berzerker 2 is the canonical Eviscerator model; Berzerkers 3-5 carry the ordinary loadout. Free specialist replacements are represented directly rather than offering ordinary fallback states. Fresh Initiates also zeros the Icon of Khorne cost.",
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "d587-484e-923b-6a6e",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Berzerker Champion",
+                "id": "e2ef-539a-ca7a-cedc",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "a157-987f-edd7-31f4",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "80d3-5900-2e35-6769"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "096f-917c-cf3b-30c4"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plasma Pistol + Berserker Chainblade",
+                        "hidden": false,
+                        "id": "497f-98b3-f489-3b04",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "497f-98b3-f489-3b04"
+                  }
+                ]
+              },
+              {
+                "name": "Berzerker 2",
+                "id": "f819-9d7e-3e8f-4905",
+                "hidden": false,
+                "sortIndex": 2,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "61d8-9a0f-8299-e2b3",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "efcb-0122-c9d3-17f4"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a8a9-83ac-99ba-a774"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Bolt Pistol + Eviscerator",
+                        "hidden": false,
+                        "id": "5b61-cd48-3eaf-5a22",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "5b61-cd48-3eaf-5a22"
+                  }
+                ]
+              },
+              {
+                "name": "Berzerkers 3-5",
+                "id": "2f90-5fe4-6e41-f3ea",
+                "hidden": false,
+                "sortIndex": 3,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "fe88-0b4a-97b1-f71e",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ed0b-0b0d-2b95-5a16"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "37be-9edc-7c39-0ab5"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "3x Bolt Pistol + Berserker Chainblade",
+                        "hidden": false,
+                        "id": "fb3b-e8df-8788-d088",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "fb3b-e8df-8788-d088"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "027a-1bf8-b5d4-55fe",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "b92a-6599-1808-160b",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "a91b-ff69-2cd5-00a0"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Icon of Khorne",
+                    "hidden": false,
+                    "id": "c38a-a0a2-c6b1-d094",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ],
+                    "rules": [
+                      {
+                        "name": "Icon of Khorne",
+                        "id": "93df-13ae-64ec-9c24",
+                        "hidden": false,
+                        "description": "Once per turn, after the Wound Roll for one attack with Shred is successful, you may have that wound cause one additional wound.",
+                        "noindex": false
+                      }
+                    ],
+                    "modifiers": [
+                      {
+                        "type": "set",
+                        "value": 0,
+                        "field": "121e-e068-ad7a-3063",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "associations",
+                            "scope": "ancestor",
+                            "childId": "1bcf-ae22-8565-7f47",
+                            "shared": true,
+                            "includeChildSelections": false,
+                            "childName": "Butcher Surgeon"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Jakhals",
+        "hidden": false,
+        "id": "4d3f-0d3f-a5d4-04ce",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 70
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "1f85-4f85-d07e-1af5",
+            "id": "a710-9322-2336-6e89",
+            "primary": true,
+            "name": "Troop"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "7326-7914-ee8e-7519",
+            "primary": false,
+            "name": "Infantry"
+          }
+        ],
+        "sortIndex": 8,
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "8ad9-a89e-3013-5ddf",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Jakhal Pack Leader",
+                "id": "463d-dbf2-c909-048d",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "5ee2-bfa1-5f43-1322",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4ff6-beca-ee8e-9643"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9ccf-d771-2238-813c"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Mauler Chainblade",
+                        "hidden": false,
+                        "id": "769a-1086-a760-a581",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "769a-1086-a760-a581"
+                  }
+                ]
+              },
+              {
+                "name": "Jakhal Dishonoured",
+                "id": "c660-e576-1894-8cc2",
+                "hidden": false,
+                "sortIndex": 2,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "01d9-90ff-dec1-febd",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2804-0ab7-bd2f-9d94"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "cd86-d016-c3e9-71e8"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Skullsmasher Mace + Chainblade",
+                        "hidden": false,
+                        "id": "0174-a902-a0d5-a258",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "0174-a902-a0d5-a258"
+                  }
+                ]
+              },
+              {
+                "name": "Jakhals 3-10",
+                "id": "f07b-f781-fb88-a869",
+                "hidden": false,
+                "sortIndex": 3,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "ebe1-765b-cc62-f63b",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c9be-49b3-1dbc-ea52"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ddfe-527a-0809-d087"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "8x Jakhal Chainblades",
+                        "hidden": false,
+                        "id": "729f-5636-3101-02f8",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "729f-5636-3101-02f8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "1f20-7ddd-0c0d-ac08",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "89e1-2c02-d757-ea4f",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "bc22-5b1e-d99f-9765"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Icon of Khorne",
+                    "hidden": false,
+                    "id": "a75c-99f8-e9f3-e466",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ],
+                    "rules": [
+                      {
+                        "name": "Icon of Khorne",
+                        "id": "8d7a-521f-9441-67f8",
+                        "hidden": false,
+                        "description": "Once per turn, after the Wound Roll for one attack with Shred is successful, you may have that wound cause one additional wound.",
+                        "noindex": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "comment": "LOADOUT UI: the free replacement models are recorded directly as Jakhal Pack Leader with Mauler Chainblade and Jakhal Dishonoured with Skullsmasher Mace + Chainblade; Jakhals 3-10 keep the ordinary loadout."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Red Butchers",
+        "hidden": false,
+        "id": "fbb8-0db2-6878-0c30",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 80
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "6347-c59d-9e1c-6026",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "e713-eaf4-570d-e25a",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "0c2a-dbdd-95c1-f3e6",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
+          }
+        ],
+        "sortIndex": 9,
+        "comment": "VARIABLE UNIT SIZE: root represents Red Butchers 1-2 at 80 Points. Red Butcher 3 is an optional +40 Point model with its own weapon choice.",
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "000b-a045-6351-f066",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Red Butcher 1",
+                "id": "2099-764a-6c09-fa1e",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "89c7-eba6-2c73-ad4c",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0cc3-1256-fff4-4a93"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "fa87-a969-5414-ba12"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainfists",
+                        "hidden": false,
+                        "id": "aad0-e5e7-b87a-b6a9",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Axes",
+                        "hidden": false,
+                        "id": "49d2-8f27-34af-3007",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Eviscerators",
+                        "hidden": false,
+                        "id": "1ba3-0ae2-0590-462b",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Berserker Chainblades",
+                        "hidden": false,
+                        "id": "c84d-f4e9-3404-f5ba",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claws",
+                        "hidden": false,
+                        "id": "b847-47c6-f7a0-9e11",
+                        "sortIndex": 5
+                      }
+                    ],
+                    "defaultSelectionEntryId": "aad0-e5e7-b87a-b6a9"
+                  }
+                ]
+              },
+              {
+                "name": "Red Butcher 2",
+                "id": "e227-6115-d974-6f7f",
+                "hidden": false,
+                "sortIndex": 2,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "23ae-2f50-898a-9b6b",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6611-298e-ce5e-5b2b"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9905-de46-18e1-50d7"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainfists",
+                        "hidden": false,
+                        "id": "26c7-6900-4db4-d94b",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Axes",
+                        "hidden": false,
+                        "id": "c9a6-0caf-3614-39cc",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Eviscerators",
+                        "hidden": false,
+                        "id": "e4ca-c1b3-8886-70fb",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Berserker Chainblades",
+                        "hidden": false,
+                        "id": "bfcf-e22b-d4ec-3da2",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claws",
+                        "hidden": false,
+                        "id": "c40a-3e4e-dbe8-5ac3",
+                        "sortIndex": 5
+                      }
+                    ],
+                    "defaultSelectionEntryId": "26c7-6900-4db4-d94b"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Additional Models",
+            "id": "124d-b178-d2fe-43f9",
+            "hidden": false,
+            "sortIndex": 2,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "e2f6-72c4-0c1d-12b1"
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "model",
+                "import": true,
+                "name": "Red Butcher 3",
+                "hidden": false,
+                "id": "6149-53a7-9c57-781d",
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 40
+                  }
+                ],
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "17cf-89b2-2c11-b12e",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2077-3eef-1417-15f2"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "767b-8d45-86d1-7e07"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainfists",
+                        "hidden": false,
+                        "id": "15a6-64a9-935d-0c10",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Axes",
+                        "hidden": false,
+                        "id": "a82e-404a-295c-0f00",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Eviscerators",
+                        "hidden": false,
+                        "id": "dbfc-3b28-a8d6-600a",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Berserker Chainblades",
+                        "hidden": false,
+                        "id": "928f-d226-3163-106e",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claws",
+                        "hidden": false,
+                        "id": "0ae7-f20e-0430-eb4c",
+                        "sortIndex": 5
+                      }
+                    ],
+                    "defaultSelectionEntryId": "15a6-64a9-935d-0c10"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "2065-baf3-07e2-588a",
+            "hidden": false,
+            "sortIndex": 3,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "17d6-ef79-74bd-ad57",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "086b-c8f1-30b1-733a"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Icon of Khorne",
+                    "hidden": false,
+                    "id": "4ca4-bed3-833b-fc95",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ],
+                    "rules": [
+                      {
+                        "name": "Icon of Khorne",
+                        "id": "a701-bf90-c968-ca51",
+                        "hidden": false,
+                        "description": "Once per turn, after the Wound Roll for one attack with Shred is successful, you may have that wound cause one additional wound.",
+                        "noindex": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "71ef-03ff-5259-4325",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Eightbound",
+        "hidden": false,
+        "id": "969c-ed8d-9e2a-a087",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 100
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "98ef-1c26-6a51-0074",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "86c1-bb75-c228-2035",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "73c2-6f65-9a6f-1e38",
+            "id": "323f-1626-3c37-fecf",
+            "primary": false,
+            "name": "May Attach To: Slaughterbound"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "950e-8652-ae5d-6df6",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
+          }
+        ],
+        "sortIndex": 10,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1f80-f5b4-1dd7-8ba2",
+            "childId": "any",
+            "includeChildSelections": false
+          }
+        ],
+        "comment": "VARIABLE UNIT SIZE: root represents Eightbound 1-2 at 100 Points. Eightbound 3 is optional +50. Heavy Chain Glaive +10 is listed on every model; selecting it on one model hides it from the other model lists, structurally enforcing the unit-wide maximum of one.",
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "69b6-836a-9e0c-e4af",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Eightbound 1",
+                "id": "f775-6f45-865f-8297",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "6be7-a3c4-4945-8176",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5403-4ff3-2cd8-8f5b"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7c28-80c1-c438-030f"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Eviscerators",
+                        "hidden": false,
+                        "id": "ab09-7b40-6755-b29f",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Axes",
+                        "hidden": false,
+                        "id": "6d19-3351-9d93-f962",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainfists",
+                        "hidden": false,
+                        "id": "483a-56ae-9a86-0f97",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lacerators",
+                        "hidden": false,
+                        "id": "207a-fbdb-b552-6876",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claws",
+                        "hidden": false,
+                        "id": "c4ad-482f-dd02-470a",
+                        "sortIndex": 5
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Chain Glaive",
+                        "hidden": false,
+                        "id": "96f5-7697-2083-1f32",
+                        "sortIndex": 6,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "121e-e068-ad7a-3063",
+                            "value": 10
+                          }
+                        ],
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "true",
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "ancestor",
+                                "childId": "ab10-da45-6054-2248",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": false,
+                                "childName": "Heavy Chain Glaive"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "set",
+                            "value": "true",
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "ancestor",
+                                "childId": "4763-32be-d2ad-07a2",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": false,
+                                "childName": "Heavy Chain Glaive"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "ab09-7b40-6755-b29f"
+                  }
+                ]
+              },
+              {
+                "name": "Eightbound 2",
+                "id": "73bc-cb30-33fe-9bba",
+                "hidden": false,
+                "sortIndex": 2,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "8daa-1a69-aae8-fe72",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8d72-1ded-4356-a355"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a686-d78a-aab4-2bb6"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Eviscerators",
+                        "hidden": false,
+                        "id": "7ef7-7ac7-9556-a95d",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Axes",
+                        "hidden": false,
+                        "id": "6f2e-2406-70b5-ba3b",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainfists",
+                        "hidden": false,
+                        "id": "9faa-01ce-241b-1e29",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lacerators",
+                        "hidden": false,
+                        "id": "a0e5-7a82-66dd-fbd9",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claws",
+                        "hidden": false,
+                        "id": "39ea-8248-2fc8-a5ef",
+                        "sortIndex": 5
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Chain Glaive",
+                        "hidden": false,
+                        "id": "ab10-da45-6054-2248",
+                        "sortIndex": 6,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "121e-e068-ad7a-3063",
+                            "value": 10
+                          }
+                        ],
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "true",
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "ancestor",
+                                "childId": "96f5-7697-2083-1f32",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": false,
+                                "childName": "Heavy Chain Glaive"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "set",
+                            "value": "true",
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "ancestor",
+                                "childId": "4763-32be-d2ad-07a2",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": false,
+                                "childName": "Heavy Chain Glaive"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "7ef7-7ac7-9556-a95d"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Additional Models",
+            "id": "aa3c-0589-479f-d414",
+            "hidden": false,
+            "sortIndex": 2,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "752b-711a-24ab-84c2"
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "model",
+                "import": true,
+                "name": "Eightbound 3",
+                "hidden": false,
+                "id": "70d8-7d6b-8154-cc6b",
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "121e-e068-ad7a-3063",
+                    "value": 50
+                  }
+                ],
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "97fa-00e6-0af4-0a51",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "24f5-157c-99e0-476d"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "dcf1-6da9-0904-65f1"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Eviscerators",
+                        "hidden": false,
+                        "id": "f5dd-2f9c-bb05-f43b",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Axes",
+                        "hidden": false,
+                        "id": "9e04-7688-5488-03b4",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainfists",
+                        "hidden": false,
+                        "id": "ff49-c991-fcf5-d229",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lacerators",
+                        "hidden": false,
+                        "id": "9bfb-cb22-4fc9-8679",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claws",
+                        "hidden": false,
+                        "id": "b893-943d-76c4-243e",
+                        "sortIndex": 5
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Chain Glaive",
+                        "hidden": false,
+                        "id": "4763-32be-d2ad-07a2",
+                        "sortIndex": 6,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "121e-e068-ad7a-3063",
+                            "value": 10
+                          }
+                        ],
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "true",
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "ancestor",
+                                "childId": "96f5-7697-2083-1f32",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": false,
+                                "childName": "Heavy Chain Glaive"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "set",
+                            "value": "true",
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "ancestor",
+                                "childId": "ab10-da45-6054-2248",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": false,
+                                "childName": "Heavy Chain Glaive"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "f5dd-2f9c-bb05-f43b"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "d5de-aec7-d3b4-c003",
+            "hidden": false,
+            "sortIndex": 3,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "5d8a-5d4c-7fff-f1e7",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "149b-5c04-4cc1-1a2d"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Icon of Khorne",
+                    "hidden": false,
+                    "id": "5282-c62a-768c-3696",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ],
+                    "rules": [
+                      {
+                        "name": "Icon of Khorne",
+                        "id": "eb80-0ae8-c485-f09e",
+                        "hidden": false,
+                        "description": "Once per turn, after the Wound Roll for one attack with Shred is successful, you may have that wound cause one additional wound.",
+                        "noindex": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "​",
+                "id": "3469-a673-1622-21aa",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "47f2-9bc9-0318-42ec"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Exalted Eightbound",
+                    "hidden": false,
+                    "id": "9187-0f47-17c6-da21",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "121e-e068-ad7a-3063",
+                        "value": 10
+                      }
+                    ],
+                    "rules": [
+                      {
+                        "name": "Exalted Eightbound",
+                        "id": "58d3-f9f7-3b06-f55a",
+                        "hidden": false,
+                        "description": "This unit’s Rv is improved by 1 (this unit will now take suppression as if each model cost 88 points).",
+                        "noindex": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "33fb-45b2-f55e-9023",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Khârne, the Betrayer",
+        "hidden": false,
+        "id": "7e0e-a3a1-66c8-31f5",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 170
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "4c7a-50a3-0e6b-6e41",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "fcb6-1482-2b94-57eb",
+            "primary": false,
+            "name": "Infantry"
+          },
+          {
+            "targetId": "c417-3a43-73d4-f4bf",
+            "id": "9783-c45e-e63d-2ed5",
+            "primary": false,
+            "name": "Rare"
+          }
+        ],
+        "sortIndex": 11,
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "7fcf-872a-1cfa-7855",
+            "includeChildSelections": true
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "efc7-9024-ada1-8104",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "45e1-98b0-e5f6-447e",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "2f3e-55fb-6c84-4f46"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "96f0-198b-5ef2-56f4"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Plasma Pistol",
+                    "hidden": false,
+                    "id": "963d-7c82-8b85-8850",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "963d-7c82-8b85-8850"
+              },
+              {
+                "name": "​",
+                "id": "9cf3-2272-a0cd-cdf0",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "ecd7-41c1-47f2-bc46"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "cba5-6260-6f64-6b1e"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Gorechild Cleave",
+                    "hidden": false,
+                    "id": "c981-7b58-0f9c-1cb0",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "c981-7b58-0f9c-1cb0"
+              },
+              {
+                "name": "​",
+                "id": "db7d-c262-9cde-2ccb",
+                "hidden": false,
+                "sortIndex": 3,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "c68c-8ff6-4860-7d38"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "e2dd-71bc-e4d5-b44d"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Gorechild Carve",
+                    "hidden": false,
+                    "id": "eaa9-39c3-8964-c3c2",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "eaa9-39c3-8964-c3c2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "categoryEntries": [
+      {
+        "name": "May Attach To: World Eaters Chaos Lord",
+        "id": "4de8-8596-5da0-0d02",
+        "hidden": true
+      },
+      {
+        "name": "May Attach To: Butcher Surgeon",
+        "id": "9a64-f3d5-6a4d-30a7",
+        "hidden": true
+      },
+      {
+        "name": "May Attach To: Sage of Slaughter",
+        "id": "9d1c-4ded-c7a4-ca5e",
+        "hidden": true
+      },
+      {
+        "name": "May Attach To: Slaughterbound",
+        "id": "73c2-6f65-9a6f-1e38",
+        "hidden": true
+      }
+    ],
+    "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
+    "authorName": "Varmint",
+    "comment": "PHASE 0.1 WORLD EATERS. Great Traitors’ Arsenal is implemented as an opt-in Configuration selection, unchecked by default. The external Chaos Space Marine Arsenal library is intentionally NOT represented by an unresolved catalogueLink in this file. When that reusable library is generated, add a catalogueLink with importRootEntries=false, then add World Eaters-local entryLinks for Arsenal units whose hidden state is controlled by the Great Traitors’ Arsenal configuration selection. Imported units should retain their normal Leader/Troop/Other categories and list-building constraints.\nFresh Initiates is mechanically implemented for the current Khorne Berzerkers base Points cost. Future paid wargear/configuration descendants on that attached host must also be set to 0 under the same Butcher Surgeon association condition.\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nWorld Eaters now use Game System revision 8. Great Traitors’ Arsenal remains a placeholder. Chaos Lord Lightning Claws use the two-single-claw shorthand. Khorne Berzerkers and Jakhals use canonical specialist model identities. Red Butchers and Eightbound use optional third-model sizing. Eightbound Heavy Chain Glaive appears on every model and disappears from the others once selected. Fresh Initiates zeros both the Berzerker root cost and Icon of Khorne. All native non-Rare Other units use Additional Copy Costs."
+  }
+}
