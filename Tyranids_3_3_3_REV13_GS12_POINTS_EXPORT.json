@@ -4,8 +4,8 @@
     "id": "08ec-05e9-e427-8151",
     "name": "Tyranids 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 11,
-    "revision": 11,
+    "gameSystemRevision": 12,
+    "revision": 13,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -42,7 +42,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 0
           }
         ],
@@ -55,7 +55,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -99,7 +99,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -128,7 +128,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -144,79 +144,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "74f7-796e-9eaf-025c",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Warrior Brood (3)"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "74f7-796e-9eaf-025c",
-                "childName": "Warrior Brood (3)",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "74f7-796e-9eaf-025c",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Warrior Brood (3)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "74f7-796e-9eaf-025c",
@@ -244,8 +171,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "74f7-796e-9eaf-025c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Warrior Brood (3)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "74f7-796e-9eaf-025c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Warrior Brood (3)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "74f7-796e-9eaf-025c",
+                "childName": "Warrior Brood (3)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -274,7 +274,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -318,7 +318,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -347,7 +347,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -363,79 +363,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "26d7-eb48-6249-af7b",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Genestealers (10)"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "26d7-eb48-6249-af7b",
-                "childName": "Genestealers (10)",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "26d7-eb48-6249-af7b",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Genestealers (10)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "26d7-eb48-6249-af7b",
@@ -463,8 +390,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "26d7-eb48-6249-af7b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Genestealers (10)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "26d7-eb48-6249-af7b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Genestealers (10)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "26d7-eb48-6249-af7b",
+                "childName": "Genestealers (10)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -493,7 +493,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -537,7 +537,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -566,7 +566,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -582,79 +582,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "a30f-ae15-8716-f5bf",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Lictor"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "a30f-ae15-8716-f5bf",
-                "childName": "Lictor",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "a30f-ae15-8716-f5bf",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Lictor"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "a30f-ae15-8716-f5bf",
@@ -682,8 +609,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a30f-ae15-8716-f5bf",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Lictor"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a30f-ae15-8716-f5bf",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Lictor"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "a30f-ae15-8716-f5bf",
+                "childName": "Lictor",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -712,7 +712,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -756,7 +756,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -785,7 +785,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -801,79 +801,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "ab20-a6fc-8cb2-a80a",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Neurolictor"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "ab20-a6fc-8cb2-a80a",
-                "childName": "Neurolictor",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "ab20-a6fc-8cb2-a80a",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Neurolictor"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "ab20-a6fc-8cb2-a80a",
@@ -901,8 +828,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ab20-a6fc-8cb2-a80a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Neurolictor"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ab20-a6fc-8cb2-a80a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Neurolictor"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "ab20-a6fc-8cb2-a80a",
+                "childName": "Neurolictor",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -931,7 +931,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -975,7 +975,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1004,7 +1004,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1020,79 +1020,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "abea-fa2b-6195-8f12",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Neurogaunts (11)"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "abea-fa2b-6195-8f12",
-                "childName": "Neurogaunts (11)",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "abea-fa2b-6195-8f12",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Neurogaunts (11)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "abea-fa2b-6195-8f12",
@@ -1120,8 +1047,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "abea-fa2b-6195-8f12",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Neurogaunts (11)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "abea-fa2b-6195-8f12",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Neurogaunts (11)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "abea-fa2b-6195-8f12",
+                "childName": "Neurogaunts (11)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1150,7 +1150,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1194,7 +1194,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1223,7 +1223,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1239,79 +1239,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "dea8-efdd-b1b1-f0bd",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Venomthrope"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "dea8-efdd-b1b1-f0bd",
-                "childName": "Venomthrope",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "dea8-efdd-b1b1-f0bd",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Venomthrope"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "dea8-efdd-b1b1-f0bd",
@@ -1339,8 +1266,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "dea8-efdd-b1b1-f0bd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Venomthrope"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "dea8-efdd-b1b1-f0bd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Venomthrope"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "dea8-efdd-b1b1-f0bd",
+                "childName": "Venomthrope",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1369,7 +1369,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1413,7 +1413,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1442,7 +1442,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1458,79 +1458,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "c09d-da77-9e53-9fad",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Zoanthrope"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "c09d-da77-9e53-9fad",
-                "childName": "Zoanthrope",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "c09d-da77-9e53-9fad",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Zoanthrope"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "c09d-da77-9e53-9fad",
@@ -1558,8 +1485,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "c09d-da77-9e53-9fad",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Zoanthrope"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "c09d-da77-9e53-9fad",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Zoanthrope"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "c09d-da77-9e53-9fad",
+                "childName": "Zoanthrope",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1588,7 +1588,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1632,7 +1632,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1661,7 +1661,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1677,79 +1677,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "b9bd-df11-80a4-4153",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Ripper Swarms (4-6)"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "b9bd-df11-80a4-4153",
-                "childName": "Ripper Swarms (4-6)",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "b9bd-df11-80a4-4153",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Ripper Swarms (4-6)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "b9bd-df11-80a4-4153",
@@ -1777,8 +1704,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b9bd-df11-80a4-4153",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Ripper Swarms (4-6)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b9bd-df11-80a4-4153",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Ripper Swarms (4-6)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "b9bd-df11-80a4-4153",
+                "childName": "Ripper Swarms (4-6)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1807,7 +1807,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1851,7 +1851,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1880,7 +1880,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1896,79 +1896,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "5c21-f2f7-24ce-6b8b",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Carnifex"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "5c21-f2f7-24ce-6b8b",
-                "childName": "Carnifex",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "5c21-f2f7-24ce-6b8b",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Carnifex"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "5c21-f2f7-24ce-6b8b",
@@ -1996,8 +1923,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "5c21-f2f7-24ce-6b8b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Carnifex"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "5c21-f2f7-24ce-6b8b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Carnifex"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "5c21-f2f7-24ce-6b8b",
+                "childName": "Carnifex",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2026,7 +2026,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2070,7 +2070,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2099,7 +2099,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2115,79 +2115,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "7a33-d169-4156-30c6",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Hive Guard (2 or 3)"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "7a33-d169-4156-30c6",
-                "childName": "Hive Guard (2 or 3)",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "7a33-d169-4156-30c6",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Hive Guard (2 or 3)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "7a33-d169-4156-30c6",
@@ -2215,8 +2142,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7a33-d169-4156-30c6",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Hive Guard (2 or 3)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7a33-d169-4156-30c6",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Hive Guard (2 or 3)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "7a33-d169-4156-30c6",
+                "childName": "Hive Guard (2 or 3)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2245,7 +2245,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2289,7 +2289,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2318,7 +2318,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2334,79 +2334,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "9e91-daa0-cd42-3f48",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Tyrant Guard (2 or 3)"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "9e91-daa0-cd42-3f48",
-                "childName": "Tyrant Guard (2 or 3)",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "9e91-daa0-cd42-3f48",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Tyrant Guard (2 or 3)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "9e91-daa0-cd42-3f48",
@@ -2434,8 +2361,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9e91-daa0-cd42-3f48",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Tyrant Guard (2 or 3)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9e91-daa0-cd42-3f48",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Tyrant Guard (2 or 3)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "9e91-daa0-cd42-3f48",
+                "childName": "Tyrant Guard (2 or 3)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2464,7 +2464,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2508,7 +2508,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2537,7 +2537,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2581,7 +2581,7 @@
           {
             "type": "decrement",
             "value": 40,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2610,7 +2610,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2654,7 +2654,7 @@
           {
             "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2683,7 +2683,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2727,7 +2727,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2756,7 +2756,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2800,7 +2800,7 @@
           {
             "type": "decrement",
             "value": 40,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2829,7 +2829,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2873,7 +2873,7 @@
           {
             "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2930,7 +2930,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 120
           }
         ],
@@ -3043,7 +3043,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ],
@@ -3121,7 +3121,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ],
@@ -3183,7 +3183,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 120
           }
         ],
@@ -3260,7 +3260,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 0
                       }
                     ],
@@ -3443,7 +3443,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -3458,7 +3458,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -3473,7 +3473,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -3547,7 +3547,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -3562,7 +3562,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -3577,7 +3577,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -3651,7 +3651,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -3666,7 +3666,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -3681,7 +3681,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -3723,7 +3723,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 0
                       }
                     ],
@@ -3906,7 +3906,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -3921,7 +3921,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -3936,7 +3936,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4010,7 +4010,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4025,7 +4025,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4040,7 +4040,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4114,7 +4114,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4129,7 +4129,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4144,7 +4144,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4281,7 +4281,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 0
                       }
                     ],
@@ -4464,7 +4464,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4479,7 +4479,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4494,7 +4494,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4568,7 +4568,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4583,7 +4583,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4598,7 +4598,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4672,7 +4672,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4687,7 +4687,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -4702,7 +4702,7 @@
                                     "costs": [
                                       {
                                         "name": "Points",
-                                        "typeId": "121e-e068-ad7a-3063",
+                                        "typeId": "51b2-306e-1021-d207",
                                         "value": 0
                                       }
                                     ]
@@ -5041,7 +5041,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 120
           }
         ],
@@ -5202,7 +5202,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 70
           }
         ],
@@ -5302,7 +5302,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 70
           }
         ],
@@ -5485,7 +5485,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -5500,7 +5500,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -5515,7 +5515,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -5589,7 +5589,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -5604,7 +5604,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -5619,7 +5619,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -5693,7 +5693,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -5708,7 +5708,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -5723,7 +5723,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -5747,7 +5747,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 60
           }
         ],
@@ -5821,7 +5821,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 100
           }
         ],
@@ -6446,7 +6446,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 100
           }
         ],
@@ -6535,7 +6535,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 60
           }
         ],
@@ -6624,7 +6624,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 90
           }
         ],
@@ -6713,7 +6713,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 80
           }
         ],
@@ -6802,7 +6802,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 80
           }
         ],
@@ -6891,7 +6891,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 120
           }
         ],
@@ -6992,7 +6992,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ],
@@ -7030,7 +7030,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 80
           }
         ],
@@ -7133,7 +7133,7 @@
                 "costs": [
                   {
                     "name": "Points",
-                    "typeId": "121e-e068-ad7a-3063",
+                    "typeId": "51b2-306e-1021-d207",
                     "value": 20
                   }
                 ],
@@ -7163,7 +7163,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 20
                           }
                         ]
@@ -7194,7 +7194,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 120
           }
         ],
@@ -7350,7 +7350,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 80
           }
         ],
@@ -7582,7 +7582,7 @@
                 "costs": [
                   {
                     "name": "Points",
-                    "typeId": "121e-e068-ad7a-3063",
+                    "typeId": "51b2-306e-1021-d207",
                     "value": 40
                   }
                 ],
@@ -7689,7 +7689,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 80
           }
         ],
@@ -7867,7 +7867,7 @@
                 "costs": [
                   {
                     "name": "Points",
-                    "typeId": "121e-e068-ad7a-3063",
+                    "typeId": "51b2-306e-1021-d207",
                     "value": 40
                   }
                 ],
@@ -7947,7 +7947,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 200
           }
         ],
@@ -8048,7 +8048,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ],
@@ -8098,7 +8098,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 200
           }
         ],
@@ -8234,7 +8234,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 160
           }
         ],
@@ -8358,7 +8358,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 160
           }
         ],
@@ -8493,7 +8493,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 0
           }
         ],
@@ -8576,7 +8576,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 30
           }
         ],
@@ -8805,6 +8805,6 @@
         "comment": "LOADOUT UI: the Warrior is represented as two final-state arm-pair lists. Each arm pair can record one melee package or one ranged bio-weapon.\nNESTED COUNTLESS LEADER: Warrior is no longer a root Leader selection. Eligible Hormagaunt and Termagant units offer it through an Additional Leader box. It remains Countless and does not consume Leader capacity."
       }
     ],
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTyranids now use the final-state fancy-notepad loadout grammar. Hive Tyrant Wings are inline loadout alternatives; Warrior and Warrior Brood use two arm-pair lists; Termagants 1-7 use one shared ordinary weapon slot while 8-10 are paid specialist slots. Ripper Swarms, Hive Guard, and Tyrant Guard use variable-size controls. All native non-Rare Other units use Additional Copy Costs. The existing Tervigon Living Incubator free-Termagant TODO remains intentionally untouched.\n\nRIPPER SWARM VARIABLE-SIZE UI FIX\nRipper Swarms now use one quantity-style +20 Point Additional Model entry capped at two, rather than separate Ripper Swarm 5 and Ripper Swarm 6 model subtrees.\n\nRIPPER SWARM ADDITIONAL-MODEL UI CORRECTION\nRipper Swarms now use the same max-1 optional-model radio pattern as Hive Guard. Ripper Swarm 5 is the first optional +20 model; when selected it exposes Ripper Swarm 6 as a second optional +20 model.\n\nTERVIGON LIVING INCUBATOR IMPLEMENTATION\nLiving Incubator now uses required Tervigon-to-Termagant associations: 1 brood at 800, 2 at 1200, 3 at 1600. Associated Termagant units and their paid specialist weapons cost 0 Points. The full Living Incubator rule text is displayed on the Tervigon.\n\nTERVIGON HIDDEN-ASSOCIATION MINIMUM FIX\nLiving Incubator association slots now have min 0 individually. A single dynamic association-count constraint enforces 1 / 2 / 3 attached broods by Game Size, preventing hidden Brood 3 from generating a phantom requirement at 1200 Points.\n\nTERVIGON DISTINCT-BROOD PICKER FIX\nLiving Incubator now uses one game-size-specific multi-select association picker rather than separate Brood 1/2/3 pickers. Each Termagant unit appears once, so the same unit cannot be selected for multiple granted broods.\n\nTERVIGON PLAYER-FACING ERROR MESSAGE\nReplaced New Recruit's generic 'requires N associations more' minimum error with explicit Living Incubator errors for 800 / 1200 / 1600 Points. The messages tell the player how many free Termagant broods are required, to add Termagant units first, where to select them, and that the selected broods cost 0 Points.\n\nTERVIGON AUTO-GRANTED BROODS PROTOTYPE\nLiving Incubator now prototypes Neuroloid-style nested Termagant broods. The Tervigon automatically selects 1 / 2 / 3 zero-point brood units according to Game Size. Each brood preserves the normal Warrior attachment category so nested association targeting can be tested.\n\nNESTED WARRIOR COUNTLESS LEADER\nWarrior has been removed from the root Leader section and moved into sharedSelectionEntries. Hormagaunts, normal Termagants, and Tervigon-granted Termagant broods now expose Warrior through an Additional Leader box, matching the proven nested Nob-style architecture.\n\nREV11 CONSTRUCTIVE VALIDATION MIGRATION\nTargets Game System revision 11. Additional Copy Costs uses the current required-configuration semantic tag and self-owned duplicate warning. Trygon and Mawloc Rare limits are constructive. The Hive Tyrant / Tervigon / Neurotyrant shared restriction is now self-monitored by those units rather than enforced by a hidden-category stock max. The obsolete Neuroloid roster cap is removed. Living Incubator no longer uses dynamic stock exact-count constraints: each granted brood is max one, Brood 2/3 use selected-safe visibility across Game Size changes, and Tervigon/Brood entries provide constructive missing/invalid-brood errors. Nested Warrior architecture is unchanged."
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTyranids now use the final-state fancy-notepad loadout grammar. Hive Tyrant Wings are inline loadout alternatives; Warrior and Warrior Brood use two arm-pair lists; Termagants 1-7 use one shared ordinary weapon slot while 8-10 are paid specialist slots. Ripper Swarms, Hive Guard, and Tyrant Guard use variable-size controls. All native non-Rare Other units use Additional Copy Costs. The existing Tervigon Living Incubator free-Termagant TODO remains intentionally untouched.\n\nRIPPER SWARM VARIABLE-SIZE UI FIX\nRipper Swarms now use one quantity-style +20 Point Additional Model entry capped at two, rather than separate Ripper Swarm 5 and Ripper Swarm 6 model subtrees.\n\nRIPPER SWARM ADDITIONAL-MODEL UI CORRECTION\nRipper Swarms now use the same max-1 optional-model radio pattern as Hive Guard. Ripper Swarm 5 is the first optional +20 model; when selected it exposes Ripper Swarm 6 as a second optional +20 model.\n\nTERVIGON LIVING INCUBATOR IMPLEMENTATION\nLiving Incubator now uses required Tervigon-to-Termagant associations: 1 brood at 800, 2 at 1200, 3 at 1600. Associated Termagant units and their paid specialist weapons cost 0 Points. The full Living Incubator rule text is displayed on the Tervigon.\n\nTERVIGON HIDDEN-ASSOCIATION MINIMUM FIX\nLiving Incubator association slots now have min 0 individually. A single dynamic association-count constraint enforces 1 / 2 / 3 attached broods by Game Size, preventing hidden Brood 3 from generating a phantom requirement at 1200 Points.\n\nTERVIGON DISTINCT-BROOD PICKER FIX\nLiving Incubator now uses one game-size-specific multi-select association picker rather than separate Brood 1/2/3 pickers. Each Termagant unit appears once, so the same unit cannot be selected for multiple granted broods.\n\nTERVIGON PLAYER-FACING ERROR MESSAGE\nReplaced New Recruit's generic 'requires N associations more' minimum error with explicit Living Incubator errors for 800 / 1200 / 1600 Points. The messages tell the player how many free Termagant broods are required, to add Termagant units first, where to select them, and that the selected broods cost 0 Points.\n\nTERVIGON AUTO-GRANTED BROODS PROTOTYPE\nLiving Incubator now prototypes Neuroloid-style nested Termagant broods. The Tervigon automatically selects 1 / 2 / 3 zero-point brood units according to Game Size. Each brood preserves the normal Warrior attachment category so nested association targeting can be tested.\n\nNESTED WARRIOR COUNTLESS LEADER\nWarrior has been removed from the root Leader section and moved into sharedSelectionEntries. Hormagaunts, normal Termagants, and Tervigon-granted Termagant broods now expose Warrior through an Additional Leader box, matching the proven nested Nob-style architecture.\n\nREV11 CONSTRUCTIVE VALIDATION MIGRATION\nTargets Game System revision 11. Additional Copy Costs uses the current required-configuration semantic tag and self-owned duplicate warning. Trygon and Mawloc Rare limits are constructive. The Hive Tyrant / Tervigon / Neurotyrant shared restriction is now self-monitored by those units rather than enforced by a hidden-category stock max. The obsolete Neuroloid roster cap is removed. Living Incubator no longer uses dynamic stock exact-count constraints: each granted brood is max one, Brood 2/3 use selected-safe visibility across Game Size changes, and Tervigon/Brood entries provide constructive missing/invalid-brood errors. Nested Warrior architecture is unchanged.\n\nREV13 NEW RECRUIT EXPORT COMPATIBILITY\nPromoted the proven revision-12 Points-ID test build to the canonical Tyranids catalogue for Warhammer 40k Reforged Game System revision 12. All Points cost references use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, categories, constraints, nested Warrior architecture, Living Incubator logic, or constructive validation semantics were otherwise changed."
   }
 }

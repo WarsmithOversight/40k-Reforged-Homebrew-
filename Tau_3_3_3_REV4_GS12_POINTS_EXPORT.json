@@ -4,8 +4,8 @@
     "id": "4438-61cb-5073-868d",
     "name": "T'au 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 11,
-    "revision": 3,
+    "gameSystemRevision": 12,
+    "revision": 4,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -42,7 +42,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 0
           }
         ],
@@ -55,7 +55,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -99,7 +99,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -128,7 +128,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -144,79 +144,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d2ef-fc09-cd75-fe07",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "XV8 Crisis Battlesuits"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "d2ef-fc09-cd75-fe07",
-                "childName": "XV8 Crisis Battlesuits",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d2ef-fc09-cd75-fe07",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "XV8 Crisis Battlesuits"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "d2ef-fc09-cd75-fe07",
@@ -244,8 +171,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d2ef-fc09-cd75-fe07",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "XV8 Crisis Battlesuits"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d2ef-fc09-cd75-fe07",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "XV8 Crisis Battlesuits"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "d2ef-fc09-cd75-fe07",
+                "childName": "XV8 Crisis Battlesuits",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -274,7 +274,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -318,7 +318,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -347,7 +347,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -363,79 +363,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "7e29-e0ac-7436-8c43",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "XV25 Stealth Battlesuits"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "7e29-e0ac-7436-8c43",
-                "childName": "XV25 Stealth Battlesuits",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "7e29-e0ac-7436-8c43",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "XV25 Stealth Battlesuits"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "7e29-e0ac-7436-8c43",
@@ -463,8 +390,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7e29-e0ac-7436-8c43",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "XV25 Stealth Battlesuits"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7e29-e0ac-7436-8c43",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "XV25 Stealth Battlesuits"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "7e29-e0ac-7436-8c43",
+                "childName": "XV25 Stealth Battlesuits",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -493,7 +493,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -537,7 +537,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -566,7 +566,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -582,79 +582,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "1add-d9e8-d920-e5a1",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Kroot Carnivores"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "1add-d9e8-d920-e5a1",
-                "childName": "Kroot Carnivores",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "1add-d9e8-d920-e5a1",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Kroot Carnivores"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "1add-d9e8-d920-e5a1",
@@ -682,8 +609,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1add-d9e8-d920-e5a1",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Kroot Carnivores"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1add-d9e8-d920-e5a1",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Kroot Carnivores"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "1add-d9e8-d920-e5a1",
+                "childName": "Kroot Carnivores",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -712,7 +712,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -756,7 +756,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -785,7 +785,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -801,79 +801,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "9f36-41a2-cea9-53ee",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "TY7 Devilfish"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "9f36-41a2-cea9-53ee",
-                "childName": "TY7 Devilfish",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "9f36-41a2-cea9-53ee",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "TY7 Devilfish"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "9f36-41a2-cea9-53ee",
@@ -901,8 +828,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9f36-41a2-cea9-53ee",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "TY7 Devilfish"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9f36-41a2-cea9-53ee",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "TY7 Devilfish"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "9f36-41a2-cea9-53ee",
+                "childName": "TY7 Devilfish",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -931,7 +931,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -975,7 +975,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1004,7 +1004,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1020,79 +1020,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "1cc9-a64c-77f1-c2a0",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Recon Pathfinders"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "1cc9-a64c-77f1-c2a0",
-                "childName": "Recon Pathfinders",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "1cc9-a64c-77f1-c2a0",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Recon Pathfinders"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "1cc9-a64c-77f1-c2a0",
@@ -1120,8 +1047,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1cc9-a64c-77f1-c2a0",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Recon Pathfinders"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1cc9-a64c-77f1-c2a0",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Recon Pathfinders"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "1cc9-a64c-77f1-c2a0",
+                "childName": "Recon Pathfinders",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1150,7 +1150,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1194,7 +1194,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1223,7 +1223,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1239,79 +1239,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "4827-3c69-3f74-fb9e",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Hunter Pathfinders"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "4827-3c69-3f74-fb9e",
-                "childName": "Hunter Pathfinders",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "4827-3c69-3f74-fb9e",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Hunter Pathfinders"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "4827-3c69-3f74-fb9e",
@@ -1339,8 +1266,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "4827-3c69-3f74-fb9e",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Hunter Pathfinders"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "4827-3c69-3f74-fb9e",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Hunter Pathfinders"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "4827-3c69-3f74-fb9e",
+                "childName": "Hunter Pathfinders",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1369,7 +1369,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1413,7 +1413,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1442,7 +1442,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1458,79 +1458,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "8495-eae7-f8ea-fc81",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Tetra"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "8495-eae7-f8ea-fc81",
-                "childName": "Tetra",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "8495-eae7-f8ea-fc81",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Tetra"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "8495-eae7-f8ea-fc81",
@@ -1558,8 +1485,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "8495-eae7-f8ea-fc81",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Tetra"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "8495-eae7-f8ea-fc81",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Tetra"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "8495-eae7-f8ea-fc81",
+                "childName": "Tetra",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1588,7 +1588,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1632,7 +1632,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1661,7 +1661,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1677,79 +1677,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "bd7e-b006-7cb1-7bd5",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "TX4 Piranha"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "bd7e-b006-7cb1-7bd5",
-                "childName": "TX4 Piranha",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "bd7e-b006-7cb1-7bd5",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "TX4 Piranha"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "bd7e-b006-7cb1-7bd5",
@@ -1777,8 +1704,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "bd7e-b006-7cb1-7bd5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "TX4 Piranha"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "bd7e-b006-7cb1-7bd5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "TX4 Piranha"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "bd7e-b006-7cb1-7bd5",
+                "childName": "TX4 Piranha",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1807,7 +1807,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1851,7 +1851,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1880,7 +1880,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1896,79 +1896,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "33ce-3a5d-5d2d-7658",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "XV95 Ghostkeel Battlesuit"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "33ce-3a5d-5d2d-7658",
-                "childName": "XV95 Ghostkeel Battlesuit",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "33ce-3a5d-5d2d-7658",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "XV95 Ghostkeel Battlesuit"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "33ce-3a5d-5d2d-7658",
@@ -1996,8 +1923,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "33ce-3a5d-5d2d-7658",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "XV95 Ghostkeel Battlesuit"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "33ce-3a5d-5d2d-7658",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "XV95 Ghostkeel Battlesuit"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "33ce-3a5d-5d2d-7658",
+                "childName": "XV95 Ghostkeel Battlesuit",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2026,7 +2026,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2070,7 +2070,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2099,7 +2099,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2115,79 +2115,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "8b67-1624-9946-28ad",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "XV88 Broadside Battlesuit"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "8b67-1624-9946-28ad",
-                "childName": "XV88 Broadside Battlesuit",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "8b67-1624-9946-28ad",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "XV88 Broadside Battlesuit"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "8b67-1624-9946-28ad",
@@ -2215,8 +2142,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "8b67-1624-9946-28ad",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "XV88 Broadside Battlesuit"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "8b67-1624-9946-28ad",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "XV88 Broadside Battlesuit"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "8b67-1624-9946-28ad",
+                "childName": "XV88 Broadside Battlesuit",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2245,7 +2245,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2289,7 +2289,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2318,7 +2318,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2362,7 +2362,7 @@
           {
             "type": "decrement",
             "value": 40,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2391,7 +2391,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2435,7 +2435,7 @@
           {
             "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2464,7 +2464,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2508,7 +2508,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2537,7 +2537,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2581,7 +2581,7 @@
           {
             "type": "decrement",
             "value": 40,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2610,7 +2610,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2654,7 +2654,7 @@
           {
             "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2711,7 +2711,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 100
           }
         ],
@@ -2952,7 +2952,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ],
@@ -2976,7 +2976,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ],
@@ -3005,7 +3005,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 20
           }
         ],
@@ -3129,7 +3129,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 20
           }
         ],
@@ -3247,7 +3247,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 100
           }
         ],
@@ -3413,7 +3413,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -3454,7 +3454,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 140
           }
         ],
@@ -3569,7 +3569,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -3610,7 +3610,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 100
           }
         ],
@@ -4018,7 +4018,7 @@
                 "costs": [
                   {
                     "name": "Points",
-                    "typeId": "121e-e068-ad7a-3063",
+                    "typeId": "51b2-306e-1021-d207",
                     "value": 50
                   }
                 ],
@@ -4213,7 +4213,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 90
           }
         ],
@@ -4354,7 +4354,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 80
           }
         ],
@@ -4503,7 +4503,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 120
           }
         ],
@@ -4647,7 +4647,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4680,7 +4680,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4709,7 +4709,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 70
           }
         ],
@@ -4861,7 +4861,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4891,7 +4891,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 70
           }
         ],
@@ -5161,7 +5161,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -5191,7 +5191,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 50
           }
         ],
@@ -5280,7 +5280,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 100
           }
         ],
@@ -5424,7 +5424,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -5457,7 +5457,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -5486,7 +5486,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 140
           }
         ],
@@ -5634,7 +5634,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 110
           }
         ],
@@ -5821,7 +5821,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -5850,7 +5850,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 140
           }
         ],
@@ -6042,7 +6042,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -6075,7 +6075,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -6104,7 +6104,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 130
           }
         ],
@@ -6250,6 +6250,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTau loadouts follow the fancy-notepad presentation: named Tau model nouns replace generic Model X labels, sergeant titles appear only where there is a distinct sergeant loadout, unmodelled grenade/additive wargear is unit-level, free specialist weapon slots omit ordinary fallback loadouts, Crisis Battlesuits use optional extra-model sizing, and all native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nT'au now use Game System revision 11. Game System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, and host Leader limits use constructive player-facing errors. Existing faction semantics remain unchanged; Ethereal continues not to count toward Leader Capacity."
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTau loadouts follow the fancy-notepad presentation: named Tau model nouns replace generic Model X labels, sergeant titles appear only where there is a distinct sergeant loadout, unmodelled grenade/additive wargear is unit-level, free specialist weapon slots omit ordinary fallback loadouts, Crisis Battlesuits use optional extra-model sizing, and all native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nT'au now use Game System revision 11. Game System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, and host Leader limits use constructive player-facing errors. Existing faction semantics remain unchanged; Ethereal continues not to count toward Leader Capacity.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader behavior, categories, or Additional Copy Costs arithmetic were otherwise changed."
   }
 }

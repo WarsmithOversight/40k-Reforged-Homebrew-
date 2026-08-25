@@ -4,8 +4,8 @@
     "id": "a774-9ea6-9b60-31af",
     "name": "Adeptus Custodes 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 11,
-    "revision": 4,
+    "gameSystemRevision": 12,
+    "revision": 5,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -78,7 +78,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 0
           }
         ],
@@ -91,7 +91,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -135,7 +135,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -164,7 +164,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -180,79 +180,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "cdc7-9601-07f8-859f",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Allarus Custodian"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "cdc7-9601-07f8-859f",
-                "childName": "Allarus Custodian",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "cdc7-9601-07f8-859f",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Allarus Custodian"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "cdc7-9601-07f8-859f",
@@ -280,8 +207,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "cdc7-9601-07f8-859f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Allarus Custodian"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "cdc7-9601-07f8-859f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Allarus Custodian"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "cdc7-9601-07f8-859f",
+                "childName": "Allarus Custodian",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -310,7 +310,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -354,7 +354,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -383,7 +383,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -399,79 +399,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "7653-c635-3850-3a5f",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Vexilla Allarus Custodian"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "7653-c635-3850-3a5f",
-                "childName": "Vexilla Allarus Custodian",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "7653-c635-3850-3a5f",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Vexilla Allarus Custodian"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "7653-c635-3850-3a5f",
@@ -499,8 +426,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7653-c635-3850-3a5f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vexilla Allarus Custodian"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7653-c635-3850-3a5f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vexilla Allarus Custodian"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "7653-c635-3850-3a5f",
+                "childName": "Vexilla Allarus Custodian",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -529,7 +529,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -573,7 +573,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -602,7 +602,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -618,79 +618,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d9ae-1a36-50cb-1134",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Custodian Warden"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "d9ae-1a36-50cb-1134",
-                "childName": "Custodian Warden",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d9ae-1a36-50cb-1134",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Custodian Warden"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "d9ae-1a36-50cb-1134",
@@ -718,8 +645,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d9ae-1a36-50cb-1134",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Custodian Warden"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d9ae-1a36-50cb-1134",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Custodian Warden"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "d9ae-1a36-50cb-1134",
+                "childName": "Custodian Warden",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -748,7 +748,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -792,7 +792,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -821,7 +821,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -837,79 +837,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "e011-d5cf-127e-df39",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Vertus Praetor"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "e011-d5cf-127e-df39",
-                "childName": "Vertus Praetor",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "e011-d5cf-127e-df39",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Vertus Praetor"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "e011-d5cf-127e-df39",
@@ -937,8 +864,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e011-d5cf-127e-df39",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vertus Praetor"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e011-d5cf-127e-df39",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Vertus Praetor"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "e011-d5cf-127e-df39",
+                "childName": "Vertus Praetor",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -967,7 +967,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1011,7 +1011,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1040,7 +1040,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1056,79 +1056,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0471-ace8-695f-9963",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Decaptis Blade Champion"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "0471-ace8-695f-9963",
-                "childName": "Decaptis Blade Champion",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0471-ace8-695f-9963",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Decaptis Blade Champion"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "0471-ace8-695f-9963",
@@ -1156,8 +1083,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0471-ace8-695f-9963",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Decaptis Blade Champion"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0471-ace8-695f-9963",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Decaptis Blade Champion"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0471-ace8-695f-9963",
+                "childName": "Decaptis Blade Champion",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1186,7 +1186,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1230,7 +1230,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1259,7 +1259,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1275,79 +1275,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0fcb-6352-d0c0-b543",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Hurricanus Blade Champion"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "0fcb-6352-d0c0-b543",
-                "childName": "Hurricanus Blade Champion",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0fcb-6352-d0c0-b543",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Hurricanus Blade Champion"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "0fcb-6352-d0c0-b543",
@@ -1375,8 +1302,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0fcb-6352-d0c0-b543",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Hurricanus Blade Champion"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0fcb-6352-d0c0-b543",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Hurricanus Blade Champion"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0fcb-6352-d0c0-b543",
+                "childName": "Hurricanus Blade Champion",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1405,7 +1405,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1449,7 +1449,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1478,7 +1478,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1522,7 +1522,7 @@
           {
             "type": "decrement",
             "value": 40,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1551,7 +1551,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1595,7 +1595,7 @@
           {
             "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1624,7 +1624,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1668,7 +1668,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1697,7 +1697,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1741,7 +1741,7 @@
           {
             "type": "decrement",
             "value": 40,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1770,7 +1770,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1814,7 +1814,7 @@
           {
             "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1871,7 +1871,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 190
           }
         ],
@@ -2052,7 +2052,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ],
@@ -2094,7 +2094,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ]
@@ -2135,7 +2135,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 240
           }
         ],
@@ -2246,7 +2246,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ],
@@ -2289,7 +2289,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ],
@@ -2331,7 +2331,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ]
@@ -2372,7 +2372,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 250
           }
         ],
@@ -2510,7 +2510,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -2552,7 +2552,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ],
@@ -2594,7 +2594,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ]
@@ -2635,7 +2635,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 140
           }
         ],
@@ -2719,7 +2719,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ],
@@ -2771,7 +2771,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ]
@@ -2804,7 +2804,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -2824,7 +2824,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 240
           }
         ],
@@ -2976,7 +2976,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ]
@@ -3005,7 +3005,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 200
           }
         ],
@@ -3141,7 +3141,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -3170,7 +3170,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 170
           }
         ],
@@ -3287,7 +3287,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -3316,7 +3316,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 160
           }
         ],
@@ -3460,7 +3460,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -3489,7 +3489,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 160
           }
         ],
@@ -3625,7 +3625,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -3654,7 +3654,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 160
           }
         ],
@@ -3790,7 +3790,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -3819,7 +3819,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 150
           }
         ],
@@ -3955,7 +3955,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -3984,7 +3984,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 190
           }
         ],
@@ -4136,7 +4136,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4151,7 +4151,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ]
@@ -4166,7 +4166,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ]
@@ -4199,7 +4199,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ],
@@ -4243,6 +4243,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "PHASE 0.1 ADEPTUS CUSTODES. All 12 native datasheets are fixed one-model selections. The three Shield-Captains are counted Rare Leaders, cannot attach, and share one explicit army-wide SHIELD-CAPTAIN max-1 restriction. Redundant individual Rare max constraints are omitted so New Recruit shows the mutual-exclusion counter plus Leader-cap counter only. Left Hand of the Emperor is an optional unchecked Configuration placeholder for a future Sisters of Silence reusable library.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nAll 12 native Adeptus Custodes datasheets now expose their simple loadouts and paid wargear. Arae-Shrike and other ability-only paid options include their player-facing rules. Left Hand of the Emperor remains a Sisters of Silence placeholder. All native non-Rare Other units use the soft 1/2/3 Additional Copy Cost system.\n\nCONSTRUCTIVE ERROR MIGRATION\nAdeptus Custodes now use Game System revision 11. Additional Copy Costs uses the current Configuration safeguard, and the shared SHIELD-CAPTAIN army limit uses constructive player-facing validation. The three Shield-Captains remain Rare, count toward Leader Capacity, cannot attach, and deliberately do not receive redundant individual Rare limits. Left Hand of the Emperor remains an untouched Phase 0.1 Sisters of Silence placeholder. Existing loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged."
+    "comment": "PHASE 0.1 ADEPTUS CUSTODES. All 12 native datasheets are fixed one-model selections. The three Shield-Captains are counted Rare Leaders, cannot attach, and share one explicit army-wide SHIELD-CAPTAIN max-1 restriction. Redundant individual Rare max constraints are omitted so New Recruit shows the mutual-exclusion counter plus Leader-cap counter only. Left Hand of the Emperor is an optional unchecked Configuration placeholder for a future Sisters of Silence reusable library.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nAll 12 native Adeptus Custodes datasheets now expose their simple loadouts and paid wargear. Arae-Shrike and other ability-only paid options include their player-facing rules. Left Hand of the Emperor remains a Sisters of Silence placeholder. All native non-Rare Other units use the soft 1/2/3 Additional Copy Cost system.\n\nCONSTRUCTIVE ERROR MIGRATION\nAdeptus Custodes now use Game System revision 11. Additional Copy Costs uses the current Configuration safeguard, and the shared SHIELD-CAPTAIN army limit uses constructive player-facing validation. The three Shield-Captains remain Rare, count toward Leader Capacity, cannot attach, and deliberately do not receive redundant individual Rare limits. Left Hand of the Emperor remains an untouched Phase 0.1 Sisters of Silence placeholder. Existing loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, shared SHIELD-CAPTAIN limit logic, Left Hand of the Emperor placeholder, categories, or Additional Copy Costs arithmetic were otherwise changed."
   }
 }

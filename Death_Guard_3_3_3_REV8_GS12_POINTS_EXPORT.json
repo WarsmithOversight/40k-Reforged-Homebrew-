@@ -4,8 +4,8 @@
     "id": "7d72-e3cf-effb-2772",
     "name": "Death Guard 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 11,
-    "revision": 7,
+    "gameSystemRevision": 12,
+    "revision": 8,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -78,7 +78,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 0
           }
         ],
@@ -91,7 +91,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -135,7 +135,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -164,7 +164,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -180,79 +180,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "55c6-3680-0b30-2265",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Plague Marine Infestors"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "55c6-3680-0b30-2265",
-                "childName": "Plague Marine Infestors",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "55c6-3680-0b30-2265",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Plague Marine Infestors"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "55c6-3680-0b30-2265",
@@ -280,8 +207,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "55c6-3680-0b30-2265",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Plague Marine Infestors"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "55c6-3680-0b30-2265",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Plague Marine Infestors"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "55c6-3680-0b30-2265",
+                "childName": "Plague Marine Infestors",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -310,7 +310,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -354,7 +354,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -383,7 +383,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -399,79 +399,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "9947-7f89-613e-920f",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Blightlord Terminators"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "9947-7f89-613e-920f",
-                "childName": "Blightlord Terminators",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "9947-7f89-613e-920f",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Blightlord Terminators"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "9947-7f89-613e-920f",
@@ -499,8 +426,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9947-7f89-613e-920f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Blightlord Terminators"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9947-7f89-613e-920f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Blightlord Terminators"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "9947-7f89-613e-920f",
+                "childName": "Blightlord Terminators",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -529,7 +529,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -573,7 +573,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -602,7 +602,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -618,79 +618,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "73b6-1878-793e-4c10",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Deathshroud Terminators"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "73b6-1878-793e-4c10",
-                "childName": "Deathshroud Terminators",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "73b6-1878-793e-4c10",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Deathshroud Terminators"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "73b6-1878-793e-4c10",
@@ -718,8 +645,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "73b6-1878-793e-4c10",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Deathshroud Terminators"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "73b6-1878-793e-4c10",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Deathshroud Terminators"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "73b6-1878-793e-4c10",
+                "childName": "Deathshroud Terminators",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -748,7 +748,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -792,7 +792,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -821,7 +821,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -837,79 +837,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "5ad3-7465-47fc-a20d",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Myphitic Blight-Hauler"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "5ad3-7465-47fc-a20d",
-                "childName": "Myphitic Blight-Hauler",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "5ad3-7465-47fc-a20d",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Myphitic Blight-Hauler"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "5ad3-7465-47fc-a20d",
@@ -937,8 +864,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "5ad3-7465-47fc-a20d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Myphitic Blight-Hauler"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "5ad3-7465-47fc-a20d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Myphitic Blight-Hauler"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "5ad3-7465-47fc-a20d",
+                "childName": "Myphitic Blight-Hauler",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -967,7 +967,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1011,7 +1011,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1040,7 +1040,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1084,7 +1084,7 @@
           {
             "type": "decrement",
             "value": 40,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1113,7 +1113,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1157,7 +1157,7 @@
           {
             "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1186,7 +1186,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1230,7 +1230,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1259,7 +1259,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1303,7 +1303,7 @@
           {
             "type": "decrement",
             "value": 40,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1332,7 +1332,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1376,7 +1376,7 @@
           {
             "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1433,7 +1433,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 140
           }
         ],
@@ -1559,7 +1559,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 140
           }
         ],
@@ -1714,7 +1714,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 140
           }
         ],
@@ -1971,7 +1971,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 70
           }
         ],
@@ -2220,7 +2220,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 20
                       }
                     ],
@@ -2300,7 +2300,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 70
           }
         ],
@@ -2471,7 +2471,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -2530,7 +2530,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 40
           }
         ],
@@ -2718,7 +2718,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 40
           }
         ],
@@ -2926,7 +2926,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -2985,7 +2985,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 30
           }
         ],
@@ -3173,7 +3173,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 70
           }
         ],
@@ -3361,7 +3361,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 40
           }
         ],
@@ -3549,7 +3549,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 100
           }
         ],
@@ -3690,7 +3690,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ],
@@ -3775,7 +3775,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ],
@@ -3923,7 +3923,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ],
@@ -3966,7 +3966,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4007,7 +4007,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 150
           }
         ],
@@ -4246,7 +4246,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ],
@@ -4487,7 +4487,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ],
@@ -4530,7 +4530,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4571,7 +4571,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 80
           }
         ],
@@ -4647,7 +4647,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 110
           }
         ],
@@ -4752,7 +4752,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ],
@@ -4837,7 +4837,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ],
@@ -4985,7 +4985,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ],
@@ -5028,7 +5028,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -5058,7 +5058,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 150
           }
         ],
@@ -5691,7 +5691,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 160
           }
         ],
@@ -5820,7 +5820,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 120
           }
         ],
@@ -5985,7 +5985,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 120
           }
         ],
@@ -6092,7 +6092,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 210
           }
         ],
@@ -6347,6 +6347,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "PHASE 0.1 DEATH GUARD. All 19 source datasheets are selectable and fixed-size. All 10 printed Leaders consume Leader capacity. Great Traitors’ Arsenal is an optional, unchecked Configuration placeholder until the reusable Chaos Space Marines library is wired. Death Guard Chaos Lord resolves only native Plague Marine attachment targets in this file; external CSM hosts and RAPTORS remain explicit placeholders rather than invented local units.\n\nCOMPLETE LOADOUT UI PASS: all native Death Guard units now expose fixed equipment, loadout choices, special weapon choices, and paid wargear. Great Traitors’ Arsenal remains a Phase 0.1 placeholder. Composition / copy-cap mechanics are unchanged in this pass.\n\nADDITIONAL COPY COSTS\nAll native non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Affected units link to the canonical Game System unit-reminder rule.\n\nDUAL BUBOTIC WEAPONS FIX\nFor Septic Plague Marines, Inexorable Plague Marines, and Plague Marine Infestors, Dual Bubotic Weapons is now a +10 inline loadout replacement on each eligible non-Champion model. The previous unit-level two-slot Paid Wargear representation was removed. Max 2 per squad is enforced structurally.\n\nDUAL BUBOTIC ELIGIBILITY FIX\nSeptic Plague Marines: Dual Bubotic Weapons only on models 1-2. Inexorable Plague Marines: only on model 2. Plague Marine Infestors: only on models 1-2. Inexorable special-weapon models 3-4 may duplicate the same special weapon; the previous different-weapon restriction is not enforced.\n\nPLAGUE MARINE SPECIALIST CLEANUP\nSeptic model 3, Inexorable models 3-4, and Infestor model 3 are now presented purely as dedicated special-weapon models. Default Plague Marine loadouts are intentionally omitted.\n\nCONSTRUCTIVE ERROR MIGRATION\nDeath Guard now use Game System revision 11. Additional Copy Costs, mandatory native Leader attachments, Plague Marine host Leader limits, and Rare limits use constructive player-facing validation. Death Guard Chaos Lord missing-attachment validation is suppressed while Glorious Jump Pack is included, and the temporary Jump Pack placeholder error now gives a direct player action. Great Traitors’ Arsenal itself remains an optional Phase 0.1 placeholder. Existing loadouts, specialist presentation, points, Leader Capacity semantics, and Additional Copy Costs arithmetic are otherwise unchanged."
+    "comment": "PHASE 0.1 DEATH GUARD. All 19 source datasheets are selectable and fixed-size. All 10 printed Leaders consume Leader capacity. Great Traitors’ Arsenal is an optional, unchecked Configuration placeholder until the reusable Chaos Space Marines library is wired. Death Guard Chaos Lord resolves only native Plague Marine attachment targets in this file; external CSM hosts and RAPTORS remain explicit placeholders rather than invented local units.\n\nCOMPLETE LOADOUT UI PASS: all native Death Guard units now expose fixed equipment, loadout choices, special weapon choices, and paid wargear. Great Traitors’ Arsenal remains a Phase 0.1 placeholder. Composition / copy-cap mechanics are unchanged in this pass.\n\nADDITIONAL COPY COSTS\nAll native non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Affected units link to the canonical Game System unit-reminder rule.\n\nDUAL BUBOTIC WEAPONS FIX\nFor Septic Plague Marines, Inexorable Plague Marines, and Plague Marine Infestors, Dual Bubotic Weapons is now a +10 inline loadout replacement on each eligible non-Champion model. The previous unit-level two-slot Paid Wargear representation was removed. Max 2 per squad is enforced structurally.\n\nDUAL BUBOTIC ELIGIBILITY FIX\nSeptic Plague Marines: Dual Bubotic Weapons only on models 1-2. Inexorable Plague Marines: only on model 2. Plague Marine Infestors: only on models 1-2. Inexorable special-weapon models 3-4 may duplicate the same special weapon; the previous different-weapon restriction is not enforced.\n\nPLAGUE MARINE SPECIALIST CLEANUP\nSeptic model 3, Inexorable models 3-4, and Infestor model 3 are now presented purely as dedicated special-weapon models. Default Plague Marine loadouts are intentionally omitted.\n\nCONSTRUCTIVE ERROR MIGRATION\nDeath Guard now use Game System revision 11. Additional Copy Costs, mandatory native Leader attachments, Plague Marine host Leader limits, and Rare limits use constructive player-facing validation. Death Guard Chaos Lord missing-attachment validation is suppressed while Glorious Jump Pack is included, and the temporary Jump Pack placeholder error now gives a direct player action. Great Traitors’ Arsenal itself remains an optional Phase 0.1 placeholder. Existing loadouts, specialist presentation, points, Leader Capacity semantics, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV8 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader attachment behavior, Great Traitors’ Arsenal placeholder, categories, or Additional Copy Costs arithmetic were otherwise changed."
   }
 }

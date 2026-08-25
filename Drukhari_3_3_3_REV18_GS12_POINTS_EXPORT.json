@@ -4,8 +4,8 @@
     "id": "6381-b714-cd35-79d3",
     "name": "Drukhari 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 11,
-    "revision": 17,
+    "gameSystemRevision": 12,
+    "revision": 18,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -121,7 +121,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 0
           }
         ],
@@ -134,7 +134,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -178,7 +178,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -207,7 +207,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -223,79 +223,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "6f8c-3b56-fc21-6300",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Raider"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "6f8c-3b56-fc21-6300",
-                "childName": "Raider",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "6f8c-3b56-fc21-6300",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Raider"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "6f8c-3b56-fc21-6300",
@@ -323,8 +250,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6f8c-3b56-fc21-6300",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Raider"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6f8c-3b56-fc21-6300",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Raider"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "6f8c-3b56-fc21-6300",
+                "childName": "Raider",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -353,7 +353,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -397,7 +397,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -426,7 +426,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -442,79 +442,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "a8d6-1c0b-fac4-b885",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Venom"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "a8d6-1c0b-fac4-b885",
-                "childName": "Venom",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "a8d6-1c0b-fac4-b885",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Venom"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "a8d6-1c0b-fac4-b885",
@@ -542,8 +469,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a8d6-1c0b-fac4-b885",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Venom"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a8d6-1c0b-fac4-b885",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Venom"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "a8d6-1c0b-fac4-b885",
+                "childName": "Venom",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -572,7 +572,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -616,7 +616,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -645,7 +645,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -661,79 +661,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0825-3867-9a11-2c65",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Incubi"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "0825-3867-9a11-2c65",
-                "childName": "Incubi",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0825-3867-9a11-2c65",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Incubi"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "0825-3867-9a11-2c65",
@@ -761,8 +688,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0825-3867-9a11-2c65",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Incubi"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0825-3867-9a11-2c65",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Incubi"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0825-3867-9a11-2c65",
+                "childName": "Incubi",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -791,7 +791,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -835,7 +835,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -864,7 +864,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -880,79 +880,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "e754-db52-12fb-9695",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Ur-Ghuls"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "e754-db52-12fb-9695",
-                "childName": "Ur-Ghuls",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "e754-db52-12fb-9695",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Ur-Ghuls"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "e754-db52-12fb-9695",
@@ -980,8 +907,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e754-db52-12fb-9695",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Ur-Ghuls"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e754-db52-12fb-9695",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Ur-Ghuls"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "e754-db52-12fb-9695",
+                "childName": "Ur-Ghuls",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1010,7 +1010,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1054,7 +1054,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1083,7 +1083,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1099,79 +1099,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "2127-d9f5-87ff-7318",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Mandrakes"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "2127-d9f5-87ff-7318",
-                "childName": "Mandrakes",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "2127-d9f5-87ff-7318",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Mandrakes"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "2127-d9f5-87ff-7318",
@@ -1199,8 +1126,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2127-d9f5-87ff-7318",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Mandrakes"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2127-d9f5-87ff-7318",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Mandrakes"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "2127-d9f5-87ff-7318",
+                "childName": "Mandrakes",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1229,7 +1229,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1273,7 +1273,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1302,7 +1302,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1318,79 +1318,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "7c81-fba5-6a5c-eccf",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Grotesques"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "7c81-fba5-6a5c-eccf",
-                "childName": "Grotesques",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "7c81-fba5-6a5c-eccf",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Grotesques"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "7c81-fba5-6a5c-eccf",
@@ -1418,8 +1345,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7c81-fba5-6a5c-eccf",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Grotesques"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7c81-fba5-6a5c-eccf",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Grotesques"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "7c81-fba5-6a5c-eccf",
+                "childName": "Grotesques",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1448,7 +1448,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1492,7 +1492,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1521,7 +1521,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1537,79 +1537,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "aaf7-d727-0033-7fc2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Scourges"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "aaf7-d727-0033-7fc2",
-                "childName": "Scourges",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "aaf7-d727-0033-7fc2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Scourges"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "aaf7-d727-0033-7fc2",
@@ -1637,8 +1564,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "aaf7-d727-0033-7fc2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Scourges"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "aaf7-d727-0033-7fc2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Scourges"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "aaf7-d727-0033-7fc2",
+                "childName": "Scourges",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1667,7 +1667,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1711,7 +1711,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1740,7 +1740,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1756,79 +1756,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "f865-4429-7c74-03c2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Reavers"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "f865-4429-7c74-03c2",
-                "childName": "Reavers",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "f865-4429-7c74-03c2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Reavers"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "f865-4429-7c74-03c2",
@@ -1856,8 +1783,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f865-4429-7c74-03c2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Reavers"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f865-4429-7c74-03c2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Reavers"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "f865-4429-7c74-03c2",
+                "childName": "Reavers",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1886,7 +1886,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1930,7 +1930,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1959,7 +1959,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1975,79 +1975,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "de00-87cb-3d8d-0444",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Clawed Fiends"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "de00-87cb-3d8d-0444",
-                "childName": "Clawed Fiends",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "de00-87cb-3d8d-0444",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Clawed Fiends"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "de00-87cb-3d8d-0444",
@@ -2075,8 +2002,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "de00-87cb-3d8d-0444",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Clawed Fiends"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "de00-87cb-3d8d-0444",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Clawed Fiends"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "de00-87cb-3d8d-0444",
+                "childName": "Clawed Fiends",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2105,7 +2105,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2149,7 +2149,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2178,7 +2178,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2194,79 +2194,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "27f7-e051-5c9a-f7f6",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Razorwing Flock"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "27f7-e051-5c9a-f7f6",
-                "childName": "Razorwing Flock",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "27f7-e051-5c9a-f7f6",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Razorwing Flock"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "27f7-e051-5c9a-f7f6",
@@ -2294,8 +2221,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "27f7-e051-5c9a-f7f6",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Razorwing Flock"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "27f7-e051-5c9a-f7f6",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Razorwing Flock"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "27f7-e051-5c9a-f7f6",
+                "childName": "Razorwing Flock",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2324,7 +2324,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2368,7 +2368,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2397,7 +2397,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2413,79 +2413,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "eb7d-d4ed-21d9-68cb",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Ravager"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "eb7d-d4ed-21d9-68cb",
-                "childName": "Ravager",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "eb7d-d4ed-21d9-68cb",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Ravager"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "eb7d-d4ed-21d9-68cb",
@@ -2513,8 +2440,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "eb7d-d4ed-21d9-68cb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Ravager"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "eb7d-d4ed-21d9-68cb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Ravager"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "eb7d-d4ed-21d9-68cb",
+                "childName": "Ravager",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2543,7 +2543,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2587,7 +2587,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2616,7 +2616,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2632,79 +2632,6 @@
               {
                 "type": "atLeast",
                 "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "1411-5a85-b7ed-f235",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Hellions"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "1411-5a85-b7ed-f235",
-                "childName": "Hellions",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 40,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d0e1-6785-e168-b595",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1200 Points (Standard)"
-              },
-              {
-                "type": "atLeast",
-                "value": 3,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "1411-5a85-b7ed-f235",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Hellions"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "121e-e068-ad7a-3063",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
                 "field": "selections",
                 "scope": "roster",
                 "childId": "1411-5a85-b7ed-f235",
@@ -2732,8 +2659,81 @@
           },
           {
             "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1411-5a85-b7ed-f235",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Hellions"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1411-5a85-b7ed-f235",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Hellions"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "1411-5a85-b7ed-f235",
+                "childName": "Hellions",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2762,7 +2762,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2806,7 +2806,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2835,7 +2835,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2879,7 +2879,7 @@
           {
             "type": "decrement",
             "value": 40,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2908,7 +2908,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2952,7 +2952,7 @@
           {
             "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2981,7 +2981,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -3025,7 +3025,7 @@
           {
             "type": "decrement",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -3054,7 +3054,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -3098,7 +3098,7 @@
           {
             "type": "decrement",
             "value": 40,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -3127,7 +3127,7 @@
           {
             "type": "increment",
             "value": 20,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -3171,7 +3171,7 @@
           {
             "type": "decrement",
             "value": 60,
-            "field": "121e-e068-ad7a-3063",
+            "field": "51b2-306e-1021-d207",
             "conditions": [
               {
                 "type": "atLeast",
@@ -3228,7 +3228,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 80
           }
         ],
@@ -3433,7 +3433,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 70
           }
         ],
@@ -3659,7 +3659,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 50
           }
         ],
@@ -3839,7 +3839,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 40
           }
         ],
@@ -3967,7 +3967,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 140
           }
         ],
@@ -4349,7 +4349,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4364,7 +4364,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4379,7 +4379,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4413,7 +4413,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4428,7 +4428,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4443,7 +4443,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4502,7 +4502,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 120
           }
         ],
@@ -4783,7 +4783,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4798,7 +4798,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4813,7 +4813,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4847,7 +4847,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4862,7 +4862,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4877,7 +4877,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -4935,7 +4935,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 120
           }
         ],
@@ -5348,7 +5348,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 100
           }
         ],
@@ -5661,7 +5661,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -5676,7 +5676,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -5691,7 +5691,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -5725,7 +5725,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -5740,7 +5740,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -5755,7 +5755,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -5813,7 +5813,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 100
           }
         ],
@@ -6094,7 +6094,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -6109,7 +6109,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -6124,7 +6124,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -6158,7 +6158,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -6173,7 +6173,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -6188,7 +6188,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -6246,7 +6246,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 80
           }
         ],
@@ -6561,7 +6561,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 100
           }
         ],
@@ -6697,7 +6697,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 90
           }
         ],
@@ -6870,7 +6870,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 80
           }
         ],
@@ -7049,7 +7049,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 90
           }
         ],
@@ -7140,7 +7140,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 90
           }
         ],
@@ -7268,7 +7268,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 90
           }
         ],
@@ -7619,7 +7619,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 150
           }
         ],
@@ -7892,7 +7892,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -7907,7 +7907,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -7922,7 +7922,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -7937,7 +7937,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -7952,7 +7952,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -7967,7 +7967,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -8027,7 +8027,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -8042,7 +8042,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -8057,7 +8057,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -8072,7 +8072,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -8087,7 +8087,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -8102,7 +8102,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -8162,7 +8162,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -8177,7 +8177,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -8192,7 +8192,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -8207,7 +8207,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -8222,7 +8222,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -8237,7 +8237,7 @@
                         "costs": [
                           {
                             "name": "Points",
-                            "typeId": "121e-e068-ad7a-3063",
+                            "typeId": "51b2-306e-1021-d207",
                             "value": 10
                           }
                         ]
@@ -8282,7 +8282,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -8297,7 +8297,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -8312,7 +8312,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -8346,7 +8346,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -8361,7 +8361,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -8376,7 +8376,7 @@
                     "costs": [
                       {
                         "name": "Points",
-                        "typeId": "121e-e068-ad7a-3063",
+                        "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
                     ]
@@ -8406,7 +8406,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 120
           }
         ],
@@ -8805,7 +8805,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 90
           }
         ],
@@ -8896,7 +8896,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 80
           }
         ],
@@ -8987,7 +8987,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 110
           }
         ],
@@ -9123,7 +9123,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 200
           }
         ],
@@ -9264,7 +9264,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 100
           }
         ],
@@ -9544,7 +9544,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 100
           }
         ],
@@ -9680,7 +9680,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 120
           }
         ],
@@ -9905,7 +9905,7 @@
         "costs": [
           {
             "name": "Points",
-            "typeId": "121e-e068-ad7a-3063",
+            "typeId": "51b2-306e-1021-d207",
             "value": 20
           }
         ],
@@ -10652,6 +10652,6 @@
         "comment": "ROAMING PERFORMERS ERROR UX: while Roaming Performers exists without Included, this choice is hidden only if this Harlequin unit is not already in the army. An already-included unit stays visible and reports a constructive Not Included error. Missing Roaming Performers and excess Roaming Leader/Troupe allowances are also validated locally so the affected Harlequin unit carries the error."
       }
     ],
-    "comment": "\n\nADDITIONAL COPY COSTS\nNative non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Rare Other units retain their existing hard cap.\n\nSPECIALIST / DEFAULT-EQUIPMENT CLEANUP\nNamed champions consume model slot 1; numbering therefore continues from model 2. Kabalite Trueborn 5 and Kabalite Warriors 9-10 are treated as dedicated special-weapon models and no longer advertise Splinter Rifle. Wrack 9-10 and Haemoxyte 5 no longer expose a None choice for their special weapon. Acothyst Stinger Pistols are represented as fixed default equipment.\n\nCONSTRUCTIVE ERROR UX\nMigrated normal Leader missing-attachment errors, host attached-Leader limits, Rare copy limits, and Additional Copy Costs configuration protection to player-facing custom errors. Targets Game System revision 10 for shared Leader Capacity plus Configuration-level missing Game Size / Additional Copy Costs validation. Lhamaean remains a nested Additional Leader that may coexist with one normally attached Leader, but now explicitly carries Counts Toward Leader Maximum so nested copies count toward Leader Capacity.\n\nROAMING PERFORMERS CONSTRUCTIVE VALIDATION\nThe five Drukhari-local Harlequin entryLinks remain hidden only while the Roaming Performers Configuration entry exists and Included is not selected. If Roaming Performers is deleted while a Harlequin unit is selected, the selected unit remains visible and reports a constructive error directing the player to restore Roaming Performers and select Included. This logic is Drukhari-local; the shared Harlequins library remains unaware of Roaming Performers."
+    "comment": "\n\nADDITIONAL COPY COSTS\nNative non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Rare Other units retain their existing hard cap.\n\nSPECIALIST / DEFAULT-EQUIPMENT CLEANUP\nNamed champions consume model slot 1; numbering therefore continues from model 2. Kabalite Trueborn 5 and Kabalite Warriors 9-10 are treated as dedicated special-weapon models and no longer advertise Splinter Rifle. Wrack 9-10 and Haemoxyte 5 no longer expose a None choice for their special weapon. Acothyst Stinger Pistols are represented as fixed default equipment.\n\nCONSTRUCTIVE ERROR UX\nMigrated normal Leader missing-attachment errors, host attached-Leader limits, Rare copy limits, and Additional Copy Costs configuration protection to player-facing custom errors. Targets Game System revision 10 for shared Leader Capacity plus Configuration-level missing Game Size / Additional Copy Costs validation. Lhamaean remains a nested Additional Leader that may coexist with one normally attached Leader, but now explicitly carries Counts Toward Leader Maximum so nested copies count toward Leader Capacity.\n\nROAMING PERFORMERS CONSTRUCTIVE VALIDATION\nThe five Drukhari-local Harlequin entryLinks remain hidden only while the Roaming Performers Configuration entry exists and Included is not selected. If Roaming Performers is deleted while a Harlequin unit is selected, the selected unit remains visible and reports a constructive error directing the player to restore Roaming Performers and select Included. This logic is Drukhari-local; the shared Harlequins library remains unaware of Roaming Performers.\n\nREV18 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Roaming Performers logic, Harlequin library links, categories, or Additional Copy Costs arithmetic were otherwise changed."
   }
 }
