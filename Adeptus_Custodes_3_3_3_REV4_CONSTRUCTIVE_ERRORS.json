@@ -4,8 +4,8 @@
     "id": "a774-9ea6-9b60-31af",
     "name": "Adeptus Custodes 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 6,
-    "revision": 3,
+    "gameSystemRevision": 11,
+    "revision": 4,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -58,6 +58,12 @@
             "id": "68c1-36db-117b-98c0",
             "primary": true,
             "name": "Configuration"
+          },
+          {
+            "targetId": "54e9-a5b4-e275-00c5",
+            "id": "fd35-19a5-84fa-a86e",
+            "primary": false,
+            "name": "Required Additional Copy Costs Configuration"
           }
         ],
         "infoLinks": [
@@ -67,26 +73,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "80a9-6b43-631f-5a4f"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "min",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "7898-ae77-68eb-95f4",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "753e-49e2-0c6a-a6a2",
-            "includeChildSelections": true
           }
         ],
         "costs": [
@@ -1853,9 +1839,28 @@
                 "childName": "Venerable Land Raider"
               }
             ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Additional Copy Costs is automatically managed by the listbuilder and should appear only once. Remove any extra Additional Copy Costs entries.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a1e1-3065-146b-b1c7",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Additional Copy Costs"
+              }
+            ]
           }
         ],
-        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of every native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance."
+        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of every native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance.\nCONFIGURATION VALIDATION: Game System revision 11 handles a missing Additional Copy Costs entry through Army > Configuration. This entry carries the hidden required-configuration category and self-reports duplicates. Existing copy-cost arithmetic is unchanged."
       },
       {
         "type": "unit",
@@ -2098,6 +2103,27 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Shield-Captain, Allarus Armour Shield-Captain, or Dawneagle Jetbike Shield-Captain. Remove any additional Shield-Captain units until only one remains.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "c6bf-210a-4b2b-b2c7",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "SHIELD-CAPTAIN Limit"
+              }
+            ]
+          }
         ]
       },
       {
@@ -2311,6 +2337,27 @@
                     ]
                   }
                 ]
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Shield-Captain, Allarus Armour Shield-Captain, or Dawneagle Jetbike Shield-Captain. Remove any additional Shield-Captain units until only one remains.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "c6bf-210a-4b2b-b2c7",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "SHIELD-CAPTAIN Limit"
               }
             ]
           }
@@ -2553,6 +2600,27 @@
                     ]
                   }
                 ]
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Shield-Captain, Allarus Armour Shield-Captain, or Dawneagle Jetbike Shield-Captain. Remove any additional Shield-Captain units until only one remains.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "c6bf-210a-4b2b-b2c7",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "SHIELD-CAPTAIN Limit"
               }
             ]
           }
@@ -4170,21 +4238,11 @@
       {
         "name": "SHIELD-CAPTAIN Limit",
         "id": "c6bf-210a-4b2b-b2c7",
-        "hidden": true,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "parent",
-            "shared": true,
-            "id": "5cfc-7e48-7dd0-b922"
-          }
-        ]
+        "hidden": true
       }
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "PHASE 0.1 ADEPTUS CUSTODES. All 12 native datasheets are fixed one-model selections. The three Shield-Captains are counted Rare Leaders, cannot attach, and share one explicit army-wide SHIELD-CAPTAIN max-1 restriction. Redundant individual Rare max constraints are omitted so New Recruit shows the mutual-exclusion counter plus Leader-cap counter only. Left Hand of the Emperor is an optional unchecked Configuration placeholder for a future Sisters of Silence reusable library.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nAll 12 native Adeptus Custodes datasheets now expose their simple loadouts and paid wargear. Arae-Shrike and other ability-only paid options include their player-facing rules. Left Hand of the Emperor remains a Sisters of Silence placeholder. All native non-Rare Other units use the soft 1/2/3 Additional Copy Cost system."
+    "comment": "PHASE 0.1 ADEPTUS CUSTODES. All 12 native datasheets are fixed one-model selections. The three Shield-Captains are counted Rare Leaders, cannot attach, and share one explicit army-wide SHIELD-CAPTAIN max-1 restriction. Redundant individual Rare max constraints are omitted so New Recruit shows the mutual-exclusion counter plus Leader-cap counter only. Left Hand of the Emperor is an optional unchecked Configuration placeholder for a future Sisters of Silence reusable library.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nAll 12 native Adeptus Custodes datasheets now expose their simple loadouts and paid wargear. Arae-Shrike and other ability-only paid options include their player-facing rules. Left Hand of the Emperor remains a Sisters of Silence placeholder. All native non-Rare Other units use the soft 1/2/3 Additional Copy Cost system.\n\nCONSTRUCTIVE ERROR MIGRATION\nAdeptus Custodes now use Game System revision 11. Additional Copy Costs uses the current Configuration safeguard, and the shared SHIELD-CAPTAIN army limit uses constructive player-facing validation. The three Shield-Captains remain Rare, count toward Leader Capacity, cannot attach, and deliberately do not receive redundant individual Rare limits. Left Hand of the Emperor remains an untouched Phase 0.1 Sisters of Silence placeholder. Existing loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged."
   }
 }

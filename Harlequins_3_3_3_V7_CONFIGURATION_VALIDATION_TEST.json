@@ -4,8 +4,8 @@
     "id": "e85f-5832-af6e-845f",
     "name": "Harlequins 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 6,
-    "revision": 5,
+    "gameSystemRevision": 10,
+    "revision": 7,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -22,6 +22,12 @@
             "id": "fecc-a36c-a33c-037f",
             "primary": true,
             "name": "Configuration"
+          },
+          {
+            "targetId": "54e9-a5b4-e275-00c5",
+            "id": "8788-2058-2eda-deca",
+            "primary": false,
+            "name": "Required Additional Copy Costs Configuration"
           }
         ],
         "infoLinks": [
@@ -31,26 +37,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "80a9-6b43-631f-5a4f"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "min",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "c08a-a9ad-b9bf-1d69",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "95e9-0433-a08d-84b3",
-            "includeChildSelections": true
           }
         ],
         "costs": [
@@ -722,9 +708,28 @@
                 "childName": "Starweaver"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "Additional Copy Costs is automatically managed by the listbuilder and should appear only once. Remove any extra Additional Copy Costs entries.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "24a4-8bac-d6d6-fe96",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Additional Copy Costs"
+              }
+            ]
           }
         ],
-        "comment": "SOFT OTHER COPY COSTS. Permanent, required accounting entry. Aggregates +20 Points for every Skyweaver, Voidweaver, or Starweaver copy beyond the selected Game Size's 1/2/3 normal allowance. The player-facing rule is linked from the Game System."
+        "comment": "SOFT OTHER COPY COSTS. Permanent, required accounting entry. Aggregates +20 Points for every Skyweaver, Voidweaver, or Starweaver copy beyond the selected Game Size's 1/2/3 normal allowance. The player-facing rule is linked from the Game System.\nERROR TEMPLATE: automatic_configuration_duplicate. The roster max-1 constraint is intentionally omitted so New Recruit does not emit 'selections too many of Additional Copy Costs'. A custom error explains that the entry is automatic and how to repair it. The min-1 constraint remains for now so deleting the accounting entry cannot silently remove copy-cost surcharges.\nCONFIGURATION VALIDATION: this entry carries its own duplicate custom error. Its former stock roster min constraint is removed; missing-entry validation is owned by Army > Configuration in Game System revision 10 via the hidden Required Additional Copy Costs Configuration category."
       }
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
@@ -910,6 +915,6 @@
         ]
       }
     ],
-    "comment": "PLAYABLE HARLEQUINS ADAPTER\n\nHarlequin unit trees are supplied by the linked Harlequins library. This catalogue owns only playable-faction presentation: which shared units appear and which primary category each uses. The library link does not import root entries automatically.\n\nADDITIONAL COPY COSTS\nNon-Rare Other units use the soft 1/2/3 copy allowance. Skyweaver, Voidweaver, and Starweaver contribute automatic +20 Point surcharges per excess copy to the required Additional Copy Costs Configuration entry."
+    "comment": "PLAYABLE HARLEQUINS ADAPTER\n\nHarlequin unit trees are supplied by the linked Harlequins library. This catalogue owns only playable-faction presentation: which shared units appear and which primary category each uses. The library link does not import root entries automatically.\n\nADDITIONAL COPY COSTS\nNon-Rare Other units use the soft 1/2/3 copy allowance. Skyweaver, Voidweaver, and Starweaver contribute automatic +20 Point surcharges per excess copy to the required Additional Copy Costs Configuration entry.\n\nERROR UX PASS V3\nAdditional Copy Costs duplicate validation now uses the standardized automatic_configuration_duplicate custom error. The catalogue now targets Game System revision 9 for the shared constructive Leader Capacity error and unconstrained informational Disclaimer."
   }
 }

@@ -4,8 +4,8 @@
     "id": "2153-1bee-cbe2-cea0",
     "name": "World Eaters 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 8,
-    "revision": 2,
+    "gameSystemRevision": 11,
+    "revision": 3,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -58,6 +58,12 @@
             "id": "1bcc-c567-7561-af3f",
             "primary": true,
             "name": "Configuration"
+          },
+          {
+            "targetId": "54e9-a5b4-e275-00c5",
+            "id": "ef64-5ece-4c67-4b75",
+            "primary": false,
+            "name": "Required Additional Copy Costs Configuration"
           }
         ],
         "infoLinks": [
@@ -67,26 +73,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "80a9-6b43-631f-5a4f"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "min",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "d1c6-ee6a-a3a1-a058",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "0956-4d6e-77c9-4282",
-            "includeChildSelections": true
           }
         ],
         "costs": [
@@ -539,9 +525,28 @@
                 "childName": "Eightbound"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "Additional Copy Costs is automatically managed by the listbuilder and should appear only once. Remove any extra Additional Copy Costs entries.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7604-30ab-4074-57e8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Additional Copy Costs"
+              }
+            ]
           }
         ],
-        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of each native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance."
+        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of each native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance.\nCONFIGURATION VALIDATION: this entry carries the hidden Required Additional Copy Costs Configuration category so Army > Configuration in Game System revision 11 can report when it is missing. Stock roster min/max constraints are omitted. A self-owned custom error reports duplicates."
       },
       {
         "type": "unit",
@@ -992,7 +997,7 @@
         "sortIndex": 3,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "4de8-8596-5da0-0d02",
@@ -1186,7 +1191,7 @@
                     "modifiers": [
                       {
                         "type": "add",
-                        "value": "ARSENAL PLACEHOLDER: Glorious Jump Pack requires RAPTORS. The Chaos Space Marine Arsenal library target is not yet linked in this Phase 0.1 file.",
+                        "value": "Glorious Jump Pack requires the World Eaters Chaos Lord to attach to Raptors, but Raptors are not yet available in this listbuilder. Remove Glorious Jump Pack.",
                         "field": "error"
                       }
                     ],
@@ -1207,7 +1212,39 @@
             "noindex": false
           }
         ],
-        "comment": "PHASE 0.1 ARSENAL PLACEHOLDER: the verbatim base attachment rule includes LEGIONAIRES, CULTISTS, and CHOSEN from the future Chaos Space Marine Arsenal library. Only KHORNE BERZERKERS is mechanically resolvable in this native-only file.\nLIGHTNING CLAWS SHORTHAND: Lightning Claw is available in both exclusive weapon lists. The Great Traitors’ Arsenal / RAPTORS placeholder for Glorious Jump Pack is preserved unchanged."
+        "comment": "PHASE 0.1 ARSENAL PLACEHOLDER: the verbatim base attachment rule includes LEGIONAIRES, CULTISTS, and CHOSEN from the future Chaos Space Marine Arsenal library. Only KHORNE BERZERKERS is mechanically resolvable in this native-only file.\nLIGHTNING CLAWS SHORTHAND: Lightning Claw is available in both exclusive weapon lists. The Great Traitors’ Arsenal / RAPTORS placeholder for Glorious Jump Pack is preserved unchanged.\nCONSTRUCTIVE ERROR UX: the base attachment warning names the full PDF host list but notes that only Khorne Berzerkers are currently available. The base missing-attachment warning is suppressed while Glorious Jump Pack is included because that upgrade instead owns the temporary Raptors-unavailable error.",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "World Eaters Chaos Lord is not attached to a unit. It must attach to Legionaires, Khorne Berzerkers, Cultists, or Chosen. In the current listbuilder, only Khorne Berzerkers are available. Add an eligible unit and select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "2333-3de7-5cb2-417d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "queryFromSelf": false,
+                "childName": "Glorious Jump Pack"
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -1249,20 +1286,9 @@
           }
         ],
         "sortIndex": 4,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "55da-0f6d-752a-d361",
-            "includeChildSelections": true
-          }
-        ],
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "9a64-f3d5-6a4d-30a7",
@@ -1386,6 +1412,45 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Butcher Surgeon is not attached to a unit. It must attach to Khorne Berzerkers. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Your army may include only one Butcher Surgeon because it is Rare. Remove the additional Butcher Surgeon unit(s).",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f4a7-1544-1d79-5c9b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Butcher Surgeon"
+              }
+            ]
+          }
         ]
       },
       {
@@ -1424,7 +1489,7 @@
         "sortIndex": 5,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "9d1c-4ded-c7a4-ca5e",
@@ -1541,6 +1606,26 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Sage of Slaughter is not attached to a unit. It must attach to Khorne Berzerkers. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -1579,7 +1664,7 @@
         "sortIndex": 6,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "73c2-6f65-9a6f-1e38",
@@ -1680,6 +1765,26 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Slaughterbound is not attached to a unit. It must attach to Eightbound. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -1728,18 +1833,6 @@
           }
         ],
         "sortIndex": 7,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "d3fc-55b4-cd43-defe",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "modifiers": [
           {
             "type": "set",
@@ -1755,6 +1848,24 @@
                 "shared": true,
                 "includeChildSelections": false,
                 "childName": "Butcher Surgeon"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Khorne Berzerkers has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
               }
             ]
           }
@@ -2584,18 +2695,6 @@
           }
         ],
         "sortIndex": 10,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "1f80-f5b4-1dd7-8ba2",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "comment": "VARIABLE UNIT SIZE: root represents Eightbound 1-2 at 100 Points. Eightbound 3 is optional +50. Heavy Chain Glaive +10 is listed on every model; selecting it on one model hides it from the other model lists, structurally enforcing the unit-wide maximum of one.",
         "selectionEntryGroups": [
           {
@@ -3117,6 +3216,26 @@
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Eightbound has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -3153,17 +3272,6 @@
           }
         ],
         "sortIndex": 11,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "7fcf-872a-1cfa-7855",
-            "includeChildSelections": true
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -3278,6 +3386,27 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Your army may include only one Khârne, the Betrayer because it is Rare. Remove the additional Khârne, the Betrayer unit(s).",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7e0e-a3a1-66c8-31f5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Khârne, the Betrayer"
+              }
+            ]
+          }
         ]
       }
     ],
@@ -3305,6 +3434,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "PHASE 0.1 WORLD EATERS. Great Traitors’ Arsenal is implemented as an opt-in Configuration selection, unchecked by default. The external Chaos Space Marine Arsenal library is intentionally NOT represented by an unresolved catalogueLink in this file. When that reusable library is generated, add a catalogueLink with importRootEntries=false, then add World Eaters-local entryLinks for Arsenal units whose hidden state is controlled by the Great Traitors’ Arsenal configuration selection. Imported units should retain their normal Leader/Troop/Other categories and list-building constraints.\nFresh Initiates is mechanically implemented for the current Khorne Berzerkers base Points cost. Future paid wargear/configuration descendants on that attached host must also be set to 0 under the same Butcher Surgeon association condition.\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nWorld Eaters now use Game System revision 8. Great Traitors’ Arsenal remains a placeholder. Chaos Lord Lightning Claws use the two-single-claw shorthand. Khorne Berzerkers and Jakhals use canonical specialist model identities. Red Butchers and Eightbound use optional third-model sizing. Eightbound Heavy Chain Glaive appears on every model and disappears from the others once selected. Fresh Initiates zeros both the Berzerker root cost and Icon of Khorne. All native non-Rare Other units use Additional Copy Costs."
+    "comment": "PHASE 0.1 WORLD EATERS. Great Traitors’ Arsenal is implemented as an opt-in Configuration selection, unchecked by default. The external Chaos Space Marine Arsenal library is intentionally NOT represented by an unresolved catalogueLink in this file. When that reusable library is generated, add a catalogueLink with importRootEntries=false, then add World Eaters-local entryLinks for Arsenal units whose hidden state is controlled by the Great Traitors’ Arsenal configuration selection. Imported units should retain their normal Leader/Troop/Other categories and list-building constraints.\nFresh Initiates is mechanically implemented for the current Khorne Berzerkers base Points cost. Future paid wargear/configuration descendants on that attached host must also be set to 0 under the same Butcher Surgeon association condition.\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nWorld Eaters now use Game System revision 11. Great Traitors’ Arsenal remains a placeholder. Chaos Lord Lightning Claws use the two-single-claw shorthand. Khorne Berzerkers and Jakhals use canonical specialist model identities. Red Butchers and Eightbound use optional third-model sizing. Eightbound Heavy Chain Glaive appears on every model and disappears from the others once selected. Fresh Initiates zeros both the Berzerker root cost and Icon of Khorne. All native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR UX PASS\nMandatory Leader attachments, host attachment capacity, Rare limits, and Additional Copy Costs configuration safeguards now use the standardized constructive-error patterns. Great Traitors’ Arsenal remains a Phase 0.1 placeholder pending the reusable Chaos Space Marine Arsenal library. Glorious Jump Pack retains a temporary player-facing error because its required Raptors host is not yet available."
   }
 }

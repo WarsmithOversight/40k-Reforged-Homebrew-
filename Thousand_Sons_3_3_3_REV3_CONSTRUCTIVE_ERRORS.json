@@ -4,8 +4,8 @@
     "id": "032d-4ed1-d1e6-09c7",
     "name": "Thousand Sons 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 8,
-    "revision": 2,
+    "gameSystemRevision": 11,
+    "revision": 3,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -58,6 +58,12 @@
             "id": "9c10-1fe8-c008-2222",
             "primary": true,
             "name": "Configuration"
+          },
+          {
+            "targetId": "54e9-a5b4-e275-00c5",
+            "id": "85ca-582e-f261-caea",
+            "primary": false,
+            "name": "Required Additional Copy Costs Configuration"
           }
         ],
         "infoLinks": [
@@ -67,26 +73,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "80a9-6b43-631f-5a4f"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "min",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "c598-2ed4-9231-3aad",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "3efb-cb89-79d6-462a",
-            "includeChildSelections": true
           }
         ],
         "costs": [
@@ -1196,9 +1182,28 @@
                 "childName": "Osiron Dreadnought"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "Additional Copy Costs is automatically managed by the listbuilder and should appear only once. Remove any extra Additional Copy Costs entries.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "10ec-c628-034e-a85e",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Additional Copy Costs"
+              }
+            ]
           }
         ],
-        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of each native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance."
+        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of each native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance.\nCONFIGURATION VALIDATION: this entry carries the hidden Required Additional Copy Costs Configuration category so Army > Configuration in Game System revision 11 can report when it is missing. Stock roster min/max constraints are omitted. A self-owned custom error reports duplicates."
       },
       {
         "type": "unit",
@@ -1236,7 +1241,7 @@
         "sortIndex": 1,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "e70c-b59f-76e7-3fb9",
@@ -1350,6 +1355,26 @@
                   }
                 ],
                 "defaultSelectionEntryId": "eab7-0d04-3718-88fe"
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Exalted Sorcerer is not attached to a unit. It must attach to Rubric Marines. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
               }
             ]
           }
@@ -1535,20 +1560,9 @@
           }
         ],
         "sortIndex": 3,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "379e-3313-a30c-5401",
-            "includeChildSelections": true
-          }
-        ],
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "c164-c87a-0a25-f688",
@@ -1649,6 +1663,45 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Infernal Master is not attached to a unit. It must attach to Rubric Marines. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Your army may include only one Infernal Master because it is Rare. Remove the additional Infernal Master unit(s).",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6472-dd16-3d52-0bb9",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Infernal Master"
+              }
+            ]
+          }
         ]
       },
       {
@@ -1687,7 +1740,7 @@
         "sortIndex": 4,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "6fc7-d582-94fd-5189",
@@ -1804,6 +1857,26 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Time Cult Sorcerer is not attached to a unit. It must attach to Rubric Marines. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -1842,7 +1915,7 @@
         "sortIndex": 5,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "4138-cac4-0943-6d28",
@@ -1908,6 +1981,26 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Tzaangor Shaman is not attached to a unit. It must attach to Tzaangors or Tzaangor Enlightened. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -1940,7 +2033,7 @@
         "sortIndex": 6,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "efee-a982-23d4-aa5b",
@@ -2057,6 +2150,26 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Scarab Occult Sorcerer is not attached to a unit. It must attach to Scarab Occult Terminators. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -2089,7 +2202,7 @@
         "sortIndex": 7,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "747b-86e9-ca80-90ca",
@@ -2214,6 +2327,26 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Aspiring Sorcerer is not attached to a unit. It must attach to Rubric Marines. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -2268,18 +2401,6 @@
           }
         ],
         "sortIndex": 8,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "9749-f3e5-9d41-74f6",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -2442,7 +2563,27 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Rubric Marines 1-2 record the ordinary squad weapon state. Rubric Marine 3 is the canonical free Soulreaper Cannon specialist, so ordinary fallback equipment is intentionally omitted from that specialist slot. Icon of Flame is unit-level paid wargear."
+        "comment": "LOADOUT UI: Rubric Marines 1-2 record the ordinary squad weapon state. Rubric Marine 3 is the canonical free Soulreaper Cannon specialist, so ordinary fallback equipment is intentionally omitted from that specialist slot. Icon of Flame is unit-level paid wargear.",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Rubric Marines has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -2478,18 +2619,6 @@
           }
         ],
         "sortIndex": 9,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "f5a5-6bdb-c01c-d092",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -2551,7 +2680,27 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: the listbuilder records one squad-wide Tzaangor weapon state for the common case. The army PDF remains authoritative for unusual mixed-model weapon configurations."
+        "comment": "LOADOUT UI: the listbuilder records one squad-wide Tzaangor weapon state for the common case. The army PDF remains authoritative for unusual mixed-model weapon configurations.",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Tzaangors has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -2593,18 +2742,6 @@
           }
         ],
         "sortIndex": 10,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "4d57-cbb9-767a-c21f",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -2767,6 +2904,26 @@
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Scarab Occult Terminators has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -2809,18 +2966,6 @@
           }
         ],
         "sortIndex": 11,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "d86f-b421-665c-b61f",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -2991,6 +3136,26 @@
             "hidden": false,
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Tzaangor Enlightened has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
           }
         ]
       },
@@ -3786,17 +3951,6 @@
           }
         ],
         "sortIndex": 14,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "3265-2d77-7319-526f",
-            "includeChildSelections": true
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -3873,6 +4027,27 @@
                   }
                 ],
                 "defaultSelectionEntryId": "c5aa-3707-76c4-2d01"
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Your army may include only one Ahzek Ahriman, the Exile because it is Rare. Remove the additional Ahzek Ahriman, the Exile unit(s).",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "c7eb-7776-114d-2be7",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Ahzek Ahriman, the Exile"
               }
             ]
           }
@@ -6646,6 +6821,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "PHASE 0.1 THOUSAND SONS. The four Summon Only datasheets are intentionally excluded from army-list selections. Great Traitors’ Arsenal is represented by an optional, unchecked Configuration placeholder until the reusable Chaos Space Marines library is wired. All seven printed Leaders remain root selections; Scarab Occult Sorcerer and Aspiring Sorcerer are Countless and therefore omit the hidden counted-Leader category.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nThousand Sons now use Game System revision 8. Great Traitors’ Arsenal remains a placeholder, now in the shared Configuration category. All 15 selectable native units have player-facing loadouts. Summon-only datasheets remain excluded. All native non-Rare Other units use Additional Copy Costs."
+    "comment": "PHASE 0.1 THOUSAND SONS. The four Summon Only datasheets are intentionally excluded from army-list selections. Great Traitors’ Arsenal is represented by an optional, unchecked Configuration placeholder until the reusable Chaos Space Marines library is wired. All seven printed Leaders remain root selections; Scarab Occult Sorcerer and Aspiring Sorcerer are Countless and therefore omit the hidden counted-Leader category.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nThousand Sons now use Game System revision 11. Great Traitors’ Arsenal remains a placeholder, now in the shared Configuration category. All 15 selectable native units have player-facing loadouts. Summon-only datasheets remain excluded. All native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nGame System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, host Leader limits, and native Rare limits use constructive player-facing errors. Great Traitors’ Arsenal and all faction-specific structures remain otherwise unchanged."
   }
 }

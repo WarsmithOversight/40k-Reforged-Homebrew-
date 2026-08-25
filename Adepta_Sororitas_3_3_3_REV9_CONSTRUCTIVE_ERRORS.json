@@ -4,8 +4,8 @@
     "id": "8ff6-481d-e968-777c",
     "name": "Adepta Sororitas 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 8,
-    "revision": 8,
+    "gameSystemRevision": 11,
+    "revision": 9,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -49,20 +49,9 @@
           }
         ],
         "sortIndex": 1,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "5094-6a9f-5857-32ac",
-            "includeChildSelections": true
-          }
-        ],
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "9080-3a08-cf8d-f2e4",
@@ -217,6 +206,45 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Canoness is not attached to a unit. It must attach to Battle Sisters. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Canoness because it is Rare. Remove the additional Canoness unit(s).",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ddc1-8ec3-a73f-0e21",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Canoness"
+              }
+            ]
+          }
         ]
       },
       {
@@ -255,7 +283,7 @@
         "sortIndex": 2,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "cc3e-9251-bc63-9d09",
@@ -372,6 +400,26 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Palatine is not attached to a unit. It must attach to Battle Sisters, Dominions, or Retributors. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -410,7 +458,7 @@
         "sortIndex": 3,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "e343-44a8-d328-d773",
@@ -511,6 +559,26 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Dogmata is not attached to a unit. It must attach to Battle Sisters, Dominions, or Retributors. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -549,7 +617,7 @@
         "sortIndex": 5,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "7514-c948-652e-2e52",
@@ -650,6 +718,26 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Dialogus is not attached to a unit. It must attach to Battle Sisters, Dominions, or Retributors. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -704,18 +792,6 @@
           }
         ],
         "sortIndex": 6,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "fb93-0436-8a7e-1ced",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Additional Leader",
@@ -1192,7 +1268,27 @@
             ]
           }
         ],
-        "comment": "BATTLE SISTERS LOADOUT PASS: Sister Superior is represented directly with a ranged weapon list and Chainsword / Power Sword melee list. Battle Sisters 2-8 are the ordinary Boltgun block. Battle Sisters 9-10 are canonical specialist models, defaulting to Storm Bolter and able to select the five other free special/heavy weapon options. Munitorum Cherub is unit-level Paid Wargear with full rule text."
+        "comment": "BATTLE SISTERS LOADOUT PASS: Sister Superior is represented directly with a ranged weapon list and Chainsword / Power Sword melee list. Battle Sisters 2-8 are the ordinary Boltgun block. Battle Sisters 9-10 are canonical specialist models, defaulting to Storm Bolter and able to select the five other free special/heavy weapon options. Munitorum Cherub is unit-level Paid Wargear with full rule text.",
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Battle Sisters has more than one Leader attached. It may have only one externally attached Leader. Remove or move one of the attached Leaders. An Imagifier may still be included under Additional Leader.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -1248,6 +1344,12 @@
             "id": "5f69-b40d-7b60-bc95",
             "primary": false,
             "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "0eed-f84d-38f3-3d80",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 8,
@@ -1347,7 +1449,16 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: the one free Neural Whips replacement is represented directly as Sister Repentia 10. Sisters Repentia 1-9 retain Eviscerators.\nREPENTIA NAMING FIX: the Neural Whips model is represented first as Repentia Superior; Sisters Repentia 2-10 retain Eviscerators."
+        "comment": "LOADOUT UI: the one free Neural Whips replacement is represented directly as Sister Repentia 10. Sisters Repentia 1-9 retain Eviscerators.\nREPENTIA NAMING FIX: the Neural Whips model is represented first as Repentia Superior; Sisters Repentia 2-10 retain Eviscerators.",
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "e85e-841c-b13b-8f48",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
       },
       {
         "type": "unit",
@@ -1383,17 +1494,6 @@
           }
         ],
         "sortIndex": 9,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "68c5-6f7b-90ef-7081",
-            "includeChildSelections": true
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -1508,6 +1608,27 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Celestine, the Living Saint because it is Rare. Remove the additional Celestine, the Living Saint unit(s).",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "255c-f127-d367-5bcf",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Celestine, the Living Saint"
+              }
+            ]
+          }
         ]
       },
       {
@@ -1544,17 +1665,6 @@
           }
         ],
         "sortIndex": 10,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "8e9c-7801-49bd-36f0",
-            "includeChildSelections": true
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -1634,6 +1744,27 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Hospitaller because it is Rare. Remove the additional Hospitaller unit(s).",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d719-f8e4-f975-7954",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Hospitaller"
+              }
+            ]
+          }
         ]
       },
       {
@@ -1661,6 +1792,12 @@
             "id": "344e-1845-11b9-a410",
             "primary": false,
             "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "967f-90cb-4e39-0310",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 11,
@@ -1912,7 +2049,16 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Sacresant Superior is the canonical pistol specialist, defaulting to Inferno Pistol, with Hand Flamer / Plasma Pistol alternatives. The four remaining Sacresants use one shared common-case Halberd / Mace squad choice. Simulacrum Imperialis is unit-level Paid Wargear with full rule text."
+        "comment": "LOADOUT UI: Sacresant Superior is the canonical pistol specialist, defaulting to Inferno Pistol, with Hand Flamer / Plasma Pistol alternatives. The four remaining Sacresants use one shared common-case Halberd / Mace squad choice. Simulacrum Imperialis is unit-level Paid Wargear with full rule text.",
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "6e10-0f87-4738-7258",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
       },
       {
         "type": "unit",
@@ -1957,21 +2103,15 @@
             "id": "b132-fe04-375b-8cee",
             "primary": false,
             "name": "May Attach To: Dialogus"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "aac4-6493-463e-b01e",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 12,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "f04b-03f6-71cb-b599",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Additional Leader",
@@ -2486,7 +2626,36 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Dominions mirror the Battle Sisters grammar. Dominion Superior is represented directly; Dominions 2-3 are the ordinary Boltgun block; Dominions 4-5 are canonical Storm Bolter specialists with Meltagun / Flamer alternatives. Munitorum Cherub is unit-level Paid Wargear. The two +10 Plasma Grenade / Melta Bomb allowances are represented as two independent unit-level optional slots."
+        "comment": "LOADOUT UI: Dominions mirror the Battle Sisters grammar. Dominion Superior is represented directly; Dominions 2-3 are the ordinary Boltgun block; Dominions 4-5 are canonical Storm Bolter specialists with Meltagun / Flamer alternatives. Munitorum Cherub is unit-level Paid Wargear. The two +10 Plasma Grenade / Melta Bomb allowances are represented as two independent unit-level optional slots.",
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "d358-50ee-1a53-321b",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Dominions has more than one Leader attached. It may have only one externally attached Leader. Remove or move one of the attached Leaders. An Imagifier may still be included under Additional Leader.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -2513,6 +2682,12 @@
             "id": "03fc-1a0b-c9c0-9931",
             "primary": false,
             "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "2db9-6881-4213-8078",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 13,
@@ -2987,6 +3162,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "704e-456e-9ab7-50c8",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -3014,6 +3198,12 @@
             "id": "5bd4-767b-5b24-8b86",
             "primary": false,
             "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "7fef-6f04-52db-c1d8",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 14,
@@ -3061,6 +3251,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "1947-9100-7bb1-6595",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -3088,6 +3287,12 @@
             "id": "233b-427b-2eb8-1dc9",
             "primary": false,
             "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "7d33-e7c0-7d4c-3a0b",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 15,
@@ -4451,7 +4656,16 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Zephyrim Superior is the canonical model for the free replacement and defaults to Plasma Pistol, with Pennant as the alternative; it retains its Power Sword. Zephyrim 2-5 retain Bolt Pistol + Power Sword by default and may individually replace the Bolt Pistol with Hand Flamer +10 or Inferno Pistol +10, with each paid weapon capped at two models."
+        "comment": "LOADOUT UI: Zephyrim Superior is the canonical model for the free replacement and defaults to Plasma Pistol, with Pennant as the alternative; it retains its Power Sword. Zephyrim 2-5 retain Bolt Pistol + Power Sword by default and may individually replace the Bolt Pistol with Hand Flamer +10 or Inferno Pistol +10, with each paid weapon capped at two models.",
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "5340-2327-7069-b388",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
       },
       {
         "type": "unit",
@@ -4478,9 +4692,24 @@
             "id": "1771-2773-6b7a-fb06",
             "primary": false,
             "name": "Infantry"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "7abe-53f9-02b1-196f",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
-        "sortIndex": 16
+        "sortIndex": 16,
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "ad9c-1eeb-5017-e87d",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
       },
       {
         "type": "unit",
@@ -4507,6 +4736,12 @@
             "id": "23f8-8818-4ffd-90f4",
             "primary": false,
             "name": "Vehicle"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "441d-5ce2-0220-660a",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 17,
@@ -4670,6 +4905,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "2e87-f508-778c-72ba",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -4697,6 +4941,12 @@
             "id": "5629-5e96-bb96-aed1",
             "primary": false,
             "name": "Vehicle"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "a439-ce02-bca0-b119",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 18,
@@ -4911,6 +5161,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "4dcd-9075-b5de-14f2",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -4938,6 +5197,12 @@
             "id": "2583-28b2-0edc-ca2f",
             "primary": false,
             "name": "Vehicle"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "02ad-48ac-f893-3725",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 19,
@@ -5036,6 +5301,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "16c0-556d-a595-1e58",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -5063,6 +5337,12 @@
             "id": "2a9e-026d-0d18-bedf",
             "primary": false,
             "name": "Vehicle"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "92ad-2351-40bd-f2f7",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 20,
@@ -5212,7 +5492,16 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Anchorite Sarcophagus +20 is represented as unit-level ability wargear with its full rule text, not as a weapon selection."
+        "comment": "LOADOUT UI: Anchorite Sarcophagus +20 is represented as unit-level ability wargear with its full rule text, not as a weapon selection.",
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "866b-9fa4-7733-abe4",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ]
       },
       {
         "type": "unit",
@@ -5239,6 +5528,12 @@
             "id": "c63f-ac58-cd31-265b",
             "primary": false,
             "name": "Vehicle"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "3bdf-27e9-561e-0abc",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 21,
@@ -5437,6 +5732,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "2a61-abf0-287a-b20c",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -5464,6 +5768,12 @@
             "id": "df78-bf9f-ffff-e75a",
             "primary": false,
             "name": "Vehicle"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "ba3f-7336-8568-b2d1",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 22,
@@ -5738,6 +6048,15 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "d048-0ccb-969b-0d9b",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
         ]
       },
       {
@@ -5783,21 +6102,15 @@
             "id": "f315-70d5-cb0e-f60f",
             "primary": false,
             "name": "May Attach To: Dialogus"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "f6e8-7f77-c748-48fe",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
           }
         ],
         "sortIndex": 23,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "5de0-1604-1ba6-2da1",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Additional Leader",
@@ -7619,8 +7932,3166 @@
                 "childName": "Retributor Heavy Weapon Assigned"
               }
             ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Retributors has more than one Leader attached. It may have only one externally attached Leader. Remove or move one of the attached Leaders. An Imagifier may still be included under Additional Leader.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "0748-5133-0e7c-0f47",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ]
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Additional Copy Costs",
+        "hidden": false,
+        "id": "57b2-833c-88e0-809a",
+        "sortIndex": 0,
+        "categoryLinks": [
+          {
+            "targetId": "default-category",
+            "id": "3e4b-fb1b-7b55-d5f6",
+            "primary": true,
+            "name": "Configuration"
+          },
+          {
+            "targetId": "54e9-a5b4-e275-00c5",
+            "id": "9b82-2eee-39c7-bc4f",
+            "primary": false,
+            "name": "Required Additional Copy Costs Configuration"
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "d5ac-a5e0-2730-9839",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "80a9-6b43-631f-5a4f"
+          }
+        ],
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "121e-e068-ad7a-3063",
+            "value": 0
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "1",
+            "field": "defaultAmount"
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d5d0-0151-26f7-b221",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sisters Repentia"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "d5d0-0151-26f7-b221",
+                "childName": "Sisters Repentia",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d5d0-0151-26f7-b221",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sisters Repentia"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d5d0-0151-26f7-b221",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sisters Repentia"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "d5d0-0151-26f7-b221",
+                "childName": "Sisters Repentia",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d5d0-0151-26f7-b221",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sisters Repentia"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d5d0-0151-26f7-b221",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sisters Repentia"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "d5d0-0151-26f7-b221",
+                "childName": "Sisters Repentia",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d5d0-0151-26f7-b221",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sisters Repentia"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "344e-4c2f-7141-09d8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Celestian Sacresants"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "344e-4c2f-7141-09d8",
+                "childName": "Celestian Sacresants",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "344e-4c2f-7141-09d8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Celestian Sacresants"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "344e-4c2f-7141-09d8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Celestian Sacresants"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "344e-4c2f-7141-09d8",
+                "childName": "Celestian Sacresants",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "344e-4c2f-7141-09d8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Celestian Sacresants"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "344e-4c2f-7141-09d8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Celestian Sacresants"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "344e-4c2f-7141-09d8",
+                "childName": "Celestian Sacresants",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "344e-4c2f-7141-09d8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Celestian Sacresants"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d74-9c5a-cd06-ae4c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dominions"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "2d74-9c5a-cd06-ae4c",
+                "childName": "Dominions",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d74-9c5a-cd06-ae4c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dominions"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d74-9c5a-cd06-ae4c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dominions"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "2d74-9c5a-cd06-ae4c",
+                "childName": "Dominions",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d74-9c5a-cd06-ae4c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dominions"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d74-9c5a-cd06-ae4c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dominions"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "2d74-9c5a-cd06-ae4c",
+                "childName": "Dominions",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d74-9c5a-cd06-ae4c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Dominions"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "3f38-5169-7b47-b473",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Paragon Warsuits"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "3f38-5169-7b47-b473",
+                "childName": "Paragon Warsuits",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "3f38-5169-7b47-b473",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Paragon Warsuits"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "3f38-5169-7b47-b473",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Paragon Warsuits"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "3f38-5169-7b47-b473",
+                "childName": "Paragon Warsuits",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "3f38-5169-7b47-b473",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Paragon Warsuits"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "3f38-5169-7b47-b473",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Paragon Warsuits"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "3f38-5169-7b47-b473",
+                "childName": "Paragon Warsuits",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "3f38-5169-7b47-b473",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Paragon Warsuits"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ed8b-f809-2c87-105b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Arco-Flagellants"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "ed8b-f809-2c87-105b",
+                "childName": "Arco-Flagellants",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ed8b-f809-2c87-105b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Arco-Flagellants"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ed8b-f809-2c87-105b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Arco-Flagellants"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "ed8b-f809-2c87-105b",
+                "childName": "Arco-Flagellants",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ed8b-f809-2c87-105b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Arco-Flagellants"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ed8b-f809-2c87-105b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Arco-Flagellants"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "ed8b-f809-2c87-105b",
+                "childName": "Arco-Flagellants",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ed8b-f809-2c87-105b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Arco-Flagellants"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e082-2d45-f839-56fb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Zephyrim"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "e082-2d45-f839-56fb",
+                "childName": "Zephyrim",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e082-2d45-f839-56fb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Zephyrim"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e082-2d45-f839-56fb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Zephyrim"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "e082-2d45-f839-56fb",
+                "childName": "Zephyrim",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e082-2d45-f839-56fb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Zephyrim"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e082-2d45-f839-56fb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Zephyrim"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "e082-2d45-f839-56fb",
+                "childName": "Zephyrim",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e082-2d45-f839-56fb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Zephyrim"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "89e9-681a-dcb3-5d1d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Seraphim"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "89e9-681a-dcb3-5d1d",
+                "childName": "Seraphim",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "89e9-681a-dcb3-5d1d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Seraphim"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "89e9-681a-dcb3-5d1d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Seraphim"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "89e9-681a-dcb3-5d1d",
+                "childName": "Seraphim",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "89e9-681a-dcb3-5d1d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Seraphim"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "89e9-681a-dcb3-5d1d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Seraphim"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "89e9-681a-dcb3-5d1d",
+                "childName": "Seraphim",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "89e9-681a-dcb3-5d1d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Seraphim"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "c286-1aa5-c158-49c2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sororitas Rhino"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "c286-1aa5-c158-49c2",
+                "childName": "Sororitas Rhino",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "c286-1aa5-c158-49c2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sororitas Rhino"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "c286-1aa5-c158-49c2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sororitas Rhino"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "c286-1aa5-c158-49c2",
+                "childName": "Sororitas Rhino",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "c286-1aa5-c158-49c2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sororitas Rhino"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "c286-1aa5-c158-49c2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sororitas Rhino"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "c286-1aa5-c158-49c2",
+                "childName": "Sororitas Rhino",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "c286-1aa5-c158-49c2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Sororitas Rhino"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0f76-af6e-6d35-6cee",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Immolator"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0f76-af6e-6d35-6cee",
+                "childName": "Immolator",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0f76-af6e-6d35-6cee",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Immolator"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0f76-af6e-6d35-6cee",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Immolator"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0f76-af6e-6d35-6cee",
+                "childName": "Immolator",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0f76-af6e-6d35-6cee",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Immolator"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0f76-af6e-6d35-6cee",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Immolator"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "0f76-af6e-6d35-6cee",
+                "childName": "Immolator",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0f76-af6e-6d35-6cee",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Immolator"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "acf3-9110-8f7e-40a3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Penitent Engines"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "acf3-9110-8f7e-40a3",
+                "childName": "Penitent Engines",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "acf3-9110-8f7e-40a3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Penitent Engines"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "acf3-9110-8f7e-40a3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Penitent Engines"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "acf3-9110-8f7e-40a3",
+                "childName": "Penitent Engines",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "acf3-9110-8f7e-40a3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Penitent Engines"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "acf3-9110-8f7e-40a3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Penitent Engines"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "acf3-9110-8f7e-40a3",
+                "childName": "Penitent Engines",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "acf3-9110-8f7e-40a3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Penitent Engines"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "bbb8-cd5e-7d78-ac41",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Mortifiers"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "bbb8-cd5e-7d78-ac41",
+                "childName": "Mortifiers",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "bbb8-cd5e-7d78-ac41",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Mortifiers"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "bbb8-cd5e-7d78-ac41",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Mortifiers"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "bbb8-cd5e-7d78-ac41",
+                "childName": "Mortifiers",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "bbb8-cd5e-7d78-ac41",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Mortifiers"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "bbb8-cd5e-7d78-ac41",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Mortifiers"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "bbb8-cd5e-7d78-ac41",
+                "childName": "Mortifiers",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "bbb8-cd5e-7d78-ac41",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Mortifiers"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "8529-688c-2a34-59f1",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Exorcist"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "8529-688c-2a34-59f1",
+                "childName": "Exorcist",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "8529-688c-2a34-59f1",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Exorcist"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "8529-688c-2a34-59f1",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Exorcist"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "8529-688c-2a34-59f1",
+                "childName": "Exorcist",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "8529-688c-2a34-59f1",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Exorcist"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "8529-688c-2a34-59f1",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Exorcist"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "8529-688c-2a34-59f1",
+                "childName": "Exorcist",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "8529-688c-2a34-59f1",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Exorcist"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "25a4-2cfd-e3c4-95e7",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Castigator"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "25a4-2cfd-e3c4-95e7",
+                "childName": "Castigator",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "25a4-2cfd-e3c4-95e7",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Castigator"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "25a4-2cfd-e3c4-95e7",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Castigator"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "25a4-2cfd-e3c4-95e7",
+                "childName": "Castigator",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "25a4-2cfd-e3c4-95e7",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Castigator"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "25a4-2cfd-e3c4-95e7",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Castigator"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "25a4-2cfd-e3c4-95e7",
+                "childName": "Castigator",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "25a4-2cfd-e3c4-95e7",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Castigator"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1533-2387-54b6-d807",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Retributors"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "1533-2387-54b6-d807",
+                "childName": "Retributors",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1533-2387-54b6-d807",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Retributors"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1533-2387-54b6-d807",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Retributors"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "1533-2387-54b6-d807",
+                "childName": "Retributors",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1533-2387-54b6-d807",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Retributors"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1533-2387-54b6-d807",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Retributors"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "1533-2387-54b6-d807",
+                "childName": "Retributors",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "121e-e068-ad7a-3063",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1533-2387-54b6-d807",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Retributors"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Additional Copy Costs is automatically managed by the listbuilder and should appear only once. Remove any extra Additional Copy Costs entries.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57b2-833c-88e0-809a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Additional Copy Costs"
+              }
+            ]
+          }
+        ],
+        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of every native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance.\nCONFIGURATION VALIDATION: Game System revision 11 handles a missing Additional Copy Costs entry through Army > Configuration. This entry carries the hidden required-configuration category and self-reports duplicates."
       }
     ],
     "sharedSelectionEntries": [
@@ -7751,6 +11222,6 @@
       }
     ],
     "authorName": "40k Reforged Homebrew",
-    "comment": "PHASE 0.1 STRUCTURAL SHELL\nScope intentionally limited to Unit Name, Unit Class, Unit Category, Points Cost, and Attachments. Imagifier uses the nested Additional Leader pattern. Loadouts, Additional Copy Costs, unit-size UI, ratio restrictions, and other non-attachment list-building mechanics are intentionally deferred.\n\nPHASE 0.2 LEADER LOADOUT PASS\nEquipment added only for Canoness, Palatine, Dogmata, Imagifier, and Dialogus. Imagifier remains nested as Additional Leader. No non-Leader loadouts added.\n\nPHASE 0.3 BATTLE SISTERS LOADOUT PASS\nAdded equipment only for Battle Sisters. Existing Leader loadouts and Imagifier Additional Leader structure are preserved.\n\nPHASE 0.4 ELITES / DOMINIONS / PARAGONS LOADOUT PASS\nAdded loadouts for Sisters Repentia, Celestine, Hospitaller, Celestian Sacresants, Dominions, Paragon Warsuits, and Arco-Flagellants. Sisters Novitiates remain intentionally untouched.\n\nPHASE 0.5 ZEPHYRIM / VEHICLES / RETRIBUTORS LOADOUT PASS\nCorrected Repentia Superior placement. Added Zephyrim, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and Retributors. Seraphim remain intentionally untouched.\n\nPHASE 0.5A ZEPHYRIM SOURCE CONFIRMATION\nZephyrim presentation confirmed against the clarified source: Zephyrim Superior is the free Plasma Pistol / Pennant model; Zephyrim 2-5 retain Bolt Pistol + Power Sword with paid Hand Flamer / Inferno Pistol upgrades. Seraphim remain untouched.\n\nPHASE 0.5B PAID WARGEAR / RETRIBUTOR UI FIX\nAll direct Paid Wargear entries now use optional max-1 selection groups instead of quantity spinners. Retributors 2-5 no longer auto-select a heavy weapon, preventing the roster from opening in an illegal 4x default state.\n\nPHASE 0.5C RETRIBUTOR NONE / VALIDATION UI\nRetributors 2-5 now use optional 0/1 heavy-weapon lists, allowing New Recruit to display its built-in (None) state. A hidden semantic category counts real heavy-weapon assignments and a custom error explains when fewer than four models are configured."
+    "comment": "PHASE 0.1 STRUCTURAL SHELL\nScope intentionally limited to Unit Name, Unit Class, Unit Category, Points Cost, and Attachments. Imagifier uses the nested Additional Leader pattern. Loadouts, Additional Copy Costs, unit-size UI, ratio restrictions, and other non-attachment list-building mechanics are intentionally deferred.\n\nPHASE 0.2 LEADER LOADOUT PASS\nEquipment added only for Canoness, Palatine, Dogmata, Imagifier, and Dialogus. Imagifier remains nested as Additional Leader. No non-Leader loadouts added.\n\nPHASE 0.3 BATTLE SISTERS LOADOUT PASS\nAdded equipment only for Battle Sisters. Existing Leader loadouts and Imagifier Additional Leader structure are preserved.\n\nPHASE 0.4 ELITES / DOMINIONS / PARAGONS LOADOUT PASS\nAdded loadouts for Sisters Repentia, Celestine, Hospitaller, Celestian Sacresants, Dominions, Paragon Warsuits, and Arco-Flagellants. Sisters Novitiates remain intentionally untouched.\n\nPHASE 0.5 ZEPHYRIM / VEHICLES / RETRIBUTORS LOADOUT PASS\nCorrected Repentia Superior placement. Added Zephyrim, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and Retributors. Seraphim remain intentionally untouched.\n\nPHASE 0.5A ZEPHYRIM SOURCE CONFIRMATION\nZephyrim presentation confirmed against the clarified source: Zephyrim Superior is the free Plasma Pistol / Pennant model; Zephyrim 2-5 retain Bolt Pistol + Power Sword with paid Hand Flamer / Inferno Pistol upgrades. Seraphim remain untouched.\n\nPHASE 0.5B PAID WARGEAR / RETRIBUTOR UI FIX\nAll direct Paid Wargear entries now use optional max-1 selection groups instead of quantity spinners. Retributors 2-5 no longer auto-select a heavy weapon, preventing the roster from opening in an illegal 4x default state.\n\nPHASE 0.5C RETRIBUTOR NONE / VALIDATION UI\nRetributors 2-5 now use optional 0/1 heavy-weapon lists, allowing New Recruit to display its built-in (None) state. A hidden semantic category counts real heavy-weapon assignments and a custom error explains when fewer than four models are configured.\n\nREV9 CONSTRUCTIVE ERROR + UNIVERSAL SYSTEM MIGRATION\nAdepta Sororitas now use Game System revision 11. Added the standard Additional Copy Costs subsystem for all 14 native non-Rare Other units, including Configuration safeguards and per-unit reminder links. Canoness, Palatine, Dogmata, and Dialogus use constructive missing-attachment validation; Battle Sisters, Dominions, and Retributors use constructive external-Leader host limits; Canoness, Celestine, and Hospitaller use constructive Rare limits. Imagifier remains a nested Countless Additional Leader and does not consume the external Leader association slot. Retributor heavy-weapon validation is preserved unchanged. Sisters Novitiates and Seraphim remain intentionally without loadout implementations."
   }
 }

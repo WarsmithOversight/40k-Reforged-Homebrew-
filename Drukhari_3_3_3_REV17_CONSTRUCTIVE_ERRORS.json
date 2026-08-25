@@ -4,8 +4,8 @@
     "id": "6381-b714-cd35-79d3",
     "name": "Drukhari 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 6,
-    "revision": 13,
+    "gameSystemRevision": 11,
+    "revision": 17,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -86,7 +86,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "ROAMING PERFORMERS: always-present configuration, defaulting to Not Included. Selecting Included exposes five local entryLinks into the shared Harlequins library: Troupe Master and Shadowseer under Roaming Leader, and Light/Dark/Twilight Troupe under Roaming Troop. The Harlequin unit trees are not copied into this catalogue."
+        "comment": "ROAMING PERFORMERS CONTROL: this Configuration entry controls Harlequin availability only. Constructive validation for already-included Harlequin units lives on the local Harlequin entryLinks so errors render on the affected units."
       },
       {
         "type": "upgrade",
@@ -101,6 +101,12 @@
             "id": "4f9d-5cad-0e1c-046b",
             "primary": true,
             "name": "Configuration"
+          },
+          {
+            "targetId": "54e9-a5b4-e275-00c5",
+            "id": "26cd-7494-3a8d-d901",
+            "primary": false,
+            "name": "Required Additional Copy Costs Configuration"
           }
         ],
         "infoLinks": [
@@ -110,26 +116,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "80a9-6b43-631f-5a4f"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "min",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "2bd3-c59b-d4e1-2d7a",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "836f-e2ab-0339-04dd",
-            "includeChildSelections": true
           }
         ],
         "costs": [
@@ -3210,9 +3196,28 @@
                 "childName": "Talos"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "Additional Copy Costs is automatically managed by the listbuilder and should appear only once. Remove any extra Additional Copy Costs entries.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "787c-562a-81ad-d741",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Additional Copy Costs"
+              }
+            ]
           }
         ],
-        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of each native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance. Player-facing wording is linked from the canonical Game System shared rule."
+        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of each native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance. Player-facing wording is linked from the canonical Game System shared rule.\nCONFIGURATION VALIDATION: this entry carries the hidden Required Additional Copy Costs Configuration category so Army > Configuration in Game System revision 10 can report when it is missing. Stock roster min/max constraints are omitted. A self-owned custom error reports duplicates."
       },
       {
         "type": "unit",
@@ -3250,7 +3255,7 @@
         "sortIndex": 1,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "20fb-c6cd-53c6-6a94",
@@ -3397,7 +3402,27 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Soul Trap is represented as a normal selectable loadout option alongside the two pistol options. Its ability text is attached verbatim to the Soul Trap selection."
+        "comment": "LOADOUT UI: Soul Trap is represented as a normal selectable loadout option alongside the two pistol options. Its ability text is attached verbatim to the Soul Trap selection.\nERROR TEMPLATE: missing_attachment. The Attaches To association uses min 0 / max 1 to suppress New Recruit's stock missing-association error; a custom player-facing error requires attachment and names the eligible hosts.",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Archon is not attached to a unit. It must attach to Kabalite Warriors, Kabalite Trueborn, or Incubi. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -3439,20 +3464,9 @@
           }
         ],
         "sortIndex": 2,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "76be-9378-1a31-aa5c",
-            "includeChildSelections": true
-          }
-        ],
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "464f-11c4-4bd4-712a",
@@ -3594,7 +3608,47 @@
               }
             ]
           }
-        ]
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Haemonculus is not attached to a unit. It must attach to Wracks, Haemoxytes, or Grotesques. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Your army may include only one Haemonculus because it is Rare. Remove the additional Haemonculus unit(s).",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b47-7da0-c8f0-9373",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Haemonculus"
+              }
+            ]
+          }
+        ],
+        "comment": "ERROR TEMPLATE: missing_attachment. The Attaches To association uses min 0 / max 1 to suppress New Recruit's stock missing-association error; a custom player-facing error requires attachment and names the eligible hosts.\nERROR TEMPLATE: rare_limit. The stock roster max-1 selection constraint is omitted and replaced by a custom player-facing Rare-limit error."
       },
       {
         "type": "unit",
@@ -3632,7 +3686,7 @@
         "sortIndex": 3,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "64b1-c7a5-3ae2-4a12",
@@ -3753,7 +3807,28 @@
               }
             ]
           }
-        ]
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Succubus is not attached to a unit. It must attach to Wyches or Hekatrix Bloodbrides. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
+        ],
+        "comment": "ERROR TEMPLATE: missing_attachment. The Attaches To association uses min 0 / max 1 to suppress New Recruit's stock missing-association error; a custom player-facing error requires attachment and names the eligible hosts."
       },
       {
         "type": "unit",
@@ -4395,22 +4470,28 @@
                 "childName": "Lhamaean"
               }
             ]
-          }
-        ],
-        "constraints": [
+          },
           {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "5c0d-3947-582e-466b",
-            "childId": "any",
-            "includeChildSelections": false
+            "type": "add",
+            "value": "Kabalite Warriors has more than one Leader attached other than a Lhamaean. It may have only one attached Leader other than a Lhamaean. Remove or move one of the other attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
           }
         ],
         "rules": [],
-        "comment": "LOADOUT UI: Sybarite is represented directly as pistol + melee choices, omitting the intermediate Splinter Rifle replacement step. Seven ordinary Kabalites are consolidated as Kabalite Warriors 2-8. Kabalite Warriors 9 and 10 are independent special-weapon slots and MAY choose identical special weapons. Paid Wargear uses two independent optional grenade slots so the player can take two identical or two different grenades. Existing Additional Leader/Lhamaean logic is preserved."
+        "comment": "LOADOUT UI: Sybarite is represented directly as pistol + melee choices, omitting the intermediate Splinter Rifle replacement step. Seven ordinary Kabalites are consolidated as Kabalite Warriors 2-8. Kabalite Warriors 9 and 10 are independent special-weapon slots and MAY choose identical special weapons. Paid Wargear uses two independent optional grenade slots so the player can take two identical or two different grenades. Existing Additional Leader/Lhamaean logic is preserved.\nERROR TEMPLATE: leader_host_limit. The condition counts actual Associations only, so the nested Additional Leader Lhamaean is deliberately excluded and may coexist with one normally attached Leader."
       },
       {
         "type": "unit",
@@ -4823,21 +4904,27 @@
                 "childName": "Lhamaean"
               }
             ]
-          }
-        ],
-        "constraints": [
+          },
           {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "b0a3-ea64-c09b-151e",
-            "childId": "any",
-            "includeChildSelections": false
+            "type": "add",
+            "value": "Wyches has more than one Leader attached other than a Lhamaean. It may have only one attached Leader other than a Lhamaean. Remove or move one of the other attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
           }
         ],
-        "comment": "LOADOUT UI: Hekatrix is treated directly as its sergeant loadout, skipping the source's normal-model starting equipment and replacement steps. The remaining nine Wyches are consolidated as Models 2-10 with 9x Splinter Pistol and 9x Hekatarii Blades. Paid Wargear is unit-level, max 2, at +10 points each. Existing Additional Leader/Lhamaean logic preserved."
+        "comment": "LOADOUT UI: Hekatrix is treated directly as its sergeant loadout, skipping the source's normal-model starting equipment and replacement steps. The remaining nine Wyches are consolidated as Models 2-10 with 9x Splinter Pistol and 9x Hekatarii Blades. Paid Wargear is unit-level, max 2, at +10 points each. Existing Additional Leader/Lhamaean logic preserved.\nERROR TEMPLATE: leader_host_limit. The condition counts actual Associations only, so the nested Additional Leader Lhamaean is deliberately excluded and may coexist with one normally attached Leader."
       },
       {
         "type": "unit",
@@ -4873,18 +4960,6 @@
           }
         ],
         "sortIndex": 7,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "9786-16d5-6437-4acc",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -5242,7 +5317,27 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: the squad leader is presented as Acothyst and goes directly to its special melee choice, with optional Stinger Pistol. Seven ordinary Wracks are consolidated. Two separate models expose optional additional special weapons while retaining Wrack Blades."
+        "comment": "LOADOUT UI: the squad leader is presented as Acothyst and goes directly to its special melee choice, with optional Stinger Pistol. Seven ordinary Wracks are consolidated. Two separate models expose optional additional special weapons while retaining Wrack Blades.\nERROR TEMPLATE: leader_host_limit. The former stock max-1 Associations constraint is omitted and replaced by a custom player-facing error.",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Wracks has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -5687,21 +5782,27 @@
                 "childName": "Lhamaean"
               }
             ]
-          }
-        ],
-        "constraints": [
+          },
           {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "0164-6b52-e05f-f258",
-            "childId": "any",
-            "includeChildSelections": false
+            "type": "add",
+            "value": "Kabalite Trueborn has more than one Leader attached other than a Lhamaean. It may have only one attached Leader other than a Lhamaean. Remove or move one of the other attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
           }
         ],
-        "comment": "LOADOUT UI: the squad leader is Dracon and is simplified directly to pistol + melee selections. Three ordinary Trueborn are consolidated; Kabalite Trueborn 5 is the special-weapon slot. Paid Wargear uses two grenade slots."
+        "comment": "LOADOUT UI: the squad leader is Dracon and is simplified directly to pistol + melee selections. Three ordinary Trueborn are consolidated; Kabalite Trueborn 5 is the special-weapon slot. Paid Wargear uses two grenade slots.\nERROR TEMPLATE: leader_host_limit. The condition counts actual Associations only, so the nested Additional Leader Lhamaean is deliberately excluded and may coexist with one normally attached Leader."
       },
       {
         "type": "unit",
@@ -6114,21 +6215,27 @@
                 "childName": "Lhamaean"
               }
             ]
-          }
-        ],
-        "constraints": [
+          },
           {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "2a39-9572-9eb1-b0e8",
-            "childId": "any",
-            "includeChildSelections": false
+            "type": "add",
+            "value": "Hekatrix Bloodbrides has more than one Leader attached other than a Lhamaean. It may have only one attached Leader other than a Lhamaean. Remove or move one of the other attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
           }
         ],
-        "comment": "LOADOUT UI: the squad leader is Syren and goes directly to its pistol + melee choices. Four ordinary Bloodbrides are consolidated. Paid Wargear uses two grenade slots."
+        "comment": "LOADOUT UI: the squad leader is Syren and goes directly to its pistol + melee choices. Four ordinary Bloodbrides are consolidated. Paid Wargear uses two grenade slots.\nERROR TEMPLATE: leader_host_limit. The condition counts actual Associations only, so the nested Additional Leader Lhamaean is deliberately excluded and may coexist with one normally attached Leader."
       },
       {
         "type": "unit",
@@ -6164,18 +6271,6 @@
           }
         ],
         "sortIndex": 10,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "e65a-7865-0409-9e21",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -6435,7 +6530,27 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: the squad leader is Acothyst and goes directly to its special melee choice, with optional Stinger Pistol. Three ordinary Haemoxytes are consolidated; Haemoxyte 5 carries the optional additional special weapon."
+        "comment": "LOADOUT UI: the squad leader is Acothyst and goes directly to its special melee choice, with optional Stinger Pistol. Three ordinary Haemoxytes are consolidated; Haemoxyte 5 carries the optional additional special weapon.\nERROR TEMPLATE: leader_host_limit. The former stock max-1 Associations constraint is omitted and replaced by a custom player-facing error.",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Haemoxytes has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -6786,18 +6901,6 @@
           }
         ],
         "sortIndex": 13,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "cf72-a1d2-b1ca-6723",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -6906,7 +7009,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Klaivex is presented first as the squad leader, with Klaive or Demiklaives. The remaining four Incubi are consolidated as Incubi 2-5.",
+        "comment": "LOADOUT UI: Klaivex is presented first as the squad leader, with Klaive or Demiklaives. The remaining four Incubi are consolidated as Incubi 2-5.\nERROR TEMPLATE: leader_host_limit. The former stock max-1 Associations constraint is omitted and replaced by a custom player-facing error.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -6914,6 +7017,26 @@
             "hidden": false,
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Incubi has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
           }
         ]
       },
@@ -7176,18 +7299,6 @@
           }
         ],
         "sortIndex": 16,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "0ec3-5feb-7f32-8176",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -7476,7 +7587,28 @@
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
-        ]
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Grotesques has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
+        ],
+        "comment": "ERROR TEMPLATE: leader_host_limit. The former stock max-1 Associations constraint is omitted and replaced by a custom player-facing error."
       },
       {
         "type": "unit",
@@ -9016,17 +9148,6 @@
           }
         ],
         "sortIndex": 22,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "43c0-337a-b0f5-0a6f",
-            "includeChildSelections": true
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -9110,7 +9231,29 @@
               }
             ]
           }
-        ]
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Your army may include only one Tantalus because it is Rare. Remove the additional Tantalus unit(s).",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f02c-de52-82d2-f5a5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Tantalus"
+              }
+            ]
+          }
+        ],
+        "comment": "ERROR TEMPLATE: rare_limit. The stock roster max-1 selection constraint is omitted and replaced by a custom player-facing Rare-limit error."
       },
       {
         "type": "unit",
@@ -9778,6 +9921,12 @@
             "id": "d8e4-e2cf-6151-3fb2",
             "primary": false,
             "name": "Infantry"
+          },
+          {
+            "targetId": "43ec-4d99-c48e-1de7",
+            "id": "a647-65cf-8fc4-0443",
+            "primary": false,
+            "name": "Counts Toward Leader Maximum"
           }
         ],
         "selectionEntryGroups": [
@@ -9827,7 +9976,7 @@
             ]
           }
         ],
-        "comment": "NESTED UNIT DISPLAY: Lhamaean retains its own complete unit subtree when selected under an eligible host. Fixed loadout: Shaimeshi Blade."
+        "comment": "NESTED UNIT DISPLAY: Lhamaean retains its own complete unit subtree when selected under an eligible host. Fixed loadout: Shaimeshi Blade.\nLEADER CAPACITY: although selected as a nested Additional Leader, Lhamaean counts normally toward Leader Capacity. The hidden Counts Toward Leader Maximum category lets the Game System roster-wide validator count nested Lhamaeans while host attachment-limit checks continue to count Associations only."
       }
     ],
     "categoryEntries": [
@@ -9884,15 +10033,107 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
+                "childId": "b04f-22fd-c075-a049",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Roaming Performers"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "764a-b1a6-c186-a59e",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "217c-3b14-778d-b90f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Troupe Master"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Roaming Performers is missing. Harlequin units in this army require Roaming Performers to manage their availability. Add Roaming Performers back under Configuration and select Included.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b04f-22fd-c075-a049",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Roaming Performers"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Troupe Master is included while Roaming Performers is set to Not Included. Set Roaming Performers to Included or remove Troupe Master from the army.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
                 "childId": "8aff-2bab-1ce1-5300",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
+                "queryFromSelf": false,
                 "childName": "Not Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "764a-b1a6-c186-a59e",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Roaming Performers allows only one Harlequin Leader: Troupe Master or Shadowseer. Remove one of the included Harlequin Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b926-68a2-34b2-e7d5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Roaming Leader"
               }
             ]
           }
-        ]
+        ],
+        "comment": "ROAMING PERFORMERS ERROR UX: while Roaming Performers exists without Included, this choice is hidden only if this Harlequin unit is not already in the army. An already-included unit stays visible and reports a constructive Not Included error. Missing Roaming Performers and excess Roaming Leader/Troupe allowances are also validated locally so the affected Harlequin unit carries the error."
       },
       {
         "import": true,
@@ -9921,15 +10162,107 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
+                "childId": "b04f-22fd-c075-a049",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Roaming Performers"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "764a-b1a6-c186-a59e",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ba23-6f4f-cd58-a417",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Shadowseer"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Roaming Performers is missing. Harlequin units in this army require Roaming Performers to manage their availability. Add Roaming Performers back under Configuration and select Included.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b04f-22fd-c075-a049",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Roaming Performers"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Shadowseer is included while Roaming Performers is set to Not Included. Set Roaming Performers to Included or remove Shadowseer from the army.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
                 "childId": "8aff-2bab-1ce1-5300",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
+                "queryFromSelf": false,
                 "childName": "Not Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "764a-b1a6-c186-a59e",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Roaming Performers allows only one Harlequin Leader: Troupe Master or Shadowseer. Remove one of the included Harlequin Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b926-68a2-34b2-e7d5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Roaming Leader"
               }
             ]
           }
-        ]
+        ],
+        "comment": "ROAMING PERFORMERS ERROR UX: while Roaming Performers exists without Included, this choice is hidden only if this Harlequin unit is not already in the army. An already-included unit stays visible and reports a constructive Not Included error. Missing Roaming Performers and excess Roaming Leader/Troupe allowances are also validated locally so the affected Harlequin unit carries the error."
       },
       {
         "import": true,
@@ -9958,15 +10291,107 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
+                "childId": "b04f-22fd-c075-a049",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Roaming Performers"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "764a-b1a6-c186-a59e",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0263-e721-5014-6588",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Light Troupe"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Roaming Performers is missing. Harlequin units in this army require Roaming Performers to manage their availability. Add Roaming Performers back under Configuration and select Included.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b04f-22fd-c075-a049",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Roaming Performers"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Light Troupe is included while Roaming Performers is set to Not Included. Set Roaming Performers to Included or remove Light Troupe from the army.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
                 "childId": "8aff-2bab-1ce1-5300",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
+                "queryFromSelf": false,
                 "childName": "Not Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "764a-b1a6-c186-a59e",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Roaming Performers allows only one Harlequin Troupe: Light Troupe, Dark Troupe, or Twilight Troupe. Remove one of the included Harlequin Troupes.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "51b1-f9a0-378a-0ebd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Roaming Troop"
               }
             ]
           }
-        ]
+        ],
+        "comment": "ROAMING PERFORMERS ERROR UX: while Roaming Performers exists without Included, this choice is hidden only if this Harlequin unit is not already in the army. An already-included unit stays visible and reports a constructive Not Included error. Missing Roaming Performers and excess Roaming Leader/Troupe allowances are also validated locally so the affected Harlequin unit carries the error."
       },
       {
         "import": true,
@@ -9995,15 +10420,107 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
+                "childId": "b04f-22fd-c075-a049",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Roaming Performers"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "764a-b1a6-c186-a59e",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "10cc-b7dd-6b20-9193",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Dark Troupe"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Roaming Performers is missing. Harlequin units in this army require Roaming Performers to manage their availability. Add Roaming Performers back under Configuration and select Included.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b04f-22fd-c075-a049",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Roaming Performers"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Dark Troupe is included while Roaming Performers is set to Not Included. Set Roaming Performers to Included or remove Dark Troupe from the army.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
                 "childId": "8aff-2bab-1ce1-5300",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
+                "queryFromSelf": false,
                 "childName": "Not Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "764a-b1a6-c186-a59e",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Roaming Performers allows only one Harlequin Troupe: Light Troupe, Dark Troupe, or Twilight Troupe. Remove one of the included Harlequin Troupes.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "51b1-f9a0-378a-0ebd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Roaming Troop"
               }
             ]
           }
-        ]
+        ],
+        "comment": "ROAMING PERFORMERS ERROR UX: while Roaming Performers exists without Included, this choice is hidden only if this Harlequin unit is not already in the army. An already-included unit stays visible and reports a constructive Not Included error. Missing Roaming Performers and excess Roaming Leader/Troupe allowances are also validated locally so the affected Harlequin unit carries the error."
       },
       {
         "import": true,
@@ -10032,17 +10549,109 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
+                "childId": "b04f-22fd-c075-a049",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Roaming Performers"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "764a-b1a6-c186-a59e",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "5c4d-4c21-ffd4-1f5c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Twilight Troupe"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Roaming Performers is missing. Harlequin units in this army require Roaming Performers to manage their availability. Add Roaming Performers back under Configuration and select Included.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b04f-22fd-c075-a049",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Roaming Performers"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Twilight Troupe is included while Roaming Performers is set to Not Included. Set Roaming Performers to Included or remove Twilight Troupe from the army.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
                 "childId": "8aff-2bab-1ce1-5300",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
+                "queryFromSelf": false,
                 "childName": "Not Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "764a-b1a6-c186-a59e",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Roaming Performers allows only one Harlequin Troupe: Light Troupe, Dark Troupe, or Twilight Troupe. Remove one of the included Harlequin Troupes.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "51b1-f9a0-378a-0ebd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Roaming Troop"
               }
             ]
           }
-        ]
+        ],
+        "comment": "ROAMING PERFORMERS ERROR UX: while Roaming Performers exists without Included, this choice is hidden only if this Harlequin unit is not already in the army. An already-included unit stays visible and reports a constructive Not Included error. Missing Roaming Performers and excess Roaming Leader/Troupe allowances are also validated locally so the affected Harlequin unit carries the error."
       }
     ],
-    "comment": "\n\nADDITIONAL COPY COSTS\nNative non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Rare Other units retain their existing hard cap.\n\nSPECIALIST / DEFAULT-EQUIPMENT CLEANUP\nNamed champions consume model slot 1; numbering therefore continues from model 2. Kabalite Trueborn 5 and Kabalite Warriors 9-10 are treated as dedicated special-weapon models and no longer advertise Splinter Rifle. Wrack 9-10 and Haemoxyte 5 no longer expose a None choice for their special weapon. Acothyst Stinger Pistols are represented as fixed default equipment."
+    "comment": "\n\nADDITIONAL COPY COSTS\nNative non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Rare Other units retain their existing hard cap.\n\nSPECIALIST / DEFAULT-EQUIPMENT CLEANUP\nNamed champions consume model slot 1; numbering therefore continues from model 2. Kabalite Trueborn 5 and Kabalite Warriors 9-10 are treated as dedicated special-weapon models and no longer advertise Splinter Rifle. Wrack 9-10 and Haemoxyte 5 no longer expose a None choice for their special weapon. Acothyst Stinger Pistols are represented as fixed default equipment.\n\nCONSTRUCTIVE ERROR UX\nMigrated normal Leader missing-attachment errors, host attached-Leader limits, Rare copy limits, and Additional Copy Costs configuration protection to player-facing custom errors. Targets Game System revision 10 for shared Leader Capacity plus Configuration-level missing Game Size / Additional Copy Costs validation. Lhamaean remains a nested Additional Leader that may coexist with one normally attached Leader, but now explicitly carries Counts Toward Leader Maximum so nested copies count toward Leader Capacity.\n\nROAMING PERFORMERS CONSTRUCTIVE VALIDATION\nThe five Drukhari-local Harlequin entryLinks remain hidden only while the Roaming Performers Configuration entry exists and Included is not selected. If Roaming Performers is deleted while a Harlequin unit is selected, the selected unit remains visible and reports a constructive error directing the player to restore Roaming Performers and select Included. This logic is Drukhari-local; the shared Harlequins library remains unaware of Roaming Performers."
   }
 }

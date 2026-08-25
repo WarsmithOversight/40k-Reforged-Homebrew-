@@ -4,8 +4,8 @@
     "id": "4438-61cb-5073-868d",
     "name": "T'au 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 8,
-    "revision": 2,
+    "gameSystemRevision": 11,
+    "revision": 3,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -22,6 +22,12 @@
             "id": "8faf-3676-814d-f211",
             "primary": true,
             "name": "Configuration"
+          },
+          {
+            "targetId": "54e9-a5b4-e275-00c5",
+            "id": "a31f-5546-ad1c-57c0",
+            "primary": false,
+            "name": "Required Additional Copy Costs Configuration"
           }
         ],
         "infoLinks": [
@@ -31,26 +37,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "80a9-6b43-631f-5a4f"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "min",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "b619-5d11-77ff-4cc4",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "70dc-f74c-298a-a870",
-            "includeChildSelections": true
           }
         ],
         "costs": [
@@ -2693,9 +2679,28 @@
                 "childName": "TX78 Skyray Gunship"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "Additional Copy Costs is automatically managed by the listbuilder and should appear only once. Remove any extra Additional Copy Costs entries.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "fba3-604a-e5f8-a260",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Additional Copy Costs"
+              }
+            ]
           }
         ],
-        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of each native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance."
+        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of each native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance.\nCONFIGURATION VALIDATION: this entry carries the hidden Required Additional Copy Costs Configuration category so Army > Configuration in Game System revision 11 can report when it is missing. Stock roster min/max constraints are omitted. A self-owned custom error reports duplicates."
       },
       {
         "type": "unit",
@@ -3027,7 +3032,7 @@
         "sortIndex": 2,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "931f-c75c-f66b-de32",
@@ -3093,6 +3098,26 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Cadre Fireblade is not attached to a unit. It must attach to a Strike Team or Breacher Team. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -3125,7 +3150,7 @@
         "sortIndex": 3,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "3af8-4b76-bfd0-0be7",
@@ -3191,6 +3216,26 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Ethereal is not attached to a unit. It must attach to a Strike Team or Breacher Team. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -3233,18 +3278,6 @@
           }
         ],
         "sortIndex": 4,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "b6b3-7a17-21f3-c619",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -3390,7 +3423,27 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: the ten Strike Team Shas'la make one squad-wide Pulse Rifle / Pulse Carbine choice. Photon Grenade is unit-level paid wargear; the builder does not track which model carries unmodelled additive wargear."
+        "comment": "LOADOUT UI: the ten Strike Team Shas'la make one squad-wide Pulse Rifle / Pulse Carbine choice. Photon Grenade is unit-level paid wargear; the builder does not track which model carries unmodelled additive wargear.",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Strike Team has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -3432,18 +3485,6 @@
           }
         ],
         "sortIndex": 5,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "a7bc-d296-843d-3907",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -3538,7 +3579,27 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Photon Grenade is represented as unit-level paid wargear. No Shas'ui/sergeant title is introduced because there is no sergeant loadout to record."
+        "comment": "LOADOUT UI: Photon Grenade is represented as unit-level paid wargear. No Shas'ui/sergeant title is introduced because there is no sergeant loadout to record.",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Breacher Team has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -6189,6 +6250,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTau loadouts follow the fancy-notepad presentation: named Tau model nouns replace generic Model X labels, sergeant titles appear only where there is a distinct sergeant loadout, unmodelled grenade/additive wargear is unit-level, free specialist weapon slots omit ordinary fallback loadouts, Crisis Battlesuits use optional extra-model sizing, and all native non-Rare Other units use Additional Copy Costs."
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTau loadouts follow the fancy-notepad presentation: named Tau model nouns replace generic Model X labels, sergeant titles appear only where there is a distinct sergeant loadout, unmodelled grenade/additive wargear is unit-level, free specialist weapon slots omit ordinary fallback loadouts, Crisis Battlesuits use optional extra-model sizing, and all native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nT'au now use Game System revision 11. Game System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, and host Leader limits use constructive player-facing errors. Existing faction semantics remain unchanged; Ethereal continues not to count toward Leader Capacity."
   }
 }

@@ -4,8 +4,8 @@
     "id": "08ec-05e9-e427-8151",
     "name": "Tyranids 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 8,
-    "revision": 10,
+    "gameSystemRevision": 11,
+    "revision": 11,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -22,6 +22,12 @@
             "id": "803e-be1f-c1dc-eee2",
             "primary": true,
             "name": "Configuration"
+          },
+          {
+            "targetId": "54e9-a5b4-e275-00c5",
+            "id": "3f9b-b52c-1817-a599",
+            "primary": false,
+            "name": "Required Additional Copy Costs Configuration"
           }
         ],
         "infoLinks": [
@@ -31,26 +37,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "80a9-6b43-631f-5a4f"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "min",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "f49b-85c4-481d-b1e2",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "a809-9d5a-1307-eaa0",
-            "includeChildSelections": true
           }
         ],
         "costs": [
@@ -2912,6 +2898,25 @@
                 "childName": "Exocrine"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "Additional Copy Costs is automatically managed by the listbuilder and should appear only once. Remove any extra Additional Copy Costs entries.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "67ae-1994-a965-3fc4",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Additional Copy Costs"
+              }
+            ]
           }
         ],
         "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of each native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance."
@@ -3146,6 +3151,27 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Your army may have only one Hive Tyrant, Tervigon, or Neurotyrant. Remove any additional Hive Tyrant, Tervigon and/or Neurotyrant units until only one remains.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7219-19d4-c548-05f3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Hive Tyrant / Tervigon / Neurotyrant Limit"
+              }
+            ]
+          }
         ]
       },
       {
@@ -3224,100 +3250,6 @@
                 "id": "089c-fa21-0eae-9994",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 2,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "0e45-4312-a0f7-c9fc",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 2,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "72c3-f87f-0fb3-ca27",
-                    "includeChildSelections": false
-                  }
-                ],
-                "modifiers": [
-                  {
-                    "type": "decrement",
-                    "value": 1,
-                    "field": "0e45-4312-a0f7-c9fc",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 1,
-                    "field": "72c3-f87f-0fb3-ca27",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 1,
-                    "field": "0e45-4312-a0f7-c9fc",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 1,
-                    "field": "72c3-f87f-0fb3-ca27",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      }
-                    ]
-                  }
-                ],
                 "selectionEntries": [
                   {
                     "type": "unit",
@@ -3768,6 +3700,17 @@
                         "type": "set",
                         "value": "1",
                         "field": "defaultAmount"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e806-13ea-8147-1990",
+                        "includeChildSelections": false
                       }
                     ]
                   },
@@ -4230,7 +4173,20 @@
                             "shared": true,
                             "includeChildSelections": true,
                             "includeChildForces": true,
+                            "queryFromSelf": false,
                             "childName": "800 Points (Quick)"
+                          },
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "roster",
+                            "childId": "7aac-0b27-10ba-63da",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "queryFromSelf": false,
+                            "childName": "Termagants (10) - Brood 2"
                           }
                         ]
                       },
@@ -4240,17 +4196,79 @@
                         "field": "defaultAmount",
                         "conditions": [
                           {
-                            "type": "equalTo",
-                            "value": 0,
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "roster",
+                            "childId": "d0e1-6785-e168-b595",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "queryFromSelf": false,
+                            "childName": "1200 Points (Standard)"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "set",
+                        "value": "1",
+                        "field": "defaultAmount",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "roster",
+                            "childId": "91f0-51d4-3148-07c8",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "queryFromSelf": false,
+                            "childName": "1600 Points (Long)"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "add",
+                        "value": "Termagants (10) - Brood 2 is included, but Living Incubator grants only one Termagant brood at 800 Points. Remove Brood 2 or choose a larger Game Size.",
+                        "field": "error",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
                             "field": "selections",
                             "scope": "roster",
                             "childId": "0b81-3579-ad7e-49b2",
                             "shared": true,
                             "includeChildSelections": true,
                             "includeChildForces": true,
+                            "queryFromSelf": false,
                             "childName": "800 Points (Quick)"
+                          },
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "roster",
+                            "childId": "7aac-0b27-10ba-63da",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "queryFromSelf": false,
+                            "childName": "Termagants (10) - Brood 2"
                           }
                         ]
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "660c-017d-7301-4540",
+                        "includeChildSelections": false
                       }
                     ]
                   },
@@ -4705,15 +4723,28 @@
                         "field": "hidden",
                         "conditions": [
                           {
-                            "type": "equalTo",
-                            "value": 0,
+                            "type": "lessThan",
+                            "value": 1,
                             "field": "selections",
                             "scope": "roster",
                             "childId": "91f0-51d4-3148-07c8",
                             "shared": true,
                             "includeChildSelections": true,
                             "includeChildForces": true,
+                            "queryFromSelf": false,
                             "childName": "1600 Points (Long)"
+                          },
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "roster",
+                            "childId": "9321-d2e9-a8ee-8371",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "queryFromSelf": false,
+                            "childName": "Termagants (10) - Brood 3"
                           }
                         ]
                       },
@@ -4731,9 +4762,83 @@
                             "shared": true,
                             "includeChildSelections": true,
                             "includeChildForces": true,
+                            "queryFromSelf": false,
                             "childName": "1600 Points (Long)"
                           }
                         ]
+                      },
+                      {
+                        "type": "add",
+                        "value": "Termagants (10) - Brood 3 is included, but Living Incubator grants a third Termagant brood only at 1600 Points. Remove Brood 3 or select 1600 Points.",
+                        "field": "error",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "roster",
+                            "childId": "0b81-3579-ad7e-49b2",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "queryFromSelf": false,
+                            "childName": "800 Points (Quick)"
+                          },
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "roster",
+                            "childId": "9321-d2e9-a8ee-8371",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "queryFromSelf": false,
+                            "childName": "Termagants (10) - Brood 3"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "add",
+                        "value": "Termagants (10) - Brood 3 is included, but Living Incubator grants a third Termagant brood only at 1600 Points. Remove Brood 3 or select 1600 Points.",
+                        "field": "error",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "roster",
+                            "childId": "d0e1-6785-e168-b595",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "queryFromSelf": false,
+                            "childName": "1200 Points (Standard)"
+                          },
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "roster",
+                            "childId": "9321-d2e9-a8ee-8371",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "queryFromSelf": false,
+                            "childName": "Termagants (10) - Brood 3"
+                          }
+                        ]
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2e84-70a1-7038-a4e6",
+                        "includeChildSelections": false
                       }
                     ]
                   }
@@ -4789,6 +4894,139 @@
                   }
                 ],
                 "defaultSelectionEntryId": "16dc-dafb-2ea4-5579"
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Your army may have only one Hive Tyrant, Tervigon, or Neurotyrant. Remove any additional Hive Tyrant, Tervigon and/or Neurotyrant units until only one remains.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7219-19d4-c548-05f3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Hive Tyrant / Tervigon / Neurotyrant Limit"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Living Incubator requires at least one free Termagant brood. Add Brood 1 under Living Incubator.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "ccfb-5431-8da4-752a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Termagants (10) - Brood 1"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Living Incubator requires two free Termagant broods at 1200 Points. Add Brood 2 under Living Incubator.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7aac-0b27-10ba-63da",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Termagants (10) - Brood 2"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Living Incubator requires three free Termagant broods at 1600 Points. Add Brood 2 under Living Incubator.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7aac-0b27-10ba-63da",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Termagants (10) - Brood 2"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "Living Incubator requires three free Termagant broods at 1600 Points. Add Brood 3 under Living Incubator.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9321-d2e9-a8ee-8371",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Termagants (10) - Brood 3"
               }
             ]
           }
@@ -4932,7 +5170,28 @@
             ]
           }
         ],
-        "comment": "PHASE 0.1 COMPILER NOTE: UUS marks this as a counted Leader, but generic counted-Leader enforcement is omitted here because the faction-specific rule 'Your army list may have only one HIVE TYRANT or TERVIGON or NEUROTYRANT.' is strictly stronger for the current faction roster. Rare remains descriptive; its local max-1 constraint is likewise redundant and omitted."
+        "comment": "PHASE 0.1 COMPILER NOTE: UUS marks this as a counted Leader, but generic counted-Leader enforcement is omitted here because the faction-specific rule 'Your army list may have only one HIVE TYRANT or TERVIGON or NEUROTYRANT.' is strictly stronger for the current faction roster. Rare remains descriptive; its local max-1 constraint is likewise redundant and omitted.",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Your army may have only one Hive Tyrant, Tervigon, or Neurotyrant. Remove any additional Hive Tyrant, Tervigon and/or Neurotyrant units until only one remains.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7219-19d4-c548-05f3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Hive Tyrant / Tervigon / Neurotyrant Limit"
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -7713,17 +7972,6 @@
           }
         ],
         "sortIndex": 20,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "f16c-8369-05a8-051a",
-            "includeChildSelections": true
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -7818,6 +8066,27 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Your army may include only one Trygon because it is Rare. Remove the additional Trygon unit(s).",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a9a-eff7-996a-41b9",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Trygon"
+              }
+            ]
+          }
         ]
       },
       {
@@ -7854,17 +8123,6 @@
           }
         ],
         "sortIndex": 21,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "d1c9-8937-412d-a94c",
-            "includeChildSelections": true
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -7941,6 +8199,27 @@
                   }
                 ],
                 "defaultSelectionEntryId": "aa20-6dc0-ef22-63f8"
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Your army may include only one Mawloc because it is Rare. Remove the additional Mawloc unit(s).",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "4852-02af-0d5d-0a89",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Mawloc"
               }
             ]
           }
@@ -8199,17 +8478,7 @@
       {
         "name": "Hive Tyrant / Tervigon / Neurotyrant Limit",
         "id": "7219-19d4-c548-05f3",
-        "hidden": true,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "parent",
-            "shared": true,
-            "id": "033d-bc3a-d488-d525"
-          }
-        ]
+        "hidden": true
       }
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
@@ -8243,55 +8512,6 @@
           }
         ],
         "sortIndex": 4,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 2,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "416e-fa1c-9c88-7333",
-            "includeChildSelections": true
-          }
-        ],
-        "modifiers": [
-          {
-            "type": "decrement",
-            "value": 1,
-            "field": "416e-fa1c-9c88-7333",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "0b81-3579-ad7e-49b2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "800 Points (Quick)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "416e-fa1c-9c88-7333",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "91f0-51d4-3148-07c8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "1600 Points (Long)"
-              }
-            ]
-          }
-        ],
         "rules": [
           {
             "name": "Attachment Requirement",
@@ -8585,6 +8805,6 @@
         "comment": "LOADOUT UI: the Warrior is represented as two final-state arm-pair lists. Each arm pair can record one melee package or one ranged bio-weapon.\nNESTED COUNTLESS LEADER: Warrior is no longer a root Leader selection. Eligible Hormagaunt and Termagant units offer it through an Additional Leader box. It remains Countless and does not consume Leader capacity."
       }
     ],
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTyranids now use the final-state fancy-notepad loadout grammar. Hive Tyrant Wings are inline loadout alternatives; Warrior and Warrior Brood use two arm-pair lists; Termagants 1-7 use one shared ordinary weapon slot while 8-10 are paid specialist slots. Ripper Swarms, Hive Guard, and Tyrant Guard use variable-size controls. All native non-Rare Other units use Additional Copy Costs. The existing Tervigon Living Incubator free-Termagant TODO remains intentionally untouched.\n\nRIPPER SWARM VARIABLE-SIZE UI FIX\nRipper Swarms now use one quantity-style +20 Point Additional Model entry capped at two, rather than separate Ripper Swarm 5 and Ripper Swarm 6 model subtrees.\n\nRIPPER SWARM ADDITIONAL-MODEL UI CORRECTION\nRipper Swarms now use the same max-1 optional-model radio pattern as Hive Guard. Ripper Swarm 5 is the first optional +20 model; when selected it exposes Ripper Swarm 6 as a second optional +20 model.\n\nTERVIGON LIVING INCUBATOR IMPLEMENTATION\nLiving Incubator now uses required Tervigon-to-Termagant associations: 1 brood at 800, 2 at 1200, 3 at 1600. Associated Termagant units and their paid specialist weapons cost 0 Points. The full Living Incubator rule text is displayed on the Tervigon.\n\nTERVIGON HIDDEN-ASSOCIATION MINIMUM FIX\nLiving Incubator association slots now have min 0 individually. A single dynamic association-count constraint enforces 1 / 2 / 3 attached broods by Game Size, preventing hidden Brood 3 from generating a phantom requirement at 1200 Points.\n\nTERVIGON DISTINCT-BROOD PICKER FIX\nLiving Incubator now uses one game-size-specific multi-select association picker rather than separate Brood 1/2/3 pickers. Each Termagant unit appears once, so the same unit cannot be selected for multiple granted broods.\n\nTERVIGON PLAYER-FACING ERROR MESSAGE\nReplaced New Recruit's generic 'requires N associations more' minimum error with explicit Living Incubator errors for 800 / 1200 / 1600 Points. The messages tell the player how many free Termagant broods are required, to add Termagant units first, where to select them, and that the selected broods cost 0 Points.\n\nTERVIGON AUTO-GRANTED BROODS PROTOTYPE\nLiving Incubator now prototypes Neuroloid-style nested Termagant broods. The Tervigon automatically selects 1 / 2 / 3 zero-point brood units according to Game Size. Each brood preserves the normal Warrior attachment category so nested association targeting can be tested.\n\nNESTED WARRIOR COUNTLESS LEADER\nWarrior has been removed from the root Leader section and moved into sharedSelectionEntries. Hormagaunts, normal Termagants, and Tervigon-granted Termagant broods now expose Warrior through an Additional Leader box, matching the proven nested Nob-style architecture."
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTyranids now use the final-state fancy-notepad loadout grammar. Hive Tyrant Wings are inline loadout alternatives; Warrior and Warrior Brood use two arm-pair lists; Termagants 1-7 use one shared ordinary weapon slot while 8-10 are paid specialist slots. Ripper Swarms, Hive Guard, and Tyrant Guard use variable-size controls. All native non-Rare Other units use Additional Copy Costs. The existing Tervigon Living Incubator free-Termagant TODO remains intentionally untouched.\n\nRIPPER SWARM VARIABLE-SIZE UI FIX\nRipper Swarms now use one quantity-style +20 Point Additional Model entry capped at two, rather than separate Ripper Swarm 5 and Ripper Swarm 6 model subtrees.\n\nRIPPER SWARM ADDITIONAL-MODEL UI CORRECTION\nRipper Swarms now use the same max-1 optional-model radio pattern as Hive Guard. Ripper Swarm 5 is the first optional +20 model; when selected it exposes Ripper Swarm 6 as a second optional +20 model.\n\nTERVIGON LIVING INCUBATOR IMPLEMENTATION\nLiving Incubator now uses required Tervigon-to-Termagant associations: 1 brood at 800, 2 at 1200, 3 at 1600. Associated Termagant units and their paid specialist weapons cost 0 Points. The full Living Incubator rule text is displayed on the Tervigon.\n\nTERVIGON HIDDEN-ASSOCIATION MINIMUM FIX\nLiving Incubator association slots now have min 0 individually. A single dynamic association-count constraint enforces 1 / 2 / 3 attached broods by Game Size, preventing hidden Brood 3 from generating a phantom requirement at 1200 Points.\n\nTERVIGON DISTINCT-BROOD PICKER FIX\nLiving Incubator now uses one game-size-specific multi-select association picker rather than separate Brood 1/2/3 pickers. Each Termagant unit appears once, so the same unit cannot be selected for multiple granted broods.\n\nTERVIGON PLAYER-FACING ERROR MESSAGE\nReplaced New Recruit's generic 'requires N associations more' minimum error with explicit Living Incubator errors for 800 / 1200 / 1600 Points. The messages tell the player how many free Termagant broods are required, to add Termagant units first, where to select them, and that the selected broods cost 0 Points.\n\nTERVIGON AUTO-GRANTED BROODS PROTOTYPE\nLiving Incubator now prototypes Neuroloid-style nested Termagant broods. The Tervigon automatically selects 1 / 2 / 3 zero-point brood units according to Game Size. Each brood preserves the normal Warrior attachment category so nested association targeting can be tested.\n\nNESTED WARRIOR COUNTLESS LEADER\nWarrior has been removed from the root Leader section and moved into sharedSelectionEntries. Hormagaunts, normal Termagants, and Tervigon-granted Termagant broods now expose Warrior through an Additional Leader box, matching the proven nested Nob-style architecture.\n\nREV11 CONSTRUCTIVE VALIDATION MIGRATION\nTargets Game System revision 11. Additional Copy Costs uses the current required-configuration semantic tag and self-owned duplicate warning. Trygon and Mawloc Rare limits are constructive. The Hive Tyrant / Tervigon / Neurotyrant shared restriction is now self-monitored by those units rather than enforced by a hidden-category stock max. The obsolete Neuroloid roster cap is removed. Living Incubator no longer uses dynamic stock exact-count constraints: each granted brood is max one, Brood 2/3 use selected-safe visibility across Game Size changes, and Tervigon/Brood entries provide constructive missing/invalid-brood errors. Nested Warrior architecture is unchanged."
   }
 }

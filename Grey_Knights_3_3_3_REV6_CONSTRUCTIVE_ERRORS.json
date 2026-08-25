@@ -4,8 +4,8 @@
     "id": "e302-e9cb-153a-d0da",
     "name": "Grey Knights 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 6,
-    "revision": 5,
+    "gameSystemRevision": 11,
+    "revision": 6,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -22,6 +22,12 @@
             "id": "6712-a6dd-aabf-32c9",
             "primary": true,
             "name": "Configuration"
+          },
+          {
+            "targetId": "54e9-a5b4-e275-00c5",
+            "id": "d203-5675-ab38-e6b9",
+            "primary": false,
+            "name": "Required Additional Copy Costs Configuration"
           }
         ],
         "infoLinks": [
@@ -31,26 +37,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "80a9-6b43-631f-5a4f"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "min",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "d9f5-6b36-e93b-5b12",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "94e6-47dc-f448-c4ca",
-            "includeChildSelections": true
           }
         ],
         "costs": [
@@ -1598,9 +1584,28 @@
                 "childName": "Grey Knight Dreadnought"
               }
             ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Additional Copy Costs is automatically managed by the listbuilder and should appear only once. Remove any extra Additional Copy Costs entries.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1ec1-02ee-ec04-10a5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Additional Copy Costs"
+              }
+            ]
           }
         ],
-        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of each native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance."
+        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of each native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance.\nCONFIGURATION VALIDATION: Game System revision 11 handles a missing Additional Copy Costs entry through Army > Configuration. This entry carries the hidden required-configuration category and self-reports duplicates. Existing copy-cost arithmetic is unchanged."
       },
       {
         "type": "unit",
@@ -1638,7 +1643,7 @@
         "sortIndex": 1,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "0dbf-7cb3-8af9-d5dc",
@@ -1755,6 +1760,26 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Grand Master is not attached to a unit. It must attach to a Grey Knight Terminator or Grey Knight Paladin. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -1793,7 +1818,7 @@
         "sortIndex": 2,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "49f7-8643-2d07-669a",
@@ -1910,6 +1935,26 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Brother-Captain is not attached to a unit. It must attach to a Grey Knight Terminator or Grey Knight Paladin. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -1948,7 +1993,7 @@
         "sortIndex": 3,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "99cd-bae7-b206-1280",
@@ -2057,6 +2102,26 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Grey Knight Librarian is not attached to a unit. It must attach to a Grey Knight Terminator or Grey Knight Paladin. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -2099,20 +2164,9 @@
           }
         ],
         "sortIndex": 4,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "1a71-e492-e428-b327",
-            "includeChildSelections": true
-          }
-        ],
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "9189-08a0-7ce1-21e9",
@@ -2210,6 +2264,45 @@
                   }
                 ],
                 "defaultSelectionEntryId": "9487-b64b-4473-ea6f"
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Grey Knight Chaplain is not attached to a unit. It must attach to a Grey Knight Terminator or Grey Knight Paladin. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Grey Knight Chaplain because it is Rare. Remove the additional Grey Knight Chaplain unit(s).",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7637-44da-03b4-8e8a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Grey Knight Chaplain"
               }
             ]
           }
@@ -2691,18 +2784,6 @@
           }
         ],
         "sortIndex": 6,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "cf48-1667-327b-9af0",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -2896,6 +2977,26 @@
                     ]
                   }
                 ]
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Grey Knight Terminator has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
               }
             ]
           }
@@ -3320,18 +3421,6 @@
           }
         ],
         "sortIndex": 8,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "e185-907f-8169-08c2",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -3496,6 +3585,26 @@
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Grey Knight Paladin has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -3532,7 +3641,7 @@
           }
         ],
         "sortIndex": 9,
-        "comment": "VARIABLE UNIT SIZE: the root represents the mandatory 2-model minimum at 100 Points. Grey Knight Interceptor 3 is an optional +50 Point model. Interceptor loadout remains intentionally deferred.\nLOADOUT UI: Grey Knight Interceptors use the same specialist presentation as the Strike/Purifier pattern: Model 1 is the Justicar with Storm Bolter + Daemon Hammer, Model 2 is heavy-weapons only (Psycannon / Psilencer / Incinerator), and optional Model 3 is an ordinary Interceptor with Storm Bolter + Force Weapon / Force Falchions or +10 Force Stave.",
+        "comment": "VARIABLE UNIT SIZE: the root represents the mandatory 2-model minimum at 100 Points. Grey Knight Interceptor 3 is an optional +50 Point model. \nLOADOUT UI: Grey Knight Interceptors use the same specialist presentation as the Strike/Purifier pattern: Model 1 is the Justicar with Storm Bolter + Daemon Hammer, Model 2 is heavy-weapons only (Psycannon / Psilencer / Incinerator), and optional Model 3 is an ordinary Interceptor with Storm Bolter + Force Weapon / Force Falchions or +10 Force Stave.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -4903,6 +5012,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "PHASE 0.1 GREY KNIGHTS. All 13 source datasheets are selectable. All four Leaders consume Leader capacity and use the standard attachment primitive, attaching to either GREY KNIGHT TERMINATOR or GREY KNIGHT PALADIN. Grey Knight Chaplain is Rare. Variable-size units are represented at minimum legal size until model-count selection enters scope.\n\nLOADOUT + ADDITIONAL COPY COST PASS\nLoadouts implemented for all native Grey Knights units except Grey Knight Interceptors, which are intentionally deferred for a follow-up design discussion. All native non-Rare Other units, including Interceptors, use the soft 1/2/3 Additional Copy Cost system.\n\nVARIABLE UNIT SIZE PASS\nVariable-size squads now use the canonical minimum-size-root + optional-extra-model pattern. Strike Squad is 3+1, Purifiers 2+1, Purgation Squad 2+1, and Interceptors 2+1. Extra models carry their own cost and loadout subtree where loadouts are implemented. Interceptor loadout remains deferred.\n\nPURIFIER / INTERCEPTOR SPECIALIST CLEANUP\nPurifier 2 now advertises only heavy weapons. Interceptor loadout is implemented: Justicar, heavy-only model 2, and optional normal model 3 with paid Force Stave.\n\nSTRIKE SQUAD SPECIALIST CLEANUP\nGrey Knight Strike Squad model 3 is now presented only as the dedicated heavy-weapons model (Psycannon / Psilencer / Incinerator). Ordinary Storm Bolter alternatives are intentionally omitted."
+    "comment": "PHASE 0.1 GREY KNIGHTS. All 13 source datasheets are selectable. All four Leaders consume Leader capacity and use the standard attachment primitive, attaching to either GREY KNIGHT TERMINATOR or GREY KNIGHT PALADIN. Grey Knight Chaplain is Rare. Variable-size units are represented at minimum legal size until model-count selection enters scope.\n\nLOADOUT + ADDITIONAL COPY COST PASS\nLoadouts implemented for all native Grey Knights units. All native non-Rare Other units, including Interceptors, use the soft 1/2/3 Additional Copy Cost system.\n\nVARIABLE UNIT SIZE PASS\nVariable-size squads now use the canonical minimum-size-root + optional-extra-model pattern. Strike Squad is 3+1, Purifiers 2+1, Purgation Squad 2+1, and Interceptors 2+1. Extra models carry their own cost and loadout subtree where loadouts are implemented. Interceptor loadout remains deferred.\n\nPURIFIER / INTERCEPTOR SPECIALIST CLEANUP\nPurifier 2 now advertises only heavy weapons. Interceptor loadout is implemented: Justicar, heavy-only model 2, and optional normal model 3 with paid Force Stave.\n\nSTRIKE SQUAD SPECIALIST CLEANUP\nGrey Knight Strike Squad model 3 is now presented only as the dedicated heavy-weapons model (Psycannon / Psilencer / Incinerator). Ordinary Storm Bolter alternatives are intentionally omitted.\n\nCONSTRUCTIVE ERROR MIGRATION\nGrey Knights now use Game System revision 11. Additional Copy Costs, mandatory Leader attachments, Terminator/Paladin host Leader limits, and the Grey Knight Chaplain Rare restriction use constructive player-facing validation. Existing loadouts, variable-size structures, points, Leader Capacity semantics, and Additional Copy Costs arithmetic are otherwise unchanged."
   }
 }

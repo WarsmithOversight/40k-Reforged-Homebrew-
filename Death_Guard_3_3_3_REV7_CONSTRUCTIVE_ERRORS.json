@@ -4,8 +4,8 @@
     "id": "7d72-e3cf-effb-2772",
     "name": "Death Guard 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 6,
-    "revision": 6,
+    "gameSystemRevision": 11,
+    "revision": 7,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -58,6 +58,12 @@
             "id": "7b63-bb41-f2cf-52d3",
             "primary": true,
             "name": "Configuration"
+          },
+          {
+            "targetId": "54e9-a5b4-e275-00c5",
+            "id": "03b5-2b3c-569f-49e5",
+            "primary": false,
+            "name": "Required Additional Copy Costs Configuration"
           }
         ],
         "infoLinks": [
@@ -67,26 +73,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "80a9-6b43-631f-5a4f"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "min",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "809d-cae8-10fe-9cda",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "4b49-7a8e-b5ca-4b00",
-            "includeChildSelections": true
           }
         ],
         "costs": [
@@ -1415,9 +1401,28 @@
                 "childName": "Plagueburst Crawler"
               }
             ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Additional Copy Costs is automatically managed by the listbuilder and should appear only once. Remove any extra Additional Copy Costs entries.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2e63-e696-6806-1818",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Additional Copy Costs"
+              }
+            ]
           }
         ],
-        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of every native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance. Player-facing wording is linked from the canonical Game System shared rule."
+        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of every native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance. Player-facing wording is linked from the canonical Game System shared rule.\nCONFIGURATION VALIDATION: Game System revision 11 handles a missing Additional Copy Costs entry through Army > Configuration. This entry carries the hidden required-configuration category and self-reports duplicates. Existing copy-cost arithmetic is unchanged."
       },
       {
         "type": "unit",
@@ -1459,17 +1464,6 @@
           }
         ],
         "sortIndex": 1,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "8779-a468-ae9f-e920",
-            "includeChildSelections": true
-          }
-        ],
         "rules": [
           {
             "name": "Leader Attachment",
@@ -1533,6 +1527,27 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Lord of Contagion because it is Rare. Remove the additional Lord of Contagion unit(s).",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "4297-5321-6d30-9c39",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Lord of Contagion"
+              }
+            ]
+          }
         ]
       },
       {
@@ -1575,17 +1590,6 @@
           }
         ],
         "sortIndex": 2,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "ce70-998a-ef4e-ecc1",
-            "includeChildSelections": true
-          }
-        ],
         "rules": [
           {
             "name": "Leader Attachment",
@@ -1675,6 +1679,27 @@
                   }
                 ],
                 "defaultSelectionEntryId": "4ad6-a8ac-4951-5229"
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Lord of Virulence because it is Rare. Remove the additional Lord of Virulence unit(s).",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "4239-c1e3-61a5-e1f7",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Lord of Virulence"
               }
             ]
           }
@@ -1973,7 +1998,7 @@
         "sortIndex": 4,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "d86a-50d9-37b3-543f",
@@ -2211,7 +2236,7 @@
                     "modifiers": [
                       {
                         "type": "add",
-                        "value": "ARSENAL PLACEHOLDER: Glorious Jump Pack requires RAPTORS. The Chaos Space Marines reusable library target is not yet linked in this Phase 0.1 file.",
+                        "value": "Glorious Jump Pack requires the Death Guard Chaos Lord to attach to Raptors, but Raptors are not yet available in this listbuilder. Remove Glorious Jump Pack.",
                         "field": "error"
                       }
                     ],
@@ -2232,7 +2257,39 @@
             "noindex": false
           }
         ],
-        "comment": "PHASE 0.1 ARSENAL PLACEHOLDER: the verbatim attachment rule includes LEGIONARIES, CULTISTS, CHOSEN, BREACHER SIEGE SQUAD, and HAVOCS from the future Chaos Space Marines reusable library. Only SEPTIC PLAGUE MARINES and INEXORABLE PLAGUE MARINES are mechanically resolvable in this native-only file.\nLOADOUT UI: the PDF's separate 'replace all its weapons with Lightning Claws' branch is intentionally not represented. Lightning Claw appears in both exclusive weapon lists; selecting it in both represents the double-claw loadout."
+        "comment": "PHASE 0.1 ARSENAL PLACEHOLDER: the verbatim attachment rule includes LEGIONARIES, CULTISTS, CHOSEN, BREACHER SIEGE SQUAD, and HAVOCS from the future Chaos Space Marines reusable library. Only SEPTIC PLAGUE MARINES and INEXORABLE PLAGUE MARINES are mechanically resolvable in this native-only file.\nLOADOUT UI: the PDF's separate 'replace all its weapons with Lightning Claws' branch is intentionally not represented. Lightning Claw appears in both exclusive weapon lists; selecting it in both represents the double-claw loadout.",
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Death Guard Chaos Lord is not attached to a unit. It must attach to an eligible unit. Septic Plague Marines and Inexorable Plague Marines are currently available as attachment targets. Add one if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "49ad-6911-9de4-1112",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "queryFromSelf": false,
+                "childName": "Glorious Jump Pack"
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -2274,20 +2331,9 @@
           }
         ],
         "sortIndex": 5,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "fdd9-3951-68fd-e36c",
-            "includeChildSelections": true
-          }
-        ],
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "ea95-fa37-7d74-d3f0",
@@ -2434,6 +2480,45 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Foul Blightspawn is not attached to a unit. It must attach to Septic Plague Marines or Inexorable Plague Marines. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Foul Blightspawn because it is Rare. Remove the additional Foul Blightspawn unit(s).",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0666-4c0c-3cb9-586e",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Foul Blightspawn"
+              }
+            ]
+          }
         ]
       },
       {
@@ -2476,20 +2561,9 @@
           }
         ],
         "sortIndex": 6,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "4ee8-5ac4-2d2d-d416",
-            "includeChildSelections": true
-          }
-        ],
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "660e-4340-3170-4d66",
@@ -2594,6 +2668,45 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Plague Surgeon is not attached to a unit. It must attach to Septic Plague Marines or Inexorable Plague Marines. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Plague Surgeon because it is Rare. Remove the additional Plague Surgeon unit(s).",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "83ad-6a8a-9f7b-c7ac",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Plague Surgeon"
+              }
+            ]
+          }
         ]
       },
       {
@@ -2636,20 +2749,9 @@
           }
         ],
         "sortIndex": 7,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "2cc3-5672-0aa8-2540",
-            "includeChildSelections": true
-          }
-        ],
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "a107-2ba1-8978-0e55",
@@ -2833,6 +2935,45 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Biologus Putrifier is not attached to a unit. It must attach to Septic Plague Marines or Inexorable Plague Marines. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Biologus Putrifier because it is Rare. Remove the additional Biologus Putrifier unit(s).",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "84aa-bc98-0b78-f4f7",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Biologus Putrifier"
+              }
+            ]
+          }
         ]
       },
       {
@@ -2875,20 +3016,9 @@
           }
         ],
         "sortIndex": 8,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "59cc-c82f-3997-01be",
-            "includeChildSelections": true
-          }
-        ],
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "6ce7-f583-feae-cc86",
@@ -2993,6 +3123,45 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Malignant Plaguecaster is not attached to a unit. It must attach to Septic Plague Marines or Inexorable Plague Marines. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Malignant Plaguecaster because it is Rare. Remove the additional Malignant Plaguecaster unit(s).",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "7039-5a4e-0d34-a071",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Malignant Plaguecaster"
+              }
+            ]
+          }
         ]
       },
       {
@@ -3035,20 +3204,9 @@
           }
         ],
         "sortIndex": 9,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "c92a-f46e-6329-ab1c",
-            "includeChildSelections": true
-          }
-        ],
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "98e5-aa59-df59-27fc",
@@ -3153,6 +3311,45 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Noxious Blightbringer is not attached to a unit. It must attach to Septic Plague Marines or Inexorable Plague Marines. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Noxious Blightbringer because it is Rare. Remove the additional Noxious Blightbringer unit(s).",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b0ba-5bbc-a6c0-ebee",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Noxious Blightbringer"
+              }
+            ]
+          }
         ]
       },
       {
@@ -3195,20 +3392,9 @@
           }
         ],
         "sortIndex": 10,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "4a4e-d174-0e07-b87e",
-            "includeChildSelections": true
-          }
-        ],
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "1967-06e6-6438-b419",
@@ -3313,6 +3499,45 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Tallyman is not attached to a unit. It must attach to Septic Plague Marines or Inexorable Plague Marines. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one Tallyman because it is Rare. Remove the additional Tallyman unit(s).",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "94e6-24dc-a7fb-63b1",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Tallyman"
+              }
+            ]
+          }
         ]
       },
       {
@@ -3385,18 +3610,6 @@
           }
         ],
         "sortIndex": 11,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "99d4-3dc9-2903-d8a5",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -3763,7 +3976,27 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Dual Bubotic Weapons is a +10 inline replacement option only on Septic Plague Marine 1 and 2. Model 3 is reserved for the special-weapon loadout and does not receive this paid replacement.\nLOADOUT UI: Septic Plague Marine 3 is treated as a dedicated special-weapon model. It presents only Blight Launcher, Plague Spewer, Flail of Corruption, Great Plague Cleaver, Meltagun, Plasma Gun, or Plague Belcher loadouts. Default Plague Marine equipment is intentionally omitted."
+        "comment": "LOADOUT UI: Dual Bubotic Weapons is a +10 inline replacement option only on Septic Plague Marine 1 and 2. Model 3 is reserved for the special-weapon loadout and does not receive this paid replacement.\nLOADOUT UI: Septic Plague Marine 3 is treated as a dedicated special-weapon model. It presents only Blight Launcher, Plague Spewer, Flail of Corruption, Great Plague Cleaver, Meltagun, Plasma Gun, or Plague Belcher loadouts. Default Plague Marine equipment is intentionally omitted.",
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Septic Plague Marines has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -3835,18 +4068,6 @@
           }
         ],
         "sortIndex": 12,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "03d2-b754-bab9-4751",
-            "childId": "any",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -4319,7 +4540,27 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Dual Bubotic Weapons is a +10 inline replacement option only on Inexorable Plague Marine 2. The Inexorable Champion and special-weapon models 3-4 do not receive it. Special-weapon models 3 and 4 may select the same special weapon; the earlier different-weapon restriction was a source typo and is intentionally not enforced.\nLOADOUT UI: Inexorable Plague Marines 3 and 4 are treated as dedicated special-weapon models. They present only Blight Launcher, Plague Spewer, Flail of Corruption, Great Plague Cleaver, Meltagun, Plasma Gun, or Plague Belcher loadouts. Default Plague Marine equipment is intentionally omitted. Both special models may choose the same weapon."
+        "comment": "LOADOUT UI: Dual Bubotic Weapons is a +10 inline replacement option only on Inexorable Plague Marine 2. The Inexorable Champion and special-weapon models 3-4 do not receive it. Special-weapon models 3 and 4 may select the same special weapon; the earlier different-weapon restriction was a source typo and is intentionally not enforced.\nLOADOUT UI: Inexorable Plague Marines 3 and 4 are treated as dedicated special-weapon models. They present only Blight Launcher, Plague Spewer, Flail of Corruption, Great Plague Cleaver, Meltagun, Plasma Gun, or Plague Belcher loadouts. Default Plague Marine equipment is intentionally omitted. Both special models may choose the same weapon.",
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Inexorable Plague Marines has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -6106,6 +6347,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "PHASE 0.1 DEATH GUARD. All 19 source datasheets are selectable and fixed-size. All 10 printed Leaders consume Leader capacity. Great Traitors’ Arsenal is an optional, unchecked Configuration placeholder until the reusable Chaos Space Marines library is wired. Death Guard Chaos Lord resolves only native Plague Marine attachment targets in this file; external CSM hosts and RAPTORS remain explicit placeholders rather than invented local units.\n\nCOMPLETE LOADOUT UI PASS: all native Death Guard units now expose fixed equipment, loadout choices, special weapon choices, and paid wargear. Great Traitors’ Arsenal remains a Phase 0.1 placeholder. Composition / copy-cap mechanics are unchanged in this pass.\n\nADDITIONAL COPY COSTS\nAll native non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Affected units link to the canonical Game System unit-reminder rule.\n\nDUAL BUBOTIC WEAPONS FIX\nFor Septic Plague Marines, Inexorable Plague Marines, and Plague Marine Infestors, Dual Bubotic Weapons is now a +10 inline loadout replacement on each eligible non-Champion model. The previous unit-level two-slot Paid Wargear representation was removed. Max 2 per squad is enforced structurally.\n\nDUAL BUBOTIC ELIGIBILITY FIX\nSeptic Plague Marines: Dual Bubotic Weapons only on models 1-2. Inexorable Plague Marines: only on model 2. Plague Marine Infestors: only on models 1-2. Inexorable special-weapon models 3-4 may duplicate the same special weapon; the previous different-weapon restriction is not enforced.\n\nPLAGUE MARINE SPECIALIST CLEANUP\nSeptic model 3, Inexorable models 3-4, and Infestor model 3 are now presented purely as dedicated special-weapon models. Default Plague Marine loadouts are intentionally omitted."
+    "comment": "PHASE 0.1 DEATH GUARD. All 19 source datasheets are selectable and fixed-size. All 10 printed Leaders consume Leader capacity. Great Traitors’ Arsenal is an optional, unchecked Configuration placeholder until the reusable Chaos Space Marines library is wired. Death Guard Chaos Lord resolves only native Plague Marine attachment targets in this file; external CSM hosts and RAPTORS remain explicit placeholders rather than invented local units.\n\nCOMPLETE LOADOUT UI PASS: all native Death Guard units now expose fixed equipment, loadout choices, special weapon choices, and paid wargear. Great Traitors’ Arsenal remains a Phase 0.1 placeholder. Composition / copy-cap mechanics are unchanged in this pass.\n\nADDITIONAL COPY COSTS\nAll native non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Affected units link to the canonical Game System unit-reminder rule.\n\nDUAL BUBOTIC WEAPONS FIX\nFor Septic Plague Marines, Inexorable Plague Marines, and Plague Marine Infestors, Dual Bubotic Weapons is now a +10 inline loadout replacement on each eligible non-Champion model. The previous unit-level two-slot Paid Wargear representation was removed. Max 2 per squad is enforced structurally.\n\nDUAL BUBOTIC ELIGIBILITY FIX\nSeptic Plague Marines: Dual Bubotic Weapons only on models 1-2. Inexorable Plague Marines: only on model 2. Plague Marine Infestors: only on models 1-2. Inexorable special-weapon models 3-4 may duplicate the same special weapon; the previous different-weapon restriction is not enforced.\n\nPLAGUE MARINE SPECIALIST CLEANUP\nSeptic model 3, Inexorable models 3-4, and Infestor model 3 are now presented purely as dedicated special-weapon models. Default Plague Marine loadouts are intentionally omitted.\n\nCONSTRUCTIVE ERROR MIGRATION\nDeath Guard now use Game System revision 11. Additional Copy Costs, mandatory native Leader attachments, Plague Marine host Leader limits, and Rare limits use constructive player-facing validation. Death Guard Chaos Lord missing-attachment validation is suppressed while Glorious Jump Pack is included, and the temporary Jump Pack placeholder error now gives a direct player action. Great Traitors’ Arsenal itself remains an optional Phase 0.1 placeholder. Existing loadouts, specialist presentation, points, Leader Capacity semantics, and Additional Copy Costs arithmetic are otherwise unchanged."
   }
 }

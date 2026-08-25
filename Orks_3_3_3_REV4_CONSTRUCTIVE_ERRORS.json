@@ -4,8 +4,8 @@
     "id": "f805-2653-0327-8bc2",
     "name": "Orks 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 6,
-    "revision": 3,
+    "gameSystemRevision": 11,
+    "revision": 4,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -22,6 +22,12 @@
             "id": "c0af-e20a-23ef-9d16",
             "primary": true,
             "name": "Configuration"
+          },
+          {
+            "targetId": "54e9-a5b4-e275-00c5",
+            "id": "b3cf-aa5a-8f04-3b95",
+            "primary": false,
+            "name": "Required Additional Copy Costs Configuration"
           }
         ],
         "infoLinks": [
@@ -31,26 +37,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "80a9-6b43-631f-5a4f"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "min",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "52b2-f574-798d-8746",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "4cb0-6590-ecd2-0601",
-            "includeChildSelections": true
           }
         ],
         "costs": [
@@ -3788,9 +3774,28 @@
                 "childName": "Shokkjump Dragsta"
               }
             ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Additional Copy Costs is automatically managed by the listbuilder and should appear only once. Remove any extra Additional Copy Costs entries.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b021-d13e-6d59-bd07",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Additional Copy Costs"
+              }
+            ]
           }
         ],
-        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of each native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance."
+        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of each native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance.\nCONFIGURATION VALIDATION: Game System revision 11 handles a missing Additional Copy Costs entry through Army > Configuration. This entry carries the hidden required-configuration category and self-reports duplicates. Existing copy-cost arithmetic is unchanged."
       },
       {
         "type": "unit",
@@ -3840,7 +3845,7 @@
         "sortIndex": 1,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "2ef7-c3f8-a5ef-72fd",
@@ -4008,6 +4013,45 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Warboss With Attack Squig is not attached to a unit. It must attach to Ork Boyz. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one unit with ‘WARBOSS’ in the name. Remove any additional WARBOSS units until only one remains.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0c54-c08d-a063-70d8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "WARBOSS Limit"
+              }
+            ]
+          }
         ]
       },
       {
@@ -4058,7 +4102,7 @@
         "sortIndex": 2,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "8826-ebc9-62cf-3bbe",
@@ -4132,6 +4176,45 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Warboss In Mega Armour is not attached to a unit. It must attach to Ork Boyz. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army may include only one unit with ‘WARBOSS’ in the name. Remove any additional WARBOSS units until only one remains.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0c54-c08d-a063-70d8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "WARBOSS Limit"
+              }
+            ]
+          }
         ]
       },
       {
@@ -4170,7 +4253,7 @@
         "sortIndex": 5,
         "associations": [
           {
-            "min": 1,
+            "min": 0,
             "max": 1,
             "scope": "roster",
             "childId": "cd39-189d-6f43-6ea8",
@@ -4246,6 +4329,26 @@
                   }
                 ],
                 "defaultSelectionEntryId": "84f4-8a65-fcb8-701b"
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Painboy is not attached to a unit. It must attach to Ork Boyz. Add an eligible unit to your army if needed, then select it under Attaches To.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
               }
             ]
           }
@@ -4427,18 +4530,6 @@
           }
         ],
         "sortIndex": 7,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "associations",
-            "scope": "self",
-            "shared": true,
-            "id": "81ed-7363-d471-6eb6",
-            "childId": "f16e-4eda-913f-6091",
-            "includeChildSelections": false
-          }
-        ],
         "selectionEntryGroups": [
           {
             "name": "Attached Model",
@@ -4975,11 +5066,30 @@
             ]
           }
         ],
+        "comment": "LOADOUT UI: the nested Nob occupies the conceptual model-1 position when selected. Ork Boyz 2-6 are the ordinary Choppa + Slugga models. Boyz 7-8 are the paid special-weapon slots and Boy 9 is the paid advanced-weapon slot. Because these are paid upgrades, each specialist slot retains its ordinary Slugga state.\nATTACHMENT VALIDATION: the nested Nob and attached Painboy share the ordinary attachment point. Warboss associations remain outside that point as permitted by their rule. Painboy candidate filtering is preserved, while constructive errors cover duplicate Painboys and the reverse-order Nob + Painboy state.",
         "modifiers": [
           {
-            "type": "decrement",
-            "value": 1,
-            "field": "81ed-7363-d471-6eb6",
+            "type": "add",
+            "field": "error",
+            "value": "Ork Boyz has more than one Painboy attached. It may have only one Painboy attached. Remove or move one of the attached Painboys.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "associations",
+                "scope": "self",
+                "childId": "f16e-4eda-913f-6091",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Ork Boyz cannot include both a Nob and an attached Painboy. Remove the Nob or remove/move the Painboy.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -4989,12 +5099,25 @@
                 "childId": "f7d9-ab37-36e9-2b02",
                 "shared": true,
                 "includeChildSelections": true,
+                "includeChildForces": false,
+                "queryFromSelf": false,
                 "childName": "Nob"
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "f16e-4eda-913f-6091",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "queryFromSelf": false,
+                "childName": "Painboy"
               }
             ]
           }
-        ],
-        "comment": "LOADOUT UI: the nested Nob occupies the conceptual model-1 position when selected. Ork Boyz 2-6 are the ordinary Choppa + Slugga models. Boyz 7-8 are the paid special-weapon slots and Boy 9 is the paid advanced-weapon slot. Because these are paid upgrades, each specialist slot retains its ordinary Slugga state."
+        ]
       },
       {
         "type": "unit",
@@ -14196,17 +14319,7 @@
       {
         "name": "WARBOSS Limit",
         "id": "0c54-c08d-a063-70d8",
-        "hidden": true,
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "parent",
-            "shared": true,
-            "id": "e927-4a66-1125-20ec"
-          }
-        ]
+        "hidden": true
       },
       {
         "name": "May Attach To: Painboy",
@@ -14216,6 +14329,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nOrks now use the final-state 'fancy notepad' loadout grammar. Nested Nob/Kommando Nob mechanics and Painboy-root attachment logic are preserved. Nobz and Deffkoptas use variable-size controls. All native non-Rare Other units use Additional Copy Costs.\n\nKOMMANDO SPECIAL-WEAPON CORRECTION\nRemoved the vestigial 'each with a different weapon' restriction from Kommando specialist models. Kommando 7-9 may now select duplicate special weapons. Deff Dread four-list structure confirmed: two mixed melee/ranged lists and two melee-only lists."
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nOrks now use the final-state 'fancy notepad' loadout grammar. Nested Nob/Kommando Nob mechanics and Painboy-root attachment logic are preserved. Nobz and Deffkoptas use variable-size controls. All native non-Rare Other units use Additional Copy Costs.\n\nKOMMANDO SPECIAL-WEAPON CORRECTION\nRemoved the vestigial 'each with a different weapon' restriction from Kommando specialist models. Kommando 7-9 may now select duplicate special weapons. Deff Dread four-list structure confirmed: two mixed melee/ranged lists and two melee-only lists.\n\nCONSTRUCTIVE ERROR MIGRATION\nOrks now use Game System revision 11. Additional Copy Costs, mandatory root Leader attachments, the shared WARBOSS limit, and the Ork Boyz Painboy/Nob attachment point use constructive player-facing validation. Nested Nob and Kommando Nob structures, Kommando duplicate specialist weapons, variable-size units, loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged."
   }
 }
