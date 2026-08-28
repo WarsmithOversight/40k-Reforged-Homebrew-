@@ -5,7 +5,7 @@
     "name": "Thousand Sons 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 12,
-    "revision": 5,
+    "revision": 6,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -2607,7 +2607,7 @@
         "modifiers": [
           {
             "type": "add",
-            "value": "Rubric Marines has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "value": "This unit has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
             "field": "error",
             "conditions": [
               {
@@ -2707,7 +2707,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "9x Autopistol + Chainsword",
+                        "name": "9x Autopistol & Chainsword",
                         "hidden": false,
                         "id": "1659-4f40-5431-6819",
                         "sortIndex": 2
@@ -2724,7 +2724,7 @@
         "modifiers": [
           {
             "type": "add",
-            "value": "Tzaangors has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "value": "This unit has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
             "field": "error",
             "conditions": [
               {
@@ -2822,13 +2822,48 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Inferno Combi-Bolter + Prosperine Khopesh",
+                        "name": "Inferno Combi-Bolter",
                         "hidden": false,
                         "id": "ade6-6faa-f613-2fe2",
                         "sortIndex": 1
                       }
                     ],
                     "defaultSelectionEntryId": "ade6-6faa-f613-2fe2"
+                  },
+                  {
+                    "name": "​",
+                    "id": "7dab-92df-6f8e-0676",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1953-0163-aea0-e967"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "aa61-0200-0e3a-8d41"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Prosperine Khopesh",
+                        "hidden": false,
+                        "id": "3360-c214-94af-487f",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "3360-c214-94af-487f"
                   }
                 ]
               },
@@ -2865,7 +2900,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Soulreaper Cannon + Prosperine Khopesh",
+                        "name": "Soulreaper Cannon",
                         "hidden": false,
                         "id": "3971-e9c3-1cc1-b869",
                         "sortIndex": 1
@@ -2873,13 +2908,48 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Heavy Warpflamer + Prosperine Khopesh",
+                        "name": "Heavy Warpflamer",
                         "hidden": false,
                         "id": "4231-1120-6950-89d5",
                         "sortIndex": 2
                       }
                     ],
                     "defaultSelectionEntryId": "3971-e9c3-1cc1-b869"
+                  },
+                  {
+                    "name": "​",
+                    "id": "5387-aa77-e15e-4c48",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9741-3af6-8165-6bcf"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ff95-a658-f739-d397"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Prosperine Khopesh",
+                        "hidden": false,
+                        "id": "6d0d-fd32-2452-5eb0",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "6d0d-fd32-2452-5eb0"
                   }
                 ]
               }
@@ -2927,7 +2997,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Scarab Occult Terminator 2 is the canonical free specialist and therefore presents only Soulreaper Cannon or Heavy Warpflamer final loadouts. Both Terminator model groups are presented together under Loadout Options. Hellfyre Missile Rack is recorded as unit-level paid wargear.",
+        "comment": "LOADOUT UI: both Scarab Occult Terminators show the fixed Prosperine Khopesh as its own equipment line. Scarab Occult Terminator 1 has a fixed Inferno Combi-Bolter; Scarab Occult Terminator 2 is the canonical free specialist and therefore chooses Soulreaper Cannon or Heavy Warpflamer. Both model groups are presented together under Loadout Options. Hellfyre Missile Rack is recorded as unit-level paid wargear.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -2940,7 +3010,7 @@
         "modifiers": [
           {
             "type": "add",
-            "value": "Scarab Occult Terminators has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "value": "This unit has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
             "field": "error",
             "conditions": [
               {
@@ -3173,7 +3243,7 @@
         "modifiers": [
           {
             "type": "add",
-            "value": "Tzaangor Enlightened has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "value": "This unit has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
             "field": "error",
             "conditions": [
               {
@@ -3356,7 +3426,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Power Claw + Warpflame Projector",
+                        "name": "Power Claw & Warpflame Projector",
                         "hidden": false,
                         "id": "b1cd-5754-4a46-5b2b",
                         "sortIndex": 3,
@@ -3375,7 +3445,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Power Claw + Warpflame Projector"
+                                "childName": "Power Claw & Warpflame Projector"
                               }
                             ]
                           }
@@ -3467,7 +3537,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Power Claw + Warpflame Projector",
+                        "name": "Power Claw & Warpflame Projector",
                         "hidden": false,
                         "id": "f9d7-1100-f629-6923",
                         "sortIndex": 3,
@@ -3486,7 +3556,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Power Claw + Warpflame Projector"
+                                "childName": "Power Claw & Warpflame Projector"
                               }
                             ]
                           }
@@ -3621,7 +3691,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Power Claw + Warpflame Projector",
+                        "name": "Power Claw & Warpflame Projector",
                         "hidden": false,
                         "id": "d8ad-8270-b447-e671",
                         "sortIndex": 3,
@@ -3640,7 +3710,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Power Claw + Warpflame Projector"
+                                "childName": "Power Claw & Warpflame Projector"
                               }
                             ]
                           }
@@ -3732,7 +3802,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Power Claw + Warpflame Projector",
+                        "name": "Power Claw & Warpflame Projector",
                         "hidden": false,
                         "id": "a960-00dd-3bdc-aa98",
                         "sortIndex": 3,
@@ -3751,7 +3821,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Power Claw + Warpflame Projector"
+                                "childName": "Power Claw & Warpflame Projector"
                               }
                             ]
                           }
@@ -4239,7 +4309,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Force Blade + Inferno Combi-Bolter",
+                        "name": "Dreadnought Force Blade & Inferno Combi-Bolter",
                         "hidden": false,
                         "id": "7460-699e-3a46-5e17",
                         "sortIndex": 9
@@ -4247,7 +4317,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Force Blade + Plasma Blaster",
+                        "name": "Dreadnought Force Blade & Plasma Blaster",
                         "hidden": false,
                         "id": "9ab5-72f5-c75d-7600",
                         "sortIndex": 10,
@@ -4266,7 +4336,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -4284,7 +4354,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -4302,7 +4372,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -4320,7 +4390,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -4338,7 +4408,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -4356,7 +4426,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -4374,7 +4444,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -4392,7 +4462,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -4401,7 +4471,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Force Blade + Grav-Gun",
+                        "name": "Dreadnought Force Blade & Grav-Gun",
                         "hidden": false,
                         "id": "ea4b-9aaa-2d8a-2d1a",
                         "sortIndex": 11,
@@ -4420,7 +4490,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -4438,7 +4508,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -4456,7 +4526,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -4474,7 +4544,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -4492,7 +4562,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -4510,7 +4580,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -4528,7 +4598,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -4546,7 +4616,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -4555,7 +4625,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Force Blade + Heavy Flamer",
+                        "name": "Dreadnought Force Blade & Heavy Flamer",
                         "hidden": false,
                         "id": "28b1-b45e-b1f7-6706",
                         "sortIndex": 12,
@@ -4574,7 +4644,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -4592,7 +4662,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -4610,7 +4680,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -4628,7 +4698,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -4646,7 +4716,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -4664,7 +4734,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -4682,7 +4752,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -4700,7 +4770,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -4709,7 +4779,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Force Blade + Meltagun",
+                        "name": "Dreadnought Force Blade & Meltagun",
                         "hidden": false,
                         "id": "0524-2f0c-7142-a93b",
                         "sortIndex": 13,
@@ -4728,7 +4798,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -4746,7 +4816,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -4764,7 +4834,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -4782,7 +4852,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -4800,7 +4870,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -4818,7 +4888,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -4836,7 +4906,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -4854,7 +4924,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -4863,7 +4933,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Chainfist + Inferno Combi-Bolter",
+                        "name": "Dreadnought Chainfist & Inferno Combi-Bolter",
                         "hidden": false,
                         "id": "a985-c6f9-6d0c-1e80",
                         "sortIndex": 14
@@ -4871,7 +4941,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Chainfist + Plasma Blaster",
+                        "name": "Dreadnought Chainfist & Plasma Blaster",
                         "hidden": false,
                         "id": "23ec-472a-42fe-b72c",
                         "sortIndex": 15,
@@ -4890,7 +4960,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -4908,7 +4978,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -4926,7 +4996,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -4944,7 +5014,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -4962,7 +5032,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -4980,7 +5050,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -4998,7 +5068,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -5016,7 +5086,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -5025,7 +5095,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Chainfist + Grav-Gun",
+                        "name": "Dreadnought Chainfist & Grav-Gun",
                         "hidden": false,
                         "id": "5748-2132-ea2e-c609",
                         "sortIndex": 16,
@@ -5044,7 +5114,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -5062,7 +5132,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -5080,7 +5150,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -5098,7 +5168,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -5116,7 +5186,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -5134,7 +5204,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -5152,7 +5222,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -5170,7 +5240,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -5179,7 +5249,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Chainfist + Heavy Flamer",
+                        "name": "Dreadnought Chainfist & Heavy Flamer",
                         "hidden": false,
                         "id": "fcb9-589e-1f81-186f",
                         "sortIndex": 17,
@@ -5198,7 +5268,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -5216,7 +5286,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -5234,7 +5304,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -5252,7 +5322,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -5270,7 +5340,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -5288,7 +5358,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -5306,7 +5376,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -5324,7 +5394,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -5333,7 +5403,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Chainfist + Meltagun",
+                        "name": "Dreadnought Chainfist & Meltagun",
                         "hidden": false,
                         "id": "c2a6-c16d-f8be-fc3b",
                         "sortIndex": 18,
@@ -5352,7 +5422,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -5370,7 +5440,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -5388,7 +5458,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -5406,7 +5476,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -5424,7 +5494,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -5442,7 +5512,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -5460,7 +5530,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -5478,7 +5548,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -5578,7 +5648,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Force Blade + Inferno Combi-Bolter",
+                        "name": "Dreadnought Force Blade & Inferno Combi-Bolter",
                         "hidden": false,
                         "id": "52b5-f904-2079-fc01",
                         "sortIndex": 9
@@ -5586,7 +5656,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Force Blade + Plasma Blaster",
+                        "name": "Dreadnought Force Blade & Plasma Blaster",
                         "hidden": false,
                         "id": "c94d-3559-f793-f302",
                         "sortIndex": 10,
@@ -5605,7 +5675,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -5623,7 +5693,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -5641,7 +5711,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -5659,7 +5729,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -5677,7 +5747,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -5695,7 +5765,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -5713,7 +5783,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -5731,7 +5801,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -5740,7 +5810,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Force Blade + Grav-Gun",
+                        "name": "Dreadnought Force Blade & Grav-Gun",
                         "hidden": false,
                         "id": "af4b-3c39-8741-a0b1",
                         "sortIndex": 11,
@@ -5759,7 +5829,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -5777,7 +5847,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -5795,7 +5865,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -5813,7 +5883,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -5831,7 +5901,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -5849,7 +5919,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -5867,7 +5937,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -5885,7 +5955,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -5894,7 +5964,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Force Blade + Heavy Flamer",
+                        "name": "Dreadnought Force Blade & Heavy Flamer",
                         "hidden": false,
                         "id": "e75c-5c22-d74e-ffbf",
                         "sortIndex": 12,
@@ -5913,7 +5983,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -5931,7 +6001,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -5949,7 +6019,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -5967,7 +6037,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -5985,7 +6055,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -6003,7 +6073,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -6021,7 +6091,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -6039,7 +6109,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -6048,7 +6118,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Force Blade + Meltagun",
+                        "name": "Dreadnought Force Blade & Meltagun",
                         "hidden": false,
                         "id": "2772-7279-dfec-dcd9",
                         "sortIndex": 13,
@@ -6067,7 +6137,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -6085,7 +6155,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -6103,7 +6173,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -6121,7 +6191,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -6139,7 +6209,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -6157,7 +6227,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -6175,7 +6245,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -6193,7 +6263,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -6202,7 +6272,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Chainfist + Inferno Combi-Bolter",
+                        "name": "Dreadnought Chainfist & Inferno Combi-Bolter",
                         "hidden": false,
                         "id": "307f-3443-2276-1287",
                         "sortIndex": 14
@@ -6210,7 +6280,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Chainfist + Plasma Blaster",
+                        "name": "Dreadnought Chainfist & Plasma Blaster",
                         "hidden": false,
                         "id": "ca22-7fdc-4c7d-f8be",
                         "sortIndex": 15,
@@ -6229,7 +6299,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -6247,7 +6317,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -6265,7 +6335,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -6283,7 +6353,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -6301,7 +6371,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -6319,7 +6389,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -6337,7 +6407,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -6355,7 +6425,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -6364,7 +6434,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Chainfist + Grav-Gun",
+                        "name": "Dreadnought Chainfist & Grav-Gun",
                         "hidden": false,
                         "id": "bd84-305d-1d04-f68c",
                         "sortIndex": 16,
@@ -6383,7 +6453,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -6401,7 +6471,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -6419,7 +6489,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -6437,7 +6507,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -6455,7 +6525,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -6473,7 +6543,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -6491,7 +6561,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -6509,7 +6579,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -6518,7 +6588,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Chainfist + Heavy Flamer",
+                        "name": "Dreadnought Chainfist & Heavy Flamer",
                         "hidden": false,
                         "id": "f758-197d-ecc0-84b9",
                         "sortIndex": 17,
@@ -6537,7 +6607,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -6555,7 +6625,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -6573,7 +6643,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -6591,7 +6661,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -6609,7 +6679,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -6627,7 +6697,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -6645,7 +6715,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -6663,7 +6733,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -6672,7 +6742,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Dreadnought Chainfist + Meltagun",
+                        "name": "Dreadnought Chainfist & Meltagun",
                         "hidden": false,
                         "id": "723a-ca3c-137b-d4de",
                         "sortIndex": 18,
@@ -6691,7 +6761,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Plasma Blaster"
+                                "childName": "Dreadnought Force Blade & Plasma Blaster"
                               }
                             ]
                           },
@@ -6709,7 +6779,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Grav-Gun"
+                                "childName": "Dreadnought Force Blade & Grav-Gun"
                               }
                             ]
                           },
@@ -6727,7 +6797,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Heavy Flamer"
+                                "childName": "Dreadnought Force Blade & Heavy Flamer"
                               }
                             ]
                           },
@@ -6745,7 +6815,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Force Blade + Meltagun"
+                                "childName": "Dreadnought Force Blade & Meltagun"
                               }
                             ]
                           },
@@ -6763,7 +6833,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Plasma Blaster"
+                                "childName": "Dreadnought Chainfist & Plasma Blaster"
                               }
                             ]
                           },
@@ -6781,7 +6851,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Grav-Gun"
+                                "childName": "Dreadnought Chainfist & Grav-Gun"
                               }
                             ]
                           },
@@ -6799,7 +6869,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Heavy Flamer"
+                                "childName": "Dreadnought Chainfist & Heavy Flamer"
                               }
                             ]
                           },
@@ -6817,7 +6887,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Dreadnought Chainfist + Meltagun"
+                                "childName": "Dreadnought Chainfist & Meltagun"
                               }
                             ]
                           }
@@ -6831,7 +6901,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Osiron Dreadnought is represented as two final-state weapon lists. Each list includes the eight standalone guns, the two melee + Inferno Combi-Bolter packages, and each melee package with Plasma Blaster / Grav-Gun / Heavy Flamer / Meltagun substituted. Once one list selects an upgraded melee secondary weapon, upgraded melee variants disappear from the other list, enforcing the PDF's one Inferno Combi-Bolter replacement limit.",
+        "comment": "LOADOUT UI: Osiron Dreadnought is represented as two final-state weapon lists. Each list includes the eight standalone guns, the two melee & Inferno Combi-Bolter packages, and each melee package with Plasma Blaster / Grav-Gun / Heavy Flamer / Meltagun substituted. Once one list selects an upgraded melee secondary weapon, upgraded melee variants disappear from the other list, enforcing the PDF's one Inferno Combi-Bolter replacement limit.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -6877,6 +6947,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "PHASE 0.1 THOUSAND SONS. The four Summon Only datasheets are intentionally excluded from army-list selections. Great Traitors’ Arsenal is represented by an optional, unchecked Configuration placeholder until the reusable Chaos Space Marines library is wired. All seven printed Leaders remain root selections; Scarab Occult Sorcerer and Aspiring Sorcerer are Countless and therefore omit the hidden counted-Leader category.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nThousand Sons now use Game System revision 11. Great Traitors’ Arsenal remains a placeholder, now in the shared Configuration category. All 15 selectable native units have player-facing loadouts. Summon-only datasheets remain excluded. All native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nGame System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, host Leader limits, and native Rare limits use constructive player-facing errors. Great Traitors’ Arsenal and all faction-specific structures remain otherwise unchanged.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader attachment behavior, Great Traitors’ Arsenal placeholder, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model headers to single-model units, flattening Rubric Marine and Scarab Occult specialist model sections into Loadout Options, removing non-semantic Weapon 1 / Weapon 2 labels from Osiron Dreadnought and Sekhetar Robots, renaming Mutalith Vortex Beast's paid mutation section to Mutation Upgrade, and updating native Rare error wording. No points, eligibility, attachment semantics, Additional Copy Costs arithmetic, Great Traitors’ Arsenal placeholder behavior, or underlying weapon-choice logic were otherwise changed."
+    "comment": "PHASE 0.1 THOUSAND SONS. The four Summon Only datasheets are intentionally excluded from army-list selections. Great Traitors’ Arsenal is represented by an optional, unchecked Configuration placeholder until the reusable Chaos Space Marines library is wired. All seven printed Leaders remain root selections; Scarab Occult Sorcerer and Aspiring Sorcerer are Countless and therefore omit the hidden counted-Leader category.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nThousand Sons now use Game System revision 11. Great Traitors’ Arsenal remains a placeholder, now in the shared Configuration category. All 15 selectable native units have player-facing loadouts. Summon-only datasheets remain excluded. All native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nGame System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, host Leader limits, and native Rare limits use constructive player-facing errors. Great Traitors’ Arsenal and all faction-specific structures remain otherwise unchanged.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader attachment behavior, Great Traitors’ Arsenal placeholder, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model headers to single-model units, flattening Rubric Marine and Scarab Occult specialist model sections into Loadout Options, removing non-semantic Weapon 1 / Weapon 2 labels from Osiron Dreadnought and Sekhetar Robots, renaming Mutalith Vortex Beast's paid mutation section to Mutation Upgrade, and updating native Rare error wording. No points, eligibility, attachment semantics, Additional Copy Costs arithmetic, Great Traitors’ Arsenal placeholder behavior, or underlying weapon-choice logic were otherwise changed.\n\nREV6 RETROSPECTIVE POLISH PASS\nRevisited Thousand Sons against the final cross-faction presentation standard. Tzaangors' squad-wide Autopistol/Chainsword state now uses '&' atomic-package grammar. Scarab Occult Terminators now show fixed Prosperine Khopeshes as separate equipment lines: Terminator 1 retains a fixed Inferno Combi-Bolter and Terminator 2 retains its Soulreaper Cannon / Heavy Warpflamer choice. Sekhetar Robot Power Claw/Warpflame Projector packages and all twenty Osiron Dreadnought melee/secondary packages now use '&' instead of '+', with referenced childName metadata synchronized. Rubric Marines, Tzaangors, Scarab Occult Terminators, and Tzaangor Enlightened use the current grammar-safe 'This unit...' host-limit error. Great Traitors’ Arsenal, Additional Copy Costs, leader attachment mechanics, Sekhetar cross-slot hiding, Osiron one-replacement enforcement, points, categories, constraints, and all other rules semantics remain unchanged."
   }
 }

@@ -5,7 +5,7 @@
     "name": "Adeptus Mechanicus 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 14,
-    "revision": 5,
+    "revision": 7,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -6175,7 +6175,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Dominus is Rare and may only be included once in the army. Remove the additional Dominus unit(s).",
+            "value": "Your army may include only one Dominus because it is Rare. Remove the additional copy.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -6218,139 +6218,147 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "c08d-90df-9ea6-6319",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Primary Weapon",
-                "id": "3fb5-212a-f539-a06b",
+                "name": "Dominus",
+                "id": "104d-5cf2-39c1-8a88",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "a119-3e8f-4e34-d4ef",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "7e29-f296-81db-630c",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Volkite Blaster",
+                    "name": "Primary Weapon",
+                    "id": "3fb5-212a-f539-a06b",
                     "hidden": false,
-                    "id": "f81a-9033-dafd-18f9",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a119-3e8f-4e34-d4ef",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7e29-f296-81db-630c",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Volkite Blaster",
+                        "hidden": false,
+                        "id": "f81a-9033-dafd-18f9",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Conversion Beamer",
+                        "hidden": false,
+                        "id": "1992-8787-6f56-1994",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "f81a-9033-dafd-18f9",
                     "sortIndex": 1
                   },
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Conversion Beamer",
+                    "name": "Secondary Weapon",
+                    "id": "f16b-76bf-b68a-5deb",
                     "hidden": false,
-                    "id": "1992-8787-6f56-1994",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8ff7-0236-c3b9-e914",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6029-0a2c-30ea-efda",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Phosphor Serpenta",
+                        "hidden": false,
+                        "id": "f012-31a6-9e94-4399",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Macrostubber",
+                        "hidden": false,
+                        "id": "79cf-0797-fac7-69fe",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "f012-31a6-9e94-4399",
                     "sortIndex": 2
-                  }
-                ],
-                "defaultSelectionEntryId": "f81a-9033-dafd-18f9",
-                "sortIndex": 1
-              },
-              {
-                "name": "Secondary Weapon",
-                "id": "f16b-76bf-b68a-5deb",
-                "hidden": false,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "8ff7-0236-c3b9-e914",
-                    "includeChildSelections": false
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "6029-0a2c-30ea-efda",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Phosphor Serpenta",
+                    "name": "​",
+                    "id": "29f0-0e4e-b9ed-eedb",
                     "hidden": false,
-                    "id": "f012-31a6-9e94-4399",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Macrostubber",
-                    "hidden": false,
-                    "id": "79cf-0797-fac7-69fe",
-                    "sortIndex": 2
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a9d3-3ef7-cf09-1021",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6e60-e782-6133-fc46",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Omnissian Axe",
+                        "hidden": false,
+                        "id": "7828-ec89-f31d-eaba",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "7828-ec89-f31d-eaba",
+                    "sortIndex": 3
                   }
-                ],
-                "defaultSelectionEntryId": "f012-31a6-9e94-4399",
-                "sortIndex": 2
-              },
-              {
-                "name": "Melee Weapon",
-                "id": "29f0-0e4e-b9ed-eedb",
-                "hidden": false,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "a9d3-3ef7-cf09-1021",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "6e60-e782-6133-fc46",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Omnissian Axe",
-                    "hidden": false,
-                    "id": "7828-ec89-f31d-eaba",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "7828-ec89-f31d-eaba",
-                "sortIndex": 3
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ]
       },
@@ -6398,7 +6406,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Macrotek Enginseer is Rare and may only be included once in the army. Remove the additional Macrotek Enginseer unit(s).",
+            "value": "Your army may include only one Macrotek Enginseer because it is Rare. Remove the additional copy.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -6441,49 +6449,94 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "2533-3d63-3cdf-4979",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Equipment",
-                "id": "6adf-1122-4750-61fb",
+                "name": "Macrotek Enginseer",
+                "id": "e44e-f578-1aa0-47bc",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "6a90-1ca9-dfc0-ea57",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "6adf-1122-4750-61fb",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6a90-1ca9-dfc0-ea57",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "bc4b-fc4b-314e-3efd",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Servo Arms",
+                        "hidden": false,
+                        "id": "a44e-951c-2737-27c0",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "a44e-951c-2737-27c0",
+                    "sortIndex": 1
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "bc4b-fc4b-314e-3efd",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Servo Arms + Omnissian Axe",
+                    "name": "​",
+                    "id": "dcc0-d591-a809-43ac",
                     "hidden": false,
-                    "id": "a44e-951c-2737-27c0",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d9d0-bd1f-372c-14d8",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6769-1341-9a05-52f8",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Omnissian Axe",
+                        "hidden": false,
+                        "id": "e7e7-f8ea-c424-4726",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "e7e7-f8ea-c424-4726"
                   }
-                ],
-                "defaultSelectionEntryId": "a44e-951c-2737-27c0",
-                "sortIndex": 1
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ]
       },
@@ -6547,94 +6600,102 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "0e81-23ad-2714-7ed7",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Primary Weapon",
-                "id": "aec8-6132-acf8-1475",
+                "name": "Manipulus",
+                "id": "330e-491a-4f9c-629a",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "ea5e-187a-a56e-f9e9",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "00b5-eece-7427-06d4",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Magnarail Lance",
+                    "name": "Primary Weapon",
+                    "id": "aec8-6132-acf8-1475",
                     "hidden": false,
-                    "id": "ba3b-7844-5ed4-862a",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ea5e-187a-a56e-f9e9",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "00b5-eece-7427-06d4",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Magnarail Lance",
+                        "hidden": false,
+                        "id": "ba3b-7844-5ed4-862a",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Transonic Cannon",
+                        "hidden": false,
+                        "id": "566e-bf2c-595e-889f",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "ba3b-7844-5ed4-862a",
                     "sortIndex": 1
                   },
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Transonic Cannon",
+                    "name": "​",
+                    "id": "a349-aa99-83d8-19f9",
                     "hidden": false,
-                    "id": "566e-bf2c-595e-889f",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2926-06ff-0c29-4943",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "79cc-9740-ac60-0fa1",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Omnissian Staff",
+                        "hidden": false,
+                        "id": "53c7-4fb3-fa17-e6db",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "53c7-4fb3-fa17-e6db",
                     "sortIndex": 2
                   }
-                ],
-                "defaultSelectionEntryId": "ba3b-7844-5ed4-862a",
-                "sortIndex": 1
-              },
-              {
-                "name": "Melee Weapon",
-                "id": "a349-aa99-83d8-19f9",
-                "hidden": false,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "2926-06ff-0c29-4943",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "79cc-9740-ac60-0fa1",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Omnissian Staff",
-                    "hidden": false,
-                    "id": "53c7-4fb3-fa17-e6db",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "53c7-4fb3-fa17-e6db",
-                "sortIndex": 2
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ]
       },
@@ -6698,49 +6759,94 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "a214-cb15-9d73-02fb",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Equipment",
-                "id": "2c64-3074-d3f0-2e51",
+                "name": "Enginseer",
+                "id": "0b84-4f9a-506f-5d25",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "d347-f7b0-7892-0a92",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "2c64-3074-d3f0-2e51",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d347-f7b0-7892-0a92",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f86a-9454-96a6-5668",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Archeotech Pistol",
+                        "hidden": false,
+                        "id": "8f15-90fe-5e86-0659",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "8f15-90fe-5e86-0659",
+                    "sortIndex": 1
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "f86a-9454-96a6-5668",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Archeotech Pistol + Omnissian Axe",
+                    "name": "​",
+                    "id": "e75a-c0cd-6714-f945",
                     "hidden": false,
-                    "id": "8f15-90fe-5e86-0659",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5d5b-b547-84cc-8da4",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "cbe3-3c07-182b-8f4a",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Omnissian Axe",
+                        "hidden": false,
+                        "id": "4abf-554d-c19a-9afd",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "4abf-554d-c19a-9afd"
                   }
-                ],
-                "defaultSelectionEntryId": "8f15-90fe-5e86-0659",
-                "sortIndex": 1
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ]
       },
@@ -6804,49 +6910,94 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "ba82-161e-8952-a91f",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Equipment",
-                "id": "13ef-eb5c-5d1a-545a",
+                "name": "Datasmith",
+                "id": "29ea-443a-c11a-acda",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "8349-93c3-94f6-f92c",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "13ef-eb5c-5d1a-545a",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8349-93c3-94f6-f92c",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2482-adcb-ee71-9f4f",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Gamma Pistol",
+                        "hidden": false,
+                        "id": "564b-b630-6d39-d549",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "564b-b630-6d39-d549",
+                    "sortIndex": 1
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "2482-adcb-ee71-9f4f",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Gamma Pistol + Power Fist",
+                    "name": "​",
+                    "id": "581a-5639-6bac-274e",
                     "hidden": false,
-                    "id": "564b-b630-6d39-d549",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6be6-f482-9338-1e48",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "31ef-1c98-e2ad-f2d3",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Fist",
+                        "hidden": false,
+                        "id": "1aff-3abb-5878-9f00",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "1aff-3abb-5878-9f00"
                   }
-                ],
-                "defaultSelectionEntryId": "564b-b630-6d39-d549",
-                "sortIndex": 1
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ]
       },
@@ -6910,49 +7061,57 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "c476-0d04-8da9-5f35",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Equipment",
-                "id": "0414-ecc4-2943-3a61",
+                "name": "Techno-Archeologist",
+                "id": "bd90-c108-bc5a-4365",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "ee8f-8992-2013-4b9d",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "f82e-4a28-b97b-416b",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Eradication Pistol",
+                    "name": "​",
+                    "id": "0414-ecc4-2943-3a61",
                     "hidden": false,
-                    "id": "59ef-c9ac-d8e9-9bfe",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ee8f-8992-2013-4b9d",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f82e-4a28-b97b-416b",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Eradication Pistol",
+                        "hidden": false,
+                        "id": "59ef-c9ac-d8e9-9bfe",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "59ef-c9ac-d8e9-9bfe",
                     "sortIndex": 1
                   }
-                ],
-                "defaultSelectionEntryId": "59ef-c9ac-d8e9-9bfe",
-                "sortIndex": 1
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ]
       },
@@ -7036,49 +7195,94 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "a5d1-c3fa-ba1d-1750",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Equipment",
-                "id": "6565-cf2a-2a67-928e",
+                "name": "Skitarii Marshal",
+                "id": "efd9-af8a-3274-3407",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "e533-24d4-00c6-e7d7",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "6565-cf2a-2a67-928e",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e533-24d4-00c6-e7d7",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e2e9-c505-b8c2-52a1",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Radium Serpenta",
+                        "hidden": false,
+                        "id": "cc8e-2fa8-9d32-4be5",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "cc8e-2fa8-9d32-4be5",
+                    "sortIndex": 1
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "e2e9-c505-b8c2-52a1",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Radium Serpenta + Control Stave",
+                    "name": "​",
+                    "id": "ae27-0b75-156d-0662",
                     "hidden": false,
-                    "id": "cc8e-2fa8-9d32-4be5",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "be80-0a99-320a-8360",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7097-79f5-4b94-a3d6",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Control Stave",
+                        "hidden": false,
+                        "id": "76b0-a1a2-8f6b-9d44",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "76b0-a1a2-8f6b-9d44"
                   }
-                ],
-                "defaultSelectionEntryId": "cc8e-2fa8-9d32-4be5",
-                "sortIndex": 1
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ]
       },
@@ -7199,7 +7403,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Servitors have more than one Leader attached. They may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "value": "This unit has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -10566,7 +10770,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Skitarii Rangers have more than one Leader attached. They may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "value": "This unit has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -10584,7 +10788,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "2792-dee2-5839-ffad",
             "hidden": false,
             "selectionEntryGroups": [
@@ -10738,15 +10942,7 @@
                 ],
                 "defaultSelectionEntryId": "96a9-29b2-7367-57ff",
                 "sortIndex": 2
-              }
-            ],
-            "sortIndex": 1
-          },
-          {
-            "name": "Special Weapons Loadout",
-            "id": "13a2-023d-d2b7-7b8a",
-            "hidden": false,
-            "selectionEntryGroups": [
+              },
               {
                 "name": "Skitarii Ranger Gunner",
                 "id": "9002-ec61-59dc-cb4e",
@@ -10798,13 +10994,20 @@
                   }
                 ],
                 "defaultSelectionEntryId": "cc19-7658-1318-2432",
-                "sortIndex": 1
+                "sortIndex": 3
               }
             ],
+            "sortIndex": 1
+          },
+          {
+            "name": "Special Weapons Loadout",
+            "id": "13a2-023d-d2b7-7b8a",
+            "hidden": true,
+            "selectionEntryGroups": [],
             "sortIndex": 2
           }
         ],
-        "comment": "SKITARII RANGERS LOADOUT: the Alpha is represented directly with the sergeant loadout and defaults to Radium Pistol + Arc Maul. Warriors 2-9 carry the standard Galvanic Rifle. The dedicated Gunner omits the ordinary fallback and defaults to Transuranic Arquebus."
+        "comment": "SKITARII RANGERS LOADOUT: the Alpha is represented directly with the sergeant loadout and defaults to Radium Pistol & Arc Maul. Warriors 2-9 carry the standard Galvanic Rifle. The dedicated Skitarii Ranger Gunner is presented directly under Loadout Options, omits the ordinary fallback, and defaults to Transuranic Arquebus."
       },
       {
         "type": "unit",
@@ -10844,7 +11047,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Skitarii Vanguards have more than one Leader attached. They may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "value": "This unit has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -10862,7 +11065,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "4726-a4ab-35b4-4384",
             "hidden": false,
             "selectionEntryGroups": [
@@ -11016,15 +11219,7 @@
                 ],
                 "defaultSelectionEntryId": "48fd-eddd-4f9b-9180",
                 "sortIndex": 2
-              }
-            ],
-            "sortIndex": 1
-          },
-          {
-            "name": "Special Weapons Loadout",
-            "id": "8a16-de6c-e6df-69fa",
-            "hidden": false,
-            "selectionEntryGroups": [
+              },
               {
                 "name": "Skitarii Vanguard Gunner",
                 "id": "d693-f2b4-b02f-2e7a",
@@ -11076,13 +11271,20 @@
                   }
                 ],
                 "defaultSelectionEntryId": "1862-4e65-7454-def4",
-                "sortIndex": 1
+                "sortIndex": 3
               }
             ],
+            "sortIndex": 1
+          },
+          {
+            "name": "Special Weapons Loadout",
+            "id": "8a16-de6c-e6df-69fa",
+            "hidden": true,
+            "selectionEntryGroups": [],
             "sortIndex": 2
           }
         ],
-        "comment": "SKITARII VANGUARDS LOADOUT: the Alpha is represented directly with the sergeant loadout and defaults to Radium Pistol + Arc Maul. Warriors 2-9 carry the standard Radium Carbine. The dedicated Gunner omits the ordinary fallback and defaults to Transuranic Arquebus."
+        "comment": "SKITARII VANGUARDS LOADOUT: the Alpha is represented directly with the sergeant loadout and defaults to Radium Pistol & Arc Maul. Warriors 2-9 carry the standard Radium Carbine. The dedicated Skitarii Vanguard Gunner is presented directly under Loadout Options, omits the ordinary fallback, and defaults to Transuranic Arquebus."
       },
       {
         "type": "unit",
@@ -11112,10 +11314,10 @@
             "name": "Infantry"
           }
         ],
-        "comment": "KATAPHRON BREACHERS LOADOUT: two base models plus optional third model at 40 Points. Every model is explicit because its weapon pairing may differ. Physical loadout slots are player-facing Right Arm and Left Arm.",
+        "comment": "KATAPHRON BREACHERS LOADOUT: two base models plus optional third model at 40 Points. Every model is explicit because its weapon pairing may differ. The separate per-model weapon choice lists are retained, while physical Right Arm / Left Arm labels are hidden as implementation detail.",
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "fbb9-a9d9-33d9-3aaf",
             "hidden": false,
             "selectionEntryGroups": [
@@ -11125,7 +11327,7 @@
                 "hidden": false,
                 "selectionEntryGroups": [
                   {
-                    "name": "Right Arm",
+                    "name": "​",
                     "id": "0918-4ac7-588c-e67e",
                     "hidden": false,
                     "constraints": [
@@ -11186,7 +11388,7 @@
                     "sortIndex": 1
                   },
                   {
-                    "name": "Left Arm",
+                    "name": "​",
                     "id": "0967-f064-54fe-7121",
                     "hidden": false,
                     "constraints": [
@@ -11255,7 +11457,7 @@
                 "hidden": false,
                 "selectionEntryGroups": [
                   {
-                    "name": "Right Arm",
+                    "name": "​",
                     "id": "2025-f51b-a5c3-99d1",
                     "hidden": false,
                     "constraints": [
@@ -11316,7 +11518,7 @@
                     "sortIndex": 1
                   },
                   {
-                    "name": "Left Arm",
+                    "name": "​",
                     "id": "c5dd-2509-235f-66b2",
                     "hidden": false,
                     "constraints": [
@@ -11383,7 +11585,7 @@
             "sortIndex": 1
           },
           {
-            "name": "Additional Models",
+            "name": "Additional Model",
             "id": "f91e-f227-f1f9-6d9a",
             "hidden": false,
             "selectionEntries": [
@@ -11403,7 +11605,7 @@
                 ],
                 "selectionEntryGroups": [
                   {
-                    "name": "Right Arm",
+                    "name": "​",
                     "id": "2443-c3e8-d09e-0e38",
                     "hidden": false,
                     "constraints": [
@@ -11464,7 +11666,7 @@
                     "sortIndex": 1
                   },
                   {
-                    "name": "Left Arm",
+                    "name": "​",
                     "id": "8fa8-c786-51f4-f3f4",
                     "hidden": false,
                     "constraints": [
@@ -11559,10 +11761,10 @@
             "name": "Infantry"
           }
         ],
-        "comment": "KATAPHRON DESTROYERS LOADOUT: two base models plus optional third model at 40 Points. Every model is explicit because its weapon pairing may differ. Physical loadout slots are player-facing Right Arm and Left Arm.",
+        "comment": "KATAPHRON DESTROYERS LOADOUT: two base models plus optional third model at 40 Points. Every model is explicit because its weapon pairing may differ. The separate per-model weapon choice lists are retained, while physical Right Arm / Left Arm labels are hidden as implementation detail.",
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "5a39-c059-ce48-72bd",
             "hidden": false,
             "selectionEntryGroups": [
@@ -11572,7 +11774,7 @@
                 "hidden": false,
                 "selectionEntryGroups": [
                   {
-                    "name": "Right Arm",
+                    "name": "​",
                     "id": "6991-0319-596f-b8b3",
                     "hidden": false,
                     "constraints": [
@@ -11633,7 +11835,7 @@
                     "sortIndex": 1
                   },
                   {
-                    "name": "Left Arm",
+                    "name": "​",
                     "id": "dac8-1099-2881-88c4",
                     "hidden": false,
                     "constraints": [
@@ -11702,7 +11904,7 @@
                 "hidden": false,
                 "selectionEntryGroups": [
                   {
-                    "name": "Right Arm",
+                    "name": "​",
                     "id": "7a18-fec6-8628-7fd3",
                     "hidden": false,
                     "constraints": [
@@ -11763,7 +11965,7 @@
                     "sortIndex": 1
                   },
                   {
-                    "name": "Left Arm",
+                    "name": "​",
                     "id": "385a-000d-e3d7-132a",
                     "hidden": false,
                     "constraints": [
@@ -11830,7 +12032,7 @@
             "sortIndex": 1
           },
           {
-            "name": "Additional Models",
+            "name": "Additional Model",
             "id": "9628-7307-9ca4-2647",
             "hidden": false,
             "selectionEntries": [
@@ -11850,7 +12052,7 @@
                 ],
                 "selectionEntryGroups": [
                   {
-                    "name": "Right Arm",
+                    "name": "​",
                     "id": "0a7e-4fce-6aaf-a68b",
                     "hidden": false,
                     "constraints": [
@@ -11911,7 +12113,7 @@
                     "sortIndex": 1
                   },
                   {
-                    "name": "Left Arm",
+                    "name": "​",
                     "id": "d49b-c1bd-098e-9bb8",
                     "hidden": false,
                     "constraints": [
@@ -12023,7 +12225,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "7424-8b82-aa73-1b0e",
             "hidden": false,
             "selectionEntryGroups": [
@@ -12031,47 +12233,84 @@
                 "name": "Thallax 1-2",
                 "id": "53ce-df6c-f817-37b7",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "9ea7-94f4-60df-855b",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "5133-ed06-ff0b-1942",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9ea7-94f4-60df-855b",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c392-050b-2894-ff53",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "2x Lightning Gun",
+                        "hidden": false,
+                        "id": "e9d6-630a-7072-4479",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "e9d6-630a-7072-4479"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "c392-050b-2894-ff53",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "2x Lightning Gun + 2x Chain Bayonet",
+                    "name": "​",
+                    "id": "f2ae-0022-dc56-5e90",
                     "hidden": false,
-                    "id": "e9d6-630a-7072-4479",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9e71-d586-178c-ffea",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d6d6-0ee2-5cea-445d",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "2x Chain Bayonet",
+                        "hidden": false,
+                        "id": "7921-00f4-87b1-a55a",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "7921-00f4-87b1-a55a"
                   }
-                ],
-                "defaultSelectionEntryId": "e9d6-630a-7072-4479",
-                "sortIndex": 1
-              }
-            ],
-            "sortIndex": 1
-          },
-          {
-            "name": "Special Weapons Loadout",
-            "id": "46d1-3c87-cfe9-4fac",
-            "hidden": false,
-            "selectionEntryGroups": [
+                ]
+              },
               {
                 "name": "Thallax 3",
                 "id": "fb60-b58f-50d2-8eab",
@@ -12131,13 +12370,20 @@
                   }
                 ],
                 "defaultSelectionEntryId": "475d-90f0-786b-007c",
-                "sortIndex": 1
+                "sortIndex": 2
               }
             ],
+            "sortIndex": 1
+          },
+          {
+            "name": "Special Weapons Loadout",
+            "id": "46d1-3c87-cfe9-4fac",
+            "hidden": true,
+            "selectionEntryGroups": [],
             "sortIndex": 2
           }
         ],
-        "comment": "THALLAX COHORT LOADOUT: Thallax 1-2 retain Lightning Gun + Chain Bayonet. Thallax 3 is the dedicated Special Weapons Loadout model and defaults to Phased Plasma-Fusil."
+        "comment": "THALLAX COHORT LOADOUT: Thallax 1-2 retain 2x Lightning Gun and 2x Chain Bayonet as separate fixed equipment lines. Thallax 3 is presented directly under Loadout Options as the dedicated special-weapon model and defaults to Phased Plasma-Fusil."
       },
       {
         "type": "unit",
@@ -12184,7 +12430,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "5348-c05a-34de-346a",
             "hidden": false,
             "selectionEntryGroups": [
@@ -12194,7 +12440,7 @@
                 "hidden": false,
                 "selectionEntryGroups": [
                   {
-                    "name": "Ranged Weapon",
+                    "name": "​",
                     "id": "55dd-35f2-db80-ad88",
                     "hidden": false,
                     "constraints": [
@@ -12284,7 +12530,7 @@
                 "hidden": false,
                 "selectionEntryGroups": [
                   {
-                    "name": "Ranged Weapon",
+                    "name": "​",
                     "id": "a765-2be7-09c9-f772",
                     "hidden": false,
                     "constraints": [
@@ -12374,7 +12620,7 @@
                 "hidden": false,
                 "selectionEntryGroups": [
                   {
-                    "name": "Ranged Weapon",
+                    "name": "​",
                     "id": "1755-9184-790a-63cf",
                     "hidden": false,
                     "constraints": [
@@ -12510,7 +12756,7 @@
         "comment": "VORAX LOADOUT: two base models plus optional third model at 40 Points. Each model independently selects Lightning Gun or Irad Cleanser.",
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "cad2-3e57-8f12-3a63",
             "hidden": false,
             "selectionEntryGroups": [
@@ -12520,7 +12766,7 @@
                 "hidden": false,
                 "selectionEntryGroups": [
                   {
-                    "name": "Primary Weapon",
+                    "name": "​",
                     "id": "00c2-8649-b15a-55ba",
                     "hidden": false,
                     "constraints": [
@@ -12602,7 +12848,7 @@
                     "sortIndex": 2
                   },
                   {
-                    "name": "Melee Weapon",
+                    "name": "​",
                     "id": "d165-33ee-39ec-ae5f",
                     "hidden": false,
                     "constraints": [
@@ -12647,7 +12893,7 @@
                 "hidden": false,
                 "selectionEntryGroups": [
                   {
-                    "name": "Primary Weapon",
+                    "name": "​",
                     "id": "cc1f-8122-7528-c48f",
                     "hidden": false,
                     "constraints": [
@@ -12729,7 +12975,7 @@
                     "sortIndex": 2
                   },
                   {
-                    "name": "Melee Weapon",
+                    "name": "​",
                     "id": "279c-719e-7b21-c0a5",
                     "hidden": false,
                     "constraints": [
@@ -12772,7 +13018,7 @@
             "sortIndex": 1
           },
           {
-            "name": "Additional Models",
+            "name": "Additional Model",
             "id": "16ea-c78b-889b-5ffc",
             "hidden": false,
             "selectionEntries": [
@@ -12792,7 +13038,7 @@
                 ],
                 "selectionEntryGroups": [
                   {
-                    "name": "Primary Weapon",
+                    "name": "​",
                     "id": "dc49-cc64-00e5-b80d",
                     "hidden": false,
                     "constraints": [
@@ -12874,7 +13120,7 @@
                     "sortIndex": 2
                   },
                   {
-                    "name": "Melee Weapon",
+                    "name": "​",
                     "id": "0c46-79a5-615a-31fa",
                     "hidden": false,
                     "constraints": [
@@ -12962,57 +13208,65 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "e883-4158-e059-d610",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Primary Weapon",
-                "id": "ab1c-f7d0-7ae9-9993",
+                "name": "Ironstrider Ballistarii",
+                "id": "8187-b298-9b5c-a77f",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "c6c8-4c30-f88b-c97d",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "d6b7-fb0e-b29c-281f",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Twin Cognis Lascannon",
+                    "name": "Primary Weapon",
+                    "id": "ab1c-f7d0-7ae9-9993",
                     "hidden": false,
-                    "id": "6a6b-6180-5112-5ce0",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c6c8-4c30-f88b-c97d",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d6b7-fb0e-b29c-281f",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Twin Cognis Lascannon",
+                        "hidden": false,
+                        "id": "6a6b-6180-5112-5ce0",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Twin Cognis Autocannon",
+                        "hidden": false,
+                        "id": "8aae-8603-c094-f1ea",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "6a6b-6180-5112-5ce0",
                     "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Twin Cognis Autocannon",
-                    "hidden": false,
-                    "id": "8aae-8603-c094-f1ea",
-                    "sortIndex": 2
                   }
-                ],
-                "defaultSelectionEntryId": "6a6b-6180-5112-5ce0",
-                "sortIndex": 1
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ]
       },
@@ -13061,7 +13315,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "6329-f804-f6ac-3e56",
             "hidden": false,
             "selectionEntryGroups": [
@@ -13069,75 +13323,202 @@
                 "name": "Raider Alpha",
                 "id": "2a44-527f-184b-be94",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "eb5a-e3cc-3856-780a",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "391d-b9eb-8d54-ce82",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "eb5a-e3cc-3856-780a",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1cb9-6b65-f7f8-eff8",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Galvanic Carbine",
+                        "hidden": false,
+                        "id": "66b3-2796-5353-9b95",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "66b3-2796-5353-9b95"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "1cb9-6b65-f7f8-eff8",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Galvanic Carbine + Sword + Archeotech Pistol",
+                    "name": "​",
+                    "id": "e6e8-fb19-cf6a-ac2f",
                     "hidden": false,
-                    "id": "66b3-2796-5353-9b95",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "00dd-e75a-5741-69d8",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "438f-7fd7-629b-8f6b",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Sword",
+                        "hidden": false,
+                        "id": "a4d7-5153-7b79-764c",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "a4d7-5153-7b79-764c"
+                  },
+                  {
+                    "name": "​",
+                    "id": "9e56-e931-4e3f-f909",
+                    "hidden": false,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "aae8-6f6b-e055-8d37",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "da7d-c172-4460-8fd9",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Archeotech Pistol",
+                        "hidden": false,
+                        "id": "14a6-e8d0-9bd8-740e",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "14a6-e8d0-9bd8-740e"
                   }
-                ],
-                "defaultSelectionEntryId": "66b3-2796-5353-9b95",
-                "sortIndex": 1
+                ]
               },
               {
                 "name": "Raider 2-3",
                 "id": "e196-9895-3d8e-2072",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 2,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "127d-1d42-7ea6-37cf",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "89bb-1620-aa33-b8bd",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "127d-1d42-7ea6-37cf",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d9d9-ea2d-292c-184a",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "2x Galvanic Carbine",
+                        "hidden": false,
+                        "id": "48db-c4e8-c895-1977",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "48db-c4e8-c895-1977"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "d9d9-ea2d-292c-184a",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "2x Galvanic Carbine + 2x Sword",
+                    "name": "​",
+                    "id": "5b4f-8a89-79f1-cc1b",
                     "hidden": false,
-                    "id": "48db-c4e8-c895-1977",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1079-ea30-e2c3-9e87",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8b71-13e0-bdc7-feb7",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "2x Sword",
+                        "hidden": false,
+                        "id": "fbc0-f5bc-7934-7dbb",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "fbc0-f5bc-7934-7dbb"
                   }
-                ],
-                "defaultSelectionEntryId": "48db-c4e8-c895-1977",
-                "sortIndex": 2
+                ]
               }
             ],
             "sortIndex": 1
@@ -13190,7 +13571,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "3b28-f7b1-0424-1046",
             "hidden": false,
             "selectionEntryGroups": [
@@ -13200,7 +13581,7 @@
                 "hidden": false,
                 "selectionEntryGroups": [
                   {
-                    "name": "Fixed Weapon",
+                    "name": "​",
                     "id": "0ab2-a18b-ad14-0703",
                     "hidden": false,
                     "constraints": [
@@ -13280,7 +13661,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Phosphor Pistol + Cavalry Arc Maul",
+                        "name": "Phosphor Pistol & Cavalry Arc Maul",
                         "hidden": false,
                         "id": "2bff-4e34-adfa-9205",
                         "sortIndex": 3
@@ -13298,7 +13679,7 @@
                 "hidden": false,
                 "selectionEntryGroups": [
                   {
-                    "name": "Fixed Weapon",
+                    "name": "​",
                     "id": "132c-e498-3aba-045c",
                     "hidden": false,
                     "constraints": [
@@ -13378,7 +13759,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Phosphor Pistol + Cavalry Arc Maul",
+                        "name": "Phosphor Pistol & Cavalry Arc Maul",
                         "hidden": false,
                         "id": "103e-4aaf-3b28-be78",
                         "sortIndex": 3
@@ -13396,7 +13777,7 @@
                 "hidden": false,
                 "selectionEntryGroups": [
                   {
-                    "name": "Fixed Weapon",
+                    "name": "​",
                     "id": "f229-ccdc-d003-45f2",
                     "hidden": false,
                     "constraints": [
@@ -13476,7 +13857,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Phosphor Pistol + Cavalry Arc Maul",
+                        "name": "Phosphor Pistol & Cavalry Arc Maul",
                         "hidden": false,
                         "id": "882c-f5d1-aede-d8a1",
                         "sortIndex": 3
@@ -13538,94 +13919,102 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "2685-8b33-10bc-61f2",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Primary Weapon",
-                "id": "dc7e-f236-12c5-be54",
+                "name": "Sydonian Skatros",
+                "id": "a0a0-3cab-1918-53d8",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "bca7-7fbb-2b14-385e",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "2c91-7c40-30e4-eae7",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Radium Jezzail",
+                    "name": "Primary Weapon",
+                    "id": "dc7e-f236-12c5-be54",
                     "hidden": false,
-                    "id": "74c4-5b54-a822-9292",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "bca7-7fbb-2b14-385e",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2c91-7c40-30e4-eae7",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Radium Jezzail",
+                        "hidden": false,
+                        "id": "74c4-5b54-a822-9292",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Transuranic Arquebus",
+                        "hidden": false,
+                        "id": "69c5-4c55-d3d5-0ef6",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "74c4-5b54-a822-9292",
                     "sortIndex": 1
                   },
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Transuranic Arquebus",
+                    "name": "​",
+                    "id": "c945-5952-0a80-b7f2",
                     "hidden": false,
-                    "id": "69c5-4c55-d3d5-0ef6",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "95ba-89a2-019e-6879",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e2c3-6ccc-2393-783a",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Archeotech Pistol",
+                        "hidden": false,
+                        "id": "f9d3-da9b-be39-1553",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "f9d3-da9b-be39-1553",
                     "sortIndex": 2
                   }
-                ],
-                "defaultSelectionEntryId": "74c4-5b54-a822-9292",
-                "sortIndex": 1
-              },
-              {
-                "name": "Sidearm",
-                "id": "c945-5952-0a80-b7f2",
-                "hidden": false,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "95ba-89a2-019e-6879",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "e2c3-6ccc-2393-783a",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Archeotech Pistol",
-                    "hidden": false,
-                    "id": "f9d3-da9b-be39-1553",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "f9d3-da9b-be39-1553",
-                "sortIndex": 2
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ]
       },
@@ -13674,49 +14063,94 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "150c-6c69-1740-b55b",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Equipment",
-                "id": "010d-2128-4881-00a7",
+                "name": "Skorpius Dunerider",
+                "id": "ac53-091c-1171-67a8",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "cdc8-020e-3285-fc2e",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "010d-2128-4881-00a7",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "cdc8-020e-3285-fc2e",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "26cc-4754-6de4-c107",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Twin Cognis Heavy Stubbers",
+                        "hidden": false,
+                        "id": "583e-c7dd-559e-5716",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "583e-c7dd-559e-5716",
+                    "sortIndex": 1
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "26cc-4754-6de4-c107",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Twin Cognis Heavy Stubbers + Hull Cognis Heavy Stubbers",
+                    "name": "​",
+                    "id": "03f8-4fe2-14b4-3744",
                     "hidden": false,
-                    "id": "583e-c7dd-559e-5716",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d6b7-4961-0819-07ac",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9bac-a2e7-96d0-8e93",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hull Cognis Heavy Stubbers",
+                        "hidden": false,
+                        "id": "bfbd-a6b0-a053-2418",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "bfbd-a6b0-a053-2418"
                   }
-                ],
-                "defaultSelectionEntryId": "583e-c7dd-559e-5716",
-                "sortIndex": 1
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ]
       },
@@ -13765,94 +14199,139 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "7937-aaf7-aa79-82c6",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Fixed Weapons",
-                "id": "b001-d71e-2c62-e996",
+                "name": "Skorpius Disintegrator",
+                "id": "4e87-ad80-4756-b746",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "1430-b7da-79f6-4938",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "efe9-d8d7-615e-bc7f",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Disruptor Missile Launcher + Hull Cognis Heavy Stubbers",
+                    "name": "​",
+                    "id": "b001-d71e-2c62-e996",
                     "hidden": false,
-                    "id": "7c32-e0d8-5996-d569",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "7c32-e0d8-5996-d569",
-                "sortIndex": 1
-              },
-              {
-                "name": "Primary Cannon",
-                "id": "c23e-ed4e-a459-74a7",
-                "hidden": false,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "f983-c65c-1945-ddd9",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "41f1-5c4a-551d-bf46",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Ferrumite Cannon",
-                    "hidden": false,
-                    "id": "4716-821a-5cc5-6a2d",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1430-b7da-79f6-4938",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "efe9-d8d7-615e-bc7f",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Disruptor Missile Launcher",
+                        "hidden": false,
+                        "id": "7c32-e0d8-5996-d569",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "7c32-e0d8-5996-d569",
                     "sortIndex": 1
                   },
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Voltaic Belleros Energy Cannon",
+                    "name": "​",
+                    "id": "b382-255e-e54d-9ffc",
                     "hidden": false,
-                    "id": "3363-6f97-3c9d-2ad0",
-                    "sortIndex": 2
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2755-89b7-cc2d-70be",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4d2c-b5b0-2e5d-4da8",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hull Cognis Heavy Stubbers",
+                        "hidden": false,
+                        "id": "8603-b5e6-c56e-dd0c",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "8603-b5e6-c56e-dd0c"
+                  },
+                  {
+                    "name": "Primary Cannon",
+                    "id": "c23e-ed4e-a459-74a7",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f983-c65c-1945-ddd9",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "41f1-5c4a-551d-bf46",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Ferrumite Cannon",
+                        "hidden": false,
+                        "id": "4716-821a-5cc5-6a2d",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Voltaic Belleros Energy Cannon",
+                        "hidden": false,
+                        "id": "3363-6f97-3c9d-2ad0",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "4716-821a-5cc5-6a2d",
+                    "sortIndex": 3
                   }
-                ],
-                "defaultSelectionEntryId": "4716-821a-5cc5-6a2d",
-                "sortIndex": 2
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ]
       },
@@ -13901,52 +14380,134 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "8daf-d12e-74ae-1795",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Equipment",
-                "id": "8707-0bcb-2412-a751",
+                "name": "Vultarax",
+                "id": "7843-9d68-d3e6-3d1f",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "e90f-753b-e838-899a",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "8707-0bcb-2412-a751",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e90f-753b-e838-899a",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "87e3-0587-0edf-c690",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Vultarax Arc Blaster",
+                        "hidden": false,
+                        "id": "1142-a276-e640-465c",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "1142-a276-e640-465c",
+                    "sortIndex": 1
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "87e3-0587-0edf-c690",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Vultarax Arc Blaster + Setheno Pattern Havoc Launcher 1-2 + Power Blades",
+                    "name": "​",
+                    "id": "7299-43b0-e7f7-ea37",
                     "hidden": false,
-                    "id": "1142-a276-e640-465c",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "829e-3951-05f9-a85e",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "95ba-7b38-02ee-1037",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "2x Setheno Pattern Havoc Launcher",
+                        "hidden": false,
+                        "id": "3bc4-9238-42d2-88a4",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "3bc4-9238-42d2-88a4"
+                  },
+                  {
+                    "name": "​",
+                    "id": "8568-1464-fc6c-3fa5",
+                    "hidden": false,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "14f9-f0ae-a406-2314",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "91f9-d7cf-5fa3-7c5c",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Blades",
+                        "hidden": false,
+                        "id": "64b4-1c9f-18f6-43de",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "64b4-1c9f-18f6-43de"
                   }
-                ],
-                "defaultSelectionEntryId": "1142-a276-e640-465c",
-                "sortIndex": 1
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ],
-        "comment": "VULTARAX LOADOUT: fixed equipment. The two Setheno Pattern Havoc Launcher profiles are abbreviated as 'Setheno Pattern Havoc Launcher 1-2' for listbuilder presentation."
+        "comment": "VULTARAX LOADOUT: fixed equipment is shown as separate weapon lines. The two Setheno Pattern Havoc Launchers are aggregated as 2x Setheno Pattern Havoc Launcher."
       },
       {
         "type": "unit",
@@ -13993,7 +14554,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "8bba-2b50-2d17-808e",
             "hidden": false,
             "selectionEntryGroups": [
@@ -14070,7 +14631,7 @@
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Transonic Razor + Chordclaw",
+                    "name": "Transonic Razor & Chordclaw",
                     "hidden": false,
                     "id": "a1f2-d031-ccb6-05e2",
                     "sortIndex": 2
@@ -14088,7 +14649,7 @@
             "hidden": false,
             "selectionEntryGroups": [
               {
-                "name": "Mindscrambler Grenade",
+                "name": "​",
                 "id": "2f22-56e0-af91-51d8",
                 "hidden": false,
                 "constraints": [
@@ -14171,7 +14732,7 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "1181-cb02-18b7-8b9d",
             "hidden": false,
             "selectionEntryGroups": [
@@ -14674,7 +15235,7 @@
             "hidden": false,
             "selectionEntryGroups": [
               {
-                "name": "Mindscrambler Grenade",
+                "name": "​",
                 "id": "95bf-5bb3-6734-7fe3",
                 "hidden": false,
                 "constraints": [
@@ -14757,110 +15318,118 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "0410-efc1-98a8-c5d0",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Fixed Weapon",
-                "id": "5a22-9c81-7a87-407d",
+                "name": "Onager Dunecrawler",
+                "id": "4908-210f-6c52-c987",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "6405-f8d7-bd7a-7fdb",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "023b-db95-a000-d509",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Cognis Heavy Stubber",
+                    "name": "​",
+                    "id": "5a22-9c81-7a87-407d",
                     "hidden": false,
-                    "id": "abb4-5473-d866-7e40",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "abb4-5473-d866-7e40",
-                "sortIndex": 1
-              },
-              {
-                "name": "Primary Weapon System",
-                "id": "857f-dd66-8cdf-bb80",
-                "hidden": false,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "5aa0-dc5a-dc6c-6e08",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "ecf1-b9fc-b077-6a86",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Neutron Laser + Coaxial Cognis Heavy Stubber",
-                    "hidden": false,
-                    "id": "78ee-6e9c-26f8-4bf2",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6405-f8d7-bd7a-7fdb",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "023b-db95-a000-d509",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Cognis Heavy Stubber",
+                        "hidden": false,
+                        "id": "abb4-5473-d866-7e40",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "abb4-5473-d866-7e40",
                     "sortIndex": 1
                   },
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Twin Heavy Phosphor Blaster",
+                    "name": "Primary Weapon System",
+                    "id": "857f-dd66-8cdf-bb80",
                     "hidden": false,
-                    "id": "841a-b358-bafe-66a9",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5aa0-dc5a-dc6c-6e08",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ecf1-b9fc-b077-6a86",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Neutron Laser & Coaxial Cognis Heavy Stubber",
+                        "hidden": false,
+                        "id": "78ee-6e9c-26f8-4bf2",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Twin Heavy Phosphor Blaster",
+                        "hidden": false,
+                        "id": "841a-b358-bafe-66a9",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Daedalus Missile Launcher & Icarus Array",
+                        "hidden": false,
+                        "id": "096a-53b2-25ca-696c",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Eradication Beamer",
+                        "hidden": false,
+                        "id": "07c7-c75f-fff2-6f19",
+                        "sortIndex": 4
+                      }
+                    ],
+                    "defaultSelectionEntryId": "78ee-6e9c-26f8-4bf2",
                     "sortIndex": 2
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Daedalus Missile Launcher + Icarus Array",
-                    "hidden": false,
-                    "id": "096a-53b2-25ca-696c",
-                    "sortIndex": 3
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Eradication Beamer",
-                    "hidden": false,
-                    "id": "07c7-c75f-fff2-6f19",
-                    "sortIndex": 4
                   }
-                ],
-                "defaultSelectionEntryId": "78ee-6e9c-26f8-4bf2",
-                "sortIndex": 2
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ]
       },
@@ -14909,57 +15478,74 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "3693-3ae6-0904-34cc",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Arm Weapons",
-                "id": "0563-373e-4442-5a4e",
+                "name": "Kastelan Robot",
+                "id": "4437-a29a-0ffd-867a",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "8985-248f-eee3-186f",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "c205-6232-b5f9-a343",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Kastelan Fists",
+                    "name": "Primary Weapons",
+                    "id": "0563-373e-4442-5a4e",
                     "hidden": false,
-                    "id": "54cd-a855-96c3-0163",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8985-248f-eee3-186f",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c205-6232-b5f9-a343",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Kastelan Fists",
+                        "hidden": false,
+                        "id": "54cd-a855-96c3-0163",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Phosphor Blasters",
+                        "hidden": false,
+                        "id": "ccf3-c547-a445-02a4",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "54cd-a855-96c3-0163",
                     "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Heavy Phosphor Blasters",
-                    "hidden": false,
-                    "id": "ccf3-c547-a445-02a4",
-                    "sortIndex": 2
                   }
-                ],
-                "defaultSelectionEntryId": "54cd-a855-96c3-0163",
-                "sortIndex": 1
-              },
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "103a-416b-edd0-dc61",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
               {
-                "name": "Shoulder Weapon",
+                "name": "​",
                 "id": "a48c-a287-4906-b2cf",
                 "hidden": false,
                 "constraints": [
@@ -15005,13 +15591,12 @@
                     ]
                   }
                 ],
-                "sortIndex": 2
+                "sortIndex": 1
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ],
-        "comment": "KASTELAN ROBOT LOADOUT: physical slot labels are used for clarity. Arm Weapons is mandatory; Shoulder Weapon is optional and costs 10 Points."
+        "comment": "KASTELAN ROBOT LOADOUT: Primary Weapons contains the model's mandatory arm-weapon choice. The optional +10 Point Heavy Phosphor Blaster / Incendine Combustor choice is presented under Paid Wargear; the physical shoulder-slot label is hidden as implementation detail."
       },
       {
         "type": "unit",
@@ -15058,102 +15643,147 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "0c0b-21ef-ecb1-d282",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Fixed Weapons",
-                "id": "01d1-4d10-9fb0-afc8",
+                "name": "Termite Assault Drill",
+                "id": "fbc5-acbf-14cf-7824",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "841d-da3d-5a7c-a72f",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "f3aa-fb3f-7712-6cbf",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Melta Cutters + Termite Drill",
+                    "name": "​",
+                    "id": "01d1-4d10-9fb0-afc8",
                     "hidden": false,
-                    "id": "df70-1408-acee-4d67",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "df70-1408-acee-4d67",
-                "sortIndex": 1
-              },
-              {
-                "name": "Secondary Weapon",
-                "id": "7ec5-d5f2-dc7f-1dc4",
-                "hidden": false,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "23a4-5592-c6c2-a21f",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "b9f2-ca15-93d7-32d9",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Twin Volkite Charger",
-                    "hidden": false,
-                    "id": "b6b1-fd97-51f5-c346",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "841d-da3d-5a7c-a72f",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f3aa-fb3f-7712-6cbf",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Melta Cutters",
+                        "hidden": false,
+                        "id": "df70-1408-acee-4d67",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "df70-1408-acee-4d67",
                     "sortIndex": 1
                   },
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Twin Heavy Flamer",
+                    "name": "​",
+                    "id": "4746-73e4-d061-0ae3",
                     "hidden": false,
-                    "id": "8acf-4ca8-6826-1fd4",
-                    "sortIndex": 2
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "50ae-e660-0314-663e",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "26f1-3aff-8d38-2aad",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Termite Drill",
+                        "hidden": false,
+                        "id": "3efa-f635-77b8-7a7e",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "3efa-f635-77b8-7a7e"
                   },
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Twin Storm Bolter",
+                    "name": "Secondary Weapon",
+                    "id": "7ec5-d5f2-dc7f-1dc4",
                     "hidden": false,
-                    "id": "70f4-2168-454b-c7f3",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "23a4-5592-c6c2-a21f",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "b9f2-ca15-93d7-32d9",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Twin Volkite Charger",
+                        "hidden": false,
+                        "id": "b6b1-fd97-51f5-c346",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Twin Heavy Flamer",
+                        "hidden": false,
+                        "id": "8acf-4ca8-6826-1fd4",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Twin Storm Bolter",
+                        "hidden": false,
+                        "id": "70f4-2168-454b-c7f3",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b6b1-fd97-51f5-c346",
                     "sortIndex": 3
                   }
-                ],
-                "defaultSelectionEntryId": "b6b1-fd97-51f5-c346",
-                "sortIndex": 2
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ]
       },
@@ -15202,94 +15832,102 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "3499-bbb2-f1e0-a55f",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Primary Weapon",
-                "id": "c47a-7375-0a4e-5345",
+                "name": "Thanatar Class Siege-Automata",
+                "id": "bbc4-d6be-ab8a-f239",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "185a-e45f-5da6-7d1e",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "63f4-7d34-e719-ffd2",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hellex Plasma Mortar",
+                    "name": "Primary Weapon",
+                    "id": "c47a-7375-0a4e-5345",
                     "hidden": false,
-                    "id": "aaff-c494-600b-dafa",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "185a-e45f-5da6-7d1e",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "63f4-7d34-e719-ffd2",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hellex Plasma Mortar",
+                        "hidden": false,
+                        "id": "aaff-c494-600b-dafa",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Solex Lascannon",
+                        "hidden": false,
+                        "id": "f547-f318-45cb-d999",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "aaff-c494-600b-dafa",
                     "sortIndex": 1
                   },
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Solex Lascannon",
+                    "name": "​",
+                    "id": "fd95-0de0-13e7-d65e",
                     "hidden": false,
-                    "id": "f547-f318-45cb-d999",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5baa-5ce5-3cec-5ab5",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3c3f-5ed8-c2df-3ec5",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Mauler Bolt Cannons",
+                        "hidden": false,
+                        "id": "26f2-c44e-e078-fb39",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "26f2-c44e-e078-fb39",
                     "sortIndex": 2
                   }
-                ],
-                "defaultSelectionEntryId": "aaff-c494-600b-dafa",
-                "sortIndex": 1
-              },
-              {
-                "name": "Secondary Weapon",
-                "id": "fd95-0de0-13e7-d65e",
-                "hidden": false,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "5baa-5ce5-3cec-5ab5",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "3c3f-5ed8-c2df-3ec5",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Mauler Bolt Cannons",
-                    "hidden": false,
-                    "id": "26f2-c44e-e078-fb39",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "26f2-c44e-e078-fb39",
-                "sortIndex": 2
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           },
           {
             "name": "Paid Wargear",
@@ -15297,7 +15935,7 @@
             "hidden": false,
             "selectionEntryGroups": [
               {
-                "name": "Graviton Ram",
+                "name": "​",
                 "id": "3148-26b6-23a9-cea7",
                 "hidden": false,
                 "constraints": [
@@ -15373,7 +16011,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Macrocarid Explorator is Rare and may only be included once in the army. Remove the additional Macrocarid Explorator unit(s).",
+            "value": "Your army may include only one Macrocarid Explorator because it is Rare. Remove the additional copy.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -15392,158 +16030,166 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout",
+            "name": "Loadout Options",
             "id": "026f-ab05-4283-7ca2",
             "hidden": false,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Primary Weapon System",
-                "id": "c761-5e18-4a04-13ec",
+                "name": "Macrocarid Explorator",
+                "id": "f22f-73ab-6998-22c3",
                 "hidden": false,
-                "constraints": [
+                "sortIndex": 1,
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "a0a6-8ce0-9369-d1fc",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "98d1-dceb-146c-aae9",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Irradiation Engines",
+                    "name": "Primary Weapon System",
+                    "id": "c761-5e18-4a04-13ec",
                     "hidden": false,
-                    "id": "9d0c-2748-d774-92ac",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a0a6-8ce0-9369-d1fc",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "98d1-dceb-146c-aae9",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Irradiation Engines",
+                        "hidden": false,
+                        "id": "9d0c-2748-d774-92ac",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lascannons",
+                        "hidden": false,
+                        "id": "bb4c-390f-6dd2-781a",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Mauler Bolt Cannons",
+                        "hidden": false,
+                        "id": "8bf1-b2f7-9393-851e",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "9d0c-2748-d774-92ac",
                     "sortIndex": 1
                   },
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Lascannons",
+                    "name": "Secondary Weapon System",
+                    "id": "0587-9e53-5eb2-4209",
                     "hidden": false,
-                    "id": "bb4c-390f-6dd2-781a",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "559e-6d50-1ebb-4f64",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "dcf2-a196-c7a4-e4ed",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Mauler Bolt Cannon",
+                        "hidden": false,
+                        "id": "b3a3-dedc-9c67-489d",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Conversion Beamer",
+                        "hidden": false,
+                        "id": "d75a-9cd0-eb40-3de8",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Graviton Imploder",
+                        "hidden": false,
+                        "id": "5445-90a1-7546-ce13",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Phased-Plasma Fusils",
+                        "hidden": false,
+                        "id": "e072-810c-0baa-0dfd",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Irad Cleansers",
+                        "hidden": false,
+                        "id": "8627-79bb-ae9d-3922",
+                        "sortIndex": 5
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Volkite Culverin",
+                        "hidden": false,
+                        "id": "91d9-e7a5-fd20-a4b1",
+                        "sortIndex": 6
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lascannon",
+                        "hidden": false,
+                        "id": "b32a-a6b7-15a8-d486",
+                        "sortIndex": 7
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Multi-Melta",
+                        "hidden": false,
+                        "id": "32e0-b10a-2581-ae76",
+                        "sortIndex": 8
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b3a3-dedc-9c67-489d",
                     "sortIndex": 2
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Mauler Bolt Cannons",
-                    "hidden": false,
-                    "id": "8bf1-b2f7-9393-851e",
-                    "sortIndex": 3
                   }
-                ],
-                "defaultSelectionEntryId": "9d0c-2748-d774-92ac",
-                "sortIndex": 1
-              },
-              {
-                "name": "Secondary Weapon System",
-                "id": "0587-9e53-5eb2-4209",
-                "hidden": false,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "559e-6d50-1ebb-4f64",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "dcf2-a196-c7a4-e4ed",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Mauler Bolt Cannon",
-                    "hidden": false,
-                    "id": "b3a3-dedc-9c67-489d",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Conversion Beamer",
-                    "hidden": false,
-                    "id": "d75a-9cd0-eb40-3de8",
-                    "sortIndex": 2
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Graviton Imploder",
-                    "hidden": false,
-                    "id": "5445-90a1-7546-ce13",
-                    "sortIndex": 3
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Phased-Plasma Fusils",
-                    "hidden": false,
-                    "id": "e072-810c-0baa-0dfd",
-                    "sortIndex": 4
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Irad Cleansers",
-                    "hidden": false,
-                    "id": "8627-79bb-ae9d-3922",
-                    "sortIndex": 5
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Volkite Culverin",
-                    "hidden": false,
-                    "id": "91d9-e7a5-fd20-a4b1",
-                    "sortIndex": 6
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Lascannon",
-                    "hidden": false,
-                    "id": "b32a-a6b7-15a8-d486",
-                    "sortIndex": 7
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Multi-Melta",
-                    "hidden": false,
-                    "id": "32e0-b10a-2581-ae76",
-                    "sortIndex": 8
-                  }
-                ],
-                "defaultSelectionEntryId": "b3a3-dedc-9c67-489d",
-                "sortIndex": 2
+                ]
               }
-            ],
-            "sortIndex": 1
+            ]
           }
         ]
       }
@@ -15635,7 +16281,7 @@
         "hidden": true
       }
     ],
-    "comment": "LAYER 0.1 — FOUNDATION\nImported every native Adeptus Mechanicus unit from the Universal Unit Skeleton with its minimum legal points cost, semantic unit type, Infantry/Vehicle/Monster class, Rare status, Leader Capacity marker, and Other soft-copy marker as applicable. Native non-Rare Other units use Additional Copy Costs. No native Monster units are present in the source skeleton. Servitors use the proven Cryptothralls attached-by architecture: exactly one eligible Tech-Priest Leader must attach to them, while those Leaders may remain unattached instead. Skitarii Marshal uses the normal mandatory Leader attachment pattern to Skitarii Rangers or Skitarii Vanguards. Detailed loadouts, variable-size expansion controls, and Manufactorum Imperium are intentionally deferred.\n\nLAYER 0.2 — MANUFACTORUM IMPERIUM / ASTRA MILITARUM VEHICLES\nAdded a dedicated Manufactorum Imperium library link and a permanent Configuration control with two independent source switches: Space Marines Vehicles and Astra Militarum Vehicles, both defaulting to Not Included. Space Marines Vehicles is a placeholder only. Astra Militarum Vehicles reveals a bespoke army-list category containing every Vehicle unit from audited Astra Militarum Rev18. There is no Manufactorum-specific numerical cap. Already-included imported units use safe-hide behavior and constructive errors if the source switch is disabled or the Configuration entry is deleted. Imported non-Rare Other vehicles continue to use normal Additional Copy Costs; imported Rare/Leader semantics are preserved by the library unit tree.\n\nREV3 — GAME SYSTEM MANUFACTORUM CATEGORIES\nRetargeted to Warhammer 40k Reforged Game System Rev14. Removed the catalogue-local Space Marines Vehicles and Astra Militarum Vehicles category definitions and retargeted Manufactorum entryLinks to the canonical Game System presentation categories. The two Configuration switches, Astra Militarum vehicle visibility, safe-hide logic, constructive warnings, imported unit semantics, and Additional Copy Costs remain unchanged.\n\nLAYER 0.3 — SERVITORS REV4\nMoved Servitors into the visible Leader section while preserving semantic Other / Infantry and Additional Copy Costs behavior. Implemented the complete 1-4 model Servitor loadout. Each ranged/tool slot begins at (None), the source's 'different weapon for each model' restriction is structurally enforced across the four model slots, and constructive errors cover unconfigured or duplicate weapon states. Additional Servitors cost 10 Points each. Melee choices remain repeatable and default to Arc Claw.\n\nLAYER 0.4 — COMPLETE NATIVE LOADOUTS REV5\nImplemented player-facing loadouts for every remaining native Adeptus Mechanicus unit while preserving Rev4 Servitors and Manufactorum Imperium. Skitarii Rangers/Vanguards use Alpha + Warriors 2-9 + dedicated Gunner presentation, with Gunners defaulting to Transuranic Arquebus. Kataphrons use explicit per-model Right Arm / Left Arm slots and optional third models. Thallax Cohort uses one dedicated Special Weapons Loadout model. Ursarax models are represented separately. Raiders use Raider Alpha. Vultarax abbreviates the two Setheno Pattern Havoc Launchers as Setheno Pattern Havoc Launcher 1-2. All other variable-size, paid-wargear, fixed-equipment, and per-model loadout structures were completed from the UUS/PDF.",
+    "comment": "LAYER 0.1 — FOUNDATION\nImported every native Adeptus Mechanicus unit from the Universal Unit Skeleton with its minimum legal points cost, semantic unit type, Infantry/Vehicle/Monster class, Rare status, Leader Capacity marker, and Other soft-copy marker as applicable. Native non-Rare Other units use Additional Copy Costs. No native Monster units are present in the source skeleton. Servitors use the proven Cryptothralls attached-by architecture: exactly one eligible Tech-Priest Leader must attach to them, while those Leaders may remain unattached instead. Skitarii Marshal uses the normal mandatory Leader attachment pattern to Skitarii Rangers or Skitarii Vanguards. Detailed loadouts, variable-size expansion controls, and Manufactorum Imperium are intentionally deferred.\n\nLAYER 0.2 — MANUFACTORUM IMPERIUM / ASTRA MILITARUM VEHICLES\nAdded a dedicated Manufactorum Imperium library link and a permanent Configuration control with two independent source switches: Space Marines Vehicles and Astra Militarum Vehicles, both defaulting to Not Included. Space Marines Vehicles is a placeholder only. Astra Militarum Vehicles reveals a bespoke army-list category containing every Vehicle unit from audited Astra Militarum Rev18. There is no Manufactorum-specific numerical cap. Already-included imported units use safe-hide behavior and constructive errors if the source switch is disabled or the Configuration entry is deleted. Imported non-Rare Other vehicles continue to use normal Additional Copy Costs; imported Rare/Leader semantics are preserved by the library unit tree.\n\nREV3 — GAME SYSTEM MANUFACTORUM CATEGORIES\nRetargeted to Warhammer 40k Reforged Game System Rev14. Removed the catalogue-local Space Marines Vehicles and Astra Militarum Vehicles category definitions and retargeted Manufactorum entryLinks to the canonical Game System presentation categories. The two Configuration switches, Astra Militarum vehicle visibility, safe-hide logic, constructive warnings, imported unit semantics, and Additional Copy Costs remain unchanged.\n\nLAYER 0.3 — SERVITORS REV4\nMoved Servitors into the visible Leader section while preserving semantic Other / Infantry and Additional Copy Costs behavior. Implemented the complete 1-4 model Servitor loadout. Each ranged/tool slot begins at (None), the source's 'different weapon for each model' restriction is structurally enforced across the four model slots, and constructive errors cover unconfigured or duplicate weapon states. Additional Servitors cost 10 Points each. Melee choices remain repeatable and default to Arc Claw.\n\nLAYER 0.4 — COMPLETE NATIVE LOADOUTS REV5\nImplemented player-facing loadouts for every remaining native Adeptus Mechanicus unit while preserving Rev4 Servitors and Manufactorum Imperium. Skitarii Rangers/Vanguards use Alpha + Warriors 2-9 + dedicated Gunner presentation, with Gunners defaulting to Transuranic Arquebus. Kataphrons use explicit per-model Right Arm / Left Arm slots and optional third models. Thallax Cohort uses one dedicated Special Weapons Loadout model. Ursarax models are represented separately. Raiders use Raider Alpha. Vultarax abbreviates the two Setheno Pattern Havoc Launchers as Setheno Pattern Havoc Launcher 1-2. All other variable-size, paid-wargear, fixed-equipment, and per-model loadout structures were completed from the UUS/PDF.\n\nREV6 POLISH PASS\nApplied the final cross-faction listbuilder presentation standard to Adeptus Mechanicus. Renamed all 28 visible Loadout groups to Loadout Options; added explicit model headers to 17 single-model units; moved the Skitarii Ranger Gunner, Skitarii Vanguard Gunner, and Thallax 3 specialist model groups into Loadout Options while retiring the old visible Special Weapons Loadout wrappers; hid the twelve Kataphron Right Arm / Left Arm implementation labels while preserving their separate per-model weapon-choice mechanics; renamed the single-option Kataphron Breacher, Kataphron Destroyer, and Vorax size controls to Additional Model while retaining Servitors as Additional Models; split fixed multi-weapon packages into distinct visible weapon lines; standardized remaining atomic selectable packages from '+' to '&'; presented Vultarax's two Setheno Pattern Havoc Launchers as 2x; and standardized three Rare errors plus the Servitors, Skitarii Rangers, and Skitarii Vanguards host Leader-limit errors. Updated affected live authoring comments. Manufactorum Imperium, imported Astra Militarum vehicles, Servitor uniqueness logic and (None) architecture, Additional Copy Costs arithmetic, Leader attachment semantics, paid wargear, categories, points, source switches, and all other rules semantics remain unchanged.\n\nREV7 RETROSPECTIVE POLISH PASS\nRevisited the REV6 presentation pass against the final cross-faction standard. Removed residual fixed-equipment heading clutter by making all remaining Equipment / Fixed Weapon / Fixed Weapons containers zero-width and lifting split fixed weapon lines directly under their model headers; also hid other compulsory single-option slot labels where no player decision exists. Separated Thallax 1-2, Raider Alpha, and Raider 2-3 model identity from their first fixed equipment line while preserving the existing model-wrapper IDs and constraints. Kastelan Robot now uses Primary Weapons for its mandatory arm choice and presents its optional +10 Point shoulder weapon under top-level Paid Wargear, with the physical shoulder-slot label hidden. Removed duplicate inner Mindscrambler Grenade and Graviton Ram headings beneath Paid Wargear. Hidden retired Special Weapons Loadout compatibility objects remain untouched. All pre-existing IDs, SelectionEntry names, points, defaults, loadout choices, Servitor uniqueness logic, Manufactorum Imperium behavior, Additional Copy Costs arithmetic, Leader attachments, Rare validation, categories, imported vehicle handling, Game System revision, and all other rules semantics remain unchanged.",
     "catalogueLinks": [
       {
         "type": "catalogue",

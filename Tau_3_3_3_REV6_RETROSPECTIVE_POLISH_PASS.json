@@ -5,7 +5,7 @@
     "name": "T'au 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 12,
-    "revision": 5,
+    "revision": 6,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -3435,7 +3435,7 @@
         "modifiers": [
           {
             "type": "add",
-            "value": "Strike Team has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "value": "This unit has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
             "field": "error",
             "conditions": [
               {
@@ -3591,7 +3591,7 @@
         "modifiers": [
           {
             "type": "add",
-            "value": "Breacher Team has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "value": "This unit has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
             "field": "error",
             "conditions": [
               {
@@ -4427,13 +4427,48 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "9x Kroot Rifle + Rifle Knives",
+                        "name": "9x Kroot Rifle",
                         "hidden": false,
                         "id": "0afd-0c33-5212-77d8",
                         "sortIndex": 1
                       }
                     ],
                     "defaultSelectionEntryId": "0afd-0c33-5212-77d8"
+                  },
+                  {
+                    "name": "​",
+                    "id": "0a27-4546-5e03-cf2a",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5bf6-cc1e-1f13-a678"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7e6d-bd80-389c-5fc4"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Rifle Knives",
+                        "hidden": false,
+                        "id": "a0a6-376e-b09b-91d1",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "a0a6-376e-b09b-91d1"
                   }
                 ]
               },
@@ -4483,7 +4518,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: the free specialist replacement is represented directly as Kroot Carnivore 10 with Tanglebomb Launcher. Kroot Carnivores 1-9 and Kroot Carnivore 10 are presented together under Loadout Options. No Long-quill header is used because there is no distinct sergeant loadout.",
+        "comment": "LOADOUT UI: Kroot Carnivores 1-9 show their fixed 9x Kroot Rifle and Rifle Knives as separate equipment lines. Kroot Carnivore 10 remains the canonical free Tanglebomb Launcher specialist, so ordinary fallback equipment is intentionally omitted from that specialist slot.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -4648,7 +4683,7 @@
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Seeker Missile 1",
+                    "name": "Seeker Missile",
                     "hidden": false,
                     "id": "4fc3-bf19-c845-50ab",
                     "sortIndex": 1,
@@ -4681,7 +4716,7 @@
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Seeker Missile 2",
+                    "name": "Additional Seeker Missile",
                     "hidden": false,
                     "id": "bef1-c8dd-1859-a992",
                     "sortIndex": 1,
@@ -5425,7 +5460,7 @@
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Seeker Missile 1",
+                    "name": "Seeker Missile",
                     "hidden": false,
                     "id": "2b8f-9a28-430b-5483",
                     "sortIndex": 1,
@@ -5458,7 +5493,7 @@
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Seeker Missile 2",
+                    "name": "Additional Seeker Missile",
                     "hidden": false,
                     "id": "9853-adbb-2403-0535",
                     "sortIndex": 1,
@@ -5775,7 +5810,7 @@
                     "defaultSelectionEntryId": "d535-bc68-2101-3c37"
                   },
                   {
-                    "name": "​",
+                    "name": "2x Missile Drone",
                     "id": "721c-64f6-fb51-bbde",
                     "hidden": false,
                     "sortIndex": 3,
@@ -5801,7 +5836,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "2x Missile Drone: Missile Pod",
+                        "name": "2x Missile Pod",
                         "hidden": false,
                         "id": "6010-1cba-5a52-f3d5",
                         "sortIndex": 1
@@ -6067,7 +6102,7 @@
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Seeker Missile 1",
+                    "name": "Seeker Missile",
                     "hidden": false,
                     "id": "2c46-fcaf-b3b2-65f2",
                     "sortIndex": 1,
@@ -6100,7 +6135,7 @@
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Seeker Missile 2",
+                    "name": "Additional Seeker Missile",
                     "hidden": false,
                     "id": "2a7b-e4b1-64a1-0602",
                     "sortIndex": 1,
@@ -6290,6 +6325,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTau loadouts follow the fancy-notepad presentation: named Tau model nouns replace generic Model X labels, sergeant titles appear only where there is a distinct sergeant loadout, unmodelled grenade/additive wargear is unit-level, free specialist weapon slots omit ordinary fallback loadouts, Crisis Battlesuits use optional extra-model sizing, and all native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nT'au now use Game System revision 11. Game System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, and host Leader limits use constructive player-facing errors. Existing faction semantics remain unchanged; Ethereal continues not to count toward Leader Capacity.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader behavior, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model headers to single-model units, removing non-semantic Weapon 1 / Weapon 2 labels from the XV8 Commander and Crisis Battlesuits, flattening Kroot Carnivore and Hunter Pathfinder specialist sections into Loadout Options, renaming the Crisis optional-size group to Additional Model, and presenting XV8 Commander frame upgrades as Battlesuit Configuration rather than Paid Wargear. No points, eligibility, Leader behavior, Additional Copy Costs arithmetic, paid wargear semantics, or underlying weapon-choice logic were otherwise changed."
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTau loadouts follow the fancy-notepad presentation: named Tau model nouns replace generic Model X labels, sergeant titles appear only where there is a distinct sergeant loadout, unmodelled grenade/additive wargear is unit-level, free specialist weapon slots omit ordinary fallback loadouts, Crisis Battlesuits use optional extra-model sizing, and all native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nT'au now use Game System revision 11. Game System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, and host Leader limits use constructive player-facing errors. Existing faction semantics remain unchanged; Ethereal continues not to count toward Leader Capacity.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader behavior, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model headers to single-model units, removing non-semantic Weapon 1 / Weapon 2 labels from the XV8 Commander and Crisis Battlesuits, flattening Kroot Carnivore and Hunter Pathfinder specialist sections into Loadout Options, renaming the Crisis optional-size group to Additional Model, and presenting XV8 Commander frame upgrades as Battlesuit Configuration rather than Paid Wargear. No points, eligibility, Leader behavior, Additional Copy Costs arithmetic, paid wargear semantics, or underlying weapon-choice logic were otherwise changed.\n\nREV6 RETROSPECTIVE POLISH PASS\nRevisited T'au against the final cross-faction presentation standard. Kroot Carnivores 1-9 now show fixed 9x Kroot Rifle and Rifle Knives as separate equipment lines. TY7 Devilfish, TX4 Piranha, and TX7 Hammerhead Gunship now label their two independent paid missile slots Seeker Missile and Additional Seeker Missile rather than implementation-facing Seeker Missile 1/2. XV88 Broadside Battlesuit now presents its fixed drones as a 2x Missile Drone model/group header with a 2x Missile Pod equipment line. Strike Team and Breacher Team use the current grammar-safe 'This unit...' host-limit error. Battlesuit Configuration, Crisis weapon-choice logic, optional-size mechanics, Pathfinder/Kroot specialist handling, additive wargear treatment, Additional Copy Costs, points, categories, Leader behavior, and all other rules semantics remain unchanged."
   }
 }

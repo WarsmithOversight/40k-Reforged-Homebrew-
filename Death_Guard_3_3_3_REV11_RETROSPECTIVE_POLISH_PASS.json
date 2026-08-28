@@ -5,7 +5,7 @@
     "name": "Death Guard 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 12,
-    "revision": 8,
+    "revision": 11,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -1422,7 +1422,7 @@
             ]
           }
         ],
-        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of every native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance. Player-facing wording is linked from the canonical Game System shared rule.\nCONFIGURATION VALIDATION: Game System revision 11 handles a missing Additional Copy Costs entry through Army > Configuration. This entry carries the hidden required-configuration category and self-reports duplicates. Existing copy-cost arithmetic is unchanged."
+        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of every native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance. Player-facing wording is linked from the canonical Game System shared rule.\nCONFIGURATION VALIDATION: shared Game System validation handles a missing Additional Copy Costs entry through Army > Configuration. This entry carries the hidden required-configuration category and self-reports duplicates. Existing copy-cost arithmetic is unchanged."
       },
       {
         "type": "unit",
@@ -1481,7 +1481,7 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
+                "name": "Lord of Contagion",
                 "id": "1ce4-edd6-e44a-8fb8",
                 "hidden": false,
                 "sortIndex": 1,
@@ -1532,7 +1532,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Your army may include only one Lord of Contagion because it is Rare. Remove the additional Lord of Contagion unit(s).",
+            "value": "Your army may include only one Lord of Contagion because it is Rare. Remove the additional copy.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1607,78 +1607,86 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "662b-9480-e875-c591",
+                "name": "Lord of Virulence",
+                "id": "5406-1f60-e52d-a176",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "a2e3-f5d0-f7ca-4384",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "662b-9480-e875-c591",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a2e3-f5d0-f7ca-4384",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4451-5624-fc7e-d3ab",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Twin Plague Spewer",
+                        "hidden": false,
+                        "id": "ff04-afe8-3d65-df39",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "ff04-afe8-3d65-df39"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "4451-5624-fc7e-d3ab",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Twin Plague Spewer",
+                    "name": "​",
+                    "id": "742d-1425-0cf0-b812",
                     "hidden": false,
-                    "id": "ff04-afe8-3d65-df39",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8cfd-ae55-5d3a-9f9e",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6be7-72af-6ff3-7966",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plague Claw",
+                        "hidden": false,
+                        "id": "4ad6-a8ac-4951-5229",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "4ad6-a8ac-4951-5229"
                   }
-                ],
-                "defaultSelectionEntryId": "ff04-afe8-3d65-df39"
-              },
-              {
-                "name": "​",
-                "id": "742d-1425-0cf0-b812",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "8cfd-ae55-5d3a-9f9e",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "6be7-72af-6ff3-7966",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plague Claw",
-                    "hidden": false,
-                    "id": "4ad6-a8ac-4951-5229",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "4ad6-a8ac-4951-5229"
+                ]
               }
             ]
           }
@@ -1687,7 +1695,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Your army may include only one Lord of Virulence because it is Rare. Remove the additional Lord of Virulence unit(s).",
+            "value": "Your army may include only one Lord of Virulence because it is Rare. Remove the additional copy.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -1756,206 +1764,214 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "551a-93f5-3914-1945",
+                "name": "Death Guard Terminator Chaos Lord",
+                "id": "b63b-df8c-ec0a-a28b",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "03a9-dbeb-d0b8-76d5",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "551a-93f5-3914-1945",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "03a9-dbeb-d0b8-76d5",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0884-15d4-2967-0355",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "2x Combi-Plague Bolter",
+                        "hidden": false,
+                        "id": "b303-cf6b-1a79-7866",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "2x Combi-Bolter",
+                        "hidden": false,
+                        "id": "ef48-fccc-871f-da93",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combi-Plague Bolter & Combi-Melta",
+                        "hidden": false,
+                        "id": "419d-80c5-6d5b-1f43",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combi-Bolter & Combi-Melta",
+                        "hidden": false,
+                        "id": "3dc2-f77a-c67c-56f5",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combi-Plague Bolter & Combi-Flamer",
+                        "hidden": false,
+                        "id": "11c4-3c0d-31ac-fb48",
+                        "sortIndex": 5
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combi-Bolter & Combi-Flamer",
+                        "hidden": false,
+                        "id": "0c54-b194-25ac-926c",
+                        "sortIndex": 6
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combi-Plague Bolter & Combi-Plasma",
+                        "hidden": false,
+                        "id": "d685-c39f-f391-8366",
+                        "sortIndex": 7
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combi-Bolter & Combi-Plasma",
+                        "hidden": false,
+                        "id": "a24b-413d-214c-5453",
+                        "sortIndex": 8
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Blight Launcher",
+                        "hidden": false,
+                        "id": "39b5-222f-21bf-7945",
+                        "sortIndex": 9
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Reaper Autocannon",
+                        "hidden": false,
+                        "id": "6698-fe6d-870b-ad2d",
+                        "sortIndex": 10
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plague Spewer",
+                        "hidden": false,
+                        "id": "175c-5248-ddb8-46d2",
+                        "sortIndex": 11
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claw",
+                        "hidden": false,
+                        "id": "c797-08f7-1e8a-f31d",
+                        "sortIndex": 12
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b303-cf6b-1a79-7866"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "0884-15d4-2967-0355",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "f4fa-da34-3735-ad0d",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "933b-8ba3-b3a3-53b7",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3d2a-e229-6b78-b792",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Weapon",
+                        "hidden": false,
+                        "id": "03c0-16f1-6c74-60d5",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Fist",
+                        "hidden": false,
+                        "id": "910f-027c-c5a9-6a44",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Daemon Hammer",
+                        "hidden": false,
+                        "id": "cd9b-de2e-5076-779a",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainfist",
+                        "hidden": false,
+                        "id": "82a3-fe44-2bad-5d6d",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainblade",
+                        "hidden": false,
+                        "id": "1003-cb5b-c87e-99c2",
+                        "sortIndex": 5
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claw",
+                        "hidden": false,
+                        "id": "2967-0fe3-b381-111e",
+                        "sortIndex": 6
+                      }
+                    ],
+                    "defaultSelectionEntryId": "03c0-16f1-6c74-60d5"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "2 Combi-Plague Bolter",
-                    "hidden": false,
-                    "id": "b303-cf6b-1a79-7866",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "2 Combi-Bolter",
-                    "hidden": false,
-                    "id": "ef48-fccc-871f-da93",
-                    "sortIndex": 2
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Combi-Plague Bolter and Combi-Melta",
-                    "hidden": false,
-                    "id": "419d-80c5-6d5b-1f43",
-                    "sortIndex": 3
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Combi-Bolter and Combi-Melta",
-                    "hidden": false,
-                    "id": "3dc2-f77a-c67c-56f5",
-                    "sortIndex": 4
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Combi-Plague Bolter and Combi-Flamer",
-                    "hidden": false,
-                    "id": "11c4-3c0d-31ac-fb48",
-                    "sortIndex": 5
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Combi-Bolter and Combi-Flamer",
-                    "hidden": false,
-                    "id": "0c54-b194-25ac-926c",
-                    "sortIndex": 6
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Combi-Plague Bolter and Combi-Plasma",
-                    "hidden": false,
-                    "id": "d685-c39f-f391-8366",
-                    "sortIndex": 7
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Combi-Bolter and Combi-Plasma",
-                    "hidden": false,
-                    "id": "a24b-413d-214c-5453",
-                    "sortIndex": 8
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Blight Launcher",
-                    "hidden": false,
-                    "id": "39b5-222f-21bf-7945",
-                    "sortIndex": 9
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Reaper Autocannon",
-                    "hidden": false,
-                    "id": "6698-fe6d-870b-ad2d",
-                    "sortIndex": 10
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plague Spewer",
-                    "hidden": false,
-                    "id": "175c-5248-ddb8-46d2",
-                    "sortIndex": 11
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Lightning Claw",
-                    "hidden": false,
-                    "id": "c797-08f7-1e8a-f31d",
-                    "sortIndex": 12
-                  }
-                ],
-                "defaultSelectionEntryId": "b303-cf6b-1a79-7866"
-              },
-              {
-                "name": "​",
-                "id": "f4fa-da34-3735-ad0d",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "933b-8ba3-b3a3-53b7",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "3d2a-e229-6b78-b792",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Power Weapon",
-                    "hidden": false,
-                    "id": "03c0-16f1-6c74-60d5",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Power Fist",
-                    "hidden": false,
-                    "id": "910f-027c-c5a9-6a44",
-                    "sortIndex": 2
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Daemon Hammer",
-                    "hidden": false,
-                    "id": "cd9b-de2e-5076-779a",
-                    "sortIndex": 3
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Chainfist",
-                    "hidden": false,
-                    "id": "82a3-fe44-2bad-5d6d",
-                    "sortIndex": 4
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Chainblade",
-                    "hidden": false,
-                    "id": "1003-cb5b-c87e-99c2",
-                    "sortIndex": 5
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Lightning Claw",
-                    "hidden": false,
-                    "id": "2967-0fe3-b381-111e",
-                    "sortIndex": 6
-                  }
-                ],
-                "defaultSelectionEntryId": "03c0-16f1-6c74-60d5"
+                ]
               }
             ]
           }
@@ -2019,174 +2035,182 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "a4a1-4e68-31b5-78c3",
+                "name": "Death Guard Chaos Lord",
+                "id": "a511-845a-692e-cb3a",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "4954-7157-70d0-118e",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "a4a1-4e68-31b5-78c3",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4954-7157-70d0-118e",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "cf37-b171-b377-e18a",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plasma Pistol",
+                        "hidden": false,
+                        "id": "4b30-4df5-bee6-d5d8",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Grav Pistol",
+                        "hidden": false,
+                        "id": "b248-0e09-6b23-51f5",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Flamer Pistol",
+                        "hidden": false,
+                        "id": "45c1-7797-296a-1fe4",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Bolt Pistol",
+                        "hidden": false,
+                        "id": "ea53-eb28-1188-ae4c",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plague Bolt Pistol",
+                        "hidden": false,
+                        "id": "1c64-aaa4-94f7-4f97",
+                        "sortIndex": 5
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Inferno Pistol",
+                        "hidden": false,
+                        "id": "79de-9686-51eb-0c8b",
+                        "sortIndex": 6
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claw",
+                        "hidden": false,
+                        "id": "4d6d-49a1-93de-7ce0",
+                        "sortIndex": 7
+                      }
+                    ],
+                    "defaultSelectionEntryId": "4b30-4df5-bee6-d5d8"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "cf37-b171-b377-e18a",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "8af7-6e73-d82c-3eb2",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6a23-ef59-8f89-80b5",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "fc33-28db-e57d-c26b",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Bubotic Weapon",
+                        "hidden": false,
+                        "id": "7ab3-0cf4-af26-d1d3",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Weapon",
+                        "hidden": false,
+                        "id": "998b-1060-42db-258d",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Fist",
+                        "hidden": false,
+                        "id": "7f1b-b534-9908-2bfb",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Daemon Hammer",
+                        "hidden": false,
+                        "id": "4a89-098c-64a8-a3a5",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claw",
+                        "hidden": false,
+                        "id": "fd7b-418b-99c9-cb7a",
+                        "sortIndex": 5
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainblade",
+                        "hidden": false,
+                        "id": "49c3-3219-3c5a-be4a",
+                        "sortIndex": 6
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainfist",
+                        "hidden": false,
+                        "id": "5aeb-61ef-7890-e241",
+                        "sortIndex": 7
+                      }
+                    ],
+                    "defaultSelectionEntryId": "7ab3-0cf4-af26-d1d3"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plasma Pistol",
-                    "hidden": false,
-                    "id": "4b30-4df5-bee6-d5d8",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Grav Pistol",
-                    "hidden": false,
-                    "id": "b248-0e09-6b23-51f5",
-                    "sortIndex": 2
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Flamer Pistol",
-                    "hidden": false,
-                    "id": "45c1-7797-296a-1fe4",
-                    "sortIndex": 3
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Bolt Pistol",
-                    "hidden": false,
-                    "id": "ea53-eb28-1188-ae4c",
-                    "sortIndex": 4
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plague Bolt Pistol",
-                    "hidden": false,
-                    "id": "1c64-aaa4-94f7-4f97",
-                    "sortIndex": 5
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Inferno Pistol",
-                    "hidden": false,
-                    "id": "79de-9686-51eb-0c8b",
-                    "sortIndex": 6
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Lightning Claw",
-                    "hidden": false,
-                    "id": "4d6d-49a1-93de-7ce0",
-                    "sortIndex": 7
-                  }
-                ],
-                "defaultSelectionEntryId": "4b30-4df5-bee6-d5d8"
-              },
-              {
-                "name": "​",
-                "id": "8af7-6e73-d82c-3eb2",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "6a23-ef59-8f89-80b5",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "fc33-28db-e57d-c26b",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Bubotic Weapon",
-                    "hidden": false,
-                    "id": "7ab3-0cf4-af26-d1d3",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Power Weapon",
-                    "hidden": false,
-                    "id": "998b-1060-42db-258d",
-                    "sortIndex": 2
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Power Fist",
-                    "hidden": false,
-                    "id": "7f1b-b534-9908-2bfb",
-                    "sortIndex": 3
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Daemon Hammer",
-                    "hidden": false,
-                    "id": "4a89-098c-64a8-a3a5",
-                    "sortIndex": 4
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Lightning Claw",
-                    "hidden": false,
-                    "id": "fd7b-418b-99c9-cb7a",
-                    "sortIndex": 5
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Chainblade",
-                    "hidden": false,
-                    "id": "49c3-3219-3c5a-be4a",
-                    "sortIndex": 6
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Chainfist",
-                    "hidden": false,
-                    "id": "5aeb-61ef-7890-e241",
-                    "sortIndex": 7
-                  }
-                ],
-                "defaultSelectionEntryId": "7ab3-0cf4-af26-d1d3"
+                ]
               }
             ]
           },
@@ -2363,78 +2387,86 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "3208-ecc5-a282-9998",
+                "name": "Foul Blightspawn",
+                "id": "a612-87c9-2bbd-1f2b",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "5299-6b8b-60f6-e8b0",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "3208-ecc5-a282-9998",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5299-6b8b-60f6-e8b0",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "049d-45ad-a4d7-a5eb",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plague Sprayer",
+                        "hidden": false,
+                        "id": "6afe-5f38-65d2-5eaa",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "6afe-5f38-65d2-5eaa"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "049d-45ad-a4d7-a5eb",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plague Sprayer",
+                    "name": "​",
+                    "id": "6368-1515-6366-93de",
                     "hidden": false,
-                    "id": "6afe-5f38-65d2-5eaa",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c333-3c54-3258-d4e7",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0fa5-8df3-d21d-9019",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plague Knife",
+                        "hidden": false,
+                        "id": "faf8-d0f7-f5b4-730f",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "faf8-d0f7-f5b4-730f"
                   }
-                ],
-                "defaultSelectionEntryId": "6afe-5f38-65d2-5eaa"
-              },
-              {
-                "name": "​",
-                "id": "6368-1515-6366-93de",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "c333-3c54-3258-d4e7",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "0fa5-8df3-d21d-9019",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plague Knife",
-                    "hidden": false,
-                    "id": "faf8-d0f7-f5b4-730f",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "faf8-d0f7-f5b4-730f"
+                ]
               }
             ]
           },
@@ -2503,7 +2535,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Your army may include only one Foul Blightspawn because it is Rare. Remove the additional Foul Blightspawn unit(s).",
+            "value": "Your army may include only one Foul Blightspawn because it is Rare. Remove the additional copy.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2593,78 +2625,86 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "dd45-f864-6547-c318",
+                "name": "Plague Surgeon",
+                "id": "1ca3-99dc-15fd-87bf",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "7d51-d12d-b704-aec0",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "dd45-f864-6547-c318",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7d51-d12d-b704-aec0",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5da1-fab4-d1ef-cd87",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plague Bolt Pistol",
+                        "hidden": false,
+                        "id": "6bd6-5301-15ad-2dee",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "6bd6-5301-15ad-2dee"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "5da1-fab4-d1ef-cd87",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plague Bolt Pistol",
+                    "name": "​",
+                    "id": "61ea-6ea5-4735-424a",
                     "hidden": false,
-                    "id": "6bd6-5301-15ad-2dee",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "be40-5eaf-68f4-5db6",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "bd6d-614b-ba0f-0197",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Balesword",
+                        "hidden": false,
+                        "id": "323b-792c-35e1-bf23",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "323b-792c-35e1-bf23"
                   }
-                ],
-                "defaultSelectionEntryId": "6bd6-5301-15ad-2dee"
-              },
-              {
-                "name": "​",
-                "id": "61ea-6ea5-4735-424a",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "be40-5eaf-68f4-5db6",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "bd6d-614b-ba0f-0197",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Balesword",
-                    "hidden": false,
-                    "id": "323b-792c-35e1-bf23",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "323b-792c-35e1-bf23"
+                ]
               }
             ]
           }
@@ -2691,7 +2731,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Your army may include only one Plague Surgeon because it is Rare. Remove the additional Plague Surgeon unit(s).",
+            "value": "Your army may include only one Plague Surgeon because it is Rare. Remove the additional copy.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -2781,115 +2821,123 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "da07-35de-d1c3-226f",
+                "name": "Biologus Putrifier",
+                "id": "bd2a-4652-8790-ab90",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "d518-576d-23df-cff2",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "da07-35de-d1c3-226f",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d518-576d-23df-cff2",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f553-bec8-2cf4-1dd7",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hyper Blight Grenade",
+                        "hidden": false,
+                        "id": "566c-176f-4349-b1c4",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "566c-176f-4349-b1c4"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "f553-bec8-2cf4-1dd7",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hyper Blight Grenade",
+                    "name": "​",
+                    "id": "4c8e-2a28-d488-5713",
                     "hidden": false,
-                    "id": "566c-176f-4349-b1c4",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "566c-176f-4349-b1c4"
-              },
-              {
-                "name": "​",
-                "id": "4c8e-2a28-d488-5713",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "fe8f-7362-5379-bd48",
-                    "includeChildSelections": false
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "fe8f-7362-5379-bd48",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "b648-f861-ad39-581c",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Injector Pistol",
+                        "hidden": false,
+                        "id": "15ca-7aab-39e2-ef4f",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "15ca-7aab-39e2-ef4f"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "b648-f861-ad39-581c",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Injector Pistol",
+                    "name": "​",
+                    "id": "32d1-b8bd-25e7-e2bb",
                     "hidden": false,
-                    "id": "15ca-7aab-39e2-ef4f",
-                    "sortIndex": 1
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "38df-8cb6-c1ea-1b62",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "12f0-50e6-c74c-30f8",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plague Knife",
+                        "hidden": false,
+                        "id": "be82-e2b2-a961-3c36",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "be82-e2b2-a961-3c36"
                   }
-                ],
-                "defaultSelectionEntryId": "15ca-7aab-39e2-ef4f"
-              },
-              {
-                "name": "​",
-                "id": "32d1-b8bd-25e7-e2bb",
-                "hidden": false,
-                "sortIndex": 3,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "38df-8cb6-c1ea-1b62",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "12f0-50e6-c74c-30f8",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plague Knife",
-                    "hidden": false,
-                    "id": "be82-e2b2-a961-3c36",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "be82-e2b2-a961-3c36"
+                ]
               }
             ]
           },
@@ -2958,7 +3006,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Your army may include only one Biologus Putrifier because it is Rare. Remove the additional Biologus Putrifier unit(s).",
+            "value": "Your army may include only one Biologus Putrifier because it is Rare. Remove the additional copy.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -3048,78 +3096,86 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "69c2-e5e4-ecfc-964c",
+                "name": "Malignant Plaguecaster",
+                "id": "5f46-40d5-9457-437c",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "6365-d87a-e1de-3ea4",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "69c2-e5e4-ecfc-964c",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6365-d87a-e1de-3ea4",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "695f-488e-a172-db76",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plague Bolt Pistol",
+                        "hidden": false,
+                        "id": "a111-1bd0-faa6-a941",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "a111-1bd0-faa6-a941"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "695f-488e-a172-db76",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plague Bolt Pistol",
+                    "name": "​",
+                    "id": "761f-3b74-a6c2-959e",
                     "hidden": false,
-                    "id": "a111-1bd0-faa6-a941",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e674-fda7-5e0c-059f",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e168-6ccb-56d9-8861",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Corrupted Staff",
+                        "hidden": false,
+                        "id": "bb3a-8f12-6d6b-6b0b",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "bb3a-8f12-6d6b-6b0b"
                   }
-                ],
-                "defaultSelectionEntryId": "a111-1bd0-faa6-a941"
-              },
-              {
-                "name": "​",
-                "id": "761f-3b74-a6c2-959e",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "e674-fda7-5e0c-059f",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "e168-6ccb-56d9-8861",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Corrupted Staff",
-                    "hidden": false,
-                    "id": "bb3a-8f12-6d6b-6b0b",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "bb3a-8f12-6d6b-6b0b"
+                ]
               }
             ]
           }
@@ -3146,7 +3202,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Your army may include only one Malignant Plaguecaster because it is Rare. Remove the additional Malignant Plaguecaster unit(s).",
+            "value": "Your army may include only one Malignant Plaguecaster because it is Rare. Remove the additional copy.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -3236,78 +3292,86 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "07c5-717f-548c-9b55",
+                "name": "Noxious Blightbringer",
+                "id": "9a7e-3b55-b6ad-261f",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "5a16-55d5-d199-8f4b",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "07c5-717f-548c-9b55",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5a16-55d5-d199-8f4b",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "75ff-aed8-4523-e337",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plasma Pistol",
+                        "hidden": false,
+                        "id": "3c88-46f0-1bb5-e0b4",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "3c88-46f0-1bb5-e0b4"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "75ff-aed8-4523-e337",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plasma Pistol",
+                    "name": "​",
+                    "id": "bfdd-6fd3-f854-8374",
                     "hidden": false,
-                    "id": "3c88-46f0-1bb5-e0b4",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "96c0-46fc-67b2-5b61",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c3f4-486e-0243-ec3f",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Cursed Bell",
+                        "hidden": false,
+                        "id": "7f8c-38ba-9c30-5434",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "7f8c-38ba-9c30-5434"
                   }
-                ],
-                "defaultSelectionEntryId": "3c88-46f0-1bb5-e0b4"
-              },
-              {
-                "name": "​",
-                "id": "bfdd-6fd3-f854-8374",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "96c0-46fc-67b2-5b61",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "c3f4-486e-0243-ec3f",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Cursed Bell",
-                    "hidden": false,
-                    "id": "7f8c-38ba-9c30-5434",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "7f8c-38ba-9c30-5434"
+                ]
               }
             ]
           }
@@ -3334,7 +3398,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Your army may include only one Noxious Blightbringer because it is Rare. Remove the additional Noxious Blightbringer unit(s).",
+            "value": "Your army may include only one Noxious Blightbringer because it is Rare. Remove the additional copy.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -3424,78 +3488,86 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "6d37-167b-48e7-bc31",
+                "name": "Tallyman",
+                "id": "6ef2-f4c9-4a88-a128",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "8bec-d207-1944-ae3e",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "6d37-167b-48e7-bc31",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8bec-d207-1944-ae3e",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "11ae-8d9a-3d2b-5638",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plasma Pistol",
+                        "hidden": false,
+                        "id": "4f5c-9a68-3908-7742",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "4f5c-9a68-3908-7742"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "11ae-8d9a-3d2b-5638",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plasma Pistol",
+                    "name": "​",
+                    "id": "321a-fc59-eeb6-4ac4",
                     "hidden": false,
-                    "id": "4f5c-9a68-3908-7742",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "88bd-2b13-8b0f-40f5",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "481c-22c9-0ce4-e86f",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Poisoned Quill",
+                        "hidden": false,
+                        "id": "67dc-1ae0-eaf6-ac7c",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "67dc-1ae0-eaf6-ac7c"
                   }
-                ],
-                "defaultSelectionEntryId": "4f5c-9a68-3908-7742"
-              },
-              {
-                "name": "​",
-                "id": "321a-fc59-eeb6-4ac4",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "88bd-2b13-8b0f-40f5",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "481c-22c9-0ce4-e86f",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Poisoned Quill",
-                    "hidden": false,
-                    "id": "67dc-1ae0-eaf6-ac7c",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "67dc-1ae0-eaf6-ac7c"
+                ]
               }
             ]
           }
@@ -3522,7 +3594,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Your army may include only one Tallyman because it is Rare. Remove the additional Tallyman unit(s).",
+            "value": "Your army may include only one Tallyman because it is Rare. Remove the additional copy.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -3652,7 +3724,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Boltgun + Plague Knife",
+                        "name": "Plague Boltgun & Plague Knife",
                         "hidden": false,
                         "id": "52c8-99bc-fbf2-9e83",
                         "sortIndex": 1
@@ -3660,7 +3732,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Bolt Pistol + Plague Knife",
+                        "name": "Plague Bolt Pistol & Plague Knife",
                         "hidden": false,
                         "id": "b922-9bec-51b7-1f63",
                         "sortIndex": 2
@@ -3737,7 +3809,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Boltgun + Plague Knife",
+                        "name": "Plague Boltgun & Plague Knife",
                         "hidden": false,
                         "id": "0b25-e3da-7595-1d31",
                         "sortIndex": 1
@@ -3745,7 +3817,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Bolt Pistol + Plague Knife",
+                        "name": "Plague Bolt Pistol & Plague Knife",
                         "hidden": false,
                         "id": "e4a6-f3fa-a449-b4ef",
                         "sortIndex": 2
@@ -3786,26 +3858,55 @@
                     "defaultSelectionEntryId": "0b25-e3da-7595-1d31"
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "name": "Special Weapon Loadouts",
-            "id": "392f-d0a3-535a-feac",
-            "hidden": false,
-            "sortIndex": 2,
-            "selectionEntryGroups": [
+              },
               {
                 "name": "Septic Plague Marine 3",
                 "id": "6567-eebc-4649-3d06",
                 "hidden": false,
-                "sortIndex": 1,
+                "sortIndex": 3,
                 "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "9c63-103b-0daf-d67a",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9278-055b-a81f-0110",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7f25-bc3b-4ffc-34b0",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plague Knife",
+                        "hidden": false,
+                        "id": "9f87-5913-1f1f-3d60",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "9f87-5913-1f1f-3d60"
+                  },
                   {
                     "name": "​",
                     "id": "8ff6-c37f-32ca-762d",
                     "hidden": false,
-                    "sortIndex": 1,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -3830,7 +3931,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Blight Launcher + Plague Knife",
+                        "name": "Blight Launcher",
                         "hidden": false,
                         "id": "5849-d139-868b-884f",
                         "sortIndex": 1
@@ -3838,7 +3939,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Spewer + Plague Knife",
+                        "name": "Plague Spewer",
                         "hidden": false,
                         "id": "1120-5359-86e5-735c",
                         "sortIndex": 2
@@ -3846,7 +3947,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Flail of Corruption + Plague Knife",
+                        "name": "Flail of Corruption",
                         "hidden": false,
                         "id": "4abe-9534-02a3-1489",
                         "sortIndex": 3
@@ -3854,7 +3955,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Great Plague Cleaver + Plague Knife",
+                        "name": "Great Plague Cleaver",
                         "hidden": false,
                         "id": "29a2-a738-61ca-c480",
                         "sortIndex": 4
@@ -3862,7 +3963,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Meltagun + Plague Knife",
+                        "name": "Meltagun",
                         "hidden": false,
                         "id": "a6c2-df7c-d128-6407",
                         "sortIndex": 5
@@ -3870,7 +3971,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plasma Gun + Plague Knife",
+                        "name": "Plasma Gun",
                         "hidden": false,
                         "id": "ebab-ae79-fa29-a7c2",
                         "sortIndex": 6
@@ -3878,7 +3979,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Belcher + Plague Knife",
+                        "name": "Plague Belcher",
                         "hidden": false,
                         "id": "7d56-6d88-4aa4-6dcb",
                         "sortIndex": 7
@@ -3894,7 +3995,7 @@
             "name": "Paid Wargear",
             "id": "8fbd-140d-3733-b901",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 2,
             "selectionEntryGroups": [
               {
                 "name": "​",
@@ -3976,12 +4077,12 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Dual Bubotic Weapons is a +10 inline replacement option only on Septic Plague Marine 1 and 2. Model 3 is reserved for the special-weapon loadout and does not receive this paid replacement.\nLOADOUT UI: Septic Plague Marine 3 is treated as a dedicated special-weapon model. It presents only Blight Launcher, Plague Spewer, Flail of Corruption, Great Plague Cleaver, Meltagun, Plasma Gun, or Plague Belcher loadouts. Default Plague Marine equipment is intentionally omitted.",
+        "comment": "LOADOUT UI: Dual Bubotic Weapons is a +10 inline replacement option only on Septic Plague Marine 1 and 2. Model 3 is reserved for the special-weapon loadout and does not receive this paid replacement.\nLOADOUT UI: Septic Plague Marine 3 is treated as a dedicated special-weapon model. It presents only Blight Launcher, Plague Spewer, Flail of Corruption, Great Plague Cleaver, Meltagun, Plasma Gun, or Plague Belcher loadouts. Default Plague Marine equipment is intentionally omitted.\nPOLISH PASS: dedicated special-weapon models display their fixed Plague Knife on a separate mandatory line from the special-weapon choice. Legality is unchanged.",
         "modifiers": [
           {
             "type": "add",
             "field": "error",
-            "value": "Septic Plague Marines has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "value": "This unit has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -4208,7 +4309,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Boltgun + Plague Knife",
+                        "name": "Plague Boltgun & Plague Knife",
                         "hidden": false,
                         "id": "fb68-439c-4bc5-4712",
                         "sortIndex": 1
@@ -4216,7 +4317,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Bolt Pistol + Plague Knife",
+                        "name": "Plague Bolt Pistol & Plague Knife",
                         "hidden": false,
                         "id": "6022-8111-3c45-e2f4",
                         "sortIndex": 2
@@ -4257,26 +4358,55 @@
                     "defaultSelectionEntryId": "fb68-439c-4bc5-4712"
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "name": "Special Weapon Loadouts",
-            "id": "4246-e000-7a57-7916",
-            "hidden": false,
-            "sortIndex": 2,
-            "selectionEntryGroups": [
+              },
               {
                 "name": "Inexorable Plague Marine 3",
                 "id": "384d-78ae-0ec8-f60d",
                 "hidden": false,
-                "sortIndex": 1,
+                "sortIndex": 3,
                 "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "c148-dd16-4edd-0b74",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7f65-b5a2-f0e9-7d89",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9a8e-5253-e388-6332",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plague Knife",
+                        "hidden": false,
+                        "id": "ed81-a025-f2f0-9d52",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "ed81-a025-f2f0-9d52"
+                  },
                   {
                     "name": "​",
                     "id": "4aaf-eee6-37a4-a8f5",
                     "hidden": false,
-                    "sortIndex": 1,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -4301,7 +4431,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Blight Launcher + Plague Knife",
+                        "name": "Blight Launcher",
                         "hidden": false,
                         "id": "cdda-c3e9-3318-091f",
                         "sortIndex": 1
@@ -4309,7 +4439,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Spewer + Plague Knife",
+                        "name": "Plague Spewer",
                         "hidden": false,
                         "id": "9b80-380e-ace7-8e1b",
                         "sortIndex": 2
@@ -4317,7 +4447,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Flail of Corruption + Plague Knife",
+                        "name": "Flail of Corruption",
                         "hidden": false,
                         "id": "8783-b115-30c5-07e4",
                         "sortIndex": 3
@@ -4325,7 +4455,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Great Plague Cleaver + Plague Knife",
+                        "name": "Great Plague Cleaver",
                         "hidden": false,
                         "id": "cf1f-5a5b-aeb2-37bc",
                         "sortIndex": 4
@@ -4333,7 +4463,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Meltagun + Plague Knife",
+                        "name": "Meltagun",
                         "hidden": false,
                         "id": "b77d-f69f-e92f-502d",
                         "sortIndex": 5
@@ -4341,7 +4471,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plasma Gun + Plague Knife",
+                        "name": "Plasma Gun",
                         "hidden": false,
                         "id": "d8b0-dbac-2e24-a2ea",
                         "sortIndex": 6
@@ -4349,7 +4479,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Belcher + Plague Knife",
+                        "name": "Plague Belcher",
                         "hidden": false,
                         "id": "5c7c-38ba-2c2e-3487",
                         "sortIndex": 7
@@ -4363,13 +4493,50 @@
                 "name": "Inexorable Plague Marine 4",
                 "id": "edad-c969-b5c1-d6f6",
                 "hidden": false,
-                "sortIndex": 2,
+                "sortIndex": 4,
                 "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "a895-4a7c-e70b-0c49",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e96a-2862-2c65-1e7f",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7dd6-725e-e64b-dbe0",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plague Knife",
+                        "hidden": false,
+                        "id": "9d77-aacd-c032-be36",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "9d77-aacd-c032-be36"
+                  },
                   {
                     "name": "​",
                     "id": "524d-f0ac-fd62-20ea",
                     "hidden": false,
-                    "sortIndex": 1,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -4394,7 +4561,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Blight Launcher + Plague Knife",
+                        "name": "Blight Launcher",
                         "hidden": false,
                         "id": "9ad9-613d-0503-a37f",
                         "sortIndex": 1
@@ -4402,7 +4569,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Spewer + Plague Knife",
+                        "name": "Plague Spewer",
                         "hidden": false,
                         "id": "8b11-050f-eaad-40d7",
                         "sortIndex": 2
@@ -4410,7 +4577,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Flail of Corruption + Plague Knife",
+                        "name": "Flail of Corruption",
                         "hidden": false,
                         "id": "c680-c6f8-6340-7d7d",
                         "sortIndex": 3
@@ -4418,7 +4585,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Great Plague Cleaver + Plague Knife",
+                        "name": "Great Plague Cleaver",
                         "hidden": false,
                         "id": "2cbd-6da7-0ff5-d916",
                         "sortIndex": 4
@@ -4426,7 +4593,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Meltagun + Plague Knife",
+                        "name": "Meltagun",
                         "hidden": false,
                         "id": "e46b-dc36-5ca2-7856",
                         "sortIndex": 5
@@ -4434,7 +4601,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plasma Gun + Plague Knife",
+                        "name": "Plasma Gun",
                         "hidden": false,
                         "id": "fba9-cb36-b998-8977",
                         "sortIndex": 6
@@ -4442,7 +4609,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Belcher + Plague Knife",
+                        "name": "Plague Belcher",
                         "hidden": false,
                         "id": "9528-019a-a330-c190",
                         "sortIndex": 7
@@ -4458,7 +4625,7 @@
             "name": "Paid Wargear",
             "id": "2464-07fe-ee24-9fa1",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 2,
             "selectionEntryGroups": [
               {
                 "name": "​",
@@ -4540,12 +4707,12 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Dual Bubotic Weapons is a +10 inline replacement option only on Inexorable Plague Marine 2. The Inexorable Champion and special-weapon models 3-4 do not receive it. Special-weapon models 3 and 4 may select the same special weapon; the earlier different-weapon restriction was a source typo and is intentionally not enforced.\nLOADOUT UI: Inexorable Plague Marines 3 and 4 are treated as dedicated special-weapon models. They present only Blight Launcher, Plague Spewer, Flail of Corruption, Great Plague Cleaver, Meltagun, Plasma Gun, or Plague Belcher loadouts. Default Plague Marine equipment is intentionally omitted. Both special models may choose the same weapon.",
+        "comment": "LOADOUT UI: Dual Bubotic Weapons is a +10 inline replacement option only on Inexorable Plague Marine 2. The Inexorable Champion and special-weapon models 3-4 do not receive it. Special-weapon models 3 and 4 may select the same special weapon; the earlier different-weapon restriction was a source typo and is intentionally not enforced.\nLOADOUT UI: Inexorable Plague Marines 3 and 4 are treated as dedicated special-weapon models. They present only Blight Launcher, Plague Spewer, Flail of Corruption, Great Plague Cleaver, Meltagun, Plasma Gun, or Plague Belcher loadouts. Default Plague Marine equipment is intentionally omitted. Both special models may choose the same weapon.\nPOLISH PASS: dedicated special-weapon models display their fixed Plague Knife on a separate mandatory line from the special-weapon choice. Legality is unchanged.",
         "modifiers": [
           {
             "type": "add",
             "field": "error",
-            "value": "Inexorable Plague Marines has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+            "value": "This unit has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -4598,7 +4765,7 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
+                "name": "Poxwalkers 1-10",
                 "id": "eddb-ec17-227a-d578",
                 "hidden": false,
                 "sortIndex": 1,
@@ -4714,7 +4881,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Boltgun + Plague Knife",
+                        "name": "Plague Boltgun & Plague Knife",
                         "hidden": false,
                         "id": "aa3a-0f51-9b1f-6c94",
                         "sortIndex": 1
@@ -4722,7 +4889,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Bolt Pistol + Plague Knife",
+                        "name": "Plague Bolt Pistol & Plague Knife",
                         "hidden": false,
                         "id": "8276-3bd0-e264-0588",
                         "sortIndex": 2
@@ -4799,7 +4966,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Boltgun + Plague Knife",
+                        "name": "Plague Boltgun & Plague Knife",
                         "hidden": false,
                         "id": "2f55-34e0-7940-711a",
                         "sortIndex": 1
@@ -4807,7 +4974,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Bolt Pistol + Plague Knife",
+                        "name": "Plague Bolt Pistol & Plague Knife",
                         "hidden": false,
                         "id": "afb9-7dbb-5780-9134",
                         "sortIndex": 2
@@ -4848,26 +5015,55 @@
                     "defaultSelectionEntryId": "2f55-34e0-7940-711a"
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "name": "Special Weapon Loadouts",
-            "id": "dd3f-6bb5-2979-bc20",
-            "hidden": false,
-            "sortIndex": 2,
-            "selectionEntryGroups": [
+              },
               {
                 "name": "Plague Marine Infestor 3",
                 "id": "bf5a-a393-0fe5-27c1",
                 "hidden": false,
-                "sortIndex": 1,
+                "sortIndex": 3,
                 "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "7178-29ec-cdb4-6a3c",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7a84-7fd5-6545-4799",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f9e7-b5a7-8f80-cad9",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plague Knife",
+                        "hidden": false,
+                        "id": "e853-ca91-2f73-ca0f",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "e853-ca91-2f73-ca0f"
+                  },
                   {
                     "name": "​",
                     "id": "6497-7b13-c0b7-2951",
                     "hidden": false,
-                    "sortIndex": 1,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -4892,7 +5088,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Blight Launcher + Plague Knife",
+                        "name": "Blight Launcher",
                         "hidden": false,
                         "id": "2e0e-53ca-b4fb-9a9b",
                         "sortIndex": 1
@@ -4900,7 +5096,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Spewer + Plague Knife",
+                        "name": "Plague Spewer",
                         "hidden": false,
                         "id": "2582-363d-b2e2-acd6",
                         "sortIndex": 2
@@ -4908,7 +5104,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Flail of Corruption + Plague Knife",
+                        "name": "Flail of Corruption",
                         "hidden": false,
                         "id": "3494-7b3b-76ff-7e0c",
                         "sortIndex": 3
@@ -4916,7 +5112,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Great Plague Cleaver + Plague Knife",
+                        "name": "Great Plague Cleaver",
                         "hidden": false,
                         "id": "3f0b-ea6d-9e40-bc22",
                         "sortIndex": 4
@@ -4924,7 +5120,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Meltagun + Plague Knife",
+                        "name": "Meltagun",
                         "hidden": false,
                         "id": "2366-70f0-6462-4a74",
                         "sortIndex": 5
@@ -4932,7 +5128,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plasma Gun + Plague Knife",
+                        "name": "Plasma Gun",
                         "hidden": false,
                         "id": "4105-bf48-8d21-570e",
                         "sortIndex": 6
@@ -4940,7 +5136,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plague Belcher + Plague Knife",
+                        "name": "Plague Belcher",
                         "hidden": false,
                         "id": "3da2-13e8-4f61-ef05",
                         "sortIndex": 7
@@ -4956,7 +5152,7 @@
             "name": "Paid Wargear",
             "id": "1a2f-0946-e5a5-e44f",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 2,
             "selectionEntryGroups": [
               {
                 "name": "​",
@@ -5038,7 +5234,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Dual Bubotic Weapons is a +10 inline replacement option only on Plague Marine Infestor 1 and 2. Model 3 is reserved for the special-weapon loadout and does not receive this paid replacement.\nLOADOUT UI: Plague Marine Infestor 3 is treated as a dedicated special-weapon model. It presents only Blight Launcher, Plague Spewer, Flail of Corruption, Great Plague Cleaver, Meltagun, Plasma Gun, or Plague Belcher loadouts. Default Plague Marine equipment is intentionally omitted.",
+        "comment": "LOADOUT UI: Dual Bubotic Weapons is a +10 inline replacement option only on Plague Marine Infestor 1 and 2. Model 3 is reserved for the special-weapon loadout and does not receive this paid replacement.\nLOADOUT UI: Plague Marine Infestor 3 is treated as a dedicated special-weapon model. It presents only Blight Launcher, Plague Spewer, Flail of Corruption, Great Plague Cleaver, Meltagun, Plasma Gun, or Plague Belcher loadouts. Default Plague Marine equipment is intentionally omitted.\nPOLISH PASS: dedicated special-weapon models display their fixed Plague Knife on a separate mandatory line from the special-weapon choice. Legality is unchanged.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -5125,7 +5321,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Bubotic Weapon + 2 Combi-Plague Bolter",
+                        "name": "2x Combi-Plague Bolter & Bubotic Weapon",
                         "hidden": false,
                         "id": "4a24-2c93-3e7f-cf02",
                         "sortIndex": 1
@@ -5133,7 +5329,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Bubotic Weapon + Combi-Plague Bolter + Combi-Melta",
+                        "name": "Combi-Melta & Combi-Plague Bolter & Bubotic Weapon",
                         "hidden": false,
                         "id": "56d0-d32e-ef2b-98a5",
                         "sortIndex": 2
@@ -5141,7 +5337,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Bubotic Weapon + Combi-Plague Bolter + Combi-Flamer",
+                        "name": "Combi-Flamer & Combi-Plague Bolter & Bubotic Weapon",
                         "hidden": false,
                         "id": "33e0-d236-85e4-ca61",
                         "sortIndex": 3
@@ -5149,7 +5345,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Bubotic Weapon + Combi-Plague Bolter + Combi-Plasma",
+                        "name": "Combi-Plasma & Combi-Plague Bolter & Bubotic Weapon",
                         "hidden": false,
                         "id": "8a91-82c8-6bf8-6294",
                         "sortIndex": 4
@@ -5157,7 +5353,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Bubotic Weapon + Reaper Autocannon",
+                        "name": "Reaper Autocannon & Bubotic Weapon",
                         "hidden": false,
                         "id": "5ed0-04f7-20b9-da08",
                         "sortIndex": 5,
@@ -5176,7 +5372,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Reaper Autocannon"
+                                "childName": "Reaper Autocannon & Bubotic Weapon"
                               }
                             ]
                           },
@@ -5194,7 +5390,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Blight Launcher"
+                                "childName": "Blight Launcher & Bubotic Weapon"
                               }
                             ]
                           },
@@ -5212,7 +5408,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Plague Spewer"
+                                "childName": "Plague Spewer & Bubotic Weapon"
                               }
                             ]
                           }
@@ -5221,7 +5417,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Bubotic Weapon + Blight Launcher",
+                        "name": "Blight Launcher & Bubotic Weapon",
                         "hidden": false,
                         "id": "87d2-9dfd-e13d-6eb0",
                         "sortIndex": 6,
@@ -5240,7 +5436,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Reaper Autocannon"
+                                "childName": "Reaper Autocannon & Bubotic Weapon"
                               }
                             ]
                           },
@@ -5258,7 +5454,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Blight Launcher"
+                                "childName": "Blight Launcher & Bubotic Weapon"
                               }
                             ]
                           },
@@ -5276,7 +5472,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Plague Spewer"
+                                "childName": "Plague Spewer & Bubotic Weapon"
                               }
                             ]
                           }
@@ -5285,7 +5481,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Bubotic Weapon + Plague Spewer",
+                        "name": "Plague Spewer & Bubotic Weapon",
                         "hidden": false,
                         "id": "5154-03ea-1195-9071",
                         "sortIndex": 7,
@@ -5304,7 +5500,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Reaper Autocannon"
+                                "childName": "Reaper Autocannon & Bubotic Weapon"
                               }
                             ]
                           },
@@ -5322,7 +5518,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Blight Launcher"
+                                "childName": "Blight Launcher & Bubotic Weapon"
                               }
                             ]
                           },
@@ -5340,7 +5536,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Plague Spewer"
+                                "childName": "Plague Spewer & Bubotic Weapon"
                               }
                             ]
                           }
@@ -5414,7 +5610,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Bubotic Weapon + 2 Combi-Plague Bolter",
+                        "name": "2x Combi-Plague Bolter & Bubotic Weapon",
                         "hidden": false,
                         "id": "f923-3ef5-1133-e5e2",
                         "sortIndex": 1
@@ -5422,7 +5618,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Bubotic Weapon + Combi-Plague Bolter + Combi-Melta",
+                        "name": "Combi-Melta & Combi-Plague Bolter & Bubotic Weapon",
                         "hidden": false,
                         "id": "fc38-53ac-0275-b70e",
                         "sortIndex": 2
@@ -5430,7 +5626,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Bubotic Weapon + Combi-Plague Bolter + Combi-Flamer",
+                        "name": "Combi-Flamer & Combi-Plague Bolter & Bubotic Weapon",
                         "hidden": false,
                         "id": "cda8-cbf3-6ab0-e3ac",
                         "sortIndex": 3
@@ -5438,7 +5634,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Bubotic Weapon + Combi-Plague Bolter + Combi-Plasma",
+                        "name": "Combi-Plasma & Combi-Plague Bolter & Bubotic Weapon",
                         "hidden": false,
                         "id": "9a5f-6471-de69-0752",
                         "sortIndex": 4
@@ -5446,7 +5642,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Bubotic Weapon + Reaper Autocannon",
+                        "name": "Reaper Autocannon & Bubotic Weapon",
                         "hidden": false,
                         "id": "b60c-9179-f96f-29f1",
                         "sortIndex": 5,
@@ -5465,7 +5661,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Reaper Autocannon"
+                                "childName": "Reaper Autocannon & Bubotic Weapon"
                               }
                             ]
                           },
@@ -5483,7 +5679,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Blight Launcher"
+                                "childName": "Blight Launcher & Bubotic Weapon"
                               }
                             ]
                           },
@@ -5501,7 +5697,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Plague Spewer"
+                                "childName": "Plague Spewer & Bubotic Weapon"
                               }
                             ]
                           }
@@ -5510,7 +5706,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Bubotic Weapon + Blight Launcher",
+                        "name": "Blight Launcher & Bubotic Weapon",
                         "hidden": false,
                         "id": "220e-6649-10bd-15b1",
                         "sortIndex": 6,
@@ -5529,7 +5725,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Reaper Autocannon"
+                                "childName": "Reaper Autocannon & Bubotic Weapon"
                               }
                             ]
                           },
@@ -5547,7 +5743,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Blight Launcher"
+                                "childName": "Blight Launcher & Bubotic Weapon"
                               }
                             ]
                           },
@@ -5565,7 +5761,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Plague Spewer"
+                                "childName": "Plague Spewer & Bubotic Weapon"
                               }
                             ]
                           }
@@ -5574,7 +5770,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Bubotic Weapon + Plague Spewer",
+                        "name": "Plague Spewer & Bubotic Weapon",
                         "hidden": false,
                         "id": "7b1c-1b6d-9cef-89ea",
                         "sortIndex": 7,
@@ -5593,7 +5789,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Reaper Autocannon"
+                                "childName": "Reaper Autocannon & Bubotic Weapon"
                               }
                             ]
                           },
@@ -5611,7 +5807,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Blight Launcher"
+                                "childName": "Blight Launcher & Bubotic Weapon"
                               }
                             ]
                           },
@@ -5629,7 +5825,7 @@
                                 "shared": true,
                                 "includeChildSelections": true,
                                 "includeChildForces": false,
-                                "childName": "Bubotic Weapon + Plague Spewer"
+                                "childName": "Plague Spewer & Bubotic Weapon"
                               }
                             ]
                           }
@@ -5671,7 +5867,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: no Champion model. Each Blightlord chooses one complete loadout: Bubotic Weapon + a combi option, Bubotic Weapon + a heavy weapon, or Flail of Corruption. Heavy weapon choices are capped to one across the squad, and Flail of Corruption is separately capped to one.",
+        "comment": "LOADOUT UI: no Champion model. Each Blightlord still chooses one complete atomic loadout. The meaningful distinguishing weapon is written first, followed by the common equipment, so the list is easier to scan while still displaying the entire package. Heavy weapon choices remain capped to one across the squad, and Flail of Corruption remains separately capped to one.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -5724,78 +5920,86 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "206d-b2c1-0153-ac96",
+                "name": "Deathshroud Terminators 1-2",
+                "id": "f832-f7c0-31ff-0719",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "9596-021a-60ff-3ea7",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "206d-b2c1-0153-ac96",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9596-021a-60ff-3ea7",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "aea8-5878-5490-a389",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "2x Manreaper Scythe",
+                        "hidden": false,
+                        "id": "b9ab-8591-b80d-08b3",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b9ab-8591-b80d-08b3"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "aea8-5878-5490-a389",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "2x Manreaper Scythe",
+                    "name": "​",
+                    "id": "c7da-433a-3db6-3783",
                     "hidden": false,
-                    "id": "b9ab-8591-b80d-08b3",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "728a-339c-4487-166c",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "26b5-4a23-c008-179f",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "2x Plaguespurt Gauntlet",
+                        "hidden": false,
+                        "id": "2e80-e56e-6666-9f18",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "2e80-e56e-6666-9f18"
                   }
-                ],
-                "defaultSelectionEntryId": "b9ab-8591-b80d-08b3"
-              },
-              {
-                "name": "​",
-                "id": "c7da-433a-3db6-3783",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "728a-339c-4487-166c",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "26b5-4a23-c008-179f",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "2x Plaguespurt Gauntlet",
-                    "hidden": false,
-                    "id": "2e80-e56e-6666-9f18",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "2e80-e56e-6666-9f18"
+                ]
               }
             ]
           }
@@ -5853,115 +6057,123 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "0af4-c0a5-ce67-2986",
+                "name": "Myphitic Blight-Hauler",
+                "id": "3845-f738-7dac-13bb",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "3738-e311-1806-a362",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "0af4-c0a5-ce67-2986",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3738-e311-1806-a362",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "43d9-1c66-f031-c723",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Missile Launcher",
+                        "hidden": false,
+                        "id": "8e65-7b2d-2232-1773",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "8e65-7b2d-2232-1773"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "43d9-1c66-f031-c723",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Missile Launcher",
+                    "name": "​",
+                    "id": "1927-78f6-08b8-1b26",
                     "hidden": false,
-                    "id": "8e65-7b2d-2232-1773",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "8e65-7b2d-2232-1773"
-              },
-              {
-                "name": "​",
-                "id": "1927-78f6-08b8-1b26",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "5708-0255-1c5d-f033",
-                    "includeChildSelections": false
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5708-0255-1c5d-f033",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9b3e-8cd6-fbed-69fa",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Multi-Melta",
+                        "hidden": false,
+                        "id": "6057-47cc-6f57-7451",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "6057-47cc-6f57-7451"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "9b3e-8cd6-fbed-69fa",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Multi-Melta",
+                    "name": "​",
+                    "id": "0fcd-0e72-a466-c030",
                     "hidden": false,
-                    "id": "6057-47cc-6f57-7451",
-                    "sortIndex": 1
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d017-20c1-5fb5-4753",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9f03-9925-9bc8-6aa8",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Gnashing Maw",
+                        "hidden": false,
+                        "id": "689f-3832-4017-fcc6",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "689f-3832-4017-fcc6"
                   }
-                ],
-                "defaultSelectionEntryId": "6057-47cc-6f57-7451"
-              },
-              {
-                "name": "​",
-                "id": "0fcd-0e72-a466-c030",
-                "hidden": false,
-                "sortIndex": 3,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "d017-20c1-5fb5-4753",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "9f03-9925-9bc8-6aa8",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Gnashing Maw",
-                    "hidden": false,
-                    "id": "689f-3832-4017-fcc6",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "689f-3832-4017-fcc6"
+                ]
               }
             ]
           }
@@ -6018,7 +6230,7 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
+                "name": "Foetid Bloat-Drone",
                 "id": "3e62-4834-7050-7c63",
                 "hidden": false,
                 "sortIndex": 1,
@@ -6125,168 +6337,176 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "578c-a986-97dc-6ef0",
+                "name": "Plagueburst Crawler",
+                "id": "6feb-f9d0-4328-fc5f",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "a9a1-d0c0-b6af-a99f",
-                    "includeChildSelections": false
+                    "name": "​",
+                    "id": "578c-a986-97dc-6ef0",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a9a1-d0c0-b6af-a99f",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "59e7-1453-d72c-f9ba",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plagueburst Mortar",
+                        "hidden": false,
+                        "id": "afe9-34e6-b326-3193",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "afe9-34e6-b326-3193"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "59e7-1453-d72c-f9ba",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plagueburst Mortar",
+                    "name": "​",
+                    "id": "8b36-4f91-8e09-862f",
                     "hidden": false,
-                    "id": "afe9-34e6-b326-3193",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "afe9-34e6-b326-3193"
-              },
-              {
-                "name": "​",
-                "id": "8b36-4f91-8e09-862f",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "b418-7f4a-ce39-40df",
-                    "includeChildSelections": false
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "b418-7f4a-ce39-40df",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f1ca-5eb2-4157-aa0c",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Bulldozer Blade",
+                        "hidden": false,
+                        "id": "c6e0-ea0d-19a9-4234",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "c6e0-ea0d-19a9-4234"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "f1ca-5eb2-4157-aa0c",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Bulldozer Blade",
+                    "name": "​",
+                    "id": "5721-89ec-29b8-768b",
                     "hidden": false,
-                    "id": "c6e0-ea0d-19a9-4234",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "c6e0-ea0d-19a9-4234"
-              },
-              {
-                "name": "​",
-                "id": "5721-89ec-29b8-768b",
-                "hidden": false,
-                "sortIndex": 3,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "ea75-dd0b-bbde-2995",
-                    "includeChildSelections": false
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ea75-dd0b-bbde-2995",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ee7b-51e7-a11d-3c65",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Entropy Cannons",
+                        "hidden": false,
+                        "id": "52b4-d945-df44-88a7",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plaguespitters",
+                        "hidden": false,
+                        "id": "dbb6-e6ed-fa44-c37d",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "52b4-d945-df44-88a7"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "ee7b-51e7-a11d-3c65",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Entropy Cannons",
+                    "name": "​",
+                    "id": "b12b-8fd7-65d3-a98f",
                     "hidden": false,
-                    "id": "52b4-d945-df44-88a7",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plaguespitters",
-                    "hidden": false,
-                    "id": "dbb6-e6ed-fa44-c37d",
-                    "sortIndex": 2
+                    "sortIndex": 4,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "eecc-afb0-2acd-a390",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "66b2-5d53-63d3-9534",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Slugger",
+                        "hidden": false,
+                        "id": "8e7b-b2e7-8947-d645",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Rothail Volley Gun",
+                        "hidden": false,
+                        "id": "2fda-a289-e2c1-1093",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "8e7b-b2e7-8947-d645"
                   }
-                ],
-                "defaultSelectionEntryId": "52b4-d945-df44-88a7"
-              },
-              {
-                "name": "​",
-                "id": "b12b-8fd7-65d3-a98f",
-                "hidden": false,
-                "sortIndex": 4,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "eecc-afb0-2acd-a390",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "66b2-5d53-63d3-9534",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Heavy Slugger",
-                    "hidden": false,
-                    "id": "8e7b-b2e7-8947-d645",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Rothail Volley Gun",
-                    "hidden": false,
-                    "id": "2fda-a289-e2c1-1093",
-                    "sortIndex": 2
-                  }
-                ],
-                "defaultSelectionEntryId": "8e7b-b2e7-8947-d645"
+                ]
               }
             ]
           }
@@ -6347,6 +6567,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "PHASE 0.1 DEATH GUARD. All 19 source datasheets are selectable and fixed-size. All 10 printed Leaders consume Leader capacity. Great Traitors’ Arsenal is an optional, unchecked Configuration placeholder until the reusable Chaos Space Marines library is wired. Death Guard Chaos Lord resolves only native Plague Marine attachment targets in this file; external CSM hosts and RAPTORS remain explicit placeholders rather than invented local units.\n\nCOMPLETE LOADOUT UI PASS: all native Death Guard units now expose fixed equipment, loadout choices, special weapon choices, and paid wargear. Great Traitors’ Arsenal remains a Phase 0.1 placeholder. Composition / copy-cap mechanics are unchanged in this pass.\n\nADDITIONAL COPY COSTS\nAll native non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Affected units link to the canonical Game System unit-reminder rule.\n\nDUAL BUBOTIC WEAPONS FIX\nFor Septic Plague Marines, Inexorable Plague Marines, and Plague Marine Infestors, Dual Bubotic Weapons is now a +10 inline loadout replacement on each eligible non-Champion model. The previous unit-level two-slot Paid Wargear representation was removed. Max 2 per squad is enforced structurally.\n\nDUAL BUBOTIC ELIGIBILITY FIX\nSeptic Plague Marines: Dual Bubotic Weapons only on models 1-2. Inexorable Plague Marines: only on model 2. Plague Marine Infestors: only on models 1-2. Inexorable special-weapon models 3-4 may duplicate the same special weapon; the previous different-weapon restriction is not enforced.\n\nPLAGUE MARINE SPECIALIST CLEANUP\nSeptic model 3, Inexorable models 3-4, and Infestor model 3 are now presented purely as dedicated special-weapon models. Default Plague Marine loadouts are intentionally omitted.\n\nCONSTRUCTIVE ERROR MIGRATION\nDeath Guard now use Game System revision 11. Additional Copy Costs, mandatory native Leader attachments, Plague Marine host Leader limits, and Rare limits use constructive player-facing validation. Death Guard Chaos Lord missing-attachment validation is suppressed while Glorious Jump Pack is included, and the temporary Jump Pack placeholder error now gives a direct player action. Great Traitors’ Arsenal itself remains an optional Phase 0.1 placeholder. Existing loadouts, specialist presentation, points, Leader Capacity semantics, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV8 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader attachment behavior, Great Traitors’ Arsenal placeholder, categories, or Additional Copy Costs arithmetic were otherwise changed."
+    "comment": "DEATH GUARD CURRENT-STATE BASELINE. All 19 source datasheets are selectable and fixed-size. All 10 printed Leaders consume Leader Capacity. Great Traitors’ Arsenal is an optional, unchecked Configuration placeholder until the reusable Chaos Space Marines library is wired. Death Guard Chaos Lord resolves only native Plague Marine attachment targets in this file; external CSM hosts and RAPTORS remain explicit placeholders rather than invented local units.\n\nCOMPLETE LOADOUT UI PASS: all native Death Guard units now expose fixed equipment, loadout choices, special weapon choices, and paid wargear. Great Traitors’ Arsenal remains an intentional CSM-library placeholder. Composition / copy-cap mechanics are unchanged in this pass.\n\nADDITIONAL COPY COSTS\nAll native non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Affected units link to the canonical Game System unit-reminder rule.\n\nDUAL BUBOTIC WEAPONS FIX\nFor Septic Plague Marines, Inexorable Plague Marines, and Plague Marine Infestors, Dual Bubotic Weapons is now a +10 inline loadout replacement on each eligible non-Champion model. The previous unit-level two-slot Paid Wargear representation was removed. Max 2 per squad is enforced structurally.\n\nDUAL BUBOTIC ELIGIBILITY FIX\nSeptic Plague Marines: Dual Bubotic Weapons only on models 1-2. Inexorable Plague Marines: only on model 2. Plague Marine Infestors: only on models 1-2. Inexorable special-weapon models 3-4 may duplicate the same special weapon; the previous different-weapon restriction is not enforced.\n\nPLAGUE MARINE SPECIALIST CLEANUP\nSeptic model 3, Inexorable models 3-4, and Infestor model 3 are now presented purely as dedicated special-weapon models. Default Plague Marine loadouts are intentionally omitted.\n\nCONSTRUCTIVE ERROR MIGRATION\nDeath Guard now use Game System revision 11. Additional Copy Costs, mandatory native Leader attachments, Plague Marine host Leader limits, and Rare limits use constructive player-facing validation. Death Guard Chaos Lord missing-attachment validation is suppressed while Glorious Jump Pack is included, and the temporary Jump Pack placeholder error now gives a direct player action. Great Traitors’ Arsenal itself remains an optional Phase 0.1 placeholder. Existing loadouts, specialist presentation, points, Leader Capacity semantics, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV8 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader attachment behavior, Great Traitors’ Arsenal placeholder, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV9 POLISH PASS\nAdded explicit model/model-set headers to anonymous single-model and fixed-loadout Death Guard units; flattened Septic Plague Marine, Inexorable Plague Marine, and Plague Marine Infestor specialist models into Loadout Options; standardized inseparable weapon-package display with '&' and '2x' notation; standardized all eight Rare-limit errors and the two plural Plague Marine host-limit errors. Great Traitors’ Arsenal remains the intentional Phase 0.1 Chaos Space Marines library placeholder. Points, attachment behavior, Glorious Jump Pack, Plague Marine specialist eligibility, Blightlord cross-model weapon limits, Additional Copy Costs, categories, and all other mechanics are unchanged.\n\nREV10 LOADOUT CLARITY\nSplit the four dedicated Plague Marine specialist loadouts into a fixed Plague Knife line plus a separate special-weapon choice line. Reordered Blightlord Terminator atomic package names so the distinguishing weapon appears first while the full package remains visible. Existing special-weapon entry IDs, defaults, modifiers, Blightlord exclusivity logic, points, and all other mechanics are unchanged.\n\nREV11 RETROSPECTIVE POLISH PASS\nRevisited Death Guard against the final cross-faction presentation standard. Modernized the live Additional Copy Costs comment to version-agnostic shared Game System wording, replaced the generic Phase 0.1 catalogue baseline heading with a current-state baseline, and updated the generic Arsenal note to describe Great Traitors’ Arsenal as the intentional CSM-library placeholder it remains. Historical migration notes and genuinely deferred Great Traitors’ Arsenal / Glorious Jump Pack integration notes are preserved. All IDs, SelectionEntry names, loadouts, defaults, points, Leader behavior, Rare validation, Additional Copy Costs arithmetic, categories, constraints, specialist presentation, and all other rules semantics remain unchanged."
   }
 }

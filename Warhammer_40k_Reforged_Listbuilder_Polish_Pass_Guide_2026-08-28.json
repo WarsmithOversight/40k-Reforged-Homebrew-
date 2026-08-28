@@ -1,0 +1,810 @@
+{
+  "document": {
+    "title": "Warhammer 40k Reforged Homebrew Listbuilder - Polish Pass Record and Presentation Guide",
+    "short_title": "Listbuilder Polish Pass Guide",
+    "generated_date": "2026-08-28",
+    "version": 1,
+    "purpose": [
+      "Preserve the decisions, presentation standards, and validation habits established during the full non-Space-Marine Polish Pass.",
+      "Act as a durable reference for future catalogue authoring, maintenance, homogenisation, and review.",
+      "Separate player-facing presentation doctrine from underlying rules semantics and implementation mechanics.",
+      "Provide concrete good/bad examples and a repeatable checklist for future passes."
+    ],
+    "project_name": "Warhammer 40k Reforged Homebrew Listbuilder",
+    "status_at_generation": {
+      "polish_pass_complete": true,
+      "space_marines_and_chaos_space_marines": "Still intentionally deferred until after the homogenisation pass because they are the two large remaining catalogue builds.",
+      "game_system": {
+        "name": "Warhammer 40k Reforged",
+        "id": "sys-b298-09dc-9597-23fd",
+        "current_known_revision": 16,
+        "canonical_points_cost_type_id": "51b2-306e-1021-d207"
+      }
+    }
+  },
+  "core_philosophy": {
+    "source_of_truth": {
+      "uus": "Semantic source of truth.",
+      "army_pdf": "Authoritative player-facing rules source.",
+      "listbuilder": "Companion and recording tool. It must not attempt to replace the army PDF."
+    },
+    "player_experience_goal": "The listbuilder should feel like a very good, highly defensive fancy notepad: fast to scan, fast to record, hard to use incorrectly, and intentionally incomplete where reproducing every procedural rule would make the interface worse.",
+    "presentation_priority": [
+      "What am I looking at?",
+      "For what model or model-group?",
+      "What is it equipped with?"
+    ],
+    "balance_between_standardisation_and_individual_consideration": "Standardise the visual grammar and naming conventions, but do not force unlike rules into identical shapes. Preserve important unit-specific distinctions where they help the player understand the actual choice.",
+    "conservative_change_policy": "During a Polish Pass, prefer labels, wrappers, ordering, grouping, and error-message improvements. Do not redesign functioning mechanical structures unless the existing structure is demonstrably causing a player-facing problem and the change is explicitly approved."
+  },
+  "non_negotiable_authoring_rules": {
+    "ids": [
+      "Never regenerate existing stable IDs.",
+      "New objects use deterministic SHA-256-derived IDs.",
+      "When a unit is mirrored into a shared library, shared presentation objects should use matching deterministic IDs when the trees are intended to remain structurally identical."
+    ],
+    "semantics": [
+      "Never invent rules semantics to make New Recruit easier.",
+      "Never alter points, unit eligibility, attachment legality, copy-cost arithmetic, ratios, Rare behavior, or hidden semantic categories during a presentation-only pass unless explicitly required.",
+      "Never remove an odd-looking structure merely because it is unconventional if it is solving a real mechanical problem.",
+      "Test actual New Recruit behavior instead of assuming a BattleScribe feature behaves ideally."
+    ],
+    "visibility": [
+      "Never hide points.",
+      "Never conditionally hide an option after it has already been selected.",
+      "Prefer visible final-state choices over procedural steps.",
+      "Avoid exposing hidden semantic category names, association terminology, compiler jargon, and raw New Recruit vocabulary to the player."
+    ],
+    "costed_options": [
+      "Avoid quantity spinners for one-off paid wargear.",
+      "Prefer optional max-1 groups for discrete paid upgrades.",
+      "Keep paid wargear under a Paid Wargear heading when it is genuinely purchased equipment.",
+      "Rename abstract rule-state purchases to Unit Upgrade, Mutation Upgrade, Protocol Upgrade, etc. when that better describes what the player is buying."
+    ]
+  },
+  "format_and_layout_guide": {
+    "section_purpose": "This is the primary reusable presentation handbook established by the Polish Pass.",
+    "hierarchy": {
+      "preferred_pattern": [
+        "Loadout Options",
+        "Model or model-group name",
+        "One or more weapon/equipment choice lists"
+      ],
+      "example_good": {
+        "unit": "Grey Knight Terminator",
+        "layout": [
+          "Loadout Options",
+          "  Grey Knight Terminator",
+          "    Storm Bolter",
+          "    Force Weapon / Falchions / Stave"
+        ],
+        "why": "The model identity is explicit and the player sees its final equipment directly."
+      },
+      "example_bad": {
+        "layout": [
+          "Loadout Options",
+          "  [anonymous list]",
+          "    Storm Bolter",
+          "  [anonymous list]",
+          "    Force Weapon / Falchions / Stave"
+        ],
+        "why": "The player has to infer what the lists belong to, especially once a datasheet becomes more complex."
+      }
+    },
+    "model_headers": {
+      "rule": "Use explicit model or model-group headers whenever the unit contains anonymous loadout lists and a real model identity exists.",
+      "single_model_examples": [
+        "Autarch",
+        "Farseer",
+        "Canoness",
+        "Tank Commander",
+        "Wraithknight",
+        "Sororitas Rhino"
+      ],
+      "fixed_group_examples": [
+        "Guardian Defenders 1-10",
+        "Arco-Flagellants 1-10",
+        "Ur-Ghuls 1-6",
+        "Mandrakes 1-5",
+        "Poxwalkers 1-10",
+        "Heavy Lascannon Team 1-2"
+      ],
+      "special_note": "Do not invent a canonical noun if the source does not establish one. Grey Knights deliberately retained names like Purgation Squad Model 1/2/3 because the catalogue alone did not provide a better canonical term."
+    },
+    "loadout_heading": {
+      "preferred": "Loadout Options",
+      "avoid": "Loadout",
+      "reason": "Loadout Options is now the standard project-wide heading and reads as an instruction rather than a raw implementation label."
+    },
+    "specialist_models": {
+      "rule": "Specialist models belong inside ordinary Loadout Options unless the enclosing branch represents a genuine mutually exclusive structural choice.",
+      "flatten_examples": [
+        "Battle Sisters specialist models",
+        "Dominion specialist models",
+        "Retributor heavy-weapon models",
+        "Plague Marine specialist models",
+        "Tau Hunter / Kroot specialist models",
+        "Harlequin Troupe Player 4/5",
+        "Kasrkin Gunner and Sharpshooter / Demo Trooper"
+      ],
+      "keep_separate_example": {
+        "name": "Cadian Special Weapons Team / Heavy Weapons Team",
+        "reason": "This is not merely a filing wrapper. It is a real final-state branch over the last bodies in the squad and remains player-meaningful."
+      },
+      "bad_label": "Special Weapon Loadouts",
+      "why_bad": "It describes catalogue taxonomy, not a decision the player thinks about."
+    },
+    "physical_slot_labels": {
+      "rule": "Do not expose physical slot or implementation labels when the player does not care which arm/slot/list instance is represented.",
+      "remove_examples": [
+        "Weapon 1 / Weapon 2",
+        "Heavy Weapon 1 / Heavy Weapon 2",
+        "Left Arm / Right Arm",
+        "Shoulder Weapon 1 / Shoulder Weapon 2",
+        "Ranged Weapon 1 / Ranged Weapon 2"
+      ],
+      "keep_examples": [
+        {
+          "label": "Coaxial Weapon",
+          "reason": "It conveys a real dependency of the Vanquisher loadout."
+        },
+        {
+          "label": "Main Weapon",
+          "reason": "Useful for Sentinel model readability."
+        },
+        {
+          "label": "Sidearm",
+          "reason": "Describes a meaningful equipment category for characters."
+        }
+      ],
+      "principle": "A list is a list. Keep multiple mechanically separate lists if needed, but do not narrate the implementation slot unless it communicates useful rules meaning."
+    },
+    "atomic_packages": {
+      "rule": "If multiple pieces of equipment are inseparable as one selectable final-state package, display the full package using '&'.",
+      "never_use_for_atomic_package": "+",
+      "good_examples": [
+        "Combi-Melta & Combi-Plague Bolter & Bubotic Weapon",
+        "Castellan Axe & Ballistus Grenade Launcher",
+        "Archeotech Pistol & Omnissian Axe",
+        "Combi-Melta & Bolter",
+        "Slugga & Choppa"
+      ],
+      "bad_examples": [
+        "Bolter + Combi-Melta",
+        "Bubotic Weapon + Reaper Autocannon",
+        "Archeotech Pistol + Omnissian Axe"
+      ],
+      "why": "'+' reads like separate list lines or arithmetic. '&' reads as a single inseparable equipment package."
+    },
+    "meaningful_choice_first": {
+      "rule": "Within an atomic package, lead with the part that distinguishes the option. Put common/default equipment afterward.",
+      "blightlord_example": {
+        "bad": [
+          "Bubotic Weapon & Combi-Plague Bolter & Combi-Melta",
+          "Bubotic Weapon & Reaper Autocannon"
+        ],
+        "good": [
+          "Combi-Melta & Combi-Plague Bolter & Bubotic Weapon",
+          "Reaper Autocannon & Bubotic Weapon"
+        ]
+      },
+      "bodyguard_example": {
+        "bad": [
+          "Laspistol & Chainsword",
+          "Laspistol & Power Sword",
+          "Laspistol & Power Fist"
+        ],
+        "good": [
+          "Chainsword & Laspistol",
+          "Power Sword & Laspistol",
+          "Power Fist & Laspistol"
+        ]
+      },
+      "exception": "Do not mechanically reorder every package. Apply this where a repeated shared component genuinely obscures the choice when skimming."
+    },
+    "fixed_and_choice_components": {
+      "rule": "When a component is always present and the player is really choosing only the other component, split them into separate visible lines if doing so is mechanically safe.",
+      "plague_marine_example": {
+        "bad": [
+          "Blight Launcher & Plague Knife",
+          "Plague Spewer & Plague Knife",
+          "Meltagun & Plague Knife"
+        ],
+        "good": [
+          "Plague Knife",
+          "Blight Launcher / Plague Spewer / Meltagun / ..."
+        ],
+        "reason": "Plague Knife is fixed; the second weapon is the actual choice."
+      },
+      "warning": "Do not split a package when one branch replaces the whole package and doing so would require fragile conditional mandatory groups, selected-then-hidden behavior, or fake 'No Weapon' choices. Blightlords remained atomic for exactly this reason."
+    },
+    "attached_models_and_leaders": {
+      "rule": "Name relationship groups for the actual model being attached.",
+      "good_examples": [
+        "Attached Imagifier",
+        "Attached Lhamaean",
+        "Attached Plasmacyte"
+      ],
+      "bad_examples": [
+        "Additional Leader",
+        "Additional Model"
+      ],
+      "ordering_rule": {
+        "genuine_leader": "Relationship-first can be appropriate. Attached Lhamaean remains near the top because it is a genuine Leader choice.",
+        "wargear_like_attached_model": "Place later. Attached Plasmacyte is a real model but functionally close to wargear, so it sits after Loadout Options and Additional Model."
+      },
+      "principle": "Standardise the naming, then apply individual consideration to ordering."
+    },
+    "additional_model_labels": {
+      "rule": "Use singular 'Additional Model' when the group can only add one model.",
+      "avoid": "Additional Models",
+      "examples": [
+        "Paragon Warsuits",
+        "Crisis / variable-size units",
+        "Sentinel second-model structures"
+      ]
+    },
+    "paid_wargear": {
+      "keep_as_paid_wargear_when": [
+        "The player is buying a discrete physical item.",
+        "The choice naturally reads as final-state equipment.",
+        "Examples: Hunter-Killer Missile, Smoke Launchers, Misericordia, grenade, dozer blade, pintle weapon."
+      ],
+      "rename_when": [
+        "The purchase is primarily a rule-state or abstract upgrade.",
+        "Examples: Black Guardians' Webway -> Unit Upgrade, Pathfinders -> Unit Upgrade, Venerable -> Unit Upgrade, Mutation Upgrade where appropriate."
+      ],
+      "slot_label_example": {
+        "dominions": [
+          "Grenade",
+          "Additional Grenade",
+          "Munitorum Cherub"
+        ],
+        "reason": "Two identical anonymous paid slots were player-confusing."
+      }
+    },
+    "errors": {
+      "goal": "Every custom error should tell the player what is wrong, why it is illegal, and what action fixes it.",
+      "avoid_raw_new_recruit_language": [
+        "association",
+        "requires N selections",
+        "selections too many",
+        "constraint",
+        "hidden category names"
+      ],
+      "rare_standard": {
+        "template": "Your army may include only one [UNIT] because it is Rare. Remove the additional copy.",
+        "avoid": "Remove the additional [UNIT] unit(s)."
+      },
+      "host_limit_standard": {
+        "generic": "This unit has more than one Leader attached. It may have only one attached Leader. Remove or move one of the attached Leaders.",
+        "external_leader_variant": "This unit has more than one Leader attached. It may have only one externally attached Leader. Remove or move one of the attached Leaders.",
+        "imagifier_variant": "This unit has more than one externally attached Leader. It may have only one externally attached Leader. Remove or move one of the attached Leaders. An Imagifier may still be included under Attached Imagifier."
+      },
+      "grammar_rule": "Prefer 'This unit...' over repeating plural unit names, which avoids errors such as 'Dominions has...' or 'Wraithguards has...'."
+    },
+    "spelling_and_micro_consistency": {
+      "examples": [
+        "Stormbolter -> Storm Bolter",
+        "Additional Models -> Additional Model when max one",
+        "Weapon packages use '&' consistently",
+        "Use x-count style consistently: 2x, 4x, 10x"
+      ],
+      "principle": "Small lexical inconsistencies become conspicuous once the larger layout is clean."
+    },
+    "ordering": {
+      "default": [
+        "Relationship choice if it is a genuine Leader-like decision",
+        "Loadout Options",
+        "Additional Model if applicable",
+        "Attached wargear-like model if applicable",
+        "Paid Wargear / Unit Upgrade"
+      ],
+      "examples": {
+        "necron_plasmacyte": [
+          "Loadout Options",
+          "Additional Model",
+          "Attached Plasmacyte"
+        ],
+        "drukhari_lhamaean": [
+          "Attached Lhamaean",
+          "Loadout Options",
+          "Paid Wargear if present"
+        ],
+        "sororitas_imagifier": [
+          "Attached Imagifier",
+          "Loadout Options",
+          "Paid Wargear"
+        ]
+      }
+    },
+    "what_not_to_fix_in_a_polish_pass": [
+      "Awkward but functioning nested-unit rendering caused by New Recruit.",
+      "Temporary external-library placeholders that are intentionally awaiting a reusable library.",
+      "Known source-authority omissions that need a future content pass.",
+      "Missing unit rules that were intentionally deferred.",
+      "A mechanically unusual structure that is proven to solve New Recruit behavior safely.",
+      "Source spelling/naming when the project does not have enough authority to establish a different canonical name."
+    ]
+  },
+  "new_recruit_behavior_notes": {
+    "proven_or_observed": [
+      "Custom player-facing errors work through modifier field 'error'.",
+      "Optional max-1 groups with no minimum naturally produce New Recruit's '(None)' state.",
+      "Removing raw constraints may remove visible '(0/N)' counters and can improve UI cleanliness.",
+      "Cross-model hiding using scope 'ancestor' has been proven useful.",
+      "Dynamically revealed mandatory/default groups may fail to instantiate their default child.",
+      "Nested units can act as Association targets.",
+      "Candidate-side association-count invalidation behaved badly and should not be used for host exclusivity.",
+      "Selected options should not later be hidden.",
+      "Nested model repetition in rendered output may be a New Recruit presentation consequence rather than a catalogue defect."
+    ],
+    "authoring_implication": "Prefer robust, boring mechanics with clear custom errors over clever conditional structures that only look elegant in JSON."
+  },
+  "validation_checklist": {
+    "before_editing": [
+      "Record catalogue revision, Game System revision, catalogue ID, and linked-library IDs.",
+      "Snapshot every existing SelectionEntry ID and name.",
+      "Inventory visible group labels, especially anonymous groups, Special Weapon Loadouts, Additional Leader, Additional Models, physical slot labels, '+', and old Rare errors.",
+      "Identify deliberately deferred structures and known exceptions before touching anything.",
+      "For mirrored library units, confirm whether their selectionEntryGroups trees are currently identical."
+    ],
+    "during_editing": [
+      "Preserve all existing IDs unless removing an explicitly approved presentation-only wrapper.",
+      "Use deterministic IDs only for genuinely new wrappers.",
+      "Synchronize childName metadata whenever a referenced SelectionEntry name changes.",
+      "Preserve defaults, costs, modifiers, conditions, category links, info links, constraints, associations, and sort semantics unless directly part of the approved change.",
+      "When flattening a wrapper, preserve child group IDs and reassign only presentation order/sortIndex.",
+      "For mirrored library trees, make the same presentation change on both sides and use matching new IDs."
+    ],
+    "after_editing": [
+      "Parse the output JSON again.",
+      "Check for duplicate IDs.",
+      "Verify only approved SelectionEntry names changed.",
+      "Verify no stale labels remain.",
+      "Verify no visible atomic package names still contain ' + '.",
+      "Verify Rare and host error counts and wording.",
+      "Verify linked library target IDs and importRootEntries behavior remain unchanged.",
+      "Verify intentional placeholders/deferred units remain untouched.",
+      "For mirrored trees, compare selectionEntryGroups for structural equality.",
+      "Verify Game System revision and catalogue revision are intentional."
+    ]
+  },
+  "repeatable_polish_pass_workflow": [
+    {
+      "step": 1,
+      "name": "Audit the shell",
+      "actions": [
+        "List all root/shared units.",
+        "Inspect top-level group headings.",
+        "Count anonymous or implementation-facing labels.",
+        "Find old terminology and inconsistent headings."
+      ]
+    },
+    {
+      "step": 2,
+      "name": "Classify each issue",
+      "actions": [
+        "Presentation-only",
+        "Error wording",
+        "Micro-consistency",
+        "Potential mechanic change",
+        "Known deferred issue",
+        "Intentional exception"
+      ]
+    },
+    {
+      "step": 3,
+      "name": "Propose a slate before editing",
+      "actions": [
+        "Describe each proposed change in player-facing terms.",
+        "Explicitly call out anything that will not be touched.",
+        "Explain exceptions where individual consideration overrides the standard pattern."
+      ]
+    },
+    {
+      "step": 4,
+      "name": "Apply conservative edits",
+      "actions": [
+        "Rename/wrap/reorder first.",
+        "Flatten only presentation-only wrappers.",
+        "Do not rewrite mechanics merely to make JSON prettier."
+      ]
+    },
+    {
+      "step": 5,
+      "name": "Validate aggressively",
+      "actions": [
+        "Diff IDs and SelectionEntry names.",
+        "Check duplicate IDs.",
+        "Check JSON parse.",
+        "Check linked libraries.",
+        "Check counts of stale labels/errors."
+      ]
+    },
+    {
+      "step": 6,
+      "name": "Record durable revision notes",
+      "actions": [
+        "State what changed.",
+        "State what was intentionally preserved.",
+        "Call out any known deferred work."
+      ]
+    }
+  ],
+  "polish_pass_summary_by_faction": [
+    {
+      "faction": "World Eaters",
+      "result_revision": 4,
+      "game_system_revision": 12,
+      "result_file": "World_Eaters_3_3_3_REV4_GS12_POINTS_EXPORT(1).json",
+      "summary": "Passed essentially as-is. Existing structure already matched the preferred presentation closely.",
+      "notable_preservations": [
+        "Great Traitors' Arsenal placeholder left intact.",
+        "Known Chaos Lord attachment gaps deferred until reusable Chaos Space Marines work."
+      ]
+    },
+    {
+      "faction": "Tyranids",
+      "result_revision": 19,
+      "game_system_revision": 12,
+      "result_file": "Tyranids_3_3_3_REV19_POLISH_FINAL.json",
+      "summary": "Only final Rare wording cleanup was needed at the end of an already heavily refined catalogue.",
+      "notable_changes": [
+        "Trygon and Mawloc Rare wording standardized."
+      ]
+    },
+    {
+      "faction": "Thousand Sons",
+      "result_revision": 5,
+      "game_system_revision": 12,
+      "result_file": "Thousand_Sons_3_3_3_REV5_POLISH_PASS.json",
+      "notable_changes": [
+        "Explicit headers.",
+        "Rubric/Scarab specialist flattening.",
+        "Osiron/Sekhetar Weapon 1/2 labels removed.",
+        "Mutalith Paid Wargear renamed Mutation Upgrade.",
+        "Rare cleanup."
+      ],
+      "preserved": "Great Traitors' Arsenal placeholder."
+    },
+    {
+      "faction": "Tau",
+      "result_revision": 5,
+      "game_system_revision": 12,
+      "result_file": "Tau_3_3_3_REV5_POLISH_PASS.json",
+      "notable_changes": [
+        "Explicit character/vehicle headers.",
+        "Commander outer Paid Wargear -> Battlesuit Configuration.",
+        "Crisis Weapon 1/2 labels hidden.",
+        "Additional Models -> Additional Model.",
+        "Kroot/Hunter specialist flattening.",
+        "Genuine Paid Wargear retained."
+      ]
+    },
+    {
+      "faction": "Orks",
+      "result_revision": 8,
+      "game_system_revision": 12,
+      "result_file": "Orks_3_3_3_REV8_OPTION2_PACKAGE_CLEANUP.json",
+      "notable_changes": [
+        "Explicit headers and specialist flattening.",
+        "Nobz/Deff Dread physical slot labels removed.",
+        "Fixed multi-weapon loadouts split where appropriate.",
+        "Atomic '+' packages converted to '&'.",
+        "Kommando nesting cleaned."
+      ],
+      "special_note": "Warboss bespoke error remained intentional."
+    },
+    {
+      "faction": "Necrons",
+      "result_revision": 7,
+      "game_system_revision": 12,
+      "result_file": "Necrons_3_3_3_REV7_PLASMACYTE_BOTTOM.json",
+      "notable_changes": [
+        "Explicit headers across single/fixed groups.",
+        "Additional Leader -> Attached Plasmacyte.",
+        "Additional Models -> Additional Model.",
+        "Lokhust Destroyer presentation cleanup.",
+        "Atomic package grammar.",
+        "Protocol/Unit Upgrade heading cleanup.",
+        "Rare errors standardized.",
+        "Plasmacyte ordering moved to bottom after loadout/size."
+      ],
+      "special_consideration": "Plasmacyte is a real model but functionally wargear-like, so ordering differs from a genuine attached Leader."
+    },
+    {
+      "faction": "Harlequins",
+      "result_revision": {
+        "main": 9,
+        "library": 8
+      },
+      "game_system_revision": 12,
+      "result_files": [
+        "Harlequins_3_3_3_V9_POLISH_PASS.json",
+        "Harlequins_3_3_3_LIBRARY_V8_POLISH_PASS.json"
+      ],
+      "notable_changes": [
+        "Explicit model headers in library.",
+        "Troupe Player 4/5 flattened.",
+        "Redundant 'Choose either:' headings removed.",
+        "Rare errors standardized."
+      ],
+      "preserved": "Main/library linking and Library target ID."
+    },
+    {
+      "faction": "Grey Knights",
+      "result_revision": 8,
+      "game_system_revision": 12,
+      "result_file": "Grey_Knights_3_3_3_REV8_POLISH_PASS.json",
+      "notable_changes": [
+        "Explicit headers on characters and elite models.",
+        "Nemesis Dreadknight ranged/melee slot labels removed.",
+        "Dreadnought Left Arm/Right Arm removed.",
+        "Strike/Purifier/Interceptor specialists flattened.",
+        "Additional Models -> Additional Model.",
+        "Fixed Storm Bolter split from melee choices on ordinary Grey Knights.",
+        "Atomic Dreadnought packages '+' -> '&'.",
+        "Venerable Paid Wargear -> Unit Upgrade.",
+        "Rare error standardized."
+      ],
+      "special_consideration": "Purgation Squad Model 1/2/3 retained because no better canonical noun was source-established."
+    },
+    {
+      "faction": "Drukhari",
+      "result_revision": 20,
+      "game_system_revision": 12,
+      "result_file": "Drukhari_3_3_3_REV20_INCUBI_KLAIVEX_DEMIKLAIVES.json",
+      "notable_changes": [
+        "Explicit headers and fixed-group headers.",
+        "Shared Lhamaean header.",
+        "Additional Leader -> Attached Lhamaean.",
+        "Special Weapon Loadouts flattened.",
+        "Grenade slots named Grenade / Additional Grenade.",
+        "Talos Left Arm/Right Arm hidden.",
+        "Rare errors standardized.",
+        "Later Klaivex fix made Demiklaives the permanent default and removed Klaive."
+      ],
+      "special_consideration": "Attached Lhamaean stays high in the layout because it is a genuine Leader relationship."
+    },
+    {
+      "faction": "Death Guard",
+      "result_revision": 10,
+      "game_system_revision": 12,
+      "result_file": "Death_Guard_3_3_3_REV10_LOADOUT_CLARITY.json",
+      "notable_changes": [
+        "Explicit model/fixed-group headers.",
+        "Special Weapon Loadouts flattened.",
+        "Atomic package '+' and 'and' grammar normalized to '&'.",
+        "Count display standardized to '2x'.",
+        "Rare and host errors standardized.",
+        "Four Plague Marine specialist models split into fixed Plague Knife plus separate special-weapon choice.",
+        "Blightlord atomic packages retained but reordered to meaningful-choice-first."
+      ],
+      "special_consideration": "Blightlords remained atomic because splitting the shared Bubotic Weapon from the ranged choice would make the Flail replacement branch fragile."
+    },
+    {
+      "faction": "Aeldari Craftworlds",
+      "result_revision": 17,
+      "game_system_revision": 12,
+      "result_file": "Aeldari_Craftworlds_3_3_3_REV17_POLISH_PASS.json",
+      "notable_changes": [
+        "Explicit single-model headers.",
+        "Guardian Defenders -> Guardian Defenders 1-10.",
+        "Wraithlord Heavy Weapon 1/2 labels removed.",
+        "Wraithknight arm/shoulder slot labels removed.",
+        "Atomic '+' -> '&'.",
+        "Howling Banshee meaningful-choice-first packages.",
+        "Black Guardians' Webway / Pathfinders sections -> Unit Upgrade.",
+        "Rare and host errors standardized."
+      ]
+    },
+    {
+      "faction": "Adeptus Custodes",
+      "result_revision": 6,
+      "game_system_revision": 12,
+      "result_file": "Adeptus_Custodes_3_3_3_REV6_POLISH_PASS.json",
+      "notable_changes": [
+        "Explicit model headers on all 12 native one-model datasheets.",
+        "Allarus Shield-Captain atomic packages reordered to meaningful-choice-first and '+' -> '&'."
+      ],
+      "preserved": [
+        "Left Hand of the Emperor placeholder.",
+        "Paid Wargear headings.",
+        "Shared Shield-Captain limit/error logic."
+      ]
+    },
+    {
+      "faction": "Adepta Sororitas",
+      "result_revision": 11,
+      "game_system_revision": 12,
+      "result_file": "Adepta_Sororitas_3_3_3_REV11_POLISH_PASS.json",
+      "notable_changes": [
+        "Explicit model headers plus Arco-Flagellants 1-10.",
+        "Battle Sisters/Dominions/Retributors specialist wrappers flattened.",
+        "Additional Leader -> Attached Imagifier.",
+        "External-Leader errors cleaned.",
+        "Nine combi packages reordered and '+' -> '&'.",
+        "Paragons Additional Models -> Additional Model.",
+        "Dominion grenade slots named.",
+        "Rare errors standardized."
+      ],
+      "preserved": [
+        "Sisters Novitiates and Seraphim intentionally untouched.",
+        "Retributor '(None)' behavior and heavy-weapon semantic validation.",
+        "Imagifier nested Countless Leader architecture."
+      ]
+    },
+    {
+      "faction": "Astra Militarum",
+      "result_revision": 19,
+      "game_system_revision": 13,
+      "result_file": "Astra_Militarum_3_3_3_REV19_POLISH_PASS.json",
+      "notable_changes": [
+        "25 direct Loadout headings -> Loadout Options.",
+        "Explicit/fixed model headers on characters, vehicles, artillery, and Command Squad shared models.",
+        "Kasrkin Special Weapons Loadout flattened.",
+        "Cadian Special Weapons Team / Heavy Weapons Team deliberately retained.",
+        "Basilisk/Wyvern/Manticore Hull Weapon group labels suppressed.",
+        "14 atomic packages standardized; Bodyguard packages meaningful-choice-first.",
+        "Stormbolter -> Storm Bolter on Chimera/Taurox.",
+        "Tank Commander/Commissar Rare errors standardized.",
+        "Three Regiment Troop host errors standardized."
+      ],
+      "preserved": [
+        "Regiment configuration and safe-hide behavior.",
+        "Platoon Commander prerequisites.",
+        "Command Squad Officer architecture.",
+        "Additional Copy Costs.",
+        "Kasrkin/Krieg ratio restrictions.",
+        "Sentinel variable-size arithmetic.",
+        "Vanquisher coaxial dependency.",
+        "Hellhound hull weapon names.",
+        "Death Korps Combat Engineer Heavy Flamer presentation."
+      ]
+    },
+    {
+      "faction": "Manufactorum Imperium Library",
+      "result_revision": 3,
+      "game_system_revision": 14,
+      "result_file": "Manufactorum_Imperium_3_3_3_LIBRARY_V3_POLISH_PASS.json",
+      "notable_changes": [
+        "Mirrored Astra Militarum vehicle presentation changes.",
+        "11 direct Loadout headings -> Loadout Options.",
+        "Matching explicit vehicle header IDs.",
+        "Basilisk/Wyvern/Manticore Hull Weapon label suppression.",
+        "Storm Bolter spelling.",
+        "Tank Commander Rare wording."
+      ],
+      "validation": "All 11 mirrored vehicle selectionEntryGroups trees were structurally identical to Astra Militarum after the pass."
+    }
+  ],
+  "best_practice_examples": {
+    "good": [
+      {
+        "pattern": "Explicit model identity",
+        "example": "Loadout Options -> Wraithknight -> [four mechanically separate anonymous choice lists]",
+        "why": "The player knows the lists all belong to the Wraithknight without being forced to care about left/right/shoulder slots."
+      },
+      {
+        "pattern": "Meaningful choice first",
+        "example": "Reaper Autocannon & Bubotic Weapon",
+        "why": "Skimming the list reveals the differentiating weapon immediately."
+      },
+      {
+        "pattern": "Split fixed component",
+        "example": "Plague Knife on its own line + separate Plague Marine special-weapon choice",
+        "why": "The player sees the fixed state and the actual choice separately."
+      },
+      {
+        "pattern": "Relationship naming",
+        "example": "Attached Imagifier",
+        "why": "Describes the actual thing the player is doing."
+      },
+      {
+        "pattern": "Semantic section",
+        "example": "Unit Upgrade -> Pathfinders",
+        "why": "An abstract unit-state purchase should not masquerade as physical wargear."
+      }
+    ],
+    "bad": [
+      {
+        "pattern": "Implementation taxonomy",
+        "example": "Special Weapon Loadouts",
+        "problem": "The player is choosing a model's equipment, not navigating a compiler taxonomy."
+      },
+      {
+        "pattern": "Physical slot narration",
+        "example": "Left Arm / Right Arm / Weapon 1 / Weapon 2",
+        "problem": "Adds visual noise when slot identity has no rules consequence."
+      },
+      {
+        "pattern": "Opaque anonymous lists",
+        "example": "Loadout Options -> [blank group] -> weapon",
+        "problem": "Breaks down quickly in units with more than one model or list."
+      },
+      {
+        "pattern": "Raw system error",
+        "example": "Requires 1 selection from category X",
+        "problem": "Does not explain the rules problem or how the player should fix it."
+      },
+      {
+        "pattern": "Atomic '+'",
+        "example": "Bolter + Combi-Melta",
+        "problem": "Looks like arithmetic or two separately recorded weapons rather than one atomic package."
+      }
+    ]
+  },
+  "special_considerations_and_edge_cases": [
+    {
+      "case": "Dynamic defaults",
+      "guidance": "Do not rely on a group becoming visible and then automatically instantiating a default child. New Recruit may not do so reliably."
+    },
+    {
+      "case": "Selected-then-hidden",
+      "guidance": "Never design an option to be selected and subsequently hidden. Use safe availability logic or constructive errors instead."
+    },
+    {
+      "case": "Nested additional leaders",
+      "guidance": "Nested Countless leaders such as Imagifier or Plasmacyte can solve source semantics cleanly. Do not replace them with ordinary associations merely for visual uniformity."
+    },
+    {
+      "case": "Mirrored libraries",
+      "guidance": "Treat source and library as a paired artifact. Presentation wrappers and IDs should stay synchronized while library-specific category presentation remains distinct."
+    },
+    {
+      "case": "Rare units",
+      "guidance": "Rare validation should be constructive and should use the project-standard sentence unless the unit has a truly bespoke rule."
+    },
+    {
+      "case": "One-off source quirks",
+      "guidance": "Individual consideration beats blind standardisation. Keep an odd label or branch when it directly communicates a real source distinction."
+    }
+  ],
+  "future_authoring_template": {
+    "recommended_unit_shape": {
+      "name": "[UNIT]",
+      "selectionEntryGroups": [
+        {
+          "name": "Loadout Options",
+          "selectionEntryGroups": [
+            {
+              "name": "[MODEL OR MODEL-GROUP]",
+              "selectionEntryGroups": [
+                {
+                  "name": "[OPTIONAL SEMANTIC SUBHEADING OR ZERO-WIDTH]",
+                  "selectionEntries": [
+                    "[FINAL-STATE EQUIPMENT CHOICES]"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Additional Model",
+          "when": "Only when a variable-size unit has one additional selectable model."
+        },
+        {
+          "name": "Attached [MODEL]",
+          "when": "For nested attached models/leaders where the relationship itself is player-facing."
+        },
+        {
+          "name": "Paid Wargear / Unit Upgrade / other semantic heading",
+          "when": "For optional purchased equipment or state upgrades."
+        }
+      ]
+    },
+    "author_question_prompts": [
+      "Can the player tell which model this choice belongs to at a glance?",
+      "Is this label describing a real choice, or only how the JSON happens to be implemented?",
+      "If several options share the same component, can the meaningful difference be placed first?",
+      "Is a fixed component being repeated unnecessarily?",
+      "Would flattening this wrapper make the unit easier to scan without changing mechanics?",
+      "Is this truly Paid Wargear, or an abstract Unit Upgrade?",
+      "Does this error tell the player what happened and what to do?",
+      "Am I trying to solve a presentation problem by changing mechanics?",
+      "Is this an intentional exception that should be documented instead of homogenised?"
+    ]
+  }
+}

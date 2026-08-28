@@ -5,7 +5,7 @@
     "name": "Adeptus Custodes 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 12,
-    "revision": 5,
+    "revision": 7,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -1860,7 +1860,7 @@
             ]
           }
         ],
-        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of every native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance.\nCONFIGURATION VALIDATION: Game System revision 11 handles a missing Additional Copy Costs entry through Army > Configuration. This entry carries the hidden required-configuration category and self-reports duplicates. Existing copy-cost arithmetic is unchanged."
+        "comment": "SOFT OTHER COPY COSTS. Permanent required accounting entry. Aggregates +20 Points per copy of every native non-Rare Other unit beyond the selected Game Size's 1/2/3 normal allowance.\nCONFIGURATION VALIDATION: shared Game System validation handles a missing Additional Copy Costs entry through Army > Configuration. This entry carries the hidden required-configuration category and self-reports duplicates. Existing copy-cost arithmetic is unchanged."
       },
       {
         "type": "unit",
@@ -1924,7 +1924,7 @@
             "noindex": false
           }
         ],
-        "comment": "PHASE 0.1 COUNTER CLEANUP: Rare remains a visible descriptive category, but the redundant individual Rare max-1 constraint is omitted. The explicit shared SHIELD-CAPTAIN max-1 restriction is stronger, avoiding duplicate (1/1) counters.",
+        "comment": "SHIELD-CAPTAIN LIMIT: Rare remains a visible descriptive category, but the redundant individual Rare max-1 constraint is omitted. The explicit shared SHIELD-CAPTAIN max-1 restriction is stronger, avoiding duplicate (1/1) counters.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -1933,90 +1933,98 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "9696-d2bf-6534-7a65",
+                "name": "Shield-Captain",
+                "id": "0a1b-fa1f-c34b-dcaf",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "665a-1084-e9cc-6b6e"
+                    "name": "​",
+                    "id": "9696-d2bf-6534-7a65",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "665a-1084-e9cc-6b6e"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0f9c-b038-c911-53e3"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Guardian Weapon",
+                        "hidden": false,
+                        "id": "af14-e557-6a54-b9fe",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Castellan Axe",
+                        "hidden": false,
+                        "id": "4137-3d14-73bf-3e06",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pyrithite Spear",
+                        "hidden": false,
+                        "id": "157a-d2ce-bc6b-b299",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "af14-e557-6a54-b9fe"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "0f9c-b038-c911-53e3"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Guardian Weapon",
+                    "name": "​",
+                    "id": "024c-68e1-34f6-5eab",
                     "hidden": false,
-                    "id": "af14-e557-6a54-b9fe",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Castellan Axe",
-                    "hidden": false,
-                    "id": "4137-3d14-73bf-3e06",
-                    "sortIndex": 2
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Pyrithite Spear",
-                    "hidden": false,
-                    "id": "157a-d2ce-bc6b-b299",
-                    "sortIndex": 3
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4719-0f1e-1896-e4e9"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9610-8263-223f-e34c"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Praesidium Shield",
+                        "hidden": false,
+                        "id": "eda6-891c-b7fb-bd2e",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "eda6-891c-b7fb-bd2e"
                   }
-                ],
-                "defaultSelectionEntryId": "af14-e557-6a54-b9fe"
-              },
-              {
-                "name": "​",
-                "id": "024c-68e1-34f6-5eab",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "4719-0f1e-1896-e4e9"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "9610-8263-223f-e34c"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Praesidium Shield",
-                    "hidden": false,
-                    "id": "eda6-891c-b7fb-bd2e",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "eda6-891c-b7fb-bd2e"
+                ]
               }
             ]
           },
@@ -2188,7 +2196,7 @@
             "noindex": false
           }
         ],
-        "comment": "PHASE 0.1 COUNTER CLEANUP: Rare remains a visible descriptive category, but the redundant individual Rare max-1 constraint is omitted. The explicit shared SHIELD-CAPTAIN max-1 restriction is stronger, avoiding duplicate (1/1) counters.\nLOADOUT UI: the +10 Pyrithite Spear replacement is represented as a complete loadout, so choosing it removes the Ballistus Grenade Launcher from the represented equipment state.",
+        "comment": "SHIELD-CAPTAIN LIMIT: Rare remains a visible descriptive category, but the redundant individual Rare max-1 constraint is omitted. The explicit shared SHIELD-CAPTAIN max-1 restriction is stronger, avoiding duplicate (1/1) counters.\nLOADOUT UI: the +10 Pyrithite Spear replacement is represented as a complete loadout, so choosing it removes the Ballistus Grenade Launcher from the represented equipment state. Complete package names place the distinguishing weapon first for easier scanning.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -2197,63 +2205,71 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "6789-7887-c15e-4de1",
+                "name": "Allarus Armour Shield-Captain",
+                "id": "4a6a-a570-566c-3bf1",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "8284-9525-9cfe-7a05"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "75c0-9e4c-1cfd-4701"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Ballistus Grenade Launcher + Castellan Axe",
+                    "name": "​",
+                    "id": "6789-7887-c15e-4de1",
                     "hidden": false,
-                    "id": "f349-a353-0890-b99e",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Ballistus Grenade Launcher + Guardian Spear",
-                    "hidden": false,
-                    "id": "258b-7663-c882-c3ce",
-                    "sortIndex": 2
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Pyrithite Spear",
-                    "hidden": false,
-                    "id": "ff79-1b3e-7ad7-a206",
-                    "sortIndex": 3,
-                    "costs": [
+                    "sortIndex": 1,
+                    "constraints": [
                       {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8284-9525-9cfe-7a05"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "75c0-9e4c-1cfd-4701"
                       }
                     ],
-                    "comment": "Complete replacement loadout. Selecting this represents replacing the Ballistus Grenade Launcher and the model's other weapons with Pyrithite Spear Melta + Pyrithite Spear."
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Castellan Axe & Ballistus Grenade Launcher",
+                        "hidden": false,
+                        "id": "f349-a353-0890-b99e",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Guardian Spear & Ballistus Grenade Launcher",
+                        "hidden": false,
+                        "id": "258b-7663-c882-c3ce",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pyrithite Spear",
+                        "hidden": false,
+                        "id": "ff79-1b3e-7ad7-a206",
+                        "sortIndex": 3,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ],
+                        "comment": "Complete replacement loadout. Selecting this represents replacing the Ballistus Grenade Launcher and the model's other weapons with Pyrithite Spear Melta + Pyrithite Spear."
+                      }
+                    ],
+                    "defaultSelectionEntryId": "f349-a353-0890-b99e"
                   }
-                ],
-                "defaultSelectionEntryId": "f349-a353-0890-b99e"
+                ]
               }
             ]
           },
@@ -2425,7 +2441,7 @@
             "noindex": false
           }
         ],
-        "comment": "PHASE 0.1 COUNTER CLEANUP: Rare remains a visible descriptive category, but the redundant individual Rare max-1 constraint is omitted. The explicit shared SHIELD-CAPTAIN max-1 restriction is stronger, avoiding duplicate (1/1) counters.",
+        "comment": "SHIELD-CAPTAIN LIMIT: Rare remains a visible descriptive category, but the redundant individual Rare max-1 constraint is omitted. The explicit shared SHIELD-CAPTAIN max-1 restriction is stronger, avoiding duplicate (1/1) counters.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -2434,89 +2450,97 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "0f33-c7eb-0948-7c37",
+                "name": "Dawneagle Jetbike Shield-Captain",
+                "id": "0ea3-039d-5747-e459",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "5e2b-36d8-dbe8-356e"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "5a81-178a-1a15-02c5"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Interceptor Lance",
+                    "name": "​",
+                    "id": "0f33-c7eb-0948-7c37",
                     "hidden": false,
-                    "id": "79e8-19c5-3727-6f5a",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "79e8-19c5-3727-6f5a"
-              },
-              {
-                "name": "​",
-                "id": "7948-4f63-2a28-4694",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "ef7d-54ab-d1fc-eeb7"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "1578-5786-64e8-3123"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hurricane Bolter",
-                    "hidden": false,
-                    "id": "2465-6785-b421-f4a6",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Salvo Launcher",
-                    "hidden": false,
-                    "id": "79e2-fadc-6517-b786",
-                    "sortIndex": 2,
-                    "costs": [
+                    "sortIndex": 1,
+                    "constraints": [
                       {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5e2b-36d8-dbe8-356e"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5a81-178a-1a15-02c5"
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Interceptor Lance",
+                        "hidden": false,
+                        "id": "79e8-19c5-3727-6f5a",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "79e8-19c5-3727-6f5a"
+                  },
+                  {
+                    "name": "​",
+                    "id": "7948-4f63-2a28-4694",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ef7d-54ab-d1fc-eeb7"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1578-5786-64e8-3123"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hurricane Bolter",
+                        "hidden": false,
+                        "id": "2465-6785-b421-f4a6",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Salvo Launcher",
+                        "hidden": false,
+                        "id": "79e2-fadc-6517-b786",
+                        "sortIndex": 2,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "2465-6785-b421-f4a6"
                   }
-                ],
-                "defaultSelectionEntryId": "2465-6785-b421-f4a6"
+                ]
               }
             ]
           },
@@ -2662,80 +2686,88 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "c7ed-9e30-aa97-0e13",
+                "name": "Custodian Guard",
+                "id": "e9c3-67e4-c62e-c3ee",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "db71-a20c-fd6e-a45f"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "23bf-468a-7d2b-eda1"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Guardian Weapon",
+                    "name": "​",
+                    "id": "c7ed-9e30-aa97-0e13",
                     "hidden": false,
-                    "id": "ddc2-0546-41f7-00fb",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Castellan Axe",
-                    "hidden": false,
-                    "id": "97b0-6783-2b49-1f60",
-                    "sortIndex": 2
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Pyrithite Spear",
-                    "hidden": false,
-                    "id": "b767-fd9b-d7ac-a8fd",
-                    "sortIndex": 3
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Vexilla",
-                    "hidden": false,
-                    "id": "c773-55cd-22b9-73e1",
-                    "sortIndex": 4,
-                    "costs": [
+                    "sortIndex": 1,
+                    "constraints": [
                       {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "db71-a20c-fd6e-a45f"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "23bf-468a-7d2b-eda1"
                       }
                     ],
-                    "rules": [
+                    "selectionEntries": [
                       {
-                        "name": "Teleport Beacon",
-                        "id": "3085-014c-f6e4-ba2b",
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Guardian Weapon",
                         "hidden": false,
-                        "description": "While this unit is in the battlefield, each time you use the Teleport Homer ability for any of your other units, you may instead use ‘teleport beacon’. If you do, Deploy that unit wholly within 2D6+2” of and visible to this unit. Then, during this turn's Move step, do not make a Move Roll and this unit cannot Advance or Reposition.",
-                        "noindex": false
+                        "id": "ddc2-0546-41f7-00fb",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Castellan Axe",
+                        "hidden": false,
+                        "id": "97b0-6783-2b49-1f60",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pyrithite Spear",
+                        "hidden": false,
+                        "id": "b767-fd9b-d7ac-a8fd",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Vexilla",
+                        "hidden": false,
+                        "id": "c773-55cd-22b9-73e1",
+                        "sortIndex": 4,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ],
+                        "rules": [
+                          {
+                            "name": "Teleport Beacon",
+                            "id": "3085-014c-f6e4-ba2b",
+                            "hidden": false,
+                            "description": "While this unit is in the battlefield, each time you use the Teleport Homer ability for any of your other units, you may instead use ‘teleport beacon’. If you do, Deploy that unit wholly within 2D6+2” of and visible to this unit. Then, during this turn's Move step, do not make a Move Roll and this unit cannot Advance or Reposition.",
+                            "noindex": false
+                          }
+                        ],
+                        "comment": "Complete replacement loadout. This represents replacing Guardian Weapon Bolter + Guardian Weapon with Vexilla and gaining Teleport Beacon."
                       }
                     ],
-                    "comment": "Complete replacement loadout. This represents replacing Guardian Weapon Bolter + Guardian Weapon with Vexilla and gaining Teleport Beacon."
+                    "defaultSelectionEntryId": "ddc2-0546-41f7-00fb"
                   }
-                ],
-                "defaultSelectionEntryId": "ddc2-0546-41f7-00fb"
+                ]
               }
             ]
           },
@@ -2857,90 +2889,98 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "7f4c-2b8a-2c52-df7c",
+                "name": "Allarus Custodian",
+                "id": "9d91-7c1f-73fa-ae74",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "8feb-7c1a-0cb4-228d"
+                    "name": "​",
+                    "id": "7f4c-2b8a-2c52-df7c",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8feb-7c1a-0cb4-228d"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f96b-3ffa-e1f8-5a06"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Ballistus Grenade Launcher",
+                        "hidden": false,
+                        "id": "96a2-a707-efaa-954d",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "96a2-a707-efaa-954d"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "f96b-3ffa-e1f8-5a06"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Ballistus Grenade Launcher",
+                    "name": "​",
+                    "id": "8071-db17-4918-c89c",
                     "hidden": false,
-                    "id": "96a2-a707-efaa-954d",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4a6a-cae5-bed8-595b"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3c80-8818-3ada-886a"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Castellan Axe",
+                        "hidden": false,
+                        "id": "b075-90dd-424f-91c3",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Guardian Spear",
+                        "hidden": false,
+                        "id": "f9df-ee16-e9a7-5842",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pyrithite Spear",
+                        "hidden": false,
+                        "id": "6b7f-634d-ce5f-e2c9",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b075-90dd-424f-91c3"
                   }
-                ],
-                "defaultSelectionEntryId": "96a2-a707-efaa-954d"
-              },
-              {
-                "name": "​",
-                "id": "8071-db17-4918-c89c",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "4a6a-cae5-bed8-595b"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "3c80-8818-3ada-886a"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Castellan Axe",
-                    "hidden": false,
-                    "id": "b075-90dd-424f-91c3",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Guardian Spear",
-                    "hidden": false,
-                    "id": "f9df-ee16-e9a7-5842",
-                    "sortIndex": 2
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Pyrithite Spear",
-                    "hidden": false,
-                    "id": "6b7f-634d-ce5f-e2c9",
-                    "sortIndex": 3
-                  }
-                ],
-                "defaultSelectionEntryId": "b075-90dd-424f-91c3"
+                ]
               }
             ]
           },
@@ -3038,74 +3078,82 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "3c36-3bae-1634-99d7",
+                "name": "Vexilla Allarus Custodian",
+                "id": "7dbe-4b34-664a-8cb6",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "00d7-6332-adf2-cd3b"
+                    "name": "​",
+                    "id": "3c36-3bae-1634-99d7",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "00d7-6332-adf2-cd3b"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9bad-481b-98c4-0f8c"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Ballistus Grenade Launcher",
+                        "hidden": false,
+                        "id": "ac66-944a-5a6f-3c75",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "ac66-944a-5a6f-3c75"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "9bad-481b-98c4-0f8c"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Ballistus Grenade Launcher",
+                    "name": "​",
+                    "id": "ef54-7524-1fd8-603e",
                     "hidden": false,
-                    "id": "ac66-944a-5a6f-3c75",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9b89-ca73-9635-25f0"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0ea6-7fc5-ced6-a021"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Vexilla Magnifica",
+                        "hidden": false,
+                        "id": "b647-acf9-50ef-db77",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b647-acf9-50ef-db77"
                   }
-                ],
-                "defaultSelectionEntryId": "ac66-944a-5a6f-3c75"
-              },
-              {
-                "name": "​",
-                "id": "ef54-7524-1fd8-603e",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "9b89-ca73-9635-25f0"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "0ea6-7fc5-ced6-a021"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Vexilla Magnifica",
-                    "hidden": false,
-                    "id": "b647-acf9-50ef-db77",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "b647-acf9-50ef-db77"
+                ]
               }
             ]
           },
@@ -3203,55 +3251,63 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "98b9-b0b8-8545-4425",
+                "name": "Custodian Warden",
+                "id": "8258-5668-c5a2-fb50",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "703b-02c7-ff55-3965"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "4412-a4b2-a075-0dd5"
+                    "name": "​",
+                    "id": "98b9-b0b8-8545-4425",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "703b-02c7-ff55-3965"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4412-a4b2-a075-0dd5"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Guardian Weapon",
+                        "hidden": false,
+                        "id": "d30b-ef45-b802-a7e2",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Castellan Axe",
+                        "hidden": false,
+                        "id": "905e-34ee-a0f5-ba73",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pyrithite Spear",
+                        "hidden": false,
+                        "id": "b86f-0e35-ef31-2e71",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d30b-ef45-b802-a7e2"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Guardian Weapon",
-                    "hidden": false,
-                    "id": "d30b-ef45-b802-a7e2",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Castellan Axe",
-                    "hidden": false,
-                    "id": "905e-34ee-a0f5-ba73",
-                    "sortIndex": 2
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Pyrithite Spear",
-                    "hidden": false,
-                    "id": "b86f-0e35-ef31-2e71",
-                    "sortIndex": 3
-                  }
-                ],
-                "defaultSelectionEntryId": "d30b-ef45-b802-a7e2"
+                ]
               }
             ]
           },
@@ -3349,82 +3405,90 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "0ca2-b187-5131-287c",
+                "name": "Vertus Praetor",
+                "id": "1d29-2204-060e-cd0e",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "f6de-2bf0-0f2b-f93f"
+                    "name": "​",
+                    "id": "0ca2-b187-5131-287c",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f6de-2bf0-0f2b-f93f"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4024-6554-6782-fba4"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Interceptor Lance",
+                        "hidden": false,
+                        "id": "68e2-2d3b-7423-1bfb",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "68e2-2d3b-7423-1bfb"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "4024-6554-6782-fba4"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Interceptor Lance",
+                    "name": "​",
+                    "id": "7f92-0c92-bd66-168e",
                     "hidden": false,
-                    "id": "68e2-2d3b-7423-1bfb",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "39e1-9f72-c5eb-376c"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0f1b-3b1d-69e3-3dd2"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hurricane Bolter",
+                        "hidden": false,
+                        "id": "c7e2-a922-e9ea-1f53",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Salvo Launcher",
+                        "hidden": false,
+                        "id": "0d0f-cb09-3365-0dc2",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "c7e2-a922-e9ea-1f53"
                   }
-                ],
-                "defaultSelectionEntryId": "68e2-2d3b-7423-1bfb"
-              },
-              {
-                "name": "​",
-                "id": "7f92-0c92-bd66-168e",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "39e1-9f72-c5eb-376c"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "0f1b-3b1d-69e3-3dd2"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hurricane Bolter",
-                    "hidden": false,
-                    "id": "c7e2-a922-e9ea-1f53",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Salvo Launcher",
-                    "hidden": false,
-                    "id": "0d0f-cb09-3365-0dc2",
-                    "sortIndex": 2
-                  }
-                ],
-                "defaultSelectionEntryId": "c7e2-a922-e9ea-1f53"
+                ]
               }
             ]
           },
@@ -3522,74 +3586,82 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "e1e5-9135-a544-69aa",
+                "name": "Decaptis Blade Champion",
+                "id": "0062-a54e-8f07-a73e",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "bd33-c6e2-cb94-d65c"
+                    "name": "​",
+                    "id": "e1e5-9135-a544-69aa",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "bd33-c6e2-cb94-d65c"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a1d0-fb3e-80c1-641c"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Vaultsword Scythe",
+                        "hidden": false,
+                        "id": "6726-37a8-26af-52cf",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "6726-37a8-26af-52cf"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "a1d0-fb3e-80c1-641c"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Vaultsword Scythe",
+                    "name": "​",
+                    "id": "8a95-18dd-410b-0e87",
                     "hidden": false,
-                    "id": "6726-37a8-26af-52cf",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c896-750e-904d-a32f"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0c45-d29b-0ba0-db58"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Vaultsword Cleave",
+                        "hidden": false,
+                        "id": "2f13-88eb-b45a-4c24",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "2f13-88eb-b45a-4c24"
                   }
-                ],
-                "defaultSelectionEntryId": "6726-37a8-26af-52cf"
-              },
-              {
-                "name": "​",
-                "id": "8a95-18dd-410b-0e87",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "c896-750e-904d-a32f"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "0c45-d29b-0ba0-db58"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Vaultsword Cleave",
-                    "hidden": false,
-                    "id": "2f13-88eb-b45a-4c24",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "2f13-88eb-b45a-4c24"
+                ]
               }
             ]
           },
@@ -3687,74 +3759,82 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "ea13-db49-05c7-fe79",
+                "name": "Hurricanus Blade Champion",
+                "id": "983c-f86f-1df5-e8ef",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "2535-aed5-fd52-236e"
+                    "name": "​",
+                    "id": "ea13-db49-05c7-fe79",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2535-aed5-fd52-236e"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "61e7-4dde-bfa1-662f"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Vaultsword Scythe",
+                        "hidden": false,
+                        "id": "30ae-c633-8321-f7df",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "30ae-c633-8321-f7df"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "61e7-4dde-bfa1-662f"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Vaultsword Scythe",
+                    "name": "​",
+                    "id": "5ca1-facb-a5dd-0895",
                     "hidden": false,
-                    "id": "30ae-c633-8321-f7df",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "740f-5c41-e7a4-cb4d"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6fbc-7051-c9a3-e1b5"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Vaultsword Cleave",
+                        "hidden": false,
+                        "id": "e8d2-d61a-60c4-45df",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "e8d2-d61a-60c4-45df"
                   }
-                ],
-                "defaultSelectionEntryId": "30ae-c633-8321-f7df"
-              },
-              {
-                "name": "​",
-                "id": "5ca1-facb-a5dd-0895",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "740f-5c41-e7a4-cb4d"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "6fbc-7051-c9a3-e1b5"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Vaultsword Cleave",
-                    "hidden": false,
-                    "id": "e8d2-d61a-60c4-45df",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "e8d2-d61a-60c4-45df"
+                ]
               }
             ]
           },
@@ -3852,74 +3932,82 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "7f21-8432-7296-afe1",
+                "name": "Sagittarum Guard",
+                "id": "fae1-de5b-eafb-147f",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "389a-a689-261e-dc36"
+                    "name": "​",
+                    "id": "7f21-8432-7296-afe1",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "389a-a689-261e-dc36"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0903-3c2b-592a-93d1"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Adrastus Bolt Caliver",
+                        "hidden": false,
+                        "id": "71d2-2f9b-1e98-fde5",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "71d2-2f9b-1e98-fde5"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "0903-3c2b-592a-93d1"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Adrastus Bolt Caliver",
+                    "name": "​",
+                    "id": "dfc6-f1f4-defa-93b8",
                     "hidden": false,
-                    "id": "71d2-2f9b-1e98-fde5",
-                    "sortIndex": 1
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8144-0b70-4648-18e4"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a8dd-1384-b43a-1f00"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Adrathic Destructor",
+                        "hidden": false,
+                        "id": "87d9-333f-802d-b7a7",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "87d9-333f-802d-b7a7"
                   }
-                ],
-                "defaultSelectionEntryId": "71d2-2f9b-1e98-fde5"
-              },
-              {
-                "name": "​",
-                "id": "dfc6-f1f4-defa-93b8",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "8144-0b70-4648-18e4"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "a8dd-1384-b43a-1f00"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Adrathic Destructor",
-                    "hidden": false,
-                    "id": "87d9-333f-802d-b7a7",
-                    "sortIndex": 1
-                  }
-                ],
-                "defaultSelectionEntryId": "87d9-333f-802d-b7a7"
+                ]
               }
             ]
           },
@@ -4017,90 +4105,98 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "​",
-                "id": "ec0f-c95f-115f-1ecb",
+                "name": "Venerable Land Raider",
+                "id": "7604-ab74-cf22-f4dd",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "d11d-b744-9075-eaaa"
+                    "name": "​",
+                    "id": "ec0f-c95f-115f-1ecb",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d11d-b744-9075-eaaa"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1a71-478b-ecbc-bf75"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Sponson Lascannons",
+                        "hidden": false,
+                        "id": "0681-1757-8b72-ed0e",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Sponson Hurricane Bolters",
+                        "hidden": false,
+                        "id": "f6c2-fe1d-429a-bf70",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "0681-1757-8b72-ed0e"
                   },
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "1a71-478b-ecbc-bf75"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Sponson Lascannons",
+                    "name": "​",
+                    "id": "a317-5172-deeb-9d69",
                     "hidden": false,
-                    "id": "0681-1757-8b72-ed0e",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Sponson Hurricane Bolters",
-                    "hidden": false,
-                    "id": "f6c2-fe1d-429a-bf70",
-                    "sortIndex": 2
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "da02-0cf6-73c3-17f5"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "758b-628f-81dd-ddfd"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Bolters",
+                        "hidden": false,
+                        "id": "b9ac-94e4-21d6-a2d4",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Assault Cannons",
+                        "hidden": false,
+                        "id": "2a36-b531-44d5-f816",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b9ac-94e4-21d6-a2d4"
                   }
-                ],
-                "defaultSelectionEntryId": "0681-1757-8b72-ed0e"
-              },
-              {
-                "name": "​",
-                "id": "a317-5172-deeb-9d69",
-                "hidden": false,
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "da02-0cf6-73c3-17f5"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "758b-628f-81dd-ddfd"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Heavy Bolters",
-                    "hidden": false,
-                    "id": "b9ac-94e4-21d6-a2d4",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Assault Cannons",
-                    "hidden": false,
-                    "id": "2a36-b531-44d5-f816",
-                    "sortIndex": 2
-                  }
-                ],
-                "defaultSelectionEntryId": "b9ac-94e4-21d6-a2d4"
+                ]
               }
             ]
           },
@@ -4243,6 +4339,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "PHASE 0.1 ADEPTUS CUSTODES. All 12 native datasheets are fixed one-model selections. The three Shield-Captains are counted Rare Leaders, cannot attach, and share one explicit army-wide SHIELD-CAPTAIN max-1 restriction. Redundant individual Rare max constraints are omitted so New Recruit shows the mutual-exclusion counter plus Leader-cap counter only. Left Hand of the Emperor is an optional unchecked Configuration placeholder for a future Sisters of Silence reusable library.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nAll 12 native Adeptus Custodes datasheets now expose their simple loadouts and paid wargear. Arae-Shrike and other ability-only paid options include their player-facing rules. Left Hand of the Emperor remains a Sisters of Silence placeholder. All native non-Rare Other units use the soft 1/2/3 Additional Copy Cost system.\n\nCONSTRUCTIVE ERROR MIGRATION\nAdeptus Custodes now use Game System revision 11. Additional Copy Costs uses the current Configuration safeguard, and the shared SHIELD-CAPTAIN army limit uses constructive player-facing validation. The three Shield-Captains remain Rare, count toward Leader Capacity, cannot attach, and deliberately do not receive redundant individual Rare limits. Left Hand of the Emperor remains an untouched Phase 0.1 Sisters of Silence placeholder. Existing loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, shared SHIELD-CAPTAIN limit logic, Left Hand of the Emperor placeholder, categories, or Additional Copy Costs arithmetic were otherwise changed."
+    "comment": "ADEPTUS CUSTODES CURRENT-STATE BASELINE. All 12 native datasheets are fixed one-model selections. The three Shield-Captains are counted Rare Leaders, cannot attach, and share one explicit army-wide SHIELD-CAPTAIN max-1 restriction. Redundant individual Rare max constraints are omitted so New Recruit shows the mutual-exclusion counter plus Leader Capacity counter only. Left Hand of the Emperor is an optional unchecked Configuration placeholder for a future Sisters of Silence reusable library.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nAll 12 native Adeptus Custodes datasheets now expose their simple loadouts and paid wargear. Arae-Shrike and other ability-only paid options include their player-facing rules. Left Hand of the Emperor remains a Sisters of Silence placeholder. All native non-Rare Other units use the soft 1/2/3 Additional Copy Cost system.\n\nCONSTRUCTIVE ERROR MIGRATION\nAdeptus Custodes now use Game System revision 11. Additional Copy Costs uses the current Configuration safeguard, and the shared SHIELD-CAPTAIN army limit uses constructive player-facing validation. The three Shield-Captains remain Rare, count toward Leader Capacity, cannot attach, and deliberately do not receive redundant individual Rare limits. Left Hand of the Emperor remains an untouched Phase 0.1 Sisters of Silence placeholder. Existing loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, shared SHIELD-CAPTAIN limit logic, Left Hand of the Emperor placeholder, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV6 POLISH PASS\nAdded explicit model headers beneath Loadout Options for all 12 native one-model Adeptus Custodes datasheets. For Allarus Armour Shield-Captain, retained the complete atomic loadout packages but reordered the two Ballistus Grenade Launcher packages so the distinguishing weapon appears first and standardized '+' to '&'. Left Hand of the Emperor, Paid Wargear sections, shared SHIELD-CAPTAIN limit logic, Additional Copy Costs, points, categories, and all other mechanics remain unchanged.\n\nREV7 RETROSPECTIVE POLISH PASS\nRevisited Adeptus Custodes against the final cross-faction presentation standard. Modernized the three live Shield-Captain limit comments, updated the live Additional Copy Costs comment to version-agnostic shared Game System wording, and replaced the generic Phase 0.1 catalogue baseline with a current-state baseline using Leader Capacity terminology. Historical migration notes and the genuinely deferred Left Hand of the Emperor Sisters of Silence integration placeholder are preserved unchanged. All IDs, SelectionEntry names, loadouts, Paid Wargear, shared SHIELD-CAPTAIN validation, Additional Copy Costs arithmetic, points, categories, constraints, and all other rules semantics remain unchanged."
   }
 }
