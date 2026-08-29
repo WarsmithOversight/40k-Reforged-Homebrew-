@@ -4,8 +4,8 @@
     "id": "203b-0b03-c0cd-5fe9",
     "name": "Adeptus Mechanicus 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 17,
-    "revision": 8,
+    "gameSystemRevision": 18,
+    "revision": 9,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -72,7 +72,7 @@
             ]
           }
         ],
-        "comment": "ADDITIONAL COPY COSTS REV8 / GS17. Permanent required accounting entry. The single parent now exposes Troops and Other accounting children. Skitarii Rangers, Skitarii Vanguards, Kataphron Breachers, and Kataphron Destroyers use independent 4 / 6 / 8 Troop normal-copy allowances; Other preserves the existing 1 / 2 / 3 arithmetic exactly. No generated, free, attached-zero-point, or otherwise exempt Troop unit exists in this catalogue. The existing Manufactorum Imperium library link remains untouched; imported non-Rare Other vehicles continue to use the preserved Other ledger. The parent retains automatic insertion, Required Additional Copy Costs Configuration, and duplicate-entry validation.",
+        "comment": "ADDITIONAL COPY COSTS REV9 / GS18. Permanent required accounting entry. The single parent exposes Troops and Other accounting children. Skitarii Rangers, Skitarii Vanguards, Kataphron Breachers, and Kataphron Destroyers retain independent 4 / 6 / 8 Troop allowances. Other now covers the existing native and Astra Militarum families plus ten Manufactorum Space Marines vehicle families, all with the normal 1 / 2 / 3 allowance. No Baal Predator family exists in AdMech accounting.",
         "selectionEntryGroups": [
           {
             "name": "​",
@@ -6950,9 +6950,2199 @@
                         "childName": "Minotaur"
                       }
                     ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "9af9-b2c3-7886-34d5",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Rhino"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "9af9-b2c3-7886-34d5",
+                        "childName": "Rhino",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "9af9-b2c3-7886-34d5",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Rhino"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "9af9-b2c3-7886-34d5",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Rhino"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "9af9-b2c3-7886-34d5",
+                        "childName": "Rhino",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "9af9-b2c3-7886-34d5",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Rhino"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "9af9-b2c3-7886-34d5",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Rhino"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "9af9-b2c3-7886-34d5",
+                        "childName": "Rhino",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "9af9-b2c3-7886-34d5",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Rhino"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "521e-8d8a-d751-87cc",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Land Raider"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "521e-8d8a-d751-87cc",
+                        "childName": "Land Raider",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "521e-8d8a-d751-87cc",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Land Raider"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "521e-8d8a-d751-87cc",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Land Raider"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "521e-8d8a-d751-87cc",
+                        "childName": "Land Raider",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "521e-8d8a-d751-87cc",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Land Raider"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "521e-8d8a-d751-87cc",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Land Raider"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "521e-8d8a-d751-87cc",
+                        "childName": "Land Raider",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "521e-8d8a-d751-87cc",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Land Raider"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "b4ef-f966-bf3a-d89d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Predator"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "b4ef-f966-bf3a-d89d",
+                        "childName": "Predator",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "b4ef-f966-bf3a-d89d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Predator"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "b4ef-f966-bf3a-d89d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Predator"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "b4ef-f966-bf3a-d89d",
+                        "childName": "Predator",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "b4ef-f966-bf3a-d89d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Predator"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "b4ef-f966-bf3a-d89d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Predator"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "b4ef-f966-bf3a-d89d",
+                        "childName": "Predator",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "b4ef-f966-bf3a-d89d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Predator"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "130c-98f1-c213-390f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Astartes Basilisk"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "130c-98f1-c213-390f",
+                        "childName": "Astartes Basilisk",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "130c-98f1-c213-390f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Astartes Basilisk"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "130c-98f1-c213-390f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Astartes Basilisk"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "130c-98f1-c213-390f",
+                        "childName": "Astartes Basilisk",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "130c-98f1-c213-390f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Astartes Basilisk"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "130c-98f1-c213-390f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Astartes Basilisk"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "130c-98f1-c213-390f",
+                        "childName": "Astartes Basilisk",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "130c-98f1-c213-390f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Astartes Basilisk"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d7ce-7e9f-2111-ca81",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Whirlwind"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "d7ce-7e9f-2111-ca81",
+                        "childName": "Whirlwind",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d7ce-7e9f-2111-ca81",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Whirlwind"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d7ce-7e9f-2111-ca81",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Whirlwind"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "d7ce-7e9f-2111-ca81",
+                        "childName": "Whirlwind",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d7ce-7e9f-2111-ca81",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Whirlwind"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d7ce-7e9f-2111-ca81",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Whirlwind"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "d7ce-7e9f-2111-ca81",
+                        "childName": "Whirlwind",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d7ce-7e9f-2111-ca81",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Whirlwind"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "54a0-1b27-bfb4-1983",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Vindicator"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "54a0-1b27-bfb4-1983",
+                        "childName": "Vindicator",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "54a0-1b27-bfb4-1983",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Vindicator"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "54a0-1b27-bfb4-1983",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Vindicator"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "54a0-1b27-bfb4-1983",
+                        "childName": "Vindicator",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "54a0-1b27-bfb4-1983",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Vindicator"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "54a0-1b27-bfb4-1983",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Vindicator"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "54a0-1b27-bfb4-1983",
+                        "childName": "Vindicator",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "54a0-1b27-bfb4-1983",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Vindicator"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "f197-b0e5-be2c-0920",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Land Speeder"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "f197-b0e5-be2c-0920",
+                        "childName": "Land Speeder",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "f197-b0e5-be2c-0920",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Land Speeder"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "f197-b0e5-be2c-0920",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Land Speeder"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "f197-b0e5-be2c-0920",
+                        "childName": "Land Speeder",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "f197-b0e5-be2c-0920",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Land Speeder"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "f197-b0e5-be2c-0920",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Land Speeder"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "f197-b0e5-be2c-0920",
+                        "childName": "Land Speeder",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "f197-b0e5-be2c-0920",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Land Speeder"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "28f0-b023-34ab-64e8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Dreadnought"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "28f0-b023-34ab-64e8",
+                        "childName": "Dreadnought",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "28f0-b023-34ab-64e8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Dreadnought"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "28f0-b023-34ab-64e8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Dreadnought"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "28f0-b023-34ab-64e8",
+                        "childName": "Dreadnought",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "28f0-b023-34ab-64e8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Dreadnought"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "28f0-b023-34ab-64e8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Dreadnought"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "28f0-b023-34ab-64e8",
+                        "childName": "Dreadnought",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "28f0-b023-34ab-64e8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Dreadnought"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "5973-09fc-18a0-a59d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Contemptor Dreadnought"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "5973-09fc-18a0-a59d",
+                        "childName": "Contemptor Dreadnought",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "5973-09fc-18a0-a59d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Contemptor Dreadnought"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "5973-09fc-18a0-a59d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Contemptor Dreadnought"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "5973-09fc-18a0-a59d",
+                        "childName": "Contemptor Dreadnought",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "5973-09fc-18a0-a59d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Contemptor Dreadnought"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "5973-09fc-18a0-a59d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Contemptor Dreadnought"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "5973-09fc-18a0-a59d",
+                        "childName": "Contemptor Dreadnought",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "5973-09fc-18a0-a59d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Contemptor Dreadnought"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "a54f-0679-d762-65d1",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Leviathan Dreadnought"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "a54f-0679-d762-65d1",
+                        "childName": "Leviathan Dreadnought",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "a54f-0679-d762-65d1",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Leviathan Dreadnought"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "a54f-0679-d762-65d1",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Leviathan Dreadnought"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "a54f-0679-d762-65d1",
+                        "childName": "Leviathan Dreadnought",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "a54f-0679-d762-65d1",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Leviathan Dreadnought"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "a54f-0679-d762-65d1",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Leviathan Dreadnought"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "a54f-0679-d762-65d1",
+                        "childName": "Leviathan Dreadnought",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "a54f-0679-d762-65d1",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Leviathan Dreadnought"
+                      }
+                    ]
                   }
                 ],
-                "comment": "OTHER COPY-COST LEDGER. Contains all 162 pre-existing Other point modifiers unchanged, preserving the established 1 / 2 / 3 allowance across the same 27 native/imported Other copy families, including Manufactorum units."
+                "comment": "OTHER COPY-COST LEDGER. Contains all 162 pre-existing Other point modifiers unchanged, preserving the established 1 / 2 / 3 allowance across the same 27 native/imported Other copy families, including Manufactorum units.\nMANUFACTORUM IMPERIUM / SPACE MARINES VEHICLES REV9: added the ten chapter-independent Space Marines vehicle families to the normal Other 1 / 2 / 3 copy-cost ledger. Baal Predator is not present because it is not available through Manufactorum."
               }
             ],
             "defaultSelectionEntryId": "60f4-af26-4248-b856"
@@ -7101,7 +9291,7 @@
             ]
           }
         ],
-        "comment": "MANUFACTORUM IMPERIUM CONTROL V1: two independent source switches. Both default to Not Included. Astra Militarum Vehicles is functional in this build. Space Marines Vehicles is an intentional placeholder for the later Space Marine Arsenal import."
+        "comment": "MANUFACTORUM IMPERIUM CONTROL V2: two independent source switches. Both default to Not Included. Astra Militarum Vehicles and Space Marines Vehicles are both functional. Each source uses safe-hide behavior: disabling a source hides unselected imported units but never makes an already-selected unit disappear; selected units instead report a constructive error."
       },
       {
         "type": "unit",
@@ -17313,7 +19503,7 @@
         "hidden": true
       }
     ],
-    "comment": "LAYER 0.1 — FOUNDATION\nImported every native Adeptus Mechanicus unit from the Universal Unit Skeleton with its minimum legal points cost, semantic unit type, Infantry/Vehicle/Monster class, Rare status, Leader Capacity marker, and Other soft-copy marker as applicable. Native non-Rare Other units use Additional Copy Costs. No native Monster units are present in the source skeleton. Servitors use the proven Cryptothralls attached-by architecture: exactly one eligible Tech-Priest Leader must attach to them, while those Leaders may remain unattached instead. Skitarii Marshal uses the normal mandatory Leader attachment pattern to Skitarii Rangers or Skitarii Vanguards. Detailed loadouts, variable-size expansion controls, and Manufactorum Imperium are intentionally deferred.\n\nLAYER 0.2 — MANUFACTORUM IMPERIUM / ASTRA MILITARUM VEHICLES\nAdded a dedicated Manufactorum Imperium library link and a permanent Configuration control with two independent source switches: Space Marines Vehicles and Astra Militarum Vehicles, both defaulting to Not Included. Space Marines Vehicles is a placeholder only. Astra Militarum Vehicles reveals a bespoke army-list category containing every Vehicle unit from audited Astra Militarum Rev18. There is no Manufactorum-specific numerical cap. Already-included imported units use safe-hide behavior and constructive errors if the source switch is disabled or the Configuration entry is deleted. Imported non-Rare Other vehicles continue to use normal Additional Copy Costs; imported Rare/Leader semantics are preserved by the library unit tree.\n\nREV3 — GAME SYSTEM MANUFACTORUM CATEGORIES\nRetargeted to Warhammer 40k Reforged Game System Rev14. Removed the catalogue-local Space Marines Vehicles and Astra Militarum Vehicles category definitions and retargeted Manufactorum entryLinks to the canonical Game System presentation categories. The two Configuration switches, Astra Militarum vehicle visibility, safe-hide logic, constructive warnings, imported unit semantics, and Additional Copy Costs remain unchanged.\n\nLAYER 0.3 — SERVITORS REV4\nMoved Servitors into the visible Leader section while preserving semantic Other / Infantry and Additional Copy Costs behavior. Implemented the complete 1-4 model Servitor loadout. Each ranged/tool slot begins at (None), the source's 'different weapon for each model' restriction is structurally enforced across the four model slots, and constructive errors cover unconfigured or duplicate weapon states. Additional Servitors cost 10 Points each. Melee choices remain repeatable and default to Arc Claw.\n\nLAYER 0.4 — COMPLETE NATIVE LOADOUTS REV5\nImplemented player-facing loadouts for every remaining native Adeptus Mechanicus unit while preserving Rev4 Servitors and Manufactorum Imperium. Skitarii Rangers/Vanguards use Alpha + Warriors 2-9 + dedicated Gunner presentation, with Gunners defaulting to Transuranic Arquebus. Kataphrons use explicit per-model Right Arm / Left Arm slots and optional third models. Thallax Cohort uses one dedicated Special Weapons Loadout model. Ursarax models are represented separately. Raiders use Raider Alpha. Vultarax abbreviates the two Setheno Pattern Havoc Launchers as Setheno Pattern Havoc Launcher 1-2. All other variable-size, paid-wargear, fixed-equipment, and per-model loadout structures were completed from the UUS/PDF.\n\nREV6 POLISH PASS\nApplied the final cross-faction listbuilder presentation standard to Adeptus Mechanicus. Renamed all 28 visible Loadout groups to Loadout Options; added explicit model headers to 17 single-model units; moved the Skitarii Ranger Gunner, Skitarii Vanguard Gunner, and Thallax 3 specialist model groups into Loadout Options while retiring the old visible Special Weapons Loadout wrappers; hid the twelve Kataphron Right Arm / Left Arm implementation labels while preserving their separate per-model weapon-choice mechanics; renamed the single-option Kataphron Breacher, Kataphron Destroyer, and Vorax size controls to Additional Model while retaining Servitors as Additional Models; split fixed multi-weapon packages into distinct visible weapon lines; standardized remaining atomic selectable packages from '+' to '&'; presented Vultarax's two Setheno Pattern Havoc Launchers as 2x; and standardized three Rare errors plus the Servitors, Skitarii Rangers, and Skitarii Vanguards host Leader-limit errors. Updated affected live authoring comments. Manufactorum Imperium, imported Astra Militarum vehicles, Servitor uniqueness logic and (None) architecture, Additional Copy Costs arithmetic, Leader attachment semantics, paid wargear, categories, points, source switches, and all other rules semantics remain unchanged.\n\nREV7 RETROSPECTIVE POLISH PASS\nRevisited the REV6 presentation pass against the final cross-faction standard. Removed residual fixed-equipment heading clutter by making all remaining Equipment / Fixed Weapon / Fixed Weapons containers zero-width and lifting split fixed weapon lines directly under their model headers; also hid other compulsory single-option slot labels where no player decision exists. Separated Thallax 1-2, Raider Alpha, and Raider 2-3 model identity from their first fixed equipment line while preserving the existing model-wrapper IDs and constraints. Kastelan Robot now uses Primary Weapons for its mandatory arm choice and presents its optional +10 Point shoulder weapon under top-level Paid Wargear, with the physical shoulder-slot label hidden. Removed duplicate inner Mindscrambler Grenade and Graviton Ram headings beneath Paid Wargear. Hidden retired Special Weapons Loadout compatibility objects remain untouched. All pre-existing IDs, SelectionEntry names, points, defaults, loadout choices, Servitor uniqueness logic, Manufactorum Imperium behavior, Additional Copy Costs arithmetic, Leader attachments, Rare validation, categories, imported vehicle handling, Game System revision, and all other rules semantics remain unchanged.\n\nREV8 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Skitarii Rangers, Skitarii Vanguards, Kataphron Breachers, and Kataphron Destroyers now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 162 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 27 native/imported Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists in this catalogue, and no Counts As relationship merges the four native Troops. Manufactorum Imperium remains linked through the same stable library ID; its imported Astra Militarum non-Rare Other vehicles continue to participate in the preserved Other arithmetic. All Manufactorum switches, safe-hide behavior, Servitor uniqueness logic, Leader attachments, Rare validation, loadouts, points, variable-size mechanics, and all other catalogue semantics remain unchanged.",
+    "comment": "LAYER 0.1 — FOUNDATION\nImported every native Adeptus Mechanicus unit from the Universal Unit Skeleton with its minimum legal points cost, semantic unit type, Infantry/Vehicle/Monster class, Rare status, Leader Capacity marker, and Other soft-copy marker as applicable. Native non-Rare Other units use Additional Copy Costs. No native Monster units are present in the source skeleton. Servitors use the proven Cryptothralls attached-by architecture: exactly one eligible Tech-Priest Leader must attach to them, while those Leaders may remain unattached instead. Skitarii Marshal uses the normal mandatory Leader attachment pattern to Skitarii Rangers or Skitarii Vanguards. Detailed loadouts, variable-size expansion controls, and Manufactorum Imperium are intentionally deferred.\n\nLAYER 0.2 — MANUFACTORUM IMPERIUM / ASTRA MILITARUM VEHICLES\nAdded a dedicated Manufactorum Imperium library link and a permanent Configuration control with two independent source switches: Space Marines Vehicles and Astra Militarum Vehicles, both defaulting to Not Included. Space Marines Vehicles is a placeholder only. Astra Militarum Vehicles reveals a bespoke army-list category containing every Vehicle unit from audited Astra Militarum Rev18. There is no Manufactorum-specific numerical cap. Already-included imported units use safe-hide behavior and constructive errors if the source switch is disabled or the Configuration entry is deleted. Imported non-Rare Other vehicles continue to use normal Additional Copy Costs; imported Rare/Leader semantics are preserved by the library unit tree.\n\nREV3 — GAME SYSTEM MANUFACTORUM CATEGORIES\nRetargeted to Warhammer 40k Reforged Game System Rev14. Removed the catalogue-local Space Marines Vehicles and Astra Militarum Vehicles category definitions and retargeted Manufactorum entryLinks to the canonical Game System presentation categories. The two Configuration switches, Astra Militarum vehicle visibility, safe-hide logic, constructive warnings, imported unit semantics, and Additional Copy Costs remain unchanged.\n\nLAYER 0.3 — SERVITORS REV4\nMoved Servitors into the visible Leader section while preserving semantic Other / Infantry and Additional Copy Costs behavior. Implemented the complete 1-4 model Servitor loadout. Each ranged/tool slot begins at (None), the source's 'different weapon for each model' restriction is structurally enforced across the four model slots, and constructive errors cover unconfigured or duplicate weapon states. Additional Servitors cost 10 Points each. Melee choices remain repeatable and default to Arc Claw.\n\nLAYER 0.4 — COMPLETE NATIVE LOADOUTS REV5\nImplemented player-facing loadouts for every remaining native Adeptus Mechanicus unit while preserving Rev4 Servitors and Manufactorum Imperium. Skitarii Rangers/Vanguards use Alpha + Warriors 2-9 + dedicated Gunner presentation, with Gunners defaulting to Transuranic Arquebus. Kataphrons use explicit per-model Right Arm / Left Arm slots and optional third models. Thallax Cohort uses one dedicated Special Weapons Loadout model. Ursarax models are represented separately. Raiders use Raider Alpha. Vultarax abbreviates the two Setheno Pattern Havoc Launchers as Setheno Pattern Havoc Launcher 1-2. All other variable-size, paid-wargear, fixed-equipment, and per-model loadout structures were completed from the UUS/PDF.\n\nREV6 POLISH PASS\nApplied the final cross-faction listbuilder presentation standard to Adeptus Mechanicus. Renamed all 28 visible Loadout groups to Loadout Options; added explicit model headers to 17 single-model units; moved the Skitarii Ranger Gunner, Skitarii Vanguard Gunner, and Thallax 3 specialist model groups into Loadout Options while retiring the old visible Special Weapons Loadout wrappers; hid the twelve Kataphron Right Arm / Left Arm implementation labels while preserving their separate per-model weapon-choice mechanics; renamed the single-option Kataphron Breacher, Kataphron Destroyer, and Vorax size controls to Additional Model while retaining Servitors as Additional Models; split fixed multi-weapon packages into distinct visible weapon lines; standardized remaining atomic selectable packages from '+' to '&'; presented Vultarax's two Setheno Pattern Havoc Launchers as 2x; and standardized three Rare errors plus the Servitors, Skitarii Rangers, and Skitarii Vanguards host Leader-limit errors. Updated affected live authoring comments. Manufactorum Imperium, imported Astra Militarum vehicles, Servitor uniqueness logic and (None) architecture, Additional Copy Costs arithmetic, Leader attachment semantics, paid wargear, categories, points, source switches, and all other rules semantics remain unchanged.\n\nREV7 RETROSPECTIVE POLISH PASS\nRevisited the REV6 presentation pass against the final cross-faction standard. Removed residual fixed-equipment heading clutter by making all remaining Equipment / Fixed Weapon / Fixed Weapons containers zero-width and lifting split fixed weapon lines directly under their model headers; also hid other compulsory single-option slot labels where no player decision exists. Separated Thallax 1-2, Raider Alpha, and Raider 2-3 model identity from their first fixed equipment line while preserving the existing model-wrapper IDs and constraints. Kastelan Robot now uses Primary Weapons for its mandatory arm choice and presents its optional +10 Point shoulder weapon under top-level Paid Wargear, with the physical shoulder-slot label hidden. Removed duplicate inner Mindscrambler Grenade and Graviton Ram headings beneath Paid Wargear. Hidden retired Special Weapons Loadout compatibility objects remain untouched. All pre-existing IDs, SelectionEntry names, points, defaults, loadout choices, Servitor uniqueness logic, Manufactorum Imperium behavior, Additional Copy Costs arithmetic, Leader attachments, Rare validation, categories, imported vehicle handling, Game System revision, and all other rules semantics remain unchanged.\n\nREV8 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Skitarii Rangers, Skitarii Vanguards, Kataphron Breachers, and Kataphron Destroyers now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 162 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 27 native/imported Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists in this catalogue, and no Counts As relationship merges the four native Troops. Manufactorum Imperium remains linked through the same stable library ID; its imported Astra Militarum non-Rare Other vehicles continue to participate in the preserved Other arithmetic. All Manufactorum switches, safe-hide behavior, Servitor uniqueness logic, Leader attachments, Rare validation, loadouts, points, variable-size mechanics, and all other catalogue semantics remain unchanged.\n\nREV9 / GS18 — MANUFACTORUM IMPERIUM / SPACE MARINES VEHICLES\nRetargeted to Game System REV18 and activated the previously-placeholder Space Marines Vehicles Manufactorum switch. Manufactorum Imperium V6 now exposes ten chapter-independent Space Marines vehicle shells under the existing Space Marines Vehicles presentation category. Baal Predator is deliberately absent: Adeptus Mechanicus has no Chapter configuration and cannot legally satisfy its Blood Angels restriction. The new Space Marines imports use the same safe-hide and constructive-error architecture as the existing Astra Militarum imports. All ten imported non-Rare Other vehicle families participate in Additional Copy Costs. Existing Astra Militarum entryLinks, native AdMech units, native Troop accounting, Servitor logic, loadouts, points, and all unrelated catalogue mechanics remain unchanged.",
     "catalogueLinks": [
       {
         "type": "catalogue",
@@ -18841,6 +21031,1386 @@
           }
         ],
         "comment": "MANUFACTORUM IMPERIUM LOCAL LINK: hidden while Astra Militarum Vehicles is not Included, but never hidden if this unit is already in the army. Missing-configuration and source-disabled states use constructive errors on the affected unit."
+      },
+      {
+        "import": true,
+        "name": "Rhino",
+        "hidden": false,
+        "id": "af8d-479a-788e-33cd",
+        "type": "selectionEntry",
+        "targetId": "9af9-b2c3-7886-34d5",
+        "sortIndex": 1,
+        "categoryLinks": [
+          {
+            "targetId": "b3f3-4d67-db43-a789",
+            "id": "75a9-a6b8-0d64-49c6",
+            "primary": true,
+            "name": "Space Marines Vehicles"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9af9-b2c3-7886-34d5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Rhino"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9af9-b2c3-7886-34d5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Rhino"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Manufactorum Imperium is missing. Rhino requires Manufactorum Imperium to manage Space Marines Vehicle availability. Add Manufactorum Imperium back under Configuration and set Space Marines Vehicles to Included.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Rhino is included while Space Marines Vehicles is not set to Included. Set Space Marines Vehicles to Included under Manufactorum Imperium or remove this unit from the army.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              }
+            ]
+          }
+        ],
+        "comment": "MANUFACTORUM IMPERIUM LOCAL LINK — SPACE MARINES VEHICLES. Hidden while Space Marines Vehicles is not Included, but never hidden if this unit is already in the army. Missing-configuration and source-disabled states use constructive errors on the affected unit."
+      },
+      {
+        "import": true,
+        "name": "Land Raider",
+        "hidden": false,
+        "id": "9741-0121-2a9c-8525",
+        "type": "selectionEntry",
+        "targetId": "521e-8d8a-d751-87cc",
+        "sortIndex": 2,
+        "categoryLinks": [
+          {
+            "targetId": "b3f3-4d67-db43-a789",
+            "id": "16d0-ef5a-9825-be71",
+            "primary": true,
+            "name": "Space Marines Vehicles"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "521e-8d8a-d751-87cc",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Land Raider"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "521e-8d8a-d751-87cc",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Land Raider"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Manufactorum Imperium is missing. Land Raider requires Manufactorum Imperium to manage Space Marines Vehicle availability. Add Manufactorum Imperium back under Configuration and set Space Marines Vehicles to Included.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Land Raider is included while Space Marines Vehicles is not set to Included. Set Space Marines Vehicles to Included under Manufactorum Imperium or remove this unit from the army.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              }
+            ]
+          }
+        ],
+        "comment": "MANUFACTORUM IMPERIUM LOCAL LINK — SPACE MARINES VEHICLES. Hidden while Space Marines Vehicles is not Included, but never hidden if this unit is already in the army. Missing-configuration and source-disabled states use constructive errors on the affected unit."
+      },
+      {
+        "import": true,
+        "name": "Predator",
+        "hidden": false,
+        "id": "d8b4-0e7f-2f75-a349",
+        "type": "selectionEntry",
+        "targetId": "b4ef-f966-bf3a-d89d",
+        "sortIndex": 3,
+        "categoryLinks": [
+          {
+            "targetId": "b3f3-4d67-db43-a789",
+            "id": "c839-86c2-948c-6e97",
+            "primary": true,
+            "name": "Space Marines Vehicles"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b4ef-f966-bf3a-d89d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Predator"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b4ef-f966-bf3a-d89d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Predator"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Manufactorum Imperium is missing. Predator requires Manufactorum Imperium to manage Space Marines Vehicle availability. Add Manufactorum Imperium back under Configuration and set Space Marines Vehicles to Included.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Predator is included while Space Marines Vehicles is not set to Included. Set Space Marines Vehicles to Included under Manufactorum Imperium or remove this unit from the army.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              }
+            ]
+          }
+        ],
+        "comment": "MANUFACTORUM IMPERIUM LOCAL LINK — SPACE MARINES VEHICLES. Hidden while Space Marines Vehicles is not Included, but never hidden if this unit is already in the army. Missing-configuration and source-disabled states use constructive errors on the affected unit."
+      },
+      {
+        "import": true,
+        "name": "Astartes Basilisk",
+        "hidden": false,
+        "id": "23a2-48f4-e46e-436d",
+        "type": "selectionEntry",
+        "targetId": "130c-98f1-c213-390f",
+        "sortIndex": 4,
+        "categoryLinks": [
+          {
+            "targetId": "b3f3-4d67-db43-a789",
+            "id": "9fca-5a0a-83f4-5f4c",
+            "primary": true,
+            "name": "Space Marines Vehicles"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "130c-98f1-c213-390f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Astartes Basilisk"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "130c-98f1-c213-390f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Astartes Basilisk"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Manufactorum Imperium is missing. Astartes Basilisk requires Manufactorum Imperium to manage Space Marines Vehicle availability. Add Manufactorum Imperium back under Configuration and set Space Marines Vehicles to Included.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Astartes Basilisk is included while Space Marines Vehicles is not set to Included. Set Space Marines Vehicles to Included under Manufactorum Imperium or remove this unit from the army.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              }
+            ]
+          }
+        ],
+        "comment": "MANUFACTORUM IMPERIUM LOCAL LINK — SPACE MARINES VEHICLES. Hidden while Space Marines Vehicles is not Included, but never hidden if this unit is already in the army. Missing-configuration and source-disabled states use constructive errors on the affected unit."
+      },
+      {
+        "import": true,
+        "name": "Whirlwind",
+        "hidden": false,
+        "id": "ae2d-af59-9c1f-88f9",
+        "type": "selectionEntry",
+        "targetId": "d7ce-7e9f-2111-ca81",
+        "sortIndex": 5,
+        "categoryLinks": [
+          {
+            "targetId": "b3f3-4d67-db43-a789",
+            "id": "caf4-dcbb-d373-cbac",
+            "primary": true,
+            "name": "Space Marines Vehicles"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d7ce-7e9f-2111-ca81",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Whirlwind"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d7ce-7e9f-2111-ca81",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Whirlwind"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Manufactorum Imperium is missing. Whirlwind requires Manufactorum Imperium to manage Space Marines Vehicle availability. Add Manufactorum Imperium back under Configuration and set Space Marines Vehicles to Included.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Whirlwind is included while Space Marines Vehicles is not set to Included. Set Space Marines Vehicles to Included under Manufactorum Imperium or remove this unit from the army.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              }
+            ]
+          }
+        ],
+        "comment": "MANUFACTORUM IMPERIUM LOCAL LINK — SPACE MARINES VEHICLES. Hidden while Space Marines Vehicles is not Included, but never hidden if this unit is already in the army. Missing-configuration and source-disabled states use constructive errors on the affected unit."
+      },
+      {
+        "import": true,
+        "name": "Vindicator",
+        "hidden": false,
+        "id": "daa7-4c58-e191-4a62",
+        "type": "selectionEntry",
+        "targetId": "54a0-1b27-bfb4-1983",
+        "sortIndex": 6,
+        "categoryLinks": [
+          {
+            "targetId": "b3f3-4d67-db43-a789",
+            "id": "41ff-07b9-870b-36cc",
+            "primary": true,
+            "name": "Space Marines Vehicles"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "54a0-1b27-bfb4-1983",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Vindicator"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "54a0-1b27-bfb4-1983",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Vindicator"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Manufactorum Imperium is missing. Vindicator requires Manufactorum Imperium to manage Space Marines Vehicle availability. Add Manufactorum Imperium back under Configuration and set Space Marines Vehicles to Included.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Vindicator is included while Space Marines Vehicles is not set to Included. Set Space Marines Vehicles to Included under Manufactorum Imperium or remove this unit from the army.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              }
+            ]
+          }
+        ],
+        "comment": "MANUFACTORUM IMPERIUM LOCAL LINK — SPACE MARINES VEHICLES. Hidden while Space Marines Vehicles is not Included, but never hidden if this unit is already in the army. Missing-configuration and source-disabled states use constructive errors on the affected unit."
+      },
+      {
+        "import": true,
+        "name": "Land Speeder",
+        "hidden": false,
+        "id": "651a-437b-4552-2b95",
+        "type": "selectionEntry",
+        "targetId": "f197-b0e5-be2c-0920",
+        "sortIndex": 7,
+        "categoryLinks": [
+          {
+            "targetId": "b3f3-4d67-db43-a789",
+            "id": "f29b-07f8-2784-121d",
+            "primary": true,
+            "name": "Space Marines Vehicles"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f197-b0e5-be2c-0920",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Land Speeder"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f197-b0e5-be2c-0920",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Land Speeder"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Manufactorum Imperium is missing. Land Speeder requires Manufactorum Imperium to manage Space Marines Vehicle availability. Add Manufactorum Imperium back under Configuration and set Space Marines Vehicles to Included.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Land Speeder is included while Space Marines Vehicles is not set to Included. Set Space Marines Vehicles to Included under Manufactorum Imperium or remove this unit from the army.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              }
+            ]
+          }
+        ],
+        "comment": "MANUFACTORUM IMPERIUM LOCAL LINK — SPACE MARINES VEHICLES. Hidden while Space Marines Vehicles is not Included, but never hidden if this unit is already in the army. Missing-configuration and source-disabled states use constructive errors on the affected unit."
+      },
+      {
+        "import": true,
+        "name": "Dreadnought",
+        "hidden": false,
+        "id": "3cda-198d-531b-e619",
+        "type": "selectionEntry",
+        "targetId": "28f0-b023-34ab-64e8",
+        "sortIndex": 8,
+        "categoryLinks": [
+          {
+            "targetId": "b3f3-4d67-db43-a789",
+            "id": "d56c-18c6-09a6-2e8e",
+            "primary": true,
+            "name": "Space Marines Vehicles"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "28f0-b023-34ab-64e8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Dreadnought"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "28f0-b023-34ab-64e8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Dreadnought"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Manufactorum Imperium is missing. Dreadnought requires Manufactorum Imperium to manage Space Marines Vehicle availability. Add Manufactorum Imperium back under Configuration and set Space Marines Vehicles to Included.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Dreadnought is included while Space Marines Vehicles is not set to Included. Set Space Marines Vehicles to Included under Manufactorum Imperium or remove this unit from the army.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              }
+            ]
+          }
+        ],
+        "comment": "MANUFACTORUM IMPERIUM LOCAL LINK — SPACE MARINES VEHICLES. Hidden while Space Marines Vehicles is not Included, but never hidden if this unit is already in the army. Missing-configuration and source-disabled states use constructive errors on the affected unit."
+      },
+      {
+        "import": true,
+        "name": "Contemptor Dreadnought",
+        "hidden": false,
+        "id": "63f7-bc33-3a9c-f921",
+        "type": "selectionEntry",
+        "targetId": "5973-09fc-18a0-a59d",
+        "sortIndex": 9,
+        "categoryLinks": [
+          {
+            "targetId": "b3f3-4d67-db43-a789",
+            "id": "a0df-b6f5-9d82-4cf5",
+            "primary": true,
+            "name": "Space Marines Vehicles"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "5973-09fc-18a0-a59d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Contemptor Dreadnought"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "5973-09fc-18a0-a59d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Contemptor Dreadnought"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Manufactorum Imperium is missing. Contemptor Dreadnought requires Manufactorum Imperium to manage Space Marines Vehicle availability. Add Manufactorum Imperium back under Configuration and set Space Marines Vehicles to Included.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Contemptor Dreadnought is included while Space Marines Vehicles is not set to Included. Set Space Marines Vehicles to Included under Manufactorum Imperium or remove this unit from the army.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              }
+            ]
+          }
+        ],
+        "comment": "MANUFACTORUM IMPERIUM LOCAL LINK — SPACE MARINES VEHICLES. Hidden while Space Marines Vehicles is not Included, but never hidden if this unit is already in the army. Missing-configuration and source-disabled states use constructive errors on the affected unit."
+      },
+      {
+        "import": true,
+        "name": "Leviathan Dreadnought",
+        "hidden": false,
+        "id": "cdc4-75cb-9d9a-7fa1",
+        "type": "selectionEntry",
+        "targetId": "a54f-0679-d762-65d1",
+        "sortIndex": 10,
+        "categoryLinks": [
+          {
+            "targetId": "b3f3-4d67-db43-a789",
+            "id": "6a2f-5db0-1594-d1b5",
+            "primary": true,
+            "name": "Space Marines Vehicles"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a54f-0679-d762-65d1",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Leviathan Dreadnought"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a54f-0679-d762-65d1",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Leviathan Dreadnought"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Manufactorum Imperium is missing. Leviathan Dreadnought requires Manufactorum Imperium to manage Space Marines Vehicle availability. Add Manufactorum Imperium back under Configuration and set Space Marines Vehicles to Included.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Leviathan Dreadnought is included while Space Marines Vehicles is not set to Included. Set Space Marines Vehicles to Included under Manufactorum Imperium or remove this unit from the army.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f579-0fed-64cc-48e5",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Manufactorum Imperium"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "15e6-8f36-ef02-6bcd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Included"
+              }
+            ]
+          }
+        ],
+        "comment": "MANUFACTORUM IMPERIUM LOCAL LINK — SPACE MARINES VEHICLES. Hidden while Space Marines Vehicles is not Included, but never hidden if this unit is already in the army. Missing-configuration and source-disabled states use constructive errors on the affected unit."
       }
     ]
   }

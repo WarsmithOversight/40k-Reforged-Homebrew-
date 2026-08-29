@@ -5,7 +5,7 @@
     "name": "Grey Knights 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 17,
-    "revision": 10,
+    "revision": 11,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -2908,7 +2908,7 @@
           }
         ],
         "sortIndex": 5,
-        "comment": "VARIABLE UNIT SIZE: the root represents the mandatory 3-model minimum at 120 Points. Grey Knight 4 is an optional +40 Point model with its own loadout. Force Stave remains limited to one ordinary model across Grey Knight 2 and Grey Knight 4.\nLOADOUT UI: Justicar is shown first. Grey Knight 2 and optional Grey Knight 4 record their fixed Storm Bolter on a separate line from the melee choice. Grey Knight 3 is the dedicated heavy-weapons model and only presents Psycannon, Psilencer, or Incinerator; ordinary loadouts are intentionally not advertised on that specialist model.",
+        "comment": "REV11 STRIKE SQUAD MODEL-TYPE + EXPORT PACKAGE PASS. The mandatory 3-model core remains 120 Points and Grey Knight 4 remains an optional +40 Point model. Model slot 1 is now a required choice between Grey Knight 1 and Justicar; Justicar remains the default. Grey Knight 2 is always an ordinary Grey Knight. Model slot 3 is now a required choice between Grey Knight 3 and Heavy Weapons Grey Knight; Heavy Weapons Grey Knight remains the default. Ordinary Grey Knights choose one atomic Force Weapon & Storm Bolter, Force Falchion & Storm Bolter, or +10 Force Stave & Storm Bolter package. Justicar uses the fixed Daemon Hammer & Storm Bolter package. Heavy Weapons Grey Knight retains the existing Psycannon / Psilencer / Incinerator choice with all three old weapon IDs unchanged. All ordinary model slots link to the same underlying shared package IDs so New Recruit can aggregate repeated loadouts in roster export. The previous separate Storm Bolter leaves are intentionally retired because they caused flat, ownership-less exports and prevented repeated melee + Storm Bolter combinations from consolidating. The one-Force-Stave squad restriction is now validated against the shared Force Stave & Storm Bolter package across Grey Knight 1, 2, 3, and 4.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -2917,80 +2917,145 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Justicar",
+                "name": "Grey Knight 1 / Justicar",
                 "id": "f9aa-cb2c-834f-25fc",
                 "hidden": false,
                 "sortIndex": 1,
-                "selectionEntryGroups": [
+                "constraints": [
                   {
-                    "name": "​",
-                    "id": "9786-bc17-26f8-620f",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "9f42-5d43-3384-b9fb"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "534b-16f1-bccf-b485"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Storm Bolter",
-                        "hidden": false,
-                        "id": "f8e1-2934-f27f-92f2",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "f8e1-2934-f27f-92f2"
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "9f42-5d43-3384-b9fb",
+                    "includeChildSelections": false
                   },
                   {
-                    "name": "​",
-                    "id": "abdc-6e10-c796-df02",
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "534b-16f1-bccf-b485",
+                    "includeChildSelections": false
+                  }
+                ],
+                "defaultSelectionEntryId": "b292-bb1d-a385-6bea",
+                "selectionEntries": [
+                  {
+                    "type": "model",
+                    "import": true,
+                    "name": "Grey Knight 1",
                     "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
+                    "id": "e4d1-9875-1f95-807e",
+                    "sortIndex": 1,
+                    "selectionEntryGroups": [
                       {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "23e2-371d-47f0-1e73"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "88ad-4445-383d-7620"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Daemon Hammer",
+                        "name": "​",
+                        "id": "0ba3-867b-7717-3a10",
                         "hidden": false,
-                        "id": "79a7-e9b3-03b8-96de",
-                        "sortIndex": 1
+                        "sortIndex": 1,
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "4102-4d6a-7deb-6999",
+                            "includeChildSelections": false
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "e3c8-d379-5703-df30",
+                            "includeChildSelections": false
+                          }
+                        ],
+                        "defaultSelectionEntryId": "1bb1-3f56-9c57-43c0",
+                        "entryLinks": [
+                          {
+                            "import": true,
+                            "name": "Force Weapon & Storm Bolter",
+                            "hidden": false,
+                            "id": "1bb1-3f56-9c57-43c0",
+                            "type": "selectionEntry",
+                            "targetId": "427a-ee90-ba28-6365",
+                            "sortIndex": 1
+                          },
+                          {
+                            "import": true,
+                            "name": "Force Falchion & Storm Bolter",
+                            "hidden": false,
+                            "id": "491f-56d0-5440-2588",
+                            "type": "selectionEntry",
+                            "targetId": "d710-3a7b-9197-a846",
+                            "sortIndex": 2
+                          },
+                          {
+                            "import": true,
+                            "name": "Force Stave & Storm Bolter",
+                            "hidden": false,
+                            "id": "328e-9311-10d8-0d73",
+                            "type": "selectionEntry",
+                            "targetId": "9e22-ab8a-23f6-e028",
+                            "sortIndex": 3
+                          }
+                        ]
                       }
-                    ],
-                    "defaultSelectionEntryId": "79a7-e9b3-03b8-96de"
+                    ]
+                  },
+                  {
+                    "type": "model",
+                    "import": true,
+                    "name": "Justicar",
+                    "hidden": false,
+                    "id": "b292-bb1d-a385-6bea",
+                    "sortIndex": 2,
+                    "selectionEntryGroups": [
+                      {
+                        "name": "​",
+                        "id": "abdc-6e10-c796-df02",
+                        "hidden": false,
+                        "sortIndex": 1,
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "23e2-371d-47f0-1e73",
+                            "includeChildSelections": false
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "88ad-4445-383d-7620",
+                            "includeChildSelections": false
+                          }
+                        ],
+                        "defaultSelectionEntryId": "79a7-e9b3-03b8-96de",
+                        "entryLinks": [
+                          {
+                            "import": true,
+                            "name": "Daemon Hammer & Storm Bolter",
+                            "hidden": false,
+                            "id": "79a7-e9b3-03b8-96de",
+                            "type": "selectionEntry",
+                            "targetId": "5727-87b1-ef95-70c5",
+                            "sortIndex": 1
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               },
@@ -3002,7 +3067,7 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "dd4f-2be6-cdb7-7956",
+                    "id": "99a8-8629-fe55-3c52",
                     "hidden": false,
                     "sortIndex": 1,
                     "constraints": [
@@ -3012,7 +3077,7 @@
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "0247-fd75-9b1d-4bb8",
+                        "id": "6905-2d8f-727d-3afc",
                         "includeChildSelections": false
                       },
                       {
@@ -3021,158 +3086,196 @@
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "c6a5-b76b-3310-face",
+                        "id": "1325-275b-bb05-8e13",
                         "includeChildSelections": false
                       }
                     ],
-                    "selectionEntries": [
+                    "defaultSelectionEntryId": "816c-48af-81e7-bacf",
+                    "entryLinks": [
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "Storm Bolter",
-                        "hidden": false,
-                        "id": "caf3-3572-a402-2a9d",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "caf3-3572-a402-2a9d"
-                  },
-                  {
-                    "name": "​",
-                    "id": "99a8-8629-fe55-3c52",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "6905-2d8f-727d-3afc"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "1325-275b-bb05-8e13"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Force Weapon",
+                        "name": "Force Weapon & Storm Bolter",
                         "hidden": false,
                         "id": "816c-48af-81e7-bacf",
+                        "type": "selectionEntry",
+                        "targetId": "427a-ee90-ba28-6365",
                         "sortIndex": 1
                       },
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "Force Falchions",
+                        "name": "Force Falchion & Storm Bolter",
                         "hidden": false,
                         "id": "ce8d-12a3-3501-b2a6",
+                        "type": "selectionEntry",
+                        "targetId": "d710-3a7b-9197-a846",
                         "sortIndex": 2
                       },
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "Force Stave",
+                        "name": "Force Stave & Storm Bolter",
                         "hidden": false,
                         "id": "2e5c-093f-1d8e-0742",
-                        "sortIndex": 3,
-                        "costs": [
-                          {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
-                          }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "0014-d463-99ac-7823",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "childName": "Storm Bolter + Force Stave"
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "selectionEntry",
+                        "targetId": "9e22-ab8a-23f6-e028",
+                        "sortIndex": 3
                       }
-                    ],
-                    "defaultSelectionEntryId": "816c-48af-81e7-bacf"
+                    ]
                   }
                 ]
               },
               {
-                "name": "Grey Knight 3",
+                "name": "Grey Knight 3 / Heavy Weapons Grey Knight",
                 "id": "f97f-bae6-db30-f81f",
                 "hidden": false,
                 "sortIndex": 3,
-                "selectionEntryGroups": [
+                "constraints": [
                   {
-                    "name": "​",
-                    "id": "06d8-d2c0-a7e5-7d4a",
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "a80a-2cc8-1390-8636",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "de27-b2db-1526-00b1",
+                    "includeChildSelections": false
+                  }
+                ],
+                "defaultSelectionEntryId": "4133-0fc0-4a76-2891",
+                "selectionEntries": [
+                  {
+                    "type": "model",
+                    "import": true,
+                    "name": "Grey Knight 3",
                     "hidden": false,
+                    "id": "745e-dd7d-c642-e70c",
                     "sortIndex": 1,
-                    "constraints": [
+                    "selectionEntryGroups": [
                       {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "bd8a-0354-ec73-82e9"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "137b-eb40-f932-27ab"
+                        "name": "​",
+                        "id": "40a1-cf86-ec4b-2a06",
+                        "hidden": false,
+                        "sortIndex": 1,
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "c1bc-819a-d379-1cc8",
+                            "includeChildSelections": false
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "34f1-f4cb-d8e7-968d",
+                            "includeChildSelections": false
+                          }
+                        ],
+                        "defaultSelectionEntryId": "9f96-6f21-7447-26a7",
+                        "entryLinks": [
+                          {
+                            "import": true,
+                            "name": "Force Weapon & Storm Bolter",
+                            "hidden": false,
+                            "id": "9f96-6f21-7447-26a7",
+                            "type": "selectionEntry",
+                            "targetId": "427a-ee90-ba28-6365",
+                            "sortIndex": 1
+                          },
+                          {
+                            "import": true,
+                            "name": "Force Falchion & Storm Bolter",
+                            "hidden": false,
+                            "id": "fd91-b75f-984c-e594",
+                            "type": "selectionEntry",
+                            "targetId": "d710-3a7b-9197-a846",
+                            "sortIndex": 2
+                          },
+                          {
+                            "import": true,
+                            "name": "Force Stave & Storm Bolter",
+                            "hidden": false,
+                            "id": "3855-d7d8-ac2d-d8b2",
+                            "type": "selectionEntry",
+                            "targetId": "9e22-ab8a-23f6-e028",
+                            "sortIndex": 3
+                          }
+                        ]
                       }
-                    ],
-                    "selectionEntries": [
+                    ]
+                  },
+                  {
+                    "type": "model",
+                    "import": true,
+                    "name": "Heavy Weapons Grey Knight",
+                    "hidden": false,
+                    "id": "4133-0fc0-4a76-2891",
+                    "sortIndex": 2,
+                    "selectionEntryGroups": [
                       {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Psycannon",
+                        "name": "​",
+                        "id": "06d8-d2c0-a7e5-7d4a",
                         "hidden": false,
-                        "id": "8825-7f7c-85e4-5594",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Psilencer",
-                        "hidden": false,
-                        "id": "1f75-4564-0163-000f",
-                        "sortIndex": 2
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Incinerator",
-                        "hidden": false,
-                        "id": "6648-ca6e-3e13-20ad",
-                        "sortIndex": 3
+                        "sortIndex": 1,
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "bd8a-0354-ec73-82e9"
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "137b-eb40-f932-27ab"
+                          }
+                        ],
+                        "selectionEntries": [
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Psycannon",
+                            "hidden": false,
+                            "id": "8825-7f7c-85e4-5594",
+                            "sortIndex": 1
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Psilencer",
+                            "hidden": false,
+                            "id": "1f75-4564-0163-000f",
+                            "sortIndex": 2
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Incinerator",
+                            "hidden": false,
+                            "id": "6648-ca6e-3e13-20ad",
+                            "sortIndex": 3
+                          }
+                        ],
+                        "defaultSelectionEntryId": "8825-7f7c-85e4-5594"
                       }
-                    ],
-                    "defaultSelectionEntryId": "8825-7f7c-85e4-5594"
+                    ]
                   }
                 ]
               }
@@ -3210,7 +3313,7 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "3ffc-c944-b01e-1fbd",
+                    "id": "3f60-7f2b-4363-db7c",
                     "hidden": false,
                     "sortIndex": 1,
                     "constraints": [
@@ -3220,7 +3323,7 @@
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "1a78-cd8e-98df-192c",
+                        "id": "92ed-522e-5f5e-45b9",
                         "includeChildSelections": false
                       },
                       {
@@ -3229,97 +3332,38 @@
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "b796-a8de-5b60-f92f",
+                        "id": "76cd-b932-dbbf-b148",
                         "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Storm Bolter",
-                        "hidden": false,
-                        "id": "9072-cc05-2b11-691c",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "9072-cc05-2b11-691c"
-                  },
-                  {
-                    "name": "​",
-                    "id": "3f60-7f2b-4363-db7c",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "92ed-522e-5f5e-45b9"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "76cd-b932-dbbf-b148"
                       }
                     ],
                     "defaultSelectionEntryId": "2d46-a6ff-0b05-f21c",
-                    "selectionEntries": [
+                    "entryLinks": [
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "Force Weapon",
+                        "name": "Force Weapon & Storm Bolter",
                         "hidden": false,
                         "id": "2d46-a6ff-0b05-f21c",
+                        "type": "selectionEntry",
+                        "targetId": "427a-ee90-ba28-6365",
                         "sortIndex": 1
                       },
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "Force Falchions",
+                        "name": "Force Falchion & Storm Bolter",
                         "hidden": false,
                         "id": "98e1-12fe-b400-7b0c",
+                        "type": "selectionEntry",
+                        "targetId": "d710-3a7b-9197-a846",
                         "sortIndex": 2
                       },
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "Force Stave",
+                        "name": "Force Stave & Storm Bolter",
                         "hidden": false,
                         "id": "0014-d463-99ac-7823",
-                        "sortIndex": 3,
-                        "costs": [
-                          {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
-                          }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "2e5c-093f-1d8e-0742",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "childName": "Storm Bolter + Force Stave"
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "selectionEntry",
+                        "targetId": "9e22-ab8a-23f6-e028",
+                        "sortIndex": 3
                       }
                     ]
                   }
@@ -3376,6 +3420,27 @@
             "hidden": false,
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Grey Knight Strike Squad has more than one Force Stave & Storm Bolter loadout. Only one ordinary Grey Knight in this unit may use Force Stave & Storm Bolter. Choose another loadout for one of those models.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "self",
+                "childId": "9e22-ab8a-23f6-e028",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "queryFromSelf": false,
+                "childName": "Force Stave & Storm Bolter"
+              }
+            ]
           }
         ]
       },
@@ -5810,6 +5875,43 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "GREY KNIGHTS CURRENT-STATE BASELINE. All 13 source datasheets are selectable. All four Leaders consume Leader Capacity and use the standard attachment primitive, attaching to either GREY KNIGHT TERMINATOR or GREY KNIGHT PALADIN. Grey Knight Chaplain is Rare. Variable-size squads use the minimum-size-root + optional Additional Model pattern where applicable.\n\nLOADOUT + ADDITIONAL COPY COST PASS\nLoadouts implemented for all native Grey Knights units. All native non-Rare Other units, including Interceptors, use the soft 1/2/3 Additional Copy Cost system.\n\nVARIABLE UNIT SIZE PASS\nVariable-size squads now use the canonical minimum-size-root + optional-extra-model pattern. Strike Squad is 3+1, Purifiers 2+1, Purgation Squad 2+1, and Interceptors 2+1. Extra models carry their own cost and loadout subtree where loadouts are implemented. Interceptor loadout remains deferred.\n\nPURIFIER / INTERCEPTOR SPECIALIST CLEANUP\nPurifier 2 now advertises only heavy weapons. Interceptor loadout is implemented: Justicar, heavy-only model 2, and optional normal model 3 with paid Force Stave.\n\nSTRIKE SQUAD SPECIALIST CLEANUP\nGrey Knight Strike Squad model 3 is now presented only as the dedicated heavy-weapons model (Psycannon / Psilencer / Incinerator). Ordinary Storm Bolter alternatives are intentionally omitted.\n\nCONSTRUCTIVE ERROR MIGRATION\nGrey Knights now use Game System revision 11. Additional Copy Costs, mandatory Leader attachments, Terminator/Paladin host Leader limits, and the Grey Knight Chaplain Rare restriction use constructive player-facing validation. Existing loadouts, variable-size structures, points, Leader Capacity semantics, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV7 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader attachment behavior, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV8 POLISH PASS\nAdded explicit model headers to single-model Grey Knight units, flattened Strike Squad / Purifier / Interceptor specialist models into Loadout Options, renamed single optional size steps to Additional Model, split ordinary Grey Knight Storm Bolters onto their own fixed weapon line, removed Dreadknight slot labels and Dreadnought arm labels, converted inseparable Dreadnought weapon packages to use ' & ', renamed the Dreadnought Venerable section to Unit Upgrade, and standardized the Grey Knight Chaplain Rare error. Purgation Squad model names, points, attachment semantics, variable-size arithmetic, Force Stave limits, specialist availability, and Additional Copy Costs are otherwise unchanged.\n\nREV9 RETROSPECTIVE POLISH PASS\nRevisited Grey Knights against the final cross-faction presentation standard. Standardized the Grey Knight Terminator and Grey Knight Paladin host Leader-limit errors to grammar-safe 'This unit...' wording. Reordered Strike Squad, Purifiers, Interceptors, and Purgation Squad so their player-facing configuration reads Loadout Options, Additional Model, then Paid Wargear. Replaced the obsolete Phase 0.1 opening baseline with a current-state note reflecting the implemented variable-size system. All unit IDs, SelectionEntry names, loadouts, defaults, points, Leader attachment behavior, Rare validation, Force Stave limits, specialist availability, Additional Copy Costs arithmetic, categories, constraints, and all other rules semantics remain unchanged.\n\nREV10 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Grey Knight Strike Squad and Grey Knight Terminator now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 42 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. Grey Knight Chaplain remains Rare and outside the soft-copy-cost system. All unrelated loadouts, Leader attachment behavior, Terminator/Paladin host validation, variable-size mechanics, specialist availability, paid wargear, and Rare semantics remain unchanged."
+    "comment": "GREY KNIGHTS CURRENT-STATE BASELINE. All 13 source datasheets are selectable. All four Leaders consume Leader Capacity and use the standard attachment primitive, attaching to either GREY KNIGHT TERMINATOR or GREY KNIGHT PALADIN. Grey Knight Chaplain is Rare. Variable-size squads use the minimum-size-root + optional Additional Model pattern where applicable.\n\nLOADOUT + ADDITIONAL COPY COST PASS\nLoadouts implemented for all native Grey Knights units. All native non-Rare Other units, including Interceptors, use the soft 1/2/3 Additional Copy Cost system.\n\nVARIABLE UNIT SIZE PASS\nVariable-size squads now use the canonical minimum-size-root + optional-extra-model pattern. Strike Squad is 3+1, Purifiers 2+1, Purgation Squad 2+1, and Interceptors 2+1. Extra models carry their own cost and loadout subtree where loadouts are implemented. Interceptor loadout remains deferred.\n\nPURIFIER / INTERCEPTOR SPECIALIST CLEANUP\nPurifier 2 now advertises only heavy weapons. Interceptor loadout is implemented: Justicar, heavy-only model 2, and optional normal model 3 with paid Force Stave.\n\nSTRIKE SQUAD SPECIALIST CLEANUP\nGrey Knight Strike Squad model 3 is now presented only as the dedicated heavy-weapons model (Psycannon / Psilencer / Incinerator). Ordinary Storm Bolter alternatives are intentionally omitted.\n\nCONSTRUCTIVE ERROR MIGRATION\nGrey Knights now use Game System revision 11. Additional Copy Costs, mandatory Leader attachments, Terminator/Paladin host Leader limits, and the Grey Knight Chaplain Rare restriction use constructive player-facing validation. Existing loadouts, variable-size structures, points, Leader Capacity semantics, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV7 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader attachment behavior, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV8 POLISH PASS\nAdded explicit model headers to single-model Grey Knight units, flattened Strike Squad / Purifier / Interceptor specialist models into Loadout Options, renamed single optional size steps to Additional Model, split ordinary Grey Knight Storm Bolters onto their own fixed weapon line, removed Dreadknight slot labels and Dreadnought arm labels, converted inseparable Dreadnought weapon packages to use ' & ', renamed the Dreadnought Venerable section to Unit Upgrade, and standardized the Grey Knight Chaplain Rare error. Purgation Squad model names, points, attachment semantics, variable-size arithmetic, Force Stave limits, specialist availability, and Additional Copy Costs are otherwise unchanged.\n\nREV9 RETROSPECTIVE POLISH PASS\nRevisited Grey Knights against the final cross-faction presentation standard. Standardized the Grey Knight Terminator and Grey Knight Paladin host Leader-limit errors to grammar-safe 'This unit...' wording. Reordered Strike Squad, Purifiers, Interceptors, and Purgation Squad so their player-facing configuration reads Loadout Options, Additional Model, then Paid Wargear. Replaced the obsolete Phase 0.1 opening baseline with a current-state note reflecting the implemented variable-size system. All unit IDs, SelectionEntry names, loadouts, defaults, points, Leader attachment behavior, Rare validation, Force Stave limits, specialist availability, Additional Copy Costs arithmetic, categories, constraints, and all other rules semantics remain unchanged.\n\nREV10 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Grey Knight Strike Squad and Grey Knight Terminator now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 42 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. Grey Knight Chaplain remains Rare and outside the soft-copy-cost system. All unrelated loadouts, Leader attachment behavior, Terminator/Paladin host validation, variable-size mechanics, specialist availability, paid wargear, and Rare semantics remain unchanged.\n\nREV11 — GREY KNIGHT STRIKE SQUAD MODEL TYPES + EXPORT PACKAGES\nReworked Grey Knight Strike Squad into explicit model-type choices. Slot 1 is Grey Knight 1 / Justicar, slot 2 is Grey Knight 2, and slot 3 is Grey Knight 3 / Heavy Weapons Grey Knight. Justicar and Heavy Weapons Grey Knight remain the defaults, preserving the previous default squad composition. Ordinary Grey Knight weapon states are now atomic '& Storm Bolter' shared packages. Every ordinary slot links to the same Force Weapon, Force Falchion, or Force Stave package ID, allowing repeated identical loadouts to consolidate in New Recruit roster export instead of emitting separate Storm Bolter and melee-weapon fragments. Grey Knight 4 remains the optional +40 Point fourth model and now uses the same shared packages. Psycannon, Psilencer, and Incinerator retain their existing IDs and remain exclusive to Heavy Weapons Grey Knight. The previous two-model Force Stave cross-hide was replaced by a constructive squad-level max-one validation against the shared Stave package. All other Grey Knights units, Additional Copy Costs, categories, points, attachments, loadouts, and Game System REV17 semantics remain unchanged.",
+    "sharedSelectionEntries": [
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Force Weapon & Storm Bolter",
+        "hidden": false,
+        "id": "427a-ee90-ba28-6365"
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Force Falchion & Storm Bolter",
+        "hidden": false,
+        "id": "d710-3a7b-9197-a846"
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Force Stave & Storm Bolter",
+        "hidden": false,
+        "id": "9e22-ab8a-23f6-e028",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "51b2-306e-1021-d207",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Daemon Hammer & Storm Bolter",
+        "hidden": false,
+        "id": "5727-87b1-ef95-70c5"
+      }
+    ]
   }
 }
