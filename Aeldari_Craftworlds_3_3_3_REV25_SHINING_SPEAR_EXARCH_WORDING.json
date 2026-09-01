@@ -5,7 +5,7 @@
     "name": "Aeldari Craftworlds 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 17,
-    "revision": 19,
+    "revision": 25,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -4605,17 +4605,20 @@
                         "hidden": false,
                         "id": "69f2-cd27-a510-b3ed",
                         "sortIndex": 7
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Reaper Launcher Starshot & Starswarm",
-                        "hidden": false,
-                        "id": "5ad0-c35e-6720-1b82",
-                        "sortIndex": 8
                       }
                     ],
-                    "defaultSelectionEntryId": "97fb-f97a-55d1-2b40"
+                    "defaultSelectionEntryId": "97fb-f97a-55d1-2b40",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Reaper Launcher (Starshot & Starswarm)",
+                        "hidden": false,
+                        "id": "5ad0-c35e-6720-1b82",
+                        "type": "selectionEntry",
+                        "targetId": "a5fa-594b-c33f-061c",
+                        "sortIndex": 8
+                      }
+                    ]
                   },
                   {
                     "name": "​",
@@ -4714,7 +4717,7 @@
             ]
           }
         ],
-        "comment": "ERROR TEMPLATE: missing_attachment. The Attaches To association uses min 0 / max 1 to suppress New Recruit's stock missing-association error; a custom player-facing error requires attachment and names the eligible hosts.\nERROR TEMPLATE: rare_limit. The stock roster max-1 selection constraint is intentionally omitted so New Recruit does not emit its implementation-style error; a custom error explains that Rare permits only one copy and tells the player to remove the additional copy."
+        "comment": "ERROR TEMPLATE: missing_attachment. The Attaches To association uses min 0 / max 1 to suppress New Recruit's stock missing-association error; a custom player-facing error requires attachment and names the eligible hosts.\nERROR TEMPLATE: rare_limit. The stock roster max-1 selection constraint is intentionally omitted so New Recruit does not emit its implementation-style error; a custom error explains that Rare permits only one copy and tells the player to remove the additional copy.\nREV21 REAPER LAUNCHER ID NORMALIZATION: the Autarch's Reaper Launcher option now links to the same shared Reaper Launcher (Starshot & Starswarm) semantic entry used by Dark Reapers."
       },
       {
         "type": "unit",
@@ -5690,7 +5693,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Aeldari Missile Launcher",
+                        "name": "Aeldari Missile Launcher (Starshot & Sunburst)",
                         "hidden": false,
                         "id": "fef8-6057-dc00-7181",
                         "sortIndex": 1
@@ -5891,7 +5894,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Aeldari Missile Launcher",
+                        "name": "Aeldari Missile Launcher (Starshot & Sunburst)",
                         "hidden": false,
                         "id": "9c0a-05c1-9f43-2055",
                         "sortIndex": 2
@@ -6074,27 +6077,29 @@
                         "includeChildSelections": false
                       }
                     ],
-                    "selectionEntries": [
+                    "defaultSelectionEntryId": "5b99-de93-1a61-10d2",
+                    "entryLinks": [
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "5x Ranger Long Rifle",
+                        "name": "Ranger Long Rifle & Shuriken Pistol",
                         "hidden": false,
                         "id": "5b99-de93-1a61-10d2",
+                        "type": "selectionEntry",
+                        "targetId": "304f-da6d-8dab-c1cc",
                         "sortIndex": 1
                       }
                     ],
-                    "defaultSelectionEntryId": "5b99-de93-1a61-10d2"
+                    "comment": "REV24: one visible atomic Ranger loadout."
                   },
                   {
                     "name": "​",
                     "id": "e629-ba23-4f97-3e54",
-                    "hidden": false,
+                    "hidden": true,
                     "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -6103,7 +6108,7 @@
                       },
                       {
                         "type": "max",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -6116,12 +6121,59 @@
                         "type": "upgrade",
                         "import": true,
                         "name": "5x Shuriken Pistol",
-                        "hidden": false,
+                        "hidden": true,
                         "id": "4e9c-3cde-257b-0ebc",
-                        "sortIndex": 1
+                        "sortIndex": 1,
+                        "comment": "LEGACY ID SHELL: standalone 5x Shuriken Pistol folded into the atomic Ranger loadout in REV24."
                       }
                     ],
-                    "defaultSelectionEntryId": "4e9c-3cde-257b-0ebc"
+                    "comment": "LEGACY ID SHELL: standalone 5x Shuriken Pistol folded into the atomic Ranger loadout in REV24."
+                  },
+                  {
+                    "name": "​",
+                    "id": "9374-74a4-ce23-f794",
+                    "hidden": true,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6dc2-805f-1175-6244",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "79f8-399b-f1a7-ddbb",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "defaultSelectionEntryId": "4808-35f0-d5a4-0712",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Ranger Long Rifle & Shuriken Pistol",
+                        "hidden": false,
+                        "id": "4808-35f0-d5a4-0712",
+                        "type": "selectionEntry",
+                        "targetId": "304f-da6d-8dab-c1cc",
+                        "sortIndex": 1,
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "4",
+                            "field": "defaultAmount"
+                          }
+                        ]
+                      }
+                    ],
+                    "comment": "REV24 EXPORT PAYLOAD: contributes 4 additional copies of Ranger Long Rifle & Shuriken Pistol."
                   }
                 ]
               }
@@ -6179,7 +6231,8 @@
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
-        ]
+        ],
+        "comment": "REV24: Rangers 1-5 use the atomic Ranger Long Rifle & Shuriken Pistol package. One visible selection plus four hidden identical selections produce the intended 5x export without a spinner."
       },
       {
         "type": "unit",
@@ -6818,7 +6871,7 @@
             ]
           },
           {
-            "name": "Paid Wargear",
+            "name": "Melta Bomb Wargear",
             "id": "55d8-244e-eb67-4e60",
             "hidden": false,
             "sortIndex": 2,
@@ -6826,8 +6879,59 @@
               {
                 "name": "Exarch",
                 "id": "e1ad-f68f-27b1-357e",
-                "hidden": false,
+                "hidden": true,
                 "sortIndex": 1,
+                "selectionEntries": [],
+                "comment": "LEGACY ID SHELL: former per-model Melta Bomb wrapper retained after REV24 flattening."
+              },
+              {
+                "name": "Fire Dragon 2",
+                "id": "09f2-beee-f8cc-e8a2",
+                "hidden": true,
+                "sortIndex": 2,
+                "selectionEntries": [],
+                "comment": "LEGACY ID SHELL: former per-model Melta Bomb wrapper retained after REV24 flattening."
+              },
+              {
+                "name": "Fire Dragon 3",
+                "id": "5380-81ba-92c4-dd89",
+                "hidden": true,
+                "sortIndex": 3,
+                "selectionEntries": [],
+                "comment": "LEGACY ID SHELL: former per-model Melta Bomb wrapper retained after REV24 flattening."
+              },
+              {
+                "name": "Fire Dragon 4",
+                "id": "83c9-378e-8aa2-7872",
+                "hidden": true,
+                "sortIndex": 4,
+                "selectionEntries": [],
+                "comment": "LEGACY ID SHELL: former per-model Melta Bomb wrapper retained after REV24 flattening."
+              },
+              {
+                "name": "Fire Dragon 5",
+                "id": "6c58-4bd7-be8a-8914",
+                "hidden": true,
+                "sortIndex": 5,
+                "selectionEntries": [],
+                "comment": "LEGACY ID SHELL: former per-model Melta Bomb wrapper retained after REV24 flattening."
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Exarch",
+                "hidden": false,
+                "id": "238e-ec6b-c503-b3d8",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -6838,30 +6942,22 @@
                     "id": "a84f-3106-fefb-f358",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Melta Bomb",
-                    "hidden": false,
-                    "id": "238e-ec6b-c503-b3d8",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  }
                 ]
               },
               {
+                "type": "upgrade",
+                "import": true,
                 "name": "Fire Dragon 2",
-                "id": "09f2-beee-f8cc-e8a2",
                 "hidden": false,
+                "id": "835e-30da-0fbf-5e01",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -6872,30 +6968,22 @@
                     "id": "abfa-27fc-0df3-2ab0",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Melta Bomb",
-                    "hidden": false,
-                    "id": "835e-30da-0fbf-5e01",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  }
                 ]
               },
               {
+                "type": "upgrade",
+                "import": true,
                 "name": "Fire Dragon 3",
-                "id": "5380-81ba-92c4-dd89",
                 "hidden": false,
+                "id": "81f4-d193-44c0-a6b6",
                 "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -6906,30 +6994,22 @@
                     "id": "0b8f-8085-8335-6a7d",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Melta Bomb",
-                    "hidden": false,
-                    "id": "81f4-d193-44c0-a6b6",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  }
                 ]
               },
               {
+                "type": "upgrade",
+                "import": true,
                 "name": "Fire Dragon 4",
-                "id": "83c9-378e-8aa2-7872",
                 "hidden": false,
+                "id": "9999-8a25-be9b-7007",
                 "sortIndex": 4,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -6940,30 +7020,22 @@
                     "id": "f3bc-f06a-0123-2522",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Melta Bomb",
-                    "hidden": false,
-                    "id": "9999-8a25-be9b-7007",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  }
                 ]
               },
               {
+                "type": "upgrade",
+                "import": true,
                 "name": "Fire Dragon 5",
-                "id": "6c58-4bd7-be8a-8914",
                 "hidden": false,
+                "id": "6b88-ea22-58e6-b518",
                 "sortIndex": 5,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -6974,26 +7046,10 @@
                     "id": "ab4d-fd74-4a0a-9418",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Melta Bomb",
-                    "hidden": false,
-                    "id": "6b88-ea22-58e6-b518",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  }
                 ]
               }
-            ]
+            ],
+            "comment": "REV24: flattened Melta Bomb selection into five independent 20-point bearer checkboxes: Exarch and Fire Dragons 2-5. This removes five redundant (None) controls."
           }
         ],
         "infoLinks": [
@@ -7025,7 +7081,7 @@
             ]
           }
         ],
-        "comment": "ERROR TEMPLATE: leader_host_limit. The stock max-1 association constraint is intentionally omitted so New Recruit does not emit its implementation-language host error; a custom error triggers at 2+ attached Leaders and gives the repair action."
+        "comment": "REV24: Melta Bomb Wargear is presented as five independent bearer checkboxes rather than five optional (None) selectors. Existing Melta Bomb selection IDs and 20-point costs are preserved."
       },
       {
         "type": "unit",
@@ -7144,12 +7200,12 @@
                   {
                     "name": "​",
                     "id": "ea98-f6ff-7c68-5625",
-                    "hidden": false,
-                    "sortIndex": 1,
+                    "hidden": true,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -7170,19 +7226,19 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "4x Shuriken Pistol",
-                        "hidden": false,
+                        "name": "Shuriken Pistol (Legacy Loadout Marker)",
+                        "hidden": true,
                         "id": "86f0-8fa9-b502-3293",
-                        "sortIndex": 1
+                        "sortIndex": 1,
+                        "comment": "REV22 LEGACY ID SHELL. Retained only to preserve the pre-existing selection ID after the fixed Banshee Blade and Shuriken Pistol equipment of Howling Banshees 2-5 was consolidated into the shared Banshee Blade & Shuriken Pistol package. This entry is hidden and never default-selected."
                       }
-                    ],
-                    "defaultSelectionEntryId": "86f0-8fa9-b502-3293"
+                    ]
                   },
                   {
                     "name": "​",
                     "id": "f35f-1735-3564-e8ed",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -7203,17 +7259,65 @@
                         "includeChildSelections": false
                       }
                     ],
-                    "selectionEntries": [
+                    "defaultSelectionEntryId": "f91a-c0a0-a34a-0654",
+                    "entryLinks": [
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "4x Banshee Blade",
+                        "name": "Banshee Blade & Shuriken Pistol",
                         "hidden": false,
                         "id": "f91a-c0a0-a34a-0654",
+                        "type": "selectionEntry",
+                        "targetId": "e03d-fc23-7777-113f",
                         "sortIndex": 1
                       }
                     ],
-                    "defaultSelectionEntryId": "f91a-c0a0-a34a-0654"
+                    "comment": "REV23: one visible fixed Banshee Blade & Shuriken Pistol selection; three additional identical package selections are supplied by a hidden export payload."
+                  },
+                  {
+                    "name": "​",
+                    "id": "c800-ee6c-13d6-3172",
+                    "hidden": true,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2283-a281-4fc5-5c42",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "b5de-7438-8e64-9295",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "defaultSelectionEntryId": "690d-3fee-fce1-7341",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Banshee Blade & Shuriken Pistol",
+                        "hidden": false,
+                        "id": "690d-3fee-fce1-7341",
+                        "type": "selectionEntry",
+                        "targetId": "e03d-fc23-7777-113f",
+                        "sortIndex": 1,
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "3",
+                            "field": "defaultAmount"
+                          }
+                        ]
+                      }
+                    ],
+                    "comment": "REV23 EXPORT PAYLOAD: hidden from the roster editor; contributes 3 additional Banshee Blade & Shuriken Pistol selections so the fixed model block exports at its true quantity."
                   }
                 ]
               }
@@ -7249,7 +7353,7 @@
             ]
           }
         ],
-        "comment": "ERROR TEMPLATE: leader_host_limit. The stock max-1 association constraint is intentionally omitted so New Recruit does not emit its implementation-language host error; a custom error triggers at 2+ attached Leaders and gives the repair action."
+        "comment": "REV23: Howling Banshees 2-5 no longer expose a quantity spinner. One visible package selection plus three hidden selections target the same shared Banshee Blade & Shuriken Pistol ID, preserving the intended 4x export."
       },
       {
         "type": "unit",
@@ -7427,27 +7531,29 @@
                         "includeChildSelections": false
                       }
                     ],
-                    "selectionEntries": [
+                    "defaultSelectionEntryId": "8767-9381-9dd7-984a",
+                    "entryLinks": [
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "4x Lasblaster",
+                        "name": "Lasblaster & Hawk’s Frag Grenade",
                         "hidden": false,
                         "id": "8767-9381-9dd7-984a",
+                        "type": "selectionEntry",
+                        "targetId": "1816-c3b8-5cc0-a3b1",
                         "sortIndex": 1
                       }
                     ],
-                    "defaultSelectionEntryId": "8767-9381-9dd7-984a"
+                    "comment": "REV23: one visible atomic Swooping Hawk loadout. Three additional identical selections are supplied through the hidden export payload."
                   },
                   {
                     "name": "​",
                     "id": "af4d-c315-ec8c-66b1",
-                    "hidden": false,
+                    "hidden": true,
                     "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -7456,7 +7562,7 @@
                       },
                       {
                         "type": "max",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -7469,12 +7575,59 @@
                         "type": "upgrade",
                         "import": true,
                         "name": "4x Hawk’s Frag Grenade",
-                        "hidden": false,
+                        "hidden": true,
                         "id": "3201-a867-aae7-a53c",
-                        "sortIndex": 1
+                        "sortIndex": 1,
+                        "comment": "LEGACY ID SHELL: standalone 4x Hawk’s Frag Grenade folded into the atomic Lasblaster & Hawk’s Frag Grenade package in REV23."
                       }
                     ],
-                    "defaultSelectionEntryId": "3201-a867-aae7-a53c"
+                    "comment": "LEGACY ID SHELL: standalone 4x Hawk’s Frag Grenade folded into the atomic Lasblaster & Hawk’s Frag Grenade package in REV23."
+                  },
+                  {
+                    "name": "​",
+                    "id": "a980-58a7-921c-6d0b",
+                    "hidden": true,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5cde-1c43-c029-f850",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3013-8b3a-5a80-687b",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "defaultSelectionEntryId": "6902-22f2-19f4-7d4c",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Lasblaster & Hawk’s Frag Grenade",
+                        "hidden": false,
+                        "id": "6902-22f2-19f4-7d4c",
+                        "type": "selectionEntry",
+                        "targetId": "1816-c3b8-5cc0-a3b1",
+                        "sortIndex": 1,
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "3",
+                            "field": "defaultAmount"
+                          }
+                        ]
+                      }
+                    ],
+                    "comment": "REV23 EXPORT PAYLOAD: hidden from the roster editor; contributes 3 additional Lasblaster & Hawk’s Frag Grenade selections so the fixed model block exports at its true quantity."
                   }
                 ]
               }
@@ -7570,7 +7723,7 @@
             ]
           }
         ],
-        "comment": "ERROR TEMPLATE: leader_host_limit. The stock max-1 association constraint is intentionally omitted so New Recruit does not emit its implementation-language host error; a custom error triggers at 2+ attached Leaders and gives the repair action."
+        "comment": "REV23: Swooping Hawks 2-5 use one atomic Lasblaster & Hawk’s Frag Grenade loadout. One visible selection plus three hidden selections target the same shared package, producing 4x Lasblaster & Hawk’s Frag Grenade without exposing a quantity control."
       },
       {
         "type": "unit",
@@ -7657,7 +7810,7 @@
                         "name": "Tempest Launcher",
                         "hidden": false,
                         "id": "93d8-e93e-4c2f-07e3",
-                        "sortIndex": 1
+                        "sortIndex": 2
                       },
                       {
                         "type": "upgrade",
@@ -7665,18 +7818,29 @@
                         "name": "Shuriken Cannon",
                         "hidden": false,
                         "id": "9b97-7c7b-108d-f0f4",
-                        "sortIndex": 2
+                        "sortIndex": 3
                       },
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Aeldari Missile Launcher",
+                        "name": "Aeldari Missile Launcher (Starshot & Sunburst)",
                         "hidden": false,
                         "id": "7fc9-0249-4dab-2924",
-                        "sortIndex": 3
+                        "sortIndex": 4
                       }
                     ],
-                    "defaultSelectionEntryId": "93d8-e93e-4c2f-07e3"
+                    "defaultSelectionEntryId": "35ed-94f9-3f69-3fdf",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Reaper Launcher (Starshot & Starswarm)",
+                        "hidden": false,
+                        "id": "35ed-94f9-3f69-3fdf",
+                        "type": "selectionEntry",
+                        "targetId": "a5fa-594b-c33f-061c",
+                        "sortIndex": 1
+                      }
+                    ]
                   }
                 ]
               },
@@ -7711,27 +7875,29 @@
                         "includeChildSelections": false
                       }
                     ],
-                    "selectionEntries": [
+                    "defaultSelectionEntryId": "88d4-6906-894c-f87f",
+                    "entryLinks": [
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "4x Reaper Launcher Starshot",
+                        "name": "Reaper Launcher (Starshot & Starswarm)",
                         "hidden": false,
                         "id": "88d4-6906-894c-f87f",
+                        "type": "selectionEntry",
+                        "targetId": "a5fa-594b-c33f-061c",
                         "sortIndex": 1
                       }
                     ],
-                    "defaultSelectionEntryId": "88d4-6906-894c-f87f"
+                    "comment": "REV23: one visible fixed Reaper Launcher selection; the remaining three identical weapons are supplied by a hidden export payload so no quantity spinner is exposed."
                   },
                   {
                     "name": "​",
                     "id": "6dbb-d776-292f-e6b6",
-                    "hidden": false,
+                    "hidden": true,
                     "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -7752,13 +7918,59 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "4x Starswarm",
-                        "hidden": false,
+                        "name": "Starswarm (Legacy Mode Marker)",
+                        "hidden": true,
                         "id": "1596-c412-4da6-e36c",
-                        "sortIndex": 1
+                        "sortIndex": 1,
+                        "comment": "REV21 LEGACY ID SHELL. Retained only to preserve the pre-existing selection ID after Starshot and Starswarm were consolidated into Reaper Launcher (Starshot & Starswarm). This entry is hidden and never default-selected."
+                      }
+                    ]
+                  },
+                  {
+                    "name": "​",
+                    "id": "a512-a636-f72e-edef",
+                    "hidden": true,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5f17-c00e-3330-99ce",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "694f-8377-c3f6-bff0",
+                        "includeChildSelections": false
                       }
                     ],
-                    "defaultSelectionEntryId": "1596-c412-4da6-e36c"
+                    "defaultSelectionEntryId": "9efc-6c8b-72c3-3a8b",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Reaper Launcher (Starshot & Starswarm)",
+                        "hidden": false,
+                        "id": "9efc-6c8b-72c3-3a8b",
+                        "type": "selectionEntry",
+                        "targetId": "a5fa-594b-c33f-061c",
+                        "sortIndex": 1,
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "3",
+                            "field": "defaultAmount"
+                          }
+                        ]
+                      }
+                    ],
+                    "comment": "REV23 EXPORT PAYLOAD: hidden from the roster editor; contributes 3 additional Reaper Launcher (Starshot & Starswarm) selections so the fixed model block exports at its true quantity."
                   }
                 ]
               }
@@ -7794,7 +8006,7 @@
             ]
           }
         ],
-        "comment": "ERROR TEMPLATE: leader_host_limit. The stock max-1 association constraint is intentionally omitted so New Recruit does not emit its implementation-language host error; a custom error triggers at 2+ attached Leaders and gives the repair action."
+        "comment": "REV23: Dark Reapers 2-5 no longer expose a quantity spinner. One visible Reaper Launcher selection plus three hidden selections target the same shared Reaper Launcher ID, preserving 4x export and Exarch consolidation."
       },
       {
         "type": "unit",
@@ -7842,7 +8054,7 @@
           }
         ],
         "sortIndex": 15,
-        "comment": "VARIABLE SIZE: the base 120 Point unit contains the existing Exarch + Shining Spear 2 loadout presentation. Additional Model optionally adds Shining Spear 3 for +60 Points, equipped with Twin Shuriken Catapult and Laser Lance.\nERROR TEMPLATE: leader_host_limit. The stock max-1 association constraint is intentionally omitted so New Recruit does not emit its implementation-language host error; a custom error triggers at 2+ attached Leaders and gives the repair action.",
+        "comment": "REV25: Shining Spear Exarch loadout names put the meaningful choice first: Star Lance & Shuriken Cannon or Paragon Sabre & Shuriken Cannon. The Shuriken Cannon is common to both states; IDs and mechanics are unchanged.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -7859,12 +8071,12 @@
                   {
                     "name": "​",
                     "id": "f265-29eb-db6f-19f6",
-                    "hidden": false,
+                    "hidden": true,
                     "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -7873,7 +8085,7 @@
                       },
                       {
                         "type": "max",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -7886,12 +8098,13 @@
                         "type": "upgrade",
                         "import": true,
                         "name": "Shuriken Cannon",
-                        "hidden": false,
+                        "hidden": true,
                         "id": "b4e1-fb35-9b9a-8ac4",
-                        "sortIndex": 1
+                        "sortIndex": 1,
+                        "comment": "LEGACY ID SHELL: standalone Shuriken Cannon folded into the Exarch atomic loadout choices in REV23."
                       }
                     ],
-                    "defaultSelectionEntryId": "b4e1-fb35-9b9a-8ac4"
+                    "comment": "LEGACY ID SHELL: standalone Shuriken Cannon folded into the Exarch atomic loadout choices in REV23."
                   },
                   {
                     "name": "​",
@@ -7922,7 +8135,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Star Lance",
+                        "name": "Star Lance & Shuriken Cannon",
                         "hidden": false,
                         "id": "f7ce-45d4-10e7-5d4a",
                         "sortIndex": 1
@@ -7930,13 +8143,14 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Paragon Sabre",
+                        "name": "Paragon Sabre & Shuriken Cannon",
                         "hidden": false,
                         "id": "ee28-5ac1-4e11-e8f2",
                         "sortIndex": 2
                       }
                     ],
-                    "defaultSelectionEntryId": "f7ce-45d4-10e7-5d4a"
+                    "defaultSelectionEntryId": "f7ce-45d4-10e7-5d4a",
+                    "comment": "REV23: Exarch equipment is presented as two atomic final-state loadouts."
                   }
                 ]
               },
@@ -7946,43 +8160,6 @@
                 "hidden": false,
                 "sortIndex": 2,
                 "selectionEntryGroups": [
-                  {
-                    "name": "​",
-                    "id": "ec08-1805-666d-73d4",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "60ef-6d31-ae7c-6d99",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "34c0-dd46-655b-52ea",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Twin Shuriken Catapult",
-                        "hidden": false,
-                        "id": "0e94-476c-f29f-9f84",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "0e94-476c-f29f-9f84"
-                  },
                   {
                     "name": "​",
                     "id": "f28f-123f-14f8-e109",
@@ -8008,17 +8185,57 @@
                         "includeChildSelections": false
                       }
                     ],
+                    "defaultSelectionEntryId": "15a9-8e41-6b99-a275",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Twin Shuriken Catapult & Laser Lance",
+                        "hidden": false,
+                        "id": "15a9-8e41-6b99-a275",
+                        "type": "selectionEntry",
+                        "targetId": "dc32-306e-6392-5735",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "comment": "REV23: Shining Spear 2 fixed atomic loadout."
+                  },
+                  {
+                    "name": "​",
+                    "id": "ec08-1805-666d-73d4",
+                    "hidden": true,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 0,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "60ef-6d31-ae7c-6d99",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 0,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "34c0-dd46-655b-52ea",
+                        "includeChildSelections": false
+                      }
+                    ],
                     "selectionEntries": [
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Laser Lance",
-                        "hidden": false,
-                        "id": "15a9-8e41-6b99-a275",
-                        "sortIndex": 1
+                        "name": "Twin Shuriken Catapult",
+                        "hidden": true,
+                        "id": "0e94-476c-f29f-9f84",
+                        "sortIndex": 1,
+                        "comment": "LEGACY ID SHELL: standalone Twin Shuriken Catapult folded into Shining Spear 2's atomic loadout in REV23."
                       }
                     ],
-                    "defaultSelectionEntryId": "15a9-8e41-6b99-a275"
+                    "comment": "LEGACY ID SHELL: standalone Twin Shuriken Catapult folded into Shining Spear 2's atomic loadout in REV23."
                   }
                 ]
               }
@@ -8058,43 +8275,6 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "0ade-2290-f3fb-3689",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "64bd-8e60-5ed7-637e",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "de46-72d1-ccf4-3f43",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Twin Shuriken Catapult",
-                        "hidden": false,
-                        "id": "0453-ee3a-6b0b-bbe1",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "0453-ee3a-6b0b-bbe1"
-                  },
-                  {
-                    "name": "​",
                     "id": "f81a-bff0-8cb2-e4b3",
                     "hidden": false,
                     "sortIndex": 2,
@@ -8118,17 +8298,57 @@
                         "includeChildSelections": false
                       }
                     ],
+                    "defaultSelectionEntryId": "8d33-3f55-7cb5-06e4",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Twin Shuriken Catapult & Laser Lance",
+                        "hidden": false,
+                        "id": "8d33-3f55-7cb5-06e4",
+                        "type": "selectionEntry",
+                        "targetId": "dc32-306e-6392-5735",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "comment": "REV23: Shining Spear 3 fixed atomic loadout."
+                  },
+                  {
+                    "name": "​",
+                    "id": "0ade-2290-f3fb-3689",
+                    "hidden": true,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 0,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "64bd-8e60-5ed7-637e",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 0,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "de46-72d1-ccf4-3f43",
+                        "includeChildSelections": false
+                      }
+                    ],
                     "selectionEntries": [
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Laser Lance",
-                        "hidden": false,
-                        "id": "8d33-3f55-7cb5-06e4",
-                        "sortIndex": 1
+                        "name": "Twin Shuriken Catapult",
+                        "hidden": true,
+                        "id": "0453-ee3a-6b0b-bbe1",
+                        "sortIndex": 1,
+                        "comment": "LEGACY ID SHELL: standalone Twin Shuriken Catapult folded into Shining Spear 3's atomic loadout in REV23."
                       }
                     ],
-                    "defaultSelectionEntryId": "8d33-3f55-7cb5-06e4"
+                    "comment": "LEGACY ID SHELL: standalone Twin Shuriken Catapult folded into Shining Spear 3's atomic loadout in REV23."
                   }
                 ]
               }
@@ -8806,27 +9026,29 @@
                         "includeChildSelections": false
                       }
                     ],
-                    "selectionEntries": [
+                    "defaultSelectionEntryId": "6445-ac84-d8d7-ea4a",
+                    "entryLinks": [
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "4x Shuriken Pistol",
+                        "name": "Shuriken Pistol & Scorpion Chainsword",
                         "hidden": false,
                         "id": "6445-ac84-d8d7-ea4a",
+                        "type": "selectionEntry",
+                        "targetId": "4bd5-0cfe-9367-8654",
                         "sortIndex": 1
                       }
                     ],
-                    "defaultSelectionEntryId": "6445-ac84-d8d7-ea4a"
+                    "comment": "REV24: one visible atomic fixed loadout for Striking Scorpions 2-5."
                   },
                   {
                     "name": "​",
                     "id": "656e-2b50-173d-c5b8",
-                    "hidden": false,
+                    "hidden": true,
                     "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -8835,7 +9057,7 @@
                       },
                       {
                         "type": "max",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -8848,12 +9070,59 @@
                         "type": "upgrade",
                         "import": true,
                         "name": "4x Scorpion Chainsword",
-                        "hidden": false,
+                        "hidden": true,
                         "id": "24da-b296-43a0-785d",
-                        "sortIndex": 1
+                        "sortIndex": 1,
+                        "comment": "LEGACY ID SHELL: standalone 4x Scorpion Chainsword folded into the atomic Scorpion loadout in REV24."
                       }
                     ],
-                    "defaultSelectionEntryId": "24da-b296-43a0-785d"
+                    "comment": "LEGACY ID SHELL: standalone 4x Scorpion Chainsword folded into the atomic Scorpion loadout in REV24."
+                  },
+                  {
+                    "name": "​",
+                    "id": "fde7-5139-a08d-a0ac",
+                    "hidden": true,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4fbe-bca5-cbaf-9239",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3bbb-f3eb-b612-fc0d",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "defaultSelectionEntryId": "9e73-fbac-603e-7d19",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Shuriken Pistol & Scorpion Chainsword",
+                        "hidden": false,
+                        "id": "9e73-fbac-603e-7d19",
+                        "type": "selectionEntry",
+                        "targetId": "4bd5-0cfe-9367-8654",
+                        "sortIndex": 1,
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "3",
+                            "field": "defaultAmount"
+                          }
+                        ]
+                      }
+                    ],
+                    "comment": "REV24 EXPORT PAYLOAD: contributes 3 additional copies of Shuriken Pistol & Scorpion Chainsword."
                   }
                 ]
               }
@@ -8923,7 +9192,7 @@
             ]
           }
         ],
-        "comment": "ERROR TEMPLATE: leader_host_limit. The stock max-1 association constraint is intentionally omitted so New Recruit does not emit its implementation-language host error; a custom error triggers at 2+ attached Leaders and gives the repair action."
+        "comment": "REV24: Striking Scorpions 2-5 use the atomic Shuriken Pistol & Scorpion Chainsword package. One visible selection plus three hidden identical selections produce a 4x export without a quantity spinner."
       },
       {
         "type": "unit",
@@ -9078,7 +9347,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Twin Aeldari Missile Launcher",
+                        "name": "Twin Aeldari Missile Launcher (Starshot & Sunburst)",
                         "hidden": false,
                         "id": "3da6-8549-2f2b-0dd1",
                         "sortIndex": 5
@@ -9181,36 +9450,7 @@
                         "hidden": false,
                         "id": "82bc-6225-4f6e-3954",
                         "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "82bc-6225-4f6e-3954"
-                  },
-                  {
-                    "name": "​",
-                    "id": "33fc-9d54-e52e-5083",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "00a1-1127-fd60-1c0e",
-                        "includeChildSelections": false
                       },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "6a9b-7672-c1dc-8728",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
                       {
                         "type": "upgrade",
                         "import": true,
@@ -9218,36 +9458,7 @@
                         "hidden": false,
                         "id": "69cf-b0bc-d4f3-d97b",
                         "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "69cf-b0bc-d4f3-d97b"
-                  },
-                  {
-                    "name": "​",
-                    "id": "4090-c7a4-9b85-b951",
-                    "hidden": false,
-                    "sortIndex": 3,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "67f5-65e8-46ae-0819",
-                        "includeChildSelections": false
                       },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "7529-d71b-99ad-1e63",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
                       {
                         "type": "upgrade",
                         "import": true,
@@ -9257,7 +9468,64 @@
                         "sortIndex": 1
                       }
                     ],
-                    "defaultSelectionEntryId": "26be-613b-3afb-d7aa"
+                    "defaultSelectionEntryId": "82bc-6225-4f6e-3954",
+                    "comment": "REV23: one mandatory Wraithlord melee choice: Wraithspear, Ghostglaive, or Wraithlord Fists."
+                  },
+                  {
+                    "name": "​",
+                    "id": "33fc-9d54-e52e-5083",
+                    "hidden": true,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 0,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "00a1-1127-fd60-1c0e",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 0,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6a9b-7672-c1dc-8728",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [],
+                    "comment": "LEGACY ID SHELL: former fixed Ghostglaive group; choice moved into the shared melee selector in REV23."
+                  },
+                  {
+                    "name": "​",
+                    "id": "4090-c7a4-9b85-b951",
+                    "hidden": true,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 0,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "67f5-65e8-46ae-0819",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 0,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7529-d71b-99ad-1e63",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [],
+                    "comment": "LEGACY ID SHELL: former fixed Wraithlord Fists group; choice moved into the shared melee selector in REV23."
                   },
                   {
                     "name": "​",
@@ -9333,7 +9601,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Aeldari Missile Launcher",
+                        "name": "Aeldari Missile Launcher (Starshot & Sunburst)",
                         "hidden": false,
                         "id": "881f-a758-4bb7-be5a",
                         "sortIndex": 1
@@ -9402,7 +9670,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Aeldari Missile Launcher",
+                        "name": "Aeldari Missile Launcher (Starshot & Sunburst)",
                         "hidden": false,
                         "id": "7903-ff2e-dd5e-0968",
                         "sortIndex": 1
@@ -9455,7 +9723,8 @@
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
-        ]
+        ],
+        "comment": "REV23: corrected the Wraithlord melee interpretation to one mandatory choice between Wraithspear, Ghostglaive, and Wraithlord Fists. The Shuriken Catapults / Aeldari Flamers selector and both heavy weapon lists are unchanged."
       },
       {
         "type": "unit",
@@ -10183,7 +10452,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Aeldari Missile Launcher",
+                        "name": "Aeldari Missile Launcher (Starshot & Sunburst)",
                         "hidden": false,
                         "id": "b42a-315d-7b9f-fa06",
                         "sortIndex": 5
@@ -10298,7 +10567,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Hull Aeldari Missile Launcher",
+                        "name": "Hull Aeldari Missile Launcher (Starshot & Sunburst)",
                         "hidden": false,
                         "id": "9bb2-a77b-89e4-7fa7",
                         "sortIndex": 3
@@ -10367,7 +10636,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Aeldari Missile Launcher",
+                        "name": "Aeldari Missile Launcher (Starshot & Sunburst)",
                         "hidden": false,
                         "id": "3193-7c85-6532-6b9e",
                         "sortIndex": 5
@@ -11342,6 +11611,50 @@
         "comment": "ROAMING PERFORMERS ERROR UX: while Roaming Performers exists without Included, this choice is hidden only if this Harlequin unit is not already in the army. An already-included unit stays visible and reports a constructive Not Included error. Missing Roaming Performers and excess Roaming Leader/Troupe allowances are also validated locally so the affected Harlequin unit carries the error."
       }
     ],
-    "comment": "\n\nADDITIONAL COPY COSTS\nAll native non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Affected units link to the canonical Game System unit-reminder rule.\n\nCONSTRUCTIVE ERROR UX REV14\nMigrated to Game System revision 11. Added constructive validation for Additional Copy Costs configuration, required Leader attachments, host Leader capacity, Rare limits, and Roaming Performers interactions while preserving existing points, loadouts, copy-cost arithmetic, categories, and shared Harlequin library structure.\n\nREV16 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Roaming Performers logic, Harlequin library links, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV17 POLISH PASS\nAdded explicit model headers to anonymous single-model Aeldari units; renamed the Guardian Defenders model-set header to Guardian Defenders 1-10; removed Wraithlord Heavy Weapon 1/2 and Wraithknight arm/shoulder slot labels while preserving the separate mechanical choice lists; standardized atomic package display with '&', using meaningful-choice-first ordering for the two Howling Banshee Exarch packages; renamed Black Guardians’ Webway and Pathfinders sections from Paid Wargear to Unit Upgrade; and standardized three Rare-limit errors plus thirteen Leader host-limit errors. Roaming Performers, Harlequin library linkage, Additional Copy Costs, attachment mechanics, fixed minimum-size shells, points, categories, and all selection-entry names except the sixteen approved atomic package display names are otherwise unchanged.\n\nREV18 RETROSPECTIVE POLISH PASS\nCompleted the four remaining source-authorized 2-or-3-model units that REV17 still retained as fixed minimum-size shells. Shining Spears now offer Shining Spear 3 for +60 Points with Twin Shuriken Catapult and Laser Lance; Shadow Spectres now offer Shadow Spectre 3 for +40 Points with Prism Rifle; Wraithguards now offer Wraithguard 3 for +50 Points with its own Wraithcannon / D-Scythe choice; and Wraithblades now offer Wraithblade 3 for +50 Points with its own Ghostswords / Ghostaxe & Forceshield choice. Replaced the obsolete live Phase 0.1 min-size TODO comments on those units with current variable-size notes and modernized the live Additional Copy Costs comment to version-agnostic shared Game System wording. REV17 historical provenance remains unchanged. Roaming Performers, Harlequin library linkage, existing IDs and SelectionEntry names, base loadouts, Leader attachment behavior, Rare validation, Additional Copy Costs arithmetic, points outside the four authorized added models, categories, and all other rules semantics remain unchanged.\n\nREV19 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Guardian Defenders, Rangers, and Windriders now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 96 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 16 native Other copy families. No zero-point, generated, attached-free, or otherwise exempt native Troop unit exists in this catalogue. Roaming Performers remains unchanged: it still permits only one Light, Dark, or Twilight Harlequin Troupe, so those imported shared units cannot generate a duplicate-Troop surcharge in an Aeldari roster and are not added to the local Troop ledger. The existing Harlequins Library catalogue link and all Roaming Performer entryLinks remain unchanged. All unrelated loadouts, Leader attachment behavior, variable-size units, Rare validation, Roaming Performers validation, and other catalogue mechanics remain unchanged."
+    "comment": "\n\nADDITIONAL COPY COSTS\nAll native non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Affected units link to the canonical Game System unit-reminder rule.\n\nCONSTRUCTIVE ERROR UX REV14\nMigrated to Game System revision 11. Added constructive validation for Additional Copy Costs configuration, required Leader attachments, host Leader capacity, Rare limits, and Roaming Performers interactions while preserving existing points, loadouts, copy-cost arithmetic, categories, and shared Harlequin library structure.\n\nREV16 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Roaming Performers logic, Harlequin library links, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV17 POLISH PASS\nAdded explicit model headers to anonymous single-model Aeldari units; renamed the Guardian Defenders model-set header to Guardian Defenders 1-10; removed Wraithlord Heavy Weapon 1/2 and Wraithknight arm/shoulder slot labels while preserving the separate mechanical choice lists; standardized atomic package display with '&', using meaningful-choice-first ordering for the two Howling Banshee Exarch packages; renamed Black Guardians’ Webway and Pathfinders sections from Paid Wargear to Unit Upgrade; and standardized three Rare-limit errors plus thirteen Leader host-limit errors. Roaming Performers, Harlequin library linkage, Additional Copy Costs, attachment mechanics, fixed minimum-size shells, points, categories, and all selection-entry names except the sixteen approved atomic package display names are otherwise unchanged.\n\nREV18 RETROSPECTIVE POLISH PASS\nCompleted the four remaining source-authorized 2-or-3-model units that REV17 still retained as fixed minimum-size shells. Shining Spears now offer Shining Spear 3 for +60 Points with Twin Shuriken Catapult and Laser Lance; Shadow Spectres now offer Shadow Spectre 3 for +40 Points with Prism Rifle; Wraithguards now offer Wraithguard 3 for +50 Points with its own Wraithcannon / D-Scythe choice; and Wraithblades now offer Wraithblade 3 for +50 Points with its own Ghostswords / Ghostaxe & Forceshield choice. Replaced the obsolete live Phase 0.1 min-size TODO comments on those units with current variable-size notes and modernized the live Additional Copy Costs comment to version-agnostic shared Game System wording. REV17 historical provenance remains unchanged. Roaming Performers, Harlequin library linkage, existing IDs and SelectionEntry names, base loadouts, Leader attachment behavior, Rare validation, Additional Copy Costs arithmetic, points outside the four authorized added models, categories, and all other rules semantics remain unchanged.\n\nREV19 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Guardian Defenders, Rangers, and Windriders now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 96 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 16 native Other copy families. No zero-point, generated, attached-free, or otherwise exempt native Troop unit exists in this catalogue. Roaming Performers remains unchanged: it still permits only one Light, Dark, or Twilight Harlequin Troupe, so those imported shared units cannot generate a duplicate-Troop surcharge in an Aeldari roster and are not added to the local Troop ledger. The existing Harlequins Library catalogue link and all Roaming Performer entryLinks remain unchanged. All unrelated loadouts, Leader attachment behavior, variable-size units, Rare validation, Roaming Performers validation, and other catalogue mechanics remain unchanged.\n\nREV20 — DARK REAPER EXARCH REAPER LAUNCHER\nAdded Reaper Launcher Starshot & Starswarm to the Dark Reaper Exarch's exclusive weapon selection and made it the default. The wording matches the existing Reaper Launcher Starshot & Starswarm option already used elsewhere in the catalogue. Tempest Launcher, Shuriken Cannon, and Aeldari Missile Launcher remain unchanged aside from sortIndex shifting to follow the new default option. No other unit or catalogue mechanic was changed.\n\nREV21 — SHARED REAPER LAUNCHER EXPORT PACKAGE\nCreated one shared Reaper Launcher (Starshot & Starswarm) upgrade and converted every current catalogue use of that combined weapon to entryLinks targeting the same semantic ID: Autarch, Dark Reaper Exarch, and Dark Reapers 2-5. The four ordinary Dark Reapers now select quantity 4 of the shared package instead of locally named '4x Reaper Launcher Starshot' and '4x Starswarm' entries. The Exarch's shared launcher remains the default. The old Starswarm branch remains only as a hidden, unselected legacy shell so every pre-existing ID survives. No unrelated catalogue mechanic or unit was changed.\n\nREV22 — SHARED BANSHEE BLADE & SHURIKEN PISTOL EXPORT PACKAGE\nCreated one shared Banshee Blade & Shuriken Pistol upgrade for Howling Banshees 2-5. The four ordinary Banshees now select actual quantity 4 of that shared package, replacing the previous separate '4x Banshee Blade' and '4x Shuriken Pistol' live selections. This allows New Recruit to export the fixed equipment as one consolidated '4x Banshee Blade & Shuriken Pistol' line. The old Banshee Blade ID remains the live entryLink ID and the old Shuriken Pistol branch is retained as a hidden legacy shell, so every pre-existing catalogue ID survives. No Exarch loadout, points, legality, copy-cost arithmetic, Reaper Launcher normalization, or unrelated unit was changed.\n\nREV23 — EXPORT & LOADOUT CLEANUP\nRenamed all live Aeldari Missile Launcher selections to Aeldari Missile Launcher (Starshot & Sunburst). Corrected Wraithlord to one melee choice between Wraithspear, Ghostglaive, and Wraithlord Fists while leaving its secondary and heavy weapon lists unchanged. Compressed Shining Spears into atomic model loadouts. Removed the exposed quantity controls from Dark Reapers 2-5 and Howling Banshees 2-5 while preserving their shared-ID quantity aggregation through hidden payload selections. Swooping Hawks 2-5 now use the atomic Lasblaster & Hawk’s Frag Grenade package and export at quantity 4. Existing IDs are preserved wherever the underlying concept remains live; superseded objects are retained as inert legacy shells.\n\nREV24 — EXPORT PRESENTATION CLEANUP\nCompleted the Aeldari Missile Launcher naming pass by updating prefixed Twin/Hull variants to include (Starshot & Sunburst). Striking Scorpions 2-5 now use the atomic Shuriken Pistol & Scorpion Chainsword package at quantity 4. Fire Dragons now present Melta Bomb Wargear as five independent bearer checkboxes instead of five optional (None) selectors. Rangers 1-5 now use the atomic Ranger Long Rifle & Shuriken Pistol package at quantity 5. Existing IDs, costs, and unrelated mechanics are preserved.\n\nREV25 — SHINING SPEAR EXARCH WORDING\nReordered the two Shining Spear Exarch atomic loadout names so the player-facing differentiator appears first: Star Lance & Shuriken Cannon and Paragon Sabre & Shuriken Cannon. No IDs, costs, defaults, or mechanics changed.",
+    "sharedSelectionEntries": [
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Reaper Launcher (Starshot & Starswarm)",
+        "hidden": false,
+        "id": "a5fa-594b-c33f-061c"
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Banshee Blade & Shuriken Pistol",
+        "hidden": false,
+        "id": "e03d-fc23-7777-113f"
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Twin Shuriken Catapult & Laser Lance",
+        "hidden": false,
+        "id": "dc32-306e-6392-5735"
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Lasblaster & Hawk’s Frag Grenade",
+        "hidden": false,
+        "id": "1816-c3b8-5cc0-a3b1"
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Shuriken Pistol & Scorpion Chainsword",
+        "hidden": false,
+        "id": "4bd5-0cfe-9367-8654"
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Ranger Long Rifle & Shuriken Pistol",
+        "hidden": false,
+        "id": "304f-da6d-8dab-c1cc"
+      }
+    ]
   }
 }

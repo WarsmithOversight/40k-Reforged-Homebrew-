@@ -5,7 +5,7 @@
     "name": "Astra Militarum 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 17,
-    "revision": 21,
+    "revision": 22,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -9624,17 +9624,6 @@
             "value": 120
           }
         ],
-        "constraints": [
-          {
-            "type": "max",
-            "value": 0,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "0ecf-456e-7627-9c38",
-            "includeChildSelections": false
-          }
-        ],
         "categoryLinks": [
           {
             "targetId": "5c3b-2012-fca1-7b34",
@@ -10216,26 +10205,6 @@
         ],
         "modifiers": [
           {
-            "type": "increment",
-            "value": 1,
-            "field": "0ecf-456e-7627-9c38",
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 2,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "96e0-2bc1-7a48-2b11",
-                "childName": "Cadian Shock Troops",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
             "type": "set",
             "value": "true",
             "field": "hidden",
@@ -10296,9 +10265,327 @@
                 "childName": "Regiments of Cadia"
               }
             ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Kasrkin units. Your army may include only one Kasrkin unit for every two Cadian Shock Troops units. Add more Cadian Shock Troops or remove excess Kasrkin units.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "4f76-0b8b-0e73-aa0f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Regiments of Cadia"
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6359-469b-3059-3b9d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Kasrkins"
+              },
+              {
+                "type": "lessThan",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "96e0-2bc1-7a48-2b11",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Cadian Shock Troops"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Kasrkin units. Your army may include only one Kasrkin unit for every two Cadian Shock Troops units. Add more Cadian Shock Troops or remove excess Kasrkin units.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "4f76-0b8b-0e73-aa0f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Regiments of Cadia"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6359-469b-3059-3b9d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Kasrkins"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "96e0-2bc1-7a48-2b11",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Cadian Shock Troops"
+              },
+              {
+                "type": "lessThan",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "96e0-2bc1-7a48-2b11",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Cadian Shock Troops"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Kasrkin units. Your army may include only one Kasrkin unit for every two Cadian Shock Troops units. Add more Cadian Shock Troops or remove excess Kasrkin units.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "4f76-0b8b-0e73-aa0f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Regiments of Cadia"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6359-469b-3059-3b9d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Kasrkins"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "96e0-2bc1-7a48-2b11",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Cadian Shock Troops"
+              },
+              {
+                "type": "lessThan",
+                "value": 6,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "96e0-2bc1-7a48-2b11",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Cadian Shock Troops"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Kasrkin units. Your army may include only one Kasrkin unit for every two Cadian Shock Troops units. Add more Cadian Shock Troops or remove excess Kasrkin units.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "4f76-0b8b-0e73-aa0f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Regiments of Cadia"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6359-469b-3059-3b9d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Kasrkins"
+              },
+              {
+                "type": "atLeast",
+                "value": 6,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "96e0-2bc1-7a48-2b11",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Cadian Shock Troops"
+              },
+              {
+                "type": "lessThan",
+                "value": 8,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "96e0-2bc1-7a48-2b11",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Cadian Shock Troops"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Kasrkin units. Your army may include only one Kasrkin unit for every two Cadian Shock Troops units. Add more Cadian Shock Troops or remove excess Kasrkin units.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "4f76-0b8b-0e73-aa0f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Regiments of Cadia"
+              },
+              {
+                "type": "atLeast",
+                "value": 5,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6359-469b-3059-3b9d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Kasrkins"
+              },
+              {
+                "type": "atLeast",
+                "value": 8,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "96e0-2bc1-7a48-2b11",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Cadian Shock Troops"
+              },
+              {
+                "type": "lessThan",
+                "value": 10,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "96e0-2bc1-7a48-2b11",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Cadian Shock Troops"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Kasrkin units. Your army may include only one Kasrkin unit for every two Cadian Shock Troops units. Add more Cadian Shock Troops or remove excess Kasrkin units.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "4f76-0b8b-0e73-aa0f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Regiments of Cadia"
+              },
+              {
+                "type": "atLeast",
+                "value": 6,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6359-469b-3059-3b9d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Kasrkins"
+              },
+              {
+                "type": "atLeast",
+                "value": 10,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "96e0-2bc1-7a48-2b11",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Cadian Shock Troops"
+              },
+              {
+                "type": "lessThan",
+                "value": 12,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "96e0-2bc1-7a48-2b11",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Cadian Shock Troops"
+              }
+            ]
           }
         ],
-        "comment": "KASRKINS REV12: five-model Kill Team-flavoured final-state presentation. Kasrkin Sergeant; Kasrkin Troopers 2-3 fixed; Kasrkin Trooper 4 with optional +20 special weapon; Gunner with mandatory free specialist weapon defaulting to Grenade Launcher; Sharpshooter / Demo Trooper model; Frag/Krak Grenades as Paid Wargear. The source ratio is enforced dynamically: maximum Kasrkin copies equals floor(Cadian Shock Troops / 2). Kasrkins are also safely hidden outside Regiments of Cadia because the ratio can never be satisfied there.\nRETROSPECTIVE PRESENTATION: Gunner and Sharpshooter / Demo Trooper sit directly under Loadout Options. Sharpshooter / Demo Trooper is the model name; its visible equipment choice is Hot-Shot Marksman Rifle or Melta Mine & Hot-Shot Laspistol. The obsolete nested one-option Loadout objects are hidden only to preserve their existing IDs."
+        "comment": "KASRKIN REV22: compact Kill Team-inspired final-state presentation retained unchanged. The former dynamic roster max has been removed so New Recruit does not emit its stock maximum error. ERROR TEMPLATE: ratio_limit. While Regiments of Cadia is selected, mutually exclusive constructive validation bands enforce one Kasrkin unit per two Cadian Shock Troops, through 11 supporting Cadian Shock Troops. Wrong-Regiment safe-hide and constructive validation, points, loadouts, Additional Copy Costs, and the visible Cadian Support Requirement remain unchanged."
       },
       {
         "type": "unit",
@@ -13977,38 +14264,7 @@
             ]
           }
         ],
-        "constraints": [
-          {
-            "type": "max",
-            "value": 0,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "ced0-4b0e-82eb-5f1f",
-            "includeChildSelections": false
-          }
-        ],
         "modifiers": [
-          {
-            "type": "increment",
-            "value": 1,
-            "field": "ced0-4b0e-82eb-5f1f",
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 2,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "57f7-8938-9471-f391",
-                "childName": "Death Korps Of Krieg",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
           {
             "type": "set",
             "value": "true",
@@ -14070,6 +14326,324 @@
                 "childName": "Death Korps of Krieg"
               }
             ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Death Korps Grenadier units. Your army may include only one Death Korps Grenadier unit for every two Death Korps Of Krieg units. Add more Death Korps Of Krieg or remove excess Death Korps Grenadiers.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a171-3bfb-6b52-836c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps of Krieg"
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "5d94-fbbe-0948-5f56",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Grenadiers"
+              },
+              {
+                "type": "lessThan",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57f7-8938-9471-f391",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Of Krieg"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Death Korps Grenadier units. Your army may include only one Death Korps Grenadier unit for every two Death Korps Of Krieg units. Add more Death Korps Of Krieg or remove excess Death Korps Grenadiers.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a171-3bfb-6b52-836c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps of Krieg"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "5d94-fbbe-0948-5f56",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Grenadiers"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57f7-8938-9471-f391",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Of Krieg"
+              },
+              {
+                "type": "lessThan",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57f7-8938-9471-f391",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Of Krieg"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Death Korps Grenadier units. Your army may include only one Death Korps Grenadier unit for every two Death Korps Of Krieg units. Add more Death Korps Of Krieg or remove excess Death Korps Grenadiers.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a171-3bfb-6b52-836c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps of Krieg"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "5d94-fbbe-0948-5f56",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Grenadiers"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57f7-8938-9471-f391",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Of Krieg"
+              },
+              {
+                "type": "lessThan",
+                "value": 6,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57f7-8938-9471-f391",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Of Krieg"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Death Korps Grenadier units. Your army may include only one Death Korps Grenadier unit for every two Death Korps Of Krieg units. Add more Death Korps Of Krieg or remove excess Death Korps Grenadiers.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a171-3bfb-6b52-836c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps of Krieg"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "5d94-fbbe-0948-5f56",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Grenadiers"
+              },
+              {
+                "type": "atLeast",
+                "value": 6,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57f7-8938-9471-f391",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Of Krieg"
+              },
+              {
+                "type": "lessThan",
+                "value": 8,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57f7-8938-9471-f391",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Of Krieg"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Death Korps Grenadier units. Your army may include only one Death Korps Grenadier unit for every two Death Korps Of Krieg units. Add more Death Korps Of Krieg or remove excess Death Korps Grenadiers.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a171-3bfb-6b52-836c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps of Krieg"
+              },
+              {
+                "type": "atLeast",
+                "value": 5,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "5d94-fbbe-0948-5f56",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Grenadiers"
+              },
+              {
+                "type": "atLeast",
+                "value": 8,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57f7-8938-9471-f391",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Of Krieg"
+              },
+              {
+                "type": "lessThan",
+                "value": 10,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57f7-8938-9471-f391",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Of Krieg"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Death Korps Grenadier units. Your army may include only one Death Korps Grenadier unit for every two Death Korps Of Krieg units. Add more Death Korps Of Krieg or remove excess Death Korps Grenadiers.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a171-3bfb-6b52-836c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps of Krieg"
+              },
+              {
+                "type": "atLeast",
+                "value": 6,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "5d94-fbbe-0948-5f56",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Grenadiers"
+              },
+              {
+                "type": "atLeast",
+                "value": 10,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57f7-8938-9471-f391",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Of Krieg"
+              },
+              {
+                "type": "lessThan",
+                "value": 12,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57f7-8938-9471-f391",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Of Krieg"
+              }
+            ]
           }
         ],
         "rules": [
@@ -14081,7 +14655,7 @@
             "noindex": false
           }
         ],
-        "comment": "DEATH KORPS GRENADIERS REV15: compact five-model final-state presentation. Watchmaster defaults directly to Hot-Shot Laspistol + Chainsword; Grenadier 2 is fixed; Grenadier 3 carries the optional paid Heavy Stubber/Heavy Flamer replacement; two dedicated Weapons Specialist slots take the free special weapons. Enforces one unit per two Death Korps Of Krieg.",
+        "comment": "DEATH KORPS GRENADIERS REV22: compact five-model final-state presentation retained unchanged. The former dynamic roster max has been removed so New Recruit does not emit its stock maximum error. ERROR TEMPLATE: ratio_limit. While Death Korps of Krieg is selected, mutually exclusive constructive validation bands enforce one Death Korps Grenadier unit per two Death Korps Of Krieg units, through 11 supporting Death Korps Of Krieg units. Wrong-Regiment safe-hide and constructive validation, points, loadouts, Additional Copy Costs, and the visible support rule remain unchanged.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -14459,37 +15033,7 @@
             ]
           }
         ],
-        "constraints": [
-          {
-            "type": "max",
-            "value": 0,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "cffc-1355-be13-584a",
-            "includeChildSelections": false
-          }
-        ],
         "modifiers": [
-          {
-            "type": "set",
-            "value": 99,
-            "field": "cffc-1355-be13-584a",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "57f7-8938-9471-f391",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "queryFromSelf": false,
-                "childName": "Death Korps Of Krieg"
-              }
-            ]
-          },
           {
             "type": "set",
             "value": "true",
@@ -14551,6 +15095,49 @@
                 "childName": "Death Korps of Krieg"
               }
             ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Death Korps Combat Engineers require at least one Death Korps Of Krieg unit. Add a Death Korps Of Krieg unit or remove the Death Korps Combat Engineers.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a171-3bfb-6b52-836c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps of Krieg"
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "fb1d-11e8-e7e5-5173",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Combat Engineers"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57f7-8938-9471-f391",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Death Korps Of Krieg"
+              }
+            ]
           }
         ],
         "rules": [
@@ -14562,7 +15149,7 @@
             "noindex": false
           }
         ],
-        "comment": "DEATH KORPS COMBAT ENGINEERS REV15: compact five-model final-state presentation. Watchmaster defaults directly to the sergeant package; Engineer 2 defaults to Heavy Flamer; Engineers 3-5 each choose Shotgun or Autopistol + Trench Baton. Paid Wargear includes up to three Frag Grenades, Explosive Mines with full rule text, and Remote Mine. Requires at least one Death Korps Of Krieg.",
+        "comment": "DEATH KORPS COMBAT ENGINEERS REV22: compact five-model final-state presentation retained unchanged. The former roster max 0 / set-to-99 prerequisite gate has been removed so New Recruit does not emit its stock maximum error. ERROR TEMPLATE: prerequisite_limit. While Death Korps of Krieg is selected, a constructive error requires at least one Death Korps Of Krieg unit. Wrong-Regiment safe-hide and constructive validation, points, loadouts, Additional Copy Costs, and the visible requirement rule remain unchanged.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -16135,7 +16722,7 @@
         ]
       }
     ],
-    "comment": "PHASE 0.1 — REGIMENT + COMMAND SQUAD FOUNDATION\nFocused assembly implementing the Astra Militarum Regiment selector, the three Regiment Troop anchors, the three Platoon Commanders, and the reusable Command Squad Officer pool. Regiments of Cadia is selected by default. The explicit Regiment selector is a listbuilder presentation abstraction over the PDF's indirect mutually exclusive Troop mechanic. Matching Platoon Commander Troop prerequisites remain enforced separately. Command Squad Officers are nested complete Leader units, reuse the Additional Leader architecture, and do not count toward Leader Capacity. Detailed Troop model/loadout trees and the remainder of the Astra Militarum catalogue are intentionally deferred to later assembly.\n\nREV2 REGIMENT NAME CORRECTION\nCorrected the player-facing Regiment option names to Cadia, Death Korps of Krieg, and Mordian Iron Guard. Updated Regiment-related constructive error text and condition labels accordingly. No unit names, IDs, costs, loadouts, visibility logic, Command Squad structure, or validation semantics were otherwise changed.\n\nREV3 CADIAN REGIMENT LABEL\nChanged the player-facing Regiment option from 'Cadia' to 'Regiments of Cadia' to better represent the broader Cadian military identity rather than a single regiment. Updated Regiment-related constructive error text and condition labels accordingly. Existing unit names, IDs, costs, loadouts, visibility logic, Command Squad structure, and validation semantics are unchanged.\n\nREV4 CADIAN SHOCK TROOPS LOADOUT TEST\nImplemented the complete player-facing Cadian Shock Troops loadout using a compressed final-state model: Cadian Sergeant; four fixed Lasguns; two paid special-weapon-capable Lasgun models; one independent free special-weapon-capable model; and a mandatory branch between two additional free special-weapon-capable models or one Heavy Weapons Team. This is a focused navigation test. Death Korps of Krieg and Mordian Iron Guard detailed Troop loadouts remain deferred.\n\nREV5 CADIAN MILITARY-JARGON PRESENTATION\nBaked the approved Cadian Shock Troops presentation labels. Loadout now contains Sergeant, Cadian Shock Troopers 2-5, 6, and 7. The independent free specialist is presented under Weapon Specialist as Cadian Shock Trooper 8. The remaining branch is presented as Special Weapons Team / Heavy Weapons Team, with Cadian Shock Troopers 9-10 under Special Weapons Team or the Heavy Weapons Team weapon choice. Existing selection IDs, costs, defaults, and legality logic are unchanged.\n\nREV6 WEAPON SPECIALIST PRESENTATION\nCollapsed the redundant Weapon Specialist wrapper. The free specialist now appears directly in Loadout after Cadian Shock Trooper 7, labeled Weapon Specialist. The obsolete presentation-wrapper object was removed; all actual choice/option IDs are preserved. Special Weapons Team / Heavy Weapons Team remains the next top-level section. Costs, defaults, and legality logic are unchanged.\n\nREV7 DEATH KORPS AND MORDIAN TROOP LOADOUTS\nImplemented the approved compact troop presentations for Death Korps of Krieg and Mordian Iron Guard. Death Korps uses Watchmaster, Death Korps Guardsman 2-8, and two Weapon Specialist slots. Mordian Iron Guard uses Mordian Sergeant, Mordian Guardsman 2-6, Mordian Guardsman 7, Mordian Guardsman 8, and two Weapon Specialist slots. Mordian Guardsmen 7-8 carry the two paid +10 special-weapon options; the two Weapon Specialist slots are free. All new IDs are deterministic; existing IDs are preserved.\n\nREV8 WEAPON SPECIALIST DEFAULTS\nFor the three Regiment Troops, every player-facing Weapon Specialist slot now omits Lasgun and defaults to Grenade Launcher. This is an intentional listbuilder simplification: Grenade Launcher is a free specialist choice and the Lasgun fallback is not presented for these role-labeled specialists. Paid special-weapon-capable ordinary models retain Lasgun as their default because declining the +10 upgrade is still a meaningful decision. Cadian Special Weapons Team model slots are otherwise unchanged.\n\nREV9 CADIAN SPECIAL WEAPONS TEAM DEFAULTS\nApplied the same dedicated-specialist presentation to Cadian Shock Troopers 9-10 under Special Weapons Team: Lasgun removed, Grenade Launcher defaulted. No other loadout, points, Regiment, Commander, or Command Squad behavior changed.\n\nREV10 TANK COMMANDER / ENGINSEER / COMMISSAR / TEMPESTUS SCIONS\nAdded the next three Leaders and the first Other unit. Tank Commander includes complete turret/hull choices, Vanquisher coaxial dependency, and Paid Wargear. Enginseer Envoy uses its fixed loadout. Commissar uses normal required Troops attachment semantics, does not consume Leader Capacity, and is Rare. Tempestus Scions use the approved compact five-model presentation with Tempestor, two fixed Scions, one paid-capable Scion, one Weapon Specialist, and Paid Wargear. Tempestus Scions also participate in generic Additional Copy Costs as a non-Rare Other unit.\n\nREV11 TANK COMMANDER UI / COMMISSAR ATTACHMENT POINTS\nSimplified Tank Commander Loadout presentation by suppressing redundant Turret/Hull/Sponson group labels. Moved the paid Sponson weapon choice into Loadout directly after the Hull weapon choice while preserving its points costs. Verified and retained Commissar attachment points on all three Regiment Troops; the Commissar remains a normal required-attached Leader.\n\nREV12 KASRKINS\nAdded Kasrkins with Kill Team-inspired player-facing role names: Kasrkin Sergeant, Gunner, and Sharpshooter / Demo Trooper. The decisive source restriction is compiled as a dynamic roster max: one Kasrkin unit per two Cadian Shock Troops, rounded down. Kasrkins safely hide outside Regiments of Cadia and remain constructively invalid if already included when the Regiment changes. As a native non-Rare Other unit, Kasrkins also use Additional Copy Costs.\n\nREV13 TRANSPORTS / VEHICLES / ARTILLERY\nAdded Chimera, Taurox, Leman Russ Battle Tank, Scout Sentinels, Armoured Sentinels, Hellhound, Basilisk, Wyvern, Manticore, Field Ordnance Battery, and Heavy Lascannon Battery. All are native non-Rare Other units and participate in Additional Copy Costs. Vehicle/Infantry semantic categories are applied from the UUS. Sentinel units implement 1-2 model construction with independent model loadouts, per-model Hunter-Killer Missile choices, and Smoke Launchers priced at 10 Points per model. Heavy Lascannon Battery includes the PDF note that it uses Field Ordnance Battery models with the Heavy Lascannon option.\n\nREV15 KRIEG SPECIALISTS\nAdded Death Korps Grenadiers and Death Korps Combat Engineers with approved compact model-slot loadouts, paid wargear, full Explosive Mines text, and hard roster prerequisites/ratio limits.\n\nREV16 DEATH KORPS FIELD ARTILLERY\nAdded Death Korps Field Artillery as an unrestricted Astra Militarum unit, with a four-way artillery loadout and paid Gas Dispersion carrying full rule text.\n\nREV17 COMPLETION PASS\nAdded the three units found missing in the full catalogue-to-skeleton audit: Primaris Psyker, Heavy Weapons Squad, and Minotaur. Primaris Psyker uses the standard required Troops-association pattern; Heavy Weapons Squad uses three independent team weapon slots; Minotaur includes paid APHE Shells with full text.\n\nREV18 AUDIT FIXES\nCorrected the catalogue header revision and completed Additional Copy Costs for Death Korps Grenadiers, Death Korps Combat Engineers, Death Korps Field Artillery, Heavy Weapons Squad, and Minotaur. Death Korps Grenadiers and Death Korps Combat Engineers now use the established safe-hide Regiment presentation for Death Korps of Krieg while retaining their existing hard ratio/prerequisite restrictions. Per review, the Hellhound hull weapon labels and the mandatory Heavy Flamer presentation in Death Korps Combat Engineers are intentionally unchanged.\n\nREV19 POLISH PASS\nStandardized direct unit loadout headings from Loadout to Loadout Options across all 25 affected native units. Added explicit model headers to the three Platoon Commanders, Commissar, Tank Commander, Chimera, Taurox, Leman Russ Battle Tank, Hellhound, Basilisk, Wyvern, Manticore, and Death Korps Field Artillery; presented Heavy Lascannon Team 1-2 as the Heavy Lascannon Battery model-set header; and added explicit model headers to all eight shared Command Squad Officer models. Flattened Kasrkin Gunner and Sharpshooter / Demo Trooper into Loadout Options while preserving the Cadian Special Weapons Team / Heavy Weapons Team branch. Suppressed the remaining Basilisk, Wyvern, and Manticore Hull Weapon group labels while retaining all actual weapon names and mechanics. Standardized fourteen atomic package names to '&', with meaningful-choice-first ordering for Bodyguard packages; corrected Chimera and Taurox Stormbolter to Storm Bolter; standardized Tank Commander and Commissar Rare errors; and standardized the three Regiment Troop host-limit errors. Regiment configuration, safe-hide behavior, Platoon Commander prerequisites, Command Squad Officer architecture, Additional Copy Costs, Kasrkin/Krieg ratios, Sentinel 1-2 arithmetic, Vanquisher coaxial dependencies, vehicle costs, sponsons, Death Korps Combat Engineer Heavy Flamer behavior, and all other rules semantics are unchanged.\n\nREV20 RETROSPECTIVE POLISH PASS\nFinal retrospective pass against the mature cross-faction presentation standard. Replaced the obsolete live Additional Copy Costs Phase 0.1 comment with a current-state description of Other-unit surcharge arithmetic and shared configuration validation. Kasrkins now present Sharpshooter / Demo Trooper as the model name with Hot-Shot Marksman Rifle or Melta Mine & Hot-Shot Laspistol as the visible equipment choice; the obsolete nested one-option Loadout objects are hidden compatibility remnants preserving their IDs. Suppressed redundant one-item Paid Wargear wrappers where the equipment name is already self-identifying, renamed every multi-option vehicle accessory/pintle group to Pintle Weapons, suppressed the Taurox Twin Autocannon double wrapper, and retained self-identifying hull/sponson/coaxial equipment names without redundant slot labels. Heavy Lascannon Battery now separates the Heavy Lascannon Team 1-2 model-set header from its 2x Heavy Lascannon equipment line. Mirrored every applicable vehicle presentation change into Manufactorum Imperium Library V4. All pre-existing IDs, points, costs, defaults, constraints, Regiment behavior, safe-hide logic, Platoon Commander prerequisites, Command Squad Officer architecture, Additional Copy Costs arithmetic, Kasrkin/Krieg ratios, Sentinel model ownership and scaling, Vanquisher coaxial dependencies, vehicle costs, sponson costs, Rare validation, and all other rules semantics remain unchanged.\n\nREV21 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Cadian Shock Troops, Death Korps Of Krieg, and Mordian Iron Guard now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. The Regiment selector continues to control normal availability and the three Troop datasheets are not pooled into a generic Regiment Troop count. All 108 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 18 Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists in this catalogue. All Regiment safe-hide behavior, Platoon Commander prerequisites, Commissar attachments, Kasrkin/Krieg ratio rules, variable-size Sentinel arithmetic, Rare semantics, vehicle/loadout presentation, and other catalogue mechanics remain unchanged.",
+    "comment": "PHASE 0.1 — REGIMENT + COMMAND SQUAD FOUNDATION\nFocused assembly implementing the Astra Militarum Regiment selector, the three Regiment Troop anchors, the three Platoon Commanders, and the reusable Command Squad Officer pool. Regiments of Cadia is selected by default. The explicit Regiment selector is a listbuilder presentation abstraction over the PDF's indirect mutually exclusive Troop mechanic. Matching Platoon Commander Troop prerequisites remain enforced separately. Command Squad Officers are nested complete Leader units, reuse the Additional Leader architecture, and do not count toward Leader Capacity. Detailed Troop model/loadout trees and the remainder of the Astra Militarum catalogue are intentionally deferred to later assembly.\n\nREV2 REGIMENT NAME CORRECTION\nCorrected the player-facing Regiment option names to Cadia, Death Korps of Krieg, and Mordian Iron Guard. Updated Regiment-related constructive error text and condition labels accordingly. No unit names, IDs, costs, loadouts, visibility logic, Command Squad structure, or validation semantics were otherwise changed.\n\nREV3 CADIAN REGIMENT LABEL\nChanged the player-facing Regiment option from 'Cadia' to 'Regiments of Cadia' to better represent the broader Cadian military identity rather than a single regiment. Updated Regiment-related constructive error text and condition labels accordingly. Existing unit names, IDs, costs, loadouts, visibility logic, Command Squad structure, and validation semantics are unchanged.\n\nREV4 CADIAN SHOCK TROOPS LOADOUT TEST\nImplemented the complete player-facing Cadian Shock Troops loadout using a compressed final-state model: Cadian Sergeant; four fixed Lasguns; two paid special-weapon-capable Lasgun models; one independent free special-weapon-capable model; and a mandatory branch between two additional free special-weapon-capable models or one Heavy Weapons Team. This is a focused navigation test. Death Korps of Krieg and Mordian Iron Guard detailed Troop loadouts remain deferred.\n\nREV5 CADIAN MILITARY-JARGON PRESENTATION\nBaked the approved Cadian Shock Troops presentation labels. Loadout now contains Sergeant, Cadian Shock Troopers 2-5, 6, and 7. The independent free specialist is presented under Weapon Specialist as Cadian Shock Trooper 8. The remaining branch is presented as Special Weapons Team / Heavy Weapons Team, with Cadian Shock Troopers 9-10 under Special Weapons Team or the Heavy Weapons Team weapon choice. Existing selection IDs, costs, defaults, and legality logic are unchanged.\n\nREV6 WEAPON SPECIALIST PRESENTATION\nCollapsed the redundant Weapon Specialist wrapper. The free specialist now appears directly in Loadout after Cadian Shock Trooper 7, labeled Weapon Specialist. The obsolete presentation-wrapper object was removed; all actual choice/option IDs are preserved. Special Weapons Team / Heavy Weapons Team remains the next top-level section. Costs, defaults, and legality logic are unchanged.\n\nREV7 DEATH KORPS AND MORDIAN TROOP LOADOUTS\nImplemented the approved compact troop presentations for Death Korps of Krieg and Mordian Iron Guard. Death Korps uses Watchmaster, Death Korps Guardsman 2-8, and two Weapon Specialist slots. Mordian Iron Guard uses Mordian Sergeant, Mordian Guardsman 2-6, Mordian Guardsman 7, Mordian Guardsman 8, and two Weapon Specialist slots. Mordian Guardsmen 7-8 carry the two paid +10 special-weapon options; the two Weapon Specialist slots are free. All new IDs are deterministic; existing IDs are preserved.\n\nREV8 WEAPON SPECIALIST DEFAULTS\nFor the three Regiment Troops, every player-facing Weapon Specialist slot now omits Lasgun and defaults to Grenade Launcher. This is an intentional listbuilder simplification: Grenade Launcher is a free specialist choice and the Lasgun fallback is not presented for these role-labeled specialists. Paid special-weapon-capable ordinary models retain Lasgun as their default because declining the +10 upgrade is still a meaningful decision. Cadian Special Weapons Team model slots are otherwise unchanged.\n\nREV9 CADIAN SPECIAL WEAPONS TEAM DEFAULTS\nApplied the same dedicated-specialist presentation to Cadian Shock Troopers 9-10 under Special Weapons Team: Lasgun removed, Grenade Launcher defaulted. No other loadout, points, Regiment, Commander, or Command Squad behavior changed.\n\nREV10 TANK COMMANDER / ENGINSEER / COMMISSAR / TEMPESTUS SCIONS\nAdded the next three Leaders and the first Other unit. Tank Commander includes complete turret/hull choices, Vanquisher coaxial dependency, and Paid Wargear. Enginseer Envoy uses its fixed loadout. Commissar uses normal required Troops attachment semantics, does not consume Leader Capacity, and is Rare. Tempestus Scions use the approved compact five-model presentation with Tempestor, two fixed Scions, one paid-capable Scion, one Weapon Specialist, and Paid Wargear. Tempestus Scions also participate in generic Additional Copy Costs as a non-Rare Other unit.\n\nREV11 TANK COMMANDER UI / COMMISSAR ATTACHMENT POINTS\nSimplified Tank Commander Loadout presentation by suppressing redundant Turret/Hull/Sponson group labels. Moved the paid Sponson weapon choice into Loadout directly after the Hull weapon choice while preserving its points costs. Verified and retained Commissar attachment points on all three Regiment Troops; the Commissar remains a normal required-attached Leader.\n\nREV12 KASRKINS\nAdded Kasrkins with Kill Team-inspired player-facing role names: Kasrkin Sergeant, Gunner, and Sharpshooter / Demo Trooper. The decisive source restriction is compiled as a dynamic roster max: one Kasrkin unit per two Cadian Shock Troops, rounded down. Kasrkins safely hide outside Regiments of Cadia and remain constructively invalid if already included when the Regiment changes. As a native non-Rare Other unit, Kasrkins also use Additional Copy Costs.\n\nREV13 TRANSPORTS / VEHICLES / ARTILLERY\nAdded Chimera, Taurox, Leman Russ Battle Tank, Scout Sentinels, Armoured Sentinels, Hellhound, Basilisk, Wyvern, Manticore, Field Ordnance Battery, and Heavy Lascannon Battery. All are native non-Rare Other units and participate in Additional Copy Costs. Vehicle/Infantry semantic categories are applied from the UUS. Sentinel units implement 1-2 model construction with independent model loadouts, per-model Hunter-Killer Missile choices, and Smoke Launchers priced at 10 Points per model. Heavy Lascannon Battery includes the PDF note that it uses Field Ordnance Battery models with the Heavy Lascannon option.\n\nREV15 KRIEG SPECIALISTS\nAdded Death Korps Grenadiers and Death Korps Combat Engineers with approved compact model-slot loadouts, paid wargear, full Explosive Mines text, and hard roster prerequisites/ratio limits.\n\nREV16 DEATH KORPS FIELD ARTILLERY\nAdded Death Korps Field Artillery as an unrestricted Astra Militarum unit, with a four-way artillery loadout and paid Gas Dispersion carrying full rule text.\n\nREV17 COMPLETION PASS\nAdded the three units found missing in the full catalogue-to-skeleton audit: Primaris Psyker, Heavy Weapons Squad, and Minotaur. Primaris Psyker uses the standard required Troops-association pattern; Heavy Weapons Squad uses three independent team weapon slots; Minotaur includes paid APHE Shells with full text.\n\nREV18 AUDIT FIXES\nCorrected the catalogue header revision and completed Additional Copy Costs for Death Korps Grenadiers, Death Korps Combat Engineers, Death Korps Field Artillery, Heavy Weapons Squad, and Minotaur. Death Korps Grenadiers and Death Korps Combat Engineers now use the established safe-hide Regiment presentation for Death Korps of Krieg while retaining their existing hard ratio/prerequisite restrictions. Per review, the Hellhound hull weapon labels and the mandatory Heavy Flamer presentation in Death Korps Combat Engineers are intentionally unchanged.\n\nREV19 POLISH PASS\nStandardized direct unit loadout headings from Loadout to Loadout Options across all 25 affected native units. Added explicit model headers to the three Platoon Commanders, Commissar, Tank Commander, Chimera, Taurox, Leman Russ Battle Tank, Hellhound, Basilisk, Wyvern, Manticore, and Death Korps Field Artillery; presented Heavy Lascannon Team 1-2 as the Heavy Lascannon Battery model-set header; and added explicit model headers to all eight shared Command Squad Officer models. Flattened Kasrkin Gunner and Sharpshooter / Demo Trooper into Loadout Options while preserving the Cadian Special Weapons Team / Heavy Weapons Team branch. Suppressed the remaining Basilisk, Wyvern, and Manticore Hull Weapon group labels while retaining all actual weapon names and mechanics. Standardized fourteen atomic package names to '&', with meaningful-choice-first ordering for Bodyguard packages; corrected Chimera and Taurox Stormbolter to Storm Bolter; standardized Tank Commander and Commissar Rare errors; and standardized the three Regiment Troop host-limit errors. Regiment configuration, safe-hide behavior, Platoon Commander prerequisites, Command Squad Officer architecture, Additional Copy Costs, Kasrkin/Krieg ratios, Sentinel 1-2 arithmetic, Vanquisher coaxial dependencies, vehicle costs, sponsons, Death Korps Combat Engineer Heavy Flamer behavior, and all other rules semantics are unchanged.\n\nREV20 RETROSPECTIVE POLISH PASS\nFinal retrospective pass against the mature cross-faction presentation standard. Replaced the obsolete live Additional Copy Costs Phase 0.1 comment with a current-state description of Other-unit surcharge arithmetic and shared configuration validation. Kasrkins now present Sharpshooter / Demo Trooper as the model name with Hot-Shot Marksman Rifle or Melta Mine & Hot-Shot Laspistol as the visible equipment choice; the obsolete nested one-option Loadout objects are hidden compatibility remnants preserving their IDs. Suppressed redundant one-item Paid Wargear wrappers where the equipment name is already self-identifying, renamed every multi-option vehicle accessory/pintle group to Pintle Weapons, suppressed the Taurox Twin Autocannon double wrapper, and retained self-identifying hull/sponson/coaxial equipment names without redundant slot labels. Heavy Lascannon Battery now separates the Heavy Lascannon Team 1-2 model-set header from its 2x Heavy Lascannon equipment line. Mirrored every applicable vehicle presentation change into Manufactorum Imperium Library V4. All pre-existing IDs, points, costs, defaults, constraints, Regiment behavior, safe-hide logic, Platoon Commander prerequisites, Command Squad Officer architecture, Additional Copy Costs arithmetic, Kasrkin/Krieg ratios, Sentinel model ownership and scaling, Vanquisher coaxial dependencies, vehicle costs, sponson costs, Rare validation, and all other rules semantics remain unchanged.\n\nREV21 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Cadian Shock Troops, Death Korps Of Krieg, and Mordian Iron Guard now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. The Regiment selector continues to control normal availability and the three Troop datasheets are not pooled into a generic Regiment Troop count. All 108 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 18 Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists in this catalogue. All Regiment safe-hide behavior, Platoon Commander prerequisites, Commissar attachments, Kasrkin/Krieg ratio rules, variable-size Sentinel arithmetic, Rare semantics, vehicle/loadout presentation, and other catalogue mechanics remain unchanged.\n\nREV22 CONSTRUCTIVE DEPENDENCY ERRORS\nReplaced the old stock-constraint enforcement on Kasrkins, Death Korps Grenadiers, and Death Korps Combat Engineers with permissive constructive validation. Kasrkin and Death Korps Grenadiers now use ratio_limit validation bands rather than dynamic hard roster maxima; each validates one specialist unit per two supporting Regiment Troops through 11 supporting units. Death Korps Combat Engineers now use prerequisite_limit validation rather than a max-0/set-99 gate. The three Platoon Commanders were audited and already used the intended permissive + constructive Regimental prerequisite pattern, so they were left unchanged. Existing Regiment safe-hide behavior, wrong-Regiment errors, visible source rules, points, loadouts, Additional Copy Costs, categories, and all other catalogue semantics remain unchanged.",
     "categoryEntries": [
       {
         "name": "May Attach To: Commissar",

@@ -5,7 +5,7 @@
     "name": "Adepta Sororitas 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 17,
-    "revision": 13,
+    "revision": 15,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -1371,7 +1371,308 @@
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
-        ]
+        ],
+        "rules": [
+          {
+            "name": "Sisters Novitiates Support Requirement",
+            "id": "a715-d16b-ee14-d9b7",
+            "hidden": false,
+            "description": "You may only include one SISTERS NOVITIATES unit for each BATTLE SISTERS unit in your army list.",
+            "noindex": false
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Sisters Novitiates. Your army may include only one Sisters Novitiates unit for each Battle Sisters unit. Add enough Battle Sisters units to support the selected Sisters Novitiates, or remove excess Sisters Novitiates.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a640-fb57-5ed1-7465",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Battle Sisters"
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "17f6-e7e1-073e-c662",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Sisters Novitiates"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Sisters Novitiates. Your army may include only one Sisters Novitiates unit for each Battle Sisters unit. Add enough Battle Sisters units to support the selected Sisters Novitiates, or remove excess Sisters Novitiates.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a640-fb57-5ed1-7465",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Battle Sisters"
+              },
+              {
+                "type": "lessThan",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a640-fb57-5ed1-7465",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Battle Sisters"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "17f6-e7e1-073e-c662",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Sisters Novitiates"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Sisters Novitiates. Your army may include only one Sisters Novitiates unit for each Battle Sisters unit. Add enough Battle Sisters units to support the selected Sisters Novitiates, or remove excess Sisters Novitiates.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a640-fb57-5ed1-7465",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Battle Sisters"
+              },
+              {
+                "type": "lessThan",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a640-fb57-5ed1-7465",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Battle Sisters"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "17f6-e7e1-073e-c662",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Sisters Novitiates"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Sisters Novitiates. Your army may include only one Sisters Novitiates unit for each Battle Sisters unit. Add enough Battle Sisters units to support the selected Sisters Novitiates, or remove excess Sisters Novitiates.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a640-fb57-5ed1-7465",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Battle Sisters"
+              },
+              {
+                "type": "lessThan",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a640-fb57-5ed1-7465",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Battle Sisters"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "17f6-e7e1-073e-c662",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Sisters Novitiates"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Sisters Novitiates. Your army may include only one Sisters Novitiates unit for each Battle Sisters unit. Add enough Battle Sisters units to support the selected Sisters Novitiates, or remove excess Sisters Novitiates.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a640-fb57-5ed1-7465",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Battle Sisters"
+              },
+              {
+                "type": "lessThan",
+                "value": 5,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a640-fb57-5ed1-7465",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Battle Sisters"
+              },
+              {
+                "type": "atLeast",
+                "value": 5,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "17f6-e7e1-073e-c662",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Sisters Novitiates"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Sisters Novitiates. Your army may include only one Sisters Novitiates unit for each Battle Sisters unit. Add enough Battle Sisters units to support the selected Sisters Novitiates, or remove excess Sisters Novitiates.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 5,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a640-fb57-5ed1-7465",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Battle Sisters"
+              },
+              {
+                "type": "lessThan",
+                "value": 6,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a640-fb57-5ed1-7465",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Battle Sisters"
+              },
+              {
+                "type": "atLeast",
+                "value": 6,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "17f6-e7e1-073e-c662",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Sisters Novitiates"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Too many Sisters Novitiates. Your army may include only one Sisters Novitiates unit for each Battle Sisters unit. Add enough Battle Sisters units to support the selected Sisters Novitiates, or remove excess Sisters Novitiates.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 6,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a640-fb57-5ed1-7465",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Battle Sisters"
+              },
+              {
+                "type": "lessThan",
+                "value": 7,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "a640-fb57-5ed1-7465",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Battle Sisters"
+              },
+              {
+                "type": "atLeast",
+                "value": 7,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "17f6-e7e1-073e-c662",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Sisters Novitiates"
+              }
+            ]
+          }
+        ],
+        "comment": "REV14 NOVITIATE RATIO LIMIT TEST: implements the source requirement of one Sisters Novitiates unit per Battle Sisters unit using permissive selection plus constructive custom validation, rather than a stock roster maximum. Seven mutually exclusive Battle Sisters support bands (0-6) ensure only one ratio error can fire, with the final band flagging 7+ Sisters Novitiates when supported by only 6 Battle Sisters. The existing independent Troop copy-cost family, points, categories, and intentionally unimplemented Novitiate loadout remain unchanged."
       },
       {
         "type": "unit",
@@ -1989,12 +2290,12 @@
                   {
                     "name": "​",
                     "id": "925e-bfb2-50a7-a3b0",
-                    "hidden": false,
+                    "hidden": true,
                     "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -2002,7 +2303,7 @@
                       },
                       {
                         "type": "max",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -2014,18 +2315,17 @@
                         "type": "upgrade",
                         "import": true,
                         "name": "4x Bolt Pistol",
-                        "hidden": false,
+                        "hidden": true,
                         "id": "d78c-5002-f7f4-fb2c",
                         "sortIndex": 1
                       }
-                    ],
-                    "defaultSelectionEntryId": "d78c-5002-f7f4-fb2c"
+                    ]
                   },
                   {
                     "name": "​",
                     "id": "4592-fd3e-a306-ba0c",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -2048,7 +2348,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "4x Anointed Halberd",
+                        "name": "4x Anointed Halberd & Bolt Pistol",
                         "hidden": false,
                         "id": "da3b-abb1-992c-f2ab",
                         "sortIndex": 1
@@ -2056,7 +2356,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "4x Hallowed Mace",
+                        "name": "4x Hallowed Mace & Bolt Pistol",
                         "hidden": false,
                         "id": "ff89-1418-0bce-591c",
                         "sortIndex": 2
@@ -2119,7 +2419,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Sacresant Superior is the canonical pistol specialist, defaulting to Inferno Pistol, with Hand Flamer / Plasma Pistol alternatives. The four remaining Sacresants use one shared common-case Halberd / Mace squad choice. Simulacrum Imperialis is unit-level Paid Wargear with full rule text.",
+        "comment": "LOADOUT UI: Sacresant Superior is the canonical pistol specialist, defaulting to Inferno Pistol, with Hand Flamer / Plasma Pistol alternatives. Celestian Sacresants 2-5 use one mandatory atomic squad package: 4x Anointed Halberd & Bolt Pistol or 4x Hallowed Mace & Bolt Pistol, so New Recruit exports each model set as one coherent loadout line. The former standalone 4x Bolt Pistol object is retained as an inert hidden compatibility shell preserving its existing IDs. Simulacrum Imperialis is unit-level Paid Wargear with full rule text.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -11866,6 +12166,6 @@
       }
     ],
     "authorName": "40k Reforged Homebrew",
-    "comment": "PHASE 0.1 STRUCTURAL SHELL\nScope intentionally limited to Unit Name, Unit Class, Unit Category, Points Cost, and Attachments. Imagifier uses the nested Additional Leader pattern. Loadouts, Additional Copy Costs, unit-size UI, ratio restrictions, and other non-attachment list-building mechanics are intentionally deferred.\n\nPHASE 0.2 LEADER LOADOUT PASS\nEquipment added only for Canoness, Palatine, Dogmata, Imagifier, and Dialogus. Imagifier remains nested as Additional Leader. No non-Leader loadouts added.\n\nPHASE 0.3 BATTLE SISTERS LOADOUT PASS\nAdded equipment only for Battle Sisters. Existing Leader loadouts and Imagifier Additional Leader structure are preserved.\n\nPHASE 0.4 ELITES / DOMINIONS / PARAGONS LOADOUT PASS\nAdded loadouts for Sisters Repentia, Celestine, Hospitaller, Celestian Sacresants, Dominions, Paragon Warsuits, and Arco-Flagellants. Sisters Novitiates remain intentionally untouched.\n\nPHASE 0.5 ZEPHYRIM / VEHICLES / RETRIBUTORS LOADOUT PASS\nCorrected Repentia Superior placement. Added Zephyrim, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and Retributors. Seraphim remain intentionally untouched.\n\nPHASE 0.5A ZEPHYRIM SOURCE CONFIRMATION\nZephyrim presentation confirmed against the clarified source: Zephyrim Superior is the free Plasma Pistol / Pennant model; Zephyrim 2-5 retain Bolt Pistol + Power Sword with paid Hand Flamer / Inferno Pistol upgrades. Seraphim remain untouched.\n\nPHASE 0.5B PAID WARGEAR / RETRIBUTOR UI FIX\nAll direct Paid Wargear entries now use optional max-1 selection groups instead of quantity spinners. Retributors 2-5 no longer auto-select a heavy weapon, preventing the roster from opening in an illegal 4x default state.\n\nPHASE 0.5C RETRIBUTOR NONE / VALIDATION UI\nRetributors 2-5 now use optional 0/1 heavy-weapon lists, allowing New Recruit to display its built-in (None) state. A hidden semantic category counts real heavy-weapon assignments and a custom error explains when fewer than four models are configured.\n\nREV9 CONSTRUCTIVE ERROR + UNIVERSAL SYSTEM MIGRATION\nAdepta Sororitas now use Game System revision 11. Added the standard Additional Copy Costs subsystem for all 14 native non-Rare Other units, including Configuration safeguards and per-unit reminder links. Canoness, Palatine, Dogmata, and Dialogus use constructive missing-attachment validation; Battle Sisters, Dominions, and Retributors use constructive external-Leader host limits; Canoness, Celestine, and Hospitaller use constructive Rare limits. Imagifier remains a nested Countless Additional Leader and does not consume the external Leader association slot. Retributor heavy-weapon validation is preserved unchanged. Sisters Novitiates and Seraphim remain intentionally without loadout implementations.\n\nREV10 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, categories, Imagifier nesting, Retributor heavy-weapon validation, or intentional empty-unit structures were otherwise changed.\n\nREV11 POLISH PASS\nAdded explicit model headers to Canoness, Palatine, Dogmata, Dialogus, Celestine, Hospitaller, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and the shared Imagifier; added an Arco-Flagellants 1-10 grouped header; flattened Battle Sisters, Dominions, and Retributors specialist models into Loadout Options; renamed their Additional Leader groups to Attached Imagifier; standardized their external-Leader errors; converted all nine Superior combi-weapon packages to meaningful-choice-first '&' grammar; renamed Paragon Warsuits Additional Models to Additional Model; named the two Dominion grenade slots Grenade and Additional Grenade; and standardized Canoness, Celestine, and Hospitaller Rare errors. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. Retributor heavy-weapon validation, Imagifier nesting, points, Additional Copy Costs, categories, attachment mechanics, and all other rules semantics remain unchanged.\n\nREV12 RETROSPECTIVE POLISH PASS\nRevisited Adepta Sororitas against the final cross-faction presentation standard. Corrected the live Sisters Repentia authoring note to reflect Repentia Superior as the Neural Whips model; modernized the shared Imagifier comment to Nested Attached Leader terminology; and updated the live Additional Copy Costs comment to version-agnostic shared Game System wording. Historical phase/revision provenance is preserved unchanged. All IDs, SelectionEntry names, loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, Additional Copy Costs arithmetic, categories, and all other rules semantics remain unchanged.\n\nREV13 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Battle Sisters and Sisters Novitiates now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 84 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 14 native Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists, and no Counts As relationship merges the two Troop datasheets. Imagifier remains a nested Countless attached Leader and does not participate in Troop duplicate accounting. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. All loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, categories, and other catalogue semantics remain unchanged."
+    "comment": "PHASE 0.1 STRUCTURAL SHELL\nScope intentionally limited to Unit Name, Unit Class, Unit Category, Points Cost, and Attachments. Imagifier uses the nested Additional Leader pattern. Loadouts, Additional Copy Costs, unit-size UI, ratio restrictions, and other non-attachment list-building mechanics are intentionally deferred.\n\nPHASE 0.2 LEADER LOADOUT PASS\nEquipment added only for Canoness, Palatine, Dogmata, Imagifier, and Dialogus. Imagifier remains nested as Additional Leader. No non-Leader loadouts added.\n\nPHASE 0.3 BATTLE SISTERS LOADOUT PASS\nAdded equipment only for Battle Sisters. Existing Leader loadouts and Imagifier Additional Leader structure are preserved.\n\nPHASE 0.4 ELITES / DOMINIONS / PARAGONS LOADOUT PASS\nAdded loadouts for Sisters Repentia, Celestine, Hospitaller, Celestian Sacresants, Dominions, Paragon Warsuits, and Arco-Flagellants. Sisters Novitiates remain intentionally untouched.\n\nPHASE 0.5 ZEPHYRIM / VEHICLES / RETRIBUTORS LOADOUT PASS\nCorrected Repentia Superior placement. Added Zephyrim, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and Retributors. Seraphim remain intentionally untouched.\n\nPHASE 0.5A ZEPHYRIM SOURCE CONFIRMATION\nZephyrim presentation confirmed against the clarified source: Zephyrim Superior is the free Plasma Pistol / Pennant model; Zephyrim 2-5 retain Bolt Pistol + Power Sword with paid Hand Flamer / Inferno Pistol upgrades. Seraphim remain untouched.\n\nPHASE 0.5B PAID WARGEAR / RETRIBUTOR UI FIX\nAll direct Paid Wargear entries now use optional max-1 selection groups instead of quantity spinners. Retributors 2-5 no longer auto-select a heavy weapon, preventing the roster from opening in an illegal 4x default state.\n\nPHASE 0.5C RETRIBUTOR NONE / VALIDATION UI\nRetributors 2-5 now use optional 0/1 heavy-weapon lists, allowing New Recruit to display its built-in (None) state. A hidden semantic category counts real heavy-weapon assignments and a custom error explains when fewer than four models are configured.\n\nREV9 CONSTRUCTIVE ERROR + UNIVERSAL SYSTEM MIGRATION\nAdepta Sororitas now use Game System revision 11. Added the standard Additional Copy Costs subsystem for all 14 native non-Rare Other units, including Configuration safeguards and per-unit reminder links. Canoness, Palatine, Dogmata, and Dialogus use constructive missing-attachment validation; Battle Sisters, Dominions, and Retributors use constructive external-Leader host limits; Canoness, Celestine, and Hospitaller use constructive Rare limits. Imagifier remains a nested Countless Additional Leader and does not consume the external Leader association slot. Retributor heavy-weapon validation is preserved unchanged. Sisters Novitiates and Seraphim remain intentionally without loadout implementations.\n\nREV10 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, categories, Imagifier nesting, Retributor heavy-weapon validation, or intentional empty-unit structures were otherwise changed.\n\nREV11 POLISH PASS\nAdded explicit model headers to Canoness, Palatine, Dogmata, Dialogus, Celestine, Hospitaller, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and the shared Imagifier; added an Arco-Flagellants 1-10 grouped header; flattened Battle Sisters, Dominions, and Retributors specialist models into Loadout Options; renamed their Additional Leader groups to Attached Imagifier; standardized their external-Leader errors; converted all nine Superior combi-weapon packages to meaningful-choice-first '&' grammar; renamed Paragon Warsuits Additional Models to Additional Model; named the two Dominion grenade slots Grenade and Additional Grenade; and standardized Canoness, Celestine, and Hospitaller Rare errors. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. Retributor heavy-weapon validation, Imagifier nesting, points, Additional Copy Costs, categories, attachment mechanics, and all other rules semantics remain unchanged.\n\nREV12 RETROSPECTIVE POLISH PASS\nRevisited Adepta Sororitas against the final cross-faction presentation standard. Corrected the live Sisters Repentia authoring note to reflect Repentia Superior as the Neural Whips model; modernized the shared Imagifier comment to Nested Attached Leader terminology; and updated the live Additional Copy Costs comment to version-agnostic shared Game System wording. Historical phase/revision provenance is preserved unchanged. All IDs, SelectionEntry names, loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, Additional Copy Costs arithmetic, categories, and all other rules semantics remain unchanged.\n\nREV13 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Battle Sisters and Sisters Novitiates now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 84 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 14 native Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists, and no Counts As relationship merges the two Troop datasheets. Imagifier remains a nested Countless attached Leader and does not participate in Troop duplicate accounting. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. All loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, categories, and other catalogue semantics remain unchanged.\n\nREV14 NOVITIATE RATIO LIMIT TEST\nAdded the source restriction allowing no more than one Sisters Novitiates unit for each Battle Sisters unit. The restriction is intentionally permissive at selection time and enforced through a custom player-facing ratio error rather than a New Recruit stock max-constraint error. A visible Sisters Novitiates Support Requirement rule records the source wording. Battle Sisters and Sisters Novitiates remain separate Troop copy-cost families; points, categories, loadouts, attachments, Additional Copy Costs, and all unrelated catalogue semantics are unchanged.\n\nREV15 CELESTIAN SACRESANTS EXPORT PACKAGE\nCelestian Sacresants 2-5 now present one mandatory combined squad-loadout choice: 4x Anointed Halberd & Bolt Pistol or 4x Hallowed Mace & Bolt Pistol. The previous standalone 4x Bolt Pistol presentation is retained only as an inert hidden compatibility shell. No points, unit categories, copy-cost behavior, Paid Wargear, Superior loadout, or other unit semantics changed."
   }
 }
