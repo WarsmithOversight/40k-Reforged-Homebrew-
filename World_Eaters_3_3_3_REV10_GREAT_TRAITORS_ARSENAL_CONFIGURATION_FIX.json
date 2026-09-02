@@ -5,7 +5,7 @@
     "name": "World Eaters 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 17,
-    "revision": 7,
+    "revision": 10,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -42,8 +42,63 @@
             "noindex": false
           }
         ],
-        "comment": "GREAT TRAITORS' ARSENAL REV7: live opt-in switch. When selected, the reusable Chaos Space Marines Arsenal library is exposed under the dedicated Great Traitors’ Arsenal army-list section. When not selected, unchosen Arsenal units are hidden; any already-selected Arsenal unit remains visible and reports a constructive error until this switch is restored or the imported unit is removed.",
-        "sortIndex": 2
+        "comment": "REV10 CONFIGURATION: automatically present in every roster. The player chooses Not Included (default) or Included. Included exposes the Great Traitors' Arsenal units. If the player switches back to Not Included while an Arsenal unit is already selected, that unit remains visible and reports a constructive error until removed or the Arsenal is set back to Included.",
+        "sortIndex": 2,
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "1",
+            "field": "defaultAmount"
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "​",
+            "id": "cfdc-5af3-e956-98d1",
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {
+                "type": "min",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "ab9d-7965-7d68-254c",
+                "includeChildSelections": false
+              },
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "1ba7-88bb-046b-6355",
+                "includeChildSelections": false
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Not Included",
+                "hidden": false,
+                "id": "3dd4-dc4f-36e6-3a01",
+                "sortIndex": 1
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Included",
+                "hidden": false,
+                "id": "b13f-13b1-aa49-f4ea",
+                "sortIndex": 2
+              }
+            ],
+            "defaultSelectionEntryId": "3dd4-dc4f-36e6-3a01",
+            "comment": "REV10 CONFIGURATION STATE: Great Traitors' Arsenal is always present under Configuration. Not Included is the default; Included exposes the Arsenal unit section."
+          }
+        ]
       },
       {
         "type": "upgrade",
@@ -10016,7 +10071,7 @@
             ]
           }
         ],
-        "comment": "FRESH INITIATES COST CONTRACT: when this exact KHORNE BERZERKERS instance is associated with BUTCHER SURGEON, its Phase 0.1 base Points cost is set to 0. Confirmed future behavior: every paid wargear/configuration cost belonging to this attached unit must also resolve to 0 while Fresh Initiates applies. Phase 0.1 has no paid Berzerker wargear nodes yet; when those enter scope, each descendant Points cost must use the same Butcher Surgeon association condition rather than charging separately.\nLOADOUT UI: Berzerker Champion is the canonical Plasma Pistol model; Berzerker 2 is the canonical Eviscerator model; Berzerkers 3-5 carry the ordinary loadout. Free specialist replacements are represented directly rather than offering ordinary fallback states. Fresh Initiates also zeros the Icon of Khorne cost.\nRETROSPECTIVE POLISH: fixed multi-weapon model packages are presented as separate visible weapon lines. The existing package entry IDs were retained for the first component; new deterministic IDs were added only for the second fixed component. No loadout legality or equipment semantics changed.\nTROOP COPY-COST EXEMPTION REV6: when this Khorne Berzerkers instance is attached to Butcher Surgeon and Fresh Initiates sets it to 0 Points, it is also excluded from the effective Troop Additional Copy Costs count. The centralized Troops ledger owns the corresponding surcharge refund.",
+        "comment": "REV9 LOADOUT CLEANUP: the five-model Khorne Berzerkers unit is represented as three final-state blocks: Berzerker Champion with Plasma Pistol & Berserker Chainblade; Berzerker 2 with Eviscerator & Bolt Pistol; and Berzerker 3-5 with Berserker Chainblade & Bolt Pistol for the remaining three models. The three-model package exports canonically as 3x Berserker Chainblade & Bolt Pistol. Icon of Khorne, points, categories, attachments, copy costs, and unrelated mechanics are unchanged.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -10057,23 +10112,24 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Plasma Pistol",
+                        "name": "Plasma Pistol & Berserker Chainblade",
                         "hidden": false,
                         "id": "497f-98b3-f489-3b04",
                         "sortIndex": 1
                       }
                     ],
-                    "defaultSelectionEntryId": "497f-98b3-f489-3b04"
+                    "defaultSelectionEntryId": "497f-98b3-f489-3b04",
+                    "comment": "REV9: atomic fixed Champion loadout."
                   },
                   {
                     "name": "​",
                     "id": "1d2b-7d9e-11aa-9751",
-                    "hidden": false,
+                    "hidden": true,
                     "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -10082,7 +10138,7 @@
                       },
                       {
                         "type": "max",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -10095,12 +10151,13 @@
                         "type": "upgrade",
                         "import": true,
                         "name": "Berserker Chainblade",
-                        "hidden": false,
+                        "hidden": true,
                         "id": "e223-2302-4d2a-db76",
-                        "sortIndex": 1
+                        "sortIndex": 1,
+                        "comment": "LEGACY ID SHELL: standalone Berserker Chainblade folded into the Champion atomic loadout in REV9."
                       }
                     ],
-                    "defaultSelectionEntryId": "e223-2302-4d2a-db76"
+                    "comment": "LEGACY ID SHELL: standalone Berserker Chainblade folded into the Champion atomic loadout in REV9."
                   }
                 ]
               },
@@ -10110,41 +10167,6 @@
                 "hidden": false,
                 "sortIndex": 2,
                 "selectionEntryGroups": [
-                  {
-                    "name": "​",
-                    "id": "61d8-9a0f-8299-e2b3",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "efcb-0122-c9d3-17f4"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "a8a9-83ac-99ba-a774"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Bolt Pistol",
-                        "hidden": false,
-                        "id": "5b61-cd48-3eaf-5a22",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "5b61-cd48-3eaf-5a22"
-                  },
                   {
                     "name": "​",
                     "id": "686e-9617-3df7-4823",
@@ -10174,57 +10196,59 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Eviscerator",
+                        "name": "Eviscerator & Bolt Pistol",
                         "hidden": false,
                         "id": "4326-df8a-a669-bee9",
                         "sortIndex": 1
                       }
                     ],
-                    "defaultSelectionEntryId": "4326-df8a-a669-bee9"
-                  }
-                ]
-              },
-              {
-                "name": "Berzerkers 3-5",
-                "id": "2f90-5fe4-6e41-f3ea",
-                "hidden": false,
-                "sortIndex": 3,
-                "selectionEntryGroups": [
+                    "defaultSelectionEntryId": "4326-df8a-a669-bee9",
+                    "comment": "REV9: atomic fixed Berzerker 2 loadout."
+                  },
                   {
                     "name": "​",
-                    "id": "fe88-0b4a-97b1-f71e",
-                    "hidden": false,
+                    "id": "61d8-9a0f-8299-e2b3",
+                    "hidden": true,
                     "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "ed0b-0b0d-2b95-5a16"
+                        "id": "efcb-0122-c9d3-17f4"
                       },
                       {
                         "type": "max",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "37be-9edc-7c39-0ab5"
+                        "id": "a8a9-83ac-99ba-a774"
                       }
                     ],
                     "selectionEntries": [
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "3x Bolt Pistol",
-                        "hidden": false,
-                        "id": "fb3b-e8df-8788-d088",
-                        "sortIndex": 1
+                        "name": "Bolt Pistol",
+                        "hidden": true,
+                        "id": "5b61-cd48-3eaf-5a22",
+                        "sortIndex": 1,
+                        "comment": "LEGACY ID SHELL: standalone Bolt Pistol folded into the Berzerker 2 atomic loadout in REV9."
                       }
                     ],
-                    "defaultSelectionEntryId": "fb3b-e8df-8788-d088"
-                  },
+                    "comment": "LEGACY ID SHELL: standalone Bolt Pistol folded into the Berzerker 2 atomic loadout in REV9."
+                  }
+                ]
+              },
+              {
+                "name": "Berzerker 3-5",
+                "id": "2f90-5fe4-6e41-f3ea",
+                "hidden": false,
+                "sortIndex": 3,
+                "selectionEntryGroups": [
                   {
                     "name": "​",
                     "id": "993d-ebea-0d1d-6c46",
@@ -10250,19 +10274,58 @@
                         "includeChildSelections": false
                       }
                     ],
+                    "defaultSelectionEntryId": "f336-e2d1-7ea1-ee10",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Berserker Chainblade & Bolt Pistol",
+                        "hidden": false,
+                        "id": "f336-e2d1-7ea1-ee10",
+                        "type": "selectionEntry",
+                        "targetId": "7e65-84d3-a621-f6e9",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "comment": "REV9: concise editor label links to the canonical three-model export package '3x Berserker Chainblade & Bolt Pistol'."
+                  },
+                  {
+                    "name": "​",
+                    "id": "fe88-0b4a-97b1-f71e",
+                    "hidden": true,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 0,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ed0b-0b0d-2b95-5a16"
+                      },
+                      {
+                        "type": "max",
+                        "value": 0,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "37be-9edc-7c39-0ab5"
+                      }
+                    ],
                     "selectionEntries": [
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Berserker Chainblade",
-                        "hidden": false,
-                        "id": "f336-e2d1-7ea1-ee10",
-                        "sortIndex": 1
+                        "name": "3x Bolt Pistol",
+                        "hidden": true,
+                        "id": "fb3b-e8df-8788-d088",
+                        "sortIndex": 1,
+                        "comment": "LEGACY ID SHELL: former separate 3x Bolt Pistol line folded into the three-model atomic package in REV9."
                       }
                     ],
-                    "defaultSelectionEntryId": "f336-e2d1-7ea1-ee10"
+                    "comment": "LEGACY ID SHELL: former separate 3x Bolt Pistol line folded into the three-model atomic package in REV9."
                   }
-                ]
+                ],
+                "comment": "REV9: Berzerker 3-5 represents the three remaining ordinary models as one fixed combined package. The canonical shared target carries the true 3x export quantity."
               }
             ]
           },
@@ -10463,23 +10526,24 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Skullsmasher Mace",
+                        "name": "Skullsmasher Mace & Chainblade",
                         "hidden": false,
                         "id": "0174-a902-a0d5-a258",
                         "sortIndex": 1
                       }
                     ],
-                    "defaultSelectionEntryId": "0174-a902-a0d5-a258"
+                    "defaultSelectionEntryId": "0174-a902-a0d5-a258",
+                    "comment": "REV8: atomic final-state loadout for the Jakhal Dishonoured. The source replacement grants both the Skullsmasher Mace and Chainblade together."
                   },
                   {
                     "name": "​",
                     "id": "f62f-1066-0e37-62b1",
-                    "hidden": false,
+                    "hidden": true,
                     "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -10488,7 +10552,7 @@
                       },
                       {
                         "type": "max",
-                        "value": 1,
+                        "value": 0,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -10501,12 +10565,13 @@
                         "type": "upgrade",
                         "import": true,
                         "name": "Chainblade",
-                        "hidden": false,
+                        "hidden": true,
                         "id": "50dc-dec2-c6d3-f3fe",
-                        "sortIndex": 1
+                        "sortIndex": 1,
+                        "comment": "LEGACY ID SHELL: standalone Chainblade line folded into the atomic Skullsmasher Mace & Chainblade loadout in REV8."
                       }
                     ],
-                    "defaultSelectionEntryId": "50dc-dec2-c6d3-f3fe"
+                    "comment": "LEGACY ID SHELL: standalone Chainblade line folded into the atomic Skullsmasher Mace & Chainblade loadout in REV8."
                   }
                 ]
               },
@@ -10524,7 +10589,7 @@
                     "constraints": [
                       {
                         "type": "min",
-                        "value": 1,
+                        "value": 8,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -10532,26 +10597,36 @@
                       },
                       {
                         "type": "max",
-                        "value": 1,
+                        "value": 8,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
                         "id": "ddfe-527a-0809-d087"
                       }
                     ],
-                    "selectionEntries": [
+                    "defaultSelectionEntryId": "729f-5636-3101-02f8",
+                    "entryLinks": [
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "8x Jakhal Chainblades",
+                        "name": "Jakhal Chainblades",
                         "hidden": false,
                         "id": "729f-5636-3101-02f8",
-                        "sortIndex": 1
+                        "type": "selectionEntry",
+                        "targetId": "f34d-2b07-a027-13a8",
+                        "sortIndex": 1,
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "8",
+                            "field": "defaultAmount"
+                          }
+                        ]
                       }
                     ],
-                    "defaultSelectionEntryId": "729f-5636-3101-02f8"
+                    "comment": "REV8: genuine quantity-eight equipment selection. The shared target is canonically named Jakhal Chainblades; New Recruit supplies the 8x quantity from selection amount."
                   }
-                ]
+                ],
+                "comment": "REV8: Jakhals 3-10 are the eight ordinary models. Their Jakhal Chainblades are now represented as a true quantity of 8 rather than encoding '8x' into the upgrade name."
               }
             ]
           },
@@ -10606,7 +10681,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: the free replacement models are recorded directly as Jakhal Pack Leader with Mauler Chainblade and Jakhal Dishonoured with separate fixed Skullsmasher Mace and Chainblade lines; Jakhals 3-10 keep the ordinary loadout.",
+        "comment": "REV8 LOADOUT CLEANUP: Jakhal Pack Leader remains Mauler Chainblade. Jakhal Dishonoured now uses one atomic Skullsmasher Mace & Chainblade loadout. Jakhals 3-10 use a canonical shared Jakhal Chainblades object at genuine quantity 8. Icon of Khorne, points, categories, copy-cost behavior, and all unrelated mechanics are unchanged.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -11773,7 +11848,7 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "PHASE 0.1 WORLD EATERS. Great Traitors’ Arsenal is implemented as an opt-in Configuration selection, unchecked by default. The external Chaos Space Marine Arsenal library is intentionally NOT represented by an unresolved catalogueLink in this file. When that reusable library is generated, add a catalogueLink with importRootEntries=false, then add World Eaters-local entryLinks for Arsenal units whose hidden state is controlled by the Great Traitors’ Arsenal configuration selection. Imported units should retain their normal Leader/Troop/Other categories and list-building constraints.\nFresh Initiates is mechanically implemented for the current Khorne Berzerkers base Points cost. Future paid wargear/configuration descendants on that attached host must also be set to 0 under the same Butcher Surgeon association condition.\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nWorld Eaters now use Game System revision 11. Great Traitors’ Arsenal remains a placeholder. Chaos Lord Lightning Claws use the two-single-claw shorthand. Khorne Berzerkers and Jakhals use canonical specialist model identities. Red Butchers and Eightbound use optional third-model sizing. Eightbound Heavy Chain Glaive appears on every model and disappears from the others once selected. Fresh Initiates zeros both the Berzerker root cost and Icon of Khorne. All native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR UX PASS\nMandatory Leader attachments, host attachment capacity, Rare limits, and Additional Copy Costs configuration safeguards now use the standardized constructive-error patterns. Great Traitors’ Arsenal remains a Phase 0.1 placeholder pending the reusable Chaos Space Marine Arsenal library. Glorious Jump Pack retains a temporary player-facing error because its required Raptors host is not yet available.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader attachment behavior, Great Traitors’ Arsenal placeholder, Glorious Jump Pack placeholder logic, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 RETROSPECTIVE POLISH PASS\nRevisited World Eaters against the presentation standards established by the completed cross-faction Polish Pass. Added explicit model headers to World Eaters Terminator Chaos Lord, World Eaters Juggernaut Chaos Lord, World Eaters Chaos Lord, Butcher Surgeon, Sage of Slaughter, Slaughterbound, and Khârne, the Betrayer. Standardized the Terminator Chaos Lord ranged packages to 2x count style and meaningful-choice-first '&' grammar. Split the fixed multi-weapon packages on Berzerker Champion, Berzerker 2, Berzerkers 3-5, and Jakhal Dishonoured into separate visible weapon lines while preserving existing package IDs for the first component. Renamed Red Butchers and Eightbound Additional Models to Additional Model. Moved Exalted Eightbound from Paid Wargear into Unit Upgrade. Standardized the Butcher Surgeon and Khârne Rare errors plus Khorne Berzerkers and Eightbound host-limit errors. Great Traitors’ Arsenal, the incomplete Chaos Space Marine host ecosystem, Glorious Jump Pack/Raptors placeholder behavior, Lightning Claw shorthand, Fresh Initiates mechanics, points, categories, associations, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV6 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Khorne Berzerkers and Jakhals now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. Red Butchers and Eightbound retain their previous Other 1 / 2 / 3 arithmetic unchanged. FRESH INITIATES EXCEPTION: the Khorne Berzerkers unit actually attached to the Rare Butcher Surgeon adds 0 Points to the Army List and is excluded from the effective Troop copy count. This is implemented centrally as one +20 refund at the relevant threshold while the Butcher Surgeon association exists. All unrelated unit rules, loadouts, attachments, Rare behavior, and Arsenal placeholders are unchanged.\n\nREV7 — GREAT TRAITORS' ARSENAL PILOT\nImplemented the reusable Great Traitors' Arsenal architecture against the new Chaos Space Marines 3.3.5 Arsenal Library V1. The existing opt-in Configuration selection now exposes 28 portable generic CSM units under the dedicated visible Great Traitors’ Arsenal category, leaving native World Eaters Leader / Troop / Other sections at the top. Arsenal choices remain hidden while the switch is off unless already selected, in which case they stay visible and report a constructive error. The host Additional Copy Costs entry now accounts for imported CSM Troops and Other units, including Replenished Ranks and all existing mode-aware Daemonkin refunds. World Eaters Chaos Lord can now attach to imported Legionaries, Cultists, and Chosen; Glorious Jump Pack is fully implemented and instead attaches to imported Raptors. No native World Eaters IDs were regenerated. Existing Fresh Initiates, native copy-cost arithmetic, loadouts, Rare semantics, and unrelated rules remain unchanged.",
+    "comment": "PHASE 0.1 WORLD EATERS. Great Traitors’ Arsenal is implemented as an opt-in Configuration selection, unchecked by default. The external Chaos Space Marine Arsenal library is intentionally NOT represented by an unresolved catalogueLink in this file. When that reusable library is generated, add a catalogueLink with importRootEntries=false, then add World Eaters-local entryLinks for Arsenal units whose hidden state is controlled by the Great Traitors’ Arsenal configuration selection. Imported units should retain their normal Leader/Troop/Other categories and list-building constraints.\nFresh Initiates is mechanically implemented for the current Khorne Berzerkers base Points cost. Future paid wargear/configuration descendants on that attached host must also be set to 0 under the same Butcher Surgeon association condition.\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nWorld Eaters now use Game System revision 11. Great Traitors’ Arsenal remains a placeholder. Chaos Lord Lightning Claws use the two-single-claw shorthand. Khorne Berzerkers and Jakhals use canonical specialist model identities. Red Butchers and Eightbound use optional third-model sizing. Eightbound Heavy Chain Glaive appears on every model and disappears from the others once selected. Fresh Initiates zeros both the Berzerker root cost and Icon of Khorne. All native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR UX PASS\nMandatory Leader attachments, host attachment capacity, Rare limits, and Additional Copy Costs configuration safeguards now use the standardized constructive-error patterns. Great Traitors’ Arsenal remains a Phase 0.1 placeholder pending the reusable Chaos Space Marine Arsenal library. Glorious Jump Pack retains a temporary player-facing error because its required Raptors host is not yet available.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader attachment behavior, Great Traitors’ Arsenal placeholder, Glorious Jump Pack placeholder logic, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 RETROSPECTIVE POLISH PASS\nRevisited World Eaters against the presentation standards established by the completed cross-faction Polish Pass. Added explicit model headers to World Eaters Terminator Chaos Lord, World Eaters Juggernaut Chaos Lord, World Eaters Chaos Lord, Butcher Surgeon, Sage of Slaughter, Slaughterbound, and Khârne, the Betrayer. Standardized the Terminator Chaos Lord ranged packages to 2x count style and meaningful-choice-first '&' grammar. Split the fixed multi-weapon packages on Berzerker Champion, Berzerker 2, Berzerkers 3-5, and Jakhal Dishonoured into separate visible weapon lines while preserving existing package IDs for the first component. Renamed Red Butchers and Eightbound Additional Models to Additional Model. Moved Exalted Eightbound from Paid Wargear into Unit Upgrade. Standardized the Butcher Surgeon and Khârne Rare errors plus Khorne Berzerkers and Eightbound host-limit errors. Great Traitors’ Arsenal, the incomplete Chaos Space Marine host ecosystem, Glorious Jump Pack/Raptors placeholder behavior, Lightning Claw shorthand, Fresh Initiates mechanics, points, categories, associations, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV6 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Khorne Berzerkers and Jakhals now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. Red Butchers and Eightbound retain their previous Other 1 / 2 / 3 arithmetic unchanged. FRESH INITIATES EXCEPTION: the Khorne Berzerkers unit actually attached to the Rare Butcher Surgeon adds 0 Points to the Army List and is excluded from the effective Troop copy count. This is implemented centrally as one +20 refund at the relevant threshold while the Butcher Surgeon association exists. All unrelated unit rules, loadouts, attachments, Rare behavior, and Arsenal placeholders are unchanged.\n\nREV7 — GREAT TRAITORS' ARSENAL PILOT\nImplemented the reusable Great Traitors' Arsenal architecture against the new Chaos Space Marines 3.3.5 Arsenal Library V1. The existing opt-in Configuration selection now exposes 28 portable generic CSM units under the dedicated visible Great Traitors’ Arsenal category, leaving native World Eaters Leader / Troop / Other sections at the top. Arsenal choices remain hidden while the switch is off unless already selected, in which case they stay visible and report a constructive error. The host Additional Copy Costs entry now accounts for imported CSM Troops and Other units, including Replenished Ranks and all existing mode-aware Daemonkin refunds. World Eaters Chaos Lord can now attach to imported Legionaries, Cultists, and Chosen; Glorious Jump Pack is fully implemented and instead attaches to imported Raptors. No native World Eaters IDs were regenerated. Existing Fresh Initiates, native copy-cost arithmetic, loadouts, Rare semantics, and unrelated rules remain unchanged.\n\nREV8 — JAKHAL LOADOUT / EXPORT FIX\nCollapsed the Jakhal Dishonoured's mandatory Skullsmasher Mace and Chainblade into one atomic Skullsmasher Mace & Chainblade final-state option. Replaced the baked-name '8x Jakhal Chainblades' upgrade with a canonical shared Jakhal Chainblades object selected at a genuine quantity of 8. Existing live IDs are preserved where the player decision survives; the superseded standalone Dishonoured Chainblade object remains as an inert legacy shell.\n\nREV9 — KHORNE BERZERKER LOADOUT CLEANUP\nCollapsed the Champion and Berzerker 2 mandatory weapon pairs into atomic final-state loadouts. Renamed Berzerkers 3-5 to Berzerker 3-5 and replaced its separate weapon lines with one atomic Berserker Chainblade & Bolt Pistol package. The shared target is canonically named 3x Berserker Chainblade & Bolt Pistol so New Recruit exports the correct three-model quantity while the editor keeps the concise label. Superseded standalone weapon entries remain as inert legacy shells.\n\nREV10 — GREAT TRAITORS' ARSENAL CONFIGURATION FIX\nGreat Traitors’ Arsenal is now automatically added under Configuration and contains one mandatory state choice: Not Included (default) or Included. Arsenal unit links are hidden while Not Included unless already selected; Included exposes them. Existing selected Arsenal units remain visible and receive a constructive error if the configuration is switched back to Not Included. The Arsenal library, unit IDs, points, categories, attachments, and all imported-unit mechanics are otherwise unchanged.",
     "catalogueLinks": [
       {
         "type": "catalogue",
@@ -11811,12 +11886,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -11835,19 +11910,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Terminator Chaos Sorcerer Lord was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Terminator Chaos Sorcerer Lord was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -11881,12 +11956,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -11905,19 +11980,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Sorcerer was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Sorcerer was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -11951,12 +12026,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -11975,19 +12050,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Master of Possession was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Master of Possession was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -12021,12 +12096,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -12045,19 +12120,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Warpsmith was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Warpsmith was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -12091,12 +12166,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -12115,19 +12190,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Apothecary was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Apothecary was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -12167,12 +12242,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -12191,19 +12266,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Legionaries was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Legionaries was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -12243,12 +12318,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -12267,19 +12342,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Cultists was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Cultists was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -12313,12 +12388,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -12337,19 +12412,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Terminators was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Terminators was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -12383,12 +12458,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -12407,19 +12482,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Possessed was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Possessed was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -12459,12 +12534,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -12483,19 +12558,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chosen was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chosen was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -12529,12 +12604,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -12553,19 +12628,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Breacher Siege Squad was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Breacher Siege Squad was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -12599,12 +12674,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -12623,19 +12698,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Rhino was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Rhino was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -12675,12 +12750,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -12699,19 +12774,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Raptors was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Raptors was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -12745,12 +12820,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -12769,19 +12844,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Bikers was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Bikers was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -12815,12 +12890,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -12839,19 +12914,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Havocs was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Havocs was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -12885,12 +12960,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -12909,19 +12984,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Warp Talons was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Warp Talons was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -12955,12 +13030,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -12979,19 +13054,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Defiler was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Defiler was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -13025,12 +13100,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -13049,19 +13124,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Obliterators was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Obliterators was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -13095,12 +13170,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -13119,19 +13194,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Master of Executions was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Master of Executions was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -13165,12 +13240,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -13189,19 +13264,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Predator was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Predator was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -13235,12 +13310,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -13259,19 +13334,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Forgefiend was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Forgefiend was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -13305,12 +13380,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -13329,19 +13404,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Wardog was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Wardog was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -13375,12 +13450,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -13399,19 +13474,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Vindicator was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Vindicator was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -13445,12 +13520,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -13469,19 +13544,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Helbrute was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Helbrute was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -13515,12 +13590,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -13539,19 +13614,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Dreadnought was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Dreadnought was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -13585,12 +13660,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -13609,19 +13684,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Contemptor Dreadnought was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Contemptor Dreadnought was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -13655,12 +13730,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -13679,19 +13754,19 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Leviathan Dreadnought was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Leviathan Dreadnought was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
@@ -13725,12 +13800,12 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               },
               {
                 "type": "lessThan",
@@ -13749,24 +13824,40 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Chaos Basilisk was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is not selected. Select Great Traitors’ Arsenal under Configuration or remove this unit from the army.",
+            "value": "Chaos Basilisk was added from Great Traitors’ Arsenal, but Great Traitors’ Arsenal is set to Not Included. Set Great Traitors’ Arsenal to Included under Configuration or remove this unit.",
             "conditions": [
               {
                 "type": "lessThan",
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
-                "childId": "80b0-7e6f-9b23-b895",
+                "childId": "b13f-13b1-aa49-f4ea",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Great Traitors’ Arsenal"
+                "childName": "Included"
               }
             ]
           }
         ],
         "comment": "GREAT TRAITORS' ARSENAL REV7: imported from the reusable Chaos Space Marines Arsenal library. Primary presentation is the Great Traitors’ Arsenal section; the target unit retains its intrinsic Leader/Troop/Other, type, Rare, Leader Capacity, attachment, loadout, and reminder semantics."
+      }
+    ],
+    "sharedSelectionEntries": [
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Jakhal Chainblades",
+        "hidden": false,
+        "id": "f34d-2b07-a027-13a8"
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "3x Berserker Chainblade & Bolt Pistol",
+        "hidden": false,
+        "id": "7e65-84d3-a621-f6e9"
       }
     ]
   }

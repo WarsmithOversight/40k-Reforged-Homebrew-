@@ -5,7 +5,7 @@
     "name": "Tyranids 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 17,
-    "revision": 21,
+    "revision": 24,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -72,7 +72,7 @@
             ]
           }
         ],
-        "comment": "ADDITIONAL COPY COSTS REV21 / GS17. Permanent required accounting entry. The single parent now exposes Troops and Other accounting children. Hormagaunts (10), normal Termagants (10), and Gargoyles (10) use the 4 / 6 / 8 Troop normal-copy allowance; Other preserves the existing 1 / 2 / 3 arithmetic exactly. LIVING INCUBATOR EXCEPTION: the free Termagant broods nested under Tervigon do not consume the normal Termagant Troop allowance. Unlike Fresh Initiates-style roster-root exemptions, no refund modifier is necessary here because each Living Incubator brood already has its own distinct nested unit ID. The Troops ledger references only the normal root Termagants (10) unit ID. The parent retains automatic insertion, Required Additional Copy Costs Configuration, and duplicate-entry validation.",
+        "comment": "ADDITIONAL COPY COSTS REV22 / GS17. Permanent required accounting entry. The single parent exposes Troops and Other accounting children. Hormagaunts (10), normal Termagants (10), and Gargoyles (10) use the 4 / 6 / 8 Troop normal-copy allowance. Other uses the established 1 / 2 / 3 arithmetic for 12 non-Rare Other copy families. Neurolictor is Rare and does not participate in soft-copy accounting. LIVING INCUBATOR EXCEPTION: the free Termagant broods nested under Tervigon do not consume the normal Termagant Troop allowance because each brood already has its own distinct nested unit ID. The parent retains automatic insertion, Required Additional Copy Costs Configuration, and duplicate-entry validation.",
         "selectionEntryGroups": [
           {
             "name": "​",
@@ -1497,225 +1497,6 @@
                         "value": 2,
                         "field": "selections",
                         "scope": "roster",
-                        "childId": "ab20-a6fc-8cb2-a80a",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Neurolictor"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "ab20-a6fc-8cb2-a80a",
-                        "childName": "Neurolictor",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 2,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "ab20-a6fc-8cb2-a80a",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Neurolictor"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 3,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "ab20-a6fc-8cb2-a80a",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Neurolictor"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "ab20-a6fc-8cb2-a80a",
-                        "childName": "Neurolictor",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 40,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 3,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "ab20-a6fc-8cb2-a80a",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Neurolictor"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 4,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "ab20-a6fc-8cb2-a80a",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Neurolictor"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "ab20-a6fc-8cb2-a80a",
-                        "childName": "Neurolictor",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 60,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 4,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "ab20-a6fc-8cb2-a80a",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Neurolictor"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 2,
-                        "field": "selections",
-                        "scope": "roster",
                         "childId": "abea-fa2b-6195-8f12",
                         "shared": true,
                         "includeChildSelections": true,
@@ -3667,7 +3448,7 @@
                     ]
                   }
                 ],
-                "comment": "OTHER COPY-COST LEDGER. Contains the catalogue's 78 pre-existing Other point modifiers unchanged, preserving the established 1 / 2 / 3 allowance."
+                "comment": "OTHER COPY-COST LEDGER. Contains 72 point modifiers covering the catalogue's 12 non-Rare Other copy families with the established 1 / 2 / 3 allowance. Neurolictor is correctly Rare in REV22 and is therefore excluded from this soft-copy ledger."
               }
             ],
             "defaultSelectionEntryId": "c8a1-203d-bea9-f9aa"
@@ -5827,47 +5608,10 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Attached Neuroloids",
-            "id": "1512-c855-88cc-1aef",
-            "hidden": false,
-            "constraints": [
-              {
-                "type": "min",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "7b48-56ff-95a5-d1c3",
-                "includeChildSelections": false
-              },
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "24df-6d8f-0d42-56ad",
-                "includeChildSelections": false
-              }
-            ],
-            "entryLinks": [
-              {
-                "import": true,
-                "name": "Neuroloids (2)",
-                "hidden": false,
-                "id": "a262-c8c8-fc3f-d1ac",
-                "type": "selectionEntry",
-                "targetId": "5ed0-c89b-6ade-6e4d"
-              }
-            ],
-            "defaultSelectionEntryId": "a262-c8c8-fc3f-d1ac",
-            "sortIndex": 1
-          },
-          {
             "name": "Loadout Options",
             "id": "825f-9493-f9e0-ec18",
             "hidden": false,
-            "sortIndex": 2,
+            "sortIndex": 1,
             "selectionEntryGroups": [
               {
                 "name": "Neurotyrant",
@@ -5905,9 +5649,46 @@
                 "defaultSelectionEntryId": "758e-e553-2776-7076"
               }
             ]
+          },
+          {
+            "name": "Attached Neuroloids",
+            "id": "1512-c855-88cc-1aef",
+            "hidden": false,
+            "constraints": [
+              {
+                "type": "min",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "7b48-56ff-95a5-d1c3",
+                "includeChildSelections": false
+              },
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "24df-6d8f-0d42-56ad",
+                "includeChildSelections": false
+              }
+            ],
+            "entryLinks": [
+              {
+                "import": true,
+                "name": "Neuroloids (2)",
+                "hidden": false,
+                "id": "a262-c8c8-fc3f-d1ac",
+                "type": "selectionEntry",
+                "targetId": "5ed0-c89b-6ade-6e4d"
+              }
+            ],
+            "defaultSelectionEntryId": "a262-c8c8-fc3f-d1ac",
+            "sortIndex": 2
           }
         ],
-        "comment": "PHASE 0.1 COMPILER NOTE: UUS marks this as a counted Leader, but generic counted-Leader enforcement is omitted here because the faction-specific rule 'Your army list may have only one HIVE TYRANT or TERVIGON or NEUROTYRANT.' is strictly stronger for the current faction roster. Rare remains descriptive; its local max-1 constraint is likewise redundant and omitted.",
+        "comment": "REV24 PRESENTATION: Neurotyrant Loadout Options are shown first, followed by Attached Neuroloids. No selection IDs, constraints, attachment mechanics, costs, or loadout semantics changed.",
         "modifiers": [
           {
             "type": "add",
@@ -6668,7 +6449,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "2x Warrior Bone Sword",
+                        "name": "Paired Warrior Bone Swords",
                         "hidden": false,
                         "id": "68d8-163b-6a89-d4a6",
                         "sortIndex": 2
@@ -6759,7 +6540,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "2x Warrior Bone Sword",
+                        "name": "Paired Warrior Bone Swords",
                         "hidden": false,
                         "id": "3ceb-e91d-f3af-b6bc",
                         "sortIndex": 2
@@ -6858,7 +6639,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "2x Warrior Bone Sword",
+                        "name": "Paired Warrior Bone Swords",
                         "hidden": false,
                         "id": "c407-e099-ee58-836b",
                         "sortIndex": 2
@@ -6949,7 +6730,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "2x Warrior Bone Sword",
+                        "name": "Paired Warrior Bone Swords",
                         "hidden": false,
                         "id": "a311-9191-5fed-2cdc",
                         "sortIndex": 2
@@ -7048,7 +6829,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "2x Warrior Bone Sword",
+                        "name": "Paired Warrior Bone Swords",
                         "hidden": false,
                         "id": "12e0-5d05-ce85-f945",
                         "sortIndex": 2
@@ -7139,7 +6920,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "2x Warrior Bone Sword",
+                        "name": "Paired Warrior Bone Swords",
                         "hidden": false,
                         "id": "b817-6dfd-085d-13f2",
                         "sortIndex": 2
@@ -7200,7 +6981,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: each Warrior is represented by two final-state arm-pair lists rather than procedural replace-a-Scything-Talons controls.",
+        "comment": "LOADOUT UI: each Warrior is represented by two final-state arm-pair lists rather than procedural replace-a-Scything-Talons controls.\nREV22 EXPORT WORDING: the six Warrior Brood arm-pair options formerly named '2x Warrior Bone Sword' are now named 'Paired Warrior Bone Swords'. All six existing selection IDs are preserved. This avoids New Recruit producing quantity text such as '6x 2x Warrior Bone Sword' when multiple identical arm pairs are selected.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -7416,10 +7197,10 @@
             "name": "Infantry"
           },
           {
-            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "targetId": "c417-3a43-73d4-f4bf",
             "id": "3a3d-d53c-8481-37b0",
             "primary": false,
-            "name": "Counts Toward Other Soft Copy Cost"
+            "name": "Rare"
           }
         ],
         "sortIndex": 12,
@@ -7468,15 +7249,7 @@
             ]
           }
         ],
-        "infoLinks": [
-          {
-            "name": "Additional Copy Costs",
-            "id": "3c6a-bd91-76ec-abd4",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "e02a-f56c-ccaa-b1a9"
-          }
-        ]
+        "comment": "\nREV22 RARE CORRECTION: Neurolictor is Rare. The previous Counts Toward Other Soft Copy Cost category was corrected to Rare, the Additional Copy Costs reminder was removed, and its six 1 / 2 / 3 soft-copy accounting modifiers were removed. Its Other / Infantry presentation and all loadout content remain unchanged."
       },
       {
         "type": "unit",
@@ -7829,7 +7602,7 @@
           }
         ],
         "sortIndex": 16,
-        "comment": "VARIABLE UNIT SIZE: the root represents Ripper Swarms 1-4 at 80 Points. Additional models use the same optional-model radio grammar as Hive Guard: Ripper Swarm 5 costs +20 Points, and selecting it reveals optional Ripper Swarm 6 for another +20 Points.",
+        "comment": "REV23 VARIABLE UNIT SIZE / EXPORT: the root represents Ripper Swarms 1-4 at 80 Points and exports their fixed equipment as 4x Ripping Jaws. Ripper Swarm 5 and Ripper Swarm 6 remain optional +20 Point individual models and each contributes one Ripping Jaws. This yields the correct total of 4 / 5 / 6 Ripping Jaws for 4 / 5 / 6-model units without exposing a quantity spinner.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -7866,17 +7639,19 @@
                         "id": "bba2-4554-3edf-b310"
                       }
                     ],
-                    "selectionEntries": [
+                    "defaultSelectionEntryId": "580e-1ae3-f045-5ba1",
+                    "entryLinks": [
                       {
-                        "type": "upgrade",
                         "import": true,
                         "name": "Ripping Jaws",
                         "hidden": false,
                         "id": "580e-1ae3-f045-5ba1",
+                        "type": "selectionEntry",
+                        "targetId": "67d5-22a1-5889-135a",
                         "sortIndex": 1
                       }
                     ],
-                    "defaultSelectionEntryId": "580e-1ae3-f045-5ba1"
+                    "comment": "REV23: fixed four-model core links to the canonical 4x Ripping Jaws export package while retaining the concise Ripping Jaws editor label."
                   }
                 ]
               }
@@ -9691,8 +9466,16 @@
           }
         ],
         "comment": "LOADOUT UI: the Warrior is represented as two final-state arm-pair lists. Each arm pair can record one melee package or one ranged bio-weapon.\nNESTED COUNTLESS LEADER: Warrior is no longer a root Leader selection. Eligible Hormagaunt and Termagant units offer it through an Attached Warrior group. It remains Countless and does not consume Leader capacity."
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "4x Ripping Jaws",
+        "hidden": false,
+        "id": "67d5-22a1-5889-135a",
+        "comment": "REV23 CANONICAL EXPORT PACKAGE: represents the fixed four Ripper Swarms in the base unit. The editor uses the local label 'Ripping Jaws'; New Recruit exports the canonical target name '4x Ripping Jaws'."
       }
     ],
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTyranids now use the final-state fancy-notepad loadout grammar. Hive Tyrant Wings are inline loadout alternatives; Warrior and Warrior Brood use two arm-pair lists; Termagants 1-7 use one shared ordinary weapon slot while 8-10 are paid specialist slots. Ripper Swarms, Hive Guard, and Tyrant Guard use variable-size controls. All native non-Rare Other units use Additional Copy Costs. The existing Tervigon Living Incubator free-Termagant TODO remains intentionally untouched.\n\nRIPPER SWARM VARIABLE-SIZE UI FIX\nRipper Swarms now use one quantity-style +20 Point Additional Model entry capped at two, rather than separate Ripper Swarm 5 and Ripper Swarm 6 model subtrees.\n\nRIPPER SWARM ADDITIONAL-MODEL UI CORRECTION\nRipper Swarms now use the same max-1 optional-model radio pattern as Hive Guard. Ripper Swarm 5 is the first optional +20 model; when selected it exposes Ripper Swarm 6 as a second optional +20 model.\n\nTERVIGON LIVING INCUBATOR IMPLEMENTATION\nLiving Incubator now uses required Tervigon-to-Termagant associations: 1 brood at 800, 2 at 1200, 3 at 1600. Associated Termagant units and their paid specialist weapons cost 0 Points. The full Living Incubator rule text is displayed on the Tervigon.\n\nTERVIGON HIDDEN-ASSOCIATION MINIMUM FIX\nLiving Incubator association slots now have min 0 individually. A single dynamic association-count constraint enforces 1 / 2 / 3 attached broods by Game Size, preventing hidden Brood 3 from generating a phantom requirement at 1200 Points.\n\nTERVIGON DISTINCT-BROOD PICKER FIX\nLiving Incubator now uses one game-size-specific multi-select association picker rather than separate Brood 1/2/3 pickers. Each Termagant unit appears once, so the same unit cannot be selected for multiple granted broods.\n\nTERVIGON PLAYER-FACING ERROR MESSAGE\nReplaced New Recruit's generic 'requires N associations more' minimum error with explicit Living Incubator errors for 800 / 1200 / 1600 Points. The messages tell the player how many free Termagant broods are required, to add Termagant units first, where to select them, and that the selected broods cost 0 Points.\n\nTERVIGON AUTO-GRANTED BROODS PROTOTYPE\nLiving Incubator now prototypes Neuroloid-style nested Termagant broods. The Tervigon automatically selects 1 / 2 / 3 zero-point brood units according to Game Size. Each brood preserves the normal Warrior attachment category so nested association targeting can be tested.\n\nNESTED WARRIOR COUNTLESS LEADER\nWarrior has been removed from the root Leader section and moved into sharedSelectionEntries. Hormagaunts, normal Termagants, and Tervigon-granted Termagant broods now expose Warrior through an Attached Warrior group, matching the proven nested Nob-style architecture.\n\nREV11 CONSTRUCTIVE VALIDATION MIGRATION\nTargets Game System revision 11. Additional Copy Costs uses the current required-configuration semantic tag and self-owned duplicate warning. Trygon and Mawloc Rare limits are constructive. The Hive Tyrant / Tervigon / Neurotyrant shared restriction is now self-monitored by those units rather than enforced by a hidden-category stock max. The obsolete Neuroloid roster cap is removed. Living Incubator no longer uses dynamic stock exact-count constraints: each granted brood is max one, Brood 2/3 use selected-safe visibility across Game Size changes, and Tervigon/Brood entries provide constructive missing/invalid-brood errors. Nested Warrior architecture is unchanged.\n\nREV13 NEW RECRUIT EXPORT COMPATIBILITY\nPromoted the proven revision-12 Points-ID test build to the canonical Tyranids catalogue for Warhammer 40k Reforged Game System revision 12. All Points cost references use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, categories, constraints, nested Warrior architecture, Living Incubator logic, or constructive validation semantics were otherwise changed.\n\nREV20 RETROSPECTIVE POLISH PASS\nRevisited Tyranids against the final cross-faction presentation standard. Added explicit Hive Tyrant and shared Warrior model headers around their existing two anonymous arm-pair choice lists without reintroducing physical Arm Pair labels. Renamed Neurotyrant Attached Unit to Attached Neuroloids. Renamed Hive Guard and Tyrant Guard Additional Models to Additional Model because each group adds only one model. Standardized all twelve Monstrous/Warrior/Guard Bone Sword + Lash Whip package names to '&' grammar while preserving every existing selection ID. Refreshed durable Warrior-nesting comments to use the current Attached Warrior terminology. Ripper Swarm Additional Model 1 / Additional Model 2 sequencing, Bioform Upgrade, Living Incubator, nested Warrior architecture, Termagant specialist structure, variable-size mechanics, Hive Tyrant/Tervigon/Neurotyrant shared limit, Rare validation, points, categories, associations, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV21 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Hormagaunts (10), normal Termagants (10), and Gargoyles (10) now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical root copy costs +20 Points. All 78 pre-existing Other point modifiers were moved unchanged to the Other child. LIVING INCUBATOR EXCEPTION: Tervigon's free Termagant Brood 1 / 2 / 3 units do not count toward the normal Termagant allowance. They already use distinct nested unit IDs, so the Troop ledger simply excludes those IDs rather than applying a compensating refund. All unrelated unit rules, loadouts, Leader limits, Rare behavior, generated-brood requirements, and attachment mechanics are unchanged."
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTyranids now use the final-state fancy-notepad loadout grammar. Hive Tyrant Wings are inline loadout alternatives; Warrior and Warrior Brood use two arm-pair lists; Termagants 1-7 use one shared ordinary weapon slot while 8-10 are paid specialist slots. Ripper Swarms, Hive Guard, and Tyrant Guard use variable-size controls. All native non-Rare Other units use Additional Copy Costs. The existing Tervigon Living Incubator free-Termagant TODO remains intentionally untouched.\n\nRIPPER SWARM VARIABLE-SIZE UI FIX\nRipper Swarms now use one quantity-style +20 Point Additional Model entry capped at two, rather than separate Ripper Swarm 5 and Ripper Swarm 6 model subtrees.\n\nRIPPER SWARM ADDITIONAL-MODEL UI CORRECTION\nRipper Swarms now use the same max-1 optional-model radio pattern as Hive Guard. Ripper Swarm 5 is the first optional +20 model; when selected it exposes Ripper Swarm 6 as a second optional +20 model.\n\nTERVIGON LIVING INCUBATOR IMPLEMENTATION\nLiving Incubator now uses required Tervigon-to-Termagant associations: 1 brood at 800, 2 at 1200, 3 at 1600. Associated Termagant units and their paid specialist weapons cost 0 Points. The full Living Incubator rule text is displayed on the Tervigon.\n\nTERVIGON HIDDEN-ASSOCIATION MINIMUM FIX\nLiving Incubator association slots now have min 0 individually. A single dynamic association-count constraint enforces 1 / 2 / 3 attached broods by Game Size, preventing hidden Brood 3 from generating a phantom requirement at 1200 Points.\n\nTERVIGON DISTINCT-BROOD PICKER FIX\nLiving Incubator now uses one game-size-specific multi-select association picker rather than separate Brood 1/2/3 pickers. Each Termagant unit appears once, so the same unit cannot be selected for multiple granted broods.\n\nTERVIGON PLAYER-FACING ERROR MESSAGE\nReplaced New Recruit's generic 'requires N associations more' minimum error with explicit Living Incubator errors for 800 / 1200 / 1600 Points. The messages tell the player how many free Termagant broods are required, to add Termagant units first, where to select them, and that the selected broods cost 0 Points.\n\nTERVIGON AUTO-GRANTED BROODS PROTOTYPE\nLiving Incubator now prototypes Neuroloid-style nested Termagant broods. The Tervigon automatically selects 1 / 2 / 3 zero-point brood units according to Game Size. Each brood preserves the normal Warrior attachment category so nested association targeting can be tested.\n\nNESTED WARRIOR COUNTLESS LEADER\nWarrior has been removed from the root Leader section and moved into sharedSelectionEntries. Hormagaunts, normal Termagants, and Tervigon-granted Termagant broods now expose Warrior through an Attached Warrior group, matching the proven nested Nob-style architecture.\n\nREV11 CONSTRUCTIVE VALIDATION MIGRATION\nTargets Game System revision 11. Additional Copy Costs uses the current required-configuration semantic tag and self-owned duplicate warning. Trygon and Mawloc Rare limits are constructive. The Hive Tyrant / Tervigon / Neurotyrant shared restriction is now self-monitored by those units rather than enforced by a hidden-category stock max. The obsolete Neuroloid roster cap is removed. Living Incubator no longer uses dynamic stock exact-count constraints: each granted brood is max one, Brood 2/3 use selected-safe visibility across Game Size changes, and Tervigon/Brood entries provide constructive missing/invalid-brood errors. Nested Warrior architecture is unchanged.\n\nREV13 NEW RECRUIT EXPORT COMPATIBILITY\nPromoted the proven revision-12 Points-ID test build to the canonical Tyranids catalogue for Warhammer 40k Reforged Game System revision 12. All Points cost references use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, categories, constraints, nested Warrior architecture, Living Incubator logic, or constructive validation semantics were otherwise changed.\n\nREV20 RETROSPECTIVE POLISH PASS\nRevisited Tyranids against the final cross-faction presentation standard. Added explicit Hive Tyrant and shared Warrior model headers around their existing two anonymous arm-pair choice lists without reintroducing physical Arm Pair labels. Renamed Neurotyrant Attached Unit to Attached Neuroloids. Renamed Hive Guard and Tyrant Guard Additional Models to Additional Model because each group adds only one model. Standardized all twelve Monstrous/Warrior/Guard Bone Sword + Lash Whip package names to '&' grammar while preserving every existing selection ID. Refreshed durable Warrior-nesting comments to use the current Attached Warrior terminology. Ripper Swarm Additional Model 1 / Additional Model 2 sequencing, Bioform Upgrade, Living Incubator, nested Warrior architecture, Termagant specialist structure, variable-size mechanics, Hive Tyrant/Tervigon/Neurotyrant shared limit, Rare validation, points, categories, associations, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV21 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Hormagaunts (10), normal Termagants (10), and Gargoyles (10) now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical root copy costs +20 Points. All 78 pre-existing Other point modifiers were moved unchanged to the Other child. LIVING INCUBATOR EXCEPTION: Tervigon's free Termagant Brood 1 / 2 / 3 units do not count toward the normal Termagant allowance. They already use distinct nested unit IDs, so the Troop ledger simply excludes those IDs rather than applying a compensating refund. All unrelated unit rules, loadouts, Leader limits, Rare behavior, generated-brood requirements, and attachment mechanics are unchanged.\n\nREV22 — NEUROLICTOR RARE + WARRIOR EXPORT CLEANUP\nCorrected Neurolictor to Rare. Its previous Counts Toward Other Soft Copy Cost link was retargeted to Rare using the same category-link ID, its Additional Copy Costs reminder was removed, and its six normal Other copy-cost modifiers were removed. The Other ledger therefore moves from 78 to 72 modifiers / 12 non-Rare Other families. Separately, renamed the six Warrior Brood (3) '2x Warrior Bone Sword' selections to 'Paired Warrior Bone Swords' while preserving every existing selection ID, producing cleaner quantity-prefixed roster exports. No other Tyranids unit, loadout, point cost, category, Troop accounting rule, Living Incubator behavior, or Game System semantic was changed.\n\nREV23 — RIPPER SWARM EXPORT QUANTITY FIX\nCorrected Ripper Swarms weapon export. The fixed Ripper Swarms 1-4 block now uses a canonical shared 4x Ripping Jaws export package while retaining the concise Ripping Jaws editor label. Optional Ripper Swarm 5 and Ripper Swarm 6 continue to contribute one Ripping Jaws each. A full six-model unit therefore records six total Ripping Jaws: four on the root block plus one on each additional model. Points, variable-size sequencing, Bioform Upgrade, Additional Copy Costs, and all unrelated mechanics are unchanged.\n\nREV24 — NEUROTYRANT SECTION ORDER\nReordered the Neurotyrant editor presentation so Loadout Options appears above Attached Neuroloids. This is a presentation-only change; all IDs, costs, constraints, attachment behavior, and unit semantics are unchanged."
   }
 }
