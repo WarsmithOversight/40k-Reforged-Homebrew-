@@ -5,7 +5,7 @@
     "name": "Orks 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 17,
-    "revision": 16,
+    "revision": 17,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -12816,100 +12816,17 @@
                       }
                     ],
                     "defaultSelectionEntryId": "518a-6641-e5d2-09a9",
-                    "entryLinks": [
-                      {
-                        "import": true,
-                        "name": "Burna & Cuttin' Flamez",
-                        "hidden": false,
-                        "id": "518a-6641-e5d2-09a9",
-                        "type": "selectionEntry",
-                        "targetId": "cc4a-7e22-2789-2bbb",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "comment": "REV11: one visible atomic Burna & Cuttin' Flamez loadout for Burna Boyz 1-4."
-                  },
-                  {
-                    "name": "​",
-                    "id": "8a08-0849-5b9c-c5b6",
-                    "hidden": true,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 0,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "20c7-c176-397e-48f4"
-                      },
-                      {
-                        "type": "max",
-                        "value": 0,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "090f-0cc5-d560-852b"
-                      }
-                    ],
+                    "comment": "REV17: fixed four-model equipment represented directly as one literal final-state package, 4x Burna & Cuttin' Flamez. New Recruit cannot cleanly make one radio-style selection represent four instances without exposing quantity UI or producing awkward export behavior.",
                     "selectionEntries": [
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "4x Cuttin’ Flamez",
-                        "hidden": true,
-                        "id": "e942-16d2-3670-ca3e",
-                        "sortIndex": 1,
-                        "comment": "LEGACY ID SHELL: former standalone 4x Cuttin’ Flamez selection, folded into the atomic package in REV11."
-                      }
-                    ],
-                    "comment": "LEGACY ID SHELL: former standalone 4x Cuttin’ Flamez selection, folded into the atomic package in REV11."
-                  },
-                  {
-                    "name": "​",
-                    "id": "7c32-10f1-01ce-579f",
-                    "hidden": true,
-                    "sortIndex": 90,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 3,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "ae8e-ef25-3790-e567",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 3,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "cd3d-4ecb-39e9-ad98",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "defaultSelectionEntryId": "66cf-7e29-9fc1-12ad",
-                    "entryLinks": [
-                      {
-                        "import": true,
-                        "name": "Burna & Cuttin' Flamez",
+                        "name": "4x Burna & Cuttin' Flamez",
                         "hidden": false,
-                        "id": "66cf-7e29-9fc1-12ad",
-                        "type": "selectionEntry",
-                        "targetId": "cc4a-7e22-2789-2bbb",
-                        "sortIndex": 1,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "3",
-                            "field": "defaultAmount"
-                          }
-                        ]
+                        "id": "518a-6641-e5d2-09a9",
+                        "sortIndex": 1
                       }
-                    ],
-                    "comment": "REV11 EXPORT PAYLOAD: contributes 3 additional copies of Burna & Cuttin' Flamez."
+                    ]
                   }
                 ]
               },
@@ -13025,7 +12942,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV11: Burna Boyz 1-4 use one atomic Burna & Cuttin' Flamez package. One visible selection plus three hidden identical selections preserve the true four-model equipment count and produce 4x Burna & Cuttin' Flamez in export without a quantity control."
+        "comment": "REV17 LOADOUT UI: Burna Boyz 1-4 are represented by one literal fixed package, 4x Burna & Cuttin' Flamez. Burna Boy 5 retains Big Shoota / Rokkit / Kustom Mega Blasta. The obsolete hidden quantity payloads and now-unused shared Burna & Cuttin' Flamez object were removed."
       },
       {
         "type": "unit",
@@ -17159,13 +17076,6 @@
       {
         "type": "upgrade",
         "import": true,
-        "name": "Burna & Cuttin' Flamez",
-        "hidden": false,
-        "id": "cc4a-7e22-2789-2bbb"
-      },
-      {
-        "type": "upgrade",
-        "import": true,
         "name": "Choppa & Slugga",
         "hidden": false,
         "id": "3a40-9679-88d3-eb3c"
@@ -17236,6 +17146,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nOrks now use the final-state 'fancy notepad' loadout grammar. Nested Nob/Kommando Nob mechanics and Painboy-root attachment logic are preserved. Nobz and Deffkoptas use variable-size controls. All native non-Rare Other units use Additional Copy Costs.\n\nKOMMANDO SPECIAL-WEAPON CORRECTION\nRemoved the vestigial 'each with a different weapon' restriction from Kommando specialist models. Kommando 7-9 may now select duplicate special weapons. Deff Dread four-list structure confirmed: two mixed melee/ranged lists and two melee-only lists.\n\nCONSTRUCTIVE ERROR MIGRATION\nOrks now use Game System revision 11. Additional Copy Costs, mandatory root Leader attachments, the shared WARBOSS limit, and the Ork Boyz Painboy/Nob attachment point use constructive player-facing validation. Nested Nob and Kommando Nob structures, Kommando duplicate specialist weapons, variable-size units, loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader behavior, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV6 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model/model-set headers to single-model units and Grotz, renaming generic nested attachment groups to Attached Nob / Attached Kommando Nob, flattening Ork Boyz, Kommandos, Burna Boyz, and Lootas specialist sections into Loadout Options, removing non-semantic Weapon 1-4 and Slugga/Choppa slot-origin labels where they only identified physical/model slots, and renaming Deffkoptas' single optional size step to Additional Model. Nested Nob/Kommando Nob mechanics, Painboy/Warboss attachment validation, WARBOSS restriction, variable-size arithmetic, points, paid wargear, and Additional Copy Costs are otherwise unchanged.\n\nREV7 WEAPON-LINE CLEANUP\nStarting from the REV6 Polish Pass baseline, fixed multi-weapon loadouts now use one visible line per distinct weapon; identical weapons remain aggregated with quantities. Kommando 5 is represented as a fixed Choppa plus a Slugga/Choppa choice. Kommando 6 preserves its atomic Standard-vs-Ba’erin’ Ram choice while the standard state presents Slugga and Choppa separately. Kombi weapon packages remain atomic but use ' & ' rather than ' + ' to distinguish the package from ordinary multi-weapon loadout notation. No points, unit eligibility, attachment rules, WARBOSS validation, unit-size arithmetic, or Additional Copy Costs were changed.\n\nREV8 ATOMIC PACKAGE PRESENTATION\nKommando 6 now presents its normal inseparable weapon state as 'Slugga & Choppa' versus 'Ba’erin’ Ram'. The ampersand is reserved for atomic package choices that should remain one selection. Kommando 5 remains split into a fixed Choppa plus a Slugga/Choppa choice; fixed multi-weapon loadouts remain one line per distinct weapon; Kombi weapon packages continue to use ' & '. No points, eligibility, defaults, attachment logic, or other mechanics were changed.\n\nREV9 RETROSPECTIVE POLISH PASS\nRevisited Orks against the final cross-faction presentation standard. The two bespoke Ork Boyz attachment errors now use grammar-safe 'This unit...' wording while preserving the existing Painboy/Nob validation logic. Removed the obsolete Deffkopta Phase 0.1 min-size shell TODO because variable-size support is already implemented; the current variable-size note remains. All loadouts, fixed weapon-line presentation, atomic '&' packages, nested Nob/Kommando Nob structures, Painboy/Warboss attachment mechanics, WARBOSS restriction, variable-size arithmetic, points, categories, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV10 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Ork Boyz and Grotz now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 102 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. All unrelated unit rules, nested Nob/Kommando Nob mechanics, Painboy/Warboss attachment validation, WARBOSS restriction, variable-size arithmetic, loadouts, and paid wargear remain unchanged.\n\nREV11 — BURNA BOYZ & KOMMANDO EXPORT CLEANUP\nBurna Boyz 1-4 now use the atomic Burna & Cuttin' Flamez package at true quantity 4. Kommandos baseline numbering corrected from 2-4 to 1-4; that block now uses the atomic Choppa & Slugga package at true quantity 4. Kommando 5 now presents Choppa & Slugga / Choppa & Choppa as complete loadouts. Kommando 6 now presents Choppa & Slugga / Batterin' Ram as complete loadouts. Kommandos 7-9 remain unchanged apart from confirmation comments. Existing IDs are reused where the corresponding player decision survives; superseded standalone selections are retained as hidden legacy shells.\n\nREV12 — GROTZ EXPORT CLEANUP\nGrotz 1-10 now use the atomic Grot Stabba & Grot Blasta package at true quantity 10. The previous separate 10x Grot Blasta / 10x Grot Stabba presentation is retained only as stable-ID legacy where necessary. No points, categories, copy-cost behavior, or other mechanics changed.\n\nREV13 — LOTS O' GROTZ' PRESET TEST\nAdded Lots o' Grotz', a presentation-only Troop preset that automatically adds 4 / 6 / 8 nested Grotz units at 800 / 1200 / 1600 Points. Each nested unit is a real 50-point Troop/Infantry selection with the fixed 10x Grot Stabba & Grot Blasta loadout. Added hidden Counts As: Grotz semantic family and migrated the Grotz 4 / 6 / 8 Additional Copy Costs ledger from the single root unit ID to that family, so normal Grotz and preset Grotz share one copy allowance. The wrapper itself contributes no copy count.\n\nREV14 — LOTS O' GROTZ' QUANTITY DISPLAY FIX\nThe eight possible nested Grotz units now export their fixed loadout literally as 10x Grot Stabba & Grot Blasta. The superseded hidden +9 quantity payload from the REV13 prototype is disabled and retained only as an inert ID shell. Game-size generation, 50-point child costs, Counts As: Grotz accounting, and all other preset mechanics are unchanged.\n\nREV15 — GROTZ CANONICAL EXPORT PACKAGE\nRuntime testing showed New Recruit exports the canonical name of a shared target rather than the local entryLink display-name override. The shared Grotz fixed-loadout object is therefore now canonically named 10x Grot Stabba & Grot Blasta, while normal Grotz and Lots o' Grotz' child units retain the shorter Grot Stabba & Grot Blasta label in the editor. Superseded hidden quantity-payload experiments remain inert for ID continuity. No points, game-size generation, or copy-accounting behavior changed.\n\nREV16 — ORK BOYZ BASELINE PACKAGE FIX\nCorrected the baseline block from Ork Boyz 2-6 to Ork Boyz 1-6. The six ordinary models now make one player-facing choice between Slugga & Choppa and Shoota & Choppa. Shared targets are canonically named 6x Slugga & Choppa / 6x Shoota & Choppa so New Recruit exports the true six-model quantity while the editor retains the shorter labels. Ork Boyz 7-9 remain mechanically unchanged. The obsolete fixed 5x Choppa and 5x Slugga structures are retained only as hidden ID shells."
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nOrks now use the final-state 'fancy notepad' loadout grammar. Nested Nob/Kommando Nob mechanics and Painboy-root attachment logic are preserved. Nobz and Deffkoptas use variable-size controls. All native non-Rare Other units use Additional Copy Costs.\n\nKOMMANDO SPECIAL-WEAPON CORRECTION\nRemoved the vestigial 'each with a different weapon' restriction from Kommando specialist models. Kommando 7-9 may now select duplicate special weapons. Deff Dread four-list structure confirmed: two mixed melee/ranged lists and two melee-only lists.\n\nCONSTRUCTIVE ERROR MIGRATION\nOrks now use Game System revision 11. Additional Copy Costs, mandatory root Leader attachments, the shared WARBOSS limit, and the Ork Boyz Painboy/Nob attachment point use constructive player-facing validation. Nested Nob and Kommando Nob structures, Kommando duplicate specialist weapons, variable-size units, loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader behavior, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV6 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model/model-set headers to single-model units and Grotz, renaming generic nested attachment groups to Attached Nob / Attached Kommando Nob, flattening Ork Boyz, Kommandos, Burna Boyz, and Lootas specialist sections into Loadout Options, removing non-semantic Weapon 1-4 and Slugga/Choppa slot-origin labels where they only identified physical/model slots, and renaming Deffkoptas' single optional size step to Additional Model. Nested Nob/Kommando Nob mechanics, Painboy/Warboss attachment validation, WARBOSS restriction, variable-size arithmetic, points, paid wargear, and Additional Copy Costs are otherwise unchanged.\n\nREV7 WEAPON-LINE CLEANUP\nStarting from the REV6 Polish Pass baseline, fixed multi-weapon loadouts now use one visible line per distinct weapon; identical weapons remain aggregated with quantities. Kommando 5 is represented as a fixed Choppa plus a Slugga/Choppa choice. Kommando 6 preserves its atomic Standard-vs-Ba’erin’ Ram choice while the standard state presents Slugga and Choppa separately. Kombi weapon packages remain atomic but use ' & ' rather than ' + ' to distinguish the package from ordinary multi-weapon loadout notation. No points, unit eligibility, attachment rules, WARBOSS validation, unit-size arithmetic, or Additional Copy Costs were changed.\n\nREV8 ATOMIC PACKAGE PRESENTATION\nKommando 6 now presents its normal inseparable weapon state as 'Slugga & Choppa' versus 'Ba’erin’ Ram'. The ampersand is reserved for atomic package choices that should remain one selection. Kommando 5 remains split into a fixed Choppa plus a Slugga/Choppa choice; fixed multi-weapon loadouts remain one line per distinct weapon; Kombi weapon packages continue to use ' & '. No points, eligibility, defaults, attachment logic, or other mechanics were changed.\n\nREV9 RETROSPECTIVE POLISH PASS\nRevisited Orks against the final cross-faction presentation standard. The two bespoke Ork Boyz attachment errors now use grammar-safe 'This unit...' wording while preserving the existing Painboy/Nob validation logic. Removed the obsolete Deffkopta Phase 0.1 min-size shell TODO because variable-size support is already implemented; the current variable-size note remains. All loadouts, fixed weapon-line presentation, atomic '&' packages, nested Nob/Kommando Nob structures, Painboy/Warboss attachment mechanics, WARBOSS restriction, variable-size arithmetic, points, categories, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV10 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Ork Boyz and Grotz now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 102 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. All unrelated unit rules, nested Nob/Kommando Nob mechanics, Painboy/Warboss attachment validation, WARBOSS restriction, variable-size arithmetic, loadouts, and paid wargear remain unchanged.\n\nREV11 — BURNA BOYZ & KOMMANDO EXPORT CLEANUP\nBurna Boyz 1-4 now use the atomic Burna & Cuttin' Flamez package at true quantity 4. Kommandos baseline numbering corrected from 2-4 to 1-4; that block now uses the atomic Choppa & Slugga package at true quantity 4. Kommando 5 now presents Choppa & Slugga / Choppa & Choppa as complete loadouts. Kommando 6 now presents Choppa & Slugga / Batterin' Ram as complete loadouts. Kommandos 7-9 remain unchanged apart from confirmation comments. Existing IDs are reused where the corresponding player decision survives; superseded standalone selections are retained as hidden legacy shells.\n\nREV12 — GROTZ EXPORT CLEANUP\nGrotz 1-10 now use the atomic Grot Stabba & Grot Blasta package at true quantity 10. The previous separate 10x Grot Blasta / 10x Grot Stabba presentation is retained only as stable-ID legacy where necessary. No points, categories, copy-cost behavior, or other mechanics changed.\n\nREV13 — LOTS O' GROTZ' PRESET TEST\nAdded Lots o' Grotz', a presentation-only Troop preset that automatically adds 4 / 6 / 8 nested Grotz units at 800 / 1200 / 1600 Points. Each nested unit is a real 50-point Troop/Infantry selection with the fixed 10x Grot Stabba & Grot Blasta loadout. Added hidden Counts As: Grotz semantic family and migrated the Grotz 4 / 6 / 8 Additional Copy Costs ledger from the single root unit ID to that family, so normal Grotz and preset Grotz share one copy allowance. The wrapper itself contributes no copy count.\n\nREV14 — LOTS O' GROTZ' QUANTITY DISPLAY FIX\nThe eight possible nested Grotz units now export their fixed loadout literally as 10x Grot Stabba & Grot Blasta. The superseded hidden +9 quantity payload from the REV13 prototype is disabled and retained only as an inert ID shell. Game-size generation, 50-point child costs, Counts As: Grotz accounting, and all other preset mechanics are unchanged.\n\nREV15 — GROTZ CANONICAL EXPORT PACKAGE\nRuntime testing showed New Recruit exports the canonical name of a shared target rather than the local entryLink display-name override. The shared Grotz fixed-loadout object is therefore now canonically named 10x Grot Stabba & Grot Blasta, while normal Grotz and Lots o' Grotz' child units retain the shorter Grot Stabba & Grot Blasta label in the editor. Superseded hidden quantity-payload experiments remain inert for ID continuity. No points, game-size generation, or copy-accounting behavior changed.\n\nREV16 — ORK BOYZ BASELINE PACKAGE FIX\nCorrected the baseline block from Ork Boyz 2-6 to Ork Boyz 1-6. The six ordinary models now make one player-facing choice between Slugga & Choppa and Shoota & Choppa. Shared targets are canonically named 6x Slugga & Choppa / 6x Shoota & Choppa so New Recruit exports the true six-model quantity while the editor retains the shorter labels. Ork Boyz 7-9 remain mechanically unchanged. The obsolete fixed 5x Choppa and 5x Slugga structures are retained only as hidden ID shells.\n\nREV17 — BURNA BOYZ FIXED PACKAGE\nReplaced the earlier fixed-quantity Burna Boyz 1-4 export architecture with one literal '4x Burna & Cuttin' Flamez' selection. Removed the hidden 4x Cuttin' Flamez shell, hidden +3 payload link, and now-unused shared Burna & Cuttin' Flamez object. Burna Boy 5, points, categories, copy-cost accounting, Paid Wargear, and all unrelated mechanics are unchanged."
   }
 }

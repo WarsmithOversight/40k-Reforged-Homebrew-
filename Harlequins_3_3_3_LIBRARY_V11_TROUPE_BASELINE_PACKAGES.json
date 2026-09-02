@@ -5,7 +5,7 @@
     "name": "Harlequins 3.3.3 - Library",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 17,
-    "revision": 10,
+    "revision": 11,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [],
@@ -595,46 +595,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "83a6-eb85-1546-d30d",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "b03a-1b4d-7221-28af",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "ce62-04ee-d884-27a5",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "3x Shuriken Pistol",
-                        "hidden": false,
-                        "id": "c178-653a-5f20-38da",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "c178-653a-5f20-38da"
-                  },
-                  {
-                    "name": "​",
                     "id": "5810-1542-e27a-3ce5",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -659,7 +622,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "3x Harlequin's Kiss",
+                        "name": "3x Harlequin's Kiss & Shuriken Pistol",
                         "hidden": false,
                         "id": "b139-33c0-f16e-1e69",
                         "sortIndex": 1
@@ -667,15 +630,17 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "3x Power Sword",
+                        "name": "3x Power Sword & Shuriken Pistol",
                         "hidden": false,
                         "id": "da80-00ad-b445-0f98",
                         "sortIndex": 2
                       }
                     ],
-                    "defaultSelectionEntryId": "b139-33c0-f16e-1e69"
+                    "defaultSelectionEntryId": "b139-33c0-f16e-1e69",
+                    "comment": "V11: atomic three-model final-state packages. The fixed Shuriken Pistols are folded into the meaningful Harlequin's Kiss / Power Sword choice."
                   }
-                ]
+                ],
+                "comment": "V11: Troupe Players 1-3 choose one of two literal three-model equipment packages: 3x Harlequin's Kiss & Shuriken Pistol or 3x Power Sword & Shuriken Pistol."
               },
               {
                 "name": "Troupe Player 4",
@@ -989,7 +954,7 @@
             ]
           }
         ],
-        "comment": "SHARED LIBRARY ENTRY: intrinsic unit data lives here. Host catalogues own availability and primary presentation category. LOADOUT UI: Troupe Players 1-3 are consolidated into one baseline loadout block; its melee selection applies to all three baseline models together. Troupe Players 4-5 remain separate model blocks under Loadout Options to expose the two-model pistol replacement allowance. Paid grenade wargear remains unit-level max 1. The first option in mandatory choice groups is selected by default.\nERROR TEMPLATE: leader_host_limit. The stock max-1 association constraint is intentionally omitted to suppress New Recruit's implementation-language error; a custom error triggers at 2+ attached Leaders and gives the repair action.\nTROOP COPY COST REV10 / GS17: this shared Troupe is a normal Troop copy-cost family. Host catalogues count selections of this shared unit ID independently under the 4 / 6 / 8 Troop allowance.",
+        "comment": "SHARED LIBRARY ENTRY: intrinsic unit data lives here. Host catalogues own availability and primary presentation category. LOADOUT UI: Troupe Players 1-3 are consolidated into one baseline loadout block; its melee selection applies to all three baseline models together. Troupe Players 4-5 remain separate model blocks under Loadout Options to expose the two-model pistol replacement allowance. Paid grenade wargear remains unit-level max 1. The first option in mandatory choice groups is selected by default.\nERROR TEMPLATE: leader_host_limit. The stock max-1 association constraint is intentionally omitted to suppress New Recruit's implementation-language error; a custom error triggers at 2+ attached Leaders and gives the repair action.\nTROOP COPY COST REV10 / GS17: this shared Troupe is a normal Troop copy-cost family. Host catalogues count selections of this shared unit ID independently under the 4 / 6 / 8 Troop allowance.\n\nV11 LOADOUT PRESENTATION: Troupe Players 1-3 now use two atomic fixed packages, 3x Harlequin's Kiss & Shuriken Pistol / 3x Power Sword & Shuriken Pistol. The redundant standalone 3x Shuriken Pistol branch was removed. Troupe Players 4-5 and all unrelated mechanics are unchanged.",
         "modifiers": [
           {
             "type": "add",
@@ -1081,46 +1046,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "1782-893f-db33-70f7",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "1f82-6b0a-b806-4709",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "b2be-ef51-de62-8e96",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "3x Shuriken Pistol",
-                        "hidden": false,
-                        "id": "99ed-e6af-2265-d3f0",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "99ed-e6af-2265-d3f0"
-                  },
-                  {
-                    "name": "​",
                     "id": "6f89-3cc7-29f1-2903",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -1145,7 +1073,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "3x Harlequin's Kiss",
+                        "name": "3x Harlequin's Kiss & Shuriken Pistol",
                         "hidden": false,
                         "id": "d912-fae4-c7b6-9979",
                         "sortIndex": 1
@@ -1153,15 +1081,17 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "3x Power Sword",
+                        "name": "3x Power Sword & Shuriken Pistol",
                         "hidden": false,
                         "id": "d35d-2a16-9ec4-e5e9",
                         "sortIndex": 2
                       }
                     ],
-                    "defaultSelectionEntryId": "d912-fae4-c7b6-9979"
+                    "defaultSelectionEntryId": "d912-fae4-c7b6-9979",
+                    "comment": "V11: atomic three-model final-state packages. The fixed Shuriken Pistols are folded into the meaningful Harlequin's Kiss / Power Sword choice."
                   }
-                ]
+                ],
+                "comment": "V11: Troupe Players 1-3 choose one of two literal three-model equipment packages: 3x Harlequin's Kiss & Shuriken Pistol or 3x Power Sword & Shuriken Pistol."
               },
               {
                 "name": "Troupe Player 4",
@@ -1475,7 +1405,7 @@
             ]
           }
         ],
-        "comment": "SHARED LIBRARY ENTRY: intrinsic unit data lives here. Host catalogues own availability and primary presentation category. LOADOUT UI: Troupe Players 1-3 are consolidated into one baseline loadout block; its melee selection applies to all three baseline models together. Troupe Players 4-5 remain separate model blocks under Loadout Options to expose the two-model pistol replacement allowance. Paid grenade wargear remains unit-level max 1. The first option in mandatory choice groups is selected by default.\nERROR TEMPLATE: leader_host_limit. The stock max-1 association constraint is intentionally omitted to suppress New Recruit's implementation-language error; a custom error triggers at 2+ attached Leaders and gives the repair action.\nTROOP COPY COST REV10 / GS17: this shared Troupe is a normal Troop copy-cost family. Host catalogues count selections of this shared unit ID independently under the 4 / 6 / 8 Troop allowance.",
+        "comment": "SHARED LIBRARY ENTRY: intrinsic unit data lives here. Host catalogues own availability and primary presentation category. LOADOUT UI: Troupe Players 1-3 are consolidated into one baseline loadout block; its melee selection applies to all three baseline models together. Troupe Players 4-5 remain separate model blocks under Loadout Options to expose the two-model pistol replacement allowance. Paid grenade wargear remains unit-level max 1. The first option in mandatory choice groups is selected by default.\nERROR TEMPLATE: leader_host_limit. The stock max-1 association constraint is intentionally omitted to suppress New Recruit's implementation-language error; a custom error triggers at 2+ attached Leaders and gives the repair action.\nTROOP COPY COST REV10 / GS17: this shared Troupe is a normal Troop copy-cost family. Host catalogues count selections of this shared unit ID independently under the 4 / 6 / 8 Troop allowance.\n\nV11 LOADOUT PRESENTATION: Troupe Players 1-3 now use two atomic fixed packages, 3x Harlequin's Kiss & Shuriken Pistol / 3x Power Sword & Shuriken Pistol. The redundant standalone 3x Shuriken Pistol branch was removed. Troupe Players 4-5 and all unrelated mechanics are unchanged.",
         "modifiers": [
           {
             "type": "add",
@@ -1567,46 +1497,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "85b8-d84d-0d5b-e4a7",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "8aee-9b7f-30b5-55d8",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "8960-3946-6d9b-21d8",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "3x Shuriken Pistol",
-                        "hidden": false,
-                        "id": "04ea-f2bc-5aff-c183",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "04ea-f2bc-5aff-c183"
-                  },
-                  {
-                    "name": "​",
                     "id": "8ffa-3b2b-a003-9240",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -1631,7 +1524,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "3x Harlequin's Kiss",
+                        "name": "3x Harlequin's Kiss & Shuriken Pistol",
                         "hidden": false,
                         "id": "1184-cfc6-b640-dca8",
                         "sortIndex": 1
@@ -1639,15 +1532,17 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "3x Power Sword",
+                        "name": "3x Power Sword & Shuriken Pistol",
                         "hidden": false,
                         "id": "b41a-a5f4-9481-fccb",
                         "sortIndex": 2
                       }
                     ],
-                    "defaultSelectionEntryId": "1184-cfc6-b640-dca8"
+                    "defaultSelectionEntryId": "1184-cfc6-b640-dca8",
+                    "comment": "V11: atomic three-model final-state packages. The fixed Shuriken Pistols are folded into the meaningful Harlequin's Kiss / Power Sword choice."
                   }
-                ]
+                ],
+                "comment": "V11: Troupe Players 1-3 choose one of two literal three-model equipment packages: 3x Harlequin's Kiss & Shuriken Pistol or 3x Power Sword & Shuriken Pistol."
               },
               {
                 "name": "Troupe Player 4",
@@ -1961,7 +1856,7 @@
             ]
           }
         ],
-        "comment": "SHARED LIBRARY ENTRY: intrinsic unit data lives here. Host catalogues own availability and primary presentation category. LOADOUT UI: Troupe Players 1-3 are consolidated into one baseline loadout block; its melee selection applies to all three baseline models together. Troupe Players 4-5 remain separate model blocks under Loadout Options to expose the two-model pistol replacement allowance. Paid grenade wargear remains unit-level max 1. The first option in mandatory choice groups is selected by default.\nERROR TEMPLATE: leader_host_limit. The stock max-1 association constraint is intentionally omitted to suppress New Recruit's implementation-language error; a custom error triggers at 2+ attached Leaders and gives the repair action.\nTROOP COPY COST REV10 / GS17: this shared Troupe is a normal Troop copy-cost family. Host catalogues count selections of this shared unit ID independently under the 4 / 6 / 8 Troop allowance.",
+        "comment": "SHARED LIBRARY ENTRY: intrinsic unit data lives here. Host catalogues own availability and primary presentation category. LOADOUT UI: Troupe Players 1-3 are consolidated into one baseline loadout block; its melee selection applies to all three baseline models together. Troupe Players 4-5 remain separate model blocks under Loadout Options to expose the two-model pistol replacement allowance. Paid grenade wargear remains unit-level max 1. The first option in mandatory choice groups is selected by default.\nERROR TEMPLATE: leader_host_limit. The stock max-1 association constraint is intentionally omitted to suppress New Recruit's implementation-language error; a custom error triggers at 2+ attached Leaders and gives the repair action.\nTROOP COPY COST REV10 / GS17: this shared Troupe is a normal Troop copy-cost family. Host catalogues count selections of this shared unit ID independently under the 4 / 6 / 8 Troop allowance.\n\nV11 LOADOUT PRESENTATION: Troupe Players 1-3 now use two atomic fixed packages, 3x Harlequin's Kiss & Shuriken Pistol / 3x Power Sword & Shuriken Pistol. The redundant standalone 3x Shuriken Pistol branch was removed. Troupe Players 4-5 and all unrelated mechanics are unchanged.",
         "modifiers": [
           {
             "type": "add",
@@ -2689,6 +2584,6 @@
         ]
       }
     ],
-    "comment": "SHARED CATALOGUE LIBRARY\n\nThis catalogue is a compiled reusable artifact for Harlequin units. It is not a semantic source of truth; the Universal Unit Skeleton remains authoritative.\n\nThe library owns intrinsic unit data: points, loadout trees, paid wargear, unit-internal list-building rules, attachment associations, and reusable semantic categories.\n\nConsumer catalogues own availability, configuration gating, primary presentation categories, and host-army-specific restrictions. Consumer catalogues should link these sharedSelectionEntries instead of copying the unit trees.\n\nERROR UX PASS V1\nHarlequin Leader attachment validation now uses standardized custom player-facing errors. missing_attachment replaces the stock 'needs 1 more unit selected in Attaches To' message. leader_host_limit replaces the stock 'associations too many' host error. The underlying attachment UI and legal states are unchanged.\n\nERROR UX PASS V2 - RARE LIMIT\nSolitaire and Death Jester now prototype the standardized rare_limit custom error. This pass intentionally tests whether a roster-scoped custom error attached to a repeatable unit definition renders once or duplicates across multiple selected instances.\n\nGAME SYSTEM REVISION 9\nLeader Capacity validation now comes from the shared Game System custom error rather than the hidden category's stock max constraint.\n\nREV7 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No shared unit costs, loadouts, attachment validation, host categories, or library semantics were otherwise changed.\n\nREV8 POLISH PASS\nAdded explicit model headers to single-model Harlequin units, flattened Troupe Players 4-5 into the normal Loadout Options hierarchy, removed the redundant 'Choose either:' presentation label from the three Troupe baseline melee choices, and standardized Solitaire / Death Jester Rare error wording. Leader attachment associations, Troupe host-limit validation, paid grenade wargear, points, categories, and all loadout legality are otherwise unchanged.\n\nREV9 RETROSPECTIVE POLISH PASS\nRevisited the Harlequins shared library against the final cross-faction presentation standard. Standardized the Light, Dark, and Twilight Troupe host Leader-limit errors to grammar-safe 'This unit...' wording. Rewrote all ten shared-unit authoring comments as current-state durable notes, removing obsolete Phase 0.1 / prototype labels and retiring the old Solitaire / Death Jester Rare-error test notes. Loadouts, defaults, paid wargear, association mechanics, Rare validation, points, categories, shared unit IDs, and all other rules semantics remain unchanged.\n\nREV10 / GS17 TROOP COPY COST SUPPORT\nUpdated the shared Harlequins library to Game System revision 17. Light Troupe, Dark Troupe, and Twilight Troupe now carry the hidden Counts Toward Troop Soft Copy Cost semantic category and shared Additional Copy Costs reminder rule. The three Troupes remain separate copy families; their allowances do not pool. No generated, free, or otherwise exempt Troop unit exists in the shared library. All loadouts, Leader attachment semantics, shared unit IDs, costs, and other intrinsic unit data remain unchanged."
+    "comment": "SHARED CATALOGUE LIBRARY\n\nThis catalogue is a compiled reusable artifact for Harlequin units. It is not a semantic source of truth; the Universal Unit Skeleton remains authoritative.\n\nThe library owns intrinsic unit data: points, loadout trees, paid wargear, unit-internal list-building rules, attachment associations, and reusable semantic categories.\n\nConsumer catalogues own availability, configuration gating, primary presentation categories, and host-army-specific restrictions. Consumer catalogues should link these sharedSelectionEntries instead of copying the unit trees.\n\nERROR UX PASS V1\nHarlequin Leader attachment validation now uses standardized custom player-facing errors. missing_attachment replaces the stock 'needs 1 more unit selected in Attaches To' message. leader_host_limit replaces the stock 'associations too many' host error. The underlying attachment UI and legal states are unchanged.\n\nERROR UX PASS V2 - RARE LIMIT\nSolitaire and Death Jester now prototype the standardized rare_limit custom error. This pass intentionally tests whether a roster-scoped custom error attached to a repeatable unit definition renders once or duplicates across multiple selected instances.\n\nGAME SYSTEM REVISION 9\nLeader Capacity validation now comes from the shared Game System custom error rather than the hidden category's stock max constraint.\n\nREV7 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No shared unit costs, loadouts, attachment validation, host categories, or library semantics were otherwise changed.\n\nREV8 POLISH PASS\nAdded explicit model headers to single-model Harlequin units, flattened Troupe Players 4-5 into the normal Loadout Options hierarchy, removed the redundant 'Choose either:' presentation label from the three Troupe baseline melee choices, and standardized Solitaire / Death Jester Rare error wording. Leader attachment associations, Troupe host-limit validation, paid grenade wargear, points, categories, and all loadout legality are otherwise unchanged.\n\nREV9 RETROSPECTIVE POLISH PASS\nRevisited the Harlequins shared library against the final cross-faction presentation standard. Standardized the Light, Dark, and Twilight Troupe host Leader-limit errors to grammar-safe 'This unit...' wording. Rewrote all ten shared-unit authoring comments as current-state durable notes, removing obsolete Phase 0.1 / prototype labels and retiring the old Solitaire / Death Jester Rare-error test notes. Loadouts, defaults, paid wargear, association mechanics, Rare validation, points, categories, shared unit IDs, and all other rules semantics remain unchanged.\n\nREV10 / GS17 TROOP COPY COST SUPPORT\nUpdated the shared Harlequins library to Game System revision 17. Light Troupe, Dark Troupe, and Twilight Troupe now carry the hidden Counts Toward Troop Soft Copy Cost semantic category and shared Additional Copy Costs reminder rule. The three Troupes remain separate copy families; their allowances do not pool. No generated, free, or otherwise exempt Troop unit exists in the shared library. All loadouts, Leader attachment semantics, shared unit IDs, costs, and other intrinsic unit data remain unchanged.\n\nV11 — TROUPE BASELINE ATOMIC PACKAGES\nUpdated Light Troupe, Dark Troupe, and Twilight Troupe. Their Troupe Players 1-3 blocks now choose between 3x Harlequin's Kiss & Shuriken Pistol and 3x Power Sword & Shuriken Pistol. Removed the redundant fixed 3x Shuriken Pistol branch from each unit. Troupe Players 4-5, points, categories, copy-cost accounting, Leader behavior, and all unrelated mechanics are unchanged."
   }
 }

@@ -5,7 +5,7 @@
     "name": "T'au 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 17,
-    "revision": 8,
+    "revision": 9,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -4972,7 +4972,7 @@
                     "constraints": [
                       {
                         "type": "min",
-                        "value": 9,
+                        "value": 1,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -4980,7 +4980,7 @@
                       },
                       {
                         "type": "max",
-                        "value": 9,
+                        "value": 1,
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
@@ -4988,59 +4988,17 @@
                       }
                     ],
                     "defaultSelectionEntryId": "0afd-0c33-5212-77d8",
-                    "entryLinks": [
-                      {
-                        "import": true,
-                        "name": "Kroot Rifles & Knives",
-                        "hidden": false,
-                        "id": "0afd-0c33-5212-77d8",
-                        "type": "selectionEntry",
-                        "targetId": "3a0b-8c27-4819-b7f5",
-                        "sortIndex": 1,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "9",
-                            "field": "defaultAmount"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "name": "​",
-                    "id": "0a27-4546-5e03-cf2a",
-                    "hidden": true,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 0,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "5bf6-cc1e-1f13-a678"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "7e6d-bd80-389c-5fc4"
-                      }
-                    ],
                     "selectionEntries": [
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Rifle Knives (Legacy Loadout Marker)",
-                        "hidden": true,
-                        "id": "a0a6-376e-b09b-91d1",
-                        "sortIndex": 1,
-                        "comment": "REV8 LEGACY ID SHELL. Retained only to preserve the pre-existing Rifle Knives selection ID after Kroot Carnivores 1-9 were consolidated into the shared Kroot Rifles & Knives package. This entry is hidden and never default-selected."
+                        "name": "9x Kroot Rifles & Knives",
+                        "hidden": false,
+                        "id": "0afd-0c33-5212-77d8",
+                        "sortIndex": 1
                       }
-                    ]
+                    ],
+                    "comment": "REV9: New Recruit cannot represent one radio-style fixed choice as nine copies without exposing a quantity control. The fixed equipment for Kroot Carnivores 1-9 is therefore represented directly as one literal final-state package: 9x Kroot Rifles & Knives."
                   }
                 ]
               },
@@ -5090,7 +5048,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI REV8: Kroot Carnivores 1-9 use one shared Kroot Rifles & Knives equipment package at structural quantity 9, allowing New Recruit to export their fixed equipment as one consolidated line. Kroot Carnivore 10 remains the canonical free Tanglebomb Launcher specialist, so ordinary fallback equipment is intentionally omitted from that specialist slot. The former standalone Rifle Knives selection is retained only as a hidden legacy ID shell.",
+        "comment": "REV9 LOADOUT UI: Kroot Carnivores 1-9 use one literal fixed package, 9x Kroot Rifles & Knives. This intentionally avoids New Recruit's quantity spinner for fixed multi-model equipment. Kroot Carnivore 10 remains the free Tanglebomb Launcher specialist. The obsolete REV8 shared package and hidden legacy Rifle Knives branch were removed.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -6897,15 +6855,7 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTau loadouts follow the fancy-notepad presentation: named Tau model nouns replace generic Model X labels, sergeant titles appear only where there is a distinct sergeant loadout, unmodelled grenade/additive wargear is unit-level, free specialist weapon slots omit ordinary fallback loadouts, Crisis Battlesuits use optional extra-model sizing, and all native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nT'au now use Game System revision 11. Game System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, and host Leader limits use constructive player-facing errors. Existing faction semantics remain unchanged; Ethereal continues not to count toward Leader Capacity.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader behavior, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model headers to single-model units, removing non-semantic Weapon 1 / Weapon 2 labels from the XV8 Commander and Crisis Battlesuits, flattening Kroot Carnivore and Hunter Pathfinder specialist sections into Loadout Options, renaming the Crisis optional-size group to Additional Model, and presenting XV8 Commander frame upgrades as Battlesuit Configuration rather than Paid Wargear. No points, eligibility, Leader behavior, Additional Copy Costs arithmetic, paid wargear semantics, or underlying weapon-choice logic were otherwise changed.\n\nREV6 RETROSPECTIVE POLISH PASS\nRevisited T'au against the final cross-faction presentation standard. Kroot Carnivores 1-9 now show fixed 9x Kroot Rifle and Rifle Knives as separate equipment lines. TY7 Devilfish, TX4 Piranha, and TX7 Hammerhead Gunship now label their two independent paid missile slots Seeker Missile and Additional Seeker Missile rather than implementation-facing Seeker Missile 1/2. XV88 Broadside Battlesuit now presents its fixed drones as a 2x Missile Drone model/group header with a 2x Missile Pod equipment line. Strike Team and Breacher Team use the current grammar-safe 'This unit...' host-limit error. Battlesuit Configuration, Crisis weapon-choice logic, optional-size mechanics, Pathfinder/Kroot specialist handling, additive wargear treatment, Additional Copy Costs, points, categories, Leader behavior, and all other rules semantics remain unchanged.\n\nREV7 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Strike Team and Breacher Team now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 72 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. Kroot Carnivores remain an Other unit and therefore continue using the existing Other 1 / 2 / 3 allowance rather than the Troop allowance. All unrelated unit rules, loadouts, Leader behavior, attachments, Battlesuit Configuration, and other catalogue mechanics are unchanged.\n\nREV8 — KROOT RIFLES & KNIVES EXPORT PACKAGE\nConsolidated Kroot Carnivores 1-9 from separate '9x Kroot Rifle' and 'Rifle Knives' live selections into structural quantity 9 of one shared Kroot Rifles & Knives entry. The old Kroot Rifle selection ID is preserved as the live entryLink ID; the old Rifle Knives branch remains as a hidden, unselected legacy shell so every pre-existing ID survives. Tanglebomb Launcher and Kroot Carnivore 10 are unchanged. No points, Additional Copy Costs, categories, Leader behavior, Battlesuit logic, or unrelated unit mechanics changed.",
-    "sharedSelectionEntries": [
-      {
-        "type": "upgrade",
-        "import": true,
-        "name": "Kroot Rifles & Knives",
-        "hidden": false,
-        "id": "3a0b-8c27-4819-b7f5"
-      }
-    ]
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTau loadouts follow the fancy-notepad presentation: named Tau model nouns replace generic Model X labels, sergeant titles appear only where there is a distinct sergeant loadout, unmodelled grenade/additive wargear is unit-level, free specialist weapon slots omit ordinary fallback loadouts, Crisis Battlesuits use optional extra-model sizing, and all native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nT'au now use Game System revision 11. Game System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, and host Leader limits use constructive player-facing errors. Existing faction semantics remain unchanged; Ethereal continues not to count toward Leader Capacity.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader behavior, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model headers to single-model units, removing non-semantic Weapon 1 / Weapon 2 labels from the XV8 Commander and Crisis Battlesuits, flattening Kroot Carnivore and Hunter Pathfinder specialist sections into Loadout Options, renaming the Crisis optional-size group to Additional Model, and presenting XV8 Commander frame upgrades as Battlesuit Configuration rather than Paid Wargear. No points, eligibility, Leader behavior, Additional Copy Costs arithmetic, paid wargear semantics, or underlying weapon-choice logic were otherwise changed.\n\nREV6 RETROSPECTIVE POLISH PASS\nRevisited T'au against the final cross-faction presentation standard. Kroot Carnivores 1-9 now show fixed 9x Kroot Rifle and Rifle Knives as separate equipment lines. TY7 Devilfish, TX4 Piranha, and TX7 Hammerhead Gunship now label their two independent paid missile slots Seeker Missile and Additional Seeker Missile rather than implementation-facing Seeker Missile 1/2. XV88 Broadside Battlesuit now presents its fixed drones as a 2x Missile Drone model/group header with a 2x Missile Pod equipment line. Strike Team and Breacher Team use the current grammar-safe 'This unit...' host-limit error. Battlesuit Configuration, Crisis weapon-choice logic, optional-size mechanics, Pathfinder/Kroot specialist handling, additive wargear treatment, Additional Copy Costs, points, categories, Leader behavior, and all other rules semantics remain unchanged.\n\nREV7 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Strike Team and Breacher Team now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 72 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. Kroot Carnivores remain an Other unit and therefore continue using the existing Other 1 / 2 / 3 allowance rather than the Troop allowance. All unrelated unit rules, loadouts, Leader behavior, attachments, Battlesuit Configuration, and other catalogue mechanics are unchanged.\n\nREV8 — KROOT RIFLES & KNIVES EXPORT PACKAGE\nConsolidated Kroot Carnivores 1-9 from separate '9x Kroot Rifle' and 'Rifle Knives' live selections into structural quantity 9 of one shared Kroot Rifles & Knives entry. The old Kroot Rifle selection ID is preserved as the live entryLink ID; the old Rifle Knives branch remains as a hidden, unselected legacy shell so every pre-existing ID survives. Tanglebomb Launcher and Kroot Carnivore 10 are unchanged. No points, Additional Copy Costs, categories, Leader behavior, Battlesuit logic, or unrelated unit mechanics changed.\n\nREV9 — KROOT FIXED EXPORT LABEL\nReplaced the REV8 structural quantity-9 Kroot Rifles & Knives selection with one literal '9x Kroot Rifles & Knives' fixed package because New Recruit exposes a quantity control when a radio-style choice represents multiple instances. Removed the now-unused shared Kroot Rifles & Knives object and the hidden Rifle Knives legacy shell. Kroot Carnivore 10, Tanglebomb Launcher, points, categories, Additional Copy Costs, and all unrelated mechanics are unchanged.",
+    "sharedSelectionEntries": []
   }
 }
