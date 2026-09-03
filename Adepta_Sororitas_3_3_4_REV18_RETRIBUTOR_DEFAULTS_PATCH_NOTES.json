@@ -2,10 +2,10 @@
   "catalogue": {
     "library": false,
     "id": "8ff6-481d-e968-777c",
-    "name": "Adepta Sororitas 3.3.3",
+    "name": "Adepta Sororitas 3.3.4",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 20,
-    "revision": 16,
+    "revision": 18,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -5854,7 +5854,7 @@
           {
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
-            "value": 110
+            "value": 120
           }
         ],
         "categoryLinks": [
@@ -6105,6 +6105,14 @@
                     "sortIndex": 1,
                     "constraints": [
                       {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "cc53-3711-81ab-e4b8"
+                      },
+                      {
                         "type": "max",
                         "value": 1,
                         "field": "selections",
@@ -6121,110 +6129,6 @@
                         "hidden": false,
                         "id": "b6c4-3d51-75ab-b056",
                         "sortIndex": 1,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "88b0-776d-e929-0cb3",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "06a1-cac8-9585-10f8",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "88b0-776d-e929-0cb3",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "2533-abc8-9712-3772",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "06a1-cac8-9585-10f8",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "2533-abc8-9712-3772",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ],
                         "categoryLinks": [
                           {
                             "targetId": "0fc2-b303-a4c4-1fa0",
@@ -6241,110 +6145,6 @@
                         "hidden": false,
                         "id": "a109-0f1d-4f46-e9d0",
                         "sortIndex": 2,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "464c-511e-2456-a6dd",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "6213-3816-b673-e992",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "464c-511e-2456-a6dd",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "6f78-f2fa-a66c-702b",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "6213-3816-b673-e992",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "6f78-f2fa-a66c-702b",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ],
                         "categoryLinks": [
                           {
                             "targetId": "0fc2-b303-a4c4-1fa0",
@@ -6361,110 +6161,6 @@
                         "hidden": false,
                         "id": "3dae-0cdb-5d78-0e87",
                         "sortIndex": 3,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "c6ea-f826-9b7b-a284",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "2187-7647-f378-fa24",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "c6ea-f826-9b7b-a284",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "86a8-db5c-57fc-ce28",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "2187-7647-f378-fa24",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "86a8-db5c-57fc-ce28",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ],
                         "categoryLinks": [
                           {
                             "targetId": "0fc2-b303-a4c4-1fa0",
@@ -6474,7 +6170,8 @@
                           }
                         ]
                       }
-                    ]
+                    ],
+                    "defaultSelectionEntryId": "b6c4-3d51-75ab-b056"
                   }
                 ]
               },
@@ -6490,6 +6187,14 @@
                     "hidden": false,
                     "sortIndex": 1,
                     "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7b76-3f70-c56a-750c"
+                      },
                       {
                         "type": "max",
                         "value": 1,
@@ -6507,110 +6212,6 @@
                         "hidden": false,
                         "id": "88b0-776d-e929-0cb3",
                         "sortIndex": 1,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "b6c4-3d51-75ab-b056",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "06a1-cac8-9585-10f8",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "b6c4-3d51-75ab-b056",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "2533-abc8-9712-3772",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "06a1-cac8-9585-10f8",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "2533-abc8-9712-3772",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ],
                         "categoryLinks": [
                           {
                             "targetId": "0fc2-b303-a4c4-1fa0",
@@ -6627,110 +6228,6 @@
                         "hidden": false,
                         "id": "464c-511e-2456-a6dd",
                         "sortIndex": 2,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "a109-0f1d-4f46-e9d0",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "6213-3816-b673-e992",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "a109-0f1d-4f46-e9d0",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "6f78-f2fa-a66c-702b",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "6213-3816-b673-e992",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "6f78-f2fa-a66c-702b",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ],
                         "categoryLinks": [
                           {
                             "targetId": "0fc2-b303-a4c4-1fa0",
@@ -6747,110 +6244,6 @@
                         "hidden": false,
                         "id": "c6ea-f826-9b7b-a284",
                         "sortIndex": 3,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3dae-0cdb-5d78-0e87",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "2187-7647-f378-fa24",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3dae-0cdb-5d78-0e87",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "86a8-db5c-57fc-ce28",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "2187-7647-f378-fa24",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "86a8-db5c-57fc-ce28",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ],
                         "categoryLinks": [
                           {
                             "targetId": "0fc2-b303-a4c4-1fa0",
@@ -6860,7 +6253,8 @@
                           }
                         ]
                       }
-                    ]
+                    ],
+                    "defaultSelectionEntryId": "88b0-776d-e929-0cb3"
                   }
                 ]
               },
@@ -6876,6 +6270,14 @@
                     "hidden": false,
                     "sortIndex": 1,
                     "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "b23c-eb67-74e1-0993"
+                      },
                       {
                         "type": "max",
                         "value": 1,
@@ -6893,110 +6295,6 @@
                         "hidden": false,
                         "id": "06a1-cac8-9585-10f8",
                         "sortIndex": 1,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "b6c4-3d51-75ab-b056",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "88b0-776d-e929-0cb3",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "b6c4-3d51-75ab-b056",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "2533-abc8-9712-3772",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "88b0-776d-e929-0cb3",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "2533-abc8-9712-3772",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ],
                         "categoryLinks": [
                           {
                             "targetId": "0fc2-b303-a4c4-1fa0",
@@ -7013,110 +6311,6 @@
                         "hidden": false,
                         "id": "6213-3816-b673-e992",
                         "sortIndex": 2,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "a109-0f1d-4f46-e9d0",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "464c-511e-2456-a6dd",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "a109-0f1d-4f46-e9d0",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "6f78-f2fa-a66c-702b",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "464c-511e-2456-a6dd",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "6f78-f2fa-a66c-702b",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ],
                         "categoryLinks": [
                           {
                             "targetId": "0fc2-b303-a4c4-1fa0",
@@ -7133,110 +6327,6 @@
                         "hidden": false,
                         "id": "2187-7647-f378-fa24",
                         "sortIndex": 3,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3dae-0cdb-5d78-0e87",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "c6ea-f826-9b7b-a284",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3dae-0cdb-5d78-0e87",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "86a8-db5c-57fc-ce28",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "c6ea-f826-9b7b-a284",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "86a8-db5c-57fc-ce28",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ],
                         "categoryLinks": [
                           {
                             "targetId": "0fc2-b303-a4c4-1fa0",
@@ -7246,7 +6336,8 @@
                           }
                         ]
                       }
-                    ]
+                    ],
+                    "defaultSelectionEntryId": "06a1-cac8-9585-10f8"
                   }
                 ]
               },
@@ -7262,6 +6353,14 @@
                     "hidden": false,
                     "sortIndex": 1,
                     "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6599-d139-b3b6-29d1"
+                      },
                       {
                         "type": "max",
                         "value": 1,
@@ -7279,110 +6378,6 @@
                         "hidden": false,
                         "id": "2533-abc8-9712-3772",
                         "sortIndex": 1,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "b6c4-3d51-75ab-b056",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "88b0-776d-e929-0cb3",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "b6c4-3d51-75ab-b056",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "06a1-cac8-9585-10f8",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "88b0-776d-e929-0cb3",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "06a1-cac8-9585-10f8",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ],
                         "categoryLinks": [
                           {
                             "targetId": "0fc2-b303-a4c4-1fa0",
@@ -7399,110 +6394,6 @@
                         "hidden": false,
                         "id": "6f78-f2fa-a66c-702b",
                         "sortIndex": 2,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "a109-0f1d-4f46-e9d0",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "464c-511e-2456-a6dd",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "a109-0f1d-4f46-e9d0",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "6213-3816-b673-e992",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "464c-511e-2456-a6dd",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "6213-3816-b673-e992",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Heavy Bolter"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ],
                         "categoryLinks": [
                           {
                             "targetId": "0fc2-b303-a4c4-1fa0",
@@ -7519,110 +6410,6 @@
                         "hidden": false,
                         "id": "86a8-db5c-57fc-ce28",
                         "sortIndex": 3,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3dae-0cdb-5d78-0e87",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "c6ea-f826-9b7b-a284",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3dae-0cdb-5d78-0e87",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "2187-7647-f378-fa24",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "c6ea-f826-9b7b-a284",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "2187-7647-f378-fa24",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Multi-Melta"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ],
                         "categoryLinks": [
                           {
                             "targetId": "0fc2-b303-a4c4-1fa0",
@@ -7632,7 +6419,8 @@
                           }
                         ]
                       }
-                    ]
+                    ],
+                    "defaultSelectionEntryId": "2533-abc8-9712-3772"
                   }
                 ]
               }
@@ -7691,25 +6479,6 @@
         ],
         "comment": "LOADOUT UI: Retributor Superior is represented directly with the standard Superior ranged list and Chainsword / Power Weapon melee list. Retributors 2-5 each use an optional 0/1 heavy-weapon list, so New Recruit displays its normal (None) option instead of auto-selecting an illegal weapon. A hidden semantic counter requires four actual heavy-weapon selections and provides a player-facing error until every model is assigned one. Heavy Flamer / Heavy Bolter / Multi-Melta remain capped at two each.",
         "modifiers": [
-          {
-            "type": "add",
-            "value": "Retributors 2-5 must each be assigned a heavy weapon. Select one Heavy Flamer, Heavy Bolter, or Multi-Melta for each model. No more than two models may take the same weapon.",
-            "field": "error",
-            "conditions": [
-              {
-                "type": "lessThan",
-                "value": 4,
-                "field": "selections",
-                "scope": "self",
-                "childId": "0fc2-b303-a4c4-1fa0",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": false,
-                "queryFromSelf": false,
-                "childName": "Retributor Heavy Weapon Assigned"
-              }
-            ]
-          },
           {
             "type": "add",
             "field": "error",
@@ -11403,6 +10172,46 @@
             "defaultSelectionEntryId": "6943-a841-dcb8-9105"
           }
         ]
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Patch Notes (3.3.4)",
+        "hidden": false,
+        "id": "3546-c07c-a890-bd93",
+        "sortIndex": 1,
+        "categoryLinks": [
+          {
+            "targetId": "default-category",
+            "id": "8ee4-dd27-9993-d433",
+            "primary": true,
+            "name": "Configuration"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Patch Notes (3.3.4)",
+            "id": "e968-d0ea-85a7-48b4",
+            "hidden": false,
+            "description": "Retributors\n• Increased from 110 to 120 Points.\n• Retributors 2-5 may each select any Heavy Flamer, Heavy Bolter, or Multi-Melta. There is no longer a restriction on taking more than two of the same weapon.",
+            "noindex": false
+          }
+        ],
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "51b2-306e-1021-d207",
+            "value": 0
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "1",
+            "field": "defaultAmount"
+          }
+        ],
+        "comment": "REV18: Automatically present Configuration entry containing the player-facing Adepta Sororitas 3.3.4 patch notes."
       }
     ],
     "sharedSelectionEntries": [
@@ -11551,6 +10360,6 @@
       }
     ],
     "authorName": "40k Reforged Homebrew",
-    "comment": "PHASE 0.1 STRUCTURAL SHELL\nScope intentionally limited to Unit Name, Unit Class, Unit Category, Points Cost, and Attachments. Imagifier uses the nested Additional Leader pattern. Loadouts, Additional Copy Costs, unit-size UI, ratio restrictions, and other non-attachment list-building mechanics are intentionally deferred.\n\nPHASE 0.2 LEADER LOADOUT PASS\nEquipment added only for Canoness, Palatine, Dogmata, Imagifier, and Dialogus. Imagifier remains nested as Additional Leader. No non-Leader loadouts added.\n\nPHASE 0.3 BATTLE SISTERS LOADOUT PASS\nAdded equipment only for Battle Sisters. Existing Leader loadouts and Imagifier Additional Leader structure are preserved.\n\nPHASE 0.4 ELITES / DOMINIONS / PARAGONS LOADOUT PASS\nAdded loadouts for Sisters Repentia, Celestine, Hospitaller, Celestian Sacresants, Dominions, Paragon Warsuits, and Arco-Flagellants. Sisters Novitiates remain intentionally untouched.\n\nPHASE 0.5 ZEPHYRIM / VEHICLES / RETRIBUTORS LOADOUT PASS\nCorrected Repentia Superior placement. Added Zephyrim, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and Retributors. Seraphim remain intentionally untouched.\n\nPHASE 0.5A ZEPHYRIM SOURCE CONFIRMATION\nZephyrim presentation confirmed against the clarified source: Zephyrim Superior is the free Plasma Pistol / Pennant model; Zephyrim 2-5 retain Bolt Pistol + Power Sword with paid Hand Flamer / Inferno Pistol upgrades. Seraphim remain untouched.\n\nPHASE 0.5B PAID WARGEAR / RETRIBUTOR UI FIX\nAll direct Paid Wargear entries now use optional max-1 selection groups instead of quantity spinners. Retributors 2-5 no longer auto-select a heavy weapon, preventing the roster from opening in an illegal 4x default state.\n\nPHASE 0.5C RETRIBUTOR NONE / VALIDATION UI\nRetributors 2-5 now use optional 0/1 heavy-weapon lists, allowing New Recruit to display its built-in (None) state. A hidden semantic category counts real heavy-weapon assignments and a custom error explains when fewer than four models are configured.\n\nREV9 CONSTRUCTIVE ERROR + UNIVERSAL SYSTEM MIGRATION\nAdepta Sororitas now use Game System revision 11. Added the standard Additional Copy Costs subsystem for all 14 native non-Rare Other units, including Configuration safeguards and per-unit reminder links. Canoness, Palatine, Dogmata, and Dialogus use constructive missing-attachment validation; Battle Sisters, Dominions, and Retributors use constructive external-Leader host limits; Canoness, Celestine, and Hospitaller use constructive Rare limits. Imagifier remains a nested Countless Additional Leader and does not consume the external Leader association slot. Retributor heavy-weapon validation is preserved unchanged. Sisters Novitiates and Seraphim remain intentionally without loadout implementations.\n\nREV10 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, categories, Imagifier nesting, Retributor heavy-weapon validation, or intentional empty-unit structures were otherwise changed.\n\nREV11 POLISH PASS\nAdded explicit model headers to Canoness, Palatine, Dogmata, Dialogus, Celestine, Hospitaller, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and the shared Imagifier; added an Arco-Flagellants 1-10 grouped header; flattened Battle Sisters, Dominions, and Retributors specialist models into Loadout Options; renamed their Additional Leader groups to Attached Imagifier; standardized their external-Leader errors; converted all nine Superior combi-weapon packages to meaningful-choice-first '&' grammar; renamed Paragon Warsuits Additional Models to Additional Model; named the two Dominion grenade slots Grenade and Additional Grenade; and standardized Canoness, Celestine, and Hospitaller Rare errors. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. Retributor heavy-weapon validation, Imagifier nesting, points, Additional Copy Costs, categories, attachment mechanics, and all other rules semantics remain unchanged.\n\nREV12 RETROSPECTIVE POLISH PASS\nRevisited Adepta Sororitas against the final cross-faction presentation standard. Corrected the live Sisters Repentia authoring note to reflect Repentia Superior as the Neural Whips model; modernized the shared Imagifier comment to Nested Attached Leader terminology; and updated the live Additional Copy Costs comment to version-agnostic shared Game System wording. Historical phase/revision provenance is preserved unchanged. All IDs, SelectionEntry names, loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, Additional Copy Costs arithmetic, categories, and all other rules semantics remain unchanged.\n\nREV13 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Battle Sisters and Sisters Novitiates now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 84 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 14 native Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists, and no Counts As relationship merges the two Troop datasheets. Imagifier remains a nested Countless attached Leader and does not participate in Troop duplicate accounting. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. All loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, categories, and other catalogue semantics remain unchanged.\n\nREV14 NOVITIATE RATIO LIMIT TEST\nAdded the source restriction allowing no more than one Sisters Novitiates unit for each Battle Sisters unit. The restriction is intentionally permissive at selection time and enforced through a custom player-facing ratio error rather than a New Recruit stock max-constraint error. A visible Sisters Novitiates Support Requirement rule records the source wording. Battle Sisters and Sisters Novitiates remain separate Troop copy-cost families; points, categories, loadouts, attachments, Additional Copy Costs, and all unrelated catalogue semantics are unchanged.\n\nREV15 CELESTIAN SACRESANTS EXPORT PACKAGE\nCelestian Sacresants 2-5 now present one mandatory combined squad-loadout choice: 4x Anointed Halberd & Bolt Pistol or 4x Hallowed Mace & Bolt Pistol. The previous standalone 4x Bolt Pistol presentation is retained only as an inert hidden compatibility shell. No points, unit categories, copy-cost behavior, Paid Wargear, Superior loadout, or other unit semantics changed.\n\nREV16 POLISH PASS\nUpdated to Game System revision 20 and retargeted Battle Sisters and Sisters Novitiates to the Additional Copy Cost - Troop short-form rule. Zephyrim Hand Flamer and Inferno Pistol limits are now permissive selections with separate constructive max-two errors instead of cross-model hiding. Sisters Novitiates and Seraphim now show a Loadout Options placeholder directing players to the army rules PDF and Reforged Discord while their full listbuilder loadouts are pending. Castigator Pintle Storm Bolter now sits under a top-level Pintle Weapons section. Paragon Warsuit slot headers are suppressed. Dominions Plasma Grenades and Melta Bombs now use checklist-style bearer entries. Across implemented model loadouts, melee weapon choices are presented first wherever a model has multiple weapon-choice groups. Existing surviving IDs, points, categories, attachment behavior, copy-cost arithmetic, Novitiate ratio validation, Rare validation, and unrelated mechanics are unchanged."
+    "comment": "PHASE 0.1 STRUCTURAL SHELL\nScope intentionally limited to Unit Name, Unit Class, Unit Category, Points Cost, and Attachments. Imagifier uses the nested Additional Leader pattern. Loadouts, Additional Copy Costs, unit-size UI, ratio restrictions, and other non-attachment list-building mechanics are intentionally deferred.\n\nPHASE 0.2 LEADER LOADOUT PASS\nEquipment added only for Canoness, Palatine, Dogmata, Imagifier, and Dialogus. Imagifier remains nested as Additional Leader. No non-Leader loadouts added.\n\nPHASE 0.3 BATTLE SISTERS LOADOUT PASS\nAdded equipment only for Battle Sisters. Existing Leader loadouts and Imagifier Additional Leader structure are preserved.\n\nPHASE 0.4 ELITES / DOMINIONS / PARAGONS LOADOUT PASS\nAdded loadouts for Sisters Repentia, Celestine, Hospitaller, Celestian Sacresants, Dominions, Paragon Warsuits, and Arco-Flagellants. Sisters Novitiates remain intentionally untouched.\n\nPHASE 0.5 ZEPHYRIM / VEHICLES / RETRIBUTORS LOADOUT PASS\nCorrected Repentia Superior placement. Added Zephyrim, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and Retributors. Seraphim remain intentionally untouched.\n\nPHASE 0.5A ZEPHYRIM SOURCE CONFIRMATION\nZephyrim presentation confirmed against the clarified source: Zephyrim Superior is the free Plasma Pistol / Pennant model; Zephyrim 2-5 retain Bolt Pistol + Power Sword with paid Hand Flamer / Inferno Pistol upgrades. Seraphim remain untouched.\n\nPHASE 0.5B PAID WARGEAR / RETRIBUTOR UI FIX\nAll direct Paid Wargear entries now use optional max-1 selection groups instead of quantity spinners. Retributors 2-5 no longer auto-select a heavy weapon, preventing the roster from opening in an illegal 4x default state.\n\nPHASE 0.5C RETRIBUTOR NONE / VALIDATION UI\nRetributors 2-5 now use optional 0/1 heavy-weapon lists, allowing New Recruit to display its built-in (None) state. A hidden semantic category counts real heavy-weapon assignments and a custom error explains when fewer than four models are configured.\n\nREV9 CONSTRUCTIVE ERROR + UNIVERSAL SYSTEM MIGRATION\nAdepta Sororitas now use Game System revision 11. Added the standard Additional Copy Costs subsystem for all 14 native non-Rare Other units, including Configuration safeguards and per-unit reminder links. Canoness, Palatine, Dogmata, and Dialogus use constructive missing-attachment validation; Battle Sisters, Dominions, and Retributors use constructive external-Leader host limits; Canoness, Celestine, and Hospitaller use constructive Rare limits. Imagifier remains a nested Countless Additional Leader and does not consume the external Leader association slot. Retributor heavy-weapon validation is preserved unchanged. Sisters Novitiates and Seraphim remain intentionally without loadout implementations.\n\nREV10 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, categories, Imagifier nesting, Retributor heavy-weapon validation, or intentional empty-unit structures were otherwise changed.\n\nREV11 POLISH PASS\nAdded explicit model headers to Canoness, Palatine, Dogmata, Dialogus, Celestine, Hospitaller, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and the shared Imagifier; added an Arco-Flagellants 1-10 grouped header; flattened Battle Sisters, Dominions, and Retributors specialist models into Loadout Options; renamed their Additional Leader groups to Attached Imagifier; standardized their external-Leader errors; converted all nine Superior combi-weapon packages to meaningful-choice-first '&' grammar; renamed Paragon Warsuits Additional Models to Additional Model; named the two Dominion grenade slots Grenade and Additional Grenade; and standardized Canoness, Celestine, and Hospitaller Rare errors. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. Retributor heavy-weapon validation, Imagifier nesting, points, Additional Copy Costs, categories, attachment mechanics, and all other rules semantics remain unchanged.\n\nREV12 RETROSPECTIVE POLISH PASS\nRevisited Adepta Sororitas against the final cross-faction presentation standard. Corrected the live Sisters Repentia authoring note to reflect Repentia Superior as the Neural Whips model; modernized the shared Imagifier comment to Nested Attached Leader terminology; and updated the live Additional Copy Costs comment to version-agnostic shared Game System wording. Historical phase/revision provenance is preserved unchanged. All IDs, SelectionEntry names, loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, Additional Copy Costs arithmetic, categories, and all other rules semantics remain unchanged.\n\nREV13 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Battle Sisters and Sisters Novitiates now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 84 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 14 native Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists, and no Counts As relationship merges the two Troop datasheets. Imagifier remains a nested Countless attached Leader and does not participate in Troop duplicate accounting. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. All loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, categories, and other catalogue semantics remain unchanged.\n\nREV14 NOVITIATE RATIO LIMIT TEST\nAdded the source restriction allowing no more than one Sisters Novitiates unit for each Battle Sisters unit. The restriction is intentionally permissive at selection time and enforced through a custom player-facing ratio error rather than a New Recruit stock max-constraint error. A visible Sisters Novitiates Support Requirement rule records the source wording. Battle Sisters and Sisters Novitiates remain separate Troop copy-cost families; points, categories, loadouts, attachments, Additional Copy Costs, and all unrelated catalogue semantics are unchanged.\n\nREV15 CELESTIAN SACRESANTS EXPORT PACKAGE\nCelestian Sacresants 2-5 now present one mandatory combined squad-loadout choice: 4x Anointed Halberd & Bolt Pistol or 4x Hallowed Mace & Bolt Pistol. The previous standalone 4x Bolt Pistol presentation is retained only as an inert hidden compatibility shell. No points, unit categories, copy-cost behavior, Paid Wargear, Superior loadout, or other unit semantics changed.\n\nREV16 POLISH PASS\nUpdated to Game System revision 20 and retargeted Battle Sisters and Sisters Novitiates to the Additional Copy Cost - Troop short-form rule. Zephyrim Hand Flamer and Inferno Pistol limits are now permissive selections with separate constructive max-two errors instead of cross-model hiding. Sisters Novitiates and Seraphim now show a Loadout Options placeholder directing players to the army rules PDF and Reforged Discord while their full listbuilder loadouts are pending. Castigator Pintle Storm Bolter now sits under a top-level Pintle Weapons section. Paragon Warsuit slot headers are suppressed. Dominions Plasma Grenades and Melta Bombs now use checklist-style bearer entries. Across implemented model loadouts, melee weapon choices are presented first wherever a model has multiple weapon-choice groups. Existing surviving IDs, points, categories, attachment behavior, copy-cost arithmetic, Novitiate ratio validation, Rare validation, and unrelated mechanics are unchanged.\n\nREV17 — ADEPTA SORORITAS 3.3.4\nRetributors increased from 110 to 120 Points. Removed the cross-model restriction that limited Heavy Flamers, Heavy Bolters, and Multi-Meltas to at most two copies each; Retributors 2-5 may now independently select any of those weapons in any combination. Existing weapon selection IDs, per-model max-one weapon groups, categories, GS20 copy-cost links, and unrelated mechanics are unchanged.\n\nREV18 — RETRIBUTOR DEFAULTS + PATCH NOTES CONFIGURATION\nRetributors 2-5 are now mandatory one-of-three heavy-weapon selections and each defaults to Heavy Flamer, removing the visible (None) state. Removed the obsolete bespoke Retributor heavy-weapon assignment/restriction error. Added an automatically present Configuration item, Patch Notes (3.3.4), summarizing the 3.3.4 Retributor changes. Existing Retributor weapon IDs and unrelated mechanics are unchanged."
   }
 }
