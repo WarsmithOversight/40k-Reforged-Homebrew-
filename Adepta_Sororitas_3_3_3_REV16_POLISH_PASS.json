@@ -4,8 +4,8 @@
     "id": "8ff6-481d-e968-777c",
     "name": "Adepta Sororitas 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 17,
-    "revision": 15,
+    "gameSystemRevision": 20,
+    "revision": 16,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -88,9 +88,67 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "6304-e380-0c51-6e08",
+                    "id": "4a7c-fdf6-80bb-ff23",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c8a0-4df4-4883-c0ef"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e97f-aeb4-b0cd-0c6c"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainsword",
+                        "hidden": false,
+                        "id": "5566-b8b4-5203-5ac7",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Blessed Blade",
+                        "hidden": false,
+                        "id": "7ad4-d904-f190-4f1b",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Brazier of Holy Fire",
+                        "hidden": false,
+                        "id": "1f36-111a-834d-7b09",
+                        "sortIndex": 3,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "5566-b8b4-5203-5ac7"
+                  },
+                  {
+                    "name": "​",
+                    "id": "6304-e380-0c51-6e08",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -151,64 +209,6 @@
                       }
                     ],
                     "defaultSelectionEntryId": "10be-1d80-7ff5-c01e"
-                  },
-                  {
-                    "name": "​",
-                    "id": "4a7c-fdf6-80bb-ff23",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "c8a0-4df4-4883-c0ef"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "e97f-aeb4-b0cd-0c6c"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Chainsword",
-                        "hidden": false,
-                        "id": "5566-b8b4-5203-5ac7",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Blessed Blade",
-                        "hidden": false,
-                        "id": "7ad4-d904-f190-4f1b",
-                        "sortIndex": 2
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Brazier of Holy Fire",
-                        "hidden": false,
-                        "id": "1f36-111a-834d-7b09",
-                        "sortIndex": 3,
-                        "costs": [
-                          {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
-                          }
-                        ]
-                      }
-                    ],
-                    "defaultSelectionEntryId": "5566-b8b4-5203-5ac7"
                   }
                 ]
               }
@@ -328,52 +328,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "e707-f325-3395-f648",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "1879-46b8-7ab7-51ef"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "30fb-cc9e-f31a-e845"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Bolt Pistol",
-                        "hidden": false,
-                        "id": "70be-7b90-2ee3-a06b",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Plasma Pistol",
-                        "hidden": false,
-                        "id": "b89b-47cf-4d9f-b80b",
-                        "sortIndex": 2
-                      }
-                    ],
-                    "defaultSelectionEntryId": "70be-7b90-2ee3-a06b"
-                  },
-                  {
-                    "name": "​",
                     "id": "54b6-2ecd-3b55-4e72",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -411,6 +368,49 @@
                       }
                     ],
                     "defaultSelectionEntryId": "a659-fa20-d922-3970"
+                  },
+                  {
+                    "name": "​",
+                    "id": "e707-f325-3395-f648",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1879-46b8-7ab7-51ef"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "30fb-cc9e-f31a-e845"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Bolt Pistol",
+                        "hidden": false,
+                        "id": "70be-7b90-2ee3-a06b",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plasma Pistol",
+                        "hidden": false,
+                        "id": "b89b-47cf-4d9f-b80b",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "70be-7b90-2ee3-a06b"
                   }
                 ]
               }
@@ -511,44 +511,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "4837-77d8-c60d-763e",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "25f5-2e9a-7646-8b6f"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "e27e-d33c-1d0f-387d"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Bolt Pistol",
-                        "hidden": false,
-                        "id": "a333-e3fa-f1ca-2414",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "a333-e3fa-f1ca-2414"
-                  },
-                  {
-                    "name": "​",
                     "id": "b7e3-d9cf-e8e1-944a",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -578,6 +543,41 @@
                       }
                     ],
                     "defaultSelectionEntryId": "4fd7-bf14-a8a5-8bd3"
+                  },
+                  {
+                    "name": "​",
+                    "id": "4837-77d8-c60d-763e",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "25f5-2e9a-7646-8b6f"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e27e-d33c-1d0f-387d"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Bolt Pistol",
+                        "hidden": false,
+                        "id": "a333-e3fa-f1ca-2414",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "a333-e3fa-f1ca-2414"
                   }
                 ]
               }
@@ -678,44 +678,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "c3dc-311a-7e8d-2b70",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "84c7-40d6-ab44-2a5b"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "f972-bde2-f1f2-bd96"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Bolt Pistol",
-                        "hidden": false,
-                        "id": "d86d-111a-0dee-dca2",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "d86d-111a-0dee-dca2"
-                  },
-                  {
-                    "name": "​",
                     "id": "397f-3259-5a4a-fd4b",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -745,6 +710,41 @@
                       }
                     ],
                     "defaultSelectionEntryId": "f9da-983c-419a-93a2"
+                  },
+                  {
+                    "name": "​",
+                    "id": "c3dc-311a-7e8d-2b70",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "84c7-40d6-ab44-2a5b"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f972-bde2-f1f2-bd96"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Bolt Pistol",
+                        "hidden": false,
+                        "id": "d86d-111a-0dee-dca2",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d86d-111a-0dee-dca2"
                   }
                 ]
               }
@@ -871,9 +871,52 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "96b5-7504-f5b6-4877",
+                    "id": "fe99-5e96-8cdf-f3f4",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a85b-4ea2-6553-b1a9"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0cca-0ed2-f942-9a79"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainsword",
+                        "hidden": false,
+                        "id": "8574-2ad3-aa46-49fc",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "cc55-bbc3-2d48-19b2",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "8574-2ad3-aa46-49fc"
+                  },
+                  {
+                    "name": "​",
+                    "id": "96b5-7504-f5b6-4877",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -980,49 +1023,6 @@
                       }
                     ],
                     "defaultSelectionEntryId": "3950-e0f6-59b7-7c38"
-                  },
-                  {
-                    "name": "​",
-                    "id": "fe99-5e96-8cdf-f3f4",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "a85b-4ea2-6553-b1a9"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "0cca-0ed2-f942-9a79"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Chainsword",
-                        "hidden": false,
-                        "id": "8574-2ad3-aa46-49fc",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Power Sword",
-                        "hidden": false,
-                        "id": "cc55-bbc3-2d48-19b2",
-                        "sortIndex": 2
-                      }
-                    ],
-                    "defaultSelectionEntryId": "8574-2ad3-aa46-49fc"
                   }
                 ]
               },
@@ -1321,11 +1321,11 @@
         ],
         "infoLinks": [
           {
-            "name": "Additional Copy Costs",
+            "name": "Additional Copy Cost - Troop",
             "id": "dee0-3b69-3749-2c95",
             "hidden": false,
             "type": "rule",
-            "targetId": "e02a-f56c-ccaa-b1a9"
+            "targetId": "e686-5b9a-d78a-91e5"
           }
         ]
       },
@@ -1365,11 +1365,11 @@
         "sortIndex": 7,
         "infoLinks": [
           {
-            "name": "Additional Copy Costs",
+            "name": "Additional Copy Cost - Troop",
             "id": "afb9-1dee-6506-0c2f",
             "hidden": false,
             "type": "rule",
-            "targetId": "e02a-f56c-ccaa-b1a9"
+            "targetId": "e686-5b9a-d78a-91e5"
           }
         ],
         "rules": [
@@ -1672,7 +1672,46 @@
             ]
           }
         ],
-        "comment": "REV14 NOVITIATE RATIO LIMIT TEST: implements the source requirement of one Sisters Novitiates unit per Battle Sisters unit using permissive selection plus constructive custom validation, rather than a stock roster maximum. Seven mutually exclusive Battle Sisters support bands (0-6) ensure only one ratio error can fire, with the final band flagging 7+ Sisters Novitiates when supported by only 6 Battle Sisters. The existing independent Troop copy-cost family, points, categories, and intentionally unimplemented Novitiate loadout remain unchanged."
+        "comment": "REV14 NOVITIATE RATIO LIMIT TEST: implements the source requirement of one Sisters Novitiates unit per Battle Sisters unit using permissive selection plus constructive custom validation, rather than a stock roster maximum. Seven mutually exclusive Battle Sisters support bands (0-6) ensure only one ratio error can fire, with the final band flagging 7+ Sisters Novitiates when supported by only 6 Battle Sisters. The existing independent Troop copy-cost family, points, categories, and intentionally unimplemented Novitiate loadout remain unchanged.",
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "86e1-389c-227c-ef8f",
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {
+                "type": "min",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "0dcd-bdfa-a712-1f4c",
+                "includeChildSelections": false
+              },
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "201e-c9a6-2759-fe99",
+                "includeChildSelections": false
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "This unit will be added shortly. Please consult the Adepta Sororitas army rules PDF for its full rules and loadout options. Reforged Discord: https://discord.com/invite/BpjkaNmMVB",
+                "hidden": false,
+                "id": "a722-6e24-9b34-fcce",
+                "sortIndex": 1
+              }
+            ],
+            "defaultSelectionEntryId": "a722-6e24-9b34-fcce"
+          }
+        ]
       },
       {
         "type": "unit",
@@ -1864,9 +1903,44 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "44cb-5275-37b7-6ce0",
+                    "id": "3031-3afb-0548-d0a8",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ffba-cd69-e820-8db6"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2573-f33f-6fa6-20ce"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "The Ardent Blade",
+                        "hidden": false,
+                        "id": "8c30-a52b-723d-f1d0",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "8c30-a52b-723d-f1d0"
+                  },
+                  {
+                    "name": "​",
+                    "id": "44cb-5275-37b7-6ce0",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -1901,7 +1975,7 @@
                     "name": "​",
                     "id": "ed65-e1b5-f21e-1e51",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 3,
                     "constraints": [
                       {
                         "type": "min",
@@ -1931,41 +2005,6 @@
                       }
                     ],
                     "defaultSelectionEntryId": "d62f-810d-3d5b-0bd1"
-                  },
-                  {
-                    "name": "​",
-                    "id": "3031-3afb-0548-d0a8",
-                    "hidden": false,
-                    "sortIndex": 3,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "ffba-cd69-e820-8db6"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "2573-f33f-6fa6-20ce"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "The Ardent Blade",
-                        "hidden": false,
-                        "id": "8c30-a52b-723d-f1d0",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "8c30-a52b-723d-f1d0"
                   }
                 ]
               }
@@ -2043,44 +2082,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "26f5-47bb-1ce5-1109",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "9d4e-85b5-e793-718a"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "a72a-c29a-63b7-f72b"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Bolt Pistol",
-                        "hidden": false,
-                        "id": "2e22-7f11-1a64-fa0c",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "2e22-7f11-1a64-fa0c"
-                  },
-                  {
-                    "name": "​",
                     "id": "8d87-689e-8862-cc41",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -2110,6 +2114,41 @@
                       }
                     ],
                     "defaultSelectionEntryId": "edcc-6fc9-8e7f-6a50"
+                  },
+                  {
+                    "name": "​",
+                    "id": "26f5-47bb-1ce5-1109",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9d4e-85b5-e793-718a"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a72a-c29a-63b7-f72b"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Bolt Pistol",
+                        "hidden": false,
+                        "id": "2e22-7f11-1a64-fa0c",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "2e22-7f11-1a64-fa0c"
                   }
                 ]
               }
@@ -2187,9 +2226,52 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "c78f-569a-a610-4e5e",
+                    "id": "4561-22c5-622e-d505",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "83d9-0447-7b43-0f93"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c6ac-76d6-4aef-acff"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Anointed Halberd",
+                        "hidden": false,
+                        "id": "b4a1-22c5-4266-0f5e",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hallowed Mace",
+                        "hidden": false,
+                        "id": "4925-a4c4-e041-8c45",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b4a1-22c5-4266-0f5e"
+                  },
+                  {
+                    "name": "​",
+                    "id": "c78f-569a-a610-4e5e",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -2235,49 +2317,6 @@
                       }
                     ],
                     "defaultSelectionEntryId": "0bd9-8f17-76c7-eb0f"
-                  },
-                  {
-                    "name": "​",
-                    "id": "4561-22c5-622e-d505",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "83d9-0447-7b43-0f93"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "c6ac-76d6-4aef-acff"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Anointed Halberd",
-                        "hidden": false,
-                        "id": "b4a1-22c5-4266-0f5e",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Hallowed Mace",
-                        "hidden": false,
-                        "id": "4925-a4c4-e041-8c45",
-                        "sortIndex": 2
-                      }
-                    ],
-                    "defaultSelectionEntryId": "b4a1-22c5-4266-0f5e"
                   }
                 ]
               },
@@ -2287,40 +2326,6 @@
                 "hidden": false,
                 "sortIndex": 2,
                 "selectionEntryGroups": [
-                  {
-                    "name": "​",
-                    "id": "925e-bfb2-50a7-a3b0",
-                    "hidden": true,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 0,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "1545-ab05-5a48-0b16"
-                      },
-                      {
-                        "type": "max",
-                        "value": 0,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "4b10-07ed-22e0-54f4"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "4x Bolt Pistol",
-                        "hidden": true,
-                        "id": "d78c-5002-f7f4-fb2c",
-                        "sortIndex": 1
-                      }
-                    ]
-                  },
                   {
                     "name": "​",
                     "id": "4592-fd3e-a306-ba0c",
@@ -2363,6 +2368,40 @@
                       }
                     ],
                     "defaultSelectionEntryId": "da3b-abb1-992c-f2ab"
+                  },
+                  {
+                    "name": "​",
+                    "id": "925e-bfb2-50a7-a3b0",
+                    "hidden": true,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 0,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1545-ab05-5a48-0b16"
+                      },
+                      {
+                        "type": "max",
+                        "value": 0,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4b10-07ed-22e0-54f4"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "4x Bolt Pistol",
+                        "hidden": true,
+                        "id": "d78c-5002-f7f4-fb2c",
+                        "sortIndex": 1
+                      }
+                    ]
                   }
                 ]
               }
@@ -2523,9 +2562,52 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "0d28-219d-12d1-ee00",
+                    "id": "6156-683b-8567-d03d",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "dc16-5eb1-bc9c-3ee7"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "af3b-a672-1d37-20e0"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainsword",
+                        "hidden": false,
+                        "id": "4060-ef5a-067c-a74c",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "ebdc-1880-0c4b-72bf",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "4060-ef5a-067c-a74c"
+                  },
+                  {
+                    "name": "​",
+                    "id": "0d28-219d-12d1-ee00",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -2632,49 +2714,6 @@
                       }
                     ],
                     "defaultSelectionEntryId": "4993-7541-83c3-64a9"
-                  },
-                  {
-                    "name": "​",
-                    "id": "6156-683b-8567-d03d",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "dc16-5eb1-bc9c-3ee7"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "af3b-a672-1d37-20e0"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Chainsword",
-                        "hidden": false,
-                        "id": "4060-ef5a-067c-a74c",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Power Sword",
-                        "hidden": false,
-                        "id": "ebdc-1880-0c4b-72bf",
-                        "sortIndex": 2
-                      }
-                    ],
-                    "defaultSelectionEntryId": "4060-ef5a-067c-a74c"
                   }
                 ]
               },
@@ -2848,25 +2887,15 @@
             "sortIndex": 3,
             "selectionEntryGroups": [
               {
-                "name": "Grenade",
+                "name": "Grenades",
                 "id": "9a8d-fc0d-15a3-6eb4",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "6a4f-34cf-7b8b-0aca"
-                  }
-                ],
                 "selectionEntries": [
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Plasma Grenade",
+                    "name": "Plasma Grenade 1",
                     "hidden": false,
                     "id": "1fd9-c2f9-6f6b-1c57",
                     "sortIndex": 1,
@@ -2876,14 +2905,25 @@
                         "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "b7e3-2991-2165-4af5",
+                        "includeChildSelections": false
+                      }
                     ]
                   },
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Melta Bomb",
+                    "name": "Plasma Grenade 2",
                     "hidden": false,
-                    "id": "1ea2-045a-d8ef-a25e",
+                    "id": "5b93-053e-1891-f04e",
                     "sortIndex": 2,
                     "costs": [
                       {
@@ -2891,32 +2931,33 @@
                         "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d63d-a804-ecc0-bbfe",
+                        "includeChildSelections": false
+                      }
                     ]
                   }
                 ]
               },
               {
-                "name": "Additional Grenade",
+                "name": "Bombs",
                 "id": "8644-e2c0-e56f-41eb",
                 "hidden": false,
                 "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "06e9-38c0-fd62-da42"
-                  }
-                ],
                 "selectionEntries": [
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Plasma Grenade",
+                    "name": "Melta Bomb 1",
                     "hidden": false,
-                    "id": "5b93-053e-1891-f04e",
+                    "id": "1ea2-045a-d8ef-a25e",
                     "sortIndex": 1,
                     "costs": [
                       {
@@ -2924,12 +2965,23 @@
                         "typeId": "51b2-306e-1021-d207",
                         "value": 10
                       }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "030f-5568-cb88-2aef",
+                        "includeChildSelections": false
+                      }
                     ]
                   },
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Melta Bomb",
+                    "name": "Melta Bomb 2",
                     "hidden": false,
                     "id": "38d8-5c08-8b93-1bb6",
                     "sortIndex": 2,
@@ -2938,6 +2990,17 @@
                         "name": "Points",
                         "typeId": "51b2-306e-1021-d207",
                         "value": 10
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5153-1852-1d60-5752",
+                        "includeChildSelections": false
                       }
                     ]
                   }
@@ -2988,7 +3051,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Dominions mirror the Battle Sisters grammar. Dominion Superior is represented directly; Dominions 2-3 are the ordinary Boltgun block; Dominions 4-5 are canonical Storm Bolter specialists with Meltagun / Flamer alternatives. Munitorum Cherub is unit-level Paid Wargear. The two +10 Plasma Grenade / Melta Bomb allowances are represented as two independent unit-level optional slots.",
+        "comment": "LOADOUT UI: Dominions mirror the Battle Sisters grammar. Dominion Superior is represented directly; Dominions 2-3 are the ordinary Boltgun block; Dominions 4-5 are canonical Storm Bolter specialists with Meltagun / Flamer alternatives. Munitorum Cherub is unit-level Paid Wargear. The two +10 Plasma Grenade / Melta Bomb allowances are represented as two independent unit-level optional slots.\n\nREV16 PRESENTATION: Dominions Paid Wargear now separates Plasma Grenades and Melta Bombs into Grenades and Bombs checklist groups with two independent 10-point checkboxes each.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -3053,7 +3116,7 @@
           }
         ],
         "sortIndex": 13,
-        "comment": "VARIABLE UNIT SIZE: root represents Paragon Warsuits 1-2 at 120 Points. Paragon Warsuit 3 is optional +60 Points and has the same three independent equipment lists.",
+        "comment": "VARIABLE UNIT SIZE: root represents Paragon Warsuits 1-2 at 120 Points. Paragon Warsuit 3 is optional +60 Points and has the same three independent equipment lists.\n\nREV16 PRESENTATION: suppressed Wrist Weapons, Heavy Weapon, and Melee Weapon slot headers on all Paragon Warsuits and moved each model's melee choice to the first position.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -3068,10 +3131,53 @@
                 "sortIndex": 1,
                 "selectionEntryGroups": [
                   {
-                    "name": "Wrist Weapons",
-                    "id": "c6a7-8211-3670-7d73",
+                    "name": "​",
+                    "id": "f674-3a24-0a1a-5118",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1138-1ef7-83ed-07c1"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0d8d-0944-c71b-6a02"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Warblade",
+                        "hidden": false,
+                        "id": "4cd0-5b32-b34b-073a",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Warmace",
+                        "hidden": false,
+                        "id": "6703-578c-34f6-76b8",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "4cd0-5b32-b34b-073a"
+                  },
+                  {
+                    "name": "​",
+                    "id": "c6a7-8211-3670-7d73",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -3111,10 +3217,10 @@
                     "defaultSelectionEntryId": "9edd-3a8f-b30e-c752"
                   },
                   {
-                    "name": "Heavy Weapon",
+                    "name": "​",
                     "id": "5484-f0ca-b157-d6db",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 3,
                     "constraints": [
                       {
                         "type": "min",
@@ -3160,49 +3266,6 @@
                       }
                     ],
                     "defaultSelectionEntryId": "8262-941d-79b1-99bd"
-                  },
-                  {
-                    "name": "Melee Weapon",
-                    "id": "f674-3a24-0a1a-5118",
-                    "hidden": false,
-                    "sortIndex": 3,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "1138-1ef7-83ed-07c1"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "0d8d-0944-c71b-6a02"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Warblade",
-                        "hidden": false,
-                        "id": "4cd0-5b32-b34b-073a",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Warmace",
-                        "hidden": false,
-                        "id": "6703-578c-34f6-76b8",
-                        "sortIndex": 2
-                      }
-                    ],
-                    "defaultSelectionEntryId": "4cd0-5b32-b34b-073a"
                   }
                 ]
               },
@@ -3213,10 +3276,53 @@
                 "sortIndex": 2,
                 "selectionEntryGroups": [
                   {
-                    "name": "Wrist Weapons",
-                    "id": "e960-b053-2821-33a8",
+                    "name": "​",
+                    "id": "ccd2-afe1-ed96-d752",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0423-6f0d-6948-4a91"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a065-61a7-b30d-41f9"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Warblade",
+                        "hidden": false,
+                        "id": "3750-8386-e76b-7c04",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Warmace",
+                        "hidden": false,
+                        "id": "9140-2e4f-77ab-fcfb",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "3750-8386-e76b-7c04"
+                  },
+                  {
+                    "name": "​",
+                    "id": "e960-b053-2821-33a8",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -3256,10 +3362,10 @@
                     "defaultSelectionEntryId": "9a05-a440-208b-1d57"
                   },
                   {
-                    "name": "Heavy Weapon",
+                    "name": "​",
                     "id": "35d7-c65c-0631-4f92",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 3,
                     "constraints": [
                       {
                         "type": "min",
@@ -3305,49 +3411,6 @@
                       }
                     ],
                     "defaultSelectionEntryId": "4671-6fc4-7dc0-56fd"
-                  },
-                  {
-                    "name": "Melee Weapon",
-                    "id": "ccd2-afe1-ed96-d752",
-                    "hidden": false,
-                    "sortIndex": 3,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "0423-6f0d-6948-4a91"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "a065-61a7-b30d-41f9"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Warblade",
-                        "hidden": false,
-                        "id": "3750-8386-e76b-7c04",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Warmace",
-                        "hidden": false,
-                        "id": "9140-2e4f-77ab-fcfb",
-                        "sortIndex": 2
-                      }
-                    ],
-                    "defaultSelectionEntryId": "3750-8386-e76b-7c04"
                   }
                 ]
               }
@@ -3384,10 +3447,53 @@
                 ],
                 "selectionEntryGroups": [
                   {
-                    "name": "Wrist Weapons",
-                    "id": "1bb2-2bfc-8725-bd4c",
+                    "name": "​",
+                    "id": "60e4-22a1-918a-a624",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4b70-07f5-0299-0511"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "eea0-7819-0bcd-33b0"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Warblade",
+                        "hidden": false,
+                        "id": "a9dc-aabc-a5de-6eff",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Warmace",
+                        "hidden": false,
+                        "id": "b1ec-937f-4f76-1984",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "a9dc-aabc-a5de-6eff"
+                  },
+                  {
+                    "name": "​",
+                    "id": "1bb2-2bfc-8725-bd4c",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -3427,10 +3533,10 @@
                     "defaultSelectionEntryId": "8fb2-6550-1939-bdd4"
                   },
                   {
-                    "name": "Heavy Weapon",
+                    "name": "​",
                     "id": "061b-a8e5-8d06-ea0d",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 3,
                     "constraints": [
                       {
                         "type": "min",
@@ -3476,49 +3582,6 @@
                       }
                     ],
                     "defaultSelectionEntryId": "be3c-9eac-8e20-981d"
-                  },
-                  {
-                    "name": "Melee Weapon",
-                    "id": "60e4-22a1-918a-a624",
-                    "hidden": false,
-                    "sortIndex": 3,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "4b70-07f5-0299-0511"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "eea0-7819-0bcd-33b0"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Warblade",
-                        "hidden": false,
-                        "id": "a9dc-aabc-a5de-6eff",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Warmace",
-                        "hidden": false,
-                        "id": "b1ec-937f-4f76-1984",
-                        "sortIndex": 2
-                      }
-                    ],
-                    "defaultSelectionEntryId": "a9dc-aabc-a5de-6eff"
                   }
                 ]
               }
@@ -3673,9 +3736,44 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "6fd6-ee9b-3c43-bd56",
+                    "id": "bd72-e8ab-68b9-420a",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5eab-3f6a-f783-c472"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9d0f-8d27-b2a0-ee83"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "b354-349e-2d99-6eb1",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b354-349e-2d99-6eb1"
+                  },
+                  {
+                    "name": "​",
+                    "id": "6fd6-ee9b-3c43-bd56",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -3713,41 +3811,6 @@
                       }
                     ],
                     "defaultSelectionEntryId": "e2f1-1d21-2cec-bb0d"
-                  },
-                  {
-                    "name": "​",
-                    "id": "bd72-e8ab-68b9-420a",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "5eab-3f6a-f783-c472"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "9d0f-8d27-b2a0-ee83"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Power Sword",
-                        "hidden": false,
-                        "id": "b354-349e-2d99-6eb1",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "b354-349e-2d99-6eb1"
                   }
                 ]
               },
@@ -3759,9 +3822,44 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "f607-e5a1-a2d5-3c42",
+                    "id": "b336-8683-df76-8621",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "556a-d25c-04f1-e4c5"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "bfda-cced-7162-cb98"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "7e3c-d6be-1aca-c3da",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "7e3c-d6be-1aca-c3da"
+                  },
+                  {
+                    "name": "​",
+                    "id": "f607-e5a1-a2d5-3c42",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -3803,108 +3901,12 @@
                             "value": 10
                           }
                         ],
-                        "modifiers": [
+                        "categoryLinks": [
                           {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "31fe-9146-901c-48b0",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "d34b-ecab-ef88-62db",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "31fe-9146-901c-48b0",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "5f1e-94a2-5043-a7b4",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "d34b-ecab-ef88-62db",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "5f1e-94a2-5043-a7b4",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  }
-                                ]
-                              }
-                            ]
+                            "targetId": "2e60-d977-cb67-e997",
+                            "id": "2eb8-e821-6124-088e",
+                            "primary": false,
+                            "name": "Zephyrim Hand Flamer Equipped"
                           }
                         ]
                       },
@@ -3922,148 +3924,17 @@
                             "value": 10
                           }
                         ],
-                        "modifiers": [
+                        "categoryLinks": [
                           {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "73ef-021a-1361-71d7",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "8600-5fbc-cef9-fe7c",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "73ef-021a-1361-71d7",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3bb2-6fb9-2c2a-0b57",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "8600-5fbc-cef9-fe7c",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3bb2-6fb9-2c2a-0b57",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  }
-                                ]
-                              }
-                            ]
+                            "targetId": "a391-d9d3-7afb-360d",
+                            "id": "a8ee-114e-3c38-9a2c",
+                            "primary": false,
+                            "name": "Zephyrim Inferno Pistol Equipped"
                           }
                         ]
                       }
                     ],
                     "defaultSelectionEntryId": "110e-ede2-7c2c-57b5"
-                  },
-                  {
-                    "name": "​",
-                    "id": "b336-8683-df76-8621",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "556a-d25c-04f1-e4c5"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "bfda-cced-7162-cb98"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Power Sword",
-                        "hidden": false,
-                        "id": "7e3c-d6be-1aca-c3da",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "7e3c-d6be-1aca-c3da"
                   }
                 ]
               },
@@ -4075,9 +3946,44 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "5518-a253-a307-16c5",
+                    "id": "b7d7-c74a-92af-ba87",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9bae-0eb8-684d-1640"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "14c9-7cf8-d4cc-ea18"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "405e-ad8a-28e8-9fe4",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "405e-ad8a-28e8-9fe4"
+                  },
+                  {
+                    "name": "​",
+                    "id": "5518-a253-a307-16c5",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -4119,108 +4025,12 @@
                             "value": 10
                           }
                         ],
-                        "modifiers": [
+                        "categoryLinks": [
                           {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3765-2c5e-803e-8b48",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "d34b-ecab-ef88-62db",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3765-2c5e-803e-8b48",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "5f1e-94a2-5043-a7b4",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "d34b-ecab-ef88-62db",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "5f1e-94a2-5043-a7b4",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  }
-                                ]
-                              }
-                            ]
+                            "targetId": "2e60-d977-cb67-e997",
+                            "id": "6df4-764a-7847-02a2",
+                            "primary": false,
+                            "name": "Zephyrim Hand Flamer Equipped"
                           }
                         ]
                       },
@@ -4238,148 +4048,17 @@
                             "value": 10
                           }
                         ],
-                        "modifiers": [
+                        "categoryLinks": [
                           {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "586c-01fa-b573-aa24",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "8600-5fbc-cef9-fe7c",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "586c-01fa-b573-aa24",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3bb2-6fb9-2c2a-0b57",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "8600-5fbc-cef9-fe7c",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3bb2-6fb9-2c2a-0b57",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  }
-                                ]
-                              }
-                            ]
+                            "targetId": "a391-d9d3-7afb-360d",
+                            "id": "529b-3f1a-c81f-f0c9",
+                            "primary": false,
+                            "name": "Zephyrim Inferno Pistol Equipped"
                           }
                         ]
                       }
                     ],
                     "defaultSelectionEntryId": "2d6f-1a6d-33df-0f9f"
-                  },
-                  {
-                    "name": "​",
-                    "id": "b7d7-c74a-92af-ba87",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "9bae-0eb8-684d-1640"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "14c9-7cf8-d4cc-ea18"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Power Sword",
-                        "hidden": false,
-                        "id": "405e-ad8a-28e8-9fe4",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "405e-ad8a-28e8-9fe4"
                   }
                 ]
               },
@@ -4391,9 +4070,44 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "d80a-b670-87f0-02ce",
+                    "id": "68d9-50d4-7603-e15f",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2d49-7516-826d-47be"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0fa5-7787-9d42-3ec9"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "d343-7f1a-1ff2-ef83",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d343-7f1a-1ff2-ef83"
+                  },
+                  {
+                    "name": "​",
+                    "id": "d80a-b670-87f0-02ce",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -4435,108 +4149,12 @@
                             "value": 10
                           }
                         ],
-                        "modifiers": [
+                        "categoryLinks": [
                           {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3765-2c5e-803e-8b48",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "31fe-9146-901c-48b0",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3765-2c5e-803e-8b48",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "5f1e-94a2-5043-a7b4",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "31fe-9146-901c-48b0",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "5f1e-94a2-5043-a7b4",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  }
-                                ]
-                              }
-                            ]
+                            "targetId": "2e60-d977-cb67-e997",
+                            "id": "7199-f43a-0683-bf03",
+                            "primary": false,
+                            "name": "Zephyrim Hand Flamer Equipped"
                           }
                         ]
                       },
@@ -4554,148 +4172,17 @@
                             "value": 10
                           }
                         ],
-                        "modifiers": [
+                        "categoryLinks": [
                           {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "586c-01fa-b573-aa24",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "73ef-021a-1361-71d7",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "586c-01fa-b573-aa24",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3bb2-6fb9-2c2a-0b57",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "73ef-021a-1361-71d7",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3bb2-6fb9-2c2a-0b57",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  }
-                                ]
-                              }
-                            ]
+                            "targetId": "a391-d9d3-7afb-360d",
+                            "id": "37ae-b393-9f54-8c8d",
+                            "primary": false,
+                            "name": "Zephyrim Inferno Pistol Equipped"
                           }
                         ]
                       }
                     ],
                     "defaultSelectionEntryId": "3102-1d8d-2a3b-7de1"
-                  },
-                  {
-                    "name": "​",
-                    "id": "68d9-50d4-7603-e15f",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "2d49-7516-826d-47be"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "0fa5-7787-9d42-3ec9"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Power Sword",
-                        "hidden": false,
-                        "id": "d343-7f1a-1ff2-ef83",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "d343-7f1a-1ff2-ef83"
                   }
                 ]
               },
@@ -4707,9 +4194,44 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "28c0-70e7-9c19-b8c2",
+                    "id": "af76-6d10-d802-6d85",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "b736-1b57-3a84-ac6a"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5c3f-99c7-06b4-4d29"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "e63f-c48d-fb2b-97af",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "e63f-c48d-fb2b-97af"
+                  },
+                  {
+                    "name": "​",
+                    "id": "28c0-70e7-9c19-b8c2",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -4751,108 +4273,12 @@
                             "value": 10
                           }
                         ],
-                        "modifiers": [
+                        "categoryLinks": [
                           {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3765-2c5e-803e-8b48",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "31fe-9146-901c-48b0",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "3765-2c5e-803e-8b48",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "d34b-ecab-ef88-62db",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "31fe-9146-901c-48b0",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "d34b-ecab-ef88-62db",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Hand Flamer"
-                                  }
-                                ]
-                              }
-                            ]
+                            "targetId": "2e60-d977-cb67-e997",
+                            "id": "5f99-96cc-437a-3a13",
+                            "primary": false,
+                            "name": "Zephyrim Hand Flamer Equipped"
                           }
                         ]
                       },
@@ -4870,155 +4296,24 @@
                             "value": 10
                           }
                         ],
-                        "modifiers": [
+                        "categoryLinks": [
                           {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "586c-01fa-b573-aa24",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "73ef-021a-1361-71d7",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "586c-01fa-b573-aa24",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "8600-5fbc-cef9-fe7c",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditionGroups": [
-                              {
-                                "type": "and",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "73ef-021a-1361-71d7",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  },
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "ancestor",
-                                    "childId": "8600-5fbc-cef9-fe7c",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "includeChildForces": false,
-                                    "childName": "Inferno Pistol"
-                                  }
-                                ]
-                              }
-                            ]
+                            "targetId": "a391-d9d3-7afb-360d",
+                            "id": "e266-ab71-1734-201b",
+                            "primary": false,
+                            "name": "Zephyrim Inferno Pistol Equipped"
                           }
                         ]
                       }
                     ],
                     "defaultSelectionEntryId": "0d60-336b-c51d-896f"
-                  },
-                  {
-                    "name": "​",
-                    "id": "af76-6d10-d802-6d85",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "b736-1b57-3a84-ac6a"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "5c3f-99c7-06b4-4d29"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Power Sword",
-                        "hidden": false,
-                        "id": "e63f-c48d-fb2b-97af",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "e63f-c48d-fb2b-97af"
                   }
                 ]
               }
             ]
           }
         ],
-        "comment": "LOADOUT UI: Zephyrim Superior is the canonical model for the free replacement and defaults to Plasma Pistol, with Pennant as the alternative; it retains its Power Sword. Zephyrim 2-5 retain Bolt Pistol + Power Sword by default and may individually replace the Bolt Pistol with Hand Flamer +10 or Inferno Pistol +10, with each paid weapon capped at two models.",
+        "comment": "LOADOUT UI: Zephyrim Superior is the canonical model for the free replacement and defaults to Plasma Pistol, with Pennant as the alternative; it retains its Power Sword. Zephyrim 2-5 retain Bolt Pistol + Power Sword by default and may individually replace the Bolt Pistol with Hand Flamer +10 or Inferno Pistol +10, with each paid weapon capped at two models.\n\nREV16: removed the cross-model hide implementation for Hand Flamers and Inferno Pistols. All sidearm choices remain available; separate constructive errors now enforce up to two Hand Flamers and up to two Inferno Pistols.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -5026,6 +4321,46 @@
             "hidden": false,
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "This unit has more than two Hand Flamers. It may only be equipped with up to two Hand Flamers. Remove the excess Hand Flamers.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "self",
+                "childId": "2e60-d977-cb67-e997",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "queryFromSelf": false,
+                "childName": "Zephyrim Hand Flamer Equipped"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "This unit has more than two Inferno Pistols. It may only be equipped with up to two Inferno Pistols. Remove the excess Inferno Pistols.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "self",
+                "childId": "a391-d9d3-7afb-360d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "queryFromSelf": false,
+                "childName": "Zephyrim Inferno Pistol Equipped"
+              }
+            ]
           }
         ]
       },
@@ -5070,6 +4405,45 @@
             "hidden": false,
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "b98e-9ecb-3306-782a",
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {
+                "type": "min",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "78cd-0ea3-effb-d98c",
+                "includeChildSelections": false
+              },
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "ac95-cfe5-8e38-13ec",
+                "includeChildSelections": false
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "This unit will be added shortly. Please consult the Adepta Sororitas army rules PDF for its full rules and loadout options. Reforged Discord: https://discord.com/invite/BpjkaNmMVB",
+                "hidden": false,
+                "id": "b43e-1f13-459d-fe8f",
+                "sortIndex": 1
+              }
+            ],
+            "defaultSelectionEntryId": "b43e-1f13-459d-fe8f"
           }
         ]
       },
@@ -5599,52 +4973,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "add9-8561-9701-e5ee",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "a404-dd7e-dd01-8fda"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "77a1-2f8f-704e-fa79"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Heavy Flamers",
-                        "hidden": false,
-                        "id": "c523-033d-f5a6-1424",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Heavy Bolters",
-                        "hidden": false,
-                        "id": "63f1-87a0-5dac-930e",
-                        "sortIndex": 2
-                      }
-                    ],
-                    "defaultSelectionEntryId": "c523-033d-f5a6-1424"
-                  },
-                  {
-                    "name": "​",
                     "id": "fb10-c8ef-9c94-1497",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -5682,6 +5013,49 @@
                       }
                     ],
                     "defaultSelectionEntryId": "135a-08c9-c956-4356"
+                  },
+                  {
+                    "name": "​",
+                    "id": "add9-8561-9701-e5ee",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a404-dd7e-dd01-8fda"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "77a1-2f8f-704e-fa79"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Flamers",
+                        "hidden": false,
+                        "id": "c523-033d-f5a6-1424",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Bolters",
+                        "hidden": false,
+                        "id": "63f1-87a0-5dac-930e",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "c523-033d-f5a6-1424"
                   }
                 ]
               }
@@ -5747,52 +5121,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "f5a9-5f8e-bdeb-8176",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "e0f4-d092-504b-f965"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "008e-f6a8-0013-1312"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Heavy Flamers",
-                        "hidden": false,
-                        "id": "d4d0-072a-89a8-3924",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Heavy Bolters",
-                        "hidden": false,
-                        "id": "116c-1f2a-fd4a-a38d",
-                        "sortIndex": 2
-                      }
-                    ],
-                    "defaultSelectionEntryId": "d4d0-072a-89a8-3924"
-                  },
-                  {
-                    "name": "​",
                     "id": "32a6-2add-e51d-5bd9",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -5830,6 +5161,49 @@
                       }
                     ],
                     "defaultSelectionEntryId": "63d5-3daf-9a6c-5d13"
+                  },
+                  {
+                    "name": "​",
+                    "id": "f5a9-5f8e-bdeb-8176",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e0f4-d092-504b-f965"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "008e-f6a8-0013-1312"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Flamers",
+                        "hidden": false,
+                        "id": "d4d0-072a-89a8-3924",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Bolters",
+                        "hidden": false,
+                        "id": "116c-1f2a-fd4a-a38d",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d4d0-072a-89a8-3924"
                   }
                 ]
               }
@@ -6310,49 +5684,49 @@
             ]
           },
           {
+            "name": "Pintle Weapons",
+            "id": "beb2-d21b-f014-4503",
+            "hidden": false,
+            "sortIndex": 2,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "f584-8076-7a2d-395d"
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Pintle Storm Bolter",
+                "hidden": false,
+                "id": "76f3-6f4e-8ab4-65d5",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "name": "Paid Wargear",
             "id": "2ccf-7b77-3977-d0cf",
             "hidden": false,
-            "sortIndex": 2,
+            "sortIndex": 3,
             "selectionEntryGroups": [
-              {
-                "name": "​",
-                "id": "beb2-d21b-f014-4503",
-                "hidden": false,
-                "sortIndex": 1,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "f584-8076-7a2d-395d"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Pintle Storm Bolter",
-                    "hidden": false,
-                    "id": "76f3-6f4e-8ab4-65d5",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ]
-              },
               {
                 "name": "​",
                 "id": "72dd-a9eb-c37b-e79d",
                 "hidden": false,
-                "sortIndex": 2,
+                "sortIndex": 1,
                 "constraints": [
                   {
                     "type": "max",
@@ -6385,7 +5759,7 @@
                 "name": "​",
                 "id": "3794-6bdf-a9ce-d94d",
                 "hidden": false,
-                "sortIndex": 3,
+                "sortIndex": 2,
                 "constraints": [
                   {
                     "type": "max",
@@ -6418,7 +5792,7 @@
                 "name": "​",
                 "id": "d54f-460d-2458-50fa",
                 "hidden": false,
-                "sortIndex": 4,
+                "sortIndex": 3,
                 "constraints": [
                   {
                     "type": "max",
@@ -6467,7 +5841,8 @@
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
-        ]
+        ],
+        "comment": "REV16 PRESENTATION: Pintle Storm Bolter moved from Paid Wargear into a top-level Pintle Weapons section."
       },
       {
         "type": "unit",
@@ -6562,9 +5937,52 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "2f98-ab33-dbc9-0bd0",
+                    "id": "2bd6-0b10-ae7e-172c",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f8b1-d026-8e2b-4d81"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8e60-3d11-7c3d-c257"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainsword",
+                        "hidden": false,
+                        "id": "1731-7664-2d04-5114",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Weapon",
+                        "hidden": false,
+                        "id": "9fd9-b9da-c7dd-05d1",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "1731-7664-2d04-5114"
+                  },
+                  {
+                    "name": "​",
+                    "id": "2f98-ab33-dbc9-0bd0",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -6671,49 +6089,6 @@
                       }
                     ],
                     "defaultSelectionEntryId": "c6b6-e734-098a-4366"
-                  },
-                  {
-                    "name": "​",
-                    "id": "2bd6-0b10-ae7e-172c",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "f8b1-d026-8e2b-4d81"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "8e60-3d11-7c3d-c257"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Chainsword",
-                        "hidden": false,
-                        "id": "1731-7664-2d04-5114",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Power Weapon",
-                        "hidden": false,
-                        "id": "9fd9-b9da-c7dd-05d1",
-                        "sortIndex": 2
-                      }
-                    ],
-                    "defaultSelectionEntryId": "1731-7664-2d04-5114"
                   }
                 ]
               },
@@ -12163,9 +11538,19 @@
         "name": "Retributor Heavy Weapon Assigned",
         "id": "0fc2-b303-a4c4-1fa0",
         "hidden": true
+      },
+      {
+        "name": "Zephyrim Hand Flamer Equipped",
+        "id": "2e60-d977-cb67-e997",
+        "hidden": true
+      },
+      {
+        "name": "Zephyrim Inferno Pistol Equipped",
+        "id": "a391-d9d3-7afb-360d",
+        "hidden": true
       }
     ],
     "authorName": "40k Reforged Homebrew",
-    "comment": "PHASE 0.1 STRUCTURAL SHELL\nScope intentionally limited to Unit Name, Unit Class, Unit Category, Points Cost, and Attachments. Imagifier uses the nested Additional Leader pattern. Loadouts, Additional Copy Costs, unit-size UI, ratio restrictions, and other non-attachment list-building mechanics are intentionally deferred.\n\nPHASE 0.2 LEADER LOADOUT PASS\nEquipment added only for Canoness, Palatine, Dogmata, Imagifier, and Dialogus. Imagifier remains nested as Additional Leader. No non-Leader loadouts added.\n\nPHASE 0.3 BATTLE SISTERS LOADOUT PASS\nAdded equipment only for Battle Sisters. Existing Leader loadouts and Imagifier Additional Leader structure are preserved.\n\nPHASE 0.4 ELITES / DOMINIONS / PARAGONS LOADOUT PASS\nAdded loadouts for Sisters Repentia, Celestine, Hospitaller, Celestian Sacresants, Dominions, Paragon Warsuits, and Arco-Flagellants. Sisters Novitiates remain intentionally untouched.\n\nPHASE 0.5 ZEPHYRIM / VEHICLES / RETRIBUTORS LOADOUT PASS\nCorrected Repentia Superior placement. Added Zephyrim, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and Retributors. Seraphim remain intentionally untouched.\n\nPHASE 0.5A ZEPHYRIM SOURCE CONFIRMATION\nZephyrim presentation confirmed against the clarified source: Zephyrim Superior is the free Plasma Pistol / Pennant model; Zephyrim 2-5 retain Bolt Pistol + Power Sword with paid Hand Flamer / Inferno Pistol upgrades. Seraphim remain untouched.\n\nPHASE 0.5B PAID WARGEAR / RETRIBUTOR UI FIX\nAll direct Paid Wargear entries now use optional max-1 selection groups instead of quantity spinners. Retributors 2-5 no longer auto-select a heavy weapon, preventing the roster from opening in an illegal 4x default state.\n\nPHASE 0.5C RETRIBUTOR NONE / VALIDATION UI\nRetributors 2-5 now use optional 0/1 heavy-weapon lists, allowing New Recruit to display its built-in (None) state. A hidden semantic category counts real heavy-weapon assignments and a custom error explains when fewer than four models are configured.\n\nREV9 CONSTRUCTIVE ERROR + UNIVERSAL SYSTEM MIGRATION\nAdepta Sororitas now use Game System revision 11. Added the standard Additional Copy Costs subsystem for all 14 native non-Rare Other units, including Configuration safeguards and per-unit reminder links. Canoness, Palatine, Dogmata, and Dialogus use constructive missing-attachment validation; Battle Sisters, Dominions, and Retributors use constructive external-Leader host limits; Canoness, Celestine, and Hospitaller use constructive Rare limits. Imagifier remains a nested Countless Additional Leader and does not consume the external Leader association slot. Retributor heavy-weapon validation is preserved unchanged. Sisters Novitiates and Seraphim remain intentionally without loadout implementations.\n\nREV10 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, categories, Imagifier nesting, Retributor heavy-weapon validation, or intentional empty-unit structures were otherwise changed.\n\nREV11 POLISH PASS\nAdded explicit model headers to Canoness, Palatine, Dogmata, Dialogus, Celestine, Hospitaller, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and the shared Imagifier; added an Arco-Flagellants 1-10 grouped header; flattened Battle Sisters, Dominions, and Retributors specialist models into Loadout Options; renamed their Additional Leader groups to Attached Imagifier; standardized their external-Leader errors; converted all nine Superior combi-weapon packages to meaningful-choice-first '&' grammar; renamed Paragon Warsuits Additional Models to Additional Model; named the two Dominion grenade slots Grenade and Additional Grenade; and standardized Canoness, Celestine, and Hospitaller Rare errors. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. Retributor heavy-weapon validation, Imagifier nesting, points, Additional Copy Costs, categories, attachment mechanics, and all other rules semantics remain unchanged.\n\nREV12 RETROSPECTIVE POLISH PASS\nRevisited Adepta Sororitas against the final cross-faction presentation standard. Corrected the live Sisters Repentia authoring note to reflect Repentia Superior as the Neural Whips model; modernized the shared Imagifier comment to Nested Attached Leader terminology; and updated the live Additional Copy Costs comment to version-agnostic shared Game System wording. Historical phase/revision provenance is preserved unchanged. All IDs, SelectionEntry names, loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, Additional Copy Costs arithmetic, categories, and all other rules semantics remain unchanged.\n\nREV13 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Battle Sisters and Sisters Novitiates now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 84 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 14 native Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists, and no Counts As relationship merges the two Troop datasheets. Imagifier remains a nested Countless attached Leader and does not participate in Troop duplicate accounting. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. All loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, categories, and other catalogue semantics remain unchanged.\n\nREV14 NOVITIATE RATIO LIMIT TEST\nAdded the source restriction allowing no more than one Sisters Novitiates unit for each Battle Sisters unit. The restriction is intentionally permissive at selection time and enforced through a custom player-facing ratio error rather than a New Recruit stock max-constraint error. A visible Sisters Novitiates Support Requirement rule records the source wording. Battle Sisters and Sisters Novitiates remain separate Troop copy-cost families; points, categories, loadouts, attachments, Additional Copy Costs, and all unrelated catalogue semantics are unchanged.\n\nREV15 CELESTIAN SACRESANTS EXPORT PACKAGE\nCelestian Sacresants 2-5 now present one mandatory combined squad-loadout choice: 4x Anointed Halberd & Bolt Pistol or 4x Hallowed Mace & Bolt Pistol. The previous standalone 4x Bolt Pistol presentation is retained only as an inert hidden compatibility shell. No points, unit categories, copy-cost behavior, Paid Wargear, Superior loadout, or other unit semantics changed."
+    "comment": "PHASE 0.1 STRUCTURAL SHELL\nScope intentionally limited to Unit Name, Unit Class, Unit Category, Points Cost, and Attachments. Imagifier uses the nested Additional Leader pattern. Loadouts, Additional Copy Costs, unit-size UI, ratio restrictions, and other non-attachment list-building mechanics are intentionally deferred.\n\nPHASE 0.2 LEADER LOADOUT PASS\nEquipment added only for Canoness, Palatine, Dogmata, Imagifier, and Dialogus. Imagifier remains nested as Additional Leader. No non-Leader loadouts added.\n\nPHASE 0.3 BATTLE SISTERS LOADOUT PASS\nAdded equipment only for Battle Sisters. Existing Leader loadouts and Imagifier Additional Leader structure are preserved.\n\nPHASE 0.4 ELITES / DOMINIONS / PARAGONS LOADOUT PASS\nAdded loadouts for Sisters Repentia, Celestine, Hospitaller, Celestian Sacresants, Dominions, Paragon Warsuits, and Arco-Flagellants. Sisters Novitiates remain intentionally untouched.\n\nPHASE 0.5 ZEPHYRIM / VEHICLES / RETRIBUTORS LOADOUT PASS\nCorrected Repentia Superior placement. Added Zephyrim, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and Retributors. Seraphim remain intentionally untouched.\n\nPHASE 0.5A ZEPHYRIM SOURCE CONFIRMATION\nZephyrim presentation confirmed against the clarified source: Zephyrim Superior is the free Plasma Pistol / Pennant model; Zephyrim 2-5 retain Bolt Pistol + Power Sword with paid Hand Flamer / Inferno Pistol upgrades. Seraphim remain untouched.\n\nPHASE 0.5B PAID WARGEAR / RETRIBUTOR UI FIX\nAll direct Paid Wargear entries now use optional max-1 selection groups instead of quantity spinners. Retributors 2-5 no longer auto-select a heavy weapon, preventing the roster from opening in an illegal 4x default state.\n\nPHASE 0.5C RETRIBUTOR NONE / VALIDATION UI\nRetributors 2-5 now use optional 0/1 heavy-weapon lists, allowing New Recruit to display its built-in (None) state. A hidden semantic category counts real heavy-weapon assignments and a custom error explains when fewer than four models are configured.\n\nREV9 CONSTRUCTIVE ERROR + UNIVERSAL SYSTEM MIGRATION\nAdepta Sororitas now use Game System revision 11. Added the standard Additional Copy Costs subsystem for all 14 native non-Rare Other units, including Configuration safeguards and per-unit reminder links. Canoness, Palatine, Dogmata, and Dialogus use constructive missing-attachment validation; Battle Sisters, Dominions, and Retributors use constructive external-Leader host limits; Canoness, Celestine, and Hospitaller use constructive Rare limits. Imagifier remains a nested Countless Additional Leader and does not consume the external Leader association slot. Retributor heavy-weapon validation is preserved unchanged. Sisters Novitiates and Seraphim remain intentionally without loadout implementations.\n\nREV10 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, categories, Imagifier nesting, Retributor heavy-weapon validation, or intentional empty-unit structures were otherwise changed.\n\nREV11 POLISH PASS\nAdded explicit model headers to Canoness, Palatine, Dogmata, Dialogus, Celestine, Hospitaller, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and the shared Imagifier; added an Arco-Flagellants 1-10 grouped header; flattened Battle Sisters, Dominions, and Retributors specialist models into Loadout Options; renamed their Additional Leader groups to Attached Imagifier; standardized their external-Leader errors; converted all nine Superior combi-weapon packages to meaningful-choice-first '&' grammar; renamed Paragon Warsuits Additional Models to Additional Model; named the two Dominion grenade slots Grenade and Additional Grenade; and standardized Canoness, Celestine, and Hospitaller Rare errors. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. Retributor heavy-weapon validation, Imagifier nesting, points, Additional Copy Costs, categories, attachment mechanics, and all other rules semantics remain unchanged.\n\nREV12 RETROSPECTIVE POLISH PASS\nRevisited Adepta Sororitas against the final cross-faction presentation standard. Corrected the live Sisters Repentia authoring note to reflect Repentia Superior as the Neural Whips model; modernized the shared Imagifier comment to Nested Attached Leader terminology; and updated the live Additional Copy Costs comment to version-agnostic shared Game System wording. Historical phase/revision provenance is preserved unchanged. All IDs, SelectionEntry names, loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, Additional Copy Costs arithmetic, categories, and all other rules semantics remain unchanged.\n\nREV13 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Battle Sisters and Sisters Novitiates now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 84 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 14 native Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists, and no Counts As relationship merges the two Troop datasheets. Imagifier remains a nested Countless attached Leader and does not participate in Troop duplicate accounting. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. All loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, categories, and other catalogue semantics remain unchanged.\n\nREV14 NOVITIATE RATIO LIMIT TEST\nAdded the source restriction allowing no more than one Sisters Novitiates unit for each Battle Sisters unit. The restriction is intentionally permissive at selection time and enforced through a custom player-facing ratio error rather than a New Recruit stock max-constraint error. A visible Sisters Novitiates Support Requirement rule records the source wording. Battle Sisters and Sisters Novitiates remain separate Troop copy-cost families; points, categories, loadouts, attachments, Additional Copy Costs, and all unrelated catalogue semantics are unchanged.\n\nREV15 CELESTIAN SACRESANTS EXPORT PACKAGE\nCelestian Sacresants 2-5 now present one mandatory combined squad-loadout choice: 4x Anointed Halberd & Bolt Pistol or 4x Hallowed Mace & Bolt Pistol. The previous standalone 4x Bolt Pistol presentation is retained only as an inert hidden compatibility shell. No points, unit categories, copy-cost behavior, Paid Wargear, Superior loadout, or other unit semantics changed.\n\nREV16 POLISH PASS\nUpdated to Game System revision 20 and retargeted Battle Sisters and Sisters Novitiates to the Additional Copy Cost - Troop short-form rule. Zephyrim Hand Flamer and Inferno Pistol limits are now permissive selections with separate constructive max-two errors instead of cross-model hiding. Sisters Novitiates and Seraphim now show a Loadout Options placeholder directing players to the army rules PDF and Reforged Discord while their full listbuilder loadouts are pending. Castigator Pintle Storm Bolter now sits under a top-level Pintle Weapons section. Paragon Warsuit slot headers are suppressed. Dominions Plasma Grenades and Melta Bombs now use checklist-style bearer entries. Across implemented model loadouts, melee weapon choices are presented first wherever a model has multiple weapon-choice groups. Existing surviving IDs, points, categories, attachment behavior, copy-cost arithmetic, Novitiate ratio validation, Rare validation, and unrelated mechanics are unchanged."
   }
 }

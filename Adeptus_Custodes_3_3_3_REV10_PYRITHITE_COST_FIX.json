@@ -4,8 +4,8 @@
     "id": "a774-9ea6-9b60-31af",
     "name": "Adeptus Custodes 3.3.3",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 17,
-    "revision": 8,
+    "gameSystemRevision": 20,
+    "revision": 10,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -2511,7 +2511,7 @@
             "noindex": false
           }
         ],
-        "comment": "SHIELD-CAPTAIN LIMIT: Rare remains a visible descriptive category, but the redundant individual Rare max-1 constraint is omitted. The explicit shared SHIELD-CAPTAIN max-1 restriction is stronger, avoiding duplicate (1/1) counters.\nLOADOUT UI: the +10 Pyrithite Spear replacement is represented as a complete loadout, so choosing it removes the Ballistus Grenade Launcher from the represented equipment state. Complete package names place the distinguishing weapon first for easier scanning.",
+        "comment": "SHIELD-CAPTAIN LIMIT: Rare remains a visible descriptive category, but the redundant individual Rare max-1 constraint is omitted. The explicit shared SHIELD-CAPTAIN max-1 restriction is stronger, avoiding duplicate (1/1) counters.\nLOADOUT UI: the +10 Pyrithite Spear replacement is represented as a complete loadout, so choosing it removes the Ballistus Grenade Launcher from the represented equipment state. Complete package names place the distinguishing weapon first for easier scanning.\n\nREV9 PRESENTATION: Allarus Armour Shield-Captain now chooses between Castellan Axe & Bolter, Guardian Spear & Bolter, or Pyrithite Spear & Melta [+10], with Ballistus Grenade Launcher shown separately as fixed equipment.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -2552,7 +2552,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Castellan Axe & Ballistus Grenade Launcher",
+                        "name": "Castellan Axe & Bolter",
                         "hidden": false,
                         "id": "f349-a353-0890-b99e",
                         "sortIndex": 1
@@ -2560,7 +2560,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Guardian Spear & Ballistus Grenade Launcher",
+                        "name": "Guardian Spear & Bolter",
                         "hidden": false,
                         "id": "258b-7663-c882-c3ce",
                         "sortIndex": 2
@@ -2568,21 +2568,51 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Pyrithite Spear",
+                        "name": "Pyrithite Spear & Melta",
                         "hidden": false,
                         "id": "ff79-1b3e-7ad7-a206",
                         "sortIndex": 3,
-                        "costs": [
-                          {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
-                          }
-                        ],
                         "comment": "Complete replacement loadout. Selecting this represents replacing the Ballistus Grenade Launcher and the model's other weapons with Pyrithite Spear Melta + Pyrithite Spear."
                       }
                     ],
                     "defaultSelectionEntryId": "f349-a353-0890-b99e"
+                  },
+                  {
+                    "name": "​",
+                    "id": "1fe2-a2c8-9b34-07fe",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "eb57-7cea-950f-13cf",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "bc73-6c4d-0cc5-040d",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Ballistus Grenade Launcher",
+                        "hidden": false,
+                        "id": "7b96-a6fc-807c-5a2c",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "7b96-a6fc-807c-5a2c"
                   }
                 ]
               }
@@ -3169,11 +3199,11 @@
         ],
         "infoLinks": [
           {
-            "name": "Additional Copy Costs",
+            "name": "Additional Copy Cost - Troop",
             "id": "d6c2-f88d-70e6-2f60",
             "hidden": false,
             "type": "rule",
-            "targetId": "e02a-f56c-ccaa-b1a9"
+            "targetId": "e686-5b9a-d78a-91e5"
           }
         ]
       },
@@ -3226,9 +3256,60 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "7f4c-2b8a-2c52-df7c",
+                    "id": "8071-db17-4918-c89c",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4a6a-cae5-bed8-595b"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3c80-8818-3ada-886a"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Castellan Axe & Bolter",
+                        "hidden": false,
+                        "id": "b075-90dd-424f-91c3",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Guardian Spear & Bolter",
+                        "hidden": false,
+                        "id": "f9df-ee16-e9a7-5842",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pyrithite Spear & Melta",
+                        "hidden": false,
+                        "id": "6b7f-634d-ce5f-e2c9",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b075-90dd-424f-91c3"
+                  },
+                  {
+                    "name": "​",
+                    "id": "7f4c-2b8a-2c52-df7c",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -3258,57 +3339,6 @@
                       }
                     ],
                     "defaultSelectionEntryId": "96a2-a707-efaa-954d"
-                  },
-                  {
-                    "name": "​",
-                    "id": "8071-db17-4918-c89c",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "4a6a-cae5-bed8-595b"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "3c80-8818-3ada-886a"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Castellan Axe",
-                        "hidden": false,
-                        "id": "b075-90dd-424f-91c3",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Guardian Spear",
-                        "hidden": false,
-                        "id": "f9df-ee16-e9a7-5842",
-                        "sortIndex": 2
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Pyrithite Spear",
-                        "hidden": false,
-                        "id": "6b7f-634d-ce5f-e2c9",
-                        "sortIndex": 3
-                      }
-                    ],
-                    "defaultSelectionEntryId": "b075-90dd-424f-91c3"
                   }
                 ]
               }
@@ -3364,7 +3394,8 @@
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
-        ]
+        ],
+        "comment": "REV9 PRESENTATION: Allarus Custodian now chooses between Castellan Axe & Bolter, Guardian Spear & Bolter, or Pyrithite Spear & Melta [+10], with Ballistus Grenade Launcher shown separately as fixed equipment."
       },
       {
         "type": "unit",
@@ -4669,6 +4700,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "ADEPTUS CUSTODES CURRENT-STATE BASELINE. All 12 native datasheets are fixed one-model selections. The three Shield-Captains are counted Rare Leaders, cannot attach, and share one explicit army-wide SHIELD-CAPTAIN max-1 restriction. Redundant individual Rare max constraints are omitted so New Recruit shows the mutual-exclusion counter plus Leader Capacity counter only. Left Hand of the Emperor is an optional unchecked Configuration placeholder for a future Sisters of Silence reusable library.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nAll 12 native Adeptus Custodes datasheets now expose their simple loadouts and paid wargear. Arae-Shrike and other ability-only paid options include their player-facing rules. Left Hand of the Emperor remains a Sisters of Silence placeholder. All native non-Rare Other units use the soft 1/2/3 Additional Copy Cost system.\n\nCONSTRUCTIVE ERROR MIGRATION\nAdeptus Custodes now use Game System revision 11. Additional Copy Costs uses the current Configuration safeguard, and the shared SHIELD-CAPTAIN army limit uses constructive player-facing validation. The three Shield-Captains remain Rare, count toward Leader Capacity, cannot attach, and deliberately do not receive redundant individual Rare limits. Left Hand of the Emperor remains an untouched Phase 0.1 Sisters of Silence placeholder. Existing loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, shared SHIELD-CAPTAIN limit logic, Left Hand of the Emperor placeholder, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV6 POLISH PASS\nAdded explicit model headers beneath Loadout Options for all 12 native one-model Adeptus Custodes datasheets. For Allarus Armour Shield-Captain, retained the complete atomic loadout packages but reordered the two Ballistus Grenade Launcher packages so the distinguishing weapon appears first and standardized '+' to '&'. Left Hand of the Emperor, Paid Wargear sections, shared SHIELD-CAPTAIN limit logic, Additional Copy Costs, points, categories, and all other mechanics remain unchanged.\n\nREV7 RETROSPECTIVE POLISH PASS\nRevisited Adeptus Custodes against the final cross-faction presentation standard. Modernized the three live Shield-Captain limit comments, updated the live Additional Copy Costs comment to version-agnostic shared Game System wording, and replaced the generic Phase 0.1 catalogue baseline with a current-state baseline using Leader Capacity terminology. Historical migration notes and the genuinely deferred Left Hand of the Emperor Sisters of Silence integration placeholder are preserved unchanged. All IDs, SelectionEntry names, loadouts, Paid Wargear, shared SHIELD-CAPTAIN validation, Additional Copy Costs arithmetic, points, categories, constraints, and all other rules semantics remain unchanged.\n\nREV8 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Custodian Guard, the catalogue's sole native Troop datasheet, now uses the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 48 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same eight native Other copy families. No zero-point, generated, attached-free, or otherwise exempt native Troop unit exists. Left Hand of the Emperor remains an unresolved Sisters of Silence integration placeholder and is intentionally untouched. All Shield-Captain mutual-exclusion logic, Rare semantics, loadouts, Paid Wargear, points, categories, and other catalogue mechanics remain unchanged."
+    "comment": "ADEPTUS CUSTODES CURRENT-STATE BASELINE. All 12 native datasheets are fixed one-model selections. The three Shield-Captains are counted Rare Leaders, cannot attach, and share one explicit army-wide SHIELD-CAPTAIN max-1 restriction. Redundant individual Rare max constraints are omitted so New Recruit shows the mutual-exclusion counter plus Leader Capacity counter only. Left Hand of the Emperor is an optional unchecked Configuration placeholder for a future Sisters of Silence reusable library.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nAll 12 native Adeptus Custodes datasheets now expose their simple loadouts and paid wargear. Arae-Shrike and other ability-only paid options include their player-facing rules. Left Hand of the Emperor remains a Sisters of Silence placeholder. All native non-Rare Other units use the soft 1/2/3 Additional Copy Cost system.\n\nCONSTRUCTIVE ERROR MIGRATION\nAdeptus Custodes now use Game System revision 11. Additional Copy Costs uses the current Configuration safeguard, and the shared SHIELD-CAPTAIN army limit uses constructive player-facing validation. The three Shield-Captains remain Rare, count toward Leader Capacity, cannot attach, and deliberately do not receive redundant individual Rare limits. Left Hand of the Emperor remains an untouched Phase 0.1 Sisters of Silence placeholder. Existing loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, shared SHIELD-CAPTAIN limit logic, Left Hand of the Emperor placeholder, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV6 POLISH PASS\nAdded explicit model headers beneath Loadout Options for all 12 native one-model Adeptus Custodes datasheets. For Allarus Armour Shield-Captain, retained the complete atomic loadout packages but reordered the two Ballistus Grenade Launcher packages so the distinguishing weapon appears first and standardized '+' to '&'. Left Hand of the Emperor, Paid Wargear sections, shared SHIELD-CAPTAIN limit logic, Additional Copy Costs, points, categories, and all other mechanics remain unchanged.\n\nREV7 RETROSPECTIVE POLISH PASS\nRevisited Adeptus Custodes against the final cross-faction presentation standard. Modernized the three live Shield-Captain limit comments, updated the live Additional Copy Costs comment to version-agnostic shared Game System wording, and replaced the generic Phase 0.1 catalogue baseline with a current-state baseline using Leader Capacity terminology. Historical migration notes and the genuinely deferred Left Hand of the Emperor Sisters of Silence integration placeholder are preserved unchanged. All IDs, SelectionEntry names, loadouts, Paid Wargear, shared SHIELD-CAPTAIN validation, Additional Copy Costs arithmetic, points, categories, constraints, and all other rules semantics remain unchanged.\n\nREV8 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Custodian Guard, the catalogue's sole native Troop datasheet, now uses the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 48 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same eight native Other copy families. No zero-point, generated, attached-free, or otherwise exempt native Troop unit exists. Left Hand of the Emperor remains an unresolved Sisters of Silence integration placeholder and is intentionally untouched. All Shield-Captain mutual-exclusion logic, Rare semantics, loadouts, Paid Wargear, points, categories, and other catalogue mechanics remain unchanged.\n\nREV9 — GS20 TROOP RULE + ALLARUS LOADOUT POLISH\nUpdated to Game System revision 20 and retargeted Custodian Guard to the Additional Copy Cost - Troop short-form rule. Reworked Allarus Armour Shield-Captain and Allarus Custodian loadout presentation so their main weapon package is Castellan Axe & Bolter, Guardian Spear & Bolter, or Pyrithite Spear & Melta [+10], with Ballistus Grenade Launcher displayed separately as fixed equipment. Existing surviving IDs, Shield-Captain validation, Rare behavior, points outside the requested Pyrithite package, categories, Additional Copy Cost arithmetic, and unrelated mechanics are unchanged.\n\nREV10 — PYRITHITE SPEAR COST FIX\nRemoved the erroneous +10 Points cost from every Pyrithite Spear & Melta option. Affected Allarus Armour Shield-Captain and Allarus Custodian. Names, IDs, loadout structure, Ballistus Grenade Launcher presentation, Troop copy-cost rule, and all unrelated mechanics are unchanged."
   }
 }
