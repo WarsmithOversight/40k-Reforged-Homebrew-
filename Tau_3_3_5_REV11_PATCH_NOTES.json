@@ -2,10 +2,10 @@
   "catalogue": {
     "library": false,
     "id": "4438-61cb-5073-868d",
-    "name": "T'au 3.3.3",
+    "name": "T'au 3.3.5",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 20,
-    "revision": 10,
+    "revision": 11,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -3235,6 +3235,46 @@
             "defaultSelectionEntryId": "7cd4-7093-1e3c-d345"
           }
         ]
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Patch Notes",
+        "hidden": false,
+        "id": "7ca6-c07e-4ceb-c19f",
+        "sortIndex": 2,
+        "categoryLinks": [
+          {
+            "targetId": "default-category",
+            "id": "949e-b609-b98f-1f6a",
+            "primary": true,
+            "name": "Configuration"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Patch Notes",
+            "id": "5411-0bad-59f3-470a",
+            "hidden": false,
+            "description": "## T'au 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 4th)\n\n• Catalogue created.",
+            "noindex": false
+          }
+        ],
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "51b2-306e-1021-d207",
+            "value": 0
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "1",
+            "field": "defaultAmount"
+          }
+        ],
+        "comment": "REV11: Automatically present Configuration entry using the standard two-section Patch Notes format. T'au 3.3.5 intentionally lists no army-rules changes here; Catalogue Bugfixes (September 4th) records catalogue creation."
       },
       {
         "type": "unit",
@@ -6855,7 +6895,7 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTau loadouts follow the fancy-notepad presentation: named Tau model nouns replace generic Model X labels, sergeant titles appear only where there is a distinct sergeant loadout, unmodelled grenade/additive wargear is unit-level, free specialist weapon slots omit ordinary fallback loadouts, Crisis Battlesuits use optional extra-model sizing, and all native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nT'au now use Game System revision 11. Game System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, and host Leader limits use constructive player-facing errors. Existing faction semantics remain unchanged; Ethereal continues not to count toward Leader Capacity.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader behavior, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model headers to single-model units, removing non-semantic Weapon 1 / Weapon 2 labels from the XV8 Commander and Crisis Battlesuits, flattening Kroot Carnivore and Hunter Pathfinder specialist sections into Loadout Options, renaming the Crisis optional-size group to Additional Model, and presenting XV8 Commander frame upgrades as Battlesuit Configuration rather than Paid Wargear. No points, eligibility, Leader behavior, Additional Copy Costs arithmetic, paid wargear semantics, or underlying weapon-choice logic were otherwise changed.\n\nREV6 RETROSPECTIVE POLISH PASS\nRevisited T'au against the final cross-faction presentation standard. Kroot Carnivores 1-9 now show fixed 9x Kroot Rifle and Rifle Knives as separate equipment lines. TY7 Devilfish, TX4 Piranha, and TX7 Hammerhead Gunship now label their two independent paid missile slots Seeker Missile and Additional Seeker Missile rather than implementation-facing Seeker Missile 1/2. XV88 Broadside Battlesuit now presents its fixed drones as a 2x Missile Drone model/group header with a 2x Missile Pod equipment line. Strike Team and Breacher Team use the current grammar-safe 'This unit...' host-limit error. Battlesuit Configuration, Crisis weapon-choice logic, optional-size mechanics, Pathfinder/Kroot specialist handling, additive wargear treatment, Additional Copy Costs, points, categories, Leader behavior, and all other rules semantics remain unchanged.\n\nREV7 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Strike Team and Breacher Team now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 72 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. Kroot Carnivores remain an Other unit and therefore continue using the existing Other 1 / 2 / 3 allowance rather than the Troop allowance. All unrelated unit rules, loadouts, Leader behavior, attachments, Battlesuit Configuration, and other catalogue mechanics are unchanged.\n\nREV8 — KROOT RIFLES & KNIVES EXPORT PACKAGE\nConsolidated Kroot Carnivores 1-9 from separate '9x Kroot Rifle' and 'Rifle Knives' live selections into structural quantity 9 of one shared Kroot Rifles & Knives entry. The old Kroot Rifle selection ID is preserved as the live entryLink ID; the old Rifle Knives branch remains as a hidden, unselected legacy shell so every pre-existing ID survives. Tanglebomb Launcher and Kroot Carnivore 10 are unchanged. No points, Additional Copy Costs, categories, Leader behavior, Battlesuit logic, or unrelated unit mechanics changed.\n\nREV9 — KROOT FIXED EXPORT LABEL\nReplaced the REV8 structural quantity-9 Kroot Rifles & Knives selection with one literal '9x Kroot Rifles & Knives' fixed package because New Recruit exposes a quantity control when a radio-style choice represents multiple instances. Removed the now-unused shared Kroot Rifles & Knives object and the hidden Rifle Knives legacy shell. Kroot Carnivore 10, Tanglebomb Launcher, points, categories, Additional Copy Costs, and all unrelated mechanics are unchanged.\n\nREV10 — GS20 TROOP COPY RULE\nUpdated to Game System revision 20 and retargeted Strike Team and Breacher Team to the Additional Copy Cost - Troop short-form rule. Existing infoLink IDs, Kroot fixed-package presentation, points, categories, loadouts, and unrelated mechanics are unchanged.",
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTau loadouts follow the fancy-notepad presentation: named Tau model nouns replace generic Model X labels, sergeant titles appear only where there is a distinct sergeant loadout, unmodelled grenade/additive wargear is unit-level, free specialist weapon slots omit ordinary fallback loadouts, Crisis Battlesuits use optional extra-model sizing, and all native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nT'au now use Game System revision 11. Game System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, and host Leader limits use constructive player-facing errors. Existing faction semantics remain unchanged; Ethereal continues not to count toward Leader Capacity.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader behavior, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model headers to single-model units, removing non-semantic Weapon 1 / Weapon 2 labels from the XV8 Commander and Crisis Battlesuits, flattening Kroot Carnivore and Hunter Pathfinder specialist sections into Loadout Options, renaming the Crisis optional-size group to Additional Model, and presenting XV8 Commander frame upgrades as Battlesuit Configuration rather than Paid Wargear. No points, eligibility, Leader behavior, Additional Copy Costs arithmetic, paid wargear semantics, or underlying weapon-choice logic were otherwise changed.\n\nREV6 RETROSPECTIVE POLISH PASS\nRevisited T'au against the final cross-faction presentation standard. Kroot Carnivores 1-9 now show fixed 9x Kroot Rifle and Rifle Knives as separate equipment lines. TY7 Devilfish, TX4 Piranha, and TX7 Hammerhead Gunship now label their two independent paid missile slots Seeker Missile and Additional Seeker Missile rather than implementation-facing Seeker Missile 1/2. XV88 Broadside Battlesuit now presents its fixed drones as a 2x Missile Drone model/group header with a 2x Missile Pod equipment line. Strike Team and Breacher Team use the current grammar-safe 'This unit...' host-limit error. Battlesuit Configuration, Crisis weapon-choice logic, optional-size mechanics, Pathfinder/Kroot specialist handling, additive wargear treatment, Additional Copy Costs, points, categories, Leader behavior, and all other rules semantics remain unchanged.\n\nREV7 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Strike Team and Breacher Team now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 72 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. Kroot Carnivores remain an Other unit and therefore continue using the existing Other 1 / 2 / 3 allowance rather than the Troop allowance. All unrelated unit rules, loadouts, Leader behavior, attachments, Battlesuit Configuration, and other catalogue mechanics are unchanged.\n\nREV8 — KROOT RIFLES & KNIVES EXPORT PACKAGE\nConsolidated Kroot Carnivores 1-9 from separate '9x Kroot Rifle' and 'Rifle Knives' live selections into structural quantity 9 of one shared Kroot Rifles & Knives entry. The old Kroot Rifle selection ID is preserved as the live entryLink ID; the old Rifle Knives branch remains as a hidden, unselected legacy shell so every pre-existing ID survives. Tanglebomb Launcher and Kroot Carnivore 10 are unchanged. No points, Additional Copy Costs, categories, Leader behavior, Battlesuit logic, or unrelated unit mechanics changed.\n\nREV9 — KROOT FIXED EXPORT LABEL\nReplaced the REV8 structural quantity-9 Kroot Rifles & Knives selection with one literal '9x Kroot Rifles & Knives' fixed package because New Recruit exposes a quantity control when a radio-style choice represents multiple instances. Removed the now-unused shared Kroot Rifles & Knives object and the hidden Rifle Knives legacy shell. Kroot Carnivore 10, Tanglebomb Launcher, points, categories, Additional Copy Costs, and all unrelated mechanics are unchanged.\n\nREV10 — GS20 TROOP COPY RULE\nUpdated to Game System revision 20 and retargeted Strike Team and Breacher Team to the Additional Copy Cost - Troop short-form rule. Existing infoLink IDs, Kroot fixed-package presentation, points, categories, loadouts, and unrelated mechanics are unchanged.\n\nREV11 — T'AU 3.3.5 + STANDARD PATCH NOTES\nUpdated the catalogue title from T'au 3.3.3 to T'au 3.3.5 and added the standard automatically present Patch Notes Configuration. The army-rules section is intentionally bare; Catalogue Bugfixes (September 4th) contains 'Catalogue created.' No mechanical selections, points, loadouts, validation, copy-cost arithmetic, categories, or unrelated catalogue semantics changed.",
     "sharedSelectionEntries": []
   }
 }

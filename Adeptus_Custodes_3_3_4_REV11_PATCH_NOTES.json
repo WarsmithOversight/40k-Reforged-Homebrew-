@@ -2,10 +2,10 @@
   "catalogue": {
     "library": false,
     "id": "a774-9ea6-9b60-31af",
-    "name": "Adeptus Custodes 3.3.3",
+    "name": "Adeptus Custodes 3.3.4",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 20,
-    "revision": 10,
+    "revision": 11,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -2176,6 +2176,46 @@
             "defaultSelectionEntryId": "b756-fb06-95cd-9f97"
           }
         ]
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Patch Notes",
+        "hidden": false,
+        "id": "0853-764c-42b2-0f1c",
+        "sortIndex": 2,
+        "categoryLinks": [
+          {
+            "targetId": "default-category",
+            "id": "0c08-afdf-426d-50c6",
+            "primary": true,
+            "name": "Configuration"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Patch Notes",
+            "id": "731f-3f5e-60ee-ac54",
+            "hidden": false,
+            "description": "## Adeptus Custodes 3.3.4\n\nAllarus Armour Shield-Captain\n• Pyrithite Spear & Melta no longer costs 10 Points.\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 4th)\n\n• Catalogue created.",
+            "noindex": false
+          }
+        ],
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "51b2-306e-1021-d207",
+            "value": 0
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "1",
+            "field": "defaultAmount"
+          }
+        ],
+        "comment": "REV11: Automatically present Configuration entry using the standard two-section Patch Notes format. Adeptus Custodes 3.3.4 records army-rules PDF changes mirrored into the catalogue; Catalogue Bugfixes (September 4th) records catalogue-only New Recruit updates."
       },
       {
         "type": "unit",
@@ -4700,6 +4740,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "ADEPTUS CUSTODES CURRENT-STATE BASELINE. All 12 native datasheets are fixed one-model selections. The three Shield-Captains are counted Rare Leaders, cannot attach, and share one explicit army-wide SHIELD-CAPTAIN max-1 restriction. Redundant individual Rare max constraints are omitted so New Recruit shows the mutual-exclusion counter plus Leader Capacity counter only. Left Hand of the Emperor is an optional unchecked Configuration placeholder for a future Sisters of Silence reusable library.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nAll 12 native Adeptus Custodes datasheets now expose their simple loadouts and paid wargear. Arae-Shrike and other ability-only paid options include their player-facing rules. Left Hand of the Emperor remains a Sisters of Silence placeholder. All native non-Rare Other units use the soft 1/2/3 Additional Copy Cost system.\n\nCONSTRUCTIVE ERROR MIGRATION\nAdeptus Custodes now use Game System revision 11. Additional Copy Costs uses the current Configuration safeguard, and the shared SHIELD-CAPTAIN army limit uses constructive player-facing validation. The three Shield-Captains remain Rare, count toward Leader Capacity, cannot attach, and deliberately do not receive redundant individual Rare limits. Left Hand of the Emperor remains an untouched Phase 0.1 Sisters of Silence placeholder. Existing loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, shared SHIELD-CAPTAIN limit logic, Left Hand of the Emperor placeholder, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV6 POLISH PASS\nAdded explicit model headers beneath Loadout Options for all 12 native one-model Adeptus Custodes datasheets. For Allarus Armour Shield-Captain, retained the complete atomic loadout packages but reordered the two Ballistus Grenade Launcher packages so the distinguishing weapon appears first and standardized '+' to '&'. Left Hand of the Emperor, Paid Wargear sections, shared SHIELD-CAPTAIN limit logic, Additional Copy Costs, points, categories, and all other mechanics remain unchanged.\n\nREV7 RETROSPECTIVE POLISH PASS\nRevisited Adeptus Custodes against the final cross-faction presentation standard. Modernized the three live Shield-Captain limit comments, updated the live Additional Copy Costs comment to version-agnostic shared Game System wording, and replaced the generic Phase 0.1 catalogue baseline with a current-state baseline using Leader Capacity terminology. Historical migration notes and the genuinely deferred Left Hand of the Emperor Sisters of Silence integration placeholder are preserved unchanged. All IDs, SelectionEntry names, loadouts, Paid Wargear, shared SHIELD-CAPTAIN validation, Additional Copy Costs arithmetic, points, categories, constraints, and all other rules semantics remain unchanged.\n\nREV8 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Custodian Guard, the catalogue's sole native Troop datasheet, now uses the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 48 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same eight native Other copy families. No zero-point, generated, attached-free, or otherwise exempt native Troop unit exists. Left Hand of the Emperor remains an unresolved Sisters of Silence integration placeholder and is intentionally untouched. All Shield-Captain mutual-exclusion logic, Rare semantics, loadouts, Paid Wargear, points, categories, and other catalogue mechanics remain unchanged.\n\nREV9 — GS20 TROOP RULE + ALLARUS LOADOUT POLISH\nUpdated to Game System revision 20 and retargeted Custodian Guard to the Additional Copy Cost - Troop short-form rule. Reworked Allarus Armour Shield-Captain and Allarus Custodian loadout presentation so their main weapon package is Castellan Axe & Bolter, Guardian Spear & Bolter, or Pyrithite Spear & Melta [+10], with Ballistus Grenade Launcher displayed separately as fixed equipment. Existing surviving IDs, Shield-Captain validation, Rare behavior, points outside the requested Pyrithite package, categories, Additional Copy Cost arithmetic, and unrelated mechanics are unchanged.\n\nREV10 — PYRITHITE SPEAR COST FIX\nRemoved the erroneous +10 Points cost from every Pyrithite Spear & Melta option. Affected Allarus Armour Shield-Captain and Allarus Custodian. Names, IDs, loadout structure, Ballistus Grenade Launcher presentation, Troop copy-cost rule, and all unrelated mechanics are unchanged."
+    "comment": "ADEPTUS CUSTODES CURRENT-STATE BASELINE. All 12 native datasheets are fixed one-model selections. The three Shield-Captains are counted Rare Leaders, cannot attach, and share one explicit army-wide SHIELD-CAPTAIN max-1 restriction. Redundant individual Rare max constraints are omitted so New Recruit shows the mutual-exclusion counter plus Leader Capacity counter only. Left Hand of the Emperor is an optional unchecked Configuration placeholder for a future Sisters of Silence reusable library.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nAll 12 native Adeptus Custodes datasheets now expose their simple loadouts and paid wargear. Arae-Shrike and other ability-only paid options include their player-facing rules. Left Hand of the Emperor remains a Sisters of Silence placeholder. All native non-Rare Other units use the soft 1/2/3 Additional Copy Cost system.\n\nCONSTRUCTIVE ERROR MIGRATION\nAdeptus Custodes now use Game System revision 11. Additional Copy Costs uses the current Configuration safeguard, and the shared SHIELD-CAPTAIN army limit uses constructive player-facing validation. The three Shield-Captains remain Rare, count toward Leader Capacity, cannot attach, and deliberately do not receive redundant individual Rare limits. Left Hand of the Emperor remains an untouched Phase 0.1 Sisters of Silence placeholder. Existing loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, shared SHIELD-CAPTAIN limit logic, Left Hand of the Emperor placeholder, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV6 POLISH PASS\nAdded explicit model headers beneath Loadout Options for all 12 native one-model Adeptus Custodes datasheets. For Allarus Armour Shield-Captain, retained the complete atomic loadout packages but reordered the two Ballistus Grenade Launcher packages so the distinguishing weapon appears first and standardized '+' to '&'. Left Hand of the Emperor, Paid Wargear sections, shared SHIELD-CAPTAIN limit logic, Additional Copy Costs, points, categories, and all other mechanics remain unchanged.\n\nREV7 RETROSPECTIVE POLISH PASS\nRevisited Adeptus Custodes against the final cross-faction presentation standard. Modernized the three live Shield-Captain limit comments, updated the live Additional Copy Costs comment to version-agnostic shared Game System wording, and replaced the generic Phase 0.1 catalogue baseline with a current-state baseline using Leader Capacity terminology. Historical migration notes and the genuinely deferred Left Hand of the Emperor Sisters of Silence integration placeholder are preserved unchanged. All IDs, SelectionEntry names, loadouts, Paid Wargear, shared SHIELD-CAPTAIN validation, Additional Copy Costs arithmetic, points, categories, constraints, and all other rules semantics remain unchanged.\n\nREV8 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Custodian Guard, the catalogue's sole native Troop datasheet, now uses the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 48 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same eight native Other copy families. No zero-point, generated, attached-free, or otherwise exempt native Troop unit exists. Left Hand of the Emperor remains an unresolved Sisters of Silence integration placeholder and is intentionally untouched. All Shield-Captain mutual-exclusion logic, Rare semantics, loadouts, Paid Wargear, points, categories, and other catalogue mechanics remain unchanged.\n\nREV9 — GS20 TROOP RULE + ALLARUS LOADOUT POLISH\nUpdated to Game System revision 20 and retargeted Custodian Guard to the Additional Copy Cost - Troop short-form rule. Reworked Allarus Armour Shield-Captain and Allarus Custodian loadout presentation so their main weapon package is Castellan Axe & Bolter, Guardian Spear & Bolter, or Pyrithite Spear & Melta [+10], with Ballistus Grenade Launcher displayed separately as fixed equipment. Existing surviving IDs, Shield-Captain validation, Rare behavior, points outside the requested Pyrithite package, categories, Additional Copy Cost arithmetic, and unrelated mechanics are unchanged.\n\nREV10 — PYRITHITE SPEAR COST FIX\nRemoved the erroneous +10 Points cost from every Pyrithite Spear & Melta option. Affected Allarus Armour Shield-Captain and Allarus Custodian. Names, IDs, loadout structure, Ballistus Grenade Launcher presentation, Troop copy-cost rule, and all unrelated mechanics are unchanged.\n\nREV11 — ADEPTUS CUSTODES 3.3.4 + STANDARD PATCH NOTES\nUpdated the catalogue title from Adeptus Custodes 3.3.3 to Adeptus Custodes 3.3.4. Added the standard automatically present Patch Notes Configuration. The Adeptus Custodes 3.3.4 section records that Allarus Armour Shield-Captain Pyrithite Spear & Melta no longer costs 10 Points, with a Reforged Discord Server reference for the full rules patch. Added Catalogue Bugfixes (September 4th) with 'Catalogue created.' No mechanical selections, points, loadout structures, validation, copy-cost arithmetic, or unrelated catalogue semantics were changed in this revision."
   }
 }

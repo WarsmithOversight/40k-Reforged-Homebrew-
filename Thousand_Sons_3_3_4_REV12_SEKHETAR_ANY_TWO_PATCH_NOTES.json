@@ -2,10 +2,10 @@
   "catalogue": {
     "library": false,
     "id": "032d-4ed1-d1e6-09c7",
-    "name": "Thousand Sons 3.3.3",
+    "name": "Thousand Sons 3.3.4",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 20,
-    "revision": 11,
+    "revision": 12,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -1738,6 +1738,46 @@
             "defaultSelectionEntryId": "5ac5-fb06-dbd9-7c97"
           }
         ]
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Patch Notes",
+        "hidden": false,
+        "id": "6887-4e6f-ac5d-9452",
+        "sortIndex": 2,
+        "categoryLinks": [
+          {
+            "targetId": "default-category",
+            "id": "84ac-96af-0a2f-6022",
+            "primary": true,
+            "name": "Configuration"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Patch Notes",
+            "id": "9f7a-1cb5-63e1-7958",
+            "hidden": false,
+            "description": "## Thousand Sons 3.3.4\n\nSekhetar Robots\n• Weapon options changed from two different weapons to any two weapons.\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 4th)",
+            "noindex": false
+          }
+        ],
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "51b2-306e-1021-d207",
+            "value": 0
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "1",
+            "field": "defaultAmount"
+          }
+        ],
+        "comment": "REV12: Automatically present Configuration entry using the standard two-section Patch Notes format. Thousand Sons 3.3.4 records the Sekhetar Robots weapon-choice update. The Catalogue Bugfixes (September 4th) section is intentionally empty."
       },
       {
         "type": "unit",
@@ -3930,27 +3970,7 @@
                         "name": "Pyreflux Meltagun",
                         "hidden": false,
                         "id": "04bd-9222-2f6a-95f7",
-                        "sortIndex": 1,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "6a16-1b52-9a93-409e",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "childName": "Pyreflux Meltagun"
-                              }
-                            ]
-                          }
-                        ]
+                        "sortIndex": 1
                       },
                       {
                         "type": "upgrade",
@@ -3958,27 +3978,7 @@
                         "name": "Heavy Warpflamer",
                         "hidden": false,
                         "id": "01cb-1a31-fb3e-1e13",
-                        "sortIndex": 2,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "a9de-2c66-334a-8185",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "childName": "Heavy Warpflamer"
-                              }
-                            ]
-                          }
-                        ]
+                        "sortIndex": 2
                       },
                       {
                         "type": "upgrade",
@@ -3986,27 +3986,7 @@
                         "name": "Power Claw & Warpflame Projector",
                         "hidden": false,
                         "id": "b1cd-5754-4a46-5b2b",
-                        "sortIndex": 3,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "f9d7-1100-f629-6923",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "childName": "Power Claw & Warpflame Projector"
-                              }
-                            ]
-                          }
-                        ]
+                        "sortIndex": 3
                       }
                     ],
                     "defaultSelectionEntryId": "04bd-9222-2f6a-95f7"
@@ -4041,27 +4021,7 @@
                         "name": "Pyreflux Meltagun",
                         "hidden": false,
                         "id": "6a16-1b52-9a93-409e",
-                        "sortIndex": 1,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "04bd-9222-2f6a-95f7",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "childName": "Pyreflux Meltagun"
-                              }
-                            ]
-                          }
-                        ]
+                        "sortIndex": 1
                       },
                       {
                         "type": "upgrade",
@@ -4069,27 +4029,7 @@
                         "name": "Heavy Warpflamer",
                         "hidden": false,
                         "id": "a9de-2c66-334a-8185",
-                        "sortIndex": 2,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "01cb-1a31-fb3e-1e13",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "childName": "Heavy Warpflamer"
-                              }
-                            ]
-                          }
-                        ]
+                        "sortIndex": 2
                       },
                       {
                         "type": "upgrade",
@@ -4097,27 +4037,7 @@
                         "name": "Power Claw & Warpflame Projector",
                         "hidden": false,
                         "id": "f9d7-1100-f629-6923",
-                        "sortIndex": 3,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "b1cd-5754-4a46-5b2b",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "childName": "Power Claw & Warpflame Projector"
-                              }
-                            ]
-                          }
-                        ]
+                        "sortIndex": 3
                       }
                     ],
                     "defaultSelectionEntryId": "a9de-2c66-334a-8185"
@@ -4195,27 +4115,7 @@
                         "name": "Pyreflux Meltagun",
                         "hidden": false,
                         "id": "6c4b-7ee7-0fcb-738f",
-                        "sortIndex": 1,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "a40a-7adb-9172-73a9",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "childName": "Pyreflux Meltagun"
-                              }
-                            ]
-                          }
-                        ]
+                        "sortIndex": 1
                       },
                       {
                         "type": "upgrade",
@@ -4223,27 +4123,7 @@
                         "name": "Heavy Warpflamer",
                         "hidden": false,
                         "id": "b621-8820-421b-40e6",
-                        "sortIndex": 2,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4021-3085-1ce3-9f37",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "childName": "Heavy Warpflamer"
-                              }
-                            ]
-                          }
-                        ]
+                        "sortIndex": 2
                       },
                       {
                         "type": "upgrade",
@@ -4251,27 +4131,7 @@
                         "name": "Power Claw & Warpflame Projector",
                         "hidden": false,
                         "id": "d8ad-8270-b447-e671",
-                        "sortIndex": 3,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "a960-00dd-3bdc-aa98",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "childName": "Power Claw & Warpflame Projector"
-                              }
-                            ]
-                          }
-                        ]
+                        "sortIndex": 3
                       }
                     ],
                     "defaultSelectionEntryId": "6c4b-7ee7-0fcb-738f"
@@ -4306,27 +4166,7 @@
                         "name": "Pyreflux Meltagun",
                         "hidden": false,
                         "id": "a40a-7adb-9172-73a9",
-                        "sortIndex": 1,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "6c4b-7ee7-0fcb-738f",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "childName": "Pyreflux Meltagun"
-                              }
-                            ]
-                          }
-                        ]
+                        "sortIndex": 1
                       },
                       {
                         "type": "upgrade",
@@ -4334,27 +4174,7 @@
                         "name": "Heavy Warpflamer",
                         "hidden": false,
                         "id": "4021-3085-1ce3-9f37",
-                        "sortIndex": 2,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "b621-8820-421b-40e6",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "childName": "Heavy Warpflamer"
-                              }
-                            ]
-                          }
-                        ]
+                        "sortIndex": 2
                       },
                       {
                         "type": "upgrade",
@@ -4362,27 +4182,7 @@
                         "name": "Power Claw & Warpflame Projector",
                         "hidden": false,
                         "id": "a960-00dd-3bdc-aa98",
-                        "sortIndex": 3,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "d8ad-8270-b447-e671",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "childName": "Power Claw & Warpflame Projector"
-                              }
-                            ]
-                          }
-                        ]
+                        "sortIndex": 3
                       }
                     ],
                     "defaultSelectionEntryId": "4021-3085-1ce3-9f37"
@@ -5368,7 +5168,7 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "PHASE 0.1 THOUSAND SONS. The four Summon Only datasheets are intentionally excluded from army-list selections. Great Traitors’ Arsenal is represented by an optional, unchecked Configuration placeholder until the reusable Chaos Space Marines library is wired. All seven printed Leaders remain root selections; Scarab Occult Sorcerer and Aspiring Sorcerer are Countless and therefore omit the hidden counted-Leader category.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nThousand Sons now use Game System revision 11. Great Traitors’ Arsenal remains a placeholder, now in the shared Configuration category. All 15 selectable native units have player-facing loadouts. Summon-only datasheets remain excluded. All native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nGame System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, host Leader limits, and native Rare limits use constructive player-facing errors. Great Traitors’ Arsenal and all faction-specific structures remain otherwise unchanged.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader attachment behavior, Great Traitors’ Arsenal placeholder, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model headers to single-model units, flattening Rubric Marine and Scarab Occult specialist model sections into Loadout Options, removing non-semantic Weapon 1 / Weapon 2 labels from Osiron Dreadnought and Sekhetar Robots, renaming Mutalith Vortex Beast's paid mutation section to Mutation Upgrade, and updating native Rare error wording. No points, eligibility, attachment semantics, Additional Copy Costs arithmetic, Great Traitors’ Arsenal placeholder behavior, or underlying weapon-choice logic were otherwise changed.\n\nREV6 RETROSPECTIVE POLISH PASS\nRevisited Thousand Sons against the final cross-faction presentation standard. Tzaangors' squad-wide Autopistol/Chainsword state now uses '&' atomic-package grammar. Scarab Occult Terminators now show fixed Prosperine Khopeshes as separate equipment lines: Terminator 1 retains a fixed Inferno Combi-Bolter and Terminator 2 retains its Soulreaper Cannon / Heavy Warpflamer choice. Sekhetar Robot Power Claw/Warpflame Projector packages and all twenty Osiron Dreadnought melee/secondary packages now use '&' instead of '+', with referenced childName metadata synchronized. Rubric Marines, Tzaangors, Scarab Occult Terminators, and Tzaangor Enlightened use the current grammar-safe 'This unit...' host-limit error. Great Traitors’ Arsenal, Additional Copy Costs, leader attachment mechanics, Sekhetar cross-slot hiding, Osiron one-replacement enforcement, points, categories, constraints, and all other rules semantics remain unchanged.\n\nREV7 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Rubric Marines and Tzaangors now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 30 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point or generated-Troop exception is present in this catalogue. All unrelated unit rules, loadouts, attachments, Rare behavior, and Great Traitors’ Arsenal placeholder mechanics are unchanged.\n\nREV8 — OSIRON DREADNOUGHT NESTED MELEE LOADOUTS\nReplaced the Osiron Dreadnought's duplicated precombined melee/secondary truth-table with two clean weapon slots. Each slot now offers the eight standalone guns plus a Force Blade or Chainfist wrapper whose secondary-weapon chooser appears only when selected and defaults to Inferno Combi-Bolter. Two Force Blades remain legal; selecting one Chainfist hides the other slot's Chainfist option. The builder intentionally allows each selected melee arm to choose its own secondary replacement rather than enforcing the PDF's single global replacement. Existing standalone weapon IDs and the old melee-package IDs were reused where their player decision survives; no obsolete melee-package graveyard was kept.\n\nREV9 — SCARAB OCCULT TERMINATOR ATOMIC LOADOUTS\nCollapsed the fixed Prosperine Khopesh lines into the meaningful final-state weapon packages. Terminator 1 now shows Inferno Combi-Bolter & Prosperine Khopesh. Terminator 2 now chooses between Soulreaper Cannon & Prosperine Khopesh and Heavy Warpflamer & Prosperine Khopesh. The obsolete standalone Khopesh groups were removed rather than kept as dead-ID shells. Paid Wargear, points, categories, constraints, and unrelated mechanics are unchanged.\n\nREV10 — RUBRIC MARINE SPLIT LOADOUTS\nReplaced the collective Rubric Marines 1-2 weapon choice with two independent model sections. Rubric Marine 1 and Rubric Marine 2 each choose Inferno Boltgun or Warpflamer. Both point to the same shared canonical weapon targets to permit clean export consolidation when both models take the same weapon. Rubric Marine 3 remains fixed with Soulreaper Cannon. The old collective group ID and its two option IDs were reused for Rubric Marine 1; Rubric Marine 2 receives new deterministic IDs.\n\nREV11 — GS20 TROOP COPY RULE\nUpdated to Game System revision 20 and retargeted Rubric Marines and Tzaangors to the Additional Copy Cost - Troop short-form rule. Existing infoLink IDs, Rubric Marine split loadouts, Osiron/Scarab Occult structures, points, categories, and unrelated mechanics are unchanged.",
+    "comment": "PHASE 0.1 THOUSAND SONS. The four Summon Only datasheets are intentionally excluded from army-list selections. Great Traitors’ Arsenal is represented by an optional, unchecked Configuration placeholder until the reusable Chaos Space Marines library is wired. All seven printed Leaders remain root selections; Scarab Occult Sorcerer and Aspiring Sorcerer are Countless and therefore omit the hidden counted-Leader category.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nThousand Sons now use Game System revision 11. Great Traitors’ Arsenal remains a placeholder, now in the shared Configuration category. All 15 selectable native units have player-facing loadouts. Summon-only datasheets remain excluded. All native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nGame System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, host Leader limits, and native Rare limits use constructive player-facing errors. Great Traitors’ Arsenal and all faction-specific structures remain otherwise unchanged.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader attachment behavior, Great Traitors’ Arsenal placeholder, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model headers to single-model units, flattening Rubric Marine and Scarab Occult specialist model sections into Loadout Options, removing non-semantic Weapon 1 / Weapon 2 labels from Osiron Dreadnought and Sekhetar Robots, renaming Mutalith Vortex Beast's paid mutation section to Mutation Upgrade, and updating native Rare error wording. No points, eligibility, attachment semantics, Additional Copy Costs arithmetic, Great Traitors’ Arsenal placeholder behavior, or underlying weapon-choice logic were otherwise changed.\n\nREV6 RETROSPECTIVE POLISH PASS\nRevisited Thousand Sons against the final cross-faction presentation standard. Tzaangors' squad-wide Autopistol/Chainsword state now uses '&' atomic-package grammar. Scarab Occult Terminators now show fixed Prosperine Khopeshes as separate equipment lines: Terminator 1 retains a fixed Inferno Combi-Bolter and Terminator 2 retains its Soulreaper Cannon / Heavy Warpflamer choice. Sekhetar Robot Power Claw/Warpflame Projector packages and all twenty Osiron Dreadnought melee/secondary packages now use '&' instead of '+', with referenced childName metadata synchronized. Rubric Marines, Tzaangors, Scarab Occult Terminators, and Tzaangor Enlightened use the current grammar-safe 'This unit...' host-limit error. Great Traitors’ Arsenal, Additional Copy Costs, leader attachment mechanics, Sekhetar cross-slot hiding, Osiron one-replacement enforcement, points, categories, constraints, and all other rules semantics remain unchanged.\n\nREV7 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Rubric Marines and Tzaangors now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 30 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point or generated-Troop exception is present in this catalogue. All unrelated unit rules, loadouts, attachments, Rare behavior, and Great Traitors’ Arsenal placeholder mechanics are unchanged.\n\nREV8 — OSIRON DREADNOUGHT NESTED MELEE LOADOUTS\nReplaced the Osiron Dreadnought's duplicated precombined melee/secondary truth-table with two clean weapon slots. Each slot now offers the eight standalone guns plus a Force Blade or Chainfist wrapper whose secondary-weapon chooser appears only when selected and defaults to Inferno Combi-Bolter. Two Force Blades remain legal; selecting one Chainfist hides the other slot's Chainfist option. The builder intentionally allows each selected melee arm to choose its own secondary replacement rather than enforcing the PDF's single global replacement. Existing standalone weapon IDs and the old melee-package IDs were reused where their player decision survives; no obsolete melee-package graveyard was kept.\n\nREV9 — SCARAB OCCULT TERMINATOR ATOMIC LOADOUTS\nCollapsed the fixed Prosperine Khopesh lines into the meaningful final-state weapon packages. Terminator 1 now shows Inferno Combi-Bolter & Prosperine Khopesh. Terminator 2 now chooses between Soulreaper Cannon & Prosperine Khopesh and Heavy Warpflamer & Prosperine Khopesh. The obsolete standalone Khopesh groups were removed rather than kept as dead-ID shells. Paid Wargear, points, categories, constraints, and unrelated mechanics are unchanged.\n\nREV10 — RUBRIC MARINE SPLIT LOADOUTS\nReplaced the collective Rubric Marines 1-2 weapon choice with two independent model sections. Rubric Marine 1 and Rubric Marine 2 each choose Inferno Boltgun or Warpflamer. Both point to the same shared canonical weapon targets to permit clean export consolidation when both models take the same weapon. Rubric Marine 3 remains fixed with Soulreaper Cannon. The old collective group ID and its two option IDs were reused for Rubric Marine 1; Rubric Marine 2 receives new deterministic IDs.\n\nREV11 — GS20 TROOP COPY RULE\nUpdated to Game System revision 20 and retargeted Rubric Marines and Tzaangors to the Additional Copy Cost - Troop short-form rule. Existing infoLink IDs, Rubric Marine split loadouts, Osiron/Scarab Occult structures, points, categories, and unrelated mechanics are unchanged.\n\nREV12 — THOUSAND SONS 3.3.4 / SEKHETAR ANY-TWO WEAPONS\nUpdated the catalogue title to Thousand Sons 3.3.4. Sekhetar Robots previously enforced different weapon choices by cross-hiding the matching option in the second weapon list. Removed all twelve cross-list hide modifiers across the two Robots, so each of the two weapon lists on each Robot now independently offers Pyreflux Meltagun, Heavy Warpflamer, and Power Claw & Warpflame Projector. This allows any two weapon choices, including duplicates. Existing unit, group, and weapon IDs, defaults, mandatory one-per-list constraints, Hellfyre Missile Racks, points, and unrelated catalogue mechanics are unchanged. Added standard Patch Notes; the catalogue-bugfix section is intentionally empty.",
     "sharedSelectionEntries": [
       {
         "type": "upgrade",

@@ -2,10 +2,10 @@
   "catalogue": {
     "library": false,
     "id": "c935-329c-3a08-58fe",
-    "name": "Necrons 3.3.3",
+    "name": "Necrons 3.3.4",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 20,
-    "revision": 10,
+    "revision": 11,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -4111,6 +4111,46 @@
             "defaultSelectionEntryId": "87bf-e4f6-6039-5e8b"
           }
         ]
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Patch Notes",
+        "hidden": false,
+        "id": "4f49-6e7b-252e-1f93",
+        "sortIndex": 2,
+        "categoryLinks": [
+          {
+            "targetId": "default-category",
+            "id": "0731-b697-d0cb-d3be",
+            "primary": true,
+            "name": "Configuration"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Patch Notes",
+            "id": "638a-dc77-0dcc-6e91",
+            "hidden": false,
+            "description": "## Necrons 3.3.4\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 4th)\n\n• Catalogue created.",
+            "noindex": false
+          }
+        ],
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "51b2-306e-1021-d207",
+            "value": 0
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "1",
+            "field": "defaultAmount"
+          }
+        ],
+        "comment": "REV11: Automatically present Configuration entry using the standard two-section Patch Notes format. Necrons 3.3.4 intentionally lists no army-rules changes here; Catalogue Bugfixes (September 4th) records catalogue creation."
       },
       {
         "type": "unit",
@@ -9969,6 +10009,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nAll native Necron units and the nested Canoptek Plasmacyte now expose loadouts. Warriors and Immortals use one squad-wide weapon choice. Variable-size units use the minimum-size-root + optional-extra-model pattern. Skorpekh and Ophydian model 1 are the fixed Reap-blade models and are not presented as champions. All native non-Rare Other units use Additional Copy Costs.\n\nLOKHUST DESTROYER MODEL-COUNT LABEL\nThe fixed minimum-size loadout row now reads 'Lokhust Destroyers 1-2' so the two base models are explicit.\n\nCONSTRUCTIVE ERROR MIGRATION\nNecrons now use Game System revision 11. Additional Copy Costs, mandatory root Leader attachments, normal host Leader limits, Rare limits, and the Cryptothralls attached-by requirement use constructive player-facing validation. Canoptek Plasmacyte nesting, Leader Capacity semantics, loadouts, points, variable-size structures, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, attachment behavior, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV6 POLISH PASS\nStandardized player-facing loadout hierarchy with explicit model/model-set headers, renamed all Canoptek Plasmacyte relationship groups to Attached Plasmacyte, renamed single optional-model size steps to Additional Model, corrected the Lokhust Destroyers 1-2 loadout row to 2x Gauss Cannon, updated inseparable loadout packages to use ' & ', renamed Warrior/Immortal protocol purchases to Protocol Upgrade and Wraith scouting to Unit Upgrade, and standardized native Rare error wording. Points, attachment mechanics, Plasmacyte semantics, variable-size arithmetic, Protocol costs, and Additional Copy Costs are otherwise unchanged.\n\nREV7 PLASMACYTE PRESENTATION ORDER\nMoved Attached Plasmacyte to the bottom of each affected unit's configuration. Loadout Options now appear first, followed by Additional Model where applicable, then Attached Plasmacyte. This treats the Plasmacyte as an optional model-bearing upgrade while preserving its distinct model identity. No points, attachment behavior, Plasmacyte rules, eligibility, or other mechanics were changed.\n\nREV8 RETROSPECTIVE POLISH PASS\nRevisited Necrons against the final cross-faction presentation standard. Standardized the ten remaining native host Leader-limit errors to grammar-safe 'This unit...' wording. Replaced seven obsolete Phase 0.1 variable-size shell/TODO comments with accurate current-state notes describing the implemented minimum-size root plus optional Additional Model structure. Modernized the shared Canoptek Plasmacyte compiler note from obsolete Additional Leader terminology to Nested Attached Model terminology while preserving its host-nested mechanics and Leader Capacity behavior. Loadout presentation, Attached Plasmacyte ordering, Protocol Upgrade and Unit Upgrade semantics, fixed Reap-blade model presentation, Rare validation, points, categories, constraints, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV9 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Warriors and Immortals now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 96 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. Canoptek Plasmacyte remains a nested attached model rather than a Troop unit and is unaffected. All unrelated unit rules, Leader attachment semantics, Rare validation, Protocol Upgrades, variable-size mechanics, and loadout presentation remain unchanged.\n\nREV10 — GS20 TROOP RULE + OPHYDIAN ATOMIC LOADOUTS\nUpdated to Game System revision 20 and retargeted Warriors and Immortals to the Additional Copy Cost - Troop short-form rule. Consolidated Ophydian Destroyer fixed equipment into atomic packages: Destroyer 1 now uses Hyperphase Reap-Blade & Flensing Claws; Destroyers 2 and 3 use Hyperphase Threshers & Flensing Claws. Existing surviving IDs, optional-model infrastructure, points, categories, Attached Plasmacyte structure, and unrelated mechanics are unchanged."
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nAll native Necron units and the nested Canoptek Plasmacyte now expose loadouts. Warriors and Immortals use one squad-wide weapon choice. Variable-size units use the minimum-size-root + optional-extra-model pattern. Skorpekh and Ophydian model 1 are the fixed Reap-blade models and are not presented as champions. All native non-Rare Other units use Additional Copy Costs.\n\nLOKHUST DESTROYER MODEL-COUNT LABEL\nThe fixed minimum-size loadout row now reads 'Lokhust Destroyers 1-2' so the two base models are explicit.\n\nCONSTRUCTIVE ERROR MIGRATION\nNecrons now use Game System revision 11. Additional Copy Costs, mandatory root Leader attachments, normal host Leader limits, Rare limits, and the Cryptothralls attached-by requirement use constructive player-facing validation. Canoptek Plasmacyte nesting, Leader Capacity semantics, loadouts, points, variable-size structures, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, attachment behavior, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV6 POLISH PASS\nStandardized player-facing loadout hierarchy with explicit model/model-set headers, renamed all Canoptek Plasmacyte relationship groups to Attached Plasmacyte, renamed single optional-model size steps to Additional Model, corrected the Lokhust Destroyers 1-2 loadout row to 2x Gauss Cannon, updated inseparable loadout packages to use ' & ', renamed Warrior/Immortal protocol purchases to Protocol Upgrade and Wraith scouting to Unit Upgrade, and standardized native Rare error wording. Points, attachment mechanics, Plasmacyte semantics, variable-size arithmetic, Protocol costs, and Additional Copy Costs are otherwise unchanged.\n\nREV7 PLASMACYTE PRESENTATION ORDER\nMoved Attached Plasmacyte to the bottom of each affected unit's configuration. Loadout Options now appear first, followed by Additional Model where applicable, then Attached Plasmacyte. This treats the Plasmacyte as an optional model-bearing upgrade while preserving its distinct model identity. No points, attachment behavior, Plasmacyte rules, eligibility, or other mechanics were changed.\n\nREV8 RETROSPECTIVE POLISH PASS\nRevisited Necrons against the final cross-faction presentation standard. Standardized the ten remaining native host Leader-limit errors to grammar-safe 'This unit...' wording. Replaced seven obsolete Phase 0.1 variable-size shell/TODO comments with accurate current-state notes describing the implemented minimum-size root plus optional Additional Model structure. Modernized the shared Canoptek Plasmacyte compiler note from obsolete Additional Leader terminology to Nested Attached Model terminology while preserving its host-nested mechanics and Leader Capacity behavior. Loadout presentation, Attached Plasmacyte ordering, Protocol Upgrade and Unit Upgrade semantics, fixed Reap-blade model presentation, Rare validation, points, categories, constraints, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV9 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Warriors and Immortals now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 96 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. Canoptek Plasmacyte remains a nested attached model rather than a Troop unit and is unaffected. All unrelated unit rules, Leader attachment semantics, Rare validation, Protocol Upgrades, variable-size mechanics, and loadout presentation remain unchanged.\n\nREV10 — GS20 TROOP RULE + OPHYDIAN ATOMIC LOADOUTS\nUpdated to Game System revision 20 and retargeted Warriors and Immortals to the Additional Copy Cost - Troop short-form rule. Consolidated Ophydian Destroyer fixed equipment into atomic packages: Destroyer 1 now uses Hyperphase Reap-Blade & Flensing Claws; Destroyers 2 and 3 use Hyperphase Threshers & Flensing Claws. Existing surviving IDs, optional-model infrastructure, points, categories, Attached Plasmacyte structure, and unrelated mechanics are unchanged.\n\nREV11 — NECRONS 3.3.4 + STANDARD PATCH NOTES\nUpdated the catalogue title from Necrons 3.3.3 to Necrons 3.3.4 and added the standard automatically present Patch Notes Configuration. The army-rules section is intentionally bare; Catalogue Bugfixes (September 4th) contains 'Catalogue created.' No mechanical selections, points, loadouts, validation, copy-cost arithmetic, categories, or unrelated catalogue semantics changed."
   }
 }

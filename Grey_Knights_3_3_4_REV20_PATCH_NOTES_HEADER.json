@@ -5,7 +5,7 @@
     "name": "Grey Knights 3.3.4",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 20,
-    "revision": 15,
+    "revision": 20,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -2873,7 +2873,7 @@
           }
         ],
         "sortIndex": 5,
-        "comment": "REV11 STRIKE SQUAD MODEL-TYPE + EXPORT PACKAGE PASS. The mandatory 3-model core remains 120 Points and Grey Knight 4 remains an optional +40 Point model. Model slot 1 is now a required choice between Grey Knight 1 and Justicar; Justicar remains the default. Grey Knight 2 is always an ordinary Grey Knight. Model slot 3 is now a required choice between Grey Knight 3 and Heavy Weapons Grey Knight; Heavy Weapons Grey Knight remains the default. Ordinary Grey Knights choose one atomic Force Weapon & Storm Bolter, Force Falchion & Storm Bolter, or +10 Force Stave & Storm Bolter package. Justicar uses the fixed Daemon Hammer & Storm Bolter package. Heavy Weapons Grey Knight retains the existing Psycannon / Psilencer / Incinerator choice with all three old weapon IDs unchanged. All ordinary model slots link to the same underlying shared package IDs so New Recruit can aggregate repeated loadouts in roster export. The previous separate Storm Bolter leaves are intentionally retired because they caused flat, ownership-less exports and prevented repeated melee + Storm Bolter combinations from consolidating. The one-Force-Stave squad restriction is now validated against the shared Force Stave & Storm Bolter package across Grey Knight 1, 2, 3, and 4.",
+        "comment": "CURRENT STATE. The mandatory 3-model core remains 120 Points and Grey Knight 4 remains an optional +40 Point model. Justicar is the fixed first model and directly presents its Daemon Hammer & Storm Bolter / Force Weapon & Storm Bolter / Force Falchion & Storm Bolter loadout choices. Grey Knight 2 is always an ordinary Grey Knight. The third model position remains the genuine Grey Knight 3 / Heavy Weapons Grey Knight polymorphic slot, with Heavy Weapons Grey Knight defaulted. Grey Knight 2 and an ordinary Grey Knight 3 may select the shared +10 Force Stave & Storm Bolter package; Grey Knight 4 does not have the Force Stave option. A constructive unit-level validator reports an error if more than one Force Stave is equipped. Heavy Weapons Grey Knight retains Psycannon / Psilencer / Incinerator.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -2886,91 +2886,60 @@
                 "id": "f9aa-cb2c-834f-25fc",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "9f42-5d43-3384-b9fb",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "534b-16f1-bccf-b485",
-                    "includeChildSelections": false
-                  }
-                ],
-                "defaultSelectionEntryId": "b292-bb1d-a385-6bea",
-                "selectionEntries": [
-                  {
-                    "type": "model",
-                    "import": true,
-                    "name": "Justicar",
+                    "name": "​",
+                    "id": "abdc-6e10-c796-df02",
                     "hidden": false,
-                    "id": "b292-bb1d-a385-6bea",
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "abdc-6e10-c796-df02",
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "23e2-371d-47f0-1e73",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "88ad-4445-383d-7620",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "defaultSelectionEntryId": "79a7-e9b3-03b8-96de",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Justicar Daemon Hammer & Storm Bolter",
                         "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "23e2-371d-47f0-1e73",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "88ad-4445-383d-7620",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "defaultSelectionEntryId": "79a7-e9b3-03b8-96de",
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Justicar Daemon Hammer & Storm Bolter",
-                            "hidden": false,
-                            "id": "79a7-e9b3-03b8-96de",
-                            "type": "selectionEntry",
-                            "targetId": "5727-87b1-ef95-70c5",
-                            "sortIndex": 1
-                          },
-                          {
-                            "import": true,
-                            "name": "Justicar Force Weapon & Storm Bolter",
-                            "hidden": false,
-                            "id": "1bb1-3f56-9c57-43c0",
-                            "type": "selectionEntry",
-                            "targetId": "427a-ee90-ba28-6365",
-                            "sortIndex": 2
-                          },
-                          {
-                            "import": true,
-                            "name": "Justicar Force Falchion & Storm Bolter",
-                            "hidden": false,
-                            "id": "491f-56d0-5440-2588",
-                            "type": "selectionEntry",
-                            "targetId": "d710-3a7b-9197-a846",
-                            "sortIndex": 3
-                          }
-                        ]
+                        "id": "79a7-e9b3-03b8-96de",
+                        "type": "selectionEntry",
+                        "targetId": "5727-87b1-ef95-70c5",
+                        "sortIndex": 1
+                      },
+                      {
+                        "import": true,
+                        "name": "Justicar Force Weapon & Storm Bolter",
+                        "hidden": false,
+                        "id": "1bb1-3f56-9c57-43c0",
+                        "type": "selectionEntry",
+                        "targetId": "427a-ee90-ba28-6365",
+                        "sortIndex": 2
+                      },
+                      {
+                        "import": true,
+                        "name": "Justicar Force Falchion & Storm Bolter",
+                        "hidden": false,
+                        "id": "491f-56d0-5440-2588",
+                        "type": "selectionEntry",
+                        "targetId": "d710-3a7b-9197-a846",
+                        "sortIndex": 3
                       }
                     ]
                   }
@@ -3272,15 +3241,6 @@
                         "type": "selectionEntry",
                         "targetId": "d710-3a7b-9197-a846",
                         "sortIndex": 2
-                      },
-                      {
-                        "import": true,
-                        "name": "Force Stave & Storm Bolter",
-                        "hidden": false,
-                        "id": "0014-d463-99ac-7823",
-                        "type": "selectionEntry",
-                        "targetId": "9e22-ab8a-23f6-e028",
-                        "sortIndex": 3
                       }
                     ]
                   }
@@ -3343,7 +3303,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Grey Knight Strike Squad has more than one Force Stave & Storm Bolter loadout. Only one ordinary Grey Knight in this unit may use Force Stave & Storm Bolter. Choose another loadout for one of those models.",
+            "value": "This unit has more than one Force Stave equipped. It may have no more than 1 Force Stave equipped. Choose a different loadout for one of those models.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -3688,7 +3648,7 @@
           }
         ],
         "sortIndex": 7,
-        "comment": "REV12 MODEL-TYPE + EXPORT PACKAGE PASS. Grey Knight Purifiers now mirrors the Strike Squad presentation. The first mandatory model slot is Justicar / Grey Knight 1 with Justicar defaulted. The second mandatory model slot is Heavy Weapons Grey Knight / Grey Knight 2 with Heavy Weapons Grey Knight defaulted. The optional Additional Model is Grey Knight 3. Ordinary Grey Knights use the shared Force Weapon & Storm Bolter, Force Falchion & Storm Bolter, or +10 Force Stave & Storm Bolter packages. Justicar uses Daemon Hammer & Storm Bolter. Heavy Weapons Grey Knight retains Psycannon / Psilencer / Incinerator. A constructive squad-level error prevents more than one ordinary model from using Force Stave & Storm Bolter. Psyk-Out Grenade, model costs, categories, Additional Copy Costs, and unrelated mechanics are unchanged.",
+        "comment": "CURRENT STATE. Grey Knight 1 is a fixed ordinary model and directly presents Daemon Hammer & Storm Bolter, Force Weapon & Storm Bolter, Force Falchion & Storm Bolter, or +10 Force Stave & Storm Bolter. The second mandatory model position remains the genuine Heavy Weapons Grey Knight / Grey Knight 2 polymorphic slot, with Heavy Weapons Grey Knight defaulted. The optional Additional Model is Grey Knight 3. Ordinary Grey Knights use the shared loadout packages; Heavy Weapons Grey Knight retains Psycannon / Psilencer / Incinerator. A constructive unit-level validator reports an error if more than one Force Stave is equipped. Psyk-Out Grenade, model costs, categories, Additional Copy Costs, and unrelated mechanics are unchanged.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -3701,111 +3661,80 @@
                 "id": "e789-74da-89b3-7f69",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "3d1e-4260-f9d8-6522",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "064c-dc10-dcf5-0541",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "model",
-                    "import": true,
-                    "name": "Grey Knight 1",
+                    "name": "​",
+                    "id": "b3b7-0cc4-d5bb-8d87",
                     "hidden": false,
-                    "id": "d259-8061-793b-6f0a",
-                    "selectionEntryGroups": [
+                    "sortIndex": 1,
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "b3b7-0cc4-d5bb-8d87",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "315b-ccab-ccb8-7227",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "2d98-ff09-55f9-41c0",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Daemon Hammer & Storm Bolter",
-                            "hidden": false,
-                            "id": "713f-c595-7c8b-b63a",
-                            "type": "selectionEntry",
-                            "targetId": "5727-87b1-ef95-70c5",
-                            "sortIndex": 1
-                          },
-                          {
-                            "import": true,
-                            "name": "Force Weapon & Storm Bolter",
-                            "hidden": false,
-                            "id": "e894-f05c-eca9-79a4",
-                            "type": "selectionEntry",
-                            "targetId": "427a-ee90-ba28-6365",
-                            "sortIndex": 2
-                          },
-                          {
-                            "import": true,
-                            "name": "Force Falchion & Storm Bolter",
-                            "hidden": false,
-                            "id": "677a-a666-60df-96aa",
-                            "type": "selectionEntry",
-                            "targetId": "d710-3a7b-9197-a846",
-                            "sortIndex": 3
-                          },
-                          {
-                            "import": true,
-                            "name": "Force Stave & Storm Bolter",
-                            "hidden": false,
-                            "id": "4884-3997-2292-88ee",
-                            "type": "selectionEntry",
-                            "targetId": "9e22-ab8a-23f6-e028",
-                            "sortIndex": 4,
-                            "modifiers": [
-                              {
-                                "type": "set",
-                                "value": 10,
-                                "field": "51b2-306e-1021-d207"
-                              }
-                            ]
-                          }
-                        ],
-                        "defaultSelectionEntryId": "e894-f05c-eca9-79a4"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "315b-ccab-ccb8-7227",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2d98-ff09-55f9-41c0",
+                        "includeChildSelections": false
                       }
                     ],
-                    "sortIndex": 1
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Daemon Hammer & Storm Bolter",
+                        "hidden": false,
+                        "id": "713f-c595-7c8b-b63a",
+                        "type": "selectionEntry",
+                        "targetId": "5727-87b1-ef95-70c5",
+                        "sortIndex": 1
+                      },
+                      {
+                        "import": true,
+                        "name": "Force Weapon & Storm Bolter",
+                        "hidden": false,
+                        "id": "e894-f05c-eca9-79a4",
+                        "type": "selectionEntry",
+                        "targetId": "427a-ee90-ba28-6365",
+                        "sortIndex": 2
+                      },
+                      {
+                        "import": true,
+                        "name": "Force Falchion & Storm Bolter",
+                        "hidden": false,
+                        "id": "677a-a666-60df-96aa",
+                        "type": "selectionEntry",
+                        "targetId": "d710-3a7b-9197-a846",
+                        "sortIndex": 3
+                      },
+                      {
+                        "import": true,
+                        "name": "Force Stave & Storm Bolter",
+                        "hidden": false,
+                        "id": "4884-3997-2292-88ee",
+                        "type": "selectionEntry",
+                        "targetId": "9e22-ab8a-23f6-e028",
+                        "sortIndex": 4,
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": 10,
+                            "field": "51b2-306e-1021-d207"
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "e894-f05c-eca9-79a4"
                   }
-                ],
-                "defaultSelectionEntryId": "d259-8061-793b-6f0a"
+                ]
               },
               {
                 "name": "Heavy Weapons Grey Knight / Grey Knight 2",
@@ -4140,6 +4069,27 @@
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "This unit has more than one Force Stave equipped. It may have no more than 1 Force Stave equipped. Choose a different loadout for one of those models.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "self",
+                "childId": "9e22-ab8a-23f6-e028",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "queryFromSelf": false,
+                "childName": "Force Stave & Storm Bolter"
+              }
+            ]
+          }
         ]
       },
       {
@@ -4428,7 +4378,7 @@
           }
         ],
         "sortIndex": 9,
-        "comment": "REV12 MODEL-TYPE + EXPORT PACKAGE PASS. Grey Knight Interceptors now mirrors the Strike Squad presentation. The first mandatory model slot is Justicar / Grey Knight 1 with Justicar defaulted. The second mandatory model slot is Heavy Weapons Grey Knight / Grey Knight 2 with Heavy Weapons Grey Knight defaulted. The optional Additional Model is Grey Knight 3. Ordinary Grey Knights use the shared Force Weapon & Storm Bolter, Force Falchion & Storm Bolter, or +10 Force Stave & Storm Bolter packages. Justicar uses Daemon Hammer & Storm Bolter. Heavy Weapons Grey Knight retains Psycannon / Psilencer / Incinerator. A constructive squad-level error prevents more than one ordinary model from using Force Stave & Storm Bolter. Psyk-Out Grenade, model costs, categories, Additional Copy Costs, and unrelated mechanics are unchanged.",
+        "comment": "CURRENT STATE. Grey Knight 1 is a fixed ordinary model and directly presents Daemon Hammer & Storm Bolter, Force Weapon & Storm Bolter, Force Falchion & Storm Bolter, or +10 Force Stave & Storm Bolter. The second mandatory model position remains the genuine Heavy Weapons Grey Knight / Grey Knight 2 polymorphic slot, with Heavy Weapons Grey Knight defaulted. The optional Additional Model is Grey Knight 3. Ordinary Grey Knights use the shared loadout packages; Heavy Weapons Grey Knight retains Psycannon / Psilencer / Incinerator. A constructive unit-level validator reports an error if more than one Force Stave is equipped. Psyk-Out Grenade, model costs, categories, Additional Copy Costs, and unrelated mechanics are unchanged.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -4450,111 +4400,80 @@
                 "id": "6b1c-53ae-eddf-2604",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
+                "selectionEntryGroups": [
                   {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "87d3-4cb4-b647-b584",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "ebb1-1f54-ab85-c392",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "model",
-                    "import": true,
-                    "name": "Grey Knight 1",
+                    "name": "​",
+                    "id": "db64-cf65-2007-2aa3",
                     "hidden": false,
-                    "id": "0789-6c16-7223-d849",
-                    "selectionEntryGroups": [
+                    "sortIndex": 1,
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "db64-cf65-2007-2aa3",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "107a-1e04-5053-a1b6",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "6964-4371-2b7c-b67f",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Daemon Hammer & Storm Bolter",
-                            "hidden": false,
-                            "id": "c0a9-8c60-7677-c117",
-                            "type": "selectionEntry",
-                            "targetId": "5727-87b1-ef95-70c5",
-                            "sortIndex": 1
-                          },
-                          {
-                            "import": true,
-                            "name": "Force Weapon & Storm Bolter",
-                            "hidden": false,
-                            "id": "3052-d147-672b-0fa4",
-                            "type": "selectionEntry",
-                            "targetId": "427a-ee90-ba28-6365",
-                            "sortIndex": 2
-                          },
-                          {
-                            "import": true,
-                            "name": "Force Falchion & Storm Bolter",
-                            "hidden": false,
-                            "id": "def6-cfe6-4bd0-bfc4",
-                            "type": "selectionEntry",
-                            "targetId": "d710-3a7b-9197-a846",
-                            "sortIndex": 3
-                          },
-                          {
-                            "import": true,
-                            "name": "Force Stave & Storm Bolter",
-                            "hidden": false,
-                            "id": "3b02-87f8-26cd-5882",
-                            "type": "selectionEntry",
-                            "targetId": "9e22-ab8a-23f6-e028",
-                            "sortIndex": 4,
-                            "modifiers": [
-                              {
-                                "type": "set",
-                                "value": 10,
-                                "field": "51b2-306e-1021-d207"
-                              }
-                            ]
-                          }
-                        ],
-                        "defaultSelectionEntryId": "3052-d147-672b-0fa4"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "107a-1e04-5053-a1b6",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6964-4371-2b7c-b67f",
+                        "includeChildSelections": false
                       }
                     ],
-                    "sortIndex": 1
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Daemon Hammer & Storm Bolter",
+                        "hidden": false,
+                        "id": "c0a9-8c60-7677-c117",
+                        "type": "selectionEntry",
+                        "targetId": "5727-87b1-ef95-70c5",
+                        "sortIndex": 1
+                      },
+                      {
+                        "import": true,
+                        "name": "Force Weapon & Storm Bolter",
+                        "hidden": false,
+                        "id": "3052-d147-672b-0fa4",
+                        "type": "selectionEntry",
+                        "targetId": "427a-ee90-ba28-6365",
+                        "sortIndex": 2
+                      },
+                      {
+                        "import": true,
+                        "name": "Force Falchion & Storm Bolter",
+                        "hidden": false,
+                        "id": "def6-cfe6-4bd0-bfc4",
+                        "type": "selectionEntry",
+                        "targetId": "d710-3a7b-9197-a846",
+                        "sortIndex": 3
+                      },
+                      {
+                        "import": true,
+                        "name": "Force Stave & Storm Bolter",
+                        "hidden": false,
+                        "id": "3b02-87f8-26cd-5882",
+                        "type": "selectionEntry",
+                        "targetId": "9e22-ab8a-23f6-e028",
+                        "sortIndex": 4,
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": 10,
+                            "field": "51b2-306e-1021-d207"
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "3052-d147-672b-0fa4"
                   }
-                ],
-                "defaultSelectionEntryId": "0789-6c16-7223-d849"
+                ]
               },
               {
                 "name": "Heavy Weapons Grey Knight / Grey Knight 2",
@@ -4877,6 +4796,27 @@
                   }
                 ],
                 "sortIndex": 1
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "This unit has more than one Force Stave equipped. It may have no more than 1 Force Stave equipped. Choose a different loadout for one of those models.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "self",
+                "childId": "9e22-ab8a-23f6-e028",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "queryFromSelf": false,
+                "childName": "Force Stave & Storm Bolter"
               }
             ]
           }
@@ -5311,7 +5251,7 @@
           {
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
-            "value": 250
+            "value": 240
           }
         ],
         "categoryLinks": [
@@ -5940,7 +5880,7 @@
       {
         "type": "upgrade",
         "import": true,
-        "name": "Patch Notes (3.3.4)",
+        "name": "Patch Notes",
         "hidden": false,
         "id": "2ffe-4b87-c345-290a",
         "sortIndex": 1,
@@ -5954,10 +5894,10 @@
         ],
         "rules": [
           {
-            "name": "Patch Notes (3.3.4)",
+            "name": "Patch Notes",
             "id": "6497-c894-27e4-e425",
             "hidden": false,
-            "description": "Grand Master\n• Increased from 120 to 140 Points.\n• Cannot attach to anything.\n\nGrey Knight Strike Squad\n• Grey Knight 1 / Justicar has been replaced by a mandatory Justicar with three loadout options: Justicar Daemon Hammer & Storm Bolter; Justicar Force Weapon & Storm Bolter; Justicar Force Falchion & Storm Bolter.\n\nGrey Knight Purifiers & Interceptors\n• These units no longer contain a Justicar.\n• Grey Knights 1-3 may take Daemon Hammer & Storm Bolter, Force Weapon & Storm Bolter, Force Falchion & Storm Bolter, or Force Stave & Storm Bolter (+10 Points). Heavy Weapons Grey Knight loadouts are unchanged.\n\nGrey Knight Terminator Apothecary\n• Loadout is now Force Weapon, Daemon Hammer, or Force Stave (+10 Points).\n\nGrey Knight Nemesis Dreadknight\n• Increased from 240 to 250 Points.\n\nGrey Knight Dreadnought\n• Added loadout options. Its first weapon choice includes Dreadnought Hammer, Power Scourge, Nemesis Doomglaive & Storm Bolter, three Nemesis Doomfist packages, or Missile Launcher (+20 Points). Its second weapon choice includes Psycannon, Psilencer, Multi-Melta, Plasma Cannon, Twin Lascannon, Twin Heavy Bolter, Twin Autocannon, or three Nemesis Doomfist packages.\n• Venerable remains available for +10 Points: this unit’s Health is improved by 1.",
+            "description": "## Grey Knights 3.3.4\n\nGrand Master\n• 120 Points → 140 Points.\n• Cannot attach to anything.\n\nGrey Knight Strike Squad\n• Justicar weapons added.\n\nGrey Knight Purifiers & Interceptors\n• Daemon Hammer is now a non-restricted loadout option.\n\nGrey Knight Dreadnought\n• Added an additional Nemesis Doomfist & Incinerator to loadout options.\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 4th)\n\n• Dreadknight now costs 240 Points.\n• Force Stave is now restricted to one per unit.\n• Various layout improvements.",
             "noindex": false
           }
         ],
@@ -5975,7 +5915,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV14: Automatically present Configuration entry containing the Grey Knights 3.3.4 patch notes."
+        "comment": "CURRENT STATE. Automatically present Configuration entry containing two player-facing update sections: Grey Knights 3.3.4 records army-rules PDF changes mirrored into the catalogue; Catalogue Bugfixes (September 4th) records catalogue-only New Recruit fixes and presentation updates. Existing Patch Notes entry and rule IDs are preserved."
       }
     ],
     "categoryEntries": [
@@ -6002,7 +5942,7 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "GREY KNIGHTS CURRENT-STATE BASELINE. All 13 source datasheets are selectable. All four Leaders consume Leader Capacity and use the standard attachment primitive, attaching to either GREY KNIGHT TERMINATOR or GREY KNIGHT PALADIN. Grey Knight Chaplain is Rare. Variable-size squads use the minimum-size-root + optional Additional Model pattern where applicable.\n\nLOADOUT + ADDITIONAL COPY COST PASS\nLoadouts implemented for all native Grey Knights units. All native non-Rare Other units, including Interceptors, use the soft 1/2/3 Additional Copy Cost system.\n\nVARIABLE UNIT SIZE PASS\nVariable-size squads now use the canonical minimum-size-root + optional-extra-model pattern. Strike Squad is 3+1, Purifiers 2+1, Purgation Squad 2+1, and Interceptors 2+1. Extra models carry their own cost and loadout subtree where loadouts are implemented. Interceptor loadout remains deferred.\n\nPURIFIER / INTERCEPTOR SPECIALIST CLEANUP\nPurifier 2 now advertises only heavy weapons. Interceptor loadout is implemented: Justicar, heavy-only model 2, and optional normal model 3 with paid Force Stave.\n\nSTRIKE SQUAD SPECIALIST CLEANUP\nGrey Knight Strike Squad model 3 is now presented only as the dedicated heavy-weapons model (Psycannon / Psilencer / Incinerator). Ordinary Storm Bolter alternatives are intentionally omitted.\n\nCONSTRUCTIVE ERROR MIGRATION\nGrey Knights now use Game System revision 11. Additional Copy Costs, mandatory Leader attachments, Terminator/Paladin host Leader limits, and the Grey Knight Chaplain Rare restriction use constructive player-facing validation. Existing loadouts, variable-size structures, points, Leader Capacity semantics, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV7 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader attachment behavior, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV8 POLISH PASS\nAdded explicit model headers to single-model Grey Knight units, flattened Strike Squad / Purifier / Interceptor specialist models into Loadout Options, renamed single optional size steps to Additional Model, split ordinary Grey Knight Storm Bolters onto their own fixed weapon line, removed Dreadknight slot labels and Dreadnought arm labels, converted inseparable Dreadnought weapon packages to use ' & ', renamed the Dreadnought Venerable section to Unit Upgrade, and standardized the Grey Knight Chaplain Rare error. Purgation Squad model names, points, attachment semantics, variable-size arithmetic, Force Stave limits, specialist availability, and Additional Copy Costs are otherwise unchanged.\n\nREV9 RETROSPECTIVE POLISH PASS\nRevisited Grey Knights against the final cross-faction presentation standard. Standardized the Grey Knight Terminator and Grey Knight Paladin host Leader-limit errors to grammar-safe 'This unit...' wording. Reordered Strike Squad, Purifiers, Interceptors, and Purgation Squad so their player-facing configuration reads Loadout Options, Additional Model, then Paid Wargear. Replaced the obsolete Phase 0.1 opening baseline with a current-state note reflecting the implemented variable-size system. All unit IDs, SelectionEntry names, loadouts, defaults, points, Leader attachment behavior, Rare validation, Force Stave limits, specialist availability, Additional Copy Costs arithmetic, categories, constraints, and all other rules semantics remain unchanged.\n\nREV10 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Grey Knight Strike Squad and Grey Knight Terminator now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 42 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. Grey Knight Chaplain remains Rare and outside the soft-copy-cost system. All unrelated loadouts, Leader attachment behavior, Terminator/Paladin host validation, variable-size mechanics, specialist availability, paid wargear, and Rare semantics remain unchanged.\n\nREV11 — GREY KNIGHT STRIKE SQUAD MODEL TYPES + EXPORT PACKAGES\nReworked Grey Knight Strike Squad into explicit model-type choices. Slot 1 is Grey Knight 1 / Justicar, slot 2 is Grey Knight 2, and slot 3 is Grey Knight 3 / Heavy Weapons Grey Knight. Justicar and Heavy Weapons Grey Knight remain the defaults, preserving the previous default squad composition. Ordinary Grey Knight weapon states are now atomic '& Storm Bolter' shared packages. Every ordinary slot links to the same Force Weapon, Force Falchion, or Force Stave package ID, allowing repeated identical loadouts to consolidate in New Recruit roster export instead of emitting separate Storm Bolter and melee-weapon fragments. Grey Knight 4 remains the optional +40 Point fourth model and now uses the same shared packages. Psycannon, Psilencer, and Incinerator retain their existing IDs and remain exclusive to Heavy Weapons Grey Knight. The previous two-model Force Stave cross-hide was replaced by a constructive squad-level max-one validation against the shared Stave package. All other Grey Knights units, Additional Copy Costs, categories, points, attachments, loadouts, and Game System REV17 semantics remain unchanged.\n\nREV12 — PURIFIER / INTERCEPTOR MODEL TYPES + EXPORT PACKAGES\nApplied the Strike Squad model-type/export-package pattern to Grey Knight Purifiers and Grey Knight Interceptors. Each now has Justicar / Grey Knight 1 and Heavy Weapons Grey Knight / Grey Knight 2 mandatory model slots, defaulting to Justicar and Heavy Weapons Grey Knight respectively, plus optional Grey Knight 3 under Additional Model. Ordinary models use the same shared Force Weapon & Storm Bolter, Force Falchion & Storm Bolter, and Force Stave & Storm Bolter packages as Strike Squad. Justicars use the shared Daemon Hammer & Storm Bolter package. Heavy weapon IDs are preserved. Both units now use the same constructive max-one Force Stave validation as Strike Squad. Dead standalone Storm Bolter and split melee branches were removed rather than retained as compatibility debris.\n\nREV13 — GS20 TROOP COPY RULE\nUpdated to Game System revision 20 and retargeted Grey Knight Strike Squad and Grey Knight Terminator to the Additional Copy Cost - Troop short-form rule. Existing infoLink IDs, loadouts, model-role structures, points, categories, and unrelated mechanics are unchanged.\n\nREV14 — GREY KNIGHTS 3.3.4 PATCH UPDATE\nApplied supplied 3.3.4 changes to Grand Master, Strike Squad, Purifiers, Interceptors, Grey Knight Terminator Apothecary, and the 240-point Grey Knight Nemesis Dreadknight root (renamed Grey Knight Nemesis Dreadnought per the supplied patch heading). Added Patch Notes (3.3.4) under Configuration. GS20 Troop copy-cost links remain unchanged.\n\nREV15 — DREADKNIGHT / DREADNOUGHT CORRECTION\nCorrected REV14's mistaken interpretation of the 3.3.4 vehicle patch. Grey Knight Nemesis Dreadknight is restored to its original unit identity and loadout structure, with only its points changed from 240 to 250. Grey Knight Dreadnought remains a separate 160-point unit; its supplied loadout list is preserved and completed by adding Nemesis Doomfist & Incinerator to the second weapon choice. Existing Dreadnought loadout IDs and Venerable +10 upgrade are preserved. All other REV14 changes remain unchanged.",
+    "comment": "GREY KNIGHTS CURRENT-STATE BASELINE. All 13 source datasheets are selectable. All four Leaders consume Leader Capacity and use the standard attachment primitive, attaching to either GREY KNIGHT TERMINATOR or GREY KNIGHT PALADIN. Grey Knight Chaplain is Rare. Variable-size squads use the minimum-size-root + optional Additional Model pattern where applicable.\n\nLOADOUT + ADDITIONAL COPY COST PASS\nLoadouts implemented for all native Grey Knights units. All native non-Rare Other units, including Interceptors, use the soft 1/2/3 Additional Copy Cost system.\n\nVARIABLE UNIT SIZE PASS\nVariable-size squads now use the canonical minimum-size-root + optional-extra-model pattern. Strike Squad is 3+1, Purifiers 2+1, Purgation Squad 2+1, and Interceptors 2+1. Extra models carry their own cost and loadout subtree where loadouts are implemented. Interceptor loadout remains deferred.\n\nPURIFIER / INTERCEPTOR SPECIALIST CLEANUP\nPurifier 2 now advertises only heavy weapons. Interceptor loadout is implemented: Justicar, heavy-only model 2, and optional normal model 3 with paid Force Stave.\n\nSTRIKE SQUAD SPECIALIST CLEANUP\nGrey Knight Strike Squad model 3 is now presented only as the dedicated heavy-weapons model (Psycannon / Psilencer / Incinerator). Ordinary Storm Bolter alternatives are intentionally omitted.\n\nCONSTRUCTIVE ERROR MIGRATION\nGrey Knights now use Game System revision 11. Additional Copy Costs, mandatory Leader attachments, Terminator/Paladin host Leader limits, and the Grey Knight Chaplain Rare restriction use constructive player-facing validation. Existing loadouts, variable-size structures, points, Leader Capacity semantics, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV7 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader attachment behavior, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV8 POLISH PASS\nAdded explicit model headers to single-model Grey Knight units, flattened Strike Squad / Purifier / Interceptor specialist models into Loadout Options, renamed single optional size steps to Additional Model, split ordinary Grey Knight Storm Bolters onto their own fixed weapon line, removed Dreadknight slot labels and Dreadnought arm labels, converted inseparable Dreadnought weapon packages to use ' & ', renamed the Dreadnought Venerable section to Unit Upgrade, and standardized the Grey Knight Chaplain Rare error. Purgation Squad model names, points, attachment semantics, variable-size arithmetic, Force Stave limits, specialist availability, and Additional Copy Costs are otherwise unchanged.\n\nREV9 RETROSPECTIVE POLISH PASS\nRevisited Grey Knights against the final cross-faction presentation standard. Standardized the Grey Knight Terminator and Grey Knight Paladin host Leader-limit errors to grammar-safe 'This unit...' wording. Reordered Strike Squad, Purifiers, Interceptors, and Purgation Squad so their player-facing configuration reads Loadout Options, Additional Model, then Paid Wargear. Replaced the obsolete Phase 0.1 opening baseline with a current-state note reflecting the implemented variable-size system. All unit IDs, SelectionEntry names, loadouts, defaults, points, Leader attachment behavior, Rare validation, Force Stave limits, specialist availability, Additional Copy Costs arithmetic, categories, constraints, and all other rules semantics remain unchanged.\n\nREV10 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Grey Knight Strike Squad and Grey Knight Terminator now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 42 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. Grey Knight Chaplain remains Rare and outside the soft-copy-cost system. All unrelated loadouts, Leader attachment behavior, Terminator/Paladin host validation, variable-size mechanics, specialist availability, paid wargear, and Rare semantics remain unchanged.\n\nREV11 — GREY KNIGHT STRIKE SQUAD MODEL TYPES + EXPORT PACKAGES\nReworked Grey Knight Strike Squad into explicit model-type choices. Slot 1 is Grey Knight 1 / Justicar, slot 2 is Grey Knight 2, and slot 3 is Grey Knight 3 / Heavy Weapons Grey Knight. Justicar and Heavy Weapons Grey Knight remain the defaults, preserving the previous default squad composition. Ordinary Grey Knight weapon states are now atomic '& Storm Bolter' shared packages. Every ordinary slot links to the same Force Weapon, Force Falchion, or Force Stave package ID, allowing repeated identical loadouts to consolidate in New Recruit roster export instead of emitting separate Storm Bolter and melee-weapon fragments. Grey Knight 4 remains the optional +40 Point fourth model and now uses the same shared packages. Psycannon, Psilencer, and Incinerator retain their existing IDs and remain exclusive to Heavy Weapons Grey Knight. The previous two-model Force Stave cross-hide was replaced by a constructive squad-level max-one validation against the shared Stave package. All other Grey Knights units, Additional Copy Costs, categories, points, attachments, loadouts, and Game System REV17 semantics remain unchanged.\n\nREV12 — PURIFIER / INTERCEPTOR MODEL TYPES + EXPORT PACKAGES\nApplied the Strike Squad model-type/export-package pattern to Grey Knight Purifiers and Grey Knight Interceptors. Each now has Justicar / Grey Knight 1 and Heavy Weapons Grey Knight / Grey Knight 2 mandatory model slots, defaulting to Justicar and Heavy Weapons Grey Knight respectively, plus optional Grey Knight 3 under Additional Model. Ordinary models use the same shared Force Weapon & Storm Bolter, Force Falchion & Storm Bolter, and Force Stave & Storm Bolter packages as Strike Squad. Justicars use the shared Daemon Hammer & Storm Bolter package. Heavy weapon IDs are preserved. Both units now use the same constructive max-one Force Stave validation as Strike Squad. Dead standalone Storm Bolter and split melee branches were removed rather than retained as compatibility debris.\n\nREV13 — GS20 TROOP COPY RULE\nUpdated to Game System revision 20 and retargeted Grey Knight Strike Squad and Grey Knight Terminator to the Additional Copy Cost - Troop short-form rule. Existing infoLink IDs, loadouts, model-role structures, points, categories, and unrelated mechanics are unchanged.\n\nREV14 — GREY KNIGHTS 3.3.4 PATCH UPDATE\nApplied supplied 3.3.4 changes to Grand Master, Strike Squad, Purifiers, Interceptors, Grey Knight Terminator Apothecary, and the 240-point Grey Knight Nemesis Dreadknight root (renamed Grey Knight Nemesis Dreadnought per the supplied patch heading). Added Patch Notes (3.3.4) under Configuration. GS20 Troop copy-cost links remain unchanged.\n\nREV15 — DREADKNIGHT / DREADNOUGHT CORRECTION\nCorrected REV14's mistaken interpretation of the 3.3.4 vehicle patch. Grey Knight Nemesis Dreadknight is restored to its original unit identity and loadout structure, with only its points changed from 240 to 250. Grey Knight Dreadnought remains a separate 160-point unit; its supplied loadout list is preserved and completed by adding Nemesis Doomfist & Incinerator to the second weapon choice. Existing Dreadnought loadout IDs and Venerable +10 upgrade are preserved. All other REV14 changes remain unchanged.\n\nREV16 — DREADKNIGHT POINTS REVERSION\nGrey Knight Nemesis Dreadknight reduced from 250 to 240 Points. Existing unit ID, loadout structure, categories, Additional Copy Costs behavior, and unrelated mechanics are unchanged. The existing Patch Notes (3.3.4) Configuration is intentionally left unchanged pending the remainder of the new Grey Knights update set.\n\nREV17 — MONOMORPHIC MODEL PRESENTATION CLEANUP\nRemoved the obsolete single-choice model-identity layer from three positions that had previously been polymorphic: Grey Knight Strike Squad Justicar, Grey Knight Purifiers Grey Knight 1, and Grey Knight Interceptors Grey Knight 1. Each now uses the normal fixed-model presentation: visible model header directly containing its mandatory blank loadout group. Existing visible wrapper IDs, loadout-group IDs, shared package targets, defaults, points, Force Stave validation, remaining genuine polymorphic slots, and unrelated mechanics are preserved. The three dead sole-model SelectionEntries and their obsolete wrapper constraints/default references were removed.\n\nREV18 — FORCE STAVE UNIT LIMIT\nStandardized permissive-corrective Force Stave validation across Grey Knight Strike Squad, Grey Knight Purifiers, and Grey Knight Interceptors. Each unit now reports a player-facing error when two or more selections of the shared Force Stave & Storm Bolter package are present, while otherwise leaving the loadout controls permissive. Grey Knight 4 in Grey Knight Strike Squad no longer offers Force Stave & Storm Bolter. Existing shared package IDs, points, defaults, genuine polymorphic model slots, Additional Copy Costs, and unrelated mechanics are unchanged.\n\nREV19 — PATCH NOTES REWORK\nReworked the automatically present Patch Notes Configuration into two player-facing sections. Grey Knights 3.3.4 now lists only the army-rules PDF changes relevant to the catalogue: Grand Master 120 → 140 Points and cannot attach, Strike Squad Justicar weapons, unrestricted Daemon Hammer access for Purifiers and Interceptors, and the additional Nemesis Doomfist & Incinerator Dreadnought loadout option. Added a Reforged Discord Server reference for the full rules patch. Added a separate 4th of September section for catalogue-only changes: Dreadknight restored to 240 Points, Force Stave restricted to one per unit, and layout improvements. Existing Patch Notes entry/rule IDs and automatic default insertion are preserved.\n\nREV20 — PATCH NOTES HEADER LABEL\nRenamed the catalogue-only Patch Notes section from '4th of September' to 'Catalogue Bugfixes (September 4th)'. Patch content, entry/rule IDs, and all unrelated catalogue mechanics are unchanged.",
     "sharedSelectionEntries": [
       {
         "type": "upgrade",
