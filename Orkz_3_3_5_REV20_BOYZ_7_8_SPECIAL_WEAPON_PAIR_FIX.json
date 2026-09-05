@@ -5,7 +5,7 @@
     "name": "Orkz 3.3.5",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 20,
-    "revision": 19,
+    "revision": 20,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -4351,7 +4351,7 @@
             "name": "Patch Notes",
             "id": "ae64-12af-fcbf-bd56",
             "hidden": false,
-            "description": "## Orkz 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 4th)\n\n• Catalogue created.",
+            "description": "## Orkz 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 5th)\n\n• Ork Boyz 7-8 now correctly pay 10 Points once for both models to become Special Weapon Boyz, instead of 10 Points per model.",
             "noindex": false
           }
         ],
@@ -5350,7 +5350,7 @@
                     "entryLinks": [
                       {
                         "import": true,
-                        "name": "Slugga & Choppa",
+                        "name": "6x Slugga & Choppa",
                         "hidden": false,
                         "id": "3703-1a9f-dc05-df54",
                         "type": "selectionEntry",
@@ -5359,7 +5359,7 @@
                       },
                       {
                         "import": true,
-                        "name": "Shoota & Choppa",
+                        "name": "6x Shoota & Choppa",
                         "hidden": false,
                         "id": "9be7-fdb0-addd-760f",
                         "type": "selectionEntry",
@@ -5442,275 +5442,199 @@
                     "comment": "LEGACY ID SHELL: former fixed 5x Slugga line, superseded by the REV16 six-model atomic baseline package."
                   }
                 ],
-                "comment": "REV16: Ork Boyz 1-6 are the six ordinary models and choose one squad-wide final state: Slugga & Choppa or Shoota & Choppa."
+                "comment": "REV20: Ork Boyz 1-6 remain one squad-wide final-state choice. Player-facing labels now explicitly show the six-model quantities."
               },
               {
-                "name": "Ork Boy 7",
-                "id": "46a1-e8d3-7ffb-ec7a",
+                "name": "Ork Boyz 7-8",
+                "id": "b5c8-c20e-b821-2172",
                 "hidden": false,
                 "sortIndex": 2,
-                "selectionEntryGroups": [
+                "constraints": [
                   {
-                    "name": "​",
-                    "id": "f21b-2a63-50d9-538b",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "2a00-4a04-0452-efd8"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "9536-6193-904b-884c"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Choppa",
-                        "hidden": false,
-                        "id": "57bc-71f9-5071-be10",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "57bc-71f9-5071-be10"
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "00c1-6186-0aed-abfd",
+                    "includeChildSelections": false
                   },
                   {
-                    "name": "​",
-                    "id": "a01d-add5-6624-a650",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "d648-2ace-9b6e-2ae5"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "44cf-ada6-7027-e7b9"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Slugga",
-                        "hidden": false,
-                        "id": "f112-ff18-654b-debd",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Shoota",
-                        "hidden": false,
-                        "id": "eb7e-78a5-ca60-d61a",
-                        "sortIndex": 2
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Rokkit",
-                        "hidden": false,
-                        "id": "269c-3675-34dd-203b",
-                        "sortIndex": 3,
-                        "costs": [
-                          {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Big Shoota",
-                        "hidden": false,
-                        "id": "0523-5e3e-6861-674e",
-                        "sortIndex": 4,
-                        "costs": [
-                          {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Burna",
-                        "hidden": false,
-                        "id": "a082-57ee-2fa6-70ff",
-                        "sortIndex": 5,
-                        "costs": [
-                          {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
-                          }
-                        ]
-                      }
-                    ],
-                    "defaultSelectionEntryId": "f112-ff18-654b-debd"
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "5bbf-9f50-d11b-2f4f",
+                    "includeChildSelections": false
                   }
-                ]
-              },
-              {
-                "name": "Ork Boy 8",
-                "id": "ba53-73d3-d209-be6a",
-                "hidden": false,
-                "sortIndex": 3,
-                "selectionEntryGroups": [
+                ],
+                "selectionEntries": [
                   {
-                    "name": "​",
-                    "id": "458c-8c6e-2376-30e8",
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "2x Slugga & Choppa",
                     "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "62b7-48a7-c45e-cf93"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "c04a-e32a-62f4-09d1"
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Choppa",
-                        "hidden": false,
-                        "id": "a425-31b2-91cf-a7eb",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "a425-31b2-91cf-a7eb"
+                    "id": "e4a2-850e-4c75-13fe",
+                    "sortIndex": 1
                   },
                   {
-                    "name": "​",
-                    "id": "7a9b-d1ea-f5eb-0566",
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "2x Shoota & Choppa",
                     "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
+                    "id": "5c84-2715-dac7-b595",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Special Weapon Boyz 7-8",
+                    "hidden": false,
+                    "id": "dfad-c5c4-3a22-55c8",
+                    "sortIndex": 3,
+                    "costs": [
                       {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "090b-0aba-9c00-4761"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "15a2-e68d-41a1-5106"
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 10
                       }
                     ],
-                    "selectionEntries": [
+                    "selectionEntryGroups": [
                       {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Slugga",
+                        "name": "Ork Boy 7",
+                        "id": "46a1-e8d3-7ffb-ec7a",
                         "hidden": false,
-                        "id": "dbb0-bf57-470d-d9bf",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Shoota",
-                        "hidden": false,
-                        "id": "2ac9-92c3-2401-1d22",
-                        "sortIndex": 2
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Rokkit",
-                        "hidden": false,
-                        "id": "6283-ee33-1cac-3590",
-                        "sortIndex": 3,
-                        "costs": [
+                        "sortIndex": 1,
+                        "selectionEntryGroups": [
                           {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
+                            "name": "​",
+                            "id": "a01d-add5-6624-a650",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "d648-2ace-9b6e-2ae5"
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "44cf-ada6-7027-e7b9"
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Rokkit & Choppa",
+                                "hidden": false,
+                                "id": "269c-3675-34dd-203b",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Big Shoota & Choppa",
+                                "hidden": false,
+                                "id": "0523-5e3e-6861-674e",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Burna & Choppa",
+                                "hidden": false,
+                                "id": "a082-57ee-2fa6-70ff",
+                                "sortIndex": 3
+                              }
+                            ],
+                            "defaultSelectionEntryId": "269c-3675-34dd-203b",
+                            "comment": "REV20: Ork Boy 7 is only exposed when the paired Special Weapon Boyz 7-8 branch is selected. The +10 Points cost is paid once by the pair branch; this model's weapon choice is therefore free within that branch."
                           }
-                        ]
+                        ],
+                        "comment": "REV20: retained stable Ork Boy 7 group and special-weapon option IDs. Former separate Choppa and ordinary Slugga/Shoota state are superseded by the paired fork."
                       },
                       {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Big Shoota",
+                        "name": "Ork Boy 8",
+                        "id": "ba53-73d3-d209-be6a",
                         "hidden": false,
-                        "id": "31b3-9196-40ac-0ebc",
-                        "sortIndex": 4,
-                        "costs": [
+                        "sortIndex": 2,
+                        "selectionEntryGroups": [
                           {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
+                            "name": "​",
+                            "id": "7a9b-d1ea-f5eb-0566",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "090b-0aba-9c00-4761"
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "15a2-e68d-41a1-5106"
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Rokkit & Choppa",
+                                "hidden": false,
+                                "id": "6283-ee33-1cac-3590",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Big Shoota & Choppa",
+                                "hidden": false,
+                                "id": "31b3-9196-40ac-0ebc",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Burna & Choppa",
+                                "hidden": false,
+                                "id": "56fc-77b1-5737-58ac",
+                                "sortIndex": 3
+                              }
+                            ],
+                            "defaultSelectionEntryId": "6283-ee33-1cac-3590",
+                            "comment": "REV20: Ork Boy 8 is only exposed when the paired Special Weapon Boyz 7-8 branch is selected. The +10 Points cost is paid once by the pair branch; this model's weapon choice is therefore free within that branch."
                           }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Burna",
-                        "hidden": false,
-                        "id": "56fc-77b1-5737-58ac",
-                        "sortIndex": 5,
-                        "costs": [
-                          {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
-                          }
-                        ]
+                        ],
+                        "comment": "REV20: retained stable Ork Boy 8 group and special-weapon option IDs. Former separate Choppa and ordinary Slugga/Shoota state are superseded by the paired fork."
                       }
                     ],
-                    "defaultSelectionEntryId": "dbb0-bf57-470d-d9bf"
+                    "comment": "REV20: this is the single paid decision for Boyz 7-8. Paying +10 Points converts both models into Special Weapon Boyz; Ork Boy 7 and Ork Boy 8 then independently choose Rokkit & Choppa, Big Shoota & Choppa, or Burna & Choppa."
                   }
-                ]
+                ],
+                "defaultSelectionEntryId": "e4a2-850e-4c75-13fe",
+                "comment": "REV20: paired final-state fork. Boyz 7-8 either remain two ordinary Boyz with a shared Slugga/Shoota loadout, or the pair pays +10 Points once to become two independently configured Special Weapon Boyz."
               },
               {
                 "name": "Ork Boy 9",
                 "id": "8ba7-5886-e37e-ece6",
                 "hidden": false,
-                "sortIndex": 4,
+                "sortIndex": 3,
                 "selectionEntryGroups": [
                   {
                     "name": "​",
@@ -5888,7 +5812,7 @@
             ]
           }
         ],
-        "comment": "REV16 LOADOUT UI: Ork Boyz is a nine-model unit. Ork Boyz 1-6 use one squad-wide atomic choice between Slugga & Choppa and Shoota & Choppa, exporting as 6x of the selected package. Ork Boyz 7-9 retain the existing specialist/advanced-weapon model structure and ordinary fallback states. The optional nested Nob is an attached Leader-style model and does not replace one of the nine Boyz. Attachment validation, Paid Wargear, points, categories, and copy-cost behavior are unchanged.",
+        "comment": "REV16 LOADOUT UI: Ork Boyz is a nine-model unit. Ork Boyz 1-6 use one squad-wide atomic choice between Slugga & Choppa and Shoota & Choppa, exporting as 6x of the selected package. Ork Boyz 7-9 retain the existing specialist/advanced-weapon model structure and ordinary fallback states. The optional nested Nob is an attached Leader-style model and does not replace one of the nine Boyz. Attachment validation, Paid Wargear, points, categories, and copy-cost behavior are unchanged.\nREV20 BOYZ 7-8 PAIR FIX: corrected the intended special-weapon pricing and presentation. Ork Boyz 7-8 now make one paired choice: 2x Slugga & Choppa, 2x Shoota & Choppa, or Special Weapon Boyz 7-8 for +10 Points total. If the special branch is selected, Ork Boy 7 and Ork Boy 8 independently choose Rokkit & Choppa, Big Shoota & Choppa, or Burna & Choppa at no additional per-model cost.",
         "modifiers": [
           {
             "type": "add",
@@ -17055,6 +16979,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nOrks now use the final-state 'fancy notepad' loadout grammar. Nested Nob/Kommando Nob mechanics and Painboy-root attachment logic are preserved. Nobz and Deffkoptas use variable-size controls. All native non-Rare Other units use Additional Copy Costs.\n\nKOMMANDO SPECIAL-WEAPON CORRECTION\nRemoved the vestigial 'each with a different weapon' restriction from Kommando specialist models. Kommando 7-9 may now select duplicate special weapons. Deff Dread four-list structure confirmed: two mixed melee/ranged lists and two melee-only lists.\n\nCONSTRUCTIVE ERROR MIGRATION\nOrks now use Game System revision 11. Additional Copy Costs, mandatory root Leader attachments, the shared WARBOSS limit, and the Ork Boyz Painboy/Nob attachment point use constructive player-facing validation. Nested Nob and Kommando Nob structures, Kommando duplicate specialist weapons, variable-size units, loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader behavior, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV6 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model/model-set headers to single-model units and Grotz, renaming generic nested attachment groups to Attached Nob / Attached Kommando Nob, flattening Ork Boyz, Kommandos, Burna Boyz, and Lootas specialist sections into Loadout Options, removing non-semantic Weapon 1-4 and Slugga/Choppa slot-origin labels where they only identified physical/model slots, and renaming Deffkoptas' single optional size step to Additional Model. Nested Nob/Kommando Nob mechanics, Painboy/Warboss attachment validation, WARBOSS restriction, variable-size arithmetic, points, paid wargear, and Additional Copy Costs are otherwise unchanged.\n\nREV7 WEAPON-LINE CLEANUP\nStarting from the REV6 Polish Pass baseline, fixed multi-weapon loadouts now use one visible line per distinct weapon; identical weapons remain aggregated with quantities. Kommando 5 is represented as a fixed Choppa plus a Slugga/Choppa choice. Kommando 6 preserves its atomic Standard-vs-Ba’erin’ Ram choice while the standard state presents Slugga and Choppa separately. Kombi weapon packages remain atomic but use ' & ' rather than ' + ' to distinguish the package from ordinary multi-weapon loadout notation. No points, unit eligibility, attachment rules, WARBOSS validation, unit-size arithmetic, or Additional Copy Costs were changed.\n\nREV8 ATOMIC PACKAGE PRESENTATION\nKommando 6 now presents its normal inseparable weapon state as 'Slugga & Choppa' versus 'Ba’erin’ Ram'. The ampersand is reserved for atomic package choices that should remain one selection. Kommando 5 remains split into a fixed Choppa plus a Slugga/Choppa choice; fixed multi-weapon loadouts remain one line per distinct weapon; Kombi weapon packages continue to use ' & '. No points, eligibility, defaults, attachment logic, or other mechanics were changed.\n\nREV9 RETROSPECTIVE POLISH PASS\nRevisited Orks against the final cross-faction presentation standard. The two bespoke Ork Boyz attachment errors now use grammar-safe 'This unit...' wording while preserving the existing Painboy/Nob validation logic. Removed the obsolete Deffkopta Phase 0.1 min-size shell TODO because variable-size support is already implemented; the current variable-size note remains. All loadouts, fixed weapon-line presentation, atomic '&' packages, nested Nob/Kommando Nob structures, Painboy/Warboss attachment mechanics, WARBOSS restriction, variable-size arithmetic, points, categories, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV10 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Ork Boyz and Grotz now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 102 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. All unrelated unit rules, nested Nob/Kommando Nob mechanics, Painboy/Warboss attachment validation, WARBOSS restriction, variable-size arithmetic, loadouts, and paid wargear remain unchanged.\n\nREV11 — BURNA BOYZ & KOMMANDO EXPORT CLEANUP\nBurna Boyz 1-4 now use the atomic Burna & Cuttin' Flamez package at true quantity 4. Kommandos baseline numbering corrected from 2-4 to 1-4; that block now uses the atomic Choppa & Slugga package at true quantity 4. Kommando 5 now presents Choppa & Slugga / Choppa & Choppa as complete loadouts. Kommando 6 now presents Choppa & Slugga / Batterin' Ram as complete loadouts. Kommandos 7-9 remain unchanged apart from confirmation comments. Existing IDs are reused where the corresponding player decision survives; superseded standalone selections are retained as hidden legacy shells.\n\nREV12 — GROTZ EXPORT CLEANUP\nGrotz 1-10 now use the atomic Grot Stabba & Grot Blasta package at true quantity 10. The previous separate 10x Grot Blasta / 10x Grot Stabba presentation is retained only as stable-ID legacy where necessary. No points, categories, copy-cost behavior, or other mechanics changed.\n\nREV13 — LOTS O' GROTZ' PRESET TEST\nAdded Lots o' Grotz', a presentation-only Troop preset that automatically adds 4 / 6 / 8 nested Grotz units at 800 / 1200 / 1600 Points. Each nested unit is a real 50-point Troop/Infantry selection with the fixed 10x Grot Stabba & Grot Blasta loadout. Added hidden Counts As: Grotz semantic family and migrated the Grotz 4 / 6 / 8 Additional Copy Costs ledger from the single root unit ID to that family, so normal Grotz and preset Grotz share one copy allowance. The wrapper itself contributes no copy count.\n\nREV14 — LOTS O' GROTZ' QUANTITY DISPLAY FIX\nThe eight possible nested Grotz units now export their fixed loadout literally as 10x Grot Stabba & Grot Blasta. The superseded hidden +9 quantity payload from the REV13 prototype is disabled and retained only as an inert ID shell. Game-size generation, 50-point child costs, Counts As: Grotz accounting, and all other preset mechanics are unchanged.\n\nREV15 — GROTZ CANONICAL EXPORT PACKAGE\nRuntime testing showed New Recruit exports the canonical name of a shared target rather than the local entryLink display-name override. The shared Grotz fixed-loadout object is therefore now canonically named 10x Grot Stabba & Grot Blasta, while normal Grotz and Lots o' Grotz' child units retain the shorter Grot Stabba & Grot Blasta label in the editor. Superseded hidden quantity-payload experiments remain inert for ID continuity. No points, game-size generation, or copy-accounting behavior changed.\n\nREV16 — ORK BOYZ BASELINE PACKAGE FIX\nCorrected the baseline block from Ork Boyz 2-6 to Ork Boyz 1-6. The six ordinary models now make one player-facing choice between Slugga & Choppa and Shoota & Choppa. Shared targets are canonically named 6x Slugga & Choppa / 6x Shoota & Choppa so New Recruit exports the true six-model quantity while the editor retains the shorter labels. Ork Boyz 7-9 remain mechanically unchanged. The obsolete fixed 5x Choppa and 5x Slugga structures are retained only as hidden ID shells.\n\nREV17 — BURNA BOYZ FIXED PACKAGE\nReplaced the earlier fixed-quantity Burna Boyz 1-4 export architecture with one literal '4x Burna & Cuttin' Flamez' selection. Removed the hidden 4x Cuttin' Flamez shell, hidden +3 payload link, and now-unused shared Burna & Cuttin' Flamez object. Burna Boy 5, points, categories, copy-cost accounting, Paid Wargear, and all unrelated mechanics are unchanged.\n\nREV18 — GS20 TROOP RULE + DEFFKOPTA ATOMIC LOADOUTS\nUpdated to Game System revision 20 and added/retargeted Additional Copy Cost - Troop for Ork Boyz, Grotz, and Lots o' Grotz'. Consolidated Slugga and Spinnin' Blades into one mandatory Slugga & Spinnin' Blades atomic package for Deffkoptas 1-4. Existing surviving IDs, Deffkopta 4 Additional Model infrastructure, points, categories, ranged weapon choices, and unrelated mechanics are unchanged.\n\nREV19 — ORKZ 3.3.5 + STANDARD PATCH NOTES\nUpdated the catalogue title from Orks 3.3.3 to Orkz 3.3.5 and added the standard automatically present Patch Notes Configuration. The army-rules section is intentionally bare; Catalogue Bugfixes (September 4th) contains 'Catalogue created.' No mechanical selections, points, loadouts, validation, copy-cost arithmetic, preset behavior, categories, or unrelated catalogue semantics changed."
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nOrks now use the final-state 'fancy notepad' loadout grammar. Nested Nob/Kommando Nob mechanics and Painboy-root attachment logic are preserved. Nobz and Deffkoptas use variable-size controls. All native non-Rare Other units use Additional Copy Costs.\n\nKOMMANDO SPECIAL-WEAPON CORRECTION\nRemoved the vestigial 'each with a different weapon' restriction from Kommando specialist models. Kommando 7-9 may now select duplicate special weapons. Deff Dread four-list structure confirmed: two mixed melee/ranged lists and two melee-only lists.\n\nCONSTRUCTIVE ERROR MIGRATION\nOrks now use Game System revision 11. Additional Copy Costs, mandatory root Leader attachments, the shared WARBOSS limit, and the Ork Boyz Painboy/Nob attachment point use constructive player-facing validation. Nested Nob and Kommando Nob structures, Kommando duplicate specialist weapons, variable-size units, loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader behavior, Rare limits, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV6 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model/model-set headers to single-model units and Grotz, renaming generic nested attachment groups to Attached Nob / Attached Kommando Nob, flattening Ork Boyz, Kommandos, Burna Boyz, and Lootas specialist sections into Loadout Options, removing non-semantic Weapon 1-4 and Slugga/Choppa slot-origin labels where they only identified physical/model slots, and renaming Deffkoptas' single optional size step to Additional Model. Nested Nob/Kommando Nob mechanics, Painboy/Warboss attachment validation, WARBOSS restriction, variable-size arithmetic, points, paid wargear, and Additional Copy Costs are otherwise unchanged.\n\nREV7 WEAPON-LINE CLEANUP\nStarting from the REV6 Polish Pass baseline, fixed multi-weapon loadouts now use one visible line per distinct weapon; identical weapons remain aggregated with quantities. Kommando 5 is represented as a fixed Choppa plus a Slugga/Choppa choice. Kommando 6 preserves its atomic Standard-vs-Ba’erin’ Ram choice while the standard state presents Slugga and Choppa separately. Kombi weapon packages remain atomic but use ' & ' rather than ' + ' to distinguish the package from ordinary multi-weapon loadout notation. No points, unit eligibility, attachment rules, WARBOSS validation, unit-size arithmetic, or Additional Copy Costs were changed.\n\nREV8 ATOMIC PACKAGE PRESENTATION\nKommando 6 now presents its normal inseparable weapon state as 'Slugga & Choppa' versus 'Ba’erin’ Ram'. The ampersand is reserved for atomic package choices that should remain one selection. Kommando 5 remains split into a fixed Choppa plus a Slugga/Choppa choice; fixed multi-weapon loadouts remain one line per distinct weapon; Kombi weapon packages continue to use ' & '. No points, eligibility, defaults, attachment logic, or other mechanics were changed.\n\nREV9 RETROSPECTIVE POLISH PASS\nRevisited Orks against the final cross-faction presentation standard. The two bespoke Ork Boyz attachment errors now use grammar-safe 'This unit...' wording while preserving the existing Painboy/Nob validation logic. Removed the obsolete Deffkopta Phase 0.1 min-size shell TODO because variable-size support is already implemented; the current variable-size note remains. All loadouts, fixed weapon-line presentation, atomic '&' packages, nested Nob/Kommando Nob structures, Painboy/Warboss attachment mechanics, WARBOSS restriction, variable-size arithmetic, points, categories, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV10 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Ork Boyz and Grotz now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 102 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. All unrelated unit rules, nested Nob/Kommando Nob mechanics, Painboy/Warboss attachment validation, WARBOSS restriction, variable-size arithmetic, loadouts, and paid wargear remain unchanged.\n\nREV11 — BURNA BOYZ & KOMMANDO EXPORT CLEANUP\nBurna Boyz 1-4 now use the atomic Burna & Cuttin' Flamez package at true quantity 4. Kommandos baseline numbering corrected from 2-4 to 1-4; that block now uses the atomic Choppa & Slugga package at true quantity 4. Kommando 5 now presents Choppa & Slugga / Choppa & Choppa as complete loadouts. Kommando 6 now presents Choppa & Slugga / Batterin' Ram as complete loadouts. Kommandos 7-9 remain unchanged apart from confirmation comments. Existing IDs are reused where the corresponding player decision survives; superseded standalone selections are retained as hidden legacy shells.\n\nREV12 — GROTZ EXPORT CLEANUP\nGrotz 1-10 now use the atomic Grot Stabba & Grot Blasta package at true quantity 10. The previous separate 10x Grot Blasta / 10x Grot Stabba presentation is retained only as stable-ID legacy where necessary. No points, categories, copy-cost behavior, or other mechanics changed.\n\nREV13 — LOTS O' GROTZ' PRESET TEST\nAdded Lots o' Grotz', a presentation-only Troop preset that automatically adds 4 / 6 / 8 nested Grotz units at 800 / 1200 / 1600 Points. Each nested unit is a real 50-point Troop/Infantry selection with the fixed 10x Grot Stabba & Grot Blasta loadout. Added hidden Counts As: Grotz semantic family and migrated the Grotz 4 / 6 / 8 Additional Copy Costs ledger from the single root unit ID to that family, so normal Grotz and preset Grotz share one copy allowance. The wrapper itself contributes no copy count.\n\nREV14 — LOTS O' GROTZ' QUANTITY DISPLAY FIX\nThe eight possible nested Grotz units now export their fixed loadout literally as 10x Grot Stabba & Grot Blasta. The superseded hidden +9 quantity payload from the REV13 prototype is disabled and retained only as an inert ID shell. Game-size generation, 50-point child costs, Counts As: Grotz accounting, and all other preset mechanics are unchanged.\n\nREV15 — GROTZ CANONICAL EXPORT PACKAGE\nRuntime testing showed New Recruit exports the canonical name of a shared target rather than the local entryLink display-name override. The shared Grotz fixed-loadout object is therefore now canonically named 10x Grot Stabba & Grot Blasta, while normal Grotz and Lots o' Grotz' child units retain the shorter Grot Stabba & Grot Blasta label in the editor. Superseded hidden quantity-payload experiments remain inert for ID continuity. No points, game-size generation, or copy-accounting behavior changed.\n\nREV16 — ORK BOYZ BASELINE PACKAGE FIX\nCorrected the baseline block from Ork Boyz 2-6 to Ork Boyz 1-6. The six ordinary models now make one player-facing choice between Slugga & Choppa and Shoota & Choppa. Shared targets are canonically named 6x Slugga & Choppa / 6x Shoota & Choppa so New Recruit exports the true six-model quantity while the editor retains the shorter labels. Ork Boyz 7-9 remain mechanically unchanged. The obsolete fixed 5x Choppa and 5x Slugga structures are retained only as hidden ID shells.\n\nREV17 — BURNA BOYZ FIXED PACKAGE\nReplaced the earlier fixed-quantity Burna Boyz 1-4 export architecture with one literal '4x Burna & Cuttin' Flamez' selection. Removed the hidden 4x Cuttin' Flamez shell, hidden +3 payload link, and now-unused shared Burna & Cuttin' Flamez object. Burna Boy 5, points, categories, copy-cost accounting, Paid Wargear, and all unrelated mechanics are unchanged.\n\nREV18 — GS20 TROOP RULE + DEFFKOPTA ATOMIC LOADOUTS\nUpdated to Game System revision 20 and added/retargeted Additional Copy Cost - Troop for Ork Boyz, Grotz, and Lots o' Grotz'. Consolidated Slugga and Spinnin' Blades into one mandatory Slugga & Spinnin' Blades atomic package for Deffkoptas 1-4. Existing surviving IDs, Deffkopta 4 Additional Model infrastructure, points, categories, ranged weapon choices, and unrelated mechanics are unchanged.\n\nREV19 — ORKZ 3.3.5 + STANDARD PATCH NOTES\nUpdated the catalogue title from Orks 3.3.3 to Orkz 3.3.5 and added the standard automatically present Patch Notes Configuration. The army-rules section is intentionally bare; Catalogue Bugfixes (September 4th) contains 'Catalogue created.' No mechanical selections, points, loadouts, validation, copy-cost arithmetic, preset behavior, categories, or unrelated catalogue semantics changed.\n\nREV20 — ORK BOYZ 7-8 SPECIAL WEAPON PAIR FIX\nCorrected Ork Boyz 7-8 from two independent +10 Point special-weapon upgrades to one paired +10 Point branch. The pair now chooses between 2x Slugga & Choppa, 2x Shoota & Choppa, or Special Weapon Boyz 7-8 (+10 Points total). Within the special branch, Ork Boy 7 and Ork Boy 8 independently choose Rokkit & Choppa, Big Shoota & Choppa, or Burna & Choppa with no additional cost. Existing Ork Boy 7/8 group IDs and special-weapon option IDs are preserved. Updated the player-facing Catalogue Bugfixes header to September 5th and recorded the correction."
   }
 }
