@@ -5,7 +5,7 @@
     "name": "Manufactorum Imperium 3.3.3 - Library",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 7,
+    "revision": 8,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [],
@@ -3805,7 +3805,7 @@
         "name": "Whirlwind",
         "hidden": false,
         "id": "d7ce-7e9f-2111-ca81",
-        "sortIndex": 6,
+        "sortIndex": 66,
         "costs": [
           {
             "name": "Points",
@@ -3848,7 +3848,315 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV1 VEHICLE SHELL ONLY. Source: WHIRLWIND. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=160 Points. Source characteristics recorded for future population only: T 4, Sv 4+, H 10, Rv 6+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nMANUFACTORUM IMPERIUM LIBRARY V6: mirrored intact from the Space Marines REV2 vehicle scaffold using the same stable unit ID. This library copy does not own primary presentation; consuming catalogues such as Adeptus Mechanicus provide their local Space Marines Vehicles entryLink category."
+        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Whirlwind has four independent mandatory missile selectors, each choosing Vengeance Missile or Castellan Incendiary Missile, directly representing the source 'four of any' wording without inventing physical launcher labels. Storm Bolter +10, Hunter-Killer Missile +10, and Smoke Launchers +10 are independent optional Paid Wargear choices.\nMANUFACTORUM IMPERIUM LIBRARY V8: synchronized from Space Marines 3.3.7 REV14 using the same stable root ID and full loadout tree. This library copy owns no primary presentation; consuming catalogues provide their local Space Marines Vehicles presentation through entryLinks.",
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "eee7-9690-4e3c-7be1",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Whirlwind",
+                "id": "8de2-63cc-caf9-aece",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "03a9-2a5d-9de0-fe7a",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4bcd-5392-59d0-e535",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ce37-6539-bdd2-a5a3",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Vengeance Missile",
+                        "hidden": false,
+                        "id": "2d5c-12cc-cd37-ff6a",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Castellan Incendiary Missile",
+                        "hidden": false,
+                        "id": "8a84-3cc7-039c-d8c0",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "2d5c-12cc-cd37-ff6a"
+                  },
+                  {
+                    "name": "​",
+                    "id": "28ba-9af2-f6ac-ad48",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0129-36a5-8502-d7fc",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f1b4-9ba5-7885-17fc",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Vengeance Missile",
+                        "hidden": false,
+                        "id": "72ae-459f-e348-4e3a",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Castellan Incendiary Missile",
+                        "hidden": false,
+                        "id": "292b-e085-b9e6-0f33",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "72ae-459f-e348-4e3a"
+                  },
+                  {
+                    "name": "​",
+                    "id": "2485-fb06-3748-46d7",
+                    "hidden": false,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "723e-f674-a8ee-19dd",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "525f-43cf-5c55-fc6d",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Vengeance Missile",
+                        "hidden": false,
+                        "id": "b178-f954-5116-b22d",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Castellan Incendiary Missile",
+                        "hidden": false,
+                        "id": "c4df-c3fe-5157-8d54",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b178-f954-5116-b22d"
+                  },
+                  {
+                    "name": "​",
+                    "id": "1565-c21a-f715-67f5",
+                    "hidden": false,
+                    "sortIndex": 4,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "04ed-d364-6808-aba7",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f15c-561f-652e-0952",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Vengeance Missile",
+                        "hidden": false,
+                        "id": "2cb7-e246-cd1d-bcee",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Castellan Incendiary Missile",
+                        "hidden": false,
+                        "id": "7a1f-d86e-cbfa-b276",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "2cb7-e246-cd1d-bcee"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "155f-3e55-3bbd-c33b",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "f68f-4d6c-ee3b-18f7",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "ea25-0014-67f4-7e59",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Storm Bolter",
+                    "hidden": false,
+                    "id": "4bc7-5ffb-b9ca-4c8c",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "​",
+                "id": "1469-80c4-464f-2336",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "e148-783a-f7ff-d6b1",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Hunter-Killer Missile",
+                    "hidden": false,
+                    "id": "d6f7-3ae6-d558-2987",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "​",
+                "id": "891f-0765-1229-7ff1",
+                "hidden": false,
+                "sortIndex": 3,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "b05b-2508-d2c0-7c22",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Smoke Launchers",
+                    "hidden": false,
+                    "id": "2b87-9ffe-5ece-937a",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -3856,7 +4164,7 @@
         "name": "Vindicator",
         "hidden": false,
         "id": "54a0-1b27-bfb4-1983",
-        "sortIndex": 7,
+        "sortIndex": 67,
         "costs": [
           {
             "name": "Points",
@@ -3899,7 +4207,141 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV1 VEHICLE SHELL ONLY. Source: VINDICATOR. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=150 Points. Source characteristics recorded for future population only: T 4, Sv 4+, H 11, Rv 6+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nMANUFACTORUM IMPERIUM LIBRARY V6: mirrored intact from the Space Marines REV2 vehicle scaffold using the same stable unit ID. This library copy does not own primary presentation; consuming catalogues such as Adeptus Mechanicus provide their local Space Marines Vehicles entryLink category."
+        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Mirrors the established Chaos Vindicator player-facing shape: fixed Demolisher Cannon and Storm Bolter on separate lines, with optional Smoke Launchers +10 under Paid Wargear. Siege Shield is intrinsic battlefield rules text and does not need a listbuilding choice.\nMANUFACTORUM IMPERIUM LIBRARY V8: synchronized from Space Marines 3.3.7 REV14 using the same stable root ID and full loadout tree. This library copy owns no primary presentation; consuming catalogues provide their local Space Marines Vehicles presentation through entryLinks.",
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "8738-1c74-08c1-6cac",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Vindicator",
+                "id": "39c5-6d2e-6bee-3c2c",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "2a3f-79e1-85dd-fbe4",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9e82-5635-4212-40ef",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ded3-5148-9f58-7c01",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Demolisher Cannon",
+                        "hidden": false,
+                        "id": "fd75-d755-2e41-26a6",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "fd75-d755-2e41-26a6"
+                  },
+                  {
+                    "name": "​",
+                    "id": "f405-6fe1-2cda-d37b",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "70d1-ae02-73aa-be16",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2cee-28a8-2c91-e412",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Storm Bolter",
+                        "hidden": false,
+                        "id": "b66b-1ed1-e19c-007f",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b66b-1ed1-e19c-007f"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "245f-ce78-aa6a-88bc",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "3c13-d061-6133-8a91",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "6a9d-a3e4-3a98-2a6f",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Smoke Launchers",
+                    "hidden": false,
+                    "id": "ca3b-dbe2-1f60-39ca",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -3907,7 +4349,7 @@
         "name": "Land Speeder",
         "hidden": false,
         "id": "f197-b0e5-be2c-0920",
-        "sortIndex": 8,
+        "sortIndex": 68,
         "costs": [
           {
             "name": "Points",
@@ -3950,7 +4392,260 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV1 VEHICLE SHELL ONLY. Source: LAND SPEEDER. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=80 Points. Source characteristics recorded for future population only: T 3, Sv 3+, H 7, Rv 6+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nMANUFACTORUM IMPERIUM LIBRARY V6: mirrored intact from the Space Marines REV2 vehicle scaffold using the same stable unit ID. This library copy does not own primary presentation; consuming catalogues such as Adeptus Mechanicus provide their local Space Marines Vehicles entryLink category."
+        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Land Speeder uses two mandatory anonymous weapon choices: Multi-Melta / Heavy Bolter and the five Hull weapon options, with Hull Cerebus Launcher +10. Advanced Jamming Beacon is a separate optional +20 Unit Upgrade because it adds an ability rather than equipment. Krak / Frag / Stun Missiles are one optional +20 Paid Wargear choice.\nMANUFACTORUM IMPERIUM LIBRARY V8: synchronized from Space Marines 3.3.7 REV14 using the same stable root ID and full loadout tree. This library copy owns no primary presentation; consuming catalogues provide their local Space Marines Vehicles presentation through entryLinks.",
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "921d-b317-bca0-9413",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Land Speeder",
+                "id": "2385-5023-5265-b6fa",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "8f13-762d-9ac9-c118",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7468-de3f-89b6-dd57",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c8d6-aa49-ffc8-f190",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Multi-Melta",
+                        "hidden": false,
+                        "id": "6990-038f-8b30-6a3b",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Bolter",
+                        "hidden": false,
+                        "id": "c027-75c1-699a-4a45",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "6990-038f-8b30-6a3b"
+                  },
+                  {
+                    "name": "​",
+                    "id": "a4c1-f4b7-355a-7850",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2a98-1a4b-367d-b3a3",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3773-10e3-5a83-2415",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hull Assault Cannon",
+                        "hidden": false,
+                        "id": "1a69-efec-bfbb-5b26",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hull Heavy Flamer",
+                        "hidden": false,
+                        "id": "3401-226a-54cb-a4e7",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hull Multi-Melta",
+                        "hidden": false,
+                        "id": "4a4b-6b7a-745f-8833",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hull Onslaught Gatling Cannon",
+                        "hidden": false,
+                        "id": "752f-7dea-287b-f780",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hull Cerebus Launcher",
+                        "hidden": false,
+                        "id": "a861-2b83-2fd2-056a",
+                        "sortIndex": 5,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "1a69-efec-bfbb-5b26"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Unit Upgrade",
+            "id": "8406-d322-2b81-2ba1",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "8502-6e12-ed5b-328b",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "180b-86ad-eb9d-a783",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Advanced Jamming Beacon",
+                    "hidden": false,
+                    "id": "e4ce-39d0-15fc-72d3",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 20
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "dbaa-a691-80ce-5941",
+            "hidden": false,
+            "sortIndex": 3,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "6cfa-21af-fdb0-e38d",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "dbb9-344b-e712-5b59",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Krak Missiles",
+                    "hidden": false,
+                    "id": "5212-504c-873f-b68d",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 20
+                      }
+                    ]
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Frag Missiles",
+                    "hidden": false,
+                    "id": "9bb3-d556-bfc1-15fe",
+                    "sortIndex": 2,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 20
+                      }
+                    ]
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Stun Missiles",
+                    "hidden": false,
+                    "id": "2520-5eea-47af-12eb",
+                    "sortIndex": 3,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 20
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -3958,7 +4653,7 @@
         "name": "Dreadnought",
         "hidden": false,
         "id": "28f0-b023-34ab-64e8",
-        "sortIndex": 9,
+        "sortIndex": 69,
         "costs": [
           {
             "name": "Points",
@@ -4001,7 +4696,228 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV1 VEHICLE SHELL ONLY. Source: DREADNOUGHT. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=110 Points. Source characteristics recorded for future population only: T 4, Sv 3+, H 8, Rv 6+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nMANUFACTORUM IMPERIUM LIBRARY V6: mirrored intact from the Space Marines REV2 vehicle scaffold using the same stable unit ID. This library copy does not own primary presentation; consuming catalogues such as Adeptus Mechanicus provide their local Space Marines Vehicles entryLink category."
+        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Uses the same asymmetric two-pool presentation as the Chaos Dreadnought while suppressing physical left/right arm headers. Dreadnought Power Fist + auxiliary weapon combinations are atomic final-state choices. Missile Launcher costs +20 in the first pool. Venerable is a separate +10 Unit Upgrade because it improves Health rather than adding wargear.\nMANUFACTORUM IMPERIUM LIBRARY V8: synchronized from Space Marines 3.3.7 REV14 using the same stable root ID and full loadout tree. This library copy owns no primary presentation; consuming catalogues provide their local Space Marines Vehicles presentation through entryLinks.",
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "fdcb-f589-af06-a7c7",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Dreadnought",
+                "id": "cce8-18a4-a664-b2e6",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "94de-28ef-a441-d332",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6741-ae3e-46cb-4751",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "be44-b0e2-2a08-4741",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dreadnought Hammer",
+                        "hidden": false,
+                        "id": "d51a-1356-6462-293e",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Scourge",
+                        "hidden": false,
+                        "id": "d02b-049e-af49-251d",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dreadnought Power Fist & Storm Bolter",
+                        "hidden": false,
+                        "id": "4d0a-2924-5cc2-3ada",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dreadnought Power Fist & Heavy Flamer",
+                        "hidden": false,
+                        "id": "0151-dbe0-0cd6-58af",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Missile Launcher",
+                        "hidden": false,
+                        "id": "e3fd-adba-4abb-6e6e",
+                        "sortIndex": 5,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 20
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d51a-1356-6462-293e"
+                  },
+                  {
+                    "name": "​",
+                    "id": "3b78-4fd4-a135-d0f0",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f0f6-04a4-e506-0251",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "07fc-5d65-deb6-b3da",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Multi-Melta",
+                        "hidden": false,
+                        "id": "1437-c993-9e9e-6530",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plasma Cannon",
+                        "hidden": false,
+                        "id": "94ec-a69e-a302-8cc8",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Twin Lascannon",
+                        "hidden": false,
+                        "id": "00a2-13fe-5d9b-20e6",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Twin Heavy Bolter",
+                        "hidden": false,
+                        "id": "60d6-e48d-5ab5-089a",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Twin Autocannon",
+                        "hidden": false,
+                        "id": "d226-f11e-49b6-27eb",
+                        "sortIndex": 5
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dreadnought Power Fist & Storm Bolter",
+                        "hidden": false,
+                        "id": "89d9-9618-ce09-212d",
+                        "sortIndex": 6
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dreadnought Power Fist & Heavy Flamer",
+                        "hidden": false,
+                        "id": "9fd1-cad7-9a1e-d330",
+                        "sortIndex": 7
+                      }
+                    ],
+                    "defaultSelectionEntryId": "1437-c993-9e9e-6530"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Unit Upgrade",
+            "id": "bbe2-1d40-e1d7-1f57",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "ff23-b790-4bc2-e5ad",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "ff56-1a92-7ef7-9f37",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Venerable",
+                    "hidden": false,
+                    "id": "964d-9feb-59c7-863c",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -4009,7 +4925,7 @@
         "name": "Contemptor Dreadnought",
         "hidden": false,
         "id": "5973-09fc-18a0-a59d",
-        "sortIndex": 10,
+        "sortIndex": 70,
         "costs": [
           {
             "name": "Points",
@@ -4052,7 +4968,743 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV1 VEHICLE SHELL ONLY. Source: CONTEMPTOR DREADNOUGHT. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=160 Points. Source characteristics recorded for future population only: T 4, Sv 3+, H 14, Rv 6+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nMANUFACTORUM IMPERIUM LIBRARY V6: mirrored intact from the Space Marines REV2 vehicle scaffold using the same stable unit ID. This library copy does not own primary presentation; consuming catalogues such as Adeptus Mechanicus provide their local Space Marines Vehicles entryLink category."
+        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Mirrors the normalized Chaos Contemptor architecture: two identical anonymous weapon selectors instead of exposing replacement plumbing. Each selector offers the six normal guns, Heavy Conversion Beamer, Dreadnought Chainfist &, or Dreadnought Power Fist &. Fist packages reveal a mandatory Combi-Bolter / Graviton Gun / Heavy Flamer / Meltagun / Plasma Blaster auxiliary choice, with the fist itself retained as a hidden semantic child. Duplicate normal guns, Chainfists and Heavy Conversion Beamers are permitted by the established project convention; Dreadnought Power Fist is the sole cross-selector restriction. Cyclone Missile Launcher is optional +10 Paid Wargear.\nMANUFACTORUM IMPERIUM LIBRARY V8: synchronized from Space Marines 3.3.7 REV14 using the same stable root ID and full loadout tree. This library copy owns no primary presentation; consuming catalogues provide their local Space Marines Vehicles presentation through entryLinks.",
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "e2ba-b888-a64e-8b9c",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Contemptor Dreadnought",
+                "id": "a63f-cb3e-bcca-b39d",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "e986-fff5-1b9a-5947",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "56ea-a4ff-fb43-8aaa",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9dda-0a9b-dbbe-5e72",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dual Autocannon",
+                        "hidden": false,
+                        "id": "b441-87f3-5163-88eb",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dual Heavy Bolter",
+                        "hidden": false,
+                        "id": "1217-d64b-bbec-3033",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Assault Cannon",
+                        "hidden": false,
+                        "id": "90eb-6e56-1508-e073",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dual Lascannon",
+                        "hidden": false,
+                        "id": "6b8d-d610-7af7-70fd",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Multi-Melta",
+                        "hidden": false,
+                        "id": "6acf-31ff-01bf-a2e1",
+                        "sortIndex": 5
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Volkite Dual-Culverin",
+                        "hidden": false,
+                        "id": "b1f3-b505-981a-246a",
+                        "sortIndex": 6
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Conversion Beamer",
+                        "hidden": false,
+                        "id": "1384-c710-0368-1ac2",
+                        "sortIndex": 7
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dreadnought Chainfist &",
+                        "hidden": false,
+                        "id": "515e-7d02-ed17-4fc2",
+                        "sortIndex": 8,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "​",
+                            "id": "3fd4-f04b-7880-519a",
+                            "hidden": true,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "8ed4-8e20-816d-eab6",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "d438-a372-3634-1ea9",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Dreadnought Chainfist",
+                                "hidden": true,
+                                "id": "2c45-559d-9b80-fbb7",
+                                "sortIndex": 1
+                              }
+                            ],
+                            "defaultSelectionEntryId": "2c45-559d-9b80-fbb7"
+                          },
+                          {
+                            "name": "​",
+                            "id": "c685-a796-4b2d-d50a",
+                            "hidden": false,
+                            "sortIndex": 2,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "c237-e517-4ba6-3349",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "aee3-8de2-c6a1-5f11",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Combi-Bolter",
+                                "hidden": false,
+                                "id": "03db-37ab-c8d9-4eca",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Graviton Gun",
+                                "hidden": false,
+                                "id": "baa3-41ec-60d7-1f40",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Heavy Flamer",
+                                "hidden": false,
+                                "id": "1389-b931-35da-75ed",
+                                "sortIndex": 3
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Meltagun",
+                                "hidden": false,
+                                "id": "ab48-3af9-2f54-ce41",
+                                "sortIndex": 4
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Plasma Blaster",
+                                "hidden": false,
+                                "id": "9b22-f1c0-2f73-f95b",
+                                "sortIndex": 5
+                              }
+                            ],
+                            "defaultSelectionEntryId": "03db-37ab-c8d9-4eca"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dreadnought Power Fist &",
+                        "hidden": false,
+                        "id": "1ee5-616e-1dfd-30be",
+                        "sortIndex": 9,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "​",
+                            "id": "c742-bbb0-1380-b809",
+                            "hidden": true,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "ee8f-5ca1-f001-31a1",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "5d0c-b2e4-7a49-5cc3",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Dreadnought Power Fist",
+                                "hidden": true,
+                                "id": "25ec-e2f7-a2ac-ab45",
+                                "sortIndex": 1
+                              }
+                            ],
+                            "defaultSelectionEntryId": "25ec-e2f7-a2ac-ab45"
+                          },
+                          {
+                            "name": "​",
+                            "id": "007d-c823-210b-053f",
+                            "hidden": false,
+                            "sortIndex": 2,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "6e56-df2f-c705-a2f7",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "f606-bc20-7bd7-3c27",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Combi-Bolter",
+                                "hidden": false,
+                                "id": "5313-e938-b55b-9a8b",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Graviton Gun",
+                                "hidden": false,
+                                "id": "4959-932e-7359-6048",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Heavy Flamer",
+                                "hidden": false,
+                                "id": "87a3-dbfa-a25a-f72e",
+                                "sortIndex": 3
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Meltagun",
+                                "hidden": false,
+                                "id": "75c7-5ab5-a220-38be",
+                                "sortIndex": 4
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Plasma Blaster",
+                                "hidden": false,
+                                "id": "4b20-7ea3-5d81-5f2d",
+                                "sortIndex": 5
+                              }
+                            ],
+                            "defaultSelectionEntryId": "5313-e938-b55b-9a8b"
+                          }
+                        ],
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "true",
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "ancestor",
+                                "childId": "9ddf-801d-c733-f082",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": false,
+                                "queryFromSelf": false,
+                                "childName": "Dreadnought Power Fist &"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b441-87f3-5163-88eb"
+                  },
+                  {
+                    "name": "​",
+                    "id": "e4b4-6256-7cef-117c",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "82e8-dbf0-7859-a394",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4e87-2952-a133-14d3",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dual Autocannon",
+                        "hidden": false,
+                        "id": "7cc0-5705-ba7d-eabe",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dual Heavy Bolter",
+                        "hidden": false,
+                        "id": "132d-4888-1f70-0f68",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Assault Cannon",
+                        "hidden": false,
+                        "id": "1d46-c7a8-6812-c001",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dual Lascannon",
+                        "hidden": false,
+                        "id": "650e-3f43-c6f8-52c3",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Multi-Melta",
+                        "hidden": false,
+                        "id": "d24e-699d-13eb-3694",
+                        "sortIndex": 5
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Volkite Dual-Culverin",
+                        "hidden": false,
+                        "id": "316c-7dd7-f59c-9ae0",
+                        "sortIndex": 6
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Conversion Beamer",
+                        "hidden": false,
+                        "id": "fdff-c590-4383-ed85",
+                        "sortIndex": 7
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dreadnought Chainfist &",
+                        "hidden": false,
+                        "id": "2f4d-0d3a-b9e3-37a6",
+                        "sortIndex": 8,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "​",
+                            "id": "28cd-6af0-b317-4b95",
+                            "hidden": true,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "c0e5-9497-4968-d415",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "d32a-4b25-9d64-9b6e",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Dreadnought Chainfist",
+                                "hidden": true,
+                                "id": "3712-ea20-03e2-ed84",
+                                "sortIndex": 1
+                              }
+                            ],
+                            "defaultSelectionEntryId": "3712-ea20-03e2-ed84"
+                          },
+                          {
+                            "name": "​",
+                            "id": "9bf5-065e-12e3-17f4",
+                            "hidden": false,
+                            "sortIndex": 2,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "f051-8663-d638-b27e",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "5a1f-6bdb-474b-a284",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Combi-Bolter",
+                                "hidden": false,
+                                "id": "fe7d-6778-4139-84d7",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Graviton Gun",
+                                "hidden": false,
+                                "id": "b64c-9aeb-81a1-c568",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Heavy Flamer",
+                                "hidden": false,
+                                "id": "903b-5bd1-8d13-7ece",
+                                "sortIndex": 3
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Meltagun",
+                                "hidden": false,
+                                "id": "74b8-8ec3-c2fd-49a4",
+                                "sortIndex": 4
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Plasma Blaster",
+                                "hidden": false,
+                                "id": "5f41-ce35-42fa-8f5a",
+                                "sortIndex": 5
+                              }
+                            ],
+                            "defaultSelectionEntryId": "fe7d-6778-4139-84d7"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dreadnought Power Fist &",
+                        "hidden": false,
+                        "id": "9ddf-801d-c733-f082",
+                        "sortIndex": 9,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "​",
+                            "id": "5142-9ffd-1a46-862f",
+                            "hidden": true,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "b76d-d56f-5330-3281",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "6df4-9523-c148-cbc4",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Dreadnought Power Fist",
+                                "hidden": true,
+                                "id": "dabb-3f06-6bb1-bae7",
+                                "sortIndex": 1
+                              }
+                            ],
+                            "defaultSelectionEntryId": "dabb-3f06-6bb1-bae7"
+                          },
+                          {
+                            "name": "​",
+                            "id": "12e0-3570-f9ce-eb1d",
+                            "hidden": false,
+                            "sortIndex": 2,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "9f41-ed8a-1c55-c7aa",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "2d65-4ab9-9a1e-e435",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Combi-Bolter",
+                                "hidden": false,
+                                "id": "d424-c284-8479-e7d9",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Graviton Gun",
+                                "hidden": false,
+                                "id": "93ef-aebe-9ca3-8b75",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Heavy Flamer",
+                                "hidden": false,
+                                "id": "85d5-50fd-5ba2-7a87",
+                                "sortIndex": 3
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Meltagun",
+                                "hidden": false,
+                                "id": "84fc-8cf8-6ef4-f723",
+                                "sortIndex": 4
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Plasma Blaster",
+                                "hidden": false,
+                                "id": "9496-c9c5-d7f6-8960",
+                                "sortIndex": 5
+                              }
+                            ],
+                            "defaultSelectionEntryId": "d424-c284-8479-e7d9"
+                          }
+                        ],
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "true",
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "ancestor",
+                                "childId": "1ee5-616e-1dfd-30be",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": false,
+                                "queryFromSelf": false,
+                                "childName": "Dreadnought Power Fist &"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "7cc0-5705-ba7d-eabe"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "4af5-ecf0-f700-9d83",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "3cdb-d887-0240-fbf9",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "6867-2306-fd29-4dd8",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Cyclone Missile Launcher",
+                    "hidden": false,
+                    "id": "40e8-ed36-845a-fa38",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -4060,7 +5712,7 @@
         "name": "Leviathan Dreadnought",
         "hidden": false,
         "id": "a54f-0679-d762-65d1",
-        "sortIndex": 11,
+        "sortIndex": 71,
         "costs": [
           {
             "name": "Points",
@@ -4103,9 +5755,210 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV1 VEHICLE SHELL ONLY. Source: LEVIATHAN DREADNOUGHT. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=280 Points. Source characteristics recorded for future population only: T 4, Sv 2+, H 10, Rv 3+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nMANUFACTORUM IMPERIUM LIBRARY V6: mirrored intact from the Space Marines REV2 vehicle scaffold using the same stable unit ID. This library copy does not own primary presentation; consuming catalogues such as Adeptus Mechanicus provide their local Space Marines Vehicles entryLink category."
+        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Mirrors the established Chaos Leviathan presentation. The source 'any two' main weapons are represented as two independent identical selectors and may duplicate the same armament by project convention. Leviathan Siege Drill & Meltagun and Leviathan Siege Claw & Meltagun are inseparable atomic packages. Twin Volkite Caliver / Twin Heavy Flamer is an independent mandatory secondary choice.\nMANUFACTORUM IMPERIUM LIBRARY V8: synchronized from Space Marines 3.3.7 REV14 using the same stable root ID and full loadout tree. This library copy owns no primary presentation; consuming catalogues provide their local Space Marines Vehicles presentation through entryLinks.",
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "600e-93a9-0ab5-3a1d",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Leviathan Dreadnought",
+                "id": "f4c9-bb66-5ae8-60f3",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "27a9-c5fe-b0db-6c7c",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f80c-59fd-2ec8-b913",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3f76-2178-f6e2-f5ec",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Cyclonic Melta Lance",
+                        "hidden": false,
+                        "id": "d991-564d-158b-d431",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Leviathan Storm Cannon",
+                        "hidden": false,
+                        "id": "188d-36c8-2a2b-8df3",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Grav Flux Bombard",
+                        "hidden": false,
+                        "id": "1cc8-9f33-a7f2-e82b",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Leviathan Siege Drill & Meltagun",
+                        "hidden": false,
+                        "id": "78ba-32f7-06f8-1de1",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Leviathan Siege Claw & Meltagun",
+                        "hidden": false,
+                        "id": "4eb8-84a6-dbb9-def0",
+                        "sortIndex": 5
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d991-564d-158b-d431"
+                  },
+                  {
+                    "name": "​",
+                    "id": "b185-3531-56f0-efd6",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "b368-5809-5b6c-549d",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d546-4ed7-e05e-d5bb",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Cyclonic Melta Lance",
+                        "hidden": false,
+                        "id": "0305-9150-587c-3864",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Leviathan Storm Cannon",
+                        "hidden": false,
+                        "id": "fa71-741c-6337-0fb0",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Grav Flux Bombard",
+                        "hidden": false,
+                        "id": "8062-f4d6-acd7-196d",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Leviathan Siege Drill & Meltagun",
+                        "hidden": false,
+                        "id": "46db-180d-3d04-ea53",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Leviathan Siege Claw & Meltagun",
+                        "hidden": false,
+                        "id": "be0b-fbf6-72fc-66ff",
+                        "sortIndex": 5
+                      }
+                    ],
+                    "defaultSelectionEntryId": "0305-9150-587c-3864"
+                  },
+                  {
+                    "name": "​",
+                    "id": "d746-6960-a50d-584d",
+                    "hidden": false,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "03f7-92ca-0a86-efad",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4945-a34a-c8d6-2776",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Twin Volkite Caliver",
+                        "hidden": false,
+                        "id": "3824-2ef8-82d2-f48a",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Twin Heavy Flamer",
+                        "hidden": false,
+                        "id": "751d-9db6-4ebd-0bec",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "3824-2ef8-82d2-f48a"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ],
-    "comment": "MANUFACTORUM IMPERIUM LIBRARY V1\nReusable cross-faction vehicle library for the Adeptus Mechanicus Manufactorum Imperium rule. V1 contains every Vehicle unit currently implemented in Astra Militarum 3.3.3 Rev18. Space Marine Arsenal vehicles are intentionally not implemented yet. Unit trees, costs, loadouts, Rare semantics, Leader Capacity markers, and Other soft-copy markers are preserved from their source catalogue.\n\nLIBRARY V2 — GAME SYSTEM REV14\nRetargeted to Warhammer 40k Reforged Game System Rev14, which now owns the visible Space Marines Vehicles and Astra Militarum Vehicles presentation categories. No unit trees, costs, loadouts, IDs, or imported Astra Militarum semantics changed.\n\nLIBRARY V3 POLISH SYNC\nMirrored the Astra Militarum REV19 presentation polish across all eleven imported vehicle trees: direct Loadout headings are now Loadout Options; Tank Commander, Chimera, Taurox, Leman Russ Battle Tank, Hellhound, Basilisk, Wyvern, and Manticore use the same explicit model-header IDs as the source catalogue; Basilisk, Wyvern, and Manticore suppress the redundant Hull Weapon group label; Chimera and Taurox use Storm Bolter spelling; and Tank Commander uses the standardized Rare error wording. Unit IDs, existing loadout IDs, costs, categories, Rare semantics, Leader Capacity markers, Other soft-copy markers, and Manufactorum-specific category presentation remain unchanged.\n\nLIBRARY V4 RETROSPECTIVE POLISH SYNC\nMirrored the final Astra Militarum REV20 vehicle presentation cleanup across all eleven imported vehicle trees. Redundant one-item Paid Wargear wrappers are suppressed where the equipment name already identifies the choice; vehicle multi-option accessory/pintle groups use Pintle Weapons; the Taurox Twin Autocannon double wrapper is suppressed; and existing self-identifying hull, sponson, and coaxial equipment names remain free of redundant slot labels. The historical V1 provenance notes remain unchanged. All pre-existing IDs, unit names, points, costs, categories, Rare semantics, Leader Capacity markers, Other soft-copy markers, Manufactorum source-switch behavior, and imported Astra Militarum rules semantics remain unchanged.\n\nLIBRARY V5 — GAME SYSTEM REV17\nRetargeted the Manufactorum Imperium shared vehicle library to Warhammer 40k Reforged Game System revision 17. This library contains only shared Astra Militarum Vehicle/Other units, so no Troop copy-cost families or Troop semantic markers are added here. Existing Other soft-copy markers, Additional Copy Costs rule links, Rare semantics, Leader Capacity markers, shared unit IDs, costs, loadouts, and Manufactorum presentation semantics remain unchanged.\n\nLIBRARY V6 — SPACE MARINE VEHICLE BRIDGE / GS18\nRetargeted the library to Game System REV18 and added ten chapter-independent Space Marines 3.3.5 vehicle shells mirrored from Space Marines REV2 with identical stable unit IDs. Baal Predator is deliberately excluded because the Adeptus Mechanicus consumer cannot choose a Space Marine Chapter and therefore can never legally satisfy its Blood Angels restriction. The existing eleven Astra Militarum shared units remain structurally unchanged. All shared entries keep intrinsic unit-type/class/copy-cost semantics non-primary; consuming catalogues own their presentation category through local entryLinks.\n\nV7 — GAME SYSTEM 21 SYNC\nRetargeted this library from Game System revision 18 to revision 21. This is a compatibility-only sync: no rules version, unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, Patch Notes, validation, library links, or other executable catalogue content changed."
+    "comment": "MANUFACTORUM IMPERIUM LIBRARY V1\nReusable cross-faction vehicle library for the Adeptus Mechanicus Manufactorum Imperium rule. V1 contains every Vehicle unit currently implemented in Astra Militarum 3.3.3 Rev18. Space Marine Arsenal vehicles are intentionally not implemented yet. Unit trees, costs, loadouts, Rare semantics, Leader Capacity markers, and Other soft-copy markers are preserved from their source catalogue.\n\nLIBRARY V2 — GAME SYSTEM REV14\nRetargeted to Warhammer 40k Reforged Game System Rev14, which now owns the visible Space Marines Vehicles and Astra Militarum Vehicles presentation categories. No unit trees, costs, loadouts, IDs, or imported Astra Militarum semantics changed.\n\nLIBRARY V3 POLISH SYNC\nMirrored the Astra Militarum REV19 presentation polish across all eleven imported vehicle trees: direct Loadout headings are now Loadout Options; Tank Commander, Chimera, Taurox, Leman Russ Battle Tank, Hellhound, Basilisk, Wyvern, and Manticore use the same explicit model-header IDs as the source catalogue; Basilisk, Wyvern, and Manticore suppress the redundant Hull Weapon group label; Chimera and Taurox use Storm Bolter spelling; and Tank Commander uses the standardized Rare error wording. Unit IDs, existing loadout IDs, costs, categories, Rare semantics, Leader Capacity markers, Other soft-copy markers, and Manufactorum-specific category presentation remain unchanged.\n\nLIBRARY V4 RETROSPECTIVE POLISH SYNC\nMirrored the final Astra Militarum REV20 vehicle presentation cleanup across all eleven imported vehicle trees. Redundant one-item Paid Wargear wrappers are suppressed where the equipment name already identifies the choice; vehicle multi-option accessory/pintle groups use Pintle Weapons; the Taurox Twin Autocannon double wrapper is suppressed; and existing self-identifying hull, sponson, and coaxial equipment names remain free of redundant slot labels. The historical V1 provenance notes remain unchanged. All pre-existing IDs, unit names, points, costs, categories, Rare semantics, Leader Capacity markers, Other soft-copy markers, Manufactorum source-switch behavior, and imported Astra Militarum rules semantics remain unchanged.\n\nLIBRARY V5 — GAME SYSTEM REV17\nRetargeted the Manufactorum Imperium shared vehicle library to Warhammer 40k Reforged Game System revision 17. This library contains only shared Astra Militarum Vehicle/Other units, so no Troop copy-cost families or Troop semantic markers are added here. Existing Other soft-copy markers, Additional Copy Costs rule links, Rare semantics, Leader Capacity markers, shared unit IDs, costs, loadouts, and Manufactorum presentation semantics remain unchanged.\n\nLIBRARY V6 — SPACE MARINE VEHICLE BRIDGE / GS18\nRetargeted the library to Game System REV18 and added ten chapter-independent Space Marines 3.3.5 vehicle shells mirrored from Space Marines REV2 with identical stable unit IDs. Baal Predator is deliberately excluded because the Adeptus Mechanicus consumer cannot choose a Space Marine Chapter and therefore can never legally satisfy its Blood Angels restriction. The existing eleven Astra Militarum shared units remain structurally unchanged. All shared entries keep intrinsic unit-type/class/copy-cost semantics non-primary; consuming catalogues own their presentation category through local entryLinks.\n\nV7 — GAME SYSTEM 21 SYNC\nRetargeted this library from Game System revision 18 to revision 21. This is a compatibility-only sync: no rules version, unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, Patch Notes, validation, library links, or other executable catalogue content changed.\n\nV8 — SPACE MARINE VEHICLE LOADOUT SYNC\nPopulated the six previously-empty Space Marine vehicle bridge roots from Space Marines 3.3.7 REV14: Whirlwind, Vindicator, Land Speeder, Dreadnought, Contemptor Dreadnought, and Leviathan Dreadnought. Stable root IDs, Space Marines Vehicles bridge tags, cost semantics, and non-primary library presentation are preserved. Consuming entryLinks therefore continue resolving the same unit identities while receiving the completed loadout trees. Game System remains revision 21."
   }
 }
