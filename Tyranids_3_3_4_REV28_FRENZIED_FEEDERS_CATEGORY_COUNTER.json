@@ -3475,7 +3475,7 @@
             "name": "Patch Notes",
             "id": "04ad-f5b1-8bfb-d85b",
             "hidden": false,
-            "description": "## Tyranids 3.3.4\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 4th)\n\n• Catalogue created.",
+            "description": "## Tyranids 3.3.4\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 4th)\n\n• Catalogue created.\n• Added Ripper Swarm model counter.",
             "noindex": false
           }
         ],
@@ -3493,312 +3493,1000 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV26: Automatically present Configuration entry using the standard two-section Patch Notes format. Tyranids 3.3.4 intentionally lists no army-rules changes here; Catalogue Bugfixes (September 4th) records catalogue creation."
+        "comment": "REV26: Automatically present Configuration entry using the standard two-section Patch Notes format. Tyranids 3.3.4 intentionally lists no army-rules changes here; Catalogue Bugfixes (September 4th) records catalogue creation.\nREV28: Catalogue Bugfixes updated with 'Added Ripper Swarm model counter.'"
       },
       {
         "type": "upgrade",
         "import": true,
         "name": "Frenzied Feeders",
         "hidden": false,
-        "id": "72f4-5247-2838-8143",
+        "id": "e4f2-497c-e735-3e5b",
         "sortIndex": 3,
         "categoryLinks": [
           {
             "targetId": "default-category",
-            "id": "4834-78f3-fa02-6848",
+            "id": "2fd3-544d-6597-76cc",
             "primary": true,
             "name": "Configuration"
           }
         ],
-        "selectionEntries": [
+        "selectionEntryGroups": [
           {
-            "type": "upgrade",
-            "import": true,
-            "name": "Ripper Swarm Model",
-            "hidden": true,
-            "defaultAmount": 1,
-            "id": "d580-f448-c568-e90c",
+            "name": "​",
+            "id": "4190-c854-ddb3-dc5d",
+            "hidden": false,
             "sortIndex": 1,
-            "costs": [
+            "constraints": [
               {
-                "name": "Points",
-                "typeId": "51b2-306e-1021-d207",
-                "value": 0
+                "type": "min",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "8b08-921d-6bc4-5687",
+                "includeChildSelections": false
+              },
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "b7a9-3e68-6cf2-6e9c",
+                "includeChildSelections": false
               }
             ],
-            "modifiers": [
+            "selectionEntries": [
               {
-                "type": "decrement",
-                "value": 1,
-                "field": "defaultAmount"
-              },
-              {
-                "type": "set",
-                "value": "false",
-                "field": "hidden",
-                "conditions": [
+                "type": "upgrade",
+                "import": true,
+                "name": "Ripper Swarm Size: 0 Models",
+                "hidden": false,
+                "id": "6640-67f7-243e-ca61",
+                "sortIndex": 1,
+                "modifiers": [
                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "f696-e4dc-e97e-42c1",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "queryFromSelf": false,
-                    "childName": "Hormagaunts (10)"
-                  }
-                ]
-              },
-              {
-                "type": "set",
-                "value": "false",
-                "field": "hidden",
-                "conditions": [
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 1 Model",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "d17d-1a98-4ffe-6159",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "queryFromSelf": false,
-                    "childName": "Termagants (10)"
-                  }
-                ]
-              },
-              {
-                "type": "set",
-                "value": "false",
-                "field": "hidden",
-                "conditions": [
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 2 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "ccfb-5431-8da4-752a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "queryFromSelf": false,
-                    "childName": "Termagants (10) - Brood 1"
-                  }
-                ]
-              },
-              {
-                "type": "set",
-                "value": "false",
-                "field": "hidden",
-                "conditions": [
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 3 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7aac-0b27-10ba-63da",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "queryFromSelf": false,
-                    "childName": "Termagants (10) - Brood 2"
-                  }
-                ]
-              },
-              {
-                "type": "set",
-                "value": "false",
-                "field": "hidden",
-                "conditions": [
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 4 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 5,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "9321-d2e9-a8ee-8371",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "queryFromSelf": false,
-                    "childName": "Termagants (10) - Brood 3"
-                  }
-                ]
-              },
-              {
-                "type": "increment",
-                "value": 1,
-                "field": "defaultAmount",
-                "conditions": [
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 5 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 5,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 6,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "f696-e4dc-e97e-42c1",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "queryFromSelf": false,
-                    "childName": "Hormagaunts (10)"
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 6 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 6,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 7,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 7 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 7,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 8,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 8 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 8,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 9,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 9 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 9,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 10,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 10 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 10,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 11,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 11 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 11,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 12,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 12 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 12,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 13,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 13 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 13,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 14,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 14 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 14,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 15,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 15 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 15,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 16,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 16 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 16,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 17,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 17 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 17,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 18,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 18 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 18,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 19,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 19 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 19,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 20,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 20 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 20,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 21,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 21 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 21,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 22,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 22 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 22,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 23,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 23 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 23,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 24,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 24 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 24,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 25,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 25 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 25,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 26,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 26 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 26,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 27,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 27 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 27,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 28,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 28 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 28,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 29,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 29 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 29,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 30,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": "Ripper Swarm Size: 30 Models",
+                    "field": "name",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 30,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 31,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4317-48ef-93b5-101f",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "queryFromSelf": false,
+                        "childName": "Counts Toward Frenzied Feeders"
+                      }
+                    ]
                   }
                 ],
-                "repeats": [
+                "costs": [
                   {
-                    "field": "selections",
-                    "scope": "roster",
-                    "value": 1,
-                    "percentValue": false,
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "childId": "f696-e4dc-e97e-42c1",
-                    "childName": "Hormagaunts (10)",
-                    "repeats": 1,
-                    "roundUp": false
-                  }
-                ]
-              },
-              {
-                "type": "increment",
-                "value": 1,
-                "field": "defaultAmount",
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "d17d-1a98-4ffe-6159",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "queryFromSelf": false,
-                    "childName": "Termagants (10)"
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 0
                   }
                 ],
-                "repeats": [
-                  {
-                    "field": "selections",
-                    "scope": "roster",
-                    "value": 1,
-                    "percentValue": false,
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "childId": "d17d-1a98-4ffe-6159",
-                    "childName": "Termagants (10)",
-                    "repeats": 1,
-                    "roundUp": false
-                  }
-                ]
-              },
-              {
-                "type": "increment",
-                "value": 1,
-                "field": "defaultAmount",
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "ccfb-5431-8da4-752a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "queryFromSelf": false,
-                    "childName": "Termagants (10) - Brood 1"
-                  }
-                ],
-                "repeats": [
-                  {
-                    "field": "selections",
-                    "scope": "roster",
-                    "value": 1,
-                    "percentValue": false,
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "childId": "ccfb-5431-8da4-752a",
-                    "childName": "Termagants (10) - Brood 1",
-                    "repeats": 1,
-                    "roundUp": false
-                  }
-                ]
-              },
-              {
-                "type": "increment",
-                "value": 1,
-                "field": "defaultAmount",
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7aac-0b27-10ba-63da",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "queryFromSelf": false,
-                    "childName": "Termagants (10) - Brood 2"
-                  }
-                ],
-                "repeats": [
-                  {
-                    "field": "selections",
-                    "scope": "roster",
-                    "value": 1,
-                    "percentValue": false,
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "childId": "7aac-0b27-10ba-63da",
-                    "childName": "Termagants (10) - Brood 2",
-                    "repeats": 1,
-                    "roundUp": false
-                  }
-                ]
-              },
-              {
-                "type": "increment",
-                "value": 1,
-                "field": "defaultAmount",
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "9321-d2e9-a8ee-8371",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "queryFromSelf": false,
-                    "childName": "Termagants (10) - Brood 3"
-                  }
-                ],
-                "repeats": [
-                  {
-                    "field": "selections",
-                    "scope": "roster",
-                    "value": 1,
-                    "percentValue": false,
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "childId": "9321-d2e9-a8ee-8371",
-                    "childName": "Termagants (10) - Brood 3",
-                    "repeats": 1,
-                    "roundUp": false
-                  }
-                ]
+                "comment": "FRENZIED FEEDERS COUNTER. Fixed informational selection. Its visible name is driven by the roster-wide count of the catalogue-local Counts Toward Frenzied Feeders category. No editable quantity and no battlefield-generated Ripper Swarm roster unit."
               }
             ],
-            "comment": "FRENZIED FEEDERS SIZE TRACKER. Display amount equals the number of normal Hormagaunts units + normal Termagants units + Living Incubator Termagant Broods 1/2/3 currently present in the roster. This is informational only: Frenzied Feeders creates the Ripper Swarm during battle round 1, so no Ripper Swarm unit is generated or added to the army list."
+            "defaultSelectionEntryId": "6640-67f7-243e-ca61"
           }
         ],
         "costs": [
@@ -3815,7 +4503,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV28: Automatically present Frenzied Feeders Configuration tracker. Its sole visible payload is a dynamically calculated Ripper Swarm Model quantity. Counts normal Hormagaunts, normal Termagants, and all Living Incubator Termagant broods. Does not create a selectable/generated Ripper Swarm roster unit."
+        "comment": "REV28 CLEAN REBUILD: automatically present Frenzied Feeders Configuration. Replaces the failed defaultAmount experiments with a hidden-category aggregate and fixed result label."
       },
       {
         "type": "unit",
@@ -4180,6 +4868,12 @@
                         "id": "4edc-40b9-a84a-7318",
                         "primary": false,
                         "name": "Infantry"
+                      },
+                      {
+                        "targetId": "4317-48ef-93b5-101f",
+                        "id": "2a97-9dec-7f69-bf4a",
+                        "primary": false,
+                        "name": "Counts Toward Frenzied Feeders"
                       }
                     ],
                     "sortIndex": 1,
@@ -4635,6 +5329,12 @@
                         "id": "a180-75ba-0f9c-5ad1",
                         "primary": false,
                         "name": "Infantry"
+                      },
+                      {
+                        "targetId": "4317-48ef-93b5-101f",
+                        "id": "ad24-1f83-3f17-35a4",
+                        "primary": false,
+                        "name": "Counts Toward Frenzied Feeders"
                       }
                     ],
                     "sortIndex": 2,
@@ -5185,6 +5885,12 @@
                         "id": "6f8b-8290-3fbb-c22e",
                         "primary": false,
                         "name": "Infantry"
+                      },
+                      {
+                        "targetId": "4317-48ef-93b5-101f",
+                        "id": "c1a2-cbb2-f509-15a2",
+                        "primary": false,
+                        "name": "Counts Toward Frenzied Feeders"
                       }
                     ],
                     "sortIndex": 3,
@@ -6104,6 +6810,12 @@
             "id": "fd8b-f2b1-5955-e081",
             "primary": false,
             "name": "Counts Toward Troop Soft Copy Cost"
+          },
+          {
+            "targetId": "4317-48ef-93b5-101f",
+            "id": "cdf1-d712-c987-39f0",
+            "primary": false,
+            "name": "Counts Toward Frenzied Feeders"
           }
         ],
         "sortIndex": 6,
@@ -6219,6 +6931,12 @@
             "id": "fb4c-f80c-f6df-c43e",
             "primary": false,
             "name": "Counts Toward Troop Soft Copy Cost"
+          },
+          {
+            "targetId": "4317-48ef-93b5-101f",
+            "id": "f6c5-4939-516e-5b3e",
+            "primary": false,
+            "name": "Counts Toward Frenzied Feeders"
           }
         ],
         "sortIndex": 7,
@@ -9496,6 +10214,11 @@
         "name": "Hive Tyrant / Tervigon / Neurotyrant Limit",
         "id": "7219-19d4-c548-05f3",
         "hidden": true
+      },
+      {
+        "name": "Counts Toward Frenzied Feeders",
+        "id": "4317-48ef-93b5-101f",
+        "hidden": true
       }
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
@@ -9838,6 +10561,6 @@
         "comment": "REV23 CANONICAL EXPORT PACKAGE: represents the fixed four Ripper Swarms in the base unit. The editor uses the local label 'Ripping Jaws'; New Recruit exports the canonical target name '4x Ripping Jaws'."
       }
     ],
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTyranids now use the final-state fancy-notepad loadout grammar. Hive Tyrant Wings are inline loadout alternatives; Warrior and Warrior Brood use two arm-pair lists; Termagants 1-7 use one shared ordinary weapon slot while 8-10 are paid specialist slots. Ripper Swarms, Hive Guard, and Tyrant Guard use variable-size controls. All native non-Rare Other units use Additional Copy Costs. The existing Tervigon Living Incubator free-Termagant TODO remains intentionally untouched.\n\nRIPPER SWARM VARIABLE-SIZE UI FIX\nRipper Swarms now use one quantity-style +20 Point Additional Model entry capped at two, rather than separate Ripper Swarm 5 and Ripper Swarm 6 model subtrees.\n\nRIPPER SWARM ADDITIONAL-MODEL UI CORRECTION\nRipper Swarms now use the same max-1 optional-model radio pattern as Hive Guard. Ripper Swarm 5 is the first optional +20 model; when selected it exposes Ripper Swarm 6 as a second optional +20 model.\n\nTERVIGON LIVING INCUBATOR IMPLEMENTATION\nLiving Incubator now uses required Tervigon-to-Termagant associations: 1 brood at 800, 2 at 1200, 3 at 1600. Associated Termagant units and their paid specialist weapons cost 0 Points. The full Living Incubator rule text is displayed on the Tervigon.\n\nTERVIGON HIDDEN-ASSOCIATION MINIMUM FIX\nLiving Incubator association slots now have min 0 individually. A single dynamic association-count constraint enforces 1 / 2 / 3 attached broods by Game Size, preventing hidden Brood 3 from generating a phantom requirement at 1200 Points.\n\nTERVIGON DISTINCT-BROOD PICKER FIX\nLiving Incubator now uses one game-size-specific multi-select association picker rather than separate Brood 1/2/3 pickers. Each Termagant unit appears once, so the same unit cannot be selected for multiple granted broods.\n\nTERVIGON PLAYER-FACING ERROR MESSAGE\nReplaced New Recruit's generic 'requires N associations more' minimum error with explicit Living Incubator errors for 800 / 1200 / 1600 Points. The messages tell the player how many free Termagant broods are required, to add Termagant units first, where to select them, and that the selected broods cost 0 Points.\n\nTERVIGON AUTO-GRANTED BROODS PROTOTYPE\nLiving Incubator now prototypes Neuroloid-style nested Termagant broods. The Tervigon automatically selects 1 / 2 / 3 zero-point brood units according to Game Size. Each brood preserves the normal Warrior attachment category so nested association targeting can be tested.\n\nNESTED WARRIOR COUNTLESS LEADER\nWarrior has been removed from the root Leader section and moved into sharedSelectionEntries. Hormagaunts, normal Termagants, and Tervigon-granted Termagant broods now expose Warrior through an Attached Warrior group, matching the proven nested Nob-style architecture.\n\nREV11 CONSTRUCTIVE VALIDATION MIGRATION\nTargets Game System revision 11. Additional Copy Costs uses the current required-configuration semantic tag and self-owned duplicate warning. Trygon and Mawloc Rare limits are constructive. The Hive Tyrant / Tervigon / Neurotyrant shared restriction is now self-monitored by those units rather than enforced by a hidden-category stock max. The obsolete Neuroloid roster cap is removed. Living Incubator no longer uses dynamic stock exact-count constraints: each granted brood is max one, Brood 2/3 use selected-safe visibility across Game Size changes, and Tervigon/Brood entries provide constructive missing/invalid-brood errors. Nested Warrior architecture is unchanged.\n\nREV13 NEW RECRUIT EXPORT COMPATIBILITY\nPromoted the proven revision-12 Points-ID test build to the canonical Tyranids catalogue for Warhammer 40k Reforged Game System revision 12. All Points cost references use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, categories, constraints, nested Warrior architecture, Living Incubator logic, or constructive validation semantics were otherwise changed.\n\nREV20 RETROSPECTIVE POLISH PASS\nRevisited Tyranids against the final cross-faction presentation standard. Added explicit Hive Tyrant and shared Warrior model headers around their existing two anonymous arm-pair choice lists without reintroducing physical Arm Pair labels. Renamed Neurotyrant Attached Unit to Attached Neuroloids. Renamed Hive Guard and Tyrant Guard Additional Models to Additional Model because each group adds only one model. Standardized all twelve Monstrous/Warrior/Guard Bone Sword + Lash Whip package names to '&' grammar while preserving every existing selection ID. Refreshed durable Warrior-nesting comments to use the current Attached Warrior terminology. Ripper Swarm Additional Model 1 / Additional Model 2 sequencing, Bioform Upgrade, Living Incubator, nested Warrior architecture, Termagant specialist structure, variable-size mechanics, Hive Tyrant/Tervigon/Neurotyrant shared limit, Rare validation, points, categories, associations, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV21 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Hormagaunts (10), normal Termagants (10), and Gargoyles (10) now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical root copy costs +20 Points. All 78 pre-existing Other point modifiers were moved unchanged to the Other child. LIVING INCUBATOR EXCEPTION: Tervigon's free Termagant Brood 1 / 2 / 3 units do not count toward the normal Termagant allowance. They already use distinct nested unit IDs, so the Troop ledger simply excludes those IDs rather than applying a compensating refund. All unrelated unit rules, loadouts, Leader limits, Rare behavior, generated-brood requirements, and attachment mechanics are unchanged.\n\nREV22 — NEUROLICTOR RARE + WARRIOR EXPORT CLEANUP\nCorrected Neurolictor to Rare. Its previous Counts Toward Other Soft Copy Cost link was retargeted to Rare using the same category-link ID, its Additional Copy Costs reminder was removed, and its six normal Other copy-cost modifiers were removed. The Other ledger therefore moves from 78 to 72 modifiers / 12 non-Rare Other families. Separately, renamed the six Warrior Brood (3) '2x Warrior Bone Sword' selections to 'Paired Warrior Bone Swords' while preserving every existing selection ID, producing cleaner quantity-prefixed roster exports. No other Tyranids unit, loadout, point cost, category, Troop accounting rule, Living Incubator behavior, or Game System semantic was changed.\n\nREV23 — RIPPER SWARM EXPORT QUANTITY FIX\nCorrected Ripper Swarms weapon export. The fixed Ripper Swarms 1-4 block now uses a canonical shared 4x Ripping Jaws export package while retaining the concise Ripping Jaws editor label. Optional Ripper Swarm 5 and Ripper Swarm 6 continue to contribute one Ripping Jaws each. A full six-model unit therefore records six total Ripping Jaws: four on the root block plus one on each additional model. Points, variable-size sequencing, Bioform Upgrade, Additional Copy Costs, and all unrelated mechanics are unchanged.\n\nREV24 — NEUROTYRANT SECTION ORDER\nReordered the Neurotyrant editor presentation so Loadout Options appears above Attached Neuroloids. This is a presentation-only change; all IDs, costs, constraints, attachment behavior, and unit semantics are unchanged.\n\nREV25 — GS20 TROOP COPY RULE\nUpdated to Game System revision 20 and retargeted Hormagaunts (10), Termagants (10), and Gargoyles (10) to the Additional Copy Cost - Troop short-form rule. Existing infoLink IDs, Neurotyrant section ordering, Ripper Swarm export presentation, Termagant loadout structure, points, categories, and unrelated mechanics are unchanged.\n\nREV26 — TYRANIDS 3.3.4 + STANDARD PATCH NOTES\nUpdated the catalogue title from Tyranids 3.3.3 to Tyranids 3.3.4 and added the standard automatically present Patch Notes Configuration. The army-rules section is intentionally bare; Catalogue Bugfixes (September 4th) contains 'Catalogue created.' No mechanical selections, points, generated-unit behavior, nested leaders, copy-cost arithmetic, validation, categories, or unrelated catalogue semantics changed.\n\nREV27 — GAME SYSTEM 21 SYNC\nRetargeted this catalogue from Game System revision 20 to revision 21. This is a compatibility-only sync: no rules version, unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, Patch Notes, validation, library links, or other executable catalogue content changed.\n\nREV28 — FRENZIED FEEDERS DYNAMIC SIZE TRACKER\nAdded an automatically present Configuration item named Frenzied Feeders. It displays a dynamic quantity of Ripper Swarm Model equal to the total number of normal Hormagaunts and Termagants units in the roster plus Living Incubator Termagant Broods 1, 2 and 3. The tracker is informational only and deliberately does not create a Ripper Swarm roster unit, because Frenzied Feeders creates that unit during battle round 1 rather than during list construction. No points, units, loadouts, categories, copy-cost arithmetic, Living Incubator behavior, attachments, or Game System semantics changed."
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTyranids now use the final-state fancy-notepad loadout grammar. Hive Tyrant Wings are inline loadout alternatives; Warrior and Warrior Brood use two arm-pair lists; Termagants 1-7 use one shared ordinary weapon slot while 8-10 are paid specialist slots. Ripper Swarms, Hive Guard, and Tyrant Guard use variable-size controls. All native non-Rare Other units use Additional Copy Costs. The existing Tervigon Living Incubator free-Termagant TODO remains intentionally untouched.\n\nRIPPER SWARM VARIABLE-SIZE UI FIX\nRipper Swarms now use one quantity-style +20 Point Additional Model entry capped at two, rather than separate Ripper Swarm 5 and Ripper Swarm 6 model subtrees.\n\nRIPPER SWARM ADDITIONAL-MODEL UI CORRECTION\nRipper Swarms now use the same max-1 optional-model radio pattern as Hive Guard. Ripper Swarm 5 is the first optional +20 model; when selected it exposes Ripper Swarm 6 as a second optional +20 model.\n\nTERVIGON LIVING INCUBATOR IMPLEMENTATION\nLiving Incubator now uses required Tervigon-to-Termagant associations: 1 brood at 800, 2 at 1200, 3 at 1600. Associated Termagant units and their paid specialist weapons cost 0 Points. The full Living Incubator rule text is displayed on the Tervigon.\n\nTERVIGON HIDDEN-ASSOCIATION MINIMUM FIX\nLiving Incubator association slots now have min 0 individually. A single dynamic association-count constraint enforces 1 / 2 / 3 attached broods by Game Size, preventing hidden Brood 3 from generating a phantom requirement at 1200 Points.\n\nTERVIGON DISTINCT-BROOD PICKER FIX\nLiving Incubator now uses one game-size-specific multi-select association picker rather than separate Brood 1/2/3 pickers. Each Termagant unit appears once, so the same unit cannot be selected for multiple granted broods.\n\nTERVIGON PLAYER-FACING ERROR MESSAGE\nReplaced New Recruit's generic 'requires N associations more' minimum error with explicit Living Incubator errors for 800 / 1200 / 1600 Points. The messages tell the player how many free Termagant broods are required, to add Termagant units first, where to select them, and that the selected broods cost 0 Points.\n\nTERVIGON AUTO-GRANTED BROODS PROTOTYPE\nLiving Incubator now prototypes Neuroloid-style nested Termagant broods. The Tervigon automatically selects 1 / 2 / 3 zero-point brood units according to Game Size. Each brood preserves the normal Warrior attachment category so nested association targeting can be tested.\n\nNESTED WARRIOR COUNTLESS LEADER\nWarrior has been removed from the root Leader section and moved into sharedSelectionEntries. Hormagaunts, normal Termagants, and Tervigon-granted Termagant broods now expose Warrior through an Attached Warrior group, matching the proven nested Nob-style architecture.\n\nREV11 CONSTRUCTIVE VALIDATION MIGRATION\nTargets Game System revision 11. Additional Copy Costs uses the current required-configuration semantic tag and self-owned duplicate warning. Trygon and Mawloc Rare limits are constructive. The Hive Tyrant / Tervigon / Neurotyrant shared restriction is now self-monitored by those units rather than enforced by a hidden-category stock max. The obsolete Neuroloid roster cap is removed. Living Incubator no longer uses dynamic stock exact-count constraints: each granted brood is max one, Brood 2/3 use selected-safe visibility across Game Size changes, and Tervigon/Brood entries provide constructive missing/invalid-brood errors. Nested Warrior architecture is unchanged.\n\nREV13 NEW RECRUIT EXPORT COMPATIBILITY\nPromoted the proven revision-12 Points-ID test build to the canonical Tyranids catalogue for Warhammer 40k Reforged Game System revision 12. All Points cost references use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, categories, constraints, nested Warrior architecture, Living Incubator logic, or constructive validation semantics were otherwise changed.\n\nREV20 RETROSPECTIVE POLISH PASS\nRevisited Tyranids against the final cross-faction presentation standard. Added explicit Hive Tyrant and shared Warrior model headers around their existing two anonymous arm-pair choice lists without reintroducing physical Arm Pair labels. Renamed Neurotyrant Attached Unit to Attached Neuroloids. Renamed Hive Guard and Tyrant Guard Additional Models to Additional Model because each group adds only one model. Standardized all twelve Monstrous/Warrior/Guard Bone Sword + Lash Whip package names to '&' grammar while preserving every existing selection ID. Refreshed durable Warrior-nesting comments to use the current Attached Warrior terminology. Ripper Swarm Additional Model 1 / Additional Model 2 sequencing, Bioform Upgrade, Living Incubator, nested Warrior architecture, Termagant specialist structure, variable-size mechanics, Hive Tyrant/Tervigon/Neurotyrant shared limit, Rare validation, points, categories, associations, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV21 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Hormagaunts (10), normal Termagants (10), and Gargoyles (10) now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical root copy costs +20 Points. All 78 pre-existing Other point modifiers were moved unchanged to the Other child. LIVING INCUBATOR EXCEPTION: Tervigon's free Termagant Brood 1 / 2 / 3 units do not count toward the normal Termagant allowance. They already use distinct nested unit IDs, so the Troop ledger simply excludes those IDs rather than applying a compensating refund. All unrelated unit rules, loadouts, Leader limits, Rare behavior, generated-brood requirements, and attachment mechanics are unchanged.\n\nREV22 — NEUROLICTOR RARE + WARRIOR EXPORT CLEANUP\nCorrected Neurolictor to Rare. Its previous Counts Toward Other Soft Copy Cost link was retargeted to Rare using the same category-link ID, its Additional Copy Costs reminder was removed, and its six normal Other copy-cost modifiers were removed. The Other ledger therefore moves from 78 to 72 modifiers / 12 non-Rare Other families. Separately, renamed the six Warrior Brood (3) '2x Warrior Bone Sword' selections to 'Paired Warrior Bone Swords' while preserving every existing selection ID, producing cleaner quantity-prefixed roster exports. No other Tyranids unit, loadout, point cost, category, Troop accounting rule, Living Incubator behavior, or Game System semantic was changed.\n\nREV23 — RIPPER SWARM EXPORT QUANTITY FIX\nCorrected Ripper Swarms weapon export. The fixed Ripper Swarms 1-4 block now uses a canonical shared 4x Ripping Jaws export package while retaining the concise Ripping Jaws editor label. Optional Ripper Swarm 5 and Ripper Swarm 6 continue to contribute one Ripping Jaws each. A full six-model unit therefore records six total Ripping Jaws: four on the root block plus one on each additional model. Points, variable-size sequencing, Bioform Upgrade, Additional Copy Costs, and all unrelated mechanics are unchanged.\n\nREV24 — NEUROTYRANT SECTION ORDER\nReordered the Neurotyrant editor presentation so Loadout Options appears above Attached Neuroloids. This is a presentation-only change; all IDs, costs, constraints, attachment behavior, and unit semantics are unchanged.\n\nREV25 — GS20 TROOP COPY RULE\nUpdated to Game System revision 20 and retargeted Hormagaunts (10), Termagants (10), and Gargoyles (10) to the Additional Copy Cost - Troop short-form rule. Existing infoLink IDs, Neurotyrant section ordering, Ripper Swarm export presentation, Termagant loadout structure, points, categories, and unrelated mechanics are unchanged.\n\nREV26 — TYRANIDS 3.3.4 + STANDARD PATCH NOTES\nUpdated the catalogue title from Tyranids 3.3.3 to Tyranids 3.3.4 and added the standard automatically present Patch Notes Configuration. The army-rules section is intentionally bare; Catalogue Bugfixes (September 4th) contains 'Catalogue created.' No mechanical selections, points, generated-unit behavior, nested leaders, copy-cost arithmetic, validation, categories, or unrelated catalogue semantics changed.\n\nREV27 — GAME SYSTEM 21 SYNC\nRetargeted this catalogue from Game System revision 20 to revision 21. This is a compatibility-only sync: no rules version, unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, Patch Notes, validation, library links, or other executable catalogue content changed.\n\nREV28 — FRENZIED FEEDERS CATEGORY COUNTER\nBuilt directly from clean GS21 REV27. Added a catalogue-local hidden Counts Toward Frenzied Feeders category to normal Hormagaunts, normal Termagants, and Living Incubator Termagant Broods 1-3. Added an automatically present Frenzied Feeders Configuration with a fixed result selection whose name reports Ripper Swarm Size from the aggregate hidden-category count. Supports sizes 0-30. Added 'Added Ripper Swarm model counter.' to Catalogue Bugfixes. No Game System change, points change, copy-cost change, loadout change, attachment change, or generated Ripper Swarm roster unit was introduced."
   }
 }
