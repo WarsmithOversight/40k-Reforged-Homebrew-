@@ -5,7 +5,7 @@
     "name": "T'au 3.3.6",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 12,
+    "revision": 13,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -3256,7 +3256,7 @@
             "name": "Patch Notes",
             "id": "5411-0bad-59f3-470a",
             "hidden": false,
-            "description": "## T'au 3.3.6\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 4th)\n\n• Catalogue created.",
+            "description": "## T'au 3.3.6\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 10th)\n\n• TX7 Hammerhead Gunship: Seeker Missiles are now presented as two independent Paid Wargear checkboxes.\n• TX4 Piranha: Seeker Missiles are now presented as two independent Paid Wargear checkboxes.\n• TY7 Devilfish: Seeker Missiles are now presented as two independent Paid Wargear checkboxes.",
             "noindex": false
           }
         ],
@@ -3274,7 +3274,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV12: Automatically present Configuration entry using the standard two-section Patch Notes format. T'au 3.3.6 is the current army-rules baseline. No new army-rules changes are mirrored into the listbuilder in this baseline-sync pass; the existing Catalogue Bugfixes section is retained unchanged."
+        "comment": "REV13: reset the Catalogue Bugfixes section for September 10th and replaced the previous entries with the current Seeker Missile Paid Wargear presentation cleanups for TX7 Hammerhead Gunship, TX4 Piranha, and TY7 Devilfish."
       },
       {
         "type": "unit",
@@ -5233,12 +5233,21 @@
             "id": "8b49-6039-b2fe-5fcf",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "220a-acae-4e3a-be6c",
+                "type": "upgrade",
+                "import": true,
+                "name": "Seeker Missile",
                 "hidden": false,
+                "id": "4fc3-bf19-c845-50ab",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -5248,30 +5257,22 @@
                     "shared": true,
                     "id": "f4d3-513d-2a8f-1bb5"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Seeker Missile",
-                    "hidden": false,
-                    "id": "4fc3-bf19-c845-50ab",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "3975-025f-2ad7-a9a9",
+                "type": "upgrade",
+                "import": true,
+                "name": "Additional Seeker Missile",
                 "hidden": false,
+                "id": "bef1-c8dd-1859-a992",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -5280,23 +5281,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "eb65-b95a-5a64-2455"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Additional Seeker Missile",
-                    "hidden": false,
-                    "id": "bef1-c8dd-1859-a992",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -5311,7 +5295,8 @@
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
-        ]
+        ],
+        "comment": "\nREV13 PRESENTATION CLEANUP: Seeker Missile and Additional Seeker Missile are now direct optional Paid Wargear selections with independent max-1 constraints, producing a simple checkbox-style list in New Recruit. Existing missile selection IDs, +10 Point costs, and max-1 constraint IDs are preserved."
       },
       {
         "type": "unit",
@@ -6010,12 +5995,21 @@
             "id": "01c3-dadb-faa9-5632",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "a740-f728-76c0-7cb9",
+                "type": "upgrade",
+                "import": true,
+                "name": "Seeker Missile",
                 "hidden": false,
+                "id": "2b8f-9a28-430b-5483",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -6025,30 +6019,22 @@
                     "shared": true,
                     "id": "27b3-c272-3e3c-94c5"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Seeker Missile",
-                    "hidden": false,
-                    "id": "2b8f-9a28-430b-5483",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "c04f-00d2-5a64-bf93",
+                "type": "upgrade",
+                "import": true,
+                "name": "Additional Seeker Missile",
                 "hidden": false,
+                "id": "9853-adbb-2403-0535",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -6057,23 +6043,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "51cc-c387-1114-80e0"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Additional Seeker Missile",
-                    "hidden": false,
-                    "id": "9853-adbb-2403-0535",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -6088,7 +6057,8 @@
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
-        ]
+        ],
+        "comment": "\nREV13 PRESENTATION CLEANUP: Seeker Missile and Additional Seeker Missile are now direct optional Paid Wargear selections with independent max-1 constraints, producing a simple checkbox-style list in New Recruit. Existing missile selection IDs, +10 Point costs, and max-1 constraint IDs are preserved."
       },
       {
         "type": "unit",
@@ -6652,12 +6622,21 @@
             "id": "c4ca-56e1-94b8-99c2",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "1375-1ad6-5eed-0b38",
+                "type": "upgrade",
+                "import": true,
+                "name": "Seeker Missile",
                 "hidden": false,
+                "id": "2c46-fcaf-b3b2-65f2",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -6667,30 +6646,22 @@
                     "shared": true,
                     "id": "80a0-aa94-571d-a944"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Seeker Missile",
-                    "hidden": false,
-                    "id": "2c46-fcaf-b3b2-65f2",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "b6e2-8896-d601-4bc9",
+                "type": "upgrade",
+                "import": true,
+                "name": "Additional Seeker Missile",
                 "hidden": false,
+                "id": "2a7b-e4b1-64a1-0602",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -6699,23 +6670,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "5e09-e652-2311-0ae5"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Additional Seeker Missile",
-                    "hidden": false,
-                    "id": "2a7b-e4b1-64a1-0602",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -6730,7 +6684,8 @@
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
-        ]
+        ],
+        "comment": "\nREV13 PRESENTATION CLEANUP: Seeker Missile and Additional Seeker Missile are now direct optional Paid Wargear selections with independent max-1 constraints, producing a simple checkbox-style list in New Recruit. Existing missile selection IDs, +10 Point costs, and max-1 constraint IDs are preserved."
       },
       {
         "type": "unit",
@@ -6895,7 +6850,7 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTau loadouts follow the fancy-notepad presentation: named Tau model nouns replace generic Model X labels, sergeant titles appear only where there is a distinct sergeant loadout, unmodelled grenade/additive wargear is unit-level, free specialist weapon slots omit ordinary fallback loadouts, Crisis Battlesuits use optional extra-model sizing, and all native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nT'au now use Game System revision 11. Game System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, and host Leader limits use constructive player-facing errors. Existing faction semantics remain unchanged; Ethereal continues not to count toward Leader Capacity.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader behavior, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model headers to single-model units, removing non-semantic Weapon 1 / Weapon 2 labels from the XV8 Commander and Crisis Battlesuits, flattening Kroot Carnivore and Hunter Pathfinder specialist sections into Loadout Options, renaming the Crisis optional-size group to Additional Model, and presenting XV8 Commander frame upgrades as Battlesuit Configuration rather than Paid Wargear. No points, eligibility, Leader behavior, Additional Copy Costs arithmetic, paid wargear semantics, or underlying weapon-choice logic were otherwise changed.\n\nREV6 RETROSPECTIVE POLISH PASS\nRevisited T'au against the final cross-faction presentation standard. Kroot Carnivores 1-9 now show fixed 9x Kroot Rifle and Rifle Knives as separate equipment lines. TY7 Devilfish, TX4 Piranha, and TX7 Hammerhead Gunship now label their two independent paid missile slots Seeker Missile and Additional Seeker Missile rather than implementation-facing Seeker Missile 1/2. XV88 Broadside Battlesuit now presents its fixed drones as a 2x Missile Drone model/group header with a 2x Missile Pod equipment line. Strike Team and Breacher Team use the current grammar-safe 'This unit...' host-limit error. Battlesuit Configuration, Crisis weapon-choice logic, optional-size mechanics, Pathfinder/Kroot specialist handling, additive wargear treatment, Additional Copy Costs, points, categories, Leader behavior, and all other rules semantics remain unchanged.\n\nREV7 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Strike Team and Breacher Team now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 72 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. Kroot Carnivores remain an Other unit and therefore continue using the existing Other 1 / 2 / 3 allowance rather than the Troop allowance. All unrelated unit rules, loadouts, Leader behavior, attachments, Battlesuit Configuration, and other catalogue mechanics are unchanged.\n\nREV8 — KROOT RIFLES & KNIVES EXPORT PACKAGE\nConsolidated Kroot Carnivores 1-9 from separate '9x Kroot Rifle' and 'Rifle Knives' live selections into structural quantity 9 of one shared Kroot Rifles & Knives entry. The old Kroot Rifle selection ID is preserved as the live entryLink ID; the old Rifle Knives branch remains as a hidden, unselected legacy shell so every pre-existing ID survives. Tanglebomb Launcher and Kroot Carnivore 10 are unchanged. No points, Additional Copy Costs, categories, Leader behavior, Battlesuit logic, or unrelated unit mechanics changed.\n\nREV9 — KROOT FIXED EXPORT LABEL\nReplaced the REV8 structural quantity-9 Kroot Rifles & Knives selection with one literal '9x Kroot Rifles & Knives' fixed package because New Recruit exposes a quantity control when a radio-style choice represents multiple instances. Removed the now-unused shared Kroot Rifles & Knives object and the hidden Rifle Knives legacy shell. Kroot Carnivore 10, Tanglebomb Launcher, points, categories, Additional Copy Costs, and all unrelated mechanics are unchanged.\n\nREV10 — GS20 TROOP COPY RULE\nUpdated to Game System revision 20 and retargeted Strike Team and Breacher Team to the Additional Copy Cost - Troop short-form rule. Existing infoLink IDs, Kroot fixed-package presentation, points, categories, loadouts, and unrelated mechanics are unchanged.\n\nREV11 — T'AU 3.3.5 + STANDARD PATCH NOTES\nUpdated the catalogue title from T'au 3.3.3 to T'au 3.3.5 and added the standard automatically present Patch Notes Configuration. The army-rules section is intentionally bare; Catalogue Bugfixes (September 4th) contains 'Catalogue created.' No mechanical selections, points, loadouts, validation, copy-cost arithmetic, categories, or unrelated catalogue semantics changed.\n\nREV12 — RULES BASELINE SYNC\nUpdated the player-facing army-rules baseline from T'au 3.3.5 to T'au 3.3.6 and retargeted the catalogue from Game System revision 20 to the current Game System revision 21. No unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, validation, or other catalogue mechanics changed in this pass.",
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTau loadouts follow the fancy-notepad presentation: named Tau model nouns replace generic Model X labels, sergeant titles appear only where there is a distinct sergeant loadout, unmodelled grenade/additive wargear is unit-level, free specialist weapon slots omit ordinary fallback loadouts, Crisis Battlesuits use optional extra-model sizing, and all native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nT'au now use Game System revision 11. Game System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, and host Leader limits use constructive player-facing errors. Existing faction semantics remain unchanged; Ethereal continues not to count toward Leader Capacity.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader behavior, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model headers to single-model units, removing non-semantic Weapon 1 / Weapon 2 labels from the XV8 Commander and Crisis Battlesuits, flattening Kroot Carnivore and Hunter Pathfinder specialist sections into Loadout Options, renaming the Crisis optional-size group to Additional Model, and presenting XV8 Commander frame upgrades as Battlesuit Configuration rather than Paid Wargear. No points, eligibility, Leader behavior, Additional Copy Costs arithmetic, paid wargear semantics, or underlying weapon-choice logic were otherwise changed.\n\nREV6 RETROSPECTIVE POLISH PASS\nRevisited T'au against the final cross-faction presentation standard. Kroot Carnivores 1-9 now show fixed 9x Kroot Rifle and Rifle Knives as separate equipment lines. TY7 Devilfish, TX4 Piranha, and TX7 Hammerhead Gunship now label their two independent paid missile slots Seeker Missile and Additional Seeker Missile rather than implementation-facing Seeker Missile 1/2. XV88 Broadside Battlesuit now presents its fixed drones as a 2x Missile Drone model/group header with a 2x Missile Pod equipment line. Strike Team and Breacher Team use the current grammar-safe 'This unit...' host-limit error. Battlesuit Configuration, Crisis weapon-choice logic, optional-size mechanics, Pathfinder/Kroot specialist handling, additive wargear treatment, Additional Copy Costs, points, categories, Leader behavior, and all other rules semantics remain unchanged.\n\nREV7 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Strike Team and Breacher Team now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 72 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. Kroot Carnivores remain an Other unit and therefore continue using the existing Other 1 / 2 / 3 allowance rather than the Troop allowance. All unrelated unit rules, loadouts, Leader behavior, attachments, Battlesuit Configuration, and other catalogue mechanics are unchanged.\n\nREV8 — KROOT RIFLES & KNIVES EXPORT PACKAGE\nConsolidated Kroot Carnivores 1-9 from separate '9x Kroot Rifle' and 'Rifle Knives' live selections into structural quantity 9 of one shared Kroot Rifles & Knives entry. The old Kroot Rifle selection ID is preserved as the live entryLink ID; the old Rifle Knives branch remains as a hidden, unselected legacy shell so every pre-existing ID survives. Tanglebomb Launcher and Kroot Carnivore 10 are unchanged. No points, Additional Copy Costs, categories, Leader behavior, Battlesuit logic, or unrelated unit mechanics changed.\n\nREV9 — KROOT FIXED EXPORT LABEL\nReplaced the REV8 structural quantity-9 Kroot Rifles & Knives selection with one literal '9x Kroot Rifles & Knives' fixed package because New Recruit exposes a quantity control when a radio-style choice represents multiple instances. Removed the now-unused shared Kroot Rifles & Knives object and the hidden Rifle Knives legacy shell. Kroot Carnivore 10, Tanglebomb Launcher, points, categories, Additional Copy Costs, and all unrelated mechanics are unchanged.\n\nREV10 — GS20 TROOP COPY RULE\nUpdated to Game System revision 20 and retargeted Strike Team and Breacher Team to the Additional Copy Cost - Troop short-form rule. Existing infoLink IDs, Kroot fixed-package presentation, points, categories, loadouts, and unrelated mechanics are unchanged.\n\nREV11 — T'AU 3.3.5 + STANDARD PATCH NOTES\nUpdated the catalogue title from T'au 3.3.3 to T'au 3.3.5 and added the standard automatically present Patch Notes Configuration. The army-rules section is intentionally bare; Catalogue Bugfixes (September 4th) contains 'Catalogue created.' No mechanical selections, points, loadouts, validation, copy-cost arithmetic, categories, or unrelated catalogue semantics changed.\n\nREV12 — RULES BASELINE SYNC\nUpdated the player-facing army-rules baseline from T'au 3.3.5 to T'au 3.3.6 and retargeted the catalogue from Game System revision 20 to the current Game System revision 21. No unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, validation, or other catalogue mechanics changed in this pass.\n\nREV13 — SEEKER MISSILE CHECKBOX PRESENTATION\nFlattened the two independent +10 Point Seeker Missile selections on TX7 Hammerhead Gunship, TX4 Piranha, and TY7 Devilfish from zero-width one-item subgroups into direct Paid Wargear entries. Each missile retains its stable selection ID and now carries the former subgroup's max-1 constraint directly, producing the intended checkbox-style UI while preserving independent selection of both missiles. Reset Catalogue Bugfixes to September 10th and replaced the old bugfix entries with the three current presentation-cleanup entries. No points, categories, Additional Copy Cost arithmetic, unit loadouts outside these Paid Wargear wrappers, Leader behavior, or Game System target changed.",
     "sharedSelectionEntries": []
   }
 }
