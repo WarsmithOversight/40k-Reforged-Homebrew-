@@ -5,7 +5,7 @@
     "name": "Adepta Sororitas 3.3.5",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 20,
+    "revision": 22,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -836,16 +836,6 @@
             "id": "9366-9a56-5b1a-ade9",
             "hidden": false,
             "sortIndex": 1,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "ef64-f14f-eb39-2370"
-              }
-            ],
             "entryLinks": [
               {
                 "import": true,
@@ -853,7 +843,18 @@
                 "hidden": false,
                 "id": "a470-72d4-8306-abb2",
                 "type": "selectionEntry",
-                "targetId": "67a8-4585-7400-7bad"
+                "targetId": "67a8-4585-7400-7bad",
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "ef64-f14f-eb39-2370"
+                  }
+                ],
+                "sortIndex": 1
               }
             ]
           },
@@ -1252,12 +1253,30 @@
                 "id": "f608-d8f9-025f-ef8c"
               }
             ],
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "3daa-b9d1-c2d0-5cb4",
+                "type": "upgrade",
+                "import": true,
+                "name": "Munitorum Cherub",
                 "hidden": false,
+                "id": "964a-9d9a-ee5c-f8a1",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Munitorum Cherub",
+                    "id": "7033-80ad-f5eb-f20e",
+                    "hidden": false,
+                    "description": "Once per battle, after selecting targets for this unit’s weapons, you may ‘use the blessed ammunition’ and select a model in this unit. If you do, for each attack made for the selected model this turn, reroll a failed Hit and Wound roll for that attack. (Use the Cherub models to note when a unit has yet to use this ability and remove them after the ability is used.)",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -1266,32 +1285,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "878c-687c-82e6-a767"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Munitorum Cherub",
-                    "hidden": false,
-                    "id": "964a-9d9a-ee5c-f8a1",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Munitorum Cherub",
-                        "id": "7033-80ad-f5eb-f20e",
-                        "hidden": false,
-                        "description": "Once per battle, after selecting targets for this unit’s weapons, you may ‘use the blessed ammunition’ and select a model in this unit. If you do, for each attack made for the selected model this turn, reroll a failed Hit and Wound roll for that attack. (Use the Cherub models to note when a unit has yet to use this ability and remove them after the ability is used.)",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -2412,12 +2405,30 @@
             "id": "ef13-070f-c1ae-0593",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "b0e0-51f8-5039-6173",
+                "type": "upgrade",
+                "import": true,
+                "name": "Celestian Sacresant Simulacrum Imperialis",
                 "hidden": false,
+                "id": "4a8f-abf0-da5b-dca3",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Celestian Sacresant Simulacrum Imperialis",
+                    "id": "5d4f-a57e-002e-f8de",
+                    "hidden": false,
+                    "description": "After this unit is Activated, it may Heal 1.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -2426,32 +2437,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "c102-533b-999c-65e3"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Celestian Sacresant Simulacrum Imperialis",
-                    "hidden": false,
-                    "id": "4a8f-abf0-da5b-dca3",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Celestian Sacresant Simulacrum Imperialis",
-                        "id": "5d4f-a57e-002e-f8de",
-                        "hidden": false,
-                        "description": "After this unit is Activated, it may Heal 1.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -2527,16 +2512,6 @@
             "id": "c56d-3ac4-3fa0-c166",
             "hidden": false,
             "sortIndex": 1,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "df35-e62f-0cc9-6fe8"
-              }
-            ],
             "entryLinks": [
               {
                 "import": true,
@@ -2544,7 +2519,18 @@
                 "hidden": false,
                 "id": "2bde-5f73-791a-5cdc",
                 "type": "selectionEntry",
-                "targetId": "67a8-4585-7400-7bad"
+                "targetId": "67a8-4585-7400-7bad",
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "df35-e62f-0cc9-6fe8"
+                  }
+                ],
+                "sortIndex": 1
               }
             ]
           },
@@ -2885,132 +2871,134 @@
             "id": "2417-905f-abb9-6082",
             "hidden": false,
             "sortIndex": 3,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "Grenades",
-                "id": "9a8d-fc0d-15a3-6eb4",
+                "type": "upgrade",
+                "import": true,
+                "name": "Plasma Grenade",
                 "hidden": false,
+                "id": "1fd9-c2f9-6f6b-1c57",
                 "sortIndex": 1,
-                "selectionEntries": [
+                "costs": [
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plasma Grenade 1",
-                    "hidden": false,
-                    "id": "1fd9-c2f9-6f6b-1c57",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "constraints": [
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "b7e3-2991-2165-4af5",
-                        "includeChildSelections": false
-                      }
-                    ]
-                  },
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plasma Grenade 2",
-                    "hidden": false,
-                    "id": "5b93-053e-1891-f04e",
-                    "sortIndex": 2,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "constraints": [
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "d63d-a804-ecc0-bbfe",
-                        "includeChildSelections": false
-                      }
-                    ]
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "b7e3-2991-2165-4af5",
+                    "includeChildSelections": false
                   }
                 ]
               },
               {
-                "name": "Bombs",
-                "id": "8644-e2c0-e56f-41eb",
+                "type": "upgrade",
+                "import": true,
+                "name": "Plasma Grenade",
                 "hidden": false,
+                "id": "5b93-053e-1891-f04e",
                 "sortIndex": 2,
-                "selectionEntries": [
+                "costs": [
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Melta Bomb 1",
-                    "hidden": false,
-                    "id": "1ea2-045a-d8ef-a25e",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "constraints": [
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "030f-5568-cb88-2aef",
-                        "includeChildSelections": false
-                      }
-                    ]
-                  },
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Melta Bomb 2",
-                    "hidden": false,
-                    "id": "38d8-5c08-8b93-1bb6",
-                    "sortIndex": 2,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "constraints": [
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "5153-1852-1d60-5752",
-                        "includeChildSelections": false
-                      }
-                    ]
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "d63d-a804-ecc0-bbfe",
+                    "includeChildSelections": false
                   }
                 ]
               },
               {
-                "name": "​",
-                "id": "a81d-7211-874d-3754",
+                "type": "upgrade",
+                "import": true,
+                "name": "Melta Bomb",
                 "hidden": false,
+                "id": "1ea2-045a-d8ef-a25e",
                 "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "030f-5568-cb88-2aef",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Melta Bomb",
+                "hidden": false,
+                "id": "38d8-5c08-8b93-1bb6",
+                "sortIndex": 4,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "5153-1852-1d60-5752",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Munitorum Cherub",
+                "hidden": false,
+                "id": "63cc-5a85-ec97-03e6",
+                "sortIndex": 5,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Munitorum Cherub",
+                    "id": "57ce-89f2-db8b-dcd9",
+                    "hidden": false,
+                    "description": "Once per battle, after selecting targets for this unit’s weapons, you may ‘use the blessed ammunition’ and select a model in this unit. If you do, for each attack made for the selected model this turn, reroll a failed Hit and Wound roll for that attack. (Use the Cherub models to note when a unit has yet to use this ability and remove them after the ability is used.)",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -3019,32 +3007,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "e8c9-50ab-0293-2392"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Munitorum Cherub",
-                    "hidden": false,
-                    "id": "63cc-5a85-ec97-03e6",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Munitorum Cherub",
-                        "id": "57ce-89f2-db8b-dcd9",
-                        "hidden": false,
-                        "description": "Once per battle, after selecting targets for this unit’s weapons, you may ‘use the blessed ammunition’ and select a model in this unit. If you do, for each attack made for the selected model this turn, reroll a failed Hit and Wound roll for that attack. (Use the Cherub models to note when a unit has yet to use this ability and remove them after the ability is used.)",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -4538,12 +4500,21 @@
             "id": "cf0f-5bd1-3c3f-9dad",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "7dad-baf2-457a-c21b",
+                "type": "upgrade",
+                "import": true,
+                "name": "Dozer Blade",
                 "hidden": false,
+                "id": "2ed6-21bd-c13d-26fb",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4553,30 +4524,22 @@
                     "shared": true,
                     "id": "1bc0-5be9-fc58-849c"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Dozer Blade",
-                    "hidden": false,
-                    "id": "2ed6-21bd-c13d-26fb",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "3a7e-d243-4aec-1be3",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "c11f-3f35-15e6-fd91",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4586,30 +4549,31 @@
                     "shared": true,
                     "id": "53bc-378c-f865-1bb4"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "c11f-3f35-15e6-fd91",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "d550-a5e2-f624-a5c8",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "2b51-78ef-af32-58a6",
                 "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Smoke Launchers",
+                    "id": "351d-13ab-251b-0de6",
+                    "hidden": false,
+                    "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, each ranged attack targeting this unit suffers a -1 penalty to its Hit Roll and you cannot roll for this ability again until the next battle round.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4618,32 +4582,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "2111-bff8-7211-c70f"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "2b51-78ef-af32-58a6",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Smoke Launchers",
-                        "id": "351d-13ab-251b-0de6",
-                        "hidden": false,
-                        "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, each ranged attack targeting this unit suffers a -1 penalty to its Hit Roll and you cannot roll for this ability again until the next battle round.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -4802,12 +4740,21 @@
             "id": "f31d-4399-859f-7776",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "313e-783b-e3bd-f546",
+                "type": "upgrade",
+                "import": true,
+                "name": "Dozer Blade",
                 "hidden": false,
+                "id": "123b-642d-9f68-72a1",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4817,30 +4764,22 @@
                     "shared": true,
                     "id": "b2d8-efb8-67fa-9454"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Dozer Blade",
-                    "hidden": false,
-                    "id": "123b-642d-9f68-72a1",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "adb9-aecf-576a-93c0",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "961d-2a16-8966-8a56",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4850,30 +4789,31 @@
                     "shared": true,
                     "id": "29fb-dbe2-4aca-1af4"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "961d-2a16-8966-8a56",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "747e-3105-9cef-07da",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "647f-2361-8b33-e08a",
                 "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Smoke Launchers",
+                    "id": "6bd9-0614-0519-ac41",
+                    "hidden": false,
+                    "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, each ranged attack targeting this unit suffers a -1 penalty to its Hit Roll and you cannot roll for this ability again until the next battle round.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4882,32 +4822,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "9df8-c052-7b06-d6b4"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "647f-2361-8b33-e08a",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Smoke Launchers",
-                        "id": "6bd9-0614-0519-ac41",
-                        "hidden": false,
-                        "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, each ranged attack targeting this unit suffers a -1 penalty to its Hit Roll and you cannot roll for this ability again until the next battle round.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -5210,16 +5124,34 @@
             ]
           },
           {
-            "name": "Paid Wargear",
+            "name": "Unit Upgrade",
             "id": "ad2b-f0ba-be2c-d89c",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "d782-4b05-eee9-b7ec",
+                "type": "upgrade",
+                "import": true,
+                "name": "Anchorite Sarcophagus",
                 "hidden": false,
+                "id": "aaf7-87f6-234b-0c8f",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Anchorite Sarcophagus",
+                    "id": "80f5-cf74-6816-4f06",
+                    "hidden": false,
+                    "description": "For each wound this model suffers, reroll a failed Saving Throw for that attack.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -5228,32 +5160,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "2a9e-031a-06c4-6d96"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Anchorite Sarcophagus",
-                    "hidden": false,
-                    "id": "aaf7-87f6-234b-0c8f",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Anchorite Sarcophagus",
-                        "id": "80f5-cf74-6816-4f06",
-                        "hidden": false,
-                        "description": "For each wound this model suffers, reroll a failed Saving Throw for that attack.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -5397,12 +5303,21 @@
             "id": "3ea6-56af-b277-e136",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "5621-3845-2e65-c859",
+                "type": "upgrade",
+                "import": true,
+                "name": "Dozer Spikes",
                 "hidden": false,
+                "id": "637d-f370-181b-ad27",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -5412,30 +5327,22 @@
                     "shared": true,
                     "id": "35b0-ff22-5c26-c5b2"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Dozer Spikes",
-                    "hidden": false,
-                    "id": "637d-f370-181b-ad27",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "ad5f-9c98-98a9-6c63",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "902c-be68-8a92-f9b8",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -5445,30 +5352,31 @@
                     "shared": true,
                     "id": "d755-692d-abbf-fc5c"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "902c-be68-8a92-f9b8",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "c17d-c279-f1d3-82e0",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "77c2-e37a-d298-a218",
                 "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Smoke Launchers",
+                    "id": "4509-ebd7-fb47-9a68",
+                    "hidden": false,
+                    "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, each ranged attack targeting this unit suffers a -1 penalty to its Hit Roll and you cannot roll for this ability again until the next battle round.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -5477,32 +5385,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "c8dd-e77d-7868-5a38"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "77c2-e37a-d298-a218",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Smoke Launchers",
-                        "id": "4509-ebd7-fb47-9a68",
-                        "hidden": false,
-                        "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, each ranged attack targeting this unit suffers a -1 penalty to its Hit Roll and you cannot roll for this ability again until the next battle round.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -5721,12 +5603,21 @@
             "id": "2ccf-7b77-3977-d0cf",
             "hidden": false,
             "sortIndex": 3,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "72dd-a9eb-c37b-e79d",
+                "type": "upgrade",
+                "import": true,
+                "name": "Dozer Spikes",
                 "hidden": false,
+                "id": "ea87-2926-d3eb-74ac",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -5736,30 +5627,22 @@
                     "shared": true,
                     "id": "e8c3-21c5-35c7-3b11"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Dozer Spikes",
-                    "hidden": false,
-                    "id": "ea87-2926-d3eb-74ac",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "3794-6bdf-a9ce-d94d",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "a4bc-0cf4-c847-e75c",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -5769,30 +5652,31 @@
                     "shared": true,
                     "id": "6427-e276-8820-a56e"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "a4bc-0cf4-c847-e75c",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "d54f-460d-2458-50fa",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "1757-361b-0b70-4a2a",
                 "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Smoke Launchers",
+                    "id": "cf4d-7697-360c-60ab",
+                    "hidden": false,
+                    "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, each ranged attack targeting this unit suffers a -1 penalty to its Hit Roll and you cannot roll for this ability again until the next battle round.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -5801,32 +5685,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "4050-bdc7-4e4f-99c9"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "1757-361b-0b70-4a2a",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Smoke Launchers",
-                        "id": "cf4d-7697-360c-60ab",
-                        "hidden": false,
-                        "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, each ranged attack targeting this unit suffers a -1 penalty to its Hit Roll and you cannot roll for this ability again until the next battle round.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -5902,16 +5760,6 @@
             "id": "c869-18df-bed9-fc7f",
             "hidden": false,
             "sortIndex": 1,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "3502-20ad-d92e-eacc"
-              }
-            ],
             "entryLinks": [
               {
                 "import": true,
@@ -5919,7 +5767,18 @@
                 "hidden": false,
                 "id": "c3ee-2414-9092-78f3",
                 "type": "selectionEntry",
-                "targetId": "67a8-4585-7400-7bad"
+                "targetId": "67a8-4585-7400-7bad",
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "3502-20ad-d92e-eacc"
+                  }
+                ],
+                "sortIndex": 1
               }
             ]
           },
@@ -6431,12 +6290,30 @@
             "id": "43f8-d0d9-a394-9245",
             "hidden": false,
             "sortIndex": 3,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "75fb-ac95-fea8-a430",
+                "type": "upgrade",
+                "import": true,
+                "name": "Munitorum Cherub",
                 "hidden": false,
+                "id": "4e3d-c503-6fe3-b89d",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Munitorum Cherub",
+                    "id": "a6b4-5359-c4ad-3495",
+                    "hidden": false,
+                    "description": "Once per battle, after selecting targets for this unit’s weapons, you may ‘use the blessed ammunition’ and select a model in this unit. If you do, for each attack made for the selected model this turn, reroll a failed Hit and Wound roll for that attack. (Use the Cherub models to note when a unit has yet to use this ability and remove them after the ability is used.)",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -6445,32 +6322,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "3386-d1b5-13d3-a665"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Munitorum Cherub",
-                    "hidden": false,
-                    "id": "4e3d-c503-6fe3-b89d",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Munitorum Cherub",
-                        "id": "a6b4-5359-c4ad-3495",
-                        "hidden": false,
-                        "description": "Once per battle, after selecting targets for this unit’s weapons, you may ‘use the blessed ammunition’ and select a model in this unit. If you do, for each attack made for the selected model this turn, reroll a failed Hit and Wound roll for that attack. (Use the Cherub models to note when a unit has yet to use this ability and remove them after the ability is used.)",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -10193,7 +10044,7 @@
             "name": "Patch Notes",
             "id": "e968-d0ea-85a7-48b4",
             "hidden": false,
-            "description": "## Adepta Sororitas 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 4th)\n\n• Catalogue created.",
+            "description": "## Adepta Sororitas 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 11th)\n\n• Imagifier now uses checkbox-style Attached Imagifier selections on Battle Sisters, Dominions, and Retributors while remaining a linked unit.\n• Munitorum Cherub now uses checkbox-style Paid Wargear selections on Battle Sisters, Dominions, and Retributors.\n• Sororitas Rhino and Immolator: Dozer Blade now uses a checkbox-style Paid Wargear selection.\n• Exorcist and Castigator: Dozer Spikes now use checkbox-style Paid Wargear selections.\n• Hunter-Killer Missile now uses checkbox-style Paid Wargear selections on Sororitas Rhino, Immolator, Exorcist, and Castigator.\n• Smoke Launchers now use checkbox-style Paid Wargear selections on Sororitas Rhino, Immolator, Exorcist, and Castigator.\n• Mortifiers: Anchorite Sarcophagus now uses a checkbox-style Unit Upgrade selection.\n• Dominions: removed the separate Grenades and Bombs subcategories; both Plasma Grenades, both Melta Bombs, and Munitorum Cherub now appear directly under Paid Wargear.\n• Celestian Sacresants: Simulacrum Imperialis now uses a checkbox-style Paid Wargear selection.",
             "noindex": false
           }
         ],
@@ -10211,7 +10062,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV20: Patch Notes baseline updated to Adepta Sororitas 3.3.5. No army-rules changes are mirrored into the listbuilder in this baseline-sync pass; the existing Catalogue Bugfixes section is retained unchanged."
+        "comment": "REV22: added Dozer Blade checkbox presentation on Sororitas Rhino and Immolator and rebuilt Catalogue Bugfixes (September 11th) so every current Sororitas catalogue cleanup change is explicitly listed."
       }
     ],
     "sharedSelectionEntries": [
@@ -10360,6 +10211,6 @@
       }
     ],
     "authorName": "40k Reforged Homebrew",
-    "comment": "PHASE 0.1 STRUCTURAL SHELL\nScope intentionally limited to Unit Name, Unit Class, Unit Category, Points Cost, and Attachments. Imagifier uses the nested Additional Leader pattern. Loadouts, Additional Copy Costs, unit-size UI, ratio restrictions, and other non-attachment list-building mechanics are intentionally deferred.\n\nPHASE 0.2 LEADER LOADOUT PASS\nEquipment added only for Canoness, Palatine, Dogmata, Imagifier, and Dialogus. Imagifier remains nested as Additional Leader. No non-Leader loadouts added.\n\nPHASE 0.3 BATTLE SISTERS LOADOUT PASS\nAdded equipment only for Battle Sisters. Existing Leader loadouts and Imagifier Additional Leader structure are preserved.\n\nPHASE 0.4 ELITES / DOMINIONS / PARAGONS LOADOUT PASS\nAdded loadouts for Sisters Repentia, Celestine, Hospitaller, Celestian Sacresants, Dominions, Paragon Warsuits, and Arco-Flagellants. Sisters Novitiates remain intentionally untouched.\n\nPHASE 0.5 ZEPHYRIM / VEHICLES / RETRIBUTORS LOADOUT PASS\nCorrected Repentia Superior placement. Added Zephyrim, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and Retributors. Seraphim remain intentionally untouched.\n\nPHASE 0.5A ZEPHYRIM SOURCE CONFIRMATION\nZephyrim presentation confirmed against the clarified source: Zephyrim Superior is the free Plasma Pistol / Pennant model; Zephyrim 2-5 retain Bolt Pistol + Power Sword with paid Hand Flamer / Inferno Pistol upgrades. Seraphim remain untouched.\n\nPHASE 0.5B PAID WARGEAR / RETRIBUTOR UI FIX\nAll direct Paid Wargear entries now use optional max-1 selection groups instead of quantity spinners. Retributors 2-5 no longer auto-select a heavy weapon, preventing the roster from opening in an illegal 4x default state.\n\nPHASE 0.5C RETRIBUTOR NONE / VALIDATION UI\nRetributors 2-5 now use optional 0/1 heavy-weapon lists, allowing New Recruit to display its built-in (None) state. A hidden semantic category counts real heavy-weapon assignments and a custom error explains when fewer than four models are configured.\n\nREV9 CONSTRUCTIVE ERROR + UNIVERSAL SYSTEM MIGRATION\nAdepta Sororitas now use Game System revision 11. Added the standard Additional Copy Costs subsystem for all 14 native non-Rare Other units, including Configuration safeguards and per-unit reminder links. Canoness, Palatine, Dogmata, and Dialogus use constructive missing-attachment validation; Battle Sisters, Dominions, and Retributors use constructive external-Leader host limits; Canoness, Celestine, and Hospitaller use constructive Rare limits. Imagifier remains a nested Countless Additional Leader and does not consume the external Leader association slot. Retributor heavy-weapon validation is preserved unchanged. Sisters Novitiates and Seraphim remain intentionally without loadout implementations.\n\nREV10 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, categories, Imagifier nesting, Retributor heavy-weapon validation, or intentional empty-unit structures were otherwise changed.\n\nREV11 POLISH PASS\nAdded explicit model headers to Canoness, Palatine, Dogmata, Dialogus, Celestine, Hospitaller, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and the shared Imagifier; added an Arco-Flagellants 1-10 grouped header; flattened Battle Sisters, Dominions, and Retributors specialist models into Loadout Options; renamed their Additional Leader groups to Attached Imagifier; standardized their external-Leader errors; converted all nine Superior combi-weapon packages to meaningful-choice-first '&' grammar; renamed Paragon Warsuits Additional Models to Additional Model; named the two Dominion grenade slots Grenade and Additional Grenade; and standardized Canoness, Celestine, and Hospitaller Rare errors. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. Retributor heavy-weapon validation, Imagifier nesting, points, Additional Copy Costs, categories, attachment mechanics, and all other rules semantics remain unchanged.\n\nREV12 RETROSPECTIVE POLISH PASS\nRevisited Adepta Sororitas against the final cross-faction presentation standard. Corrected the live Sisters Repentia authoring note to reflect Repentia Superior as the Neural Whips model; modernized the shared Imagifier comment to Nested Attached Leader terminology; and updated the live Additional Copy Costs comment to version-agnostic shared Game System wording. Historical phase/revision provenance is preserved unchanged. All IDs, SelectionEntry names, loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, Additional Copy Costs arithmetic, categories, and all other rules semantics remain unchanged.\n\nREV13 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Battle Sisters and Sisters Novitiates now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 84 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 14 native Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists, and no Counts As relationship merges the two Troop datasheets. Imagifier remains a nested Countless attached Leader and does not participate in Troop duplicate accounting. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. All loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, categories, and other catalogue semantics remain unchanged.\n\nREV14 NOVITIATE RATIO LIMIT TEST\nAdded the source restriction allowing no more than one Sisters Novitiates unit for each Battle Sisters unit. The restriction is intentionally permissive at selection time and enforced through a custom player-facing ratio error rather than a New Recruit stock max-constraint error. A visible Sisters Novitiates Support Requirement rule records the source wording. Battle Sisters and Sisters Novitiates remain separate Troop copy-cost families; points, categories, loadouts, attachments, Additional Copy Costs, and all unrelated catalogue semantics are unchanged.\n\nREV15 CELESTIAN SACRESANTS EXPORT PACKAGE\nCelestian Sacresants 2-5 now present one mandatory combined squad-loadout choice: 4x Anointed Halberd & Bolt Pistol or 4x Hallowed Mace & Bolt Pistol. The previous standalone 4x Bolt Pistol presentation is retained only as an inert hidden compatibility shell. No points, unit categories, copy-cost behavior, Paid Wargear, Superior loadout, or other unit semantics changed.\n\nREV16 POLISH PASS\nUpdated to Game System revision 20 and retargeted Battle Sisters and Sisters Novitiates to the Additional Copy Cost - Troop short-form rule. Zephyrim Hand Flamer and Inferno Pistol limits are now permissive selections with separate constructive max-two errors instead of cross-model hiding. Sisters Novitiates and Seraphim now show a Loadout Options placeholder directing players to the army rules PDF and Reforged Discord while their full listbuilder loadouts are pending. Castigator Pintle Storm Bolter now sits under a top-level Pintle Weapons section. Paragon Warsuit slot headers are suppressed. Dominions Plasma Grenades and Melta Bombs now use checklist-style bearer entries. Across implemented model loadouts, melee weapon choices are presented first wherever a model has multiple weapon-choice groups. Existing surviving IDs, points, categories, attachment behavior, copy-cost arithmetic, Novitiate ratio validation, Rare validation, and unrelated mechanics are unchanged.\n\nREV17 — ADEPTA SORORITAS 3.3.4\nRetributors increased from 110 to 120 Points. Removed the cross-model restriction that limited Heavy Flamers, Heavy Bolters, and Multi-Meltas to at most two copies each; Retributors 2-5 may now independently select any of those weapons in any combination. Existing weapon selection IDs, per-model max-one weapon groups, categories, GS20 copy-cost links, and unrelated mechanics are unchanged.\n\nREV18 — RETRIBUTOR DEFAULTS + PATCH NOTES CONFIGURATION\nRetributors 2-5 are now mandatory one-of-three heavy-weapon selections and each defaults to Heavy Flamer, removing the visible (None) state. Removed the obsolete bespoke Retributor heavy-weapon assignment/restriction error. Added an automatically present Configuration item, Patch Notes (3.3.4), summarizing the 3.3.4 Retributor changes. Existing Retributor weapon IDs and unrelated mechanics are unchanged.\n\nREV19 — STANDARD PATCH NOTES FORMAT\nReworked the automatically present Patch Notes Configuration into the standard two-section format. Adepta Sororitas 3.3.4 now briefly records the Retributor 110 → 120 Points increase and removal of the two-copy restriction on Heavy Flamers, Heavy Bolters, and Multi-Meltas, with a Reforged Discord Server reference for the full rules patch. Added Catalogue Bugfixes (September 4th) with 'Catalogue created.' Existing Patch Notes entry/rule IDs, automatic default insertion, Retributor mechanics, and unrelated catalogue semantics are unchanged.\n\nREV20 — ADEPTA SORORITAS 3.3.5 BASELINE SYNC\nUpdated the army-rules baseline from 3.3.4 to 3.3.5 and retargeted the catalogue from Game System revision 20 to revision 21. No unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, validation, or other catalogue mechanics changed."
+    "comment": "PHASE 0.1 STRUCTURAL SHELL\nScope intentionally limited to Unit Name, Unit Class, Unit Category, Points Cost, and Attachments. Imagifier uses the nested Additional Leader pattern. Loadouts, Additional Copy Costs, unit-size UI, ratio restrictions, and other non-attachment list-building mechanics are intentionally deferred.\n\nPHASE 0.2 LEADER LOADOUT PASS\nEquipment added only for Canoness, Palatine, Dogmata, Imagifier, and Dialogus. Imagifier remains nested as Additional Leader. No non-Leader loadouts added.\n\nPHASE 0.3 BATTLE SISTERS LOADOUT PASS\nAdded equipment only for Battle Sisters. Existing Leader loadouts and Imagifier Additional Leader structure are preserved.\n\nPHASE 0.4 ELITES / DOMINIONS / PARAGONS LOADOUT PASS\nAdded loadouts for Sisters Repentia, Celestine, Hospitaller, Celestian Sacresants, Dominions, Paragon Warsuits, and Arco-Flagellants. Sisters Novitiates remain intentionally untouched.\n\nPHASE 0.5 ZEPHYRIM / VEHICLES / RETRIBUTORS LOADOUT PASS\nCorrected Repentia Superior placement. Added Zephyrim, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and Retributors. Seraphim remain intentionally untouched.\n\nPHASE 0.5A ZEPHYRIM SOURCE CONFIRMATION\nZephyrim presentation confirmed against the clarified source: Zephyrim Superior is the free Plasma Pistol / Pennant model; Zephyrim 2-5 retain Bolt Pistol + Power Sword with paid Hand Flamer / Inferno Pistol upgrades. Seraphim remain untouched.\n\nPHASE 0.5B PAID WARGEAR / RETRIBUTOR UI FIX\nAll direct Paid Wargear entries now use optional max-1 selection groups instead of quantity spinners. Retributors 2-5 no longer auto-select a heavy weapon, preventing the roster from opening in an illegal 4x default state.\n\nPHASE 0.5C RETRIBUTOR NONE / VALIDATION UI\nRetributors 2-5 now use optional 0/1 heavy-weapon lists, allowing New Recruit to display its built-in (None) state. A hidden semantic category counts real heavy-weapon assignments and a custom error explains when fewer than four models are configured.\n\nREV9 CONSTRUCTIVE ERROR + UNIVERSAL SYSTEM MIGRATION\nAdepta Sororitas now use Game System revision 11. Added the standard Additional Copy Costs subsystem for all 14 native non-Rare Other units, including Configuration safeguards and per-unit reminder links. Canoness, Palatine, Dogmata, and Dialogus use constructive missing-attachment validation; Battle Sisters, Dominions, and Retributors use constructive external-Leader host limits; Canoness, Celestine, and Hospitaller use constructive Rare limits. Imagifier remains a nested Countless Additional Leader and does not consume the external Leader association slot. Retributor heavy-weapon validation is preserved unchanged. Sisters Novitiates and Seraphim remain intentionally without loadout implementations.\n\nREV10 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, categories, Imagifier nesting, Retributor heavy-weapon validation, or intentional empty-unit structures were otherwise changed.\n\nREV11 POLISH PASS\nAdded explicit model headers to Canoness, Palatine, Dogmata, Dialogus, Celestine, Hospitaller, Sororitas Rhino, Immolator, Penitent Engines, Mortifiers, Exorcist, Castigator, and the shared Imagifier; added an Arco-Flagellants 1-10 grouped header; flattened Battle Sisters, Dominions, and Retributors specialist models into Loadout Options; renamed their Additional Leader groups to Attached Imagifier; standardized their external-Leader errors; converted all nine Superior combi-weapon packages to meaningful-choice-first '&' grammar; renamed Paragon Warsuits Additional Models to Additional Model; named the two Dominion grenade slots Grenade and Additional Grenade; and standardized Canoness, Celestine, and Hospitaller Rare errors. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. Retributor heavy-weapon validation, Imagifier nesting, points, Additional Copy Costs, categories, attachment mechanics, and all other rules semantics remain unchanged.\n\nREV12 RETROSPECTIVE POLISH PASS\nRevisited Adepta Sororitas against the final cross-faction presentation standard. Corrected the live Sisters Repentia authoring note to reflect Repentia Superior as the Neural Whips model; modernized the shared Imagifier comment to Nested Attached Leader terminology; and updated the live Additional Copy Costs comment to version-agnostic shared Game System wording. Historical phase/revision provenance is preserved unchanged. All IDs, SelectionEntry names, loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, Additional Copy Costs arithmetic, categories, and all other rules semantics remain unchanged.\n\nREV13 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Battle Sisters and Sisters Novitiates now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 84 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 14 native Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists, and no Counts As relationship merges the two Troop datasheets. Imagifier remains a nested Countless attached Leader and does not participate in Troop duplicate accounting. Sisters Novitiates and Seraphim remain intentionally without loadout implementations. All loadouts, Attached Imagifier behavior, external Leader limits, Rare validation, Retributor heavy-weapon validation, points, categories, and other catalogue semantics remain unchanged.\n\nREV14 NOVITIATE RATIO LIMIT TEST\nAdded the source restriction allowing no more than one Sisters Novitiates unit for each Battle Sisters unit. The restriction is intentionally permissive at selection time and enforced through a custom player-facing ratio error rather than a New Recruit stock max-constraint error. A visible Sisters Novitiates Support Requirement rule records the source wording. Battle Sisters and Sisters Novitiates remain separate Troop copy-cost families; points, categories, loadouts, attachments, Additional Copy Costs, and all unrelated catalogue semantics are unchanged.\n\nREV15 CELESTIAN SACRESANTS EXPORT PACKAGE\nCelestian Sacresants 2-5 now present one mandatory combined squad-loadout choice: 4x Anointed Halberd & Bolt Pistol or 4x Hallowed Mace & Bolt Pistol. The previous standalone 4x Bolt Pistol presentation is retained only as an inert hidden compatibility shell. No points, unit categories, copy-cost behavior, Paid Wargear, Superior loadout, or other unit semantics changed.\n\nREV16 POLISH PASS\nUpdated to Game System revision 20 and retargeted Battle Sisters and Sisters Novitiates to the Additional Copy Cost - Troop short-form rule. Zephyrim Hand Flamer and Inferno Pistol limits are now permissive selections with separate constructive max-two errors instead of cross-model hiding. Sisters Novitiates and Seraphim now show a Loadout Options placeholder directing players to the army rules PDF and Reforged Discord while their full listbuilder loadouts are pending. Castigator Pintle Storm Bolter now sits under a top-level Pintle Weapons section. Paragon Warsuit slot headers are suppressed. Dominions Plasma Grenades and Melta Bombs now use checklist-style bearer entries. Across implemented model loadouts, melee weapon choices are presented first wherever a model has multiple weapon-choice groups. Existing surviving IDs, points, categories, attachment behavior, copy-cost arithmetic, Novitiate ratio validation, Rare validation, and unrelated mechanics are unchanged.\n\nREV17 — ADEPTA SORORITAS 3.3.4\nRetributors increased from 110 to 120 Points. Removed the cross-model restriction that limited Heavy Flamers, Heavy Bolters, and Multi-Meltas to at most two copies each; Retributors 2-5 may now independently select any of those weapons in any combination. Existing weapon selection IDs, per-model max-one weapon groups, categories, GS20 copy-cost links, and unrelated mechanics are unchanged.\n\nREV18 — RETRIBUTOR DEFAULTS + PATCH NOTES CONFIGURATION\nRetributors 2-5 are now mandatory one-of-three heavy-weapon selections and each defaults to Heavy Flamer, removing the visible (None) state. Removed the obsolete bespoke Retributor heavy-weapon assignment/restriction error. Added an automatically present Configuration item, Patch Notes (3.3.4), summarizing the 3.3.4 Retributor changes. Existing Retributor weapon IDs and unrelated mechanics are unchanged.\n\nREV19 — STANDARD PATCH NOTES FORMAT\nReworked the automatically present Patch Notes Configuration into the standard two-section format. Adepta Sororitas 3.3.4 now briefly records the Retributor 110 → 120 Points increase and removal of the two-copy restriction on Heavy Flamers, Heavy Bolters, and Multi-Meltas, with a Reforged Discord Server reference for the full rules patch. Added Catalogue Bugfixes (September 4th) with 'Catalogue created.' Existing Patch Notes entry/rule IDs, automatic default insertion, Retributor mechanics, and unrelated catalogue semantics are unchanged.\n\nREV20 — ADEPTA SORORITAS 3.3.5 BASELINE SYNC\nUpdated the army-rules baseline from 3.3.4 to 3.3.5 and retargeted the catalogue from Game System revision 20 to revision 21. No unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, validation, or other catalogue mechanics changed.\n\nREV21 — CHECKBOX + DOMINIONS PAID WARGEAR CLEANUP\nMoved the existing max-1 constraints for Battle Sisters, Dominions, and Retributors Attached Imagifier groups directly onto their existing entryLinks so Imagifier presents as a checkbox-style linked unit while the shared Imagifier definition remains type=unit. Flattened Munitorum Cherub one-item optional wrappers into direct Paid Wargear checkboxes on all three eligible units. Flattened requested vehicle options into direct checkbox-style entries: Hunter-Killer Missile and Smoke Launchers on Sororitas Rhino, Immolator, Exorcist, and Castigator; Dozer Spikes on Exorcist and Castigator. Rhino/Immolator Dozer Blade remains unchanged because it was not part of this pass. Renamed Mortifiers Paid Wargear section to Unit Upgrade and flattened Anchorite Sarcophagus into a direct checkbox. Consolidated Dominions Grenades and Bombs subgroups into one Paid Wargear list with two identically named Plasma Grenade checkboxes, two identically named Melta Bomb checkboxes, and Munitorum Cherub. Flattened Celestian Sacresant Simulacrum Imperialis into a direct checkbox. Existing stable IDs, costs, rules, modifiers, max-1 constraint IDs, root points, categories, attachments, Additional Copy Costs, GS21 target, and unrelated mechanics are unchanged.\n\nREV22 — DOZER BLADE CHECKBOX + BUGFIX LOG AUDIT\nFlattened the remaining Dozer Blade one-item optional wrappers on Sororitas Rhino and Immolator into direct checkbox-style Paid Wargear selections, preserving stable selection IDs, costs, rules, modifiers, and max-1 constraint IDs. Rebuilt the September 11th Catalogue Bugfixes block to explicitly list every change from the current Sororitas UI cleanup cycle: Imagifier linked-unit checkboxes, Munitorum Cherub checkboxes, Dozer Blade, Dozer Spikes, Hunter-Killer Missile, Smoke Launchers, Anchorite Sarcophagus Unit Upgrade, Dominions grenade/bomb Paid Wargear consolidation, and Celestian Sacresant Simulacrum Imperialis. No root points, loadout legality, categories, attachments, Additional Copy Costs, GS21 target, or unrelated mechanics changed."
   }
 }

@@ -5,7 +5,7 @@
     "name": "Adeptus Custodes 3.3.5",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 12,
+    "revision": 13,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -2197,7 +2197,7 @@
             "name": "Patch Notes",
             "id": "731f-3f5e-60ee-ac54",
             "hidden": false,
-            "description": "## Adeptus Custodes 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 4th)\n\n• Catalogue created.",
+            "description": "## Adeptus Custodes 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 11th)\n\n• Smoke Launchers now uses a checkbox-style Paid Wargear selection.\n• Misericordia now uses checkbox-style Paid Wargear selections across all eligible units.\n• Custodian Guard: Praesidium Shield now uses a checkbox-style Paid Wargear selection.\n• Arae-Shrike now uses checkbox-style Paid Wargear selections on all eligible Shield-Captains.",
             "noindex": false
           }
         ],
@@ -2215,7 +2215,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV12: Automatically present Configuration entry using the standard two-section Patch Notes format. Adeptus Custodes 3.3.5 is the current army-rules baseline. No new army-rules changes are mirrored into the listbuilder in this baseline-sync pass; the existing Catalogue Bugfixes section is retained unchanged."
+        "comment": "REV12: Automatically present Configuration entry using the standard two-section Patch Notes format. Adeptus Custodes 3.3.5 is the current army-rules baseline. No new army-rules changes are mirrored into the listbuilder in this baseline-sync pass; the existing Catalogue Bugfixes section is retained unchanged.\nREV13: refreshed Catalogue Bugfixes to September 11th with checkbox-style optional wargear presentation."
       },
       {
         "type": "unit",
@@ -2388,12 +2388,30 @@
             "id": "6f3d-56f7-ca2e-b4a7",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "6fb1-bd3a-d035-667c",
+                "type": "upgrade",
+                "import": true,
+                "name": "Arae-Shrike",
                 "hidden": false,
+                "id": "5b91-16dc-9d52-a673",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Arae-Shrike",
+                    "id": "5f13-c986-0b28-0b8e",
+                    "hidden": false,
+                    "description": "After an enemy unit is Activated within 6” of this unit, you may roll a D6. On a 5+, that unit becomes ready, skip the Move and Attacks steps of this turn, and you cannot roll for this ability until the next battle round.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -2403,39 +2421,22 @@
                     "shared": true,
                     "id": "6c6c-a0be-bacd-e5be"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Arae-Shrike",
-                    "hidden": false,
-                    "id": "5b91-16dc-9d52-a673",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Arae-Shrike",
-                        "id": "5f13-c986-0b28-0b8e",
-                        "hidden": false,
-                        "description": "After an enemy unit is Activated within 6” of this unit, you may roll a D6. On a 5+, that unit becomes ready, skip the Move and Attacks steps of this turn, and you cannot roll for this ability until the next battle round.",
-                        "noindex": false
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "6154-bd3e-f947-4c78",
+                "type": "upgrade",
+                "import": true,
+                "name": "Misericordia",
                 "hidden": false,
+                "id": "8a64-389b-47f4-8ac2",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -2444,23 +2445,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "7b2a-3dc1-8a63-41d2"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Misericordia",
-                    "hidden": false,
-                    "id": "8a64-389b-47f4-8ac2",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
                   }
                 ]
               }
@@ -2663,12 +2647,30 @@
             "id": "e631-6a84-2a07-ed2b",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "32f1-540d-0a82-f516",
+                "type": "upgrade",
+                "import": true,
+                "name": "Arae-Shrike",
                 "hidden": false,
+                "id": "8114-7680-7f2c-e908",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Arae-Shrike",
+                    "id": "db82-b7fb-28f8-a0fe",
+                    "hidden": false,
+                    "description": "After an enemy unit is Activated within 6” of this unit, you may roll a D6. On a 5+, that unit becomes ready, skip the Move and Attacks steps of this turn, and you cannot roll for this ability until the next battle round.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -2678,39 +2680,22 @@
                     "shared": true,
                     "id": "ed82-604f-fb92-8e6c"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Arae-Shrike",
-                    "hidden": false,
-                    "id": "8114-7680-7f2c-e908",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Arae-Shrike",
-                        "id": "db82-b7fb-28f8-a0fe",
-                        "hidden": false,
-                        "description": "After an enemy unit is Activated within 6” of this unit, you may roll a D6. On a 5+, that unit becomes ready, skip the Move and Attacks steps of this turn, and you cannot roll for this ability until the next battle round.",
-                        "noindex": false
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "3669-e3c8-ba89-72f9",
+                "type": "upgrade",
+                "import": true,
+                "name": "Misericordia",
                 "hidden": false,
+                "id": "be8a-8c9e-f9c3-896e",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -2719,23 +2704,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "d0aa-a6b1-de5c-7964"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Misericordia",
-                    "hidden": false,
-                    "id": "be8a-8c9e-f9c3-896e",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
                   }
                 ]
               }
@@ -2934,12 +2902,30 @@
             "id": "5408-67a2-f4b9-868f",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "3f4c-b828-5f6e-571a",
+                "type": "upgrade",
+                "import": true,
+                "name": "Arae-Shrike",
                 "hidden": false,
+                "id": "0084-cca1-9357-9aff",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Arae-Shrike",
+                    "id": "3419-a8f2-a7db-2ac0",
+                    "hidden": false,
+                    "description": "After an enemy unit is Activated within 6” of this unit, you may roll a D6. On a 5+, that unit becomes ready, skip the Move and Attacks steps of this turn, and you cannot roll for this ability until the next battle round.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -2949,39 +2935,22 @@
                     "shared": true,
                     "id": "100a-6d19-a962-e636"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Arae-Shrike",
-                    "hidden": false,
-                    "id": "0084-cca1-9357-9aff",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Arae-Shrike",
-                        "id": "3419-a8f2-a7db-2ac0",
-                        "hidden": false,
-                        "description": "After an enemy unit is Activated within 6” of this unit, you may roll a D6. On a 5+, that unit becomes ready, skip the Move and Attacks steps of this turn, and you cannot roll for this ability until the next battle round.",
-                        "noindex": false
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "03af-bbe9-7165-764c",
+                "type": "upgrade",
+                "import": true,
+                "name": "Misericordia",
                 "hidden": false,
+                "id": "de8f-61c5-2ec8-5f0c",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -2990,23 +2959,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "32e8-28b1-6ba9-d107"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Misericordia",
-                    "hidden": false,
-                    "id": "de8f-61c5-2ec8-5f0c",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
                   }
                 ]
               }
@@ -3167,12 +3119,21 @@
             "id": "011a-0f84-d2af-8148",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "8c6a-5f0e-3001-dc4e",
+                "type": "upgrade",
+                "import": true,
+                "name": "Praesidium Shield",
                 "hidden": false,
+                "id": "81ab-6ebf-5a1e-5b89",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -3182,30 +3143,22 @@
                     "shared": true,
                     "id": "9881-4ea0-348c-3b1c"
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Praesidium Shield",
-                    "hidden": false,
-                    "id": "81ab-6ebf-5a1e-5b89",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "68c2-b6ed-0565-5ed1",
+                "type": "upgrade",
+                "import": true,
+                "name": "Misericordia",
                 "hidden": false,
+                "id": "3e6b-3bc1-8b84-a5bd",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -3214,23 +3167,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "3353-e57a-be4c-d81e"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Misericordia",
-                    "hidden": false,
-                    "id": "3e6b-3bc1-8b84-a5bd",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -3389,12 +3325,21 @@
             "id": "873b-8deb-4881-19dc",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "1cc1-8b97-5092-ad6d",
+                "type": "upgrade",
+                "import": true,
+                "name": "Misericordia",
                 "hidden": false,
+                "id": "a528-7269-d68b-b340",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -3403,23 +3348,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "4217-4230-12a3-bd82"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Misericordia",
-                    "hidden": false,
-                    "id": "a528-7269-d68b-b340",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
                   }
                 ]
               }
@@ -3563,12 +3491,21 @@
             "id": "f8e8-9f80-0c03-52bb",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "e393-c9c6-4c01-fcba",
+                "type": "upgrade",
+                "import": true,
+                "name": "Misericordia",
                 "hidden": false,
+                "id": "8ef6-61b3-cd8b-678e",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -3577,23 +3514,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "8e0b-13f8-3819-2db8"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Misericordia",
-                    "hidden": false,
-                    "id": "8ef6-61b3-cd8b-678e",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -3717,12 +3637,21 @@
             "id": "7ea5-983a-8402-a643",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "66c0-bc2f-7362-c35f",
+                "type": "upgrade",
+                "import": true,
+                "name": "Misericordia",
                 "hidden": false,
+                "id": "831b-de7f-bf0f-6784",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -3731,23 +3660,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "a965-c4d8-f255-d967"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Misericordia",
-                    "hidden": false,
-                    "id": "831b-de7f-bf0f-6784",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -3898,12 +3810,21 @@
             "id": "dfc5-5c44-0e6e-d4aa",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "d6e5-3482-a2ba-dcee",
+                "type": "upgrade",
+                "import": true,
+                "name": "Misericordia",
                 "hidden": false,
+                "id": "157f-b0a8-fa48-8922",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -3912,23 +3833,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "3aad-5953-10a8-7f24"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Misericordia",
-                    "hidden": false,
-                    "id": "157f-b0a8-fa48-8922",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -4071,12 +3975,21 @@
             "id": "06a0-59be-6b6a-07a1",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "e002-79fb-8678-4b1b",
+                "type": "upgrade",
+                "import": true,
+                "name": "Misericordia",
                 "hidden": false,
+                "id": "27c4-885a-db8f-7e1a",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4085,23 +3998,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "5619-d0b0-b127-6d25"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Misericordia",
-                    "hidden": false,
-                    "id": "27c4-885a-db8f-7e1a",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -4244,12 +4140,21 @@
             "id": "cf98-e0a4-ca22-624b",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "934a-6d39-d7d3-55d0",
+                "type": "upgrade",
+                "import": true,
+                "name": "Misericordia",
                 "hidden": false,
+                "id": "8ffc-4ce8-6bef-90ce",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4258,23 +4163,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "bdc8-6fc3-aa0c-9873"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Misericordia",
-                    "hidden": false,
-                    "id": "8ffc-4ce8-6bef-90ce",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -4417,12 +4305,21 @@
             "id": "65a5-6f09-460c-77c7",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "9073-e497-5c9b-f250",
+                "type": "upgrade",
+                "import": true,
+                "name": "Misericordia",
                 "hidden": false,
+                "id": "52a3-22a0-b12c-8589",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4431,23 +4328,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "f382-aae0-7cf1-6960"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Misericordia",
-                    "hidden": false,
-                    "id": "52a3-22a0-b12c-8589",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -4669,12 +4549,32 @@
                     ]
                   }
                 ]
-              },
+              }
+            ],
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "3afb-164f-bb5d-98f0",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "05c6-c8c5-98b5-9ecb",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Smoke Launchers",
+                    "id": "0ee0-ce87-4a14-e2a6",
+                    "hidden": false,
+                    "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, until the end of the battle round, for each ranged attack that targets this unit, the Hit Roll for that attack is worsened by 1, and you cannot roll for this ability until the next battle round.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4683,32 +4583,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "f76b-b83e-31b1-dc10"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "05c6-c8c5-98b5-9ecb",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Smoke Launchers",
-                        "id": "0ee0-ce87-4a14-e2a6",
-                        "hidden": false,
-                        "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, until the end of the battle round, for each ranged attack that targets this unit, the Hit Roll for that attack is worsened by 1, and you cannot roll for this ability until the next battle round.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -4740,6 +4614,6 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "ADEPTUS CUSTODES CURRENT-STATE BASELINE. All 12 native datasheets are fixed one-model selections. The three Shield-Captains are counted Rare Leaders, cannot attach, and share one explicit army-wide SHIELD-CAPTAIN max-1 restriction. Redundant individual Rare max constraints are omitted so New Recruit shows the mutual-exclusion counter plus Leader Capacity counter only. Left Hand of the Emperor is an optional unchecked Configuration placeholder for a future Sisters of Silence reusable library.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nAll 12 native Adeptus Custodes datasheets now expose their simple loadouts and paid wargear. Arae-Shrike and other ability-only paid options include their player-facing rules. Left Hand of the Emperor remains a Sisters of Silence placeholder. All native non-Rare Other units use the soft 1/2/3 Additional Copy Cost system.\n\nCONSTRUCTIVE ERROR MIGRATION\nAdeptus Custodes now use Game System revision 11. Additional Copy Costs uses the current Configuration safeguard, and the shared SHIELD-CAPTAIN army limit uses constructive player-facing validation. The three Shield-Captains remain Rare, count toward Leader Capacity, cannot attach, and deliberately do not receive redundant individual Rare limits. Left Hand of the Emperor remains an untouched Phase 0.1 Sisters of Silence placeholder. Existing loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, shared SHIELD-CAPTAIN limit logic, Left Hand of the Emperor placeholder, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV6 POLISH PASS\nAdded explicit model headers beneath Loadout Options for all 12 native one-model Adeptus Custodes datasheets. For Allarus Armour Shield-Captain, retained the complete atomic loadout packages but reordered the two Ballistus Grenade Launcher packages so the distinguishing weapon appears first and standardized '+' to '&'. Left Hand of the Emperor, Paid Wargear sections, shared SHIELD-CAPTAIN limit logic, Additional Copy Costs, points, categories, and all other mechanics remain unchanged.\n\nREV7 RETROSPECTIVE POLISH PASS\nRevisited Adeptus Custodes against the final cross-faction presentation standard. Modernized the three live Shield-Captain limit comments, updated the live Additional Copy Costs comment to version-agnostic shared Game System wording, and replaced the generic Phase 0.1 catalogue baseline with a current-state baseline using Leader Capacity terminology. Historical migration notes and the genuinely deferred Left Hand of the Emperor Sisters of Silence integration placeholder are preserved unchanged. All IDs, SelectionEntry names, loadouts, Paid Wargear, shared SHIELD-CAPTAIN validation, Additional Copy Costs arithmetic, points, categories, constraints, and all other rules semantics remain unchanged.\n\nREV8 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Custodian Guard, the catalogue's sole native Troop datasheet, now uses the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 48 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same eight native Other copy families. No zero-point, generated, attached-free, or otherwise exempt native Troop unit exists. Left Hand of the Emperor remains an unresolved Sisters of Silence integration placeholder and is intentionally untouched. All Shield-Captain mutual-exclusion logic, Rare semantics, loadouts, Paid Wargear, points, categories, and other catalogue mechanics remain unchanged.\n\nREV9 — GS20 TROOP RULE + ALLARUS LOADOUT POLISH\nUpdated to Game System revision 20 and retargeted Custodian Guard to the Additional Copy Cost - Troop short-form rule. Reworked Allarus Armour Shield-Captain and Allarus Custodian loadout presentation so their main weapon package is Castellan Axe & Bolter, Guardian Spear & Bolter, or Pyrithite Spear & Melta [+10], with Ballistus Grenade Launcher displayed separately as fixed equipment. Existing surviving IDs, Shield-Captain validation, Rare behavior, points outside the requested Pyrithite package, categories, Additional Copy Cost arithmetic, and unrelated mechanics are unchanged.\n\nREV10 — PYRITHITE SPEAR COST FIX\nRemoved the erroneous +10 Points cost from every Pyrithite Spear & Melta option. Affected Allarus Armour Shield-Captain and Allarus Custodian. Names, IDs, loadout structure, Ballistus Grenade Launcher presentation, Troop copy-cost rule, and all unrelated mechanics are unchanged.\n\nREV11 — ADEPTUS CUSTODES 3.3.4 + STANDARD PATCH NOTES\nUpdated the catalogue title from Adeptus Custodes 3.3.3 to Adeptus Custodes 3.3.4. Added the standard automatically present Patch Notes Configuration. The Adeptus Custodes 3.3.4 section records that Allarus Armour Shield-Captain Pyrithite Spear & Melta no longer costs 10 Points, with a Reforged Discord Server reference for the full rules patch. Added Catalogue Bugfixes (September 4th) with 'Catalogue created.' No mechanical selections, points, loadout structures, validation, copy-cost arithmetic, or unrelated catalogue semantics were changed in this revision.\n\nREV12 — RULES BASELINE SYNC\nUpdated the player-facing army-rules baseline from Adeptus Custodes 3.3.4 to Adeptus Custodes 3.3.5 and retargeted the catalogue from Game System revision 20 to the current Game System revision 21. No unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, validation, or other catalogue mechanics changed in this pass."
+    "comment": "ADEPTUS CUSTODES CURRENT-STATE BASELINE. All 12 native datasheets are fixed one-model selections. The three Shield-Captains are counted Rare Leaders, cannot attach, and share one explicit army-wide SHIELD-CAPTAIN max-1 restriction. Redundant individual Rare max constraints are omitted so New Recruit shows the mutual-exclusion counter plus Leader Capacity counter only. Left Hand of the Emperor is an optional unchecked Configuration placeholder for a future Sisters of Silence reusable library.\n\nCOMPLETE LOADOUT + ADDITIONAL COPY COST PASS\nAll 12 native Adeptus Custodes datasheets now expose their simple loadouts and paid wargear. Arae-Shrike and other ability-only paid options include their player-facing rules. Left Hand of the Emperor remains a Sisters of Silence placeholder. All native non-Rare Other units use the soft 1/2/3 Additional Copy Cost system.\n\nCONSTRUCTIVE ERROR MIGRATION\nAdeptus Custodes now use Game System revision 11. Additional Copy Costs uses the current Configuration safeguard, and the shared SHIELD-CAPTAIN army limit uses constructive player-facing validation. The three Shield-Captains remain Rare, count toward Leader Capacity, cannot attach, and deliberately do not receive redundant individual Rare limits. Left Hand of the Emperor remains an untouched Phase 0.1 Sisters of Silence placeholder. Existing loadouts, points, and Additional Copy Costs arithmetic are otherwise unchanged.\n\nREV5 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, shared SHIELD-CAPTAIN limit logic, Left Hand of the Emperor placeholder, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV6 POLISH PASS\nAdded explicit model headers beneath Loadout Options for all 12 native one-model Adeptus Custodes datasheets. For Allarus Armour Shield-Captain, retained the complete atomic loadout packages but reordered the two Ballistus Grenade Launcher packages so the distinguishing weapon appears first and standardized '+' to '&'. Left Hand of the Emperor, Paid Wargear sections, shared SHIELD-CAPTAIN limit logic, Additional Copy Costs, points, categories, and all other mechanics remain unchanged.\n\nREV7 RETROSPECTIVE POLISH PASS\nRevisited Adeptus Custodes against the final cross-faction presentation standard. Modernized the three live Shield-Captain limit comments, updated the live Additional Copy Costs comment to version-agnostic shared Game System wording, and replaced the generic Phase 0.1 catalogue baseline with a current-state baseline using Leader Capacity terminology. Historical migration notes and the genuinely deferred Left Hand of the Emperor Sisters of Silence integration placeholder are preserved unchanged. All IDs, SelectionEntry names, loadouts, Paid Wargear, shared SHIELD-CAPTAIN validation, Additional Copy Costs arithmetic, points, categories, constraints, and all other rules semantics remain unchanged.\n\nREV8 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Custodian Guard, the catalogue's sole native Troop datasheet, now uses the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 48 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same eight native Other copy families. No zero-point, generated, attached-free, or otherwise exempt native Troop unit exists. Left Hand of the Emperor remains an unresolved Sisters of Silence integration placeholder and is intentionally untouched. All Shield-Captain mutual-exclusion logic, Rare semantics, loadouts, Paid Wargear, points, categories, and other catalogue mechanics remain unchanged.\n\nREV9 — GS20 TROOP RULE + ALLARUS LOADOUT POLISH\nUpdated to Game System revision 20 and retargeted Custodian Guard to the Additional Copy Cost - Troop short-form rule. Reworked Allarus Armour Shield-Captain and Allarus Custodian loadout presentation so their main weapon package is Castellan Axe & Bolter, Guardian Spear & Bolter, or Pyrithite Spear & Melta [+10], with Ballistus Grenade Launcher displayed separately as fixed equipment. Existing surviving IDs, Shield-Captain validation, Rare behavior, points outside the requested Pyrithite package, categories, Additional Copy Cost arithmetic, and unrelated mechanics are unchanged.\n\nREV10 — PYRITHITE SPEAR COST FIX\nRemoved the erroneous +10 Points cost from every Pyrithite Spear & Melta option. Affected Allarus Armour Shield-Captain and Allarus Custodian. Names, IDs, loadout structure, Ballistus Grenade Launcher presentation, Troop copy-cost rule, and all unrelated mechanics are unchanged.\n\nREV11 — ADEPTUS CUSTODES 3.3.4 + STANDARD PATCH NOTES\nUpdated the catalogue title from Adeptus Custodes 3.3.3 to Adeptus Custodes 3.3.4. Added the standard automatically present Patch Notes Configuration. The Adeptus Custodes 3.3.4 section records that Allarus Armour Shield-Captain Pyrithite Spear & Melta no longer costs 10 Points, with a Reforged Discord Server reference for the full rules patch. Added Catalogue Bugfixes (September 4th) with 'Catalogue created.' No mechanical selections, points, loadout structures, validation, copy-cost arithmetic, or unrelated catalogue semantics were changed in this revision.\n\nREV12 — RULES BASELINE SYNC\nUpdated the player-facing army-rules baseline from Adeptus Custodes 3.3.4 to Adeptus Custodes 3.3.5 and retargeted the catalogue from Game System revision 20 to the current Game System revision 21. No unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, validation, or other catalogue mechanics changed in this pass.\n\nREV13 — CHECKBOX WARGEAR CLEANUP\nFlattened optional one-item wrappers for Smoke Launchers, Misericordia, Custodian Guard Praesidium Shield, and Arae-Shrike into direct checkbox-style selections. Existing selection IDs, costs, rules, modifiers, and max-1 constraint IDs are preserved. The Shield-Captain Praesidium Shield remains a mandatory fixed loadout component and was intentionally not converted to an optional checkbox. Root points, loadout legality, categories, attachments, Additional Copy Costs, GS21 target, and unrelated mechanics are unchanged."
   }
 }

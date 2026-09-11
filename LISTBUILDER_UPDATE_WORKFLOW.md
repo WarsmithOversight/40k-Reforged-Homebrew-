@@ -47,7 +47,9 @@ Everything else below is treated as normal maintenance work and should be handle
 
 7. Patch Notes should contain only builder-relevant army changes.
    - Do not repeat changes already implemented in an earlier catalogue revision if the new rules publication merely makes them official.
-   - Preserve existing Catalogue Bugfixes sections unless intentionally replacing them.
+   - **Catalogue Bugfixes are cumulative.** Keep all previous bugfix bullets, update the `## Catalogue Bugfixes ([latest date])` heading to the current work date, and append new fixes to the existing list.
+   - Remove an older bugfix bullet only when that specific change has been explicitly reverted and is no longer true.
+   - Do not reset, replace, or prune the bugfix history merely because a new work session, revision, or date has started.
    - Always retain the standard Reforged Discord reference when Patch Notes are used.
 
 8. Keep the catalogue pointed at the current Game System revision.

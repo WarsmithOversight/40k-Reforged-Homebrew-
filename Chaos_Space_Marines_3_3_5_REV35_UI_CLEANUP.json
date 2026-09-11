@@ -5,7 +5,7 @@
     "name": "Chaos Space Marines 3.3.5",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 34,
+    "revision": 35,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -8503,7 +8503,7 @@
             "name": "Patch Notes",
             "id": "550c-1e43-1b35-f4b7",
             "hidden": false,
-            "description": "## Chaos Space Marines 3.3.5\n\n• Defiler reworked with a new primary cannon choice and two flexible weapon mounts.\n• Defiler: 180 → 260 Points.\n• Defiler Paid Wargear: Excruciator Cannons and Magma Cutters +10 → +20 Points.\n• Legionaries Chaos Champion ranged options are now Champion Boltgun, Champion Bolt Pistol, and Champion Plasma Pistol.\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 4th)\n\n• Various errors fixed from a bugged revision; recovered stable branch and implemented correct bugfixes.\n\n## Catalogue Bugfixes (September 8th)\n\n• Defiler: Missile Launcher restored as an option for both flexible weapon mounts.",
+            "description": "## Chaos Space Marines 3.3.5\n\n• Defiler reworked with a new primary cannon choice and two flexible weapon mounts.\n• Defiler: 180 → 260 Points.\n• Defiler Paid Wargear: Excruciator Cannons and Magma Cutters +10 → +20 Points.\n• Legionaries Chaos Champion ranged options are now Champion Boltgun, Champion Bolt Pistol, and Champion Plasma Pistol.\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 11th)\n\n• Converted Armour Piercing High Explosive Shells, Smoke Launchers, Cyclone Missiles, Venerable, Dozer Spikes, Frag Grenades, Krak Grenades, Breacher Charge, and Glorious Jump Pack options to checkbox-style selections.\n• Chaos Wardog: removed the Main Weapons and Paid Wargear presentation layers; both main weapon selectors and the optional pintle selector now appear directly under Chaos Wardog, with an explicit empty default pintle option.\n• Chaos Predator: moved the optional pintle weapon selector inside Loadout Options with no visible header.\n• Chaos Defiler: moved the (None) / Excruciator Cannons / Magma Cutters selector inside Loadout Options with no visible header and removed the separate Paid Wargear section.\n• Havocs: renamed Aspiring Champion to Havocs Champion.\n• Chosen: renamed Pack your lunch? to Presets and renamed its options to No Preset and Sandvich's Chosen.\n• Black Legion, Iron Warriors, Night Lords, and Alpha Legion Terminator Chaos Lords now show Leader Attachment: Cannot attach to anything.",
             "noindex": false
           }
         ],
@@ -8521,7 +8521,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV33: Chaos Space Marines 3.3.5 Patch Notes corrected to include the full builder-relevant Defiler cost changes and the Legionaries Chaos Champion ranged-option update.\nREV34: Added September 8th catalogue bugfix note for the omitted Defiler Missile Launcher option."
+        "comment": "REV35: refreshed Catalogue Bugfixes to September 11th with checkbox presentation cleanup, Wardog/Predator/Defiler loadout presentation cleanup, Havocs Champion naming, Chosen Presets naming, and missing Terminator Chaos Lord attachment rules."
       },
       {
         "type": "unit",
@@ -14698,12 +14698,30 @@
             "id": "f1aa-7710-c4d3-9772",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "8252-0950-9cad-beea",
+                "type": "upgrade",
+                "import": true,
+                "name": "Glorious Jump Pack",
                 "hidden": false,
+                "id": "4324-c8c3-e3a5-3726",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Glorious Jump Pack",
+                    "id": "cd5c-87ab-908b-0640",
+                    "hidden": false,
+                    "description": "This unit gains Fly and must instead attach to RAPTORS.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -14713,32 +14731,6 @@
                     "shared": true,
                     "id": "dce9-3a83-3bba-26e8",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Glorious Jump Pack",
-                    "hidden": false,
-                    "id": "4324-c8c3-e3a5-3726",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Glorious Jump Pack",
-                        "id": "cd5c-87ab-908b-0640",
-                        "hidden": false,
-                        "description": "This unit gains Fly and must instead attach to RAPTORS.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -15202,12 +15194,30 @@
             "id": "486f-8194-1bb3-ad74",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "bd6a-04ac-a752-bc63",
+                "type": "upgrade",
+                "import": true,
+                "name": "Glorious Jump Pack",
                 "hidden": false,
+                "id": "1fec-9ba9-dd55-af96",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Glorious Jump Pack",
+                    "id": "efe4-b338-00a1-8369",
+                    "hidden": false,
+                    "description": "This unit gains Fly and must instead attach to RAPTORS.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -15217,32 +15227,6 @@
                     "shared": true,
                     "id": "8407-0fd5-3cbb-4ecd",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Glorious Jump Pack",
-                    "hidden": false,
-                    "id": "1fec-9ba9-dd55-af96",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Glorious Jump Pack",
-                        "id": "efe4-b338-00a1-8369",
-                        "hidden": false,
-                        "description": "This unit gains Fly and must instead attach to RAPTORS.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -15706,12 +15690,30 @@
             "id": "0c9d-d4c1-4f87-1558",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "79b3-43d7-9127-e06c",
+                "type": "upgrade",
+                "import": true,
+                "name": "Glorious Jump Pack",
                 "hidden": false,
+                "id": "3fe3-7d69-f54a-1b20",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Glorious Jump Pack",
+                    "id": "70f6-c35e-355a-8975",
+                    "hidden": false,
+                    "description": "This unit gains Fly and must instead attach to RAPTORS.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -15721,32 +15723,6 @@
                     "shared": true,
                     "id": "90f7-dabd-7c37-a20a",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Glorious Jump Pack",
-                    "hidden": false,
-                    "id": "3fe3-7d69-f54a-1b20",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Glorious Jump Pack",
-                        "id": "70f6-c35e-355a-8975",
-                        "hidden": false,
-                        "description": "This unit gains Fly and must instead attach to RAPTORS.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -16210,12 +16186,30 @@
             "id": "1ba7-f4a7-02a7-0307",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "47b2-5756-eaec-f164",
+                "type": "upgrade",
+                "import": true,
+                "name": "Glorious Jump Pack",
                 "hidden": false,
+                "id": "29f8-3578-f478-f3d4",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Glorious Jump Pack",
+                    "id": "d119-0372-8e07-7c19",
+                    "hidden": false,
+                    "description": "This unit gains Fly and must instead attach to RAPTORS.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -16225,32 +16219,6 @@
                     "shared": true,
                     "id": "5ba5-b5f3-b0f4-0857",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Glorious Jump Pack",
-                    "hidden": false,
-                    "id": "29f8-3578-f478-f3d4",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Glorious Jump Pack",
-                        "id": "d119-0372-8e07-7c19",
-                        "hidden": false,
-                        "description": "This unit gains Fly and must instead attach to RAPTORS.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -16526,6 +16494,15 @@
               }
             ]
           }
+        ],
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "0f60-97c2-a06a-57f7",
+            "hidden": false,
+            "description": "Cannot attach to anything.",
+            "noindex": false
+          }
         ]
       },
       {
@@ -16795,6 +16772,15 @@
                 ]
               }
             ]
+          }
+        ],
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "492c-f88e-da72-4c9c",
+            "hidden": false,
+            "description": "Cannot attach to anything.",
+            "noindex": false
           }
         ]
       },
@@ -17066,6 +17052,15 @@
               }
             ]
           }
+        ],
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "90f8-07ad-448a-615e",
+            "hidden": false,
+            "description": "Cannot attach to anything.",
+            "noindex": false
+          }
         ]
       },
       {
@@ -17335,6 +17330,15 @@
                 ]
               }
             ]
+          }
+        ],
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "ac57-df92-ec0b-8284",
+            "hidden": false,
+            "description": "Cannot attach to anything.",
+            "noindex": false
           }
         ]
       },
@@ -20428,12 +20432,21 @@
             "id": "72b6-46b7-c987-99e8",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "a96c-14de-8eb9-8736",
+                "type": "upgrade",
+                "import": true,
+                "name": "Frag Grenades",
                 "hidden": false,
+                "id": "dbb4-d81b-4705-5bbb",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -20444,30 +20457,22 @@
                     "id": "864a-5031-875c-bd12",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Frag Grenades",
-                    "hidden": false,
-                    "id": "dbb4-d81b-4705-5bbb",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "a707-172d-1de5-72c9",
+                "type": "upgrade",
+                "import": true,
+                "name": "Krak Grenades",
                 "hidden": false,
+                "id": "99cf-0f5c-32b5-9960",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -20477,23 +20482,6 @@
                     "shared": true,
                     "id": "27ca-0581-736c-9c16",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Krak Grenades",
-                    "hidden": false,
-                    "id": "99cf-0f5c-32b5-9960",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -21518,12 +21506,21 @@
             "id": "5f80-b4c4-959a-f5fc",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "0bb6-6722-7c4e-0194",
+                "type": "upgrade",
+                "import": true,
+                "name": "Cyclone Missiles",
                 "hidden": false,
+                "id": "5b88-6e52-fa82-85af",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -21533,23 +21530,6 @@
                     "shared": true,
                     "id": "ce9b-8f08-9cc2-a128",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Cyclone Missiles",
-                    "hidden": false,
-                    "id": "5b88-6e52-fa82-85af",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
                   }
                 ]
               }
@@ -21841,7 +21821,7 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Pack your lunch?",
+                "name": "Presets",
                 "id": "fb89-21ea-7313-8115",
                 "hidden": false,
                 "sortIndex": 1,
@@ -21869,7 +21849,7 @@
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "No, I'll do it myself",
+                    "name": "No Preset",
                     "hidden": false,
                     "id": "3e12-7e63-1781-b139",
                     "sortIndex": 1,
@@ -22941,7 +22921,7 @@
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Yes, please!",
+                    "name": "Sandvich's Chosen",
                     "hidden": false,
                     "id": "7e73-e62d-2a45-dcac",
                     "sortIndex": 2,
@@ -23668,12 +23648,21 @@
             "id": "60fb-5702-3b3b-3ed3",
             "hidden": false,
             "sortIndex": 3,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "609a-c06b-8a87-43ad",
+                "type": "upgrade",
+                "import": true,
+                "name": "Frag Grenades",
                 "hidden": false,
+                "id": "6b9b-e898-8d86-2704",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -23684,30 +23673,22 @@
                     "id": "d843-e99c-039d-0334",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Frag Grenades",
-                    "hidden": false,
-                    "id": "6b9b-e898-8d86-2704",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "df43-6bcb-e3a9-b9bf",
+                "type": "upgrade",
+                "import": true,
+                "name": "Krak Grenades",
                 "hidden": false,
+                "id": "4cf9-e3a3-b513-4776",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -23718,30 +23699,22 @@
                     "id": "e21e-f74f-0261-7ef0",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Krak Grenades",
-                    "hidden": false,
-                    "id": "4cf9-e3a3-b513-4776",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "f5d5-355a-a1ca-925c",
+                "type": "upgrade",
+                "import": true,
+                "name": "Breacher Charge",
                 "hidden": false,
+                "id": "63ed-f489-67cd-8d6f",
                 "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -23751,23 +23724,6 @@
                     "shared": true,
                     "id": "a83c-e664-d51d-70d7",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Breacher Charge",
-                    "hidden": false,
-                    "id": "63ed-f489-67cd-8d6f",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -23885,12 +23841,21 @@
             "id": "3404-34d5-f678-a105",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "4c39-7b53-7a3a-076f",
+                "type": "upgrade",
+                "import": true,
+                "name": "Dozer Spikes",
                 "hidden": false,
+                "id": "bfe9-9d0e-22c6-2064",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -23901,30 +23866,31 @@
                     "id": "8ae9-a2dd-cac1-88c0",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Dozer Spikes",
-                    "hidden": false,
-                    "id": "bfe9-9d0e-22c6-2064",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "ec21-e4d1-e80a-8d2c",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "8516-6618-fbb8-95fd",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Smoke Launchers",
+                    "id": "3b4c-621c-9082-213b",
+                    "hidden": false,
+                    "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, until the end of the battle round, for each ranged attack that targets this unit, the Hit Roll for that attack is worsened by 1, and you cannot roll for this ability until the next battle round.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -23934,32 +23900,6 @@
                     "shared": true,
                     "id": "96fa-d49a-9545-245a",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "8516-6618-fbb8-95fd",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Smoke Launchers",
-                        "id": "3b4c-621c-9082-213b",
-                        "hidden": false,
-                        "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, until the end of the battle round, for each ranged attack that targets this unit, the Hit Roll for that attack is worsened by 1, and you cannot roll for this ability until the next battle round.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -24855,7 +24795,7 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Aspiring Champion / Havoc 1",
+                "name": "Havocs Champion / Havoc 1",
                 "id": "777d-e047-9435-7369",
                 "hidden": false,
                 "sortIndex": 1,
@@ -24883,7 +24823,7 @@
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Aspiring Champion",
+                    "name": "Havocs Champion",
                     "hidden": false,
                     "id": "5d27-3dc8-94d0-8ab4",
                     "sortIndex": 1,
@@ -25769,83 +25709,75 @@
                       }
                     ],
                     "defaultSelectionEntryId": "3917-c651-48a2-5d45"
+                  },
+                  {
+                    "name": "​",
+                    "id": "f432-00be-78e6-1c25",
+                    "hidden": false,
+                    "sortIndex": 5,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5b57-29ce-988c-122e",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "376f-5a20-9c16-32ea",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "(None)",
+                        "hidden": false,
+                        "id": "dec0-995c-697c-8914",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Excruciator Cannons",
+                        "hidden": false,
+                        "id": "9ded-cca6-3ade-af83",
+                        "sortIndex": 2,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 20
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Magma Cutters",
+                        "hidden": false,
+                        "id": "efa5-d8a2-5b27-2b81",
+                        "sortIndex": 3,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 20
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "dec0-995c-697c-8914"
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "name": "Paid Wargear",
-            "id": "84fc-3384-1f69-d3d3",
-            "hidden": false,
-            "sortIndex": 2,
-            "selectionEntryGroups": [
-              {
-                "name": "​",
-                "id": "f432-00be-78e6-1c25",
-                "hidden": false,
-                "sortIndex": 1,
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "5b57-29ce-988c-122e",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "376f-5a20-9c16-32ea",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "(None)",
-                    "hidden": false,
-                    "id": "dec0-995c-697c-8914",
-                    "sortIndex": 1
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Excruciator Cannons",
-                    "hidden": false,
-                    "id": "9ded-cca6-3ade-af83",
-                    "sortIndex": 2,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Magma Cutters",
-                    "hidden": false,
-                    "id": "efa5-d8a2-5b27-2b81",
-                    "sortIndex": 3,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  }
-                ],
-                "defaultSelectionEntryId": "dec0-995c-697c-8914"
               }
             ]
           }
@@ -26355,70 +26287,70 @@
                         ]
                       }
                     ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Pintle Weapons",
-            "id": "641c-e1fc-1fde-1397",
-            "hidden": false,
-            "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "2445-85a6-5332-272a",
-                "includeChildSelections": false
-              }
-            ],
-            "selectionEntries": [
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Pintle Plasmagun",
-                "hidden": false,
-                "id": "c0ac-47a3-a752-a736",
-                "sortIndex": 1,
-                "costs": [
+                  },
                   {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 10
-                  }
-                ]
-              },
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Pintle Meltagun",
-                "hidden": false,
-                "id": "2a27-d50d-27ba-8d12",
-                "sortIndex": 2,
-                "costs": [
-                  {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 10
-                  }
-                ]
-              },
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Pintle Combi-Bolter",
-                "hidden": false,
-                "id": "dd03-0eb7-5ef2-4e5b",
-                "sortIndex": 3,
-                "costs": [
-                  {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 10
+                    "name": "​",
+                    "id": "641c-e1fc-1fde-1397",
+                    "hidden": false,
+                    "sortIndex": 4,
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2445-85a6-5332-272a",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pintle Plasmagun",
+                        "hidden": false,
+                        "id": "c0ac-47a3-a752-a736",
+                        "sortIndex": 1,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pintle Meltagun",
+                        "hidden": false,
+                        "id": "2a27-d50d-27ba-8d12",
+                        "sortIndex": 2,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pintle Combi-Bolter",
+                        "hidden": false,
+                        "id": "dd03-0eb7-5ef2-4e5b",
+                        "sortIndex": 3,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
@@ -26428,13 +26360,22 @@
             "name": "Paid Wargear",
             "id": "a5ce-b72b-1e48-d073",
             "hidden": false,
-            "sortIndex": 3,
-            "selectionEntryGroups": [
+            "sortIndex": 2,
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "d63e-0195-18a9-072b",
+                "type": "upgrade",
+                "import": true,
+                "name": "Dozer Spikes",
                 "hidden": false,
+                "id": "3c8e-2b7b-d1b8-57c0",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -26444,23 +26385,6 @@
                     "shared": true,
                     "id": "afea-95b7-6dd0-3222",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Dozer Spikes",
-                    "hidden": false,
-                    "id": "3c8e-2b7b-d1b8-57c0",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -26884,191 +26808,193 @@
                 "sortIndex": 1,
                 "selectionEntryGroups": [
                   {
-                    "name": "Main Weapons",
-                    "id": "74cc-a41f-6a12-66f4",
+                    "name": "​",
+                    "id": "8f09-d116-1ac5-2d54",
                     "hidden": false,
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
+                    "constraints": [
                       {
-                        "name": "​",
-                        "id": "8f09-d116-1ac5-2d54",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "03e3-0aac-fbab-38df",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "9160-0589-cbb9-3bfc",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Reaper Chaintalon",
-                            "hidden": false,
-                            "id": "ee89-d2a6-1c89-7a54",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Slaughter Claw",
-                            "hidden": false,
-                            "id": "1149-855d-610c-b677",
-                            "sortIndex": 2
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Daemonbreath Spear",
-                            "hidden": false,
-                            "id": "1250-c48e-8f39-83bb",
-                            "sortIndex": 3
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Avenger Chaincannon",
-                            "hidden": false,
-                            "id": "9a90-2c2d-9539-eef1",
-                            "sortIndex": 4
-                          }
-                        ],
-                        "defaultSelectionEntryId": "ee89-d2a6-1c89-7a54"
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "03e3-0aac-fbab-38df",
+                        "includeChildSelections": false
                       },
                       {
-                        "name": "​",
-                        "id": "32f2-58f4-7cbc-1ae4",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "9d29-1566-62ec-729f",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "21b6-1765-a400-e72b",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Reaper Chaintalon",
-                            "hidden": false,
-                            "id": "00dd-5125-ecdb-b1a6",
-                            "sortIndex": 1
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Slaughter Claw",
-                            "hidden": false,
-                            "id": "960b-eea5-a9f2-6821",
-                            "sortIndex": 2
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Daemonbreath Spear",
-                            "hidden": false,
-                            "id": "0cbc-e599-b0f9-9ea0",
-                            "sortIndex": 3
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Avenger Chaincannon",
-                            "hidden": false,
-                            "id": "fe89-11fb-f023-2fd2",
-                            "sortIndex": 4
-                          }
-                        ],
-                        "defaultSelectionEntryId": "00dd-5125-ecdb-b1a6"
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9160-0589-cbb9-3bfc",
+                        "includeChildSelections": false
                       }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Paid Wargear",
-            "id": "c20a-d6d6-54b5-96ef",
-            "hidden": false,
-            "sortIndex": 2,
-            "selectionEntryGroups": [
-              {
-                "name": "Pintle Weapons",
-                "id": "7e12-940f-f730-ff8f",
-                "hidden": false,
-                "sortIndex": 1,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "54f5-729e-c7bc-f132",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Diabolus Heavy Stubber",
-                    "hidden": false,
-                    "id": "0ab4-ff86-1076-bb9e",
-                    "sortIndex": 1,
-                    "costs": [
+                    ],
+                    "selectionEntries": [
                       {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Reaper Chaintalon",
+                        "hidden": false,
+                        "id": "ee89-d2a6-1c89-7a54",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Slaughter Claw",
+                        "hidden": false,
+                        "id": "1149-855d-610c-b677",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Daemonbreath Spear",
+                        "hidden": false,
+                        "id": "1250-c48e-8f39-83bb",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Avenger Chaincannon",
+                        "hidden": false,
+                        "id": "9a90-2c2d-9539-eef1",
+                        "sortIndex": 4
                       }
-                    ]
+                    ],
+                    "defaultSelectionEntryId": "ee89-d2a6-1c89-7a54"
                   },
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Havoc Launcher",
+                    "name": "​",
+                    "id": "32f2-58f4-7cbc-1ae4",
                     "hidden": false,
-                    "id": "ae61-1c97-f6b2-d207",
                     "sortIndex": 2,
-                    "costs": [
+                    "constraints": [
                       {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9d29-1566-62ec-729f",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "21b6-1765-a400-e72b",
+                        "includeChildSelections": false
                       }
-                    ]
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Reaper Chaintalon",
+                        "hidden": false,
+                        "id": "00dd-5125-ecdb-b1a6",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Slaughter Claw",
+                        "hidden": false,
+                        "id": "960b-eea5-a9f2-6821",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Daemonbreath Spear",
+                        "hidden": false,
+                        "id": "0cbc-e599-b0f9-9ea0",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Avenger Chaincannon",
+                        "hidden": false,
+                        "id": "fe89-11fb-f023-2fd2",
+                        "sortIndex": 4
+                      }
+                    ],
+                    "defaultSelectionEntryId": "00dd-5125-ecdb-b1a6"
+                  },
+                  {
+                    "name": "​",
+                    "id": "7e12-940f-f730-ff8f",
+                    "hidden": false,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f0f5-fb99-6a85-b5e0",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "54f5-729e-c7bc-f132",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "​",
+                        "hidden": false,
+                        "id": "1862-1863-8d49-aac6",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Diabolus Heavy Stubber",
+                        "hidden": false,
+                        "id": "0ab4-ff86-1076-bb9e",
+                        "sortIndex": 2,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Havoc Launcher",
+                        "hidden": false,
+                        "id": "ae61-1c97-f6b2-d207",
+                        "sortIndex": 3,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "1862-1863-8d49-aac6"
                   }
                 ]
               }
@@ -27216,12 +27142,30 @@
             "id": "cea1-930a-ff57-3697",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "1e1c-6519-b7b3-bca5",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "6ba5-8011-cb98-854b",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Smoke Launchers",
+                    "id": "baa2-b112-f071-7e4f",
+                    "hidden": false,
+                    "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, until the end of the battle round, for each ranged attack that targets this unit, the Hit Roll for that attack is worsened by 1, and you cannot roll for this ability until the next battle round.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -27231,32 +27175,6 @@
                     "shared": true,
                     "id": "38f5-5ab9-43ea-39d6",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "6ba5-8011-cb98-854b",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Smoke Launchers",
-                        "id": "baa2-b112-f071-7e4f",
-                        "hidden": false,
-                        "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, until the end of the battle round, for each ranged attack that targets this unit, the Hit Roll for that attack is worsened by 1, and you cannot roll for this ability until the next battle round.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -28309,12 +28227,30 @@
             "id": "6bbf-5382-adf8-640e",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "6e0b-afc9-e7e4-17d6",
+                "type": "upgrade",
+                "import": true,
+                "name": "Venerable",
                 "hidden": false,
+                "id": "79fe-3e8d-f428-9e2d",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Venerable",
+                    "id": "298c-1b42-c5aa-06dc",
+                    "hidden": false,
+                    "description": "This unit’s Health is improved by 1.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -28324,32 +28260,6 @@
                     "shared": true,
                     "id": "a8b4-3206-e87b-aefb",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Venerable",
-                    "hidden": false,
-                    "id": "79fe-3e8d-f428-9e2d",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Venerable",
-                        "id": "298c-1b42-c5aa-06dc",
-                        "hidden": false,
-                        "description": "This unit’s Health is improved by 1.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -29099,12 +29009,21 @@
             "id": "2097-a586-fcb8-102d",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "2872-6053-f14c-0c97",
+                "type": "upgrade",
+                "import": true,
+                "name": "Cyclone Missiles",
                 "hidden": false,
+                "id": "9c3c-9026-5afc-94d4",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -29114,23 +29033,6 @@
                     "shared": true,
                     "id": "20ff-86a0-5768-3480",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Cyclone Missiles",
-                    "hidden": false,
-                    "id": "9c3c-9026-5afc-94d4",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -29540,12 +29442,30 @@
             "id": "ecf0-8a96-54ae-87bd",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "899d-1d45-a4c9-3404",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "46e6-cdca-1656-f087",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Smoke Launchers",
+                    "id": "7c30-2332-e383-44b8",
+                    "hidden": false,
+                    "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, until the end of the battle round, for each ranged attack that targets this unit, the Hit Roll for that attack is worsened by 1, and you cannot roll for this ability until the next battle round.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -29556,39 +29476,31 @@
                     "id": "b73c-3de5-de9c-79ca",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "46e6-cdca-1656-f087",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Smoke Launchers",
-                        "id": "7c30-2332-e383-44b8",
-                        "hidden": false,
-                        "description": "After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, until the end of the battle round, for each ranged attack that targets this unit, the Hit Roll for that attack is worsened by 1, and you cannot roll for this ability until the next battle round.",
-                        "noindex": false
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "f42a-6395-3f14-135c",
+                "type": "upgrade",
+                "import": true,
+                "name": "Armour Piercing High Explosive Shells",
                 "hidden": false,
+                "id": "5024-ed3d-741f-1213",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Armour Piercing High Explosive Shells",
+                    "id": "39f5-acd3-9b5c-78de",
+                    "hidden": false,
+                    "description": "After this unit’s Move step, you may have its Earthshaker Cannon weapon lose Suppressive and gain Breach until the End step.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -29599,32 +29511,6 @@
                     "id": "63b6-75d7-e34b-7042",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Armour Piercing High Explosive Shells",
-                    "hidden": false,
-                    "id": "5024-ed3d-741f-1213",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Armour Piercing High Explosive Shells",
-                        "id": "39f5-acd3-9b5c-78de",
-                        "hidden": false,
-                        "description": "After this unit’s Move step, you may have its Earthshaker Cannon weapon lose Suppressive and gain Breach until the End step.",
-                        "noindex": false
-                      }
-                    ]
-                  }
                 ]
               }
             ]
@@ -29633,7 +29519,7 @@
         "comment": "LOADOUT REV11: fixed Earthshaker Cannon; mandatory Hull Heavy Bolter / Hull Heavy Flamer choice. The Hull prefix is a project presentation correction. Smoke Launchers +10 and Armour Piercing High Explosive Shells +10 are independent Paid Wargear choices and may both be selected."
       }
     ],
-    "comment": "LAYER 0.1 — LEGIONS AND UNIT SELECTION\nBuilt the Chaos Space Marines roster foundation from the Universal Unit Skeleton and PDF before any loadout work. Legion is a required Configuration selector with Black Legion, Iron Warriors, Night Lords, and Alpha Legion; Black Legion is the default. Legion-exclusive units use safe-hide presentation and constructive wrong-Legion errors. The generic Chaos Lord and Terminator Chaos Lord are intentionally compiled as four Legion-specific player-facing units each, all preserving their shared source profile/cost while carrying the exact Chaos Lord abilities of the selected Legion. Terminator Warsmith also receives the Iron Warriors Chaos Lord abilities because its source profile has Champion of Chaos. All native unit names, minimum legal points costs, Leader/Troop/Other, Rare, Infantry/Vehicle/Monster, Leader Capacity, and ACC semantics are present. Attachments and all loadout/configuration details are intentionally deferred to later passes.\n\nLAYER 0.2 — LEGION PRESENTATION REV2\nRetargeted to Game System Rev15. Legion-specific units now use their Legion as the primary Army List presentation category: Black Legion, Iron Warriors, Night Lords, or Alpha Legion. Their original Leader/Other and Infantry/Vehicle/Rare/counting categories remain attached as secondary semantic tags. Generic Chaos Space Marines units remain under Leader, Troop, and Other. Legion visibility, safe-hide behavior, constructive wrong-Legion errors, ACC, and points are unchanged.\n\nLAYER 0.3 — ARMY-LEVEL RULES REV3\nCompleted the non-loadout army-construction pass. Added required Leader attachments for all four Legion-specific Chaos Lords, Chaos Sorcerer, Master of Possession, and Chaos Apothecary, with constructive missing-host errors and one-external-Leader-per-host validation. Chaos Lord Glorious Jump Pack and Master of Possession Daemonic Jump Pack attachment overrides remain intentionally deferred until those paid loadout options exist. Replenished Ranks now sets the attached Legionaries root cost to 0; paid descendant costs will inherit the same association-aware zeroing during the loadout pass. Daemonkin now exempts the attached Possessed occurrence from normal Additional Copy Cost counting through association-aware surcharge refunds. Rare, Leader/Troop/Other, Infantry/Vehicle/Monster, Leader Capacity, Legion presentation, Legion availability, and normal ACC semantics were re-audited against the UUS.\n\nREV4 — DAEMONKIN ACC RUNTIME FIX\nReplaced the unproven roster-scope association-count query used by Daemonkin with a selection-count refund ladder. In this pre-loadout layer every Master of Possession must attach to Possessed, so each Master of Possession represents one exempt Possessed occurrence. The refund is capped by the number of copies that would otherwise incur Additional Copy Costs. Daemonic Jump Pack will require this exemption trigger to be refined when that option is implemented.\n\nLAYER 0.4 — CHAOS LORDS / MASTER OF POSSESSION LOADOUTS REV5\nImplemented loadouts for all four non-Terminator Legion Chaos Lords and Master of Possession. Chaos Lords use singular Lightning Claw in both mandatory weapon lists instead of a separate Lightning Claws replacement state. Glorious Jump Pack +20 and Daemonic Jump Pack +20 now switch required attachment targets to Raptors and Warp Talons respectively. Daemonkin is mode-aware: normal Masters of Possession exempt Possessed from Additional Copy Costs; Daemonic Jump Pack Masters exempt Warp Talons.\n\nLAYER 0.5 — OLYMPIAN ARMOURY LEGIONARIES REV6\nAdded Iron Warriors-only Olympian Armoury Legionaries. The customizable fifth model appears first as Champion / Special Weapon / Heavy Weapon / Butcher. The remaining four models export as separate 4x Shrapnel Boltgun and 4x Combat Knife lines. Added Counts As: Legionaries to both Legionaries variants. Olympian Armoury Legionaries inherit Legionaries attachment eligibility, paid wargear, one-Leader host validation, and full Replenished Ranks zero-cost behavior.\n\nREV7 — OLYMPIAN ROLE LABEL CLEANUP\nSuppressed the redundant 'Champion / Special Weapon / Heavy Weapon / Butcher' wrapper label on Olympian Armoury Legionaries. The mandatory one-of-four role selector remains unchanged and now presents directly as Champion / Special Weapon Legionary / Heavy Weapon Legionary / Butcher Legionary.\n\nLAYER 0.6 — IRON WARRIORS LOADOUTS / RULE CLEANUP REV8\nAdded complete loadouts for Tyrant Siege Terminators and Iron Circle Automata. Tyrant Siege Terminators are represented as two explicit models, each with separate Combi-Bolter and Tyrant Rocket Launcher lines and an independent Power Fist / Chainfist choice. Iron Circle Automata uses separate fixed lines for Olympia Bolt Cannon, Graviton Maul, and Kaceri Battle Shield. Removed non-attachment root rules from all Legion Chaos Lords, all Legion Terminator Chaos Lords, and Terminator Warsmith. Non-Terminator Chaos Lords retain only Leader Attachment at root; attachment-related paid Jump Pack rules remain on their paid options.\n\nLAYER 0.7 — NEMESIS CLAW REV9\nImplemented the full Nemesis Claw loadout with Visionary, one shared two-model default-loadout decision, and two explicit specialist models. The specialist models each choose Special Weapon, Heavy Weapon, or Nemesis Claw Butcher. Butcher options are Nostraman Chainglaive, Weird Claws, and Sorcerous Totem.\n\nREV10 POLISH PASS\nApplied the mature cross-faction listbuilder presentation standard to the loadouts already implemented through REV9 without expanding unfinished unit shells. Renamed the nine implemented Loadout groups to Loadout Options; added explicit model headers to the four Legion-specific Chaos Lords, Master of Possession, and Iron Circle Automata; split Master of Possession's fixed Bolt Pistol and Sorcerer Weapon into separate visible lines; converted the two Nemesis Claw 2-3 atomic default packages from '+' to '&'; and suppressed redundant one-item Glorious Jump Pack / Daemonic Jump Pack wrappers beneath Paid Wargear. Refreshed the live Chaos Lord, Master of Possession, and Additional Copy Costs authoring comments to describe their current implemented state. Standardized the eight external Leader host-limit errors and corrected plural grammar in the Tyrant Siege Terminators and Lernaean Terminators wrong-Legion errors. The Legion-specific Chaos Lord presentation, Olympian Armoury Legionaries compilation, Nemesis Claw specialist architecture and Nostraman Chainglaive convention, Lightning Claw convention, Daemonkin refund mechanics, Legion visibility, attachments, points, categories, Additional Copy Costs arithmetic, and every unfinished unit shell remain otherwise unchanged.\n\nLAYER 0.8 — SIMPLE LOADOUT BATCH REV11\nImplemented the first broad low-complexity loadout batch after the REV10 polish pass: Chaos Basilisk, Chaos Leviathan Dreadnought, Chaos Wardog, Chaos Vindicator, Chaos Predator, Master of Executions, Obliterators, Warp Talons, Chaos Defiler, Chaos Bikers, Chaos Rhino, Possessed, Warpsmith, Chaos Apothecary, Chaos Sorcerer, and Terminator Chaos Sorcerer Lord. Simplified Nemesis Claw 2-3 to two direct two-model package choices. Project conventions applied in this batch: Chaos Basilisk uses Hull Heavy Bolter / Hull Heavy Flamer naming; Chaos Leviathan Dreadnought and Chaos Wardog treat 'any two' as two independent choices that may select the same weapon twice; Chaos Wardog's paid auxiliary weapon is presented under Pintle Weapons despite its shoulder mounting; each Obliterator is represented as carrying all three Fleshmetal Armoury weapons simultaneously; and the Chaos Sorcerers present their mandatory allegiance choice under Paid Wargear > Psychic Discipline, with Undivided renamed Discipline of Chaos Undivided. Existing Legion logic, Leader attachments, Rare validation, Replenished Ranks, Daemonkin, Additional Copy Costs, points, categories, and all previously implemented loadouts remain otherwise unchanged.\n\nREV12 — SIMPLE LOADOUT PRESENTATION CLEANUP\nCorrected the psychic allegiance label to Disciple of Chaos Undivided for both Chaos Sorcerer variants. Suppressed the Chaos Rhino Main Weapon header. Collapsed Obliterators to a single semantic Obliterator Weapons line because their three Fleshmetal Armoury profiles are an in-game state rather than list-building equipment. Chaos Predator now presents its free auxiliary choice directly with no Additional Weapon header or (None), defaults to Storm Bolter by project convention, and intentionally uses the Storm Bolter player-facing name instead of the source Combi-Bolter. Suppressed the Chaos Leviathan Dreadnought Primary Weapons and Secondary Weapon labels while preserving its two independent duplicate-capable 'any two' selectors and separate secondary choice. All existing IDs and prior mechanics remain unchanged except for the deliberate Predator min-1 presentation constraint required to remove the empty option.\n\nAUTHORING PATTERN — ONE PLAYER CHOICE, MULTIPLE SEMANTIC ITEMS\nWhen one player-facing listbuilder option represents several underlying items, make the combined package the visible parent SelectionEntry (for example, '2x Bolt Pistol & 2x Chainsword'). Put each underlying semantic item beneath that parent in its own child SelectionEntryGroup, normally as a required min-1/max-1 group with a single default SelectionEntry such as '2x Bolt Pistol' and '2x Chainsword'. This lets New Recruit present one clean player decision while the catalogue still retains distinct internal items that can be referenced independently. Use zero-width child groups when those semantic items should still export as separate lines. Only hide the child groups/entries when the combined package must be the sole visible/exported line and that static-hidden/default behavior has been tested in New Recruit. Never use a selected-then-hidden transition for this pattern. Preserve the visible parent as the actual player choice; the children are implementation payload, not additional decisions.\n\nLAYER 0.9 — TERMINATOR CHAOS LORDS / CHAOS ALLEGIANCE REV13\nCollapsed Chaos Sorcerer and Terminator Chaos Sorcerer Lord psychic allegiance presentation from Paid Wargear > Psychic Discipline to the direct top-level Chaos Allegiance selector while preserving the existing allegiance option IDs and the old Psychic Discipline group IDs as hidden compatibility objects. Implemented complete loadouts for the four presentation-specific Legion Terminator Chaos Lords. As with the non-Terminator Chaos Lords, the paired Lightning Claw replacement is intentionally not presented as a separate option: singular Lightning Claw appears in both mandatory equipment lists, and selecting it in both represents the paired-claw state. Added a durable catalogue-level authoring note documenting the one-visible-choice / multiple-semantic-child-items pattern. Existing Legion availability, Champion of Chaos behavior, points, categories, wrong-Legion validation, Game System revision, and all previously implemented loadouts and rules semantics remain unchanged.\n\nLAYER 1.0 — CHOSEN / SANDVICHES LUNCHBOX REV14\nImplemented Chosen with a mutually exclusive Pack your lunch? presentation fork. No, I'll do it myself is the default and exposes the full manual 3-5-model builder: Chosen 1-2 include the paid Combi-Bolter replacement packages, Chosen 3-5 use the normal ranged list, Chosen 4-5 cost +40 Points each, every model has an independent melee list, and Frag/Krak Grenades remain independent +10 Paid Wargear. Per project convention, Lightning Claw is available in every ranged list as well as every melee list so paired claws are represented by selecting the same weapon in both lists without a separate Lightning Claws option or a one-model restriction. Yes, please! is a five-model easter-egg preset for Sandviches and adds the two extra models as +80 Points while presenting Chosen 1-5 with 5x Power Sword and 5x Plasma Pistol. All existing root Chosen categories, Leader-host semantics, Additional Copy Costs behavior, points outside the chosen branch, and all previously implemented units remain unchanged.\n\nLAYER 1.1 — LEGIONARIES REV15\nImplemented the five-model Legionaries loadout using the mature companion-listbuilder presentation. Chaos Champion is explicit with separate mandatory melee and pistol choices. Legionary 2-3 share a single two-model package selector whose visible options are 2x Boltgun & Combat Knife or 2x Chainsword & Bolt Pistol, with hidden semantic weapon children beneath each package. Legionary 4 and Legionary 5 are explicit specialist-role models that each choose Special Weapon Legionary, Heavy Weapon Legionary, or Butcher Legionary; special/heavy roles retain Combat Knife and select their source weapon, while Butcher carries Combat Knife and Heavy Chain Axe. The source's optional +10 Chaos dedication is presented as top-level Chaos Influence with Khornate Bloodlust, Tzeentian Sorcery, Nurglite Contagion, or Slaaneshi Grace. Replenished Ranks association-aware zero-cost behavior is applied to those paid descendant options as required by the existing Legionaries cost contract. Root points, Troop/Infantry categories, Counts Toward Troop semantics, Leader-host categories, host-limit validation, Additional Copy Costs behavior, and all previously implemented units remain unchanged.\n\nLAYER 1.2 — CULTISTS REV16\nImplemented the fixed ten-model Cultists loadout. Cultist Champion carries Bolt Pistol and Assault Weapon; Cultists 2-9 are aggregated as 8x Assault Weapon and 8x Autopistol; Cultist 10 defaults to the single visible Assault Weapon & Autopistol package with hidden semantic child equipment and may instead take Heavy Stubber for +10 Points. Frag Grenades and Krak Grenades are independent +10 Paid Wargear choices. Root cost, Troop/Infantry categories, Chaos Lord and Chaos Sorcerer host categories, attached-Leader validation, and all previously implemented units remain unchanged.\n\nLAYER 1.3 — CHAOS TERMINATORS REV17\nImplemented Chaos Terminators as two explicit independent model records with three battlefield-role branches each. Combi-weapon Terminators carry one melee selection and one Combi package; Heavy Weapon Terminators carry one melee selection and Reaper Autocannon / Heavy Flamer; Assault Terminators carry two independent melee selections. The Lightning Claw convention is reused: paired claws are represented by Lightning Claw in both melee lists rather than a separate Lightning Claws option. For listbuilder purposes both Terminators may select identical roles and identical equipment even where the PDF uses one-model replacement language. Cyclone Missiles remains a single +20 unit-level Paid Wargear choice with no listbuilder bearer assignment. Root points, Heavy Armour / Infantry categories, Other copy-cost behavior, and all previously implemented units remain unchanged.\n\nLAYER 1.4 — ALPHA LEGION COMPILED UNITS REV18\nAdded Power Knife Legionaries as an Alpha Legion-only player-facing compilation of the Legionaries datasheet under Quiet Killers / Power Knives. Four models are fixed as 4x Bolt Pistol and 4x Power Knife while the remaining model is presented first as Champion, Special Weapon Legionary, Heavy Weapon Legionary, or Butcher Legionary. The unit Counts As: Legionaries and inherits Troop counting, Leader-host eligibility, Replenished Ranks, and optional Chaos Influence. Implemented Lernaean Terminators using the same two-model Combi-weapon / Heavy Weapon / Assault role architecture as Chaos Terminators, with Volkite Charger and the additional Alpha Legion heavy guns included. The Lightning Claw convention is reused and both Lernaean models may use identical roles/loadouts for listbuilder purposes. Existing Alpha Legion visibility/error logic, points, categories, Game System revision, and all previously implemented units remain otherwise unchanged.\n\nLAYER 1.5 — HELBRUTE / DREADNOUGHT / CONTEMPTOR REV19\nImplemented Chaos Helbrute and Chaos Dreadnought with two asymmetric anonymous weapon selectors, preserving the source equipment pools while suppressing physical left/right arm labels. Fist + auxiliary states are presented as single visible packages with hidden semantic component items. Chaos Dreadnought also receives Venerable as a +10 Unit Upgrade. Implemented Chaos Contemptor Dreadnought with two identical simplified weapon selectors: normal guns, Heavy Conversion Beamer, and Chainfist packages may duplicate freely; Chainfist & / Power Fist & reveal nested auxiliary choices including Combi-Bolter, Graviton Gun, Heavy Flamer, Meltagun, and Plasma Blaster. Power Fist & is mutually exclusive across the two selectors via reciprocal cross-selector hiding, while the already-selected Power Fist remains visible. Cyclone Missiles is optional +10 Paid Wargear. Root costs, Other-copy accounting, categories, Game System revision, and all previously implemented units remain unchanged.\n\nLAYER 1.6 — RAPTORS / HAVOCS REV20\nImplemented Raptors and Havocs. Raptors use explicit Raptor Champion / Huntmaster, Raptor 2, and Skysear identities for the three-model base, with optional Raptor 4 and Raptor 5 at +30 Points each. Huntmaster and Skysear are intentional Kill Team-flavoured player-facing names; additional Raptors use a compact Chainsword & Bolt Pistol package with hidden semantic child items. Havocs use a mandatory first-model fork between Aspiring Champion and Havoc 1, a fixed Havoc 2, and optional Havoc 3 at +40 Points. Havoc heavy-weapon selections are independent and may duplicate freely by project convention. Root points, attachment categories, host validation, Other copy-cost accounting, Game System revision, and all previously implemented units remain unchanged.\n\nLAYER 1.7 — TERMINATOR WARSMITH / BREACHER SIEGE SQUAD REV21\nImplemented Terminator Warsmith directly from the UUS as one Primary Equipment and one Secondary Equipment choice, preserving mixed Combi weapon semantics through hidden child items. Implemented Breacher Siege Squad as explicit Breacher Champion / Breacher 2 / Breacher 3 base models with optional Breacher 4 / Breacher 5 at +40 Points each. Breacher Champion receives the full melee list and ranged list including the free Boltgun state, +10 Combi packages, and +20 Combi-Melta package; Breacher 2 receives Boltgun plus all special weapon options. Boltgun is deliberately surfaced as a genuine player choice rather than treated as replacement plumbing. All models retain Boarding Shield as appropriate, additional basic Breachers use compact hidden-semantic packages, and Frag Grenades / Krak Grenades / Breacher Charge are optional +10 Paid Wargear. Existing Legion restrictions, attachments, host validation, copy-cost accounting, root costs, and Game System revision remain unchanged.\n\nLAYER 1.8 — PRESENTATION CONSOLIDATION REV22\nMoved Chaos Predator Sponson Weapons from Paid Wargear into the model's normal loadout selectors and suppressed both the Sponson Weapons and Pintle Weapons headers. Changed the fixed Obliterator export to 2x Obliterator Weapon, representing one weapon-state item per model. Consolidated Raptor 2 into Chainsword & Bolt Pistol, Cultist Champion into Bolt Pistol & Assault Weapon, Cultists 2-9 into 8x Autopistol & Assault Weapon, and Olympian Armoury Legionaries 1-4 into 4x Shrapnel Boltgun & Combat Knife; each combined line owns the original hidden semantic equipment items. Renamed the Chaos Rhino's player-facing Combi-Bolter to Storm Bolter. No points, legality, attachment behavior, copy-cost behavior, Game System revision, or unrelated unit mechanics were changed.\n\nLAYER 1.9 — FORGEFIEND / MAULERFIEND REV23\nImplemented Chaos Forgefiend as a top-level Forgefiend / Maulerfiend mode choice. Forgefiend receives fixed Head Ectoplasma Cannon and two independent Ectoplasma Cannon / Hades Autocannon selectors. Maulerfiend receives fixed Daemonic Jaws, fixed Maulerfiend Fists, and one Lasher Tendrils / Magma Cutters selector. This is a presentation compilation of the source loadout grammar; no points, categories, copy-cost behavior, Game System revision, or unrelated unit mechanics changed.\n\nREV24 — FORGEFIEND HEAD CHOICE\nUpdated only the Forgefiend branch so its head selection is now Head Ectoplasma Cannon / Daemonic Jaws. The existing Head Ectoplasma Cannon selection, group, constraints, and default ID were preserved; one deterministic Daemonic Jaws option was added. The Maulerfiend branch and all unrelated units remain unchanged.\n\nREV25 — SHARED WEAPON / LOADOUT IDS\nProduction cleanup from stable REV24. Chaos Terminators now use shared IDs for every repeated player-facing weapon/loadout within the unit. Legionary 4/5 weapon-plus-Combat-Knife states are shared meaningful package entries. Breacher ranged states are gun-plus-Boarding-Shield packages, with the Champion retaining a separate melee choice and all identical Boltgun & Boarding Shield states sharing one target. This revision intentionally leaves additional-model structure intact and does not include the abandoned REV25/REV26 export-format experiments.\n\nREV26 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Cultists are an independent Troop copy family. Legionaries, Olympian Armoury Legionaries, and Power Knife Legionaries deliberately share one Troop family through the existing Counts As: Legionaries semantic category; mixed selections therefore consume the same 4 / 6 / 8 normal-copy allowance. Replenished Ranks remains fully zero-cost: a legal Chaos Apothecary selection exempts one Legionaries-family occurrence from the Troop surcharge once the raw family count exceeds the normal allowance. The implementation deliberately mirrors the catalogue's established selection-count proxy strategy because roster-scope association queries are not reliable from the separate Additional Copy Costs configuration entry. All 186 pre-existing Other point modifiers were moved unchanged to the Other child. This includes all 42 existing mode-aware Daemonkin refund modifiers, so normal Masters of Possession continue to exempt Possessed while Daemonic Jump Pack Masters exempt Warp Talons. No generated or nested Troop units exist. All shared weapon/loadout IDs, Legion visibility, safe-hide behavior, Replenished Ranks unit-cost zeroing, Daemonkin logic, attachment validation, loadouts, points, categories, constraints, and unrelated catalogue mechanics remain unchanged.\n\nREV27 — DAEMON HAMMER TERMINOLOGY\nCorrected two player-facing Chaos weapon names without changing their IDs, defaults, points, or selection structure: Warpsmith Heavy Thunder Hammer → Heavy Daemon Hammer, and Breacher Champion Thunder Hammer → Daemon Hammer. Matching live unit comments were updated. No other catalogue semantics changed.\n\nPOST-REV27 — CHAOS BIKER BASELINE PACKAGE (historically first created on the contaminated sibling branch)\nCollapsed Chaos Bikers 1-3 into one literal fixed package, 3x Bolters & Bike Spikes. Removed the redundant standalone 3x Bike Spikes group. This intended change is replayed here onto the healthy REV27 lineage.\n\nPOST-REV27 — GS20 / CSM POLISH PASS PART 1 (historically labelled REV28)\nUpdated to Game System revision 20. Olympian Armoury Legionaries, Power Knife Legionaries, Legionaries, and Cultists now link to Additional Copy Cost - Troop while preserving their pre-existing infoLink IDs, Counts Toward Troop Soft Copy Cost categories, and the healthy REV26 Troops/Other calculator. Promoted Chaos Predator Pintle weapons to a dedicated top-level Pintle Weapons section. Consolidated Breacher 2 with Boarding Shield while retaining the healthy Breacher Champion and additional-model implementation. Retained the healthy repaired Possessed presentation. Suppressed redundant slot headers inside Chaos Terminator and Lernaean Terminator role loadouts. Corrected and consolidated the Iron Circle Karceri Battle Shield package. Consolidated Tyrant Siege Terminator Combi-Bolters into their Power Fist / Chainfist packages.\n\nPOST-REV27 — HAVOC + RAPTOR NORMALIZATION (historically labelled REV29)\nHavocs now expose a labelled Aspiring Champion / Havoc 1 fork, a normal Havoc 2 weapon choice, and a real optional Havoc 3 model. Raptors retain their three base roles and expose Raptor 4 and Raptor 5 directly as real optional models. This replay deliberately preserves the healthy local weapon/package IDs rather than the abandoned shared-export targets.\n\nREV30 — SAFE-BRANCH RECONSTRUCTION / FORENSIC RECOVERY\nRebuilt from canonical Chaos Space Marines 3.3.5 REV27 — DAEMON HAMMER TERMINOLOGY after discovering that the later Chaos Biker / REV28 / REV29 work had accidentally continued from an experimental sibling branch instead of the canonical REV27 line. The canonical terminology remains intact: Warpsmith Heavy Daemon Hammer and Breacher Champion Daemon Hammer.\nFORENSIC RECORD OF THE DISCARDED SIBLING BRANCH, retained here for history but NOT live semantics:\n- ABANDONED REV25 EXPORT AGGREGATION EXPERIMENT: introduced shared selection-entry targets to test New Recruit roster-export aggregation for Legionary specialist packages, Chaos Terminator melee weapons, and Havoc heavy weapons, with historical local IDs retained as hidden compatibility objects.\n- ABANDONED REV26 ADDITIONAL MODEL / EXPORT SHAPE TEST: altered Cultist semantic children, Breacher 3-5, Raptor 2/4/5, Possessed, and Warp Talons to hidden/shared-link proxy structures specifically to test fresh-roster export aggregation.\nThose experiments were never production doctrine and are excluded from this reconstruction. Only later changes positively identified as intended were replayed. The healthy REV26 Troops/Other Additional Copy Cost arithmetic, Replenished Ranks behavior, Daemonkin refunds, production shared weapon/package IDs, Legion logic, attachments, categories, points, and unrelated mechanics remain intact.\n\nREV31 — VERSION TYPO CORRECTION + STANDARD PATCH NOTES\nCorrected the catalogue title from Chaos Space Marines 3.3.5 to Chaos Space Marines 3.3.4. The previous 3.3.5 label was a typo and did not represent a distinct army-rules version. Added the standard automatically present Patch Notes Configuration. The Chaos Space Marines 3.3.4 section intentionally contains no catalogue-mirrored army-rules bullets and links to the Reforged Discord Server for the full rules patch. Catalogue Bugfixes (September 4th) records: 'Various errors fixed from a bugged revision; recovered stable branch and implemented correct bugfixes.' No mechanical selections, points, loadouts, validation, copy-cost arithmetic, Legion behavior, shared-library behavior, or unrelated catalogue semantics were changed in this revision.\n\nREV32 — CHAOS SPACE MARINES 3.3.5 / DEFILER REWORKED\nUpdated the catalogue rules version from 3.3.4 to 3.3.5 and replaced the old Patch Notes heading with the Defiler rework note. Rebuilt Chaos Defiler while preserving stable unit ID 29c8-79f3-3c49-1a2f, root categories, 180 Point base cost, Additional Copy Cost semantics, and all unrelated catalogue mechanics. The synchronized Arsenal Library carries the same updated root.\n\nREV33 — CSM 3.3.5 DEFILER COST + LEGIONARIES CHAMPION CORRECTION\nCorrected Chaos Defiler from 180 to 260 Points and Excruciator Cannons / Magma Cutters from +10 to +20 Points. Updated Legionaries Chaos Champion ranged choices to Champion Boltgun, Champion Bolt Pistol, and Champion Plasma Pistol. Surviving selection IDs are preserved. Retargeted the playable catalogue from Game System revision 20 to revision 21.\n\nREV34 — DEFILER MISSILE LAUNCHER CORRECTION\nAdded Missile Launcher to both independent Defiler flexible weapon-mount lists. This corrects an omission from the 3.3.5 rework implementation. Existing Defiler option IDs, base cost, Paid Wargear costs, Additional Copy Cost arithmetic, Legionaries changes, Game System target, and all unrelated catalogue mechanics are unchanged.",
+    "comment": "LAYER 0.1 — LEGIONS AND UNIT SELECTION\nBuilt the Chaos Space Marines roster foundation from the Universal Unit Skeleton and PDF before any loadout work. Legion is a required Configuration selector with Black Legion, Iron Warriors, Night Lords, and Alpha Legion; Black Legion is the default. Legion-exclusive units use safe-hide presentation and constructive wrong-Legion errors. The generic Chaos Lord and Terminator Chaos Lord are intentionally compiled as four Legion-specific player-facing units each, all preserving their shared source profile/cost while carrying the exact Chaos Lord abilities of the selected Legion. Terminator Warsmith also receives the Iron Warriors Chaos Lord abilities because its source profile has Champion of Chaos. All native unit names, minimum legal points costs, Leader/Troop/Other, Rare, Infantry/Vehicle/Monster, Leader Capacity, and ACC semantics are present. Attachments and all loadout/configuration details are intentionally deferred to later passes.\n\nLAYER 0.2 — LEGION PRESENTATION REV2\nRetargeted to Game System Rev15. Legion-specific units now use their Legion as the primary Army List presentation category: Black Legion, Iron Warriors, Night Lords, or Alpha Legion. Their original Leader/Other and Infantry/Vehicle/Rare/counting categories remain attached as secondary semantic tags. Generic Chaos Space Marines units remain under Leader, Troop, and Other. Legion visibility, safe-hide behavior, constructive wrong-Legion errors, ACC, and points are unchanged.\n\nLAYER 0.3 — ARMY-LEVEL RULES REV3\nCompleted the non-loadout army-construction pass. Added required Leader attachments for all four Legion-specific Chaos Lords, Chaos Sorcerer, Master of Possession, and Chaos Apothecary, with constructive missing-host errors and one-external-Leader-per-host validation. Chaos Lord Glorious Jump Pack and Master of Possession Daemonic Jump Pack attachment overrides remain intentionally deferred until those paid loadout options exist. Replenished Ranks now sets the attached Legionaries root cost to 0; paid descendant costs will inherit the same association-aware zeroing during the loadout pass. Daemonkin now exempts the attached Possessed occurrence from normal Additional Copy Cost counting through association-aware surcharge refunds. Rare, Leader/Troop/Other, Infantry/Vehicle/Monster, Leader Capacity, Legion presentation, Legion availability, and normal ACC semantics were re-audited against the UUS.\n\nREV4 — DAEMONKIN ACC RUNTIME FIX\nReplaced the unproven roster-scope association-count query used by Daemonkin with a selection-count refund ladder. In this pre-loadout layer every Master of Possession must attach to Possessed, so each Master of Possession represents one exempt Possessed occurrence. The refund is capped by the number of copies that would otherwise incur Additional Copy Costs. Daemonic Jump Pack will require this exemption trigger to be refined when that option is implemented.\n\nLAYER 0.4 — CHAOS LORDS / MASTER OF POSSESSION LOADOUTS REV5\nImplemented loadouts for all four non-Terminator Legion Chaos Lords and Master of Possession. Chaos Lords use singular Lightning Claw in both mandatory weapon lists instead of a separate Lightning Claws replacement state. Glorious Jump Pack +20 and Daemonic Jump Pack +20 now switch required attachment targets to Raptors and Warp Talons respectively. Daemonkin is mode-aware: normal Masters of Possession exempt Possessed from Additional Copy Costs; Daemonic Jump Pack Masters exempt Warp Talons.\n\nLAYER 0.5 — OLYMPIAN ARMOURY LEGIONARIES REV6\nAdded Iron Warriors-only Olympian Armoury Legionaries. The customizable fifth model appears first as Champion / Special Weapon / Heavy Weapon / Butcher. The remaining four models export as separate 4x Shrapnel Boltgun and 4x Combat Knife lines. Added Counts As: Legionaries to both Legionaries variants. Olympian Armoury Legionaries inherit Legionaries attachment eligibility, paid wargear, one-Leader host validation, and full Replenished Ranks zero-cost behavior.\n\nREV7 — OLYMPIAN ROLE LABEL CLEANUP\nSuppressed the redundant 'Champion / Special Weapon / Heavy Weapon / Butcher' wrapper label on Olympian Armoury Legionaries. The mandatory one-of-four role selector remains unchanged and now presents directly as Champion / Special Weapon Legionary / Heavy Weapon Legionary / Butcher Legionary.\n\nLAYER 0.6 — IRON WARRIORS LOADOUTS / RULE CLEANUP REV8\nAdded complete loadouts for Tyrant Siege Terminators and Iron Circle Automata. Tyrant Siege Terminators are represented as two explicit models, each with separate Combi-Bolter and Tyrant Rocket Launcher lines and an independent Power Fist / Chainfist choice. Iron Circle Automata uses separate fixed lines for Olympia Bolt Cannon, Graviton Maul, and Kaceri Battle Shield. Removed non-attachment root rules from all Legion Chaos Lords, all Legion Terminator Chaos Lords, and Terminator Warsmith. Non-Terminator Chaos Lords retain only Leader Attachment at root; attachment-related paid Jump Pack rules remain on their paid options.\n\nLAYER 0.7 — NEMESIS CLAW REV9\nImplemented the full Nemesis Claw loadout with Visionary, one shared two-model default-loadout decision, and two explicit specialist models. The specialist models each choose Special Weapon, Heavy Weapon, or Nemesis Claw Butcher. Butcher options are Nostraman Chainglaive, Weird Claws, and Sorcerous Totem.\n\nREV10 POLISH PASS\nApplied the mature cross-faction listbuilder presentation standard to the loadouts already implemented through REV9 without expanding unfinished unit shells. Renamed the nine implemented Loadout groups to Loadout Options; added explicit model headers to the four Legion-specific Chaos Lords, Master of Possession, and Iron Circle Automata; split Master of Possession's fixed Bolt Pistol and Sorcerer Weapon into separate visible lines; converted the two Nemesis Claw 2-3 atomic default packages from '+' to '&'; and suppressed redundant one-item Glorious Jump Pack / Daemonic Jump Pack wrappers beneath Paid Wargear. Refreshed the live Chaos Lord, Master of Possession, and Additional Copy Costs authoring comments to describe their current implemented state. Standardized the eight external Leader host-limit errors and corrected plural grammar in the Tyrant Siege Terminators and Lernaean Terminators wrong-Legion errors. The Legion-specific Chaos Lord presentation, Olympian Armoury Legionaries compilation, Nemesis Claw specialist architecture and Nostraman Chainglaive convention, Lightning Claw convention, Daemonkin refund mechanics, Legion visibility, attachments, points, categories, Additional Copy Costs arithmetic, and every unfinished unit shell remain otherwise unchanged.\n\nLAYER 0.8 — SIMPLE LOADOUT BATCH REV11\nImplemented the first broad low-complexity loadout batch after the REV10 polish pass: Chaos Basilisk, Chaos Leviathan Dreadnought, Chaos Wardog, Chaos Vindicator, Chaos Predator, Master of Executions, Obliterators, Warp Talons, Chaos Defiler, Chaos Bikers, Chaos Rhino, Possessed, Warpsmith, Chaos Apothecary, Chaos Sorcerer, and Terminator Chaos Sorcerer Lord. Simplified Nemesis Claw 2-3 to two direct two-model package choices. Project conventions applied in this batch: Chaos Basilisk uses Hull Heavy Bolter / Hull Heavy Flamer naming; Chaos Leviathan Dreadnought and Chaos Wardog treat 'any two' as two independent choices that may select the same weapon twice; Chaos Wardog's paid auxiliary weapon is presented under Pintle Weapons despite its shoulder mounting; each Obliterator is represented as carrying all three Fleshmetal Armoury weapons simultaneously; and the Chaos Sorcerers present their mandatory allegiance choice under Paid Wargear > Psychic Discipline, with Undivided renamed Discipline of Chaos Undivided. Existing Legion logic, Leader attachments, Rare validation, Replenished Ranks, Daemonkin, Additional Copy Costs, points, categories, and all previously implemented loadouts remain otherwise unchanged.\n\nREV12 — SIMPLE LOADOUT PRESENTATION CLEANUP\nCorrected the psychic allegiance label to Disciple of Chaos Undivided for both Chaos Sorcerer variants. Suppressed the Chaos Rhino Main Weapon header. Collapsed Obliterators to a single semantic Obliterator Weapons line because their three Fleshmetal Armoury profiles are an in-game state rather than list-building equipment. Chaos Predator now presents its free auxiliary choice directly with no Additional Weapon header or (None), defaults to Storm Bolter by project convention, and intentionally uses the Storm Bolter player-facing name instead of the source Combi-Bolter. Suppressed the Chaos Leviathan Dreadnought Primary Weapons and Secondary Weapon labels while preserving its two independent duplicate-capable 'any two' selectors and separate secondary choice. All existing IDs and prior mechanics remain unchanged except for the deliberate Predator min-1 presentation constraint required to remove the empty option.\n\nAUTHORING PATTERN — ONE PLAYER CHOICE, MULTIPLE SEMANTIC ITEMS\nWhen one player-facing listbuilder option represents several underlying items, make the combined package the visible parent SelectionEntry (for example, '2x Bolt Pistol & 2x Chainsword'). Put each underlying semantic item beneath that parent in its own child SelectionEntryGroup, normally as a required min-1/max-1 group with a single default SelectionEntry such as '2x Bolt Pistol' and '2x Chainsword'. This lets New Recruit present one clean player decision while the catalogue still retains distinct internal items that can be referenced independently. Use zero-width child groups when those semantic items should still export as separate lines. Only hide the child groups/entries when the combined package must be the sole visible/exported line and that static-hidden/default behavior has been tested in New Recruit. Never use a selected-then-hidden transition for this pattern. Preserve the visible parent as the actual player choice; the children are implementation payload, not additional decisions.\n\nLAYER 0.9 — TERMINATOR CHAOS LORDS / CHAOS ALLEGIANCE REV13\nCollapsed Chaos Sorcerer and Terminator Chaos Sorcerer Lord psychic allegiance presentation from Paid Wargear > Psychic Discipline to the direct top-level Chaos Allegiance selector while preserving the existing allegiance option IDs and the old Psychic Discipline group IDs as hidden compatibility objects. Implemented complete loadouts for the four presentation-specific Legion Terminator Chaos Lords. As with the non-Terminator Chaos Lords, the paired Lightning Claw replacement is intentionally not presented as a separate option: singular Lightning Claw appears in both mandatory equipment lists, and selecting it in both represents the paired-claw state. Added a durable catalogue-level authoring note documenting the one-visible-choice / multiple-semantic-child-items pattern. Existing Legion availability, Champion of Chaos behavior, points, categories, wrong-Legion validation, Game System revision, and all previously implemented loadouts and rules semantics remain unchanged.\n\nLAYER 1.0 — CHOSEN / SANDVICHES LUNCHBOX REV14\nImplemented Chosen with a mutually exclusive Pack your lunch? presentation fork. No, I'll do it myself is the default and exposes the full manual 3-5-model builder: Chosen 1-2 include the paid Combi-Bolter replacement packages, Chosen 3-5 use the normal ranged list, Chosen 4-5 cost +40 Points each, every model has an independent melee list, and Frag/Krak Grenades remain independent +10 Paid Wargear. Per project convention, Lightning Claw is available in every ranged list as well as every melee list so paired claws are represented by selecting the same weapon in both lists without a separate Lightning Claws option or a one-model restriction. Yes, please! is a five-model easter-egg preset for Sandviches and adds the two extra models as +80 Points while presenting Chosen 1-5 with 5x Power Sword and 5x Plasma Pistol. All existing root Chosen categories, Leader-host semantics, Additional Copy Costs behavior, points outside the chosen branch, and all previously implemented units remain unchanged.\n\nLAYER 1.1 — LEGIONARIES REV15\nImplemented the five-model Legionaries loadout using the mature companion-listbuilder presentation. Chaos Champion is explicit with separate mandatory melee and pistol choices. Legionary 2-3 share a single two-model package selector whose visible options are 2x Boltgun & Combat Knife or 2x Chainsword & Bolt Pistol, with hidden semantic weapon children beneath each package. Legionary 4 and Legionary 5 are explicit specialist-role models that each choose Special Weapon Legionary, Heavy Weapon Legionary, or Butcher Legionary; special/heavy roles retain Combat Knife and select their source weapon, while Butcher carries Combat Knife and Heavy Chain Axe. The source's optional +10 Chaos dedication is presented as top-level Chaos Influence with Khornate Bloodlust, Tzeentian Sorcery, Nurglite Contagion, or Slaaneshi Grace. Replenished Ranks association-aware zero-cost behavior is applied to those paid descendant options as required by the existing Legionaries cost contract. Root points, Troop/Infantry categories, Counts Toward Troop semantics, Leader-host categories, host-limit validation, Additional Copy Costs behavior, and all previously implemented units remain unchanged.\n\nLAYER 1.2 — CULTISTS REV16\nImplemented the fixed ten-model Cultists loadout. Cultist Champion carries Bolt Pistol and Assault Weapon; Cultists 2-9 are aggregated as 8x Assault Weapon and 8x Autopistol; Cultist 10 defaults to the single visible Assault Weapon & Autopistol package with hidden semantic child equipment and may instead take Heavy Stubber for +10 Points. Frag Grenades and Krak Grenades are independent +10 Paid Wargear choices. Root cost, Troop/Infantry categories, Chaos Lord and Chaos Sorcerer host categories, attached-Leader validation, and all previously implemented units remain unchanged.\n\nLAYER 1.3 — CHAOS TERMINATORS REV17\nImplemented Chaos Terminators as two explicit independent model records with three battlefield-role branches each. Combi-weapon Terminators carry one melee selection and one Combi package; Heavy Weapon Terminators carry one melee selection and Reaper Autocannon / Heavy Flamer; Assault Terminators carry two independent melee selections. The Lightning Claw convention is reused: paired claws are represented by Lightning Claw in both melee lists rather than a separate Lightning Claws option. For listbuilder purposes both Terminators may select identical roles and identical equipment even where the PDF uses one-model replacement language. Cyclone Missiles remains a single +20 unit-level Paid Wargear choice with no listbuilder bearer assignment. Root points, Heavy Armour / Infantry categories, Other copy-cost behavior, and all previously implemented units remain unchanged.\n\nLAYER 1.4 — ALPHA LEGION COMPILED UNITS REV18\nAdded Power Knife Legionaries as an Alpha Legion-only player-facing compilation of the Legionaries datasheet under Quiet Killers / Power Knives. Four models are fixed as 4x Bolt Pistol and 4x Power Knife while the remaining model is presented first as Champion, Special Weapon Legionary, Heavy Weapon Legionary, or Butcher Legionary. The unit Counts As: Legionaries and inherits Troop counting, Leader-host eligibility, Replenished Ranks, and optional Chaos Influence. Implemented Lernaean Terminators using the same two-model Combi-weapon / Heavy Weapon / Assault role architecture as Chaos Terminators, with Volkite Charger and the additional Alpha Legion heavy guns included. The Lightning Claw convention is reused and both Lernaean models may use identical roles/loadouts for listbuilder purposes. Existing Alpha Legion visibility/error logic, points, categories, Game System revision, and all previously implemented units remain otherwise unchanged.\n\nLAYER 1.5 — HELBRUTE / DREADNOUGHT / CONTEMPTOR REV19\nImplemented Chaos Helbrute and Chaos Dreadnought with two asymmetric anonymous weapon selectors, preserving the source equipment pools while suppressing physical left/right arm labels. Fist + auxiliary states are presented as single visible packages with hidden semantic component items. Chaos Dreadnought also receives Venerable as a +10 Unit Upgrade. Implemented Chaos Contemptor Dreadnought with two identical simplified weapon selectors: normal guns, Heavy Conversion Beamer, and Chainfist packages may duplicate freely; Chainfist & / Power Fist & reveal nested auxiliary choices including Combi-Bolter, Graviton Gun, Heavy Flamer, Meltagun, and Plasma Blaster. Power Fist & is mutually exclusive across the two selectors via reciprocal cross-selector hiding, while the already-selected Power Fist remains visible. Cyclone Missiles is optional +10 Paid Wargear. Root costs, Other-copy accounting, categories, Game System revision, and all previously implemented units remain unchanged.\n\nLAYER 1.6 — RAPTORS / HAVOCS REV20\nImplemented Raptors and Havocs. Raptors use explicit Raptor Champion / Huntmaster, Raptor 2, and Skysear identities for the three-model base, with optional Raptor 4 and Raptor 5 at +30 Points each. Huntmaster and Skysear are intentional Kill Team-flavoured player-facing names; additional Raptors use a compact Chainsword & Bolt Pistol package with hidden semantic child items. Havocs use a mandatory first-model fork between Aspiring Champion and Havoc 1, a fixed Havoc 2, and optional Havoc 3 at +40 Points. Havoc heavy-weapon selections are independent and may duplicate freely by project convention. Root points, attachment categories, host validation, Other copy-cost accounting, Game System revision, and all previously implemented units remain unchanged.\n\nLAYER 1.7 — TERMINATOR WARSMITH / BREACHER SIEGE SQUAD REV21\nImplemented Terminator Warsmith directly from the UUS as one Primary Equipment and one Secondary Equipment choice, preserving mixed Combi weapon semantics through hidden child items. Implemented Breacher Siege Squad as explicit Breacher Champion / Breacher 2 / Breacher 3 base models with optional Breacher 4 / Breacher 5 at +40 Points each. Breacher Champion receives the full melee list and ranged list including the free Boltgun state, +10 Combi packages, and +20 Combi-Melta package; Breacher 2 receives Boltgun plus all special weapon options. Boltgun is deliberately surfaced as a genuine player choice rather than treated as replacement plumbing. All models retain Boarding Shield as appropriate, additional basic Breachers use compact hidden-semantic packages, and Frag Grenades / Krak Grenades / Breacher Charge are optional +10 Paid Wargear. Existing Legion restrictions, attachments, host validation, copy-cost accounting, root costs, and Game System revision remain unchanged.\n\nLAYER 1.8 — PRESENTATION CONSOLIDATION REV22\nMoved Chaos Predator Sponson Weapons from Paid Wargear into the model's normal loadout selectors and suppressed both the Sponson Weapons and Pintle Weapons headers. Changed the fixed Obliterator export to 2x Obliterator Weapon, representing one weapon-state item per model. Consolidated Raptor 2 into Chainsword & Bolt Pistol, Cultist Champion into Bolt Pistol & Assault Weapon, Cultists 2-9 into 8x Autopistol & Assault Weapon, and Olympian Armoury Legionaries 1-4 into 4x Shrapnel Boltgun & Combat Knife; each combined line owns the original hidden semantic equipment items. Renamed the Chaos Rhino's player-facing Combi-Bolter to Storm Bolter. No points, legality, attachment behavior, copy-cost behavior, Game System revision, or unrelated unit mechanics were changed.\n\nLAYER 1.9 — FORGEFIEND / MAULERFIEND REV23\nImplemented Chaos Forgefiend as a top-level Forgefiend / Maulerfiend mode choice. Forgefiend receives fixed Head Ectoplasma Cannon and two independent Ectoplasma Cannon / Hades Autocannon selectors. Maulerfiend receives fixed Daemonic Jaws, fixed Maulerfiend Fists, and one Lasher Tendrils / Magma Cutters selector. This is a presentation compilation of the source loadout grammar; no points, categories, copy-cost behavior, Game System revision, or unrelated unit mechanics changed.\n\nREV24 — FORGEFIEND HEAD CHOICE\nUpdated only the Forgefiend branch so its head selection is now Head Ectoplasma Cannon / Daemonic Jaws. The existing Head Ectoplasma Cannon selection, group, constraints, and default ID were preserved; one deterministic Daemonic Jaws option was added. The Maulerfiend branch and all unrelated units remain unchanged.\n\nREV25 — SHARED WEAPON / LOADOUT IDS\nProduction cleanup from stable REV24. Chaos Terminators now use shared IDs for every repeated player-facing weapon/loadout within the unit. Legionary 4/5 weapon-plus-Combat-Knife states are shared meaningful package entries. Breacher ranged states are gun-plus-Boarding-Shield packages, with the Champion retaining a separate melee choice and all identical Boltgun & Boarding Shield states sharing one target. This revision intentionally leaves additional-model structure intact and does not include the abandoned REV25/REV26 export-format experiments.\n\nREV26 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Cultists are an independent Troop copy family. Legionaries, Olympian Armoury Legionaries, and Power Knife Legionaries deliberately share one Troop family through the existing Counts As: Legionaries semantic category; mixed selections therefore consume the same 4 / 6 / 8 normal-copy allowance. Replenished Ranks remains fully zero-cost: a legal Chaos Apothecary selection exempts one Legionaries-family occurrence from the Troop surcharge once the raw family count exceeds the normal allowance. The implementation deliberately mirrors the catalogue's established selection-count proxy strategy because roster-scope association queries are not reliable from the separate Additional Copy Costs configuration entry. All 186 pre-existing Other point modifiers were moved unchanged to the Other child. This includes all 42 existing mode-aware Daemonkin refund modifiers, so normal Masters of Possession continue to exempt Possessed while Daemonic Jump Pack Masters exempt Warp Talons. No generated or nested Troop units exist. All shared weapon/loadout IDs, Legion visibility, safe-hide behavior, Replenished Ranks unit-cost zeroing, Daemonkin logic, attachment validation, loadouts, points, categories, constraints, and unrelated catalogue mechanics remain unchanged.\n\nREV27 — DAEMON HAMMER TERMINOLOGY\nCorrected two player-facing Chaos weapon names without changing their IDs, defaults, points, or selection structure: Warpsmith Heavy Thunder Hammer → Heavy Daemon Hammer, and Breacher Champion Thunder Hammer → Daemon Hammer. Matching live unit comments were updated. No other catalogue semantics changed.\n\nPOST-REV27 — CHAOS BIKER BASELINE PACKAGE (historically first created on the contaminated sibling branch)\nCollapsed Chaos Bikers 1-3 into one literal fixed package, 3x Bolters & Bike Spikes. Removed the redundant standalone 3x Bike Spikes group. This intended change is replayed here onto the healthy REV27 lineage.\n\nPOST-REV27 — GS20 / CSM POLISH PASS PART 1 (historically labelled REV28)\nUpdated to Game System revision 20. Olympian Armoury Legionaries, Power Knife Legionaries, Legionaries, and Cultists now link to Additional Copy Cost - Troop while preserving their pre-existing infoLink IDs, Counts Toward Troop Soft Copy Cost categories, and the healthy REV26 Troops/Other calculator. Promoted Chaos Predator Pintle weapons to a dedicated top-level Pintle Weapons section. Consolidated Breacher 2 with Boarding Shield while retaining the healthy Breacher Champion and additional-model implementation. Retained the healthy repaired Possessed presentation. Suppressed redundant slot headers inside Chaos Terminator and Lernaean Terminator role loadouts. Corrected and consolidated the Iron Circle Karceri Battle Shield package. Consolidated Tyrant Siege Terminator Combi-Bolters into their Power Fist / Chainfist packages.\n\nPOST-REV27 — HAVOC + RAPTOR NORMALIZATION (historically labelled REV29)\nHavocs now expose a labelled Aspiring Champion / Havoc 1 fork, a normal Havoc 2 weapon choice, and a real optional Havoc 3 model. Raptors retain their three base roles and expose Raptor 4 and Raptor 5 directly as real optional models. This replay deliberately preserves the healthy local weapon/package IDs rather than the abandoned shared-export targets.\n\nREV30 — SAFE-BRANCH RECONSTRUCTION / FORENSIC RECOVERY\nRebuilt from canonical Chaos Space Marines 3.3.5 REV27 — DAEMON HAMMER TERMINOLOGY after discovering that the later Chaos Biker / REV28 / REV29 work had accidentally continued from an experimental sibling branch instead of the canonical REV27 line. The canonical terminology remains intact: Warpsmith Heavy Daemon Hammer and Breacher Champion Daemon Hammer.\nFORENSIC RECORD OF THE DISCARDED SIBLING BRANCH, retained here for history but NOT live semantics:\n- ABANDONED REV25 EXPORT AGGREGATION EXPERIMENT: introduced shared selection-entry targets to test New Recruit roster-export aggregation for Legionary specialist packages, Chaos Terminator melee weapons, and Havoc heavy weapons, with historical local IDs retained as hidden compatibility objects.\n- ABANDONED REV26 ADDITIONAL MODEL / EXPORT SHAPE TEST: altered Cultist semantic children, Breacher 3-5, Raptor 2/4/5, Possessed, and Warp Talons to hidden/shared-link proxy structures specifically to test fresh-roster export aggregation.\nThose experiments were never production doctrine and are excluded from this reconstruction. Only later changes positively identified as intended were replayed. The healthy REV26 Troops/Other Additional Copy Cost arithmetic, Replenished Ranks behavior, Daemonkin refunds, production shared weapon/package IDs, Legion logic, attachments, categories, points, and unrelated mechanics remain intact.\n\nREV31 — VERSION TYPO CORRECTION + STANDARD PATCH NOTES\nCorrected the catalogue title from Chaos Space Marines 3.3.5 to Chaos Space Marines 3.3.4. The previous 3.3.5 label was a typo and did not represent a distinct army-rules version. Added the standard automatically present Patch Notes Configuration. The Chaos Space Marines 3.3.4 section intentionally contains no catalogue-mirrored army-rules bullets and links to the Reforged Discord Server for the full rules patch. Catalogue Bugfixes (September 4th) records: 'Various errors fixed from a bugged revision; recovered stable branch and implemented correct bugfixes.' No mechanical selections, points, loadouts, validation, copy-cost arithmetic, Legion behavior, shared-library behavior, or unrelated catalogue semantics were changed in this revision.\n\nREV32 — CHAOS SPACE MARINES 3.3.5 / DEFILER REWORKED\nUpdated the catalogue rules version from 3.3.4 to 3.3.5 and replaced the old Patch Notes heading with the Defiler rework note. Rebuilt Chaos Defiler while preserving stable unit ID 29c8-79f3-3c49-1a2f, root categories, 180 Point base cost, Additional Copy Cost semantics, and all unrelated catalogue mechanics. The synchronized Arsenal Library carries the same updated root.\n\nREV33 — CSM 3.3.5 DEFILER COST + LEGIONARIES CHAMPION CORRECTION\nCorrected Chaos Defiler from 180 to 260 Points and Excruciator Cannons / Magma Cutters from +10 to +20 Points. Updated Legionaries Chaos Champion ranged choices to Champion Boltgun, Champion Bolt Pistol, and Champion Plasma Pistol. Surviving selection IDs are preserved. Retargeted the playable catalogue from Game System revision 20 to revision 21.\n\nREV34 — DEFILER MISSILE LAUNCHER CORRECTION\nAdded Missile Launcher to both independent Defiler flexible weapon-mount lists. This corrects an omission from the 3.3.5 rework implementation. Existing Defiler option IDs, base cost, Paid Wargear costs, Additional Copy Cost arithmetic, Legionaries changes, Game System target, and all unrelated catalogue mechanics are unchanged.\n\nREV35 — CHECKBOX + VEHICLE PRESENTATION CLEANUP\nFlattened 18 binary optional one-item wrappers into direct checkbox-style selections across the requested Armour Piercing High Explosive Shells, Smoke Launchers, Cyclone Missiles, Venerable, Dozer Spikes, Frag Grenades, Krak Grenades, Breacher Charge, and Glorious Jump Pack options, preserving stable selection IDs, costs, rules, modifiers, and max-1 constraint IDs. Chaos Wardog now presents two direct four-option main weapon radio lists plus one direct pintle radio list with an explicit zero-width empty default, Diabolus Heavy Stubber +10, and Havoc Launcher +10; its Main Weapons and Paid Wargear layers are removed. Chaos Predator's existing optional Pintle Weapons group is moved inside its model under Loadout Options and given a zero-width header. Chaos Defiler's existing mandatory (None) / Excruciator Cannons +20 / Magma Cutters +20 selector is moved inside the Defiler model under Loadout Options and its separate Paid Wargear section is removed. Havocs Aspiring Champion is renamed Havocs Champion. Chosen preset UI is renamed Presets with No Preset and Sandvich's Chosen options. All four legion-specific Terminator Chaos Lords gain a visible Leader Attachment rule reading Cannot attach to anything. Existing root points, categories, legion gating, associations, Additional Copy Costs, Defiler weapon legality, GS21 target, and unrelated mechanics are unchanged.",
     "categoryEntries": [
       {
         "name": "May Attach To: Chaos Lord",

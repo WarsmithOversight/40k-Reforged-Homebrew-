@@ -5,7 +5,7 @@
     "name": "Tyranids 3.3.4",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 31,
+    "revision": 32,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -3694,7 +3694,7 @@
             "name": "Patch Notes",
             "id": "04ad-f5b1-8bfb-d85b",
             "hidden": false,
-            "description": "## Tyranids 3.3.4\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 10th)\n\n• Added Ripper Swarm model counter.\n• 3.3.5 preview unit added: Screamer-Killer.\n• Hive Guard loadouts combined into atomic cannon & Powerful Limbs choices.\n• Zoanthrope and Trygon: Neurothrope - Leech Essence and Trygon Prime - Synapse now use checkbox-style Unit Upgrade selections.",
+            "description": "## Tyranids 3.3.4\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 11th)\n\n• Added Ripper Swarm model counter.\n• 3.3.5 preview unit added: Screamer-Killer.\n• Hive Guard loadouts combined into atomic cannon & Powerful Limbs choices.\n• Zoanthrope and Trygon: Neurothrope - Leech Essence and Trygon Prime - Synapse now use checkbox-style Unit Upgrade selections.\n• Hive Guard and Tyrant Guard: optional third models now use checkbox-style Additional Model selections.\n• 3.3.5 preview unit added: Tyrannofex (250 Points, Other / Monster).",
             "noindex": false
           }
         ],
@@ -3712,7 +3712,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV26: Automatically present Configuration entry using the standard two-section Patch Notes format. Tyranids 3.3.4 intentionally lists no army-rules changes here; Catalogue Bugfixes (September 4th) records catalogue creation.\nREV28: Catalogue Bugfixes updated with 'Added Ripper Swarm model counter.'\nREV29: Catalogue Bugfixes updated with the 3.3.5 Screamer-Killer preview unit and Hive Guard atomic-loadout presentation correction.\nREV30: reset Catalogue Bugfixes to September 10th, removed stale prior bugfix entries, and retained only the current bugfixes from this update cycle.\nREV31: added the Zoanthrope and Trygon checkbox-style Unit Upgrade presentation cleanup to Catalogue Bugfixes (September 10th)."
+        "comment": "REV26: Automatically present Configuration entry using the standard two-section Patch Notes format. Tyranids 3.3.4 intentionally lists no army-rules changes here; Catalogue Bugfixes (September 4th) records catalogue creation.\nREV28: Catalogue Bugfixes updated with 'Added Ripper Swarm model counter.'\nREV29: Catalogue Bugfixes updated with the 3.3.5 Screamer-Killer preview unit and Hive Guard atomic-loadout presentation correction.\nREV30: reset Catalogue Bugfixes to September 10th, removed stale prior bugfix entries, and retained only the current bugfixes from this update cycle.\nREV31: added the Zoanthrope and Trygon checkbox-style Unit Upgrade presentation cleanup to Catalogue Bugfixes (September 10th).\nREV32: updated the cumulative Catalogue Bugfixes heading to September 11th and appended Additional Model checkbox cleanup plus the Tyrannofex preview."
       },
       {
         "type": "upgrade",
@@ -9415,16 +9415,6 @@
             "id": "a78f-ccb1-7fda-59d0",
             "hidden": false,
             "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "30ac-a2ef-0a43-7b3b"
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "model",
@@ -9482,6 +9472,16 @@
                       }
                     ],
                     "defaultSelectionEntryId": "d084-eb53-feeb-9f74"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "30ac-a2ef-0a43-7b3b"
                   }
                 ]
               }
@@ -9665,16 +9665,6 @@
             "id": "0e11-6544-0bc5-b8ee",
             "hidden": false,
             "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "b2ad-f6c2-b323-0a21"
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "model",
@@ -9740,6 +9730,16 @@
                       }
                     ],
                     "defaultSelectionEntryId": "3585-d487-c30a-e4df"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "b2ad-f6c2-b323-0a21"
                   }
                 ]
               }
@@ -10361,6 +10361,60 @@
           }
         ],
         "comment": "REV29 PREVIEW UNIT: Screamer-Killer is intentionally exposed early as a 130 Point Other / Monster preview for the upcoming Tyranids 3.3.5 release. Only list-construction information currently supplied by the maintainer is represented here. No speculative weapon/loadout or battlefield-rule content has been added."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Tyrannofex",
+        "hidden": false,
+        "id": "4d9d-7c19-91be-0b40",
+        "sortIndex": 25,
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "51b2-306e-1021-d207",
+            "value": 250
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "54ff-4176-803b-798a",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "e6ed-c065-8a16-4cd8",
+            "id": "d859-a83b-554f-ab68",
+            "primary": false,
+            "name": "Monster"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "4e89-924a-2e45-4547",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "f7b2-93cb-b347-fd6f",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ],
+        "rules": [
+          {
+            "name": "3.3.5 Preview",
+            "id": "2e53-55ff-08c7-e09b",
+            "hidden": false,
+            "description": "Upcoming unit for Tyranids 3.3.5. Join the Reforged Discord Server to be notified of rules updates instantly: https://discord.gg/BpjkaNmMVB",
+            "noindex": false
+          }
+        ],
+        "comment": "REV32 PREVIEW UNIT: Tyrannofex is intentionally exposed early as a 250 Point Other / Monster preview for the upcoming Tyranids 3.3.5 release. Only list-construction information currently supplied by the maintainer is represented here. No speculative weapon/loadout or battlefield-rule content has been added."
       }
     ],
     "categoryEntries": [
@@ -10715,6 +10769,6 @@
         "comment": "REV23 CANONICAL EXPORT PACKAGE: represents the fixed four Ripper Swarms in the base unit. The editor uses the local label 'Ripping Jaws'; New Recruit exports the canonical target name '4x Ripping Jaws'."
       }
     ],
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTyranids now use the final-state fancy-notepad loadout grammar. Hive Tyrant Wings are inline loadout alternatives; Warrior and Warrior Brood use two arm-pair lists; Termagants 1-7 use one shared ordinary weapon slot while 8-10 are paid specialist slots. Ripper Swarms, Hive Guard, and Tyrant Guard use variable-size controls. All native non-Rare Other units use Additional Copy Costs. The existing Tervigon Living Incubator free-Termagant TODO remains intentionally untouched.\n\nRIPPER SWARM VARIABLE-SIZE UI FIX\nRipper Swarms now use one quantity-style +20 Point Additional Model entry capped at two, rather than separate Ripper Swarm 5 and Ripper Swarm 6 model subtrees.\n\nRIPPER SWARM ADDITIONAL-MODEL UI CORRECTION\nRipper Swarms now use the same max-1 optional-model radio pattern as Hive Guard. Ripper Swarm 5 is the first optional +20 model; when selected it exposes Ripper Swarm 6 as a second optional +20 model.\n\nTERVIGON LIVING INCUBATOR IMPLEMENTATION\nLiving Incubator now uses required Tervigon-to-Termagant associations: 1 brood at 800, 2 at 1200, 3 at 1600. Associated Termagant units and their paid specialist weapons cost 0 Points. The full Living Incubator rule text is displayed on the Tervigon.\n\nTERVIGON HIDDEN-ASSOCIATION MINIMUM FIX\nLiving Incubator association slots now have min 0 individually. A single dynamic association-count constraint enforces 1 / 2 / 3 attached broods by Game Size, preventing hidden Brood 3 from generating a phantom requirement at 1200 Points.\n\nTERVIGON DISTINCT-BROOD PICKER FIX\nLiving Incubator now uses one game-size-specific multi-select association picker rather than separate Brood 1/2/3 pickers. Each Termagant unit appears once, so the same unit cannot be selected for multiple granted broods.\n\nTERVIGON PLAYER-FACING ERROR MESSAGE\nReplaced New Recruit's generic 'requires N associations more' minimum error with explicit Living Incubator errors for 800 / 1200 / 1600 Points. The messages tell the player how many free Termagant broods are required, to add Termagant units first, where to select them, and that the selected broods cost 0 Points.\n\nTERVIGON AUTO-GRANTED BROODS PROTOTYPE\nLiving Incubator now prototypes Neuroloid-style nested Termagant broods. The Tervigon automatically selects 1 / 2 / 3 zero-point brood units according to Game Size. Each brood preserves the normal Warrior attachment category so nested association targeting can be tested.\n\nNESTED WARRIOR COUNTLESS LEADER\nWarrior has been removed from the root Leader section and moved into sharedSelectionEntries. Hormagaunts, normal Termagants, and Tervigon-granted Termagant broods now expose Warrior through an Attached Warrior group, matching the proven nested Nob-style architecture.\n\nREV11 CONSTRUCTIVE VALIDATION MIGRATION\nTargets Game System revision 11. Additional Copy Costs uses the current required-configuration semantic tag and self-owned duplicate warning. Trygon and Mawloc Rare limits are constructive. The Hive Tyrant / Tervigon / Neurotyrant shared restriction is now self-monitored by those units rather than enforced by a hidden-category stock max. The obsolete Neuroloid roster cap is removed. Living Incubator no longer uses dynamic stock exact-count constraints: each granted brood is max one, Brood 2/3 use selected-safe visibility across Game Size changes, and Tervigon/Brood entries provide constructive missing/invalid-brood errors. Nested Warrior architecture is unchanged.\n\nREV13 NEW RECRUIT EXPORT COMPATIBILITY\nPromoted the proven revision-12 Points-ID test build to the canonical Tyranids catalogue for Warhammer 40k Reforged Game System revision 12. All Points cost references use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, categories, constraints, nested Warrior architecture, Living Incubator logic, or constructive validation semantics were otherwise changed.\n\nREV20 RETROSPECTIVE POLISH PASS\nRevisited Tyranids against the final cross-faction presentation standard. Added explicit Hive Tyrant and shared Warrior model headers around their existing two anonymous arm-pair choice lists without reintroducing physical Arm Pair labels. Renamed Neurotyrant Attached Unit to Attached Neuroloids. Renamed Hive Guard and Tyrant Guard Additional Models to Additional Model because each group adds only one model. Standardized all twelve Monstrous/Warrior/Guard Bone Sword + Lash Whip package names to '&' grammar while preserving every existing selection ID. Refreshed durable Warrior-nesting comments to use the current Attached Warrior terminology. Ripper Swarm Additional Model 1 / Additional Model 2 sequencing, Bioform Upgrade, Living Incubator, nested Warrior architecture, Termagant specialist structure, variable-size mechanics, Hive Tyrant/Tervigon/Neurotyrant shared limit, Rare validation, points, categories, associations, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV21 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Hormagaunts (10), normal Termagants (10), and Gargoyles (10) now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical root copy costs +20 Points. All 78 pre-existing Other point modifiers were moved unchanged to the Other child. LIVING INCUBATOR EXCEPTION: Tervigon's free Termagant Brood 1 / 2 / 3 units do not count toward the normal Termagant allowance. They already use distinct nested unit IDs, so the Troop ledger simply excludes those IDs rather than applying a compensating refund. All unrelated unit rules, loadouts, Leader limits, Rare behavior, generated-brood requirements, and attachment mechanics are unchanged.\n\nREV22 — NEUROLICTOR RARE + WARRIOR EXPORT CLEANUP\nCorrected Neurolictor to Rare. Its previous Counts Toward Other Soft Copy Cost link was retargeted to Rare using the same category-link ID, its Additional Copy Costs reminder was removed, and its six normal Other copy-cost modifiers were removed. The Other ledger therefore moves from 78 to 72 modifiers / 12 non-Rare Other families. Separately, renamed the six Warrior Brood (3) '2x Warrior Bone Sword' selections to 'Paired Warrior Bone Swords' while preserving every existing selection ID, producing cleaner quantity-prefixed roster exports. No other Tyranids unit, loadout, point cost, category, Troop accounting rule, Living Incubator behavior, or Game System semantic was changed.\n\nREV23 — RIPPER SWARM EXPORT QUANTITY FIX\nCorrected Ripper Swarms weapon export. The fixed Ripper Swarms 1-4 block now uses a canonical shared 4x Ripping Jaws export package while retaining the concise Ripping Jaws editor label. Optional Ripper Swarm 5 and Ripper Swarm 6 continue to contribute one Ripping Jaws each. A full six-model unit therefore records six total Ripping Jaws: four on the root block plus one on each additional model. Points, variable-size sequencing, Bioform Upgrade, Additional Copy Costs, and all unrelated mechanics are unchanged.\n\nREV24 — NEUROTYRANT SECTION ORDER\nReordered the Neurotyrant editor presentation so Loadout Options appears above Attached Neuroloids. This is a presentation-only change; all IDs, costs, constraints, attachment behavior, and unit semantics are unchanged.\n\nREV25 — GS20 TROOP COPY RULE\nUpdated to Game System revision 20 and retargeted Hormagaunts (10), Termagants (10), and Gargoyles (10) to the Additional Copy Cost - Troop short-form rule. Existing infoLink IDs, Neurotyrant section ordering, Ripper Swarm export presentation, Termagant loadout structure, points, categories, and unrelated mechanics are unchanged.\n\nREV26 — TYRANIDS 3.3.4 + STANDARD PATCH NOTES\nUpdated the catalogue title from Tyranids 3.3.3 to Tyranids 3.3.4 and added the standard automatically present Patch Notes Configuration. The army-rules section is intentionally bare; Catalogue Bugfixes (September 4th) contains 'Catalogue created.' No mechanical selections, points, generated-unit behavior, nested leaders, copy-cost arithmetic, validation, categories, or unrelated catalogue semantics changed.\n\nREV27 — GAME SYSTEM 21 SYNC\nRetargeted this catalogue from Game System revision 20 to revision 21. This is a compatibility-only sync: no rules version, unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, Patch Notes, validation, library links, or other executable catalogue content changed.\n\nREV28 — FRENZIED FEEDERS CATEGORY COUNTER\nBuilt directly from clean GS21 REV27. Added a catalogue-local hidden Counts Toward Frenzied Feeders category to normal Hormagaunts, normal Termagants, and Living Incubator Termagant Broods 1-3. Added an automatically present Frenzied Feeders Configuration with a fixed result selection whose name reports Ripper Swarm Size from the aggregate hidden-category count. Supports sizes 0-30. Added 'Added Ripper Swarm model counter.' to Catalogue Bugfixes. No Game System change, points change, copy-cost change, loadout change, attachment change, or generated Ripper Swarm roster unit was introduced.\n\nREV29 — SCREAMER-KILLER 3.3.5 PREVIEW + HIVE GUARD ATOMIC LOADOUTS\nAdded Screamer-Killer as a 130 Point Other / Monster preview for upcoming Tyranids 3.3.5, with a visible preview notice directing players to the Reforged Discord Server. Screamer-Killer participates in the normal Other Additional Copy Cost system as its own family. Updated Hive Guard so each model chooses one atomic Shock Cannon & Powerful Limbs or Impaler Cannon & Powerful Limbs final state, preserving the existing cannon selection IDs. Catalogue remains Tyranids 3.3.4 on Game System revision 21. Frenzied Feeders, points, attachments, unit-size logic, and unrelated mechanics are unchanged.\n\nREV30 — BUGFIX LOG CLEANUP\nRebuilt the player-facing Catalogue Bugfixes section for September 10th, removed stale entries from earlier catalogue-update cycles, and retained only the current bugfix entries. No unit data, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, validation behavior, Game System target, or other mechanics changed.\n\nREV31 — TYRANID UNIT UPGRADE CHECKBOXES\nFlattened Neurothrope - Leech Essence on Zoanthrope and Trygon Prime - Synapse on Trygon from one-item optional wrapper groups into direct max-1 Unit Upgrade selections. Renamed those two visible parent sections from Bioform Upgrade to Unit Upgrade. Existing group IDs, upgrade selection IDs, +20 Point costs, rule text, and max-1 constraint IDs are unchanged. Added the cleanup to Catalogue Bugfixes (September 10th). No points, categories, Additional Copy Cost arithmetic, Frenzied Feeders, Screamer-Killer preview, Hive Guard loadouts, Game System target, or unrelated mechanics changed."
+    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTyranids now use the final-state fancy-notepad loadout grammar. Hive Tyrant Wings are inline loadout alternatives; Warrior and Warrior Brood use two arm-pair lists; Termagants 1-7 use one shared ordinary weapon slot while 8-10 are paid specialist slots. Ripper Swarms, Hive Guard, and Tyrant Guard use variable-size controls. All native non-Rare Other units use Additional Copy Costs. The existing Tervigon Living Incubator free-Termagant TODO remains intentionally untouched.\n\nRIPPER SWARM VARIABLE-SIZE UI FIX\nRipper Swarms now use one quantity-style +20 Point Additional Model entry capped at two, rather than separate Ripper Swarm 5 and Ripper Swarm 6 model subtrees.\n\nRIPPER SWARM ADDITIONAL-MODEL UI CORRECTION\nRipper Swarms now use the same max-1 optional-model radio pattern as Hive Guard. Ripper Swarm 5 is the first optional +20 model; when selected it exposes Ripper Swarm 6 as a second optional +20 model.\n\nTERVIGON LIVING INCUBATOR IMPLEMENTATION\nLiving Incubator now uses required Tervigon-to-Termagant associations: 1 brood at 800, 2 at 1200, 3 at 1600. Associated Termagant units and their paid specialist weapons cost 0 Points. The full Living Incubator rule text is displayed on the Tervigon.\n\nTERVIGON HIDDEN-ASSOCIATION MINIMUM FIX\nLiving Incubator association slots now have min 0 individually. A single dynamic association-count constraint enforces 1 / 2 / 3 attached broods by Game Size, preventing hidden Brood 3 from generating a phantom requirement at 1200 Points.\n\nTERVIGON DISTINCT-BROOD PICKER FIX\nLiving Incubator now uses one game-size-specific multi-select association picker rather than separate Brood 1/2/3 pickers. Each Termagant unit appears once, so the same unit cannot be selected for multiple granted broods.\n\nTERVIGON PLAYER-FACING ERROR MESSAGE\nReplaced New Recruit's generic 'requires N associations more' minimum error with explicit Living Incubator errors for 800 / 1200 / 1600 Points. The messages tell the player how many free Termagant broods are required, to add Termagant units first, where to select them, and that the selected broods cost 0 Points.\n\nTERVIGON AUTO-GRANTED BROODS PROTOTYPE\nLiving Incubator now prototypes Neuroloid-style nested Termagant broods. The Tervigon automatically selects 1 / 2 / 3 zero-point brood units according to Game Size. Each brood preserves the normal Warrior attachment category so nested association targeting can be tested.\n\nNESTED WARRIOR COUNTLESS LEADER\nWarrior has been removed from the root Leader section and moved into sharedSelectionEntries. Hormagaunts, normal Termagants, and Tervigon-granted Termagant broods now expose Warrior through an Attached Warrior group, matching the proven nested Nob-style architecture.\n\nREV11 CONSTRUCTIVE VALIDATION MIGRATION\nTargets Game System revision 11. Additional Copy Costs uses the current required-configuration semantic tag and self-owned duplicate warning. Trygon and Mawloc Rare limits are constructive. The Hive Tyrant / Tervigon / Neurotyrant shared restriction is now self-monitored by those units rather than enforced by a hidden-category stock max. The obsolete Neuroloid roster cap is removed. Living Incubator no longer uses dynamic stock exact-count constraints: each granted brood is max one, Brood 2/3 use selected-safe visibility across Game Size changes, and Tervigon/Brood entries provide constructive missing/invalid-brood errors. Nested Warrior architecture is unchanged.\n\nREV13 NEW RECRUIT EXPORT COMPATIBILITY\nPromoted the proven revision-12 Points-ID test build to the canonical Tyranids catalogue for Warhammer 40k Reforged Game System revision 12. All Points cost references use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, categories, constraints, nested Warrior architecture, Living Incubator logic, or constructive validation semantics were otherwise changed.\n\nREV20 RETROSPECTIVE POLISH PASS\nRevisited Tyranids against the final cross-faction presentation standard. Added explicit Hive Tyrant and shared Warrior model headers around their existing two anonymous arm-pair choice lists without reintroducing physical Arm Pair labels. Renamed Neurotyrant Attached Unit to Attached Neuroloids. Renamed Hive Guard and Tyrant Guard Additional Models to Additional Model because each group adds only one model. Standardized all twelve Monstrous/Warrior/Guard Bone Sword + Lash Whip package names to '&' grammar while preserving every existing selection ID. Refreshed durable Warrior-nesting comments to use the current Attached Warrior terminology. Ripper Swarm Additional Model 1 / Additional Model 2 sequencing, Bioform Upgrade, Living Incubator, nested Warrior architecture, Termagant specialist structure, variable-size mechanics, Hive Tyrant/Tervigon/Neurotyrant shared limit, Rare validation, points, categories, associations, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV21 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Hormagaunts (10), normal Termagants (10), and Gargoyles (10) now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical root copy costs +20 Points. All 78 pre-existing Other point modifiers were moved unchanged to the Other child. LIVING INCUBATOR EXCEPTION: Tervigon's free Termagant Brood 1 / 2 / 3 units do not count toward the normal Termagant allowance. They already use distinct nested unit IDs, so the Troop ledger simply excludes those IDs rather than applying a compensating refund. All unrelated unit rules, loadouts, Leader limits, Rare behavior, generated-brood requirements, and attachment mechanics are unchanged.\n\nREV22 — NEUROLICTOR RARE + WARRIOR EXPORT CLEANUP\nCorrected Neurolictor to Rare. Its previous Counts Toward Other Soft Copy Cost link was retargeted to Rare using the same category-link ID, its Additional Copy Costs reminder was removed, and its six normal Other copy-cost modifiers were removed. The Other ledger therefore moves from 78 to 72 modifiers / 12 non-Rare Other families. Separately, renamed the six Warrior Brood (3) '2x Warrior Bone Sword' selections to 'Paired Warrior Bone Swords' while preserving every existing selection ID, producing cleaner quantity-prefixed roster exports. No other Tyranids unit, loadout, point cost, category, Troop accounting rule, Living Incubator behavior, or Game System semantic was changed.\n\nREV23 — RIPPER SWARM EXPORT QUANTITY FIX\nCorrected Ripper Swarms weapon export. The fixed Ripper Swarms 1-4 block now uses a canonical shared 4x Ripping Jaws export package while retaining the concise Ripping Jaws editor label. Optional Ripper Swarm 5 and Ripper Swarm 6 continue to contribute one Ripping Jaws each. A full six-model unit therefore records six total Ripping Jaws: four on the root block plus one on each additional model. Points, variable-size sequencing, Bioform Upgrade, Additional Copy Costs, and all unrelated mechanics are unchanged.\n\nREV24 — NEUROTYRANT SECTION ORDER\nReordered the Neurotyrant editor presentation so Loadout Options appears above Attached Neuroloids. This is a presentation-only change; all IDs, costs, constraints, attachment behavior, and unit semantics are unchanged.\n\nREV25 — GS20 TROOP COPY RULE\nUpdated to Game System revision 20 and retargeted Hormagaunts (10), Termagants (10), and Gargoyles (10) to the Additional Copy Cost - Troop short-form rule. Existing infoLink IDs, Neurotyrant section ordering, Ripper Swarm export presentation, Termagant loadout structure, points, categories, and unrelated mechanics are unchanged.\n\nREV26 — TYRANIDS 3.3.4 + STANDARD PATCH NOTES\nUpdated the catalogue title from Tyranids 3.3.3 to Tyranids 3.3.4 and added the standard automatically present Patch Notes Configuration. The army-rules section is intentionally bare; Catalogue Bugfixes (September 4th) contains 'Catalogue created.' No mechanical selections, points, generated-unit behavior, nested leaders, copy-cost arithmetic, validation, categories, or unrelated catalogue semantics changed.\n\nREV27 — GAME SYSTEM 21 SYNC\nRetargeted this catalogue from Game System revision 20 to revision 21. This is a compatibility-only sync: no rules version, unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, Patch Notes, validation, library links, or other executable catalogue content changed.\n\nREV28 — FRENZIED FEEDERS CATEGORY COUNTER\nBuilt directly from clean GS21 REV27. Added a catalogue-local hidden Counts Toward Frenzied Feeders category to normal Hormagaunts, normal Termagants, and Living Incubator Termagant Broods 1-3. Added an automatically present Frenzied Feeders Configuration with a fixed result selection whose name reports Ripper Swarm Size from the aggregate hidden-category count. Supports sizes 0-30. Added 'Added Ripper Swarm model counter.' to Catalogue Bugfixes. No Game System change, points change, copy-cost change, loadout change, attachment change, or generated Ripper Swarm roster unit was introduced.\n\nREV29 — SCREAMER-KILLER 3.3.5 PREVIEW + HIVE GUARD ATOMIC LOADOUTS\nAdded Screamer-Killer as a 130 Point Other / Monster preview for upcoming Tyranids 3.3.5, with a visible preview notice directing players to the Reforged Discord Server. Screamer-Killer participates in the normal Other Additional Copy Cost system as its own family. Updated Hive Guard so each model chooses one atomic Shock Cannon & Powerful Limbs or Impaler Cannon & Powerful Limbs final state, preserving the existing cannon selection IDs. Catalogue remains Tyranids 3.3.4 on Game System revision 21. Frenzied Feeders, points, attachments, unit-size logic, and unrelated mechanics are unchanged.\n\nREV30 — BUGFIX LOG CLEANUP\nRebuilt the player-facing Catalogue Bugfixes section for September 10th, removed stale entries from earlier catalogue-update cycles, and retained only the current bugfix entries. No unit data, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, validation behavior, Game System target, or other mechanics changed.\n\nREV31 — TYRANID UNIT UPGRADE CHECKBOXES\nFlattened Neurothrope - Leech Essence on Zoanthrope and Trygon Prime - Synapse on Trygon from one-item optional wrapper groups into direct max-1 Unit Upgrade selections. Renamed those two visible parent sections from Bioform Upgrade to Unit Upgrade. Existing group IDs, upgrade selection IDs, +20 Point costs, rule text, and max-1 constraint IDs are unchanged. Added the cleanup to Catalogue Bugfixes (September 10th). No points, categories, Additional Copy Cost arithmetic, Frenzied Feeders, Screamer-Killer preview, Hive Guard loadouts, Game System target, or unrelated mechanics changed.\n\nREV32 — ADDITIONAL MODEL CHECKBOXES + TYRANNOFEX PREVIEW\nConverted every optional Additional Model slot currently present in the Tyranids catalogue to direct checkbox-style model selections by moving each existing group max-1 constraint onto its existing model entry. This affects Hive Guard 3 and Tyrant Guard 3. Their model type, stable IDs, points costs, nested loadouts, defaults, and rules remain unchanged. Added Tyrannofex as a 250 Point Other / Monster 3.3.5 preview unit using the established Screamer-Killer preview convention, including the Other soft-copy-cost category and Additional Copy Costs infoLink. No Tyrannofex weapons, loadouts, or battlefield rules have been invented. The cumulative Catalogue Bugfixes log was retained, its heading date updated to September 11th, and the new changes appended. Existing Frenzied Feeders, Unit Upgrade checkboxes, Additional Copy Costs, GS21 target, root points, and unrelated mechanics are unchanged."
   }
 }

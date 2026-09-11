@@ -5,7 +5,7 @@
     "name": "Space Marines 3.3.7",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 16,
+    "revision": 17,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -29,7 +29,7 @@
             "name": "⚠️ CATALOGUE UNDER CONSTRUCTION ⚠️",
             "id": "4fae-07c4-a165-5a51",
             "hidden": false,
-            "description": "# ⚠️ SPACE MARINES CATALOGUE UNDER CONSTRUCTION ⚠️\n\n## Current rules version: 3.3.7\n\n**This catalogue is still under active construction and is not yet a complete representation of the Space Marines army rules.**\n\nSome units, loadouts, restrictions, or options may be missing, incomplete, or still awaiting implementation.\n\n**The Space Marines army rules PDF remains authoritative. If the listbuilder and the army rules disagree, follow the army rules PDF.**\n\n*For the current rules, development status, and to report catalogue problems, visit the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*",
+            "description": "# ⚠️ SPACE MARINES CATALOGUE UNDER CONSTRUCTION ⚠️\n\n## Current rules version: 3.3.7\n\n**This catalogue is still under active construction and is not yet a complete representation of the Space Marines army rules.**\n\nSome units, loadouts, restrictions, or options may be missing, incomplete, or still awaiting implementation.\n\n**The Space Marines army rules PDF remains authoritative. If the listbuilder and the army rules disagree, follow the army rules PDF.**\n\n*For the current rules, development status, and to report catalogue problems, visit the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 11th)\n\n• Converted standalone optional Cyclone Missile Launcher, Venerable, Advanced Jamming Beacon, Smoke Launchers, Whirlwind Storm Bolter, Armour Piercing High Explosive Shells, Hunter-Killer Missile, Dozer Blade, Combat Shield, Haywire Mine, Jump Packs, Storm Shield, and Trapmaster Melta Bomb options to checkbox-style selections.\n• Sanguinary Guard: Sanguinary Banner now uses a checkbox-style Unit Upgrade selection.\n• Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans now show a concise temporary Coming Soon message directing players to the Space Marines PDF in the Reforged Discord.",
             "noindex": false
           }
         ],
@@ -47,7 +47,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV11: Automatically present construction-status notice used instead of the normal Patch Notes template while the Space Marines catalogue remains incomplete."
+        "comment": "REV11: Automatically present construction-status notice used instead of the normal Patch Notes template while the Space Marines catalogue remains incomplete.\nREV17: added September 11th Catalogue Bugfixes for checkbox-style optional upgrades, Sanguinary Banner Unit Upgrade presentation, and concise placeholder messages for the four unfinished units."
       },
       {
         "type": "upgrade",
@@ -13322,21 +13322,10 @@
             ]
           },
           {
-            "name": "Paid Wargear",
+            "name": "Unit Upgrade",
             "id": "33df-55f7-84d7-5137",
             "hidden": false,
             "sortIndex": 3,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "83b1-d422-a0b0-1971",
-                "includeChildSelections": false
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -13359,6 +13348,17 @@
                     "hidden": false,
                     "description": "While friendly units are visible to this unit, for each Resolve Test those units make, reroll a result of 1 for that Resolve Test.",
                     "noindex": false
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "83b1-d422-a0b0-1971",
+                    "includeChildSelections": false
                   }
                 ]
               }
@@ -15246,17 +15246,6 @@
             "id": "9003-eab2-0f07-08f9",
             "hidden": false,
             "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "1a86-f427-8479-5800",
-                "includeChildSelections": false
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -15270,6 +15259,17 @@
                     "name": "Points",
                     "typeId": "51b2-306e-1021-d207",
                     "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "1a86-f427-8479-5800",
+                    "includeChildSelections": false
                   }
                 ]
               }
@@ -16939,12 +16939,24 @@
                       }
                     ],
                     "defaultSelectionEntryId": "5c6e-1f8a-d616-4d55"
-                  },
+                  }
+                ],
+                "comment": "REV6: Melta Bomb is intentionally a direct optional max-one child beneath Trapmaster so New Recruit presents it as a compact checklist-style +20 Point bearer upgrade.",
+                "selectionEntries": [
                   {
-                    "name": "​",
-                    "id": "ec78-7153-3dab-96af",
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Melta Bomb",
                     "hidden": false,
+                    "id": "4fbb-5286-6777-7793",
                     "sortIndex": 2,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 20
+                      }
+                    ],
                     "constraints": [
                       {
                         "type": "max",
@@ -16955,27 +16967,9 @@
                         "id": "6bc6-0da7-611f-967d",
                         "includeChildSelections": false
                       }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Melta Bomb",
-                        "hidden": false,
-                        "id": "4fbb-5286-6777-7793",
-                        "sortIndex": 1,
-                        "costs": [
-                          {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 20
-                          }
-                        ]
-                      }
                     ]
                   }
-                ],
-                "comment": "REV6: Melta Bomb is intentionally a direct optional max-one child beneath Trapmaster so New Recruit presents it as a compact checklist-style +20 Point bearer upgrade."
+                ]
               },
               {
                 "name": "Rune Priest Skjald",
@@ -17988,7 +17982,16 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: FIREDRAKE TERMINATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models; base cost represented here=150 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred."
+        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: FIREDRAKE TERMINATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models; base cost represented here=150 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
+        "rules": [
+          {
+            "name": "Coming Soon",
+            "id": "8371-a6a3-0634-868c",
+            "hidden": false,
+            "description": "This unit will be added shortly. Until then, use the Space Marines army PDF in the Reforged Discord: https://discord.gg/BpjkaNmMVB",
+            "noindex": false
+          }
+        ]
       },
       {
         "type": "unit",
@@ -18461,12 +18464,21 @@
             "id": "adbc-c94c-c269-76d7",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "b078-1fb0-010c-45d5",
+                "type": "upgrade",
+                "import": true,
+                "name": "Storm Shield",
                 "hidden": false,
+                "id": "1c8e-c907-f389-94a9",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -18476,23 +18488,6 @@
                     "shared": true,
                     "id": "c747-3e9d-f5f4-5a72",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Storm Shield",
-                    "hidden": false,
-                    "id": "1c8e-c907-f389-94a9",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -20112,12 +20107,21 @@
             "id": "d795-70c3-f134-780e",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "0725-39da-0cd5-ef28",
+                "type": "upgrade",
+                "import": true,
+                "name": "Storm Shield",
                 "hidden": false,
+                "id": "b815-a822-82ac-1604",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -20127,23 +20131,6 @@
                     "shared": true,
                     "id": "573b-76a6-3574-8401",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Storm Shield",
-                    "hidden": false,
-                    "id": "b815-a822-82ac-1604",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -20491,12 +20478,21 @@
             "id": "9660-21c0-6ae0-ef18",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "7e94-4855-51f2-5b14",
+                "type": "upgrade",
+                "import": true,
+                "name": "Storm Shield",
                 "hidden": false,
+                "id": "ec90-06bd-f444-e548",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -20506,23 +20502,6 @@
                     "shared": true,
                     "id": "8fe1-b95b-ee31-8e5c",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Storm Shield",
-                    "hidden": false,
-                    "id": "ec90-06bd-f444-e548",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -23068,12 +23047,30 @@
             "id": "98fb-3f51-77ef-4dfd",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "1809-7e02-a37b-f47b",
+                "type": "upgrade",
+                "import": true,
+                "name": "Jump Packs",
                 "hidden": false,
+                "id": "6617-b9c7-36e1-c5d3",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Jump Packs",
+                    "id": "306f-17ad-0224-e802",
+                    "hidden": false,
+                    "description": "This unit gains Fly. Add 1 D6 to Move Rolls made for this unit.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -23083,32 +23080,6 @@
                     "shared": true,
                     "id": "b314-e843-54f6-aece",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Jump Packs",
-                    "hidden": false,
-                    "id": "6617-b9c7-36e1-c5d3",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Jump Packs",
-                        "id": "306f-17ad-0224-e802",
-                        "hidden": false,
-                        "description": "This unit gains Fly. Add 1 D6 to Move Rolls made for this unit.",
-                        "noindex": false
-                      }
-                    ]
                   }
                 ]
               }
@@ -23197,7 +23168,16 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: TERMINATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models; base cost represented here=110 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred."
+        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: TERMINATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models; base cost represented here=110 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
+        "rules": [
+          {
+            "name": "Coming Soon",
+            "id": "ba4d-b8aa-115a-8075",
+            "hidden": false,
+            "description": "This unit will be added shortly. Until then, use the Space Marines army PDF in the Reforged Discord: https://discord.gg/BpjkaNmMVB",
+            "noindex": false
+          }
+        ]
       },
       {
         "type": "unit",
@@ -23280,7 +23260,16 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: ASSAULT TERMINATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models; base cost represented here=110 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred."
+        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: ASSAULT TERMINATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models; base cost represented here=110 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
+        "rules": [
+          {
+            "name": "Coming Soon",
+            "id": "073c-e32e-8ddb-4a24",
+            "hidden": false,
+            "description": "This unit will be added shortly. Until then, use the Space Marines army PDF in the Reforged Discord: https://discord.gg/BpjkaNmMVB",
+            "noindex": false
+          }
+        ]
       },
       {
         "type": "unit",
@@ -26335,7 +26324,16 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: VANGUARD VETERANS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models (source allows 2-3; Additional Model deferred); base cost represented here=80 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred."
+        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: VANGUARD VETERANS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models (source allows 2-3; Additional Model deferred); base cost represented here=80 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
+        "rules": [
+          {
+            "name": "Coming Soon",
+            "id": "25f6-d632-eef7-9b8a",
+            "hidden": false,
+            "description": "This unit will be added shortly. Until then, use the Space Marines army PDF in the Reforged Discord: https://discord.gg/BpjkaNmMVB",
+            "noindex": false
+          }
+        ]
       },
       {
         "type": "unit",
@@ -28180,12 +28178,21 @@
             "id": "6957-f677-44b8-59f2",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "2d86-9626-e21e-6221",
+                "type": "upgrade",
+                "import": true,
+                "name": "Dozer Blade",
                 "hidden": false,
+                "id": "5340-2249-b044-2f10",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -28196,30 +28203,22 @@
                     "id": "3312-9132-6b2b-edca",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Dozer Blade",
-                    "hidden": false,
-                    "id": "5340-2249-b044-2f10",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "823e-3355-81d3-c8e7",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "4f7b-5fe2-b5a3-6f57",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -28230,30 +28229,22 @@
                     "id": "903c-9e68-4f09-88e7",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "4f7b-5fe2-b5a3-6f57",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "47b5-bd34-4feb-e60c",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "1e28-5042-09bd-0c24",
                 "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -28263,23 +28254,6 @@
                     "shared": true,
                     "id": "e47c-7074-c05d-cfc3",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "1e28-5042-09bd-0c24",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -28513,12 +28487,21 @@
             "id": "31fa-1fa1-8b4f-55c6",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "7e14-dc5a-aec6-7936",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "964d-ee96-d465-58ea",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -28528,23 +28511,6 @@
                     "shared": true,
                     "id": "b1be-f77d-709f-9272",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "964d-ee96-d465-58ea",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -29235,12 +29201,21 @@
             "id": "a582-e35c-6c8b-4a5c",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "a0f1-b3f6-f6c4-d8d0",
+                "type": "upgrade",
+                "import": true,
+                "name": "Haywire Mine",
                 "hidden": false,
+                "id": "e2dd-805d-2a7b-5931",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -29250,23 +29225,6 @@
                     "shared": true,
                     "id": "b184-33e7-91f0-bf21",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Haywire Mine",
-                    "hidden": false,
-                    "id": "e2dd-805d-2a7b-5931",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -29485,12 +29443,21 @@
             "id": "f23f-bb7e-c73f-8b7e",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "4a28-e53a-be20-b2fe",
+                "type": "upgrade",
+                "import": true,
+                "name": "Combat Shield",
                 "hidden": false,
+                "id": "d221-9840-d22c-1673",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -29500,23 +29467,6 @@
                     "shared": true,
                     "id": "c664-aebc-15cf-c467",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Combat Shield",
-                    "hidden": false,
-                    "id": "d221-9840-d22c-1673",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
                   }
                 ]
               }
@@ -30460,12 +30410,21 @@
             "id": "1799-a936-f5ca-47fb",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "a3f7-8a3e-706e-1bd0",
+                "type": "upgrade",
+                "import": true,
+                "name": "Dozer Blade",
                 "hidden": false,
+                "id": "be83-9452-6ef0-4012",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -30475,23 +30434,6 @@
                     "shared": true,
                     "id": "7265-1e49-628f-558d",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Dozer Blade",
-                    "hidden": false,
-                    "id": "be83-9452-6ef0-4012",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -30653,12 +30595,21 @@
             "id": "33bd-f73e-4367-21f6",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "9e2a-c1cc-2f5d-f9c9",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "6f56-7805-58da-bc57",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -30669,30 +30620,22 @@
                     "id": "5365-ee90-ffcf-7613",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "6f56-7805-58da-bc57",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "5635-edc0-83d0-77ff",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "f703-0f56-fd7a-6b1f",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -30703,30 +30646,22 @@
                     "id": "c387-894c-f06d-7263",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "f703-0f56-fd7a-6b1f",
-                    "sortIndex": 2,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "9bd7-3c50-2e0f-e53f",
+                "type": "upgrade",
+                "import": true,
+                "name": "Armour Piercing High Explosive Shells",
                 "hidden": false,
+                "id": "d426-85fb-543f-63ae",
                 "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -30736,23 +30671,6 @@
                     "shared": true,
                     "id": "aac1-49d8-7496-7e2d",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Armour Piercing High Explosive Shells",
-                    "hidden": false,
-                    "id": "d426-85fb-543f-63ae",
-                    "sortIndex": 3,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -31012,12 +30930,21 @@
             "id": "155f-3e55-3bbd-c33b",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "f68f-4d6c-ee3b-18f7",
+                "type": "upgrade",
+                "import": true,
+                "name": "Storm Bolter",
                 "hidden": false,
+                "id": "4bc7-5ffb-b9ca-4c8c",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -31028,30 +30955,22 @@
                     "id": "ea25-0014-67f4-7e59",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Storm Bolter",
-                    "hidden": false,
-                    "id": "4bc7-5ffb-b9ca-4c8c",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "1469-80c4-464f-2336",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "d6f7-3ae6-d558-2987",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -31062,30 +30981,22 @@
                     "id": "e148-783a-f7ff-d6b1",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "d6f7-3ae6-d558-2987",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "891f-0765-1229-7ff1",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "2b87-9ffe-5ece-937a",
                 "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -31095,23 +31006,6 @@
                     "shared": true,
                     "id": "b05b-2508-d2c0-7c22",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "2b87-9ffe-5ece-937a",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -31302,12 +31196,21 @@
             "id": "245f-ce78-aa6a-88bc",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "3c13-d061-6133-8a91",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "ca3b-dbe2-1f60-39ca",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -31317,23 +31220,6 @@
                     "shared": true,
                     "id": "6a9d-a3e4-3a98-2a6f",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "ca3b-dbe2-1f60-39ca",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -31534,12 +31420,21 @@
             "id": "8406-d322-2b81-2ba1",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "8502-6e12-ed5b-328b",
+                "type": "upgrade",
+                "import": true,
+                "name": "Advanced Jamming Beacon",
                 "hidden": false,
+                "id": "e4ce-39d0-15fc-72d3",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -31549,23 +31444,6 @@
                     "shared": true,
                     "id": "180b-86ad-eb9d-a783",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Advanced Jamming Beacon",
-                    "hidden": false,
-                    "id": "e4ce-39d0-15fc-72d3",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
                   }
                 ]
               }
@@ -31878,12 +31756,21 @@
             "id": "bbe2-1d40-e1d7-1f57",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "ff23-b790-4bc2-e5ad",
+                "type": "upgrade",
+                "import": true,
+                "name": "Venerable",
                 "hidden": false,
+                "id": "964d-9feb-59c7-863c",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -31893,23 +31780,6 @@
                     "shared": true,
                     "id": "ff56-1a92-7ef7-9f37",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Venerable",
-                    "hidden": false,
-                    "id": "964d-9feb-59c7-863c",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -32665,12 +32535,21 @@
             "id": "4af5-ecf0-f700-9d83",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "3cdb-d887-0240-fbf9",
+                "type": "upgrade",
+                "import": true,
+                "name": "Cyclone Missile Launcher",
                 "hidden": false,
+                "id": "40e8-ed36-845a-fa38",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -32680,23 +32559,6 @@
                     "shared": true,
                     "id": "6867-2306-fd29-4dd8",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Cyclone Missile Launcher",
-                    "hidden": false,
-                    "id": "40e8-ed36-845a-fa38",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -32959,7 +32821,7 @@
     ],
     "authorName": "Varmint",
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
-    "comment": "SPACE MARINES REV1 / GS18 — VEHICLE SCAFFOLD ONLY.\nThis catalogue is intentionally incomplete. It exists to establish the Space Marine Chapter selector, Chapter presentation semantics, Space Marines Vehicles presentation, stable vehicle unit IDs, source points/type/class metadata, and Additional Copy Costs infrastructure before any vehicle loadouts or rules are implemented. No Infantry, Leader, Troop, chapter-exclusive non-vehicle unit, weapon choice, paid wargear, unit rule, attachment rule, relic, psychic power, or other gameplay payload is implemented in this revision. The army rules PDF remains authoritative.\n\nREV2 — MANUFACTORUM-READY VEHICLE SCAFFOLD\nAligned native vehicle presentation with the established Astra Militarum / Manufactorum bridge pattern. All eleven native Space Marine vehicle shells now present under Other while retaining their existing Space Marines Vehicles category links as non-primary compatibility tags. The ten chapter-independent vehicle shells are mirrored into Manufactorum Imperium V6 using the same unit IDs. Baal Predator remains local to Space Marines / Blood Angels and is not exported through Manufactorum.\n\nREV3 — SPACE MARINES 3.3.6 / GS20 COMPLETE EMPTY UNIT SHELLS\nExpanded the catalogue from the eleven-vehicle scaffold to all 71 unit roots in source skeleton order while preserving the existing catalogue ID, Chapter Configuration IDs, Additional Copy Costs Configuration IDs, and all eleven established vehicle IDs / Space Marines Vehicles bridge tags. Updated to Game System revision 20.\nThis phase intentionally implements only unit-level list-building structure: Points, Leader/Troop/Other, Infantry/Vehicle, counted unit-type semantics, Chapter gating, base Leader attachment relationships, host one-Leader capacity, and GS20 Troop/Other Additional Copy Costs. No internal loadouts, model cards, paid wargear, unit rules/profiles, or Additional Model controls are implemented.\nASSAULT INTERCESSORS ATTACHMENT NOTE: the source skeleton's Jump Packs option contains the only attachment_override in the army. The 3.3.6 PDF confirms the distinction explicitly: normal Captain/Librarian/Lieutenant attach to Assault Intercessors without Fly, while Jump Pack Captain/Librarian/Lieutenant/Chaplain attach to Assault Intercessors with Fly. Base Assault Intercessors therefore use the normal-Leader host state in REV3; the Jump Pack Leader host state will be added when the deferred Jump Packs loadout is implemented.\n\nREV4 — CHAPTER-FIRST ARMY LIST PRESENTATION\nApplied the established Chaos Space Marines Legion presentation pattern to Space Marine Chapters. All 15 chapter-exclusive units now use Ultramarines, Blood Angels, Space Wolves, or Salamanders as their primary Army List presentation category. Their source Leader/Troop/Other role remains as a secondary semantic category, together with Infantry/Vehicle, Leader Capacity, Additional Copy Cost, attachment, and other existing tags. No unit IDs, category-link IDs, points, Chapter gating, Additional Copy Cost arithmetic, attachments, or other mechanics changed. Existing sort indices already place all chapter-specific units at 1-15 and generic Leaders from 16 onward, so the selected Chapter category appears above the standard Leader category.\n\nREV5 — BLOOD ANGELS LOADOUT BATCH 1\nImplemented player-facing loadouts for Sanguinary Guard, Sanguinary Priest, Death Company Assault Intercessors, Jump Pack Assault Death Company, Death Company Intercessors, and Baal Predator. Sanguinary Guard uses separate model cards, one optional +50 Point third model, and Sanguinary Banner Paid Wargear. Sanguinary Priest has its fixed weapon package and +10 Point Jump Pack. The two assault Death Company units use the approved three-card compressed layout; Death Company Intercessors use one veteran weapon card plus fixed models 2 and 3-5. Baal Predator keeps paid Sponson Weapons inside Loadout Options with (None) default; Dozer Blade remains Paid Wargear. No other unit roots, categories, Chapter presentation, attachments, Additional Copy Costs, points outside these loadouts, or existing stable IDs were changed.\n\nREV6 — SPACE WOLVES LOADOUT BATCH\nImplemented Wolf Guard Battle Leader, Blood Claws, Grey Hunters, Wolf Guard Terminators, and Wolf Scouts using the approved compact final-state presentations. Wolf Guard Terminators expose identical per-model final-state choices while constructive semantic validators preserve the source max-one special-melee and max-one Assault Cannon limits. Wolf Scouts use named role cards, including a checklist-style Melta Bomb upgrade on Trapmaster. Thunderwolf Cavalry remains intentionally unimplemented and now uses the same mandatory content-message pattern as Adepta Sororitas Sisters Novitiates, adapted to Space Marines. No other unit roots, Chapter presentation, attachments, Additional Copy Costs, points, or existing stable IDs were changed.\n\nREV7 — THUNDERWOLF CAVALRY PERMISSIVE-CORRECTIVE LOADOUT\nReplaced the Thunderwolf Cavalry placeholder with three clean model cards and enforced its cross-model equipment caps through constructive semantic errors rather than cross-hiding. Storm Shields may be selected independently by all three models for +10 each. Melee Power Fist, Great Axe/Thunder Hammer, Plasma Pistol, and sidearm Power Fist each retain their source max-one unit limits. Also standardized the Wolf Guard Terminator special-melee error repair instruction to 'Choose a different loadout for one of those models.' No other unit mechanics, categories, Chapter presentation, attachments, points, or Additional Copy Costs were changed.\n\nREV8 — RAPID-FIRE LOADOUT BATCH\nImplemented the 44 approved simple Space Marine unit loadouts from Pyroclasts through Astartes Basilisk. Presentation uses melee-first ordering where practical, explicit specialist/model cards where requested, atomic final-state packages, single-step Additional Model groups for the variable-size 2/3-model and 1/2-model units, and checklist-style direct Paid Wargear. Assault Intercessors now implement +20 Jump Packs with exact permissive-corrective attachment-state validation: normal Leaders are legal only without Jump Packs, while Jump Pack Captain/Librarian/Lieutenant/Chaplain are legal only with Jump Packs. The Sergeant melee dependency is also enforced constructively. Wolf Scouts Pack Leader was renamed to include its unit name while preserving its existing ID. Existing unit IDs, Chapter-first presentation, Additional Copy Costs, points outside newly represented wargear/additional-model choices, prior Blood Angels/Space Wolves loadouts, and unrelated mechanics remain unchanged.\n\nREV9 — GS21 CHAPTER CATEGORY ORDER\nRetargeted to Game System revision 21. GS21 moves the four Chapter presentation categories above Leader in Army section ordering. No Space Marine unit IDs, loadouts, categories, points, attachments, Additional Copy Costs, or other catalogue mechanics changed.\n\nREV10 — LOADOUT CORRECTION BATCH\nApplied focused presentation and role corrections to Pyroclasts, Astartes Basilisk, Predator, Scout Infiltrators, Scout Skirmishers, Techmarine, Aggressors, Inceptors, Sternguard Veterans, Devastators, Reivers, and Melta Eradicators; implemented Hellblasters; removed Eliminators from the playable catalogue. Eliminators were also removed from Other Additional Copy Cost arithmetic and from the constructive Phobos Leader attachment text. Existing surviving IDs are preserved where the same player-facing decision survives.\n\nREV11 — SPACE MARINES 3.3.7\nMelta Eradicators and Heavy Bolter Eradicators changed from 120 to 110 Points. Added an automatically present under-construction notice instead of the normal Patch Notes template. Game System remains revision 21. No other catalogue mechanics changed.\n\nREV12 — VICTRIX REWORK + FLY ATTACHMENT AUDIT\nAdded the new Victrix Guard and fully implemented the reworked Victrix Honour Guard from Space Marines 3.3.7. Both are 2-3 model Ultramarines Other units at 50 Points per model with an explicit +50 Additional Model. Victrix Guard carries Bolt Carbine, Power Weapon & Ultima Storm Shield; Victrix Honour Guard carries Bolt Carbine & Power Weapon. Both use the existing Captain/Librarian/Lieutenant/Chaplain host semantics. Added Victrix Guard as a new independent Other Additional Copy Cost family. Audited Assault Intercessor Fly-dependent Leader attachments against the current PDF: preserved all eight normal-vs-Jump-Pack Leader state validators because the new Unit Skeleton omits those qualifiers, and removed the stale Wolf Guard Battle Leader Fly restriction because the current PDF does not state one. The catalogue remains Space Marines 3.3.7 on Game System revision 21 and retains the under-construction notice.\n\nREV13 — TROOP LOADOUT BATCH + DEATH COMPANY / BAAL CLEANUP\nCorrected Death Company Intercessor 1 to the 3.3.7 conditional Bolt Rifle replacement structure. Suppressed the redundant Baal Predator Sponson Weapons header. Implemented complete player-facing loadout trees for Tactical Squad, Intercessors, and Heavy Intercessors using direct model-role presentation rather than procedural replacement wording. All source point costs are represented visibly: Tactical combi packages +10, Heavy Intercessor Hellstorm/Executor rifle upgrades +10 each, and Heavy Weapons Specialist Hellstorm/Executor Heavy Bolter upgrades +10. No root points, categories, attachments, Additional Copy Cost arithmetic, Fly-state validation, Victrix work, or unrelated mechanics changed.\n\nREV14 — VEHICLE LOADOUT BATCH\nImplemented complete listbuilder loadouts for Whirlwind, Vindicator, Land Speeder, Dreadnought, Contemptor Dreadnought, and Leviathan Dreadnought from the Space Marines 3.3.7 source. Player-facing architecture intentionally follows established CSM vehicle conventions where equivalent: anonymous weapon pools instead of physical arm labels, atomic fist + auxiliary packages, Venerable as a Unit Upgrade, and independent repeated selectors for 'any two' / 'four of any' source wording. No root points, categories, Additional Copy Cost arithmetic, attachment logic, Fly-state validation, Victrix work, Troop loadouts, or unrelated catalogue mechanics changed. The six stable vehicle roots are synchronized into Manufactorum Imperium Library V8 in the same pass.\n\nREV15 — CATALOGUE CORRECTION BATCH\nAdded the Vindicator's fixed Siege Shield; corrected Astartes Basilisk Paid Wargear so Smoke Launchers and Armour Piercing High Explosive Shells may be selected together; replaced Predator and Land Raider literal '(None)' options with genuinely optional selectors; removed Boltgun from the Scout Infiltrator Heavy Weapons Specialist; and split Techmarine Omnissian Axe & Servo-Arm into separate fixed equipment lines. No root points, categories, attachment logic, Additional Copy Cost arithmetic, Fly-state validation, chapter gating, or unrelated loadouts changed. The four affected shared vehicle roots are synchronized into Manufactorum Imperium Library V9.\n\nREV16 — ELIMINATORS RESTORED / PERMISSIVE-CORRECTIVE LOADOUT\nRestored Eliminators using their original stable root ID 17c7-9184-1413-efff. All three models now expose the same five loadout choices, with +10 Point Bolt Carbine & Covering Fire and +10 Point Las Fusil. Four catalogue-local hidden semantic categories and constructive errors enforce the source one-model caps for Hyperfrag, Executioner, Mortis Bolts, and Bolt Carbine & Covering Fire. Restored Eliminators as an eligible Phobos Captain / Librarian / Lieutenant attachment host and restored its six-modifier Other Additional Copy Cost family. No Game System change or unrelated mechanics changed.",
+    "comment": "SPACE MARINES REV1 / GS18 — VEHICLE SCAFFOLD ONLY.\nThis catalogue is intentionally incomplete. It exists to establish the Space Marine Chapter selector, Chapter presentation semantics, Space Marines Vehicles presentation, stable vehicle unit IDs, source points/type/class metadata, and Additional Copy Costs infrastructure before any vehicle loadouts or rules are implemented. No Infantry, Leader, Troop, chapter-exclusive non-vehicle unit, weapon choice, paid wargear, unit rule, attachment rule, relic, psychic power, or other gameplay payload is implemented in this revision. The army rules PDF remains authoritative.\n\nREV2 — MANUFACTORUM-READY VEHICLE SCAFFOLD\nAligned native vehicle presentation with the established Astra Militarum / Manufactorum bridge pattern. All eleven native Space Marine vehicle shells now present under Other while retaining their existing Space Marines Vehicles category links as non-primary compatibility tags. The ten chapter-independent vehicle shells are mirrored into Manufactorum Imperium V6 using the same unit IDs. Baal Predator remains local to Space Marines / Blood Angels and is not exported through Manufactorum.\n\nREV3 — SPACE MARINES 3.3.6 / GS20 COMPLETE EMPTY UNIT SHELLS\nExpanded the catalogue from the eleven-vehicle scaffold to all 71 unit roots in source skeleton order while preserving the existing catalogue ID, Chapter Configuration IDs, Additional Copy Costs Configuration IDs, and all eleven established vehicle IDs / Space Marines Vehicles bridge tags. Updated to Game System revision 20.\nThis phase intentionally implements only unit-level list-building structure: Points, Leader/Troop/Other, Infantry/Vehicle, counted unit-type semantics, Chapter gating, base Leader attachment relationships, host one-Leader capacity, and GS20 Troop/Other Additional Copy Costs. No internal loadouts, model cards, paid wargear, unit rules/profiles, or Additional Model controls are implemented.\nASSAULT INTERCESSORS ATTACHMENT NOTE: the source skeleton's Jump Packs option contains the only attachment_override in the army. The 3.3.6 PDF confirms the distinction explicitly: normal Captain/Librarian/Lieutenant attach to Assault Intercessors without Fly, while Jump Pack Captain/Librarian/Lieutenant/Chaplain attach to Assault Intercessors with Fly. Base Assault Intercessors therefore use the normal-Leader host state in REV3; the Jump Pack Leader host state will be added when the deferred Jump Packs loadout is implemented.\n\nREV4 — CHAPTER-FIRST ARMY LIST PRESENTATION\nApplied the established Chaos Space Marines Legion presentation pattern to Space Marine Chapters. All 15 chapter-exclusive units now use Ultramarines, Blood Angels, Space Wolves, or Salamanders as their primary Army List presentation category. Their source Leader/Troop/Other role remains as a secondary semantic category, together with Infantry/Vehicle, Leader Capacity, Additional Copy Cost, attachment, and other existing tags. No unit IDs, category-link IDs, points, Chapter gating, Additional Copy Cost arithmetic, attachments, or other mechanics changed. Existing sort indices already place all chapter-specific units at 1-15 and generic Leaders from 16 onward, so the selected Chapter category appears above the standard Leader category.\n\nREV5 — BLOOD ANGELS LOADOUT BATCH 1\nImplemented player-facing loadouts for Sanguinary Guard, Sanguinary Priest, Death Company Assault Intercessors, Jump Pack Assault Death Company, Death Company Intercessors, and Baal Predator. Sanguinary Guard uses separate model cards, one optional +50 Point third model, and Sanguinary Banner Paid Wargear. Sanguinary Priest has its fixed weapon package and +10 Point Jump Pack. The two assault Death Company units use the approved three-card compressed layout; Death Company Intercessors use one veteran weapon card plus fixed models 2 and 3-5. Baal Predator keeps paid Sponson Weapons inside Loadout Options with (None) default; Dozer Blade remains Paid Wargear. No other unit roots, categories, Chapter presentation, attachments, Additional Copy Costs, points outside these loadouts, or existing stable IDs were changed.\n\nREV6 — SPACE WOLVES LOADOUT BATCH\nImplemented Wolf Guard Battle Leader, Blood Claws, Grey Hunters, Wolf Guard Terminators, and Wolf Scouts using the approved compact final-state presentations. Wolf Guard Terminators expose identical per-model final-state choices while constructive semantic validators preserve the source max-one special-melee and max-one Assault Cannon limits. Wolf Scouts use named role cards, including a checklist-style Melta Bomb upgrade on Trapmaster. Thunderwolf Cavalry remains intentionally unimplemented and now uses the same mandatory content-message pattern as Adepta Sororitas Sisters Novitiates, adapted to Space Marines. No other unit roots, Chapter presentation, attachments, Additional Copy Costs, points, or existing stable IDs were changed.\n\nREV7 — THUNDERWOLF CAVALRY PERMISSIVE-CORRECTIVE LOADOUT\nReplaced the Thunderwolf Cavalry placeholder with three clean model cards and enforced its cross-model equipment caps through constructive semantic errors rather than cross-hiding. Storm Shields may be selected independently by all three models for +10 each. Melee Power Fist, Great Axe/Thunder Hammer, Plasma Pistol, and sidearm Power Fist each retain their source max-one unit limits. Also standardized the Wolf Guard Terminator special-melee error repair instruction to 'Choose a different loadout for one of those models.' No other unit mechanics, categories, Chapter presentation, attachments, points, or Additional Copy Costs were changed.\n\nREV8 — RAPID-FIRE LOADOUT BATCH\nImplemented the 44 approved simple Space Marine unit loadouts from Pyroclasts through Astartes Basilisk. Presentation uses melee-first ordering where practical, explicit specialist/model cards where requested, atomic final-state packages, single-step Additional Model groups for the variable-size 2/3-model and 1/2-model units, and checklist-style direct Paid Wargear. Assault Intercessors now implement +20 Jump Packs with exact permissive-corrective attachment-state validation: normal Leaders are legal only without Jump Packs, while Jump Pack Captain/Librarian/Lieutenant/Chaplain are legal only with Jump Packs. The Sergeant melee dependency is also enforced constructively. Wolf Scouts Pack Leader was renamed to include its unit name while preserving its existing ID. Existing unit IDs, Chapter-first presentation, Additional Copy Costs, points outside newly represented wargear/additional-model choices, prior Blood Angels/Space Wolves loadouts, and unrelated mechanics remain unchanged.\n\nREV9 — GS21 CHAPTER CATEGORY ORDER\nRetargeted to Game System revision 21. GS21 moves the four Chapter presentation categories above Leader in Army section ordering. No Space Marine unit IDs, loadouts, categories, points, attachments, Additional Copy Costs, or other catalogue mechanics changed.\n\nREV10 — LOADOUT CORRECTION BATCH\nApplied focused presentation and role corrections to Pyroclasts, Astartes Basilisk, Predator, Scout Infiltrators, Scout Skirmishers, Techmarine, Aggressors, Inceptors, Sternguard Veterans, Devastators, Reivers, and Melta Eradicators; implemented Hellblasters; removed Eliminators from the playable catalogue. Eliminators were also removed from Other Additional Copy Cost arithmetic and from the constructive Phobos Leader attachment text. Existing surviving IDs are preserved where the same player-facing decision survives.\n\nREV11 — SPACE MARINES 3.3.7\nMelta Eradicators and Heavy Bolter Eradicators changed from 120 to 110 Points. Added an automatically present under-construction notice instead of the normal Patch Notes template. Game System remains revision 21. No other catalogue mechanics changed.\n\nREV12 — VICTRIX REWORK + FLY ATTACHMENT AUDIT\nAdded the new Victrix Guard and fully implemented the reworked Victrix Honour Guard from Space Marines 3.3.7. Both are 2-3 model Ultramarines Other units at 50 Points per model with an explicit +50 Additional Model. Victrix Guard carries Bolt Carbine, Power Weapon & Ultima Storm Shield; Victrix Honour Guard carries Bolt Carbine & Power Weapon. Both use the existing Captain/Librarian/Lieutenant/Chaplain host semantics. Added Victrix Guard as a new independent Other Additional Copy Cost family. Audited Assault Intercessor Fly-dependent Leader attachments against the current PDF: preserved all eight normal-vs-Jump-Pack Leader state validators because the new Unit Skeleton omits those qualifiers, and removed the stale Wolf Guard Battle Leader Fly restriction because the current PDF does not state one. The catalogue remains Space Marines 3.3.7 on Game System revision 21 and retains the under-construction notice.\n\nREV13 — TROOP LOADOUT BATCH + DEATH COMPANY / BAAL CLEANUP\nCorrected Death Company Intercessor 1 to the 3.3.7 conditional Bolt Rifle replacement structure. Suppressed the redundant Baal Predator Sponson Weapons header. Implemented complete player-facing loadout trees for Tactical Squad, Intercessors, and Heavy Intercessors using direct model-role presentation rather than procedural replacement wording. All source point costs are represented visibly: Tactical combi packages +10, Heavy Intercessor Hellstorm/Executor rifle upgrades +10 each, and Heavy Weapons Specialist Hellstorm/Executor Heavy Bolter upgrades +10. No root points, categories, attachments, Additional Copy Cost arithmetic, Fly-state validation, Victrix work, or unrelated mechanics changed.\n\nREV14 — VEHICLE LOADOUT BATCH\nImplemented complete listbuilder loadouts for Whirlwind, Vindicator, Land Speeder, Dreadnought, Contemptor Dreadnought, and Leviathan Dreadnought from the Space Marines 3.3.7 source. Player-facing architecture intentionally follows established CSM vehicle conventions where equivalent: anonymous weapon pools instead of physical arm labels, atomic fist + auxiliary packages, Venerable as a Unit Upgrade, and independent repeated selectors for 'any two' / 'four of any' source wording. No root points, categories, Additional Copy Cost arithmetic, attachment logic, Fly-state validation, Victrix work, Troop loadouts, or unrelated catalogue mechanics changed. The six stable vehicle roots are synchronized into Manufactorum Imperium Library V8 in the same pass.\n\nREV15 — CATALOGUE CORRECTION BATCH\nAdded the Vindicator's fixed Siege Shield; corrected Astartes Basilisk Paid Wargear so Smoke Launchers and Armour Piercing High Explosive Shells may be selected together; replaced Predator and Land Raider literal '(None)' options with genuinely optional selectors; removed Boltgun from the Scout Infiltrator Heavy Weapons Specialist; and split Techmarine Omnissian Axe & Servo-Arm into separate fixed equipment lines. No root points, categories, attachment logic, Additional Copy Cost arithmetic, Fly-state validation, chapter gating, or unrelated loadouts changed. The four affected shared vehicle roots are synchronized into Manufactorum Imperium Library V9.\n\nREV16 — ELIMINATORS RESTORED / PERMISSIVE-CORRECTIVE LOADOUT\nRestored Eliminators using their original stable root ID 17c7-9184-1413-efff. All three models now expose the same five loadout choices, with +10 Point Bolt Carbine & Covering Fire and +10 Point Las Fusil. Four catalogue-local hidden semantic categories and constructive errors enforce the source one-model caps for Hyperfrag, Executioner, Mortis Bolts, and Bolt Carbine & Covering Fire. Restored Eliminators as an eligible Phobos Captain / Librarian / Lieutenant attachment host and restored its six-modifier Other Additional Copy Cost family. No Game System change or unrelated mechanics changed.\n\nREV17 — CHECKBOX + PLACEHOLDER CLEANUP\nFlattened standalone optional one-item wrappers into direct checkbox-style selections for Cyclone Missile Launcher, Venerable, Advanced Jamming Beacon, Smoke Launchers, Whirlwind Storm Bolter, Armour Piercing High Explosive Shells, Hunter-Killer Missile, Dozer Blade, Combat Shield, Haywire Mine, Jump Packs, Storm Shield, and Wolf Scouts Trapmaster Melta Bomb. Only genuinely independent binary options were flattened: Land Speeder missile choices, Land Raider pintle choices, Predator/Baal weapon packages, Thunderwolf Storm Shields, Wolf Guard Storm Shields, and other mutually exclusive loadout choices remain radio-style selectors. Baal Predator Dozer Blade was converted by moving its existing Paid Wargear max1 constraint directly onto the existing selection. Sanguinary Banner was moved from Paid Wargear to Unit Upgrade and given the same direct checkbox treatment. Added a concise Coming Soon rule to Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans pointing players to the authoritative Space Marines PDF in the Reforged Discord. Root points, loadout legality, attachment rules, Eliminator permissive-corrective validation, Additional Copy Costs, GS21 target, and unrelated mechanics are unchanged.",
     "categoryEntries": [
       {
         "name": "May Attach To: Wolf Guard Battle Leader",

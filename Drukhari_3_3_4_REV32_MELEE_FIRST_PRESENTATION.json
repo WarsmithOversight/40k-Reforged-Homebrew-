@@ -5,7 +5,7 @@
     "name": "Drukhari 3.3.4",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 31,
+    "revision": 32,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -3239,7 +3239,7 @@
             "name": "Patch Notes",
             "id": "dd36-028e-5b9c-660f",
             "hidden": false,
-            "description": "## Drukhari 3.3.4\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*",
+            "description": "## Drukhari 3.3.4\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 10th)\n\n• Reordered Helliarch, Arena Champion, Syren, Dracon, Hekatrix, Sybarite, Beastmaster, Succubus, Haemonculus, and Archon loadout presentation so melee options appear before pistols and fixed ranged/support weapons.",
             "noindex": false
           }
         ],
@@ -3257,7 +3257,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV31: Patch Notes baseline updated to Drukhari 3.3.4. The Kabalite Warriors special-weapon wording change was already correctly represented by the existing two independent model choices, so no army-rules change bullet is needed."
+        "comment": "REV31: Patch Notes baseline updated to Drukhari 3.3.4. The Kabalite Warriors special-weapon wording change was already correctly represented by the existing two independent model choices, so no army-rules change bullet is needed.\nREV32: added September 10th Catalogue Bugfixes entry for melee-first loadout presentation across the listed Drukhari champions and leaders."
       },
       {
         "type": "unit",
@@ -3332,9 +3332,62 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "53db-15dc-60c0-7b39",
+                    "id": "b351-39d8-69f7-f2fe",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6c3e-838a-6602-19fe",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "dd4b-4742-97b6-df2c",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Huskblade",
+                        "hidden": false,
+                        "id": "8a92-f275-ba2d-2e17",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Sword",
+                        "hidden": false,
+                        "id": "2fb0-f268-f990-dfcf",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Agoniser",
+                        "hidden": false,
+                        "id": "844c-74ec-6fb7-a741",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "8a92-f275-ba2d-2e17"
+                  },
+                  {
+                    "name": "​",
+                    "id": "53db-15dc-60c0-7b39",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -3391,59 +3444,6 @@
                       }
                     ],
                     "defaultSelectionEntryId": "6153-ed95-53ab-a899"
-                  },
-                  {
-                    "name": "​",
-                    "id": "b351-39d8-69f7-f2fe",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "6c3e-838a-6602-19fe",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "dd4b-4742-97b6-df2c",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Huskblade",
-                        "hidden": false,
-                        "id": "8a92-f275-ba2d-2e17",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Power Sword",
-                        "hidden": false,
-                        "id": "2fb0-f268-f990-dfcf",
-                        "sortIndex": 2
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Agoniser",
-                        "hidden": false,
-                        "id": "844c-74ec-6fb7-a741",
-                        "sortIndex": 3
-                      }
-                    ],
-                    "defaultSelectionEntryId": "8a92-f275-ba2d-2e17"
                   }
                 ]
               }
@@ -3551,46 +3551,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "122f-176a-c034-55e9",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "f89c-4588-0da6-8225",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "72a8-faab-a6d4-4bc8",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Stinger Pistol",
-                        "hidden": false,
-                        "id": "b0a9-986a-e5fb-e46d",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "b0a9-986a-e5fb-e46d"
-                  },
-                  {
-                    "name": "​",
                     "id": "0a48-68f8-60fe-907d",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -3627,7 +3590,7 @@
                     "name": "​",
                     "id": "ab5f-9113-14ac-f6c6",
                     "hidden": false,
-                    "sortIndex": 3,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -3659,6 +3622,43 @@
                       }
                     ],
                     "defaultSelectionEntryId": "5a9b-4fdc-6edc-fa3f"
+                  },
+                  {
+                    "name": "​",
+                    "id": "122f-176a-c034-55e9",
+                    "hidden": false,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f89c-4588-0da6-8225",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "72a8-faab-a6d4-4bc8",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Stinger Pistol",
+                        "hidden": false,
+                        "id": "b0a9-986a-e5fb-e46d",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "b0a9-986a-e5fb-e46d"
                   }
                 ]
               }
@@ -3952,46 +3952,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "1e90-49af-bd02-999f",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "74a2-97f0-42c3-4411",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "4966-bc87-f455-b21f",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Splinter Pods",
-                        "hidden": false,
-                        "id": "dd5b-4519-4266-1e47",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "dd5b-4519-4266-1e47"
-                  },
-                  {
-                    "name": "​",
                     "id": "e0b4-a005-50f7-f493",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -4023,6 +3986,43 @@
                       }
                     ],
                     "defaultSelectionEntryId": "110e-8284-277d-b760"
+                  },
+                  {
+                    "name": "​",
+                    "id": "1e90-49af-bd02-999f",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "74a2-97f0-42c3-4411",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4966-bc87-f455-b21f",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Splinter Pods",
+                        "hidden": false,
+                        "id": "dd5b-4519-4266-1e47",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "dd5b-4519-4266-1e47"
                   }
                 ]
               }
@@ -4105,54 +4105,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "aa0f-356d-3bcd-4d4f",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "cf28-70f0-f0e8-1d2b",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "a99b-cfec-054d-61d0",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Splinter Pistol",
-                        "hidden": false,
-                        "id": "9ffc-07e3-2430-b082",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Blast Pistol",
-                        "hidden": false,
-                        "id": "ff9b-5a4e-3351-bc2e",
-                        "sortIndex": 2
-                      }
-                    ],
-                    "defaultSelectionEntryId": "9ffc-07e3-2430-b082"
-                  },
-                  {
-                    "name": "​",
                     "id": "352e-7aed-7f16-52b0",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -4192,6 +4147,51 @@
                       }
                     ],
                     "defaultSelectionEntryId": "2282-75ba-b276-a702"
+                  },
+                  {
+                    "name": "​",
+                    "id": "aa0f-356d-3bcd-4d4f",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "cf28-70f0-f0e8-1d2b",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a99b-cfec-054d-61d0",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Splinter Pistol",
+                        "hidden": false,
+                        "id": "9ffc-07e3-2430-b082",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Blast Pistol",
+                        "hidden": false,
+                        "id": "ff9b-5a4e-3351-bc2e",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "9ffc-07e3-2430-b082"
                   }
                 ]
               },
@@ -4641,54 +4641,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "55fc-c81a-b5a9-4f57",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "ce40-f7be-32c3-453e",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "c7b0-c6c5-322b-5fdd",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Hekatrix Splinter Pistol",
-                        "hidden": false,
-                        "id": "8172-ce42-8550-8af2",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Blast Pistol",
-                        "hidden": false,
-                        "id": "2c00-e0e8-102f-d7ec",
-                        "sortIndex": 2
-                      }
-                    ],
-                    "defaultSelectionEntryId": "8172-ce42-8550-8af2"
-                  },
-                  {
-                    "name": "​",
                     "id": "c839-49ce-5b26-9005",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -4736,6 +4691,51 @@
                       }
                     ],
                     "defaultSelectionEntryId": "b8dc-f202-3a09-b5dc"
+                  },
+                  {
+                    "name": "​",
+                    "id": "55fc-c81a-b5a9-4f57",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ce40-f7be-32c3-453e",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c7b0-c6c5-322b-5fdd",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hekatrix Splinter Pistol",
+                        "hidden": false,
+                        "id": "8172-ce42-8550-8af2",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Blast Pistol",
+                        "hidden": false,
+                        "id": "2c00-e0e8-102f-d7ec",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "8172-ce42-8550-8af2"
                   }
                 ]
               },
@@ -5354,54 +5354,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "8eb5-f13e-2291-9336",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "ca00-a161-41b8-bd5e",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "3c78-8ec8-cc23-b7b8",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Splinter Pistol",
-                        "hidden": false,
-                        "id": "9296-380d-251b-4326",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Blast Pistol",
-                        "hidden": false,
-                        "id": "8d02-a037-da83-4287",
-                        "sortIndex": 2
-                      }
-                    ],
-                    "defaultSelectionEntryId": "9296-380d-251b-4326"
-                  },
-                  {
-                    "name": "​",
                     "id": "f18d-964e-ef60-27e0",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -5441,6 +5396,51 @@
                       }
                     ],
                     "defaultSelectionEntryId": "70c2-09ad-2668-029e"
+                  },
+                  {
+                    "name": "​",
+                    "id": "8eb5-f13e-2291-9336",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ca00-a161-41b8-bd5e",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3c78-8ec8-cc23-b7b8",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Splinter Pistol",
+                        "hidden": false,
+                        "id": "9296-380d-251b-4326",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Blast Pistol",
+                        "hidden": false,
+                        "id": "8d02-a037-da83-4287",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "9296-380d-251b-4326"
                   }
                 ]
               },
@@ -5820,54 +5820,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "21d7-778a-0322-9234",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "9dff-53cb-954b-7be4",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "eb74-c212-4435-8e49",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Syren Splinter Pistol",
-                        "hidden": false,
-                        "id": "4892-647d-7755-d1b2",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Blast Pistol",
-                        "hidden": false,
-                        "id": "c700-be86-cf8d-a33b",
-                        "sortIndex": 2
-                      }
-                    ],
-                    "defaultSelectionEntryId": "4892-647d-7755-d1b2"
-                  },
-                  {
-                    "name": "​",
                     "id": "9ea0-a134-05a5-089f",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -5915,6 +5870,51 @@
                       }
                     ],
                     "defaultSelectionEntryId": "111d-66a9-8cf5-2fa7"
+                  },
+                  {
+                    "name": "​",
+                    "id": "21d7-778a-0322-9234",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9dff-53cb-954b-7be4",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "eb74-c212-4435-8e49",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Syren Splinter Pistol",
+                        "hidden": false,
+                        "id": "4892-647d-7755-d1b2",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Blast Pistol",
+                        "hidden": false,
+                        "id": "c700-be86-cf8d-a33b",
+                        "sortIndex": 2
+                      }
+                    ],
+                    "defaultSelectionEntryId": "4892-647d-7755-d1b2"
                   }
                 ]
               },
@@ -8120,47 +8120,9 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "5f7c-9fdf-a7b0-1ca9",
-                    "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "b3fb-4261-f5cc-aa73",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "60f8-ccf2-2b71-7b41",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Splinter Rifle & Bladevanes",
-                        "hidden": false,
-                        "id": "d6db-bd6d-5287-dbb2",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "d6db-bd6d-5287-dbb2",
-                    "comment": "REV22: fixed Arena Champion baseline package."
-                  },
-                  {
-                    "name": "​",
                     "id": "e919-158e-07b8-c7e2",
                     "hidden": false,
-                    "sortIndex": 2,
+                    "sortIndex": 1,
                     "constraints": [
                       {
                         "type": "min",
@@ -8201,6 +8163,44 @@
                     ],
                     "defaultSelectionEntryId": "e1fa-13b4-30bd-ac62",
                     "comment": "REV22: Arena Champion melee choice with fixed Splinter Pistol folded into each final-state package."
+                  },
+                  {
+                    "name": "​",
+                    "id": "5f7c-9fdf-a7b0-1ca9",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "b3fb-4261-f5cc-aa73",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "60f8-ccf2-2b71-7b41",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Splinter Rifle & Bladevanes",
+                        "hidden": false,
+                        "id": "d6db-bd6d-5287-dbb2",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d6db-bd6d-5287-dbb2",
+                    "comment": "REV22: fixed Arena Champion baseline package."
                   }
                 ]
               },
@@ -8850,7 +8850,7 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "c6d1-ce1a-3fd0-9083",
+                    "id": "ad52-308c-cb37-22ce",
                     "hidden": false,
                     "sortIndex": 1,
                     "constraints": [
@@ -8860,7 +8860,7 @@
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "cc1c-ff35-117d-01a5",
+                        "id": "a12e-d93b-0787-f405",
                         "includeChildSelections": false
                       },
                       {
@@ -8869,7 +8869,7 @@
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "46c0-3e9f-da32-67dd",
+                        "id": "7dcb-8646-8a72-9208",
                         "includeChildSelections": false
                       }
                     ],
@@ -8877,13 +8877,29 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Splinter Pods",
+                        "name": "Power Sword",
                         "hidden": false,
-                        "id": "999f-284d-cd76-d556",
+                        "id": "b361-ecba-eef1-a56c",
                         "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Agoniser",
+                        "hidden": false,
+                        "id": "3e55-a66b-1af8-ec56",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Stunclaw",
+                        "hidden": false,
+                        "id": "8a47-758a-6573-2bfb",
+                        "sortIndex": 3
                       }
                     ],
-                    "defaultSelectionEntryId": "999f-284d-cd76-d556"
+                    "defaultSelectionEntryId": "b361-ecba-eef1-a56c"
                   },
                   {
                     "name": "​",
@@ -8932,7 +8948,7 @@
                   },
                   {
                     "name": "​",
-                    "id": "ad52-308c-cb37-22ce",
+                    "id": "c6d1-ce1a-3fd0-9083",
                     "hidden": false,
                     "sortIndex": 3,
                     "constraints": [
@@ -8942,7 +8958,7 @@
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "a12e-d93b-0787-f405",
+                        "id": "cc1c-ff35-117d-01a5",
                         "includeChildSelections": false
                       },
                       {
@@ -8951,7 +8967,7 @@
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "7dcb-8646-8a72-9208",
+                        "id": "46c0-3e9f-da32-67dd",
                         "includeChildSelections": false
                       }
                     ],
@@ -8959,29 +8975,13 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Power Sword",
+                        "name": "Splinter Pods",
                         "hidden": false,
-                        "id": "b361-ecba-eef1-a56c",
+                        "id": "999f-284d-cd76-d556",
                         "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Agoniser",
-                        "hidden": false,
-                        "id": "3e55-a66b-1af8-ec56",
-                        "sortIndex": 2
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Stunclaw",
-                        "hidden": false,
-                        "id": "8a47-758a-6573-2bfb",
-                        "sortIndex": 3
                       }
                     ],
-                    "defaultSelectionEntryId": "b361-ecba-eef1-a56c"
+                    "defaultSelectionEntryId": "999f-284d-cd76-d556"
                   }
                 ]
               },
@@ -10177,6 +10177,6 @@
         "comment": "ROAMING PERFORMERS ERROR UX: while Roaming Performers exists without Included, this choice is hidden only if this Harlequin unit is not already in the army. An already-included unit stays visible and reports a constructive Not Included error. Missing Roaming Performers and excess Roaming Leader/Troupe allowances are also validated locally so the affected Harlequin unit carries the error."
       }
     ],
-    "comment": "\n\nADDITIONAL COPY COSTS\nNative non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Rare Other units retain their existing hard cap.\n\nSPECIALIST / DEFAULT-EQUIPMENT CLEANUP\nNamed champions consume model slot 1; numbering therefore continues from model 2. Kabalite Trueborn 5 and Kabalite Warriors 9-10 are treated as dedicated special-weapon models and no longer advertise Splinter Rifle. Wrack 9-10 and Haemoxyte 5 no longer expose a None choice for their special weapon. Acothyst Stinger Pistols are represented as fixed default equipment.\n\nCONSTRUCTIVE ERROR UX\nNormal Leader missing-attachment errors, host attached-Leader limits, Rare copy limits, and Additional Copy Costs configuration protection use player-facing custom errors. Shared Game System validation handles Leader Capacity and Configuration-level missing Game Size / Additional Copy Costs validation. Lhamaean remains a nested attached Leader that may coexist with one normally attached Leader, and explicitly carries Counts Toward Leader Maximum so nested copies count toward Leader Capacity.\n\nROAMING PERFORMERS CONSTRUCTIVE VALIDATION\nThe five Drukhari-local Harlequin entryLinks remain hidden only while the Roaming Performers Configuration entry exists and Included is not selected. If Roaming Performers is deleted while a Harlequin unit is selected, the selected unit remains visible and reports a constructive error directing the player to restore Roaming Performers and select Included. This logic is Drukhari-local; the shared Harlequins library remains unaware of Roaming Performers.\n\nREV18 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Roaming Performers logic, Harlequin library links, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV19 POLISH PASS\nAdded explicit model/model-set headers to anonymous single-model and fixed-loadout units; renamed the four nested Lhamaean relationship groups to Attached Lhamaean while keeping them first in the affected unit layouts; flattened Kabalite Warrior, Wrack, Kabalite Trueborn, Haemoxyte, and Scourge specialist models into Loadout Options; renamed the two independent grenade selectors to Grenade and Additional Grenade; removed Talos Left Arm / Right Arm presentation labels; and standardized Haemonculus / Tantalus Rare error wording. Lhamaean Leader-capacity semantics, attachment rules, points, loadout legality, Roaming Performers, Harlequin library linkage, Additional Copy Costs, and all existing selection-entry names/IDs are otherwise unchanged.\n\nREV20 INCUBI KLAIVEX LOADOUT\nRemoved the Klaive option from the Klaivex. The Klaivex is now always equipped with Demiklaives. The existing Demiklaives entry ID and the surrounding Klaivex loadout group are preserved; no other Incubi or Drukhari mechanics were changed.\n\nREV21 RETROSPECTIVE POLISH PASS\nRevisited Drukhari against the final cross-faction presentation standard. Standardized eight remaining host Leader-limit errors to grammar-safe 'This unit...' wording while preserving the four Lhamaean-aware exceptions exactly. Modernized the catalogue-level Constructive Error UX note to current Game System terminology and replaced obsolete Additional Leader terminology for the Lhamaean with nested attached Leader terminology. Loadouts, Attached Lhamaean ordering and mechanics, Roaming Performers, Harlequin linkage, Rare validation, points, categories, Additional Copy Costs, Incubi/Klaivex equipment, and all other rules semantics remain unchanged.\n\nREV22 — REAVER ATOMIC LOADOUTS\nCollapsed Reavers into final-state equipment packages. Arena Champion now shows fixed Splinter Rifle & Bladevanes and chooses Power Sword & Splinter Pistol / Agoniser & Splinter Pistol. Reaver 2 chooses Splinter Rifle & Bladevanes, Heat Lance & Bladevanes, or Blaster & Bladevanes. Reaver 3 now shows fixed Splinter Rifle & Bladevanes. Obsolete standalone Bladevanes and Splinter Pistol branches were removed rather than retained as dead-ID shells.\n\nREV23 — SCOURGE SOLARITE ATOMIC LOADOUTS\nCollapsed the Solarite's fixed Power Lance into both pistol choices. Solarite now chooses Splinter Pistol & Power Lance or Blast Pistol & Power Lance. The obsolete standalone Power Lance group was removed rather than retained as dead-ID debris.\n\nREV24 — GROTESQUE ATOMIC LOADOUTS\nCollapsed each Grotesque model's fixed Flesh Gauntlet into its meaningful weapon choice. Grotesque 1, 2, and 3 now each choose Liquifier Gun & Flesh Gauntlet or Monstrous Cleaver & Flesh Gauntlet. Removed the redundant standalone Flesh Gauntlet groups. Model independence, points, categories, Additional Copy Costs, and unrelated mechanics are unchanged.\n\nREV25 — HAEMOXYTE ATOMIC LOADOUTS\nCollapsed Haemoxytes into final-state equipment packages. Acothyst now chooses Acothyst Tools & Stinger Pistol, Venom Blade & Stinger Pistol, or Electrocorrosive Whip & Stinger Pistol. Haemoxytes 2-4 now use the literal 3x Wracks Blade package. Haemoxyte 5 now chooses Liquifier Gun & Wracks Blade, Ossefactor & Wracks Blade, or Hexrifle & Wracks Blade. Removed the redundant standalone Stinger Pistol and Wrack Blades groups. Points, categories, Additional Copy Costs, and unrelated mechanics are unchanged.\n\nREV26 — BLOODBRIDE BASELINE PACKAGE\nCollapsed Hekatrix Bloodbrides 2-5 into one literal fixed package, 4x Hekatarii Blades & Splinter Pistol. Removed the redundant standalone 4x Splinter Pistol group. All other Hekatrix Bloodbrides mechanics are unchanged.\n\nREV27 — WRACK ATOMIC LOADOUTS\nApplied final-state loadout packaging to Wracks. Acothyst now folds its fixed Stinger Pistol into Acothyst Tools, Venom Blade, and Electrocorrosive Whip. Wracks 9 and 10 now fold their fixed Wrack Blades into Liquifier Gun, Ossefactor, and Hexrifle packages. Removed the redundant fixed branches. Wracks 2-8, points, categories, Additional Copy Costs, and unrelated mechanics are unchanged.\n\nREV28 — WYCH BASELINE PACKAGE\nCollapsed Wyches 2-10 into one literal fixed package, 9x Hekatarii Blades & Splinter Pistol. Removed the redundant standalone 9x Splinter Pistol group. All other Wyches mechanics are unchanged.\n\nREV29 — GS20 TROOP RULE + FIXED HELLION / MANDRAKE PACKAGES\nUpdated to Game System revision 20 and added/retargeted the Additional Copy Cost - Troop short-form rule for Kabalite Warriors, Wyches, Wracks, Kabalite Trueborn, Hekatrix Bloodbrides, and Haemoxytes. Hellions 2-5 now use one literal 4x Hellglaive & Splinter Pods package. Mandrakes 1-5 now use one literal 5x Glimmersteel Blade & Baleblast package. Existing surviving IDs, points, categories, loadout legality, and unrelated mechanics are unchanged.\n\nREV30 — STANDARD PATCH NOTES\nAdded the standard automatically present Patch Notes Configuration. Drukhari 3.3.3 uses the bare army-rules header with a Reforged Discord Server reference and no listed army-rules changes. Added Catalogue Bugfixes (September 4th) with 'Catalogue created.' No mechanical selections, points, loadouts, validation, Harlequin import behavior, copy-cost arithmetic, or unrelated catalogue semantics were changed.\n\nREV31 — DRUKHARI 3.3.4 BASELINE SYNC\nUpdated the army-rules baseline from 3.3.3 to 3.3.4 and retargeted the catalogue from Game System revision 20 to revision 21. Verified that Kabalite Warrior 9 and Kabalite Warrior 10 already use independent identical special-weapon choice lists, so both models may select the same weapon and no mechanical change was required. Patch Notes intentionally contain only the 3.3.4 heading and standard Reforged Discord link."
+    "comment": "\n\nADDITIONAL COPY COSTS\nNative non-Rare Other units use the soft 1/2/3 copy allowance. Each excess copy contributes +20 Points to the permanent Additional Copy Costs Configuration entry. Rare Other units retain their existing hard cap.\n\nSPECIALIST / DEFAULT-EQUIPMENT CLEANUP\nNamed champions consume model slot 1; numbering therefore continues from model 2. Kabalite Trueborn 5 and Kabalite Warriors 9-10 are treated as dedicated special-weapon models and no longer advertise Splinter Rifle. Wrack 9-10 and Haemoxyte 5 no longer expose a None choice for their special weapon. Acothyst Stinger Pistols are represented as fixed default equipment.\n\nCONSTRUCTIVE ERROR UX\nNormal Leader missing-attachment errors, host attached-Leader limits, Rare copy limits, and Additional Copy Costs configuration protection use player-facing custom errors. Shared Game System validation handles Leader Capacity and Configuration-level missing Game Size / Additional Copy Costs validation. Lhamaean remains a nested attached Leader that may coexist with one normally attached Leader, and explicitly carries Counts Toward Leader Maximum so nested copies count toward Leader Capacity.\n\nROAMING PERFORMERS CONSTRUCTIVE VALIDATION\nThe five Drukhari-local Harlequin entryLinks remain hidden only while the Roaming Performers Configuration entry exists and Included is not selected. If Roaming Performers is deleted while a Harlequin unit is selected, the selected unit remains visible and reports a constructive error directing the player to restore Roaming Performers and select Included. This logic is Drukhari-local; the shared Harlequins library remains unaware of Roaming Performers.\n\nREV18 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Roaming Performers logic, Harlequin library links, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV19 POLISH PASS\nAdded explicit model/model-set headers to anonymous single-model and fixed-loadout units; renamed the four nested Lhamaean relationship groups to Attached Lhamaean while keeping them first in the affected unit layouts; flattened Kabalite Warrior, Wrack, Kabalite Trueborn, Haemoxyte, and Scourge specialist models into Loadout Options; renamed the two independent grenade selectors to Grenade and Additional Grenade; removed Talos Left Arm / Right Arm presentation labels; and standardized Haemonculus / Tantalus Rare error wording. Lhamaean Leader-capacity semantics, attachment rules, points, loadout legality, Roaming Performers, Harlequin library linkage, Additional Copy Costs, and all existing selection-entry names/IDs are otherwise unchanged.\n\nREV20 INCUBI KLAIVEX LOADOUT\nRemoved the Klaive option from the Klaivex. The Klaivex is now always equipped with Demiklaives. The existing Demiklaives entry ID and the surrounding Klaivex loadout group are preserved; no other Incubi or Drukhari mechanics were changed.\n\nREV21 RETROSPECTIVE POLISH PASS\nRevisited Drukhari against the final cross-faction presentation standard. Standardized eight remaining host Leader-limit errors to grammar-safe 'This unit...' wording while preserving the four Lhamaean-aware exceptions exactly. Modernized the catalogue-level Constructive Error UX note to current Game System terminology and replaced obsolete Additional Leader terminology for the Lhamaean with nested attached Leader terminology. Loadouts, Attached Lhamaean ordering and mechanics, Roaming Performers, Harlequin linkage, Rare validation, points, categories, Additional Copy Costs, Incubi/Klaivex equipment, and all other rules semantics remain unchanged.\n\nREV22 — REAVER ATOMIC LOADOUTS\nCollapsed Reavers into final-state equipment packages. Arena Champion now shows fixed Splinter Rifle & Bladevanes and chooses Power Sword & Splinter Pistol / Agoniser & Splinter Pistol. Reaver 2 chooses Splinter Rifle & Bladevanes, Heat Lance & Bladevanes, or Blaster & Bladevanes. Reaver 3 now shows fixed Splinter Rifle & Bladevanes. Obsolete standalone Bladevanes and Splinter Pistol branches were removed rather than retained as dead-ID shells.\n\nREV23 — SCOURGE SOLARITE ATOMIC LOADOUTS\nCollapsed the Solarite's fixed Power Lance into both pistol choices. Solarite now chooses Splinter Pistol & Power Lance or Blast Pistol & Power Lance. The obsolete standalone Power Lance group was removed rather than retained as dead-ID debris.\n\nREV24 — GROTESQUE ATOMIC LOADOUTS\nCollapsed each Grotesque model's fixed Flesh Gauntlet into its meaningful weapon choice. Grotesque 1, 2, and 3 now each choose Liquifier Gun & Flesh Gauntlet or Monstrous Cleaver & Flesh Gauntlet. Removed the redundant standalone Flesh Gauntlet groups. Model independence, points, categories, Additional Copy Costs, and unrelated mechanics are unchanged.\n\nREV25 — HAEMOXYTE ATOMIC LOADOUTS\nCollapsed Haemoxytes into final-state equipment packages. Acothyst now chooses Acothyst Tools & Stinger Pistol, Venom Blade & Stinger Pistol, or Electrocorrosive Whip & Stinger Pistol. Haemoxytes 2-4 now use the literal 3x Wracks Blade package. Haemoxyte 5 now chooses Liquifier Gun & Wracks Blade, Ossefactor & Wracks Blade, or Hexrifle & Wracks Blade. Removed the redundant standalone Stinger Pistol and Wrack Blades groups. Points, categories, Additional Copy Costs, and unrelated mechanics are unchanged.\n\nREV26 — BLOODBRIDE BASELINE PACKAGE\nCollapsed Hekatrix Bloodbrides 2-5 into one literal fixed package, 4x Hekatarii Blades & Splinter Pistol. Removed the redundant standalone 4x Splinter Pistol group. All other Hekatrix Bloodbrides mechanics are unchanged.\n\nREV27 — WRACK ATOMIC LOADOUTS\nApplied final-state loadout packaging to Wracks. Acothyst now folds its fixed Stinger Pistol into Acothyst Tools, Venom Blade, and Electrocorrosive Whip. Wracks 9 and 10 now fold their fixed Wrack Blades into Liquifier Gun, Ossefactor, and Hexrifle packages. Removed the redundant fixed branches. Wracks 2-8, points, categories, Additional Copy Costs, and unrelated mechanics are unchanged.\n\nREV28 — WYCH BASELINE PACKAGE\nCollapsed Wyches 2-10 into one literal fixed package, 9x Hekatarii Blades & Splinter Pistol. Removed the redundant standalone 9x Splinter Pistol group. All other Wyches mechanics are unchanged.\n\nREV29 — GS20 TROOP RULE + FIXED HELLION / MANDRAKE PACKAGES\nUpdated to Game System revision 20 and added/retargeted the Additional Copy Cost - Troop short-form rule for Kabalite Warriors, Wyches, Wracks, Kabalite Trueborn, Hekatrix Bloodbrides, and Haemoxytes. Hellions 2-5 now use one literal 4x Hellglaive & Splinter Pods package. Mandrakes 1-5 now use one literal 5x Glimmersteel Blade & Baleblast package. Existing surviving IDs, points, categories, loadout legality, and unrelated mechanics are unchanged.\n\nREV30 — STANDARD PATCH NOTES\nAdded the standard automatically present Patch Notes Configuration. Drukhari 3.3.3 uses the bare army-rules header with a Reforged Discord Server reference and no listed army-rules changes. Added Catalogue Bugfixes (September 4th) with 'Catalogue created.' No mechanical selections, points, loadouts, validation, Harlequin import behavior, copy-cost arithmetic, or unrelated catalogue semantics were changed.\n\nREV31 — DRUKHARI 3.3.4 BASELINE SYNC\nUpdated the army-rules baseline from 3.3.3 to 3.3.4 and retargeted the catalogue from Game System revision 20 to revision 21. Verified that Kabalite Warrior 9 and Kabalite Warrior 10 already use independent identical special-weapon choice lists, so both models may select the same weapon and no mechanical change was required. Patch Notes intentionally contain only the 3.3.4 heading and standard Reforged Discord link.\n\nREV32 — MELEE-FIRST LOADOUT PRESENTATION\nReordered the zero-width loadout choice groups for Helliarch, Arena Champion, Syren, Dracon, Hekatrix, Sybarite, Beastmaster, Succubus, Haemonculus, and Archon so melee choices appear before pistols and fixed ranged/support packages. Helliarch now presents melee, pistols, then Splinter Pods. Haemonculus presents Ichor Injector, Haemonculus Tools, then Stinger Pistol. Succubus was already semantically melee-first and remains unchanged in content. No selection IDs, group IDs, defaults, costs, constraints, rules, loadout legality, root points, categories, attachments, Additional Copy Costs, GS21 target, or unrelated mechanics changed."
   }
 }

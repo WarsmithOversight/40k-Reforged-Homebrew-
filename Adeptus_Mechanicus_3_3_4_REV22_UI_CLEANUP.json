@@ -5,7 +5,7 @@
     "name": "Adeptus Mechanicus 3.3.4",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 21,
+    "revision": 22,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -9313,7 +9313,7 @@
             "name": "Patch Notes",
             "id": "ca7f-4648-d56c-1fa4",
             "hidden": false,
-            "description": "## Adeptus Mechanicus 3.3.4\n\n• Skitarii Marshal is now a Countless Leader and no longer counts toward Leader Capacity.\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 4th)\n\n• Catalogue created.",
+            "description": "## Adeptus Mechanicus 3.3.4\n\n• Skitarii Marshal is now a Countless Leader and no longer counts toward Leader Capacity.\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 11th)\n\n• Cleaned up redundant loadout headers on Macrocarid Explorator, Thanatar Class Siege-Automata, Skorpius Disintegrator, Sulphurhounds, and Ursarax.\n• Graviton Ram and Mindscrambler Grenade now use checkbox-style optional selections.\n• Onager Dunecrawler: Neutron Laser & Coaxial Cognis Heavy Stubber is now presented as one atomic loadout option.\n• Sicarian Infiltrators and Sicarian Ruststalkers: removed accidental quantity spinners from atomic multi-model weapon choices.\n• Ursarax loadouts are now atomic Lightning Claws & Volkite Incinerator / Power Fists & Volkite Incinerator choices for each model.\n• Audited Leader loadout presentation and moved melee weapon choices before pistols and ranged weapons where applicable.",
             "noindex": false
           }
         ],
@@ -9331,7 +9331,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV21: Patch Notes updated to Adeptus Mechanicus 3.3.4. Skitarii Marshal is now a Countless Leader and no longer participates in the GS21 Counts Toward Leader Maximum semantic counter."
+        "comment": "REV21: Patch Notes updated to Adeptus Mechanicus 3.3.4. Skitarii Marshal is now a Countless Leader and no longer participates in the GS21 Counts Toward Leader Maximum semantic counter.\nREV22: refreshed Catalogue Bugfixes to September 11th with loadout-header cleanup, checkbox presentation for Graviton Ram and Mindscrambler Grenade, Onager atomic Neutron package, Sicarian spinner cleanup, Ursarax atomic loadouts, and melee-first Leader presentation."
       },
       {
         "type": "unit",
@@ -9433,6 +9433,43 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
+                    "id": "29f0-0e4e-b9ed-eedb",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a9d3-3ef7-cf09-1021",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6e60-e782-6133-fc46",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Omnissian Axe",
+                        "hidden": false,
+                        "id": "7828-ec89-f31d-eaba",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "7828-ec89-f31d-eaba",
+                    "sortIndex": 1
+                  },
+                  {
+                    "name": "​",
                     "id": "3fb5-212a-f539-a06b",
                     "hidden": false,
                     "constraints": [
@@ -9474,7 +9511,7 @@
                       }
                     ],
                     "defaultSelectionEntryId": "f81a-9033-dafd-18f9",
-                    "sortIndex": 1
+                    "sortIndex": 2
                   },
                   {
                     "name": "​",
@@ -9519,43 +9556,6 @@
                       }
                     ],
                     "defaultSelectionEntryId": "f012-31a6-9e94-4399",
-                    "sortIndex": 2
-                  },
-                  {
-                    "name": "​",
-                    "id": "29f0-0e4e-b9ed-eedb",
-                    "hidden": false,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "a9d3-3ef7-cf09-1021",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "6e60-e782-6133-fc46",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Omnissian Axe",
-                        "hidden": false,
-                        "id": "7828-ec89-f31d-eaba",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "7828-ec89-f31d-eaba",
                     "sortIndex": 3
                   }
                 ]
@@ -9816,6 +9816,43 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
+                    "id": "a349-aa99-83d8-19f9",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2926-06ff-0c29-4943",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "79cc-9740-ac60-0fa1",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Omnissian Staff",
+                        "hidden": false,
+                        "id": "53c7-4fb3-fa17-e6db",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "53c7-4fb3-fa17-e6db",
+                    "sortIndex": 1
+                  },
+                  {
+                    "name": "​",
                     "id": "aec8-6132-acf8-1475",
                     "hidden": false,
                     "constraints": [
@@ -9857,43 +9894,6 @@
                       }
                     ],
                     "defaultSelectionEntryId": "ba3b-7844-5ed4-862a",
-                    "sortIndex": 1
-                  },
-                  {
-                    "name": "​",
-                    "id": "a349-aa99-83d8-19f9",
-                    "hidden": false,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "2926-06ff-0c29-4943",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "79cc-9740-ac60-0fa1",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Omnissian Staff",
-                        "hidden": false,
-                        "id": "53c7-4fb3-fa17-e6db",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "53c7-4fb3-fa17-e6db",
                     "sortIndex": 2
                   }
                 ]
@@ -9976,6 +9976,43 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
+                    "id": "e75a-c0cd-6714-f945",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5d5b-b547-84cc-8da4",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "cbe3-3c07-182b-8f4a",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Omnissian Axe",
+                        "hidden": false,
+                        "id": "4abf-554d-c19a-9afd",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "4abf-554d-c19a-9afd"
+                  },
+                  {
+                    "name": "​",
                     "id": "2c64-3074-d3f0-2e51",
                     "hidden": false,
                     "constraints": [
@@ -10009,44 +10046,7 @@
                       }
                     ],
                     "defaultSelectionEntryId": "8f15-90fe-5e86-0659",
-                    "sortIndex": 1
-                  },
-                  {
-                    "name": "​",
-                    "id": "e75a-c0cd-6714-f945",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "5d5b-b547-84cc-8da4",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "cbe3-3c07-182b-8f4a",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Omnissian Axe",
-                        "hidden": false,
-                        "id": "4abf-554d-c19a-9afd",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "4abf-554d-c19a-9afd"
+                    "sortIndex": 2
                   }
                 ]
               }
@@ -10127,6 +10127,43 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
+                    "id": "581a-5639-6bac-274e",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6be6-f482-9338-1e48",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "31ef-1c98-e2ad-f2d3",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Fist",
+                        "hidden": false,
+                        "id": "1aff-3abb-5878-9f00",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "1aff-3abb-5878-9f00"
+                  },
+                  {
+                    "name": "​",
                     "id": "13ef-eb5c-5d1a-545a",
                     "hidden": false,
                     "constraints": [
@@ -10160,44 +10197,7 @@
                       }
                     ],
                     "defaultSelectionEntryId": "564b-b630-6d39-d549",
-                    "sortIndex": 1
-                  },
-                  {
-                    "name": "​",
-                    "id": "581a-5639-6bac-274e",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "6be6-f482-9338-1e48",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "31ef-1c98-e2ad-f2d3",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Power Fist",
-                        "hidden": false,
-                        "id": "1aff-3abb-5878-9f00",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "1aff-3abb-5878-9f00"
+                    "sortIndex": 2
                   }
                 ]
               }
@@ -10406,6 +10406,43 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
+                    "id": "ae27-0b75-156d-0662",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "be80-0a99-320a-8360",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7097-79f5-4b94-a3d6",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Control Stave",
+                        "hidden": false,
+                        "id": "76b0-a1a2-8f6b-9d44",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "76b0-a1a2-8f6b-9d44"
+                  },
+                  {
+                    "name": "​",
                     "id": "6565-cf2a-2a67-928e",
                     "hidden": false,
                     "constraints": [
@@ -10439,44 +10476,7 @@
                       }
                     ],
                     "defaultSelectionEntryId": "cc8e-2fa8-9d32-4be5",
-                    "sortIndex": 1
-                  },
-                  {
-                    "name": "​",
-                    "id": "ae27-0b75-156d-0662",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "be80-0a99-320a-8360",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "7097-79f5-4b94-a3d6",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Control Stave",
-                        "hidden": false,
-                        "id": "76b0-a1a2-8f6b-9d44",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "76b0-a1a2-8f6b-9d44"
+                    "sortIndex": 2
                   }
                 ]
               }
@@ -11387,9 +11387,62 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "74a3-c245-a4dc-6f8c",
+                    "id": "f9c7-a115-cf0e-1d1d",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9dea-b865-9c92-3224",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4a88-d799-0276-ff45",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Arc Claw",
+                        "hidden": false,
+                        "id": "03eb-c5fc-1f00-e2d9",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Taser Goad",
+                        "hidden": false,
+                        "id": "10bc-0261-ab41-3403",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Servo Claw",
+                        "hidden": false,
+                        "id": "8464-e2b8-9bcc-a4a2",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "03eb-c5fc-1f00-e2d9"
+                  },
+                  {
+                    "name": "​",
+                    "id": "74a3-c245-a4dc-6f8c",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "max",
@@ -11943,59 +11996,6 @@
                         ]
                       }
                     ]
-                  },
-                  {
-                    "name": "​",
-                    "id": "f9c7-a115-cf0e-1d1d",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "9dea-b865-9c92-3224",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "4a88-d799-0276-ff45",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Arc Claw",
-                        "hidden": false,
-                        "id": "03eb-c5fc-1f00-e2d9",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Taser Goad",
-                        "hidden": false,
-                        "id": "10bc-0261-ab41-3403",
-                        "sortIndex": 2
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Servo Claw",
-                        "hidden": false,
-                        "id": "8464-e2b8-9bcc-a4a2",
-                        "sortIndex": 3
-                      }
-                    ],
-                    "defaultSelectionEntryId": "03eb-c5fc-1f00-e2d9"
                   }
                 ]
               }
@@ -12035,9 +12035,62 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "bf48-64fe-e253-7e90",
+                    "id": "84af-7edb-e3fe-2222",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "bdaa-a9b3-3394-d6e2",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8a48-e154-145c-d20e",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Arc Claw",
+                        "hidden": false,
+                        "id": "e965-3239-fe0f-789e",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Taser Goad",
+                        "hidden": false,
+                        "id": "d791-b7c3-3e8b-2349",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Servo Claw",
+                        "hidden": false,
+                        "id": "cc52-0223-6352-3dde",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "e965-3239-fe0f-789e"
+                  },
+                  {
+                    "name": "​",
+                    "id": "bf48-64fe-e253-7e90",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "max",
@@ -12591,59 +12644,6 @@
                         ]
                       }
                     ]
-                  },
-                  {
-                    "name": "​",
-                    "id": "84af-7edb-e3fe-2222",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "bdaa-a9b3-3394-d6e2",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "8a48-e154-145c-d20e",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Arc Claw",
-                        "hidden": false,
-                        "id": "e965-3239-fe0f-789e",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Taser Goad",
-                        "hidden": false,
-                        "id": "d791-b7c3-3e8b-2349",
-                        "sortIndex": 2
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Servo Claw",
-                        "hidden": false,
-                        "id": "cc52-0223-6352-3dde",
-                        "sortIndex": 3
-                      }
-                    ],
-                    "defaultSelectionEntryId": "e965-3239-fe0f-789e"
                   }
                 ]
               },
@@ -12675,9 +12675,62 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "3a8a-c805-0e09-eabb",
+                    "id": "52d8-ffdd-7f94-0899",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d3ef-645d-8532-7c9a",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5342-41bb-dd10-ebf6",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Arc Claw",
+                        "hidden": false,
+                        "id": "88c2-dfd3-0971-c8ac",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Taser Goad",
+                        "hidden": false,
+                        "id": "092b-a6b7-bad9-a2e4",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Servo Claw",
+                        "hidden": false,
+                        "id": "4953-7966-2f2a-5b95",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "88c2-dfd3-0971-c8ac"
+                  },
+                  {
+                    "name": "​",
+                    "id": "3a8a-c805-0e09-eabb",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "max",
@@ -13231,59 +13284,6 @@
                         ]
                       }
                     ]
-                  },
-                  {
-                    "name": "​",
-                    "id": "52d8-ffdd-7f94-0899",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "d3ef-645d-8532-7c9a",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "5342-41bb-dd10-ebf6",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Arc Claw",
-                        "hidden": false,
-                        "id": "88c2-dfd3-0971-c8ac",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Taser Goad",
-                        "hidden": false,
-                        "id": "092b-a6b7-bad9-a2e4",
-                        "sortIndex": 2
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Servo Claw",
-                        "hidden": false,
-                        "id": "4953-7966-2f2a-5b95",
-                        "sortIndex": 3
-                      }
-                    ],
-                    "defaultSelectionEntryId": "88c2-dfd3-0971-c8ac"
                   }
                 ]
               },
@@ -13315,9 +13315,62 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "6ba3-cca0-b302-fadd",
+                    "id": "12b2-94ee-2474-4c83",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "08a0-17b9-188a-9185",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6c3f-1c09-61b9-e237",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Arc Claw",
+                        "hidden": false,
+                        "id": "02b5-34b5-4a72-32fc",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Taser Goad",
+                        "hidden": false,
+                        "id": "ffe4-0864-b1cd-52d8",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Servo Claw",
+                        "hidden": false,
+                        "id": "7d0f-f3cb-aa3a-f79f",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "02b5-34b5-4a72-32fc"
+                  },
+                  {
+                    "name": "​",
+                    "id": "6ba3-cca0-b302-fadd",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "max",
@@ -13871,59 +13924,6 @@
                         ]
                       }
                     ]
-                  },
-                  {
-                    "name": "​",
-                    "id": "12b2-94ee-2474-4c83",
-                    "hidden": false,
-                    "sortIndex": 2,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "08a0-17b9-188a-9185",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "6c3f-1c09-61b9-e237",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Arc Claw",
-                        "hidden": false,
-                        "id": "02b5-34b5-4a72-32fc",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Taser Goad",
-                        "hidden": false,
-                        "id": "ffe4-0864-b1cd-52d8",
-                        "sortIndex": 2
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Servo Claw",
-                        "hidden": false,
-                        "id": "7d0f-f3cb-aa3a-f79f",
-                        "sortIndex": 3
-                      }
-                    ],
-                    "defaultSelectionEntryId": "02b5-34b5-4a72-32fc"
                   }
                 ]
               }
@@ -15685,43 +15685,6 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "55dd-35f2-db80-ad88",
-                    "hidden": false,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "bab2-87c4-7e75-51e3",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "ac58-b8e3-b45b-ade7",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Volkite Incinerator",
-                        "hidden": false,
-                        "id": "e4e3-a30d-5054-e282",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "e4e3-a30d-5054-e282",
-                    "sortIndex": 1
-                  },
-                  {
-                    "name": "Melee Weapon",
                     "id": "aa8c-a11c-1d5d-1842",
                     "hidden": false,
                     "constraints": [
@@ -15748,7 +15711,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Lightning Claws",
+                        "name": "Lightning Claws & Volkite Incinerator",
                         "hidden": false,
                         "id": "0f92-5928-b8b4-6e66",
                         "sortIndex": 1
@@ -15756,14 +15719,14 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Power Fists",
+                        "name": "Power Fists & Volkite Incinerator",
                         "hidden": false,
                         "id": "ba0e-7f2a-7e43-a5cd",
                         "sortIndex": 2
                       }
                     ],
                     "defaultSelectionEntryId": "0f92-5928-b8b4-6e66",
-                    "sortIndex": 2
+                    "sortIndex": 1
                   }
                 ],
                 "sortIndex": 1
@@ -15775,43 +15738,6 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "a765-2be7-09c9-f772",
-                    "hidden": false,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "73fa-dee3-e321-d4e0",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "4298-fb81-d503-683e",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Volkite Incinerator",
-                        "hidden": false,
-                        "id": "65d5-d3f7-8f7c-fe21",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "65d5-d3f7-8f7c-fe21",
-                    "sortIndex": 1
-                  },
-                  {
-                    "name": "Melee Weapon",
                     "id": "a495-673f-8301-7218",
                     "hidden": false,
                     "constraints": [
@@ -15838,7 +15764,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Lightning Claws",
+                        "name": "Lightning Claws & Volkite Incinerator",
                         "hidden": false,
                         "id": "8a48-9a92-f9c5-15ab",
                         "sortIndex": 1
@@ -15846,14 +15772,14 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Power Fists",
+                        "name": "Power Fists & Volkite Incinerator",
                         "hidden": false,
                         "id": "5a9b-d561-4755-204b",
                         "sortIndex": 2
                       }
                     ],
                     "defaultSelectionEntryId": "8a48-9a92-f9c5-15ab",
-                    "sortIndex": 2
+                    "sortIndex": 1
                   }
                 ],
                 "sortIndex": 2
@@ -15865,43 +15791,6 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "1755-9184-790a-63cf",
-                    "hidden": false,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "3312-805c-dbd8-596c",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "94eb-af89-b264-78a0",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Volkite Incinerator",
-                        "hidden": false,
-                        "id": "aebc-2c7f-31f4-6229",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "aebc-2c7f-31f4-6229",
-                    "sortIndex": 1
-                  },
-                  {
-                    "name": "Melee Weapon",
                     "id": "f1e9-6a3c-2e3b-1aab",
                     "hidden": false,
                     "constraints": [
@@ -15928,7 +15817,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Lightning Claws",
+                        "name": "Lightning Claws & Volkite Incinerator",
                         "hidden": false,
                         "id": "20f3-f96e-c87c-0f91",
                         "sortIndex": 1
@@ -15936,14 +15825,14 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Power Fists",
+                        "name": "Power Fists & Volkite Incinerator",
                         "hidden": false,
                         "id": "9149-7b6b-cf48-9efb",
                         "sortIndex": 2
                       }
                     ],
                     "defaultSelectionEntryId": "20f3-f96e-c87c-0f91",
-                    "sortIndex": 2
+                    "sortIndex": 1
                   }
                 ],
                 "sortIndex": 3
@@ -16689,7 +16578,7 @@
                     "sortIndex": 1
                   },
                   {
-                    "name": "Weapon Loadout",
+                    "name": "​",
                     "id": "2cb7-423e-1e4c-2f3f",
                     "hidden": false,
                     "constraints": [
@@ -16787,7 +16676,7 @@
                     "sortIndex": 1
                   },
                   {
-                    "name": "Weapon Loadout",
+                    "name": "​",
                     "id": "1bb8-39e9-895a-651a",
                     "hidden": false,
                     "constraints": [
@@ -16885,7 +16774,7 @@
                     "sortIndex": 1
                   },
                   {
-                    "name": "Weapon Loadout",
+                    "name": "​",
                     "id": "38fa-c547-1eaf-22cc",
                     "hidden": false,
                     "constraints": [
@@ -17320,7 +17209,7 @@
                     "defaultSelectionEntryId": "8603-b5e6-c56e-dd0c"
                   },
                   {
-                    "name": "Primary Cannon",
+                    "name": "​",
                     "id": "c23e-ed4e-a459-74a7",
                     "hidden": false,
                     "constraints": [
@@ -17749,44 +17638,6 @@
                     "hidden": false,
                     "id": "05f9-66e3-9452-1267",
                     "sortIndex": 1,
-                    "entryLinks": [
-                      {
-                        "import": true,
-                        "name": "Dual Transonic Blades",
-                        "hidden": false,
-                        "id": "806f-5299-6300-c336",
-                        "type": "selectionEntry",
-                        "targetId": "3f01-c8f2-0ebc-80e4",
-                        "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "min",
-                            "value": 4,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "8b24-f66e-9f7b-7dce",
-                            "includeChildSelections": false
-                          },
-                          {
-                            "type": "max",
-                            "value": 4,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "8618-5ff8-53d8-5201",
-                            "includeChildSelections": false
-                          }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "4",
-                            "field": "defaultAmount"
-                          }
-                        ]
-                      }
-                    ],
                     "comment": "REV12 EXPORT PAYLOAD: represents four Ruststalkers."
                   }
                 ],
@@ -17801,11 +17652,22 @@
             "name": "Paid Wargear",
             "id": "c78f-c66e-ae34-85cd",
             "hidden": false,
-            "selectionEntryGroups": [
+            "sortIndex": 2,
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "2f22-56e0-af91-51d8",
+                "type": "upgrade",
+                "import": true,
+                "name": "Mindscrambler Grenade",
                 "hidden": false,
+                "id": "40c7-4eb5-424f-3401",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -17816,28 +17678,9 @@
                     "id": "c257-d8bc-843f-e048",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Mindscrambler Grenade",
-                    "hidden": false,
-                    "id": "40c7-4eb5-424f-3401",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 1
+                ]
               }
-            ],
-            "sortIndex": 2
+            ]
           }
         ],
         "comment": "REV12: Ruststalker Alpha is recorded as Transonic Razor & Chordclaw; Ruststalkers 2-5 are recorded as Dual Transonic Blades. The ordinary block carries quantity 4 through a shared semantic payload. Mindscrambler Grenade remains unchanged.\n\nREV14 PRESENTATION: Ruststalker 2-5 now displays 4x Dual Transonic Blades."
@@ -17928,44 +17771,6 @@
                         "hidden": false,
                         "id": "3c81-3230-3538-5d87",
                         "sortIndex": 1,
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Stubcarbine",
-                            "hidden": false,
-                            "id": "f257-5610-9e51-beee",
-                            "type": "selectionEntry",
-                            "targetId": "781b-ab9e-e5e8-3644",
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 2,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "6ff8-8b53-b875-93ef",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 2,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "dd3d-c484-8e22-2890",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "modifiers": [
-                              {
-                                "type": "set",
-                                "value": "2",
-                                "field": "defaultAmount"
-                              }
-                            ]
-                          }
-                        ],
                         "comment": "REV12 EXPORT PAYLOAD: represents 2 models equipped with Stubcarbine."
                       },
                       {
@@ -17975,44 +17780,6 @@
                         "hidden": false,
                         "id": "40de-b081-a72a-de62",
                         "sortIndex": 2,
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Flechette Blaster",
-                            "hidden": false,
-                            "id": "0a3d-ec8c-13d7-61dd",
-                            "type": "selectionEntry",
-                            "targetId": "90f4-68e7-f6ab-dccf",
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 2,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "ce7a-a736-c5ef-e504",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 2,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "ebbd-dc65-2f5a-f596",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "modifiers": [
-                              {
-                                "type": "set",
-                                "value": "2",
-                                "field": "defaultAmount"
-                              }
-                            ]
-                          }
-                        ],
                         "comment": "REV12 EXPORT PAYLOAD: represents 2 models equipped with Flechette Blaster."
                       }
                     ],
@@ -18051,44 +17818,6 @@
                         "hidden": false,
                         "id": "3571-10d0-8016-bbd8",
                         "sortIndex": 1,
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Power Sword",
-                            "hidden": false,
-                            "id": "a094-e522-a0aa-ad5f",
-                            "type": "selectionEntry",
-                            "targetId": "d1ac-14dd-aab3-4ded",
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 2,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "ef35-6845-c788-7ad3",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 2,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "e118-275d-877e-c768",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "modifiers": [
-                              {
-                                "type": "set",
-                                "value": "2",
-                                "field": "defaultAmount"
-                              }
-                            ]
-                          }
-                        ],
                         "comment": "REV12 EXPORT PAYLOAD: represents 2 models equipped with Power Sword."
                       },
                       {
@@ -18098,44 +17827,6 @@
                         "hidden": false,
                         "id": "0b63-9f6f-8015-8ace",
                         "sortIndex": 2,
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Taser Goad",
-                            "hidden": false,
-                            "id": "0200-d65a-2286-2562",
-                            "type": "selectionEntry",
-                            "targetId": "761a-13fa-894f-26f1",
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 2,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "40b1-e5b8-10a4-1902",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 2,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "fc65-ed9a-47bf-b43c",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "modifiers": [
-                              {
-                                "type": "set",
-                                "value": "2",
-                                "field": "defaultAmount"
-                              }
-                            ]
-                          }
-                        ],
                         "comment": "REV12 EXPORT PAYLOAD: represents 2 models equipped with Taser Goad."
                       }
                     ],
@@ -18182,44 +17873,6 @@
                         "hidden": false,
                         "id": "1491-4751-bfdc-6323",
                         "sortIndex": 1,
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Stubcarbine",
-                            "hidden": false,
-                            "id": "7253-b85a-c53e-2ee6",
-                            "type": "selectionEntry",
-                            "targetId": "781b-ab9e-e5e8-3644",
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 3,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "b0a1-18d3-e7b7-4eb7",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 3,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "68cd-3885-2490-8671",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "modifiers": [
-                              {
-                                "type": "set",
-                                "value": "3",
-                                "field": "defaultAmount"
-                              }
-                            ]
-                          }
-                        ],
                         "comment": "REV12 EXPORT PAYLOAD: represents 3 models equipped with Stubcarbine."
                       },
                       {
@@ -18229,44 +17882,6 @@
                         "hidden": false,
                         "id": "be20-b7e4-ffc5-1ade",
                         "sortIndex": 2,
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Flechette Blaster",
-                            "hidden": false,
-                            "id": "edd5-47fb-ed60-0bd3",
-                            "type": "selectionEntry",
-                            "targetId": "90f4-68e7-f6ab-dccf",
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 3,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "0cbf-c536-97ad-c744",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 3,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "3b54-e29c-529c-ba7b",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "modifiers": [
-                              {
-                                "type": "set",
-                                "value": "3",
-                                "field": "defaultAmount"
-                              }
-                            ]
-                          }
-                        ],
                         "comment": "REV12 EXPORT PAYLOAD: represents 3 models equipped with Flechette Blaster."
                       }
                     ],
@@ -18305,44 +17920,6 @@
                         "hidden": false,
                         "id": "895b-5af8-c059-eafe",
                         "sortIndex": 1,
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Power Sword",
-                            "hidden": false,
-                            "id": "aae3-b611-009e-9ab5",
-                            "type": "selectionEntry",
-                            "targetId": "d1ac-14dd-aab3-4ded",
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 3,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "8cf9-7e67-b340-3cb6",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 3,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "b159-6d9f-71cd-49aa",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "modifiers": [
-                              {
-                                "type": "set",
-                                "value": "3",
-                                "field": "defaultAmount"
-                              }
-                            ]
-                          }
-                        ],
                         "comment": "REV12 EXPORT PAYLOAD: represents 3 models equipped with Power Sword."
                       },
                       {
@@ -18352,44 +17929,6 @@
                         "hidden": false,
                         "id": "e700-07e8-234a-8ac8",
                         "sortIndex": 2,
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Taser Goad",
-                            "hidden": false,
-                            "id": "a821-8663-7158-102d",
-                            "type": "selectionEntry",
-                            "targetId": "761a-13fa-894f-26f1",
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 3,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "5527-c9ba-58fa-3183",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 3,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "1948-f141-003f-632e",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "modifiers": [
-                              {
-                                "type": "set",
-                                "value": "3",
-                                "field": "defaultAmount"
-                              }
-                            ]
-                          }
-                        ],
                         "comment": "REV12 EXPORT PAYLOAD: represents 3 models equipped with Taser Goad."
                       }
                     ],
@@ -18709,11 +18248,22 @@
             "name": "Paid Wargear",
             "id": "027e-e605-1a42-adff",
             "hidden": false,
-            "selectionEntryGroups": [
+            "sortIndex": 2,
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "95bf-5bb3-6734-7fe3",
+                "type": "upgrade",
+                "import": true,
+                "name": "Mindscrambler Grenade",
                 "hidden": false,
+                "id": "5945-ff11-cb2c-fe2a",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -18724,28 +18274,9 @@
                     "id": "b75f-c186-e0f1-5086",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Mindscrambler Grenade",
-                    "hidden": false,
-                    "id": "5945-ff11-cb2c-fe2a",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 1
+                ]
               }
-            ],
-            "sortIndex": 2
+            ]
           }
         ],
         "comment": "REV12: Infiltrators use two practical model groups, 1-2 and 3-5. Each group keeps one ranged and one melee 1/1 selector. Each weapon choice carries a shared semantic payload with quantity 2 or 3, allowing matching choices across both groups to consolidate to 5x in export. Unusual per-model mixtures remain PDF-only.\n\nREV14 PRESENTATION: every visible option under Sicarian Infiltrator 1-2 now uses a literal 2x prefix; every visible option under Sicarian Infiltrator 3-5 now uses a literal 3x prefix."
@@ -18837,120 +18368,7 @@
                         "name": "Neutron Laser & Coaxial Cognis Heavy Stubber",
                         "hidden": false,
                         "id": "78ee-6e9c-26f8-4bf2",
-                        "sortIndex": 1,
-                        "selectionEntryGroups": [
-                          {
-                            "name": "​",
-                            "id": "df2a-0fdd-95f0-47d3",
-                            "hidden": true,
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 0,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "b66c-8b25-13a5-317e",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 0,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "4e22-7f0e-01d7-0477",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "entryLinks": [
-                              {
-                                "import": true,
-                                "name": "Cognis Heavy Stubber",
-                                "hidden": true,
-                                "id": "8bb9-39b6-4513-bb86",
-                                "type": "selectionEntry",
-                                "targetId": "abb4-5473-d866-7e40",
-                                "sortIndex": 1
-                              }
-                            ]
-                          }
-                        ],
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Neutron Laser",
-                            "hidden": false,
-                            "id": "505b-8d7b-b12d-34c9",
-                            "type": "selectionEntry",
-                            "targetId": "3593-b42e-9c6c-d310",
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "f06a-af13-abf4-1338",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "79e8-f92e-f7a6-b206",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "modifiers": [
-                              {
-                                "type": "set",
-                                "value": "1",
-                                "field": "defaultAmount"
-                              }
-                            ]
-                          },
-                          {
-                            "import": true,
-                            "name": "Cognis Heavy Stubber",
-                            "hidden": false,
-                            "id": "4287-dea0-b4a5-c2c0",
-                            "type": "selectionEntry",
-                            "targetId": "abb4-5473-d866-7e40",
-                            "sortIndex": 2,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "1254-eb43-a318-9ef2",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "1761-a916-e804-bc99",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "modifiers": [
-                              {
-                                "type": "set",
-                                "value": "1",
-                                "field": "defaultAmount"
-                              }
-                            ]
-                          }
-                        ]
+                        "sortIndex": 1
                       },
                       {
                         "type": "upgrade",
@@ -19437,7 +18855,7 @@
                 "sortIndex": 1,
                 "selectionEntryGroups": [
                   {
-                    "name": "Primary Weapon",
+                    "name": "​",
                     "id": "c47a-7375-0a4e-5345",
                     "hidden": false,
                     "constraints": [
@@ -19526,11 +18944,22 @@
             "name": "Paid Wargear",
             "id": "caf5-1e66-17d6-e71d",
             "hidden": false,
-            "selectionEntryGroups": [
+            "sortIndex": 2,
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "3148-26b6-23a9-cea7",
+                "type": "upgrade",
+                "import": true,
+                "name": "Graviton Ram",
                 "hidden": false,
+                "id": "909e-ab09-c29d-5e4b",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -19541,28 +18970,9 @@
                     "id": "3d18-f562-fda1-91dd",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Graviton Ram",
-                    "hidden": false,
-                    "id": "909e-ab09-c29d-5e4b",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 1
+                ]
               }
-            ],
-            "sortIndex": 2
+            ]
           }
         ]
       },
@@ -19635,7 +19045,7 @@
                 "sortIndex": 1,
                 "selectionEntryGroups": [
                   {
-                    "name": "Primary Weapon System",
+                    "name": "​",
                     "id": "c761-5e18-4a04-13ec",
                     "hidden": false,
                     "constraints": [
@@ -19688,7 +19098,7 @@
                     "sortIndex": 1
                   },
                   {
-                    "name": "Secondary Weapon System",
+                    "name": "​",
                     "id": "0587-9e53-5eb2-4209",
                     "hidden": false,
                     "constraints": [
@@ -19874,7 +19284,7 @@
         "hidden": true
       }
     ],
-    "comment": "LAYER 0.1 — FOUNDATION\nImported every native Adeptus Mechanicus unit from the Universal Unit Skeleton with its minimum legal points cost, semantic unit type, Infantry/Vehicle/Monster class, Rare status, Leader Capacity marker, and Other soft-copy marker as applicable. Native non-Rare Other units use Additional Copy Costs. No native Monster units are present in the source skeleton. Servitors use the proven Cryptothralls attached-by architecture: exactly one eligible Tech-Priest Leader must attach to them, while those Leaders may remain unattached instead. Skitarii Marshal uses the normal mandatory Leader attachment pattern to Skitarii Rangers or Skitarii Vanguards. Detailed loadouts, variable-size expansion controls, and Manufactorum Imperium are intentionally deferred.\n\nLAYER 0.2 — MANUFACTORUM IMPERIUM / ASTRA MILITARUM VEHICLES\nAdded a dedicated Manufactorum Imperium library link and a permanent Configuration control with two independent source switches: Space Marines Vehicles and Astra Militarum Vehicles, both defaulting to Not Included. Space Marines Vehicles is a placeholder only. Astra Militarum Vehicles reveals a bespoke army-list category containing every Vehicle unit from audited Astra Militarum Rev18. There is no Manufactorum-specific numerical cap. Already-included imported units use safe-hide behavior and constructive errors if the source switch is disabled or the Configuration entry is deleted. Imported non-Rare Other vehicles continue to use normal Additional Copy Costs; imported Rare/Leader semantics are preserved by the library unit tree.\n\nREV3 — GAME SYSTEM MANUFACTORUM CATEGORIES\nRetargeted to Warhammer 40k Reforged Game System Rev14. Removed the catalogue-local Space Marines Vehicles and Astra Militarum Vehicles category definitions and retargeted Manufactorum entryLinks to the canonical Game System presentation categories. The two Configuration switches, Astra Militarum vehicle visibility, safe-hide logic, constructive warnings, imported unit semantics, and Additional Copy Costs remain unchanged.\n\nLAYER 0.3 — SERVITORS REV4\nMoved Servitors into the visible Leader section while preserving semantic Other / Infantry and Additional Copy Costs behavior. Implemented the complete 1-4 model Servitor loadout. Each ranged/tool slot begins at (None), the source's 'different weapon for each model' restriction is structurally enforced across the four model slots, and constructive errors cover unconfigured or duplicate weapon states. Additional Servitors cost 10 Points each. Melee choices remain repeatable and default to Arc Claw.\n\nLAYER 0.4 — COMPLETE NATIVE LOADOUTS REV5\nImplemented player-facing loadouts for every remaining native Adeptus Mechanicus unit while preserving Rev4 Servitors and Manufactorum Imperium. Skitarii Rangers/Vanguards use Alpha + Warriors 2-9 + dedicated Gunner presentation, with Gunners defaulting to Transuranic Arquebus. Kataphrons use explicit per-model Right Arm / Left Arm slots and optional third models. Thallax Cohort uses one dedicated Special Weapons Loadout model. Ursarax models are represented separately. Raiders use Raider Alpha. Vultarax abbreviates the two Setheno Pattern Havoc Launchers as Setheno Pattern Havoc Launcher 1-2. All other variable-size, paid-wargear, fixed-equipment, and per-model loadout structures were completed from the UUS/PDF.\n\nREV6 POLISH PASS\nApplied the final cross-faction listbuilder presentation standard to Adeptus Mechanicus. Renamed all 28 visible Loadout groups to Loadout Options; added explicit model headers to 17 single-model units; moved the Skitarii Ranger Gunner, Skitarii Vanguard Gunner, and Thallax 3 specialist model groups into Loadout Options while retiring the old visible Special Weapons Loadout wrappers; hid the twelve Kataphron Right Arm / Left Arm implementation labels while preserving their separate per-model weapon-choice mechanics; renamed the single-option Kataphron Breacher, Kataphron Destroyer, and Vorax size controls to Additional Model while retaining Servitors as Additional Models; split fixed multi-weapon packages into distinct visible weapon lines; standardized remaining atomic selectable packages from '+' to '&'; presented Vultarax's two Setheno Pattern Havoc Launchers as 2x; and standardized three Rare errors plus the Servitors, Skitarii Rangers, and Skitarii Vanguards host Leader-limit errors. Updated affected live authoring comments. Manufactorum Imperium, imported Astra Militarum vehicles, Servitor uniqueness logic and (None) architecture, Additional Copy Costs arithmetic, Leader attachment semantics, paid wargear, categories, points, source switches, and all other rules semantics remain unchanged.\n\nREV7 RETROSPECTIVE POLISH PASS\nRevisited the REV6 presentation pass against the final cross-faction standard. Removed residual fixed-equipment heading clutter by making all remaining Equipment / Fixed Weapon / Fixed Weapons containers zero-width and lifting split fixed weapon lines directly under their model headers; also hid other compulsory single-option slot labels where no player decision exists. Separated Thallax 1-2, Raider Alpha, and Raider 2-3 model identity from their first fixed equipment line while preserving the existing model-wrapper IDs and constraints. Kastelan Robot now uses Primary Weapons for its mandatory arm choice and presents its optional +10 Point shoulder weapon under top-level Paid Wargear, with the physical shoulder-slot label hidden. Removed duplicate inner Mindscrambler Grenade and Graviton Ram headings beneath Paid Wargear. Hidden retired Special Weapons Loadout compatibility objects remain untouched. All pre-existing IDs, SelectionEntry names, points, defaults, loadout choices, Servitor uniqueness logic, Manufactorum Imperium behavior, Additional Copy Costs arithmetic, Leader attachments, Rare validation, categories, imported vehicle handling, Game System revision, and all other rules semantics remain unchanged.\n\nREV8 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Skitarii Rangers, Skitarii Vanguards, Kataphron Breachers, and Kataphron Destroyers now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 162 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 27 native/imported Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists in this catalogue, and no Counts As relationship merges the four native Troops. Manufactorum Imperium remains linked through the same stable library ID; its imported Astra Militarum non-Rare Other vehicles continue to participate in the preserved Other arithmetic. All Manufactorum switches, safe-hide behavior, Servitor uniqueness logic, Leader attachments, Rare validation, loadouts, points, variable-size mechanics, and all other catalogue semantics remain unchanged.\n\nREV9 / GS18 — MANUFACTORUM IMPERIUM / SPACE MARINES VEHICLES\nRetargeted to Game System REV18 and activated the previously-placeholder Space Marines Vehicles Manufactorum switch. Manufactorum Imperium V6 now exposes ten chapter-independent Space Marines vehicle shells under the existing Space Marines Vehicles presentation category. Baal Predator is deliberately absent: Adeptus Mechanicus has no Chapter configuration and cannot legally satisfy its Blood Angels restriction. The new Space Marines imports use the same safe-hide and constructive-error architecture as the existing Astra Militarum imports. All ten imported non-Rare Other vehicle families participate in Additional Copy Costs. Existing Astra Militarum entryLinks, native AdMech units, native Troop accounting, Servitor logic, loadouts, points, and all unrelated catalogue mechanics remain unchanged.\n\nREV12 — EXPORT & SICARIAN CLEANUP\nKastelan Robot: renamed the +10 paid Heavy Phosphor Blaster to Additional Heavy Phosphor Blaster. Onager Dunecrawler: restored the clean Neutron Laser & Cognis Heavy Stubber choice and linked it directly to separate Neutron Laser and shared Cognis Heavy Stubber semantic items; the fixed and coaxial stubbers therefore share one semantic ID. Sicarian Infiltrators: retained the two practical model groups (1-2 and 3-5) and added quantity-aware shared weapon payloads so selected equipment represents 2 or 3 actual models and can consolidate correctly in export. Sicarian Ruststalkers: corrected the live layout to Ruststalker Alpha → Transonic Razor & Chordclaw and Ruststalkers 2-5 → Dual Transonic Blades, with the latter carrying quantity 4 for export. Ironstrider Ballistarii renamed to Ironstrider Ballistarius. Temporary REV10/REV11 test comments were consolidated; IDs and unrelated mechanics remain unchanged.\n\nREV13 — FINAL EXPORT CLEANUP\nKataphron Breachers and Kataphron Destroyers: renamed the abbreviated plasma-culverin selections to Plasma Culverin; IDs, costs, and loadout structure unchanged. Servitors: suppressed the redundant ranged/tool and melee choice-group labels while preserving the two independent choice lists, defaults, uniqueness logic, and constructive validation for each model. No other mechanics changed.\n\nREV14 — POLISH PASS 1\nUpdated to Game System revision 20 and retargeted Skitarii Rangers, Skitarii Vanguards, Kataphron Breachers, and Kataphron Destroyers to the Additional Copy Cost - Troop short-form rule. Suppressed Secondary Weapon on the Termite Assault Drill, Primary Weapons on Kastelan Robot, and Primary Weapon System on Onager Dunecrawler. Onager now presents its primary weapon choice first and fixed Cognis Heavy Stubber second; the Neutron package is named Neutron Laser & Coaxial Cognis Heavy Stubber. Sicarian Infiltrator 1-2 and 3-5 choices now carry literal 2x and 3x prefixes respectively. Ruststalker 2-5 now reads 4x Dual Transonic Blades. Sydonian Skatros now presents two atomic final-state loadouts with Archeotech Pistol folded into each choice. Existing surviving IDs, points, categories, copy-cost arithmetic, and unrelated mechanics are unchanged.\n\nREV15 — RAIDERS ATOMIC LOADOUTS\nCollapsed Raiders into final-state packages. Raider Alpha now shows Sword & Galvanic Carbine followed by fixed Archeotech Pistol. Raider 2-3 now shows 2x Sword & Galvanic Carbine. Removed the redundant standalone Sword branches while preserving surviving IDs, points, categories, and unrelated mechanics.\n\nREV16 — VORAX LOADOUT + ADDITIONAL MODEL INFRASTRUCTURE\nCollapsed each Vorax-Class Battle-Automata's fixed Hooked Power Blades and Rotor Cannons into one atomic Hooked Power Blades & Rotor Cannons package, retained Lightning Gun / Irad Cleanser as the second choice line, and suppressed the Secondary Weapon header. Rebuilt the optional third Vorax using the standard Additional Model pattern: max one optional model, represented by a type=model entry carrying its own full loadout tree and +40 Points cost. Existing surviving IDs, base points, categories, Additional Copy Cost logic, and unrelated mechanics are unchanged.\n\nREV17 — STANDARD ADDITIONAL MODEL INFRASTRUCTURE\nStandardized every Adeptus Mechanicus Additional Model section to the established Paragon Warsuit pattern: an optional max-1 Additional Model selector displaying (None) or the additional model, with that model represented as a type=model entry containing its own full loadout tree and points cost. Applied to Kataphron Breachers, Kataphron Destroyers, and Vorax-Class Battle-Automata. Existing model IDs, loadout IDs, points, defaults, weapon options, copy-cost logic, categories, and unrelated mechanics are preserved.\n\nREV18 — FINAL POLISH\nCompleted the Adeptus Mechanicus presentation pass. Suppressed Primary Weapon on Ironstrider Ballistarius and Manipulus, and suppressed both Primary Weapon and Secondary Weapon on Dominus. Thallax 1-2 now uses one fixed 2x Lightning Gun & Chain Bayonet atomic package. Renamed Skitarii Ranger Gunner and Skitarii Vanguard Gunner to Skitarii Ranger Weapons Specialist and Skitarii Vanguard Weapons Specialist. Existing surviving IDs, points, categories, Troop copy-cost links, Additional Model infrastructure, loadout legality, and unrelated mechanics are unchanged.\n\nREV19 — STANDARD PATCH NOTES\nAdded the standard automatically present Patch Notes Configuration. Adeptus Mechanicus 3.3.3 uses the bare army-rules header with a Reforged Discord Server reference and no listed army-rules changes. Added Catalogue Bugfixes (September 4th) with 'Catalogue created.' No mechanical selections, points, loadouts, validation, copy-cost arithmetic, shared-library behavior, or unrelated catalogue semantics were changed.\n\nREV20 — GAME SYSTEM 21 SYNC\nRetargeted this catalogue from Game System revision 20 to revision 21. This is a compatibility-only sync: no rules version, unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, Patch Notes, validation, library links, or other executable catalogue content changed.\n\nREV21 — ADEPTUS MECHANICUS 3.3.4 / SKITARII MARSHAL COUNTLESS LEADER\nUpdated the army-rules baseline from 3.3.3 to 3.3.4. Skitarii Marshal now functions as a Countless Leader by retaining visible Leader presentation while losing the hidden Counts Toward Leader Maximum semantic category. Game System remains revision 21. No points, loadouts, attachments, Additional Copy Cost arithmetic, or unrelated catalogue mechanics changed.",
+    "comment": "LAYER 0.1 — FOUNDATION\nImported every native Adeptus Mechanicus unit from the Universal Unit Skeleton with its minimum legal points cost, semantic unit type, Infantry/Vehicle/Monster class, Rare status, Leader Capacity marker, and Other soft-copy marker as applicable. Native non-Rare Other units use Additional Copy Costs. No native Monster units are present in the source skeleton. Servitors use the proven Cryptothralls attached-by architecture: exactly one eligible Tech-Priest Leader must attach to them, while those Leaders may remain unattached instead. Skitarii Marshal uses the normal mandatory Leader attachment pattern to Skitarii Rangers or Skitarii Vanguards. Detailed loadouts, variable-size expansion controls, and Manufactorum Imperium are intentionally deferred.\n\nLAYER 0.2 — MANUFACTORUM IMPERIUM / ASTRA MILITARUM VEHICLES\nAdded a dedicated Manufactorum Imperium library link and a permanent Configuration control with two independent source switches: Space Marines Vehicles and Astra Militarum Vehicles, both defaulting to Not Included. Space Marines Vehicles is a placeholder only. Astra Militarum Vehicles reveals a bespoke army-list category containing every Vehicle unit from audited Astra Militarum Rev18. There is no Manufactorum-specific numerical cap. Already-included imported units use safe-hide behavior and constructive errors if the source switch is disabled or the Configuration entry is deleted. Imported non-Rare Other vehicles continue to use normal Additional Copy Costs; imported Rare/Leader semantics are preserved by the library unit tree.\n\nREV3 — GAME SYSTEM MANUFACTORUM CATEGORIES\nRetargeted to Warhammer 40k Reforged Game System Rev14. Removed the catalogue-local Space Marines Vehicles and Astra Militarum Vehicles category definitions and retargeted Manufactorum entryLinks to the canonical Game System presentation categories. The two Configuration switches, Astra Militarum vehicle visibility, safe-hide logic, constructive warnings, imported unit semantics, and Additional Copy Costs remain unchanged.\n\nLAYER 0.3 — SERVITORS REV4\nMoved Servitors into the visible Leader section while preserving semantic Other / Infantry and Additional Copy Costs behavior. Implemented the complete 1-4 model Servitor loadout. Each ranged/tool slot begins at (None), the source's 'different weapon for each model' restriction is structurally enforced across the four model slots, and constructive errors cover unconfigured or duplicate weapon states. Additional Servitors cost 10 Points each. Melee choices remain repeatable and default to Arc Claw.\n\nLAYER 0.4 — COMPLETE NATIVE LOADOUTS REV5\nImplemented player-facing loadouts for every remaining native Adeptus Mechanicus unit while preserving Rev4 Servitors and Manufactorum Imperium. Skitarii Rangers/Vanguards use Alpha + Warriors 2-9 + dedicated Gunner presentation, with Gunners defaulting to Transuranic Arquebus. Kataphrons use explicit per-model Right Arm / Left Arm slots and optional third models. Thallax Cohort uses one dedicated Special Weapons Loadout model. Ursarax models are represented separately. Raiders use Raider Alpha. Vultarax abbreviates the two Setheno Pattern Havoc Launchers as Setheno Pattern Havoc Launcher 1-2. All other variable-size, paid-wargear, fixed-equipment, and per-model loadout structures were completed from the UUS/PDF.\n\nREV6 POLISH PASS\nApplied the final cross-faction listbuilder presentation standard to Adeptus Mechanicus. Renamed all 28 visible Loadout groups to Loadout Options; added explicit model headers to 17 single-model units; moved the Skitarii Ranger Gunner, Skitarii Vanguard Gunner, and Thallax 3 specialist model groups into Loadout Options while retiring the old visible Special Weapons Loadout wrappers; hid the twelve Kataphron Right Arm / Left Arm implementation labels while preserving their separate per-model weapon-choice mechanics; renamed the single-option Kataphron Breacher, Kataphron Destroyer, and Vorax size controls to Additional Model while retaining Servitors as Additional Models; split fixed multi-weapon packages into distinct visible weapon lines; standardized remaining atomic selectable packages from '+' to '&'; presented Vultarax's two Setheno Pattern Havoc Launchers as 2x; and standardized three Rare errors plus the Servitors, Skitarii Rangers, and Skitarii Vanguards host Leader-limit errors. Updated affected live authoring comments. Manufactorum Imperium, imported Astra Militarum vehicles, Servitor uniqueness logic and (None) architecture, Additional Copy Costs arithmetic, Leader attachment semantics, paid wargear, categories, points, source switches, and all other rules semantics remain unchanged.\n\nREV7 RETROSPECTIVE POLISH PASS\nRevisited the REV6 presentation pass against the final cross-faction standard. Removed residual fixed-equipment heading clutter by making all remaining Equipment / Fixed Weapon / Fixed Weapons containers zero-width and lifting split fixed weapon lines directly under their model headers; also hid other compulsory single-option slot labels where no player decision exists. Separated Thallax 1-2, Raider Alpha, and Raider 2-3 model identity from their first fixed equipment line while preserving the existing model-wrapper IDs and constraints. Kastelan Robot now uses Primary Weapons for its mandatory arm choice and presents its optional +10 Point shoulder weapon under top-level Paid Wargear, with the physical shoulder-slot label hidden. Removed duplicate inner Mindscrambler Grenade and Graviton Ram headings beneath Paid Wargear. Hidden retired Special Weapons Loadout compatibility objects remain untouched. All pre-existing IDs, SelectionEntry names, points, defaults, loadout choices, Servitor uniqueness logic, Manufactorum Imperium behavior, Additional Copy Costs arithmetic, Leader attachments, Rare validation, categories, imported vehicle handling, Game System revision, and all other rules semantics remain unchanged.\n\nREV8 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Skitarii Rangers, Skitarii Vanguards, Kataphron Breachers, and Kataphron Destroyers now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. All 162 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 27 native/imported Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists in this catalogue, and no Counts As relationship merges the four native Troops. Manufactorum Imperium remains linked through the same stable library ID; its imported Astra Militarum non-Rare Other vehicles continue to participate in the preserved Other arithmetic. All Manufactorum switches, safe-hide behavior, Servitor uniqueness logic, Leader attachments, Rare validation, loadouts, points, variable-size mechanics, and all other catalogue semantics remain unchanged.\n\nREV9 / GS18 — MANUFACTORUM IMPERIUM / SPACE MARINES VEHICLES\nRetargeted to Game System REV18 and activated the previously-placeholder Space Marines Vehicles Manufactorum switch. Manufactorum Imperium V6 now exposes ten chapter-independent Space Marines vehicle shells under the existing Space Marines Vehicles presentation category. Baal Predator is deliberately absent: Adeptus Mechanicus has no Chapter configuration and cannot legally satisfy its Blood Angels restriction. The new Space Marines imports use the same safe-hide and constructive-error architecture as the existing Astra Militarum imports. All ten imported non-Rare Other vehicle families participate in Additional Copy Costs. Existing Astra Militarum entryLinks, native AdMech units, native Troop accounting, Servitor logic, loadouts, points, and all unrelated catalogue mechanics remain unchanged.\n\nREV12 — EXPORT & SICARIAN CLEANUP\nKastelan Robot: renamed the +10 paid Heavy Phosphor Blaster to Additional Heavy Phosphor Blaster. Onager Dunecrawler: restored the clean Neutron Laser & Cognis Heavy Stubber choice and linked it directly to separate Neutron Laser and shared Cognis Heavy Stubber semantic items; the fixed and coaxial stubbers therefore share one semantic ID. Sicarian Infiltrators: retained the two practical model groups (1-2 and 3-5) and added quantity-aware shared weapon payloads so selected equipment represents 2 or 3 actual models and can consolidate correctly in export. Sicarian Ruststalkers: corrected the live layout to Ruststalker Alpha → Transonic Razor & Chordclaw and Ruststalkers 2-5 → Dual Transonic Blades, with the latter carrying quantity 4 for export. Ironstrider Ballistarii renamed to Ironstrider Ballistarius. Temporary REV10/REV11 test comments were consolidated; IDs and unrelated mechanics remain unchanged.\n\nREV13 — FINAL EXPORT CLEANUP\nKataphron Breachers and Kataphron Destroyers: renamed the abbreviated plasma-culverin selections to Plasma Culverin; IDs, costs, and loadout structure unchanged. Servitors: suppressed the redundant ranged/tool and melee choice-group labels while preserving the two independent choice lists, defaults, uniqueness logic, and constructive validation for each model. No other mechanics changed.\n\nREV14 — POLISH PASS 1\nUpdated to Game System revision 20 and retargeted Skitarii Rangers, Skitarii Vanguards, Kataphron Breachers, and Kataphron Destroyers to the Additional Copy Cost - Troop short-form rule. Suppressed Secondary Weapon on the Termite Assault Drill, Primary Weapons on Kastelan Robot, and Primary Weapon System on Onager Dunecrawler. Onager now presents its primary weapon choice first and fixed Cognis Heavy Stubber second; the Neutron package is named Neutron Laser & Coaxial Cognis Heavy Stubber. Sicarian Infiltrator 1-2 and 3-5 choices now carry literal 2x and 3x prefixes respectively. Ruststalker 2-5 now reads 4x Dual Transonic Blades. Sydonian Skatros now presents two atomic final-state loadouts with Archeotech Pistol folded into each choice. Existing surviving IDs, points, categories, copy-cost arithmetic, and unrelated mechanics are unchanged.\n\nREV15 — RAIDERS ATOMIC LOADOUTS\nCollapsed Raiders into final-state packages. Raider Alpha now shows Sword & Galvanic Carbine followed by fixed Archeotech Pistol. Raider 2-3 now shows 2x Sword & Galvanic Carbine. Removed the redundant standalone Sword branches while preserving surviving IDs, points, categories, and unrelated mechanics.\n\nREV16 — VORAX LOADOUT + ADDITIONAL MODEL INFRASTRUCTURE\nCollapsed each Vorax-Class Battle-Automata's fixed Hooked Power Blades and Rotor Cannons into one atomic Hooked Power Blades & Rotor Cannons package, retained Lightning Gun / Irad Cleanser as the second choice line, and suppressed the Secondary Weapon header. Rebuilt the optional third Vorax using the standard Additional Model pattern: max one optional model, represented by a type=model entry carrying its own full loadout tree and +40 Points cost. Existing surviving IDs, base points, categories, Additional Copy Cost logic, and unrelated mechanics are unchanged.\n\nREV17 — STANDARD ADDITIONAL MODEL INFRASTRUCTURE\nStandardized every Adeptus Mechanicus Additional Model section to the established Paragon Warsuit pattern: an optional max-1 Additional Model selector displaying (None) or the additional model, with that model represented as a type=model entry containing its own full loadout tree and points cost. Applied to Kataphron Breachers, Kataphron Destroyers, and Vorax-Class Battle-Automata. Existing model IDs, loadout IDs, points, defaults, weapon options, copy-cost logic, categories, and unrelated mechanics are preserved.\n\nREV18 — FINAL POLISH\nCompleted the Adeptus Mechanicus presentation pass. Suppressed Primary Weapon on Ironstrider Ballistarius and Manipulus, and suppressed both Primary Weapon and Secondary Weapon on Dominus. Thallax 1-2 now uses one fixed 2x Lightning Gun & Chain Bayonet atomic package. Renamed Skitarii Ranger Gunner and Skitarii Vanguard Gunner to Skitarii Ranger Weapons Specialist and Skitarii Vanguard Weapons Specialist. Existing surviving IDs, points, categories, Troop copy-cost links, Additional Model infrastructure, loadout legality, and unrelated mechanics are unchanged.\n\nREV19 — STANDARD PATCH NOTES\nAdded the standard automatically present Patch Notes Configuration. Adeptus Mechanicus 3.3.3 uses the bare army-rules header with a Reforged Discord Server reference and no listed army-rules changes. Added Catalogue Bugfixes (September 4th) with 'Catalogue created.' No mechanical selections, points, loadouts, validation, copy-cost arithmetic, shared-library behavior, or unrelated catalogue semantics were changed.\n\nREV20 — GAME SYSTEM 21 SYNC\nRetargeted this catalogue from Game System revision 20 to revision 21. This is a compatibility-only sync: no rules version, unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, Patch Notes, validation, library links, or other executable catalogue content changed.\n\nREV21 — ADEPTUS MECHANICUS 3.3.4 / SKITARII MARSHAL COUNTLESS LEADER\nUpdated the army-rules baseline from 3.3.3 to 3.3.4. Skitarii Marshal now functions as a Countless Leader by retaining visible Leader presentation while losing the hidden Counts Toward Leader Maximum semantic category. Game System remains revision 21. No points, loadouts, attachments, Additional Copy Cost arithmetic, or unrelated catalogue mechanics changed.\n\nREV22 — UI CLEANUP PASS\nSuppressed redundant presentation headers on Macrocarid Explorator Primary/Secondary Weapon Systems, Thanatar Primary Weapon, Skorpius Disintegrator Primary Cannon, Sulphurhound Weapon Loadouts, and Ursarax melee selectors using zero-width labels. Flattened Thanatar Graviton Ram and both Mindscrambler Grenade options into direct checkbox-style selections while preserving selection IDs, costs, rules, and max-1 constraint IDs. Simplified Onager Dunecrawler Neutron Laser & Coaxial Cognis Heavy Stubber to one atomic selection by removing nested component selections. Removed quantity entryLinks from Sicarian Infiltrator 2x/3x package selections and the Ruststalker 4x Dual Transonic Blades package to eliminate spinners. Collapsed each Ursarax model to one mandatory atomic radio list containing Lightning Claws & Volkite Incinerator or Power Fists & Volkite Incinerator, preserving the existing melee selection IDs/defaults. Audited Leader presentation and moved melee selectors first for Dominus, Manipulus, Enginseer, Datasmith, Skitarii Marshal, and all Servitor model slots; Macrotek Enginseer was already melee-only and Techno-Archeologist has no melee option. Root points, categories, attachments, Additional Copy Costs, Skitarii Marshal Countless status, GS21 target, and unrelated mechanics are unchanged.",
     "catalogueLinks": [
       {
         "type": "catalogue",

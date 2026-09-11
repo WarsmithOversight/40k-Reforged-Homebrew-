@@ -5,7 +5,7 @@
     "name": "Manufactorum Imperium 3.3.3 - Library",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 9,
+    "revision": 10,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [],
@@ -3601,7 +3601,7 @@
         "name": "Rhino",
         "hidden": false,
         "id": "9af9-b2c3-7886-34d5",
-        "sortIndex": 2,
+        "sortIndex": 54,
         "costs": [
           {
             "name": "Points",
@@ -3619,7 +3619,7 @@
           {
             "targetId": "5c3b-2012-fca1-7b34",
             "id": "db8e-537f-3e34-04d2",
-            "primary": false,
+            "primary": true,
             "name": "Other"
           },
           {
@@ -3644,7 +3644,140 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV1 VEHICLE SHELL ONLY. Source: RHINO. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=120 Points. Source characteristics recorded for future population only: T 4, Sv 4+, H 10, Rv 6+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nMANUFACTORUM IMPERIUM LIBRARY V6: mirrored intact from the Space Marines REV2 vehicle scaffold using the same stable unit ID. This library copy does not own primary presentation; consuming catalogues such as Adeptus Mechanicus provide their local Space Marines Vehicles entryLink category."
+        "comment": "REV1 VEHICLE SHELL ONLY. Source: RHINO. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=120 Points. Source characteristics recorded for future population only: T 4, Sv 4+, H 10, Rv 6+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nREV3 EMPTY UNIT SHELL. Source skeleton: RHINO. unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=120 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
+        "selectionEntryGroups": [
+          {
+            "name": "Loadout Options",
+            "id": "f39e-df7d-d1d8-5c1c",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Rhino",
+                "id": "8f43-67fc-e0f2-57fa",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "b618-d919-274c-f0ef",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "992b-9a15-1e33-28c9",
+                    "includeChildSelections": false
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Storm Bolter",
+                    "hidden": false,
+                    "id": "eacf-2a40-0841-1383",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "eacf-2a40-0841-1383"
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "6957-f677-44b8-59f2",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Dozer Blade",
+                "hidden": false,
+                "id": "5340-2249-b044-2f10",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "3312-9132-6b2b-edca",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
+                "hidden": false,
+                "id": "4f7b-5fe2-b5a3-6f57",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "903c-9e68-4f09-88e7",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
+                "hidden": false,
+                "id": "1e28-5042-09bd-0c24",
+                "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "e47c-7074-c05d-cfc3",
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -3670,7 +3803,7 @@
           {
             "targetId": "5c3b-2012-fca1-7b34",
             "id": "a51d-eb2e-d854-f3f2",
-            "primary": false,
+            "primary": true,
             "name": "Other"
           },
           {
@@ -3695,7 +3828,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV1 VEHICLE SHELL ONLY. Source: LAND RAIDER. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=190 Points. Source characteristics recorded for future population only: T 5, Sv 4+, H 11, Rv 4+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nREV3 EMPTY UNIT SHELL. Source skeleton: LAND RAIDER. unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=190 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV15 PRESENTATION CORRECTION: removed the literal '(None)' pseudo-option from the optional Pintle selector. The selector is now genuinely empty by default with max 1 selection. Existing Pintle weapon IDs and costs are unchanged.\nMANUFACTORUM IMPERIUM LIBRARY V9: synchronized from Space Marines 3.3.7 REV15 using the same stable root ID and corrected loadout tree. Library presentation remains non-primary; consumer catalogues own local presentation.",
+        "comment": "REV1 VEHICLE SHELL ONLY. Source: LAND RAIDER. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=190 Points. Source characteristics recorded for future population only: T 5, Sv 4+, H 11, Rv 4+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nREV3 EMPTY UNIT SHELL. Source skeleton: LAND RAIDER. unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=190 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV15 PRESENTATION CORRECTION: removed the literal '(None)' pseudo-option from the optional Pintle selector. The selector is now genuinely empty by default with max 1 selection. Existing Pintle weapon IDs and costs are unchanged.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -3872,12 +4005,21 @@
             "id": "31fa-1fa1-8b4f-55c6",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "7e14-dc5a-aec6-7936",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "964d-ee96-d465-58ea",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -3887,23 +4029,6 @@
                     "shared": true,
                     "id": "b1be-f77d-709f-9272",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "964d-ee96-d465-58ea",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -3935,7 +4060,7 @@
           {
             "targetId": "5c3b-2012-fca1-7b34",
             "id": "eae0-a042-b15c-f099",
-            "primary": false,
+            "primary": true,
             "name": "Other"
           },
           {
@@ -3960,7 +4085,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV1 VEHICLE SHELL ONLY. Source: PREDATOR. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=120 Points. Source characteristics recorded for future population only: T 4, Sv 4+, H 12, Rv 6+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nREV3 EMPTY UNIT SHELL. Source skeleton: PREDATOR. unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=120 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV10: suppressed redundant Pintle Weapons and Sponson Weapons presentation headers. The lists remain in their existing positions and weapon names retain the semantic labels.\nREV15 PRESENTATION CORRECTION: removed the three literal '(None)' pseudo-options from the optional secondary, Pintle, and Sponson selectors. Each selector is now genuinely empty by default with max 1 selection. All surviving weapon IDs, costs, and unnamed-group presentation are unchanged.\nMANUFACTORUM IMPERIUM LIBRARY V9: synchronized from Space Marines 3.3.7 REV15 using the same stable root ID and corrected loadout tree. Library presentation remains non-primary; consumer catalogues own local presentation.",
+        "comment": "REV1 VEHICLE SHELL ONLY. Source: PREDATOR. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=120 Points. Source characteristics recorded for future population only: T 4, Sv 4+, H 12, Rv 6+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nREV3 EMPTY UNIT SHELL. Source skeleton: PREDATOR. unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=120 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV10: suppressed redundant Pintle Weapons and Sponson Weapons presentation headers. The lists remain in their existing positions and weapon names retain the semantic labels.\nREV15 PRESENTATION CORRECTION: removed the three literal '(None)' pseudo-options from the optional secondary, Pintle, and Sponson selectors. Each selector is now genuinely empty by default with max 1 selection. All surviving weapon IDs, costs, and unnamed-group presentation are unchanged.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -4199,12 +4324,21 @@
             "id": "1799-a936-f5ca-47fb",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "a3f7-8a3e-706e-1bd0",
+                "type": "upgrade",
+                "import": true,
+                "name": "Dozer Blade",
                 "hidden": false,
+                "id": "be83-9452-6ef0-4012",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4214,23 +4348,6 @@
                     "shared": true,
                     "id": "7265-1e49-628f-558d",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Dozer Blade",
-                    "hidden": false,
-                    "id": "be83-9452-6ef0-4012",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -4262,7 +4379,7 @@
           {
             "targetId": "5c3b-2012-fca1-7b34",
             "id": "019d-b445-0dad-6520",
-            "primary": false,
+            "primary": true,
             "name": "Other"
           },
           {
@@ -4287,7 +4404,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV1 VEHICLE SHELL ONLY. Source: ASTARTES BASILISK. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=140 Points. Source characteristics recorded for future population only: T 3, Sv 4+, H 10, Rv 6+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nREV3 EMPTY UNIT SHELL. Source skeleton: ASTARTES BASILISK. unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=140 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV10: Smoke Launchers and Armour Piercing High Explosive Shells moved from Unit Upgrade to Paid Wargear. Their source max-one mutual exclusivity is preserved in one optional unnamed list.\nREV15 CORRECTION: Smoke Launchers and Armour Piercing High Explosive Shells are now represented as two independent optional Paid Wargear selections, so the model may take both. Both existing item IDs and their +10 Point costs are preserved. Hunter-Killer Missile remains independent.\nMANUFACTORUM IMPERIUM LIBRARY V9: synchronized from Space Marines 3.3.7 REV15 using the same stable root ID and corrected loadout tree. Library presentation remains non-primary; consumer catalogues own local presentation.",
+        "comment": "REV1 VEHICLE SHELL ONLY. Source: ASTARTES BASILISK. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=140 Points. Source characteristics recorded for future population only: T 3, Sv 4+, H 10, Rv 6+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nREV3 EMPTY UNIT SHELL. Source skeleton: ASTARTES BASILISK. unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=140 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV10: Smoke Launchers and Armour Piercing High Explosive Shells moved from Unit Upgrade to Paid Wargear. Their source max-one mutual exclusivity is preserved in one optional unnamed list.\nREV15 CORRECTION: Smoke Launchers and Armour Piercing High Explosive Shells are now represented as two independent optional Paid Wargear selections, so the model may take both. Both existing item IDs and their +10 Point costs are preserved. Hunter-Killer Missile remains independent.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -4392,12 +4509,21 @@
             "id": "33bd-f73e-4367-21f6",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "9e2a-c1cc-2f5d-f9c9",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "6f56-7805-58da-bc57",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4408,30 +4534,22 @@
                     "id": "5365-ee90-ffcf-7613",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "6f56-7805-58da-bc57",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "5635-edc0-83d0-77ff",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "f703-0f56-fd7a-6b1f",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4442,30 +4560,22 @@
                     "id": "c387-894c-f06d-7263",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "f703-0f56-fd7a-6b1f",
-                    "sortIndex": 2,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "9bd7-3c50-2e0f-e53f",
+                "type": "upgrade",
+                "import": true,
+                "name": "Armour Piercing High Explosive Shells",
                 "hidden": false,
+                "id": "d426-85fb-543f-63ae",
                 "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4475,23 +4585,6 @@
                     "shared": true,
                     "id": "aac1-49d8-7496-7e2d",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Armour Piercing High Explosive Shells",
-                    "hidden": false,
-                    "id": "d426-85fb-543f-63ae",
-                    "sortIndex": 3,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -4523,7 +4616,7 @@
           {
             "targetId": "5c3b-2012-fca1-7b34",
             "id": "61c5-0884-9598-5fd2",
-            "primary": false,
+            "primary": true,
             "name": "Other"
           },
           {
@@ -4548,7 +4641,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Whirlwind has four independent mandatory missile selectors, each choosing Vengeance Missile or Castellan Incendiary Missile, directly representing the source 'four of any' wording without inventing physical launcher labels. Storm Bolter +10, Hunter-Killer Missile +10, and Smoke Launchers +10 are independent optional Paid Wargear choices.\nMANUFACTORUM IMPERIUM LIBRARY V8: synchronized from Space Marines 3.3.7 REV14 using the same stable root ID and full loadout tree. This library copy owns no primary presentation; consuming catalogues provide their local Space Marines Vehicles presentation through entryLinks.",
+        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Whirlwind has four independent mandatory missile selectors, each choosing Vengeance Missile or Castellan Incendiary Missile, directly representing the source 'four of any' wording without inventing physical launcher labels. Storm Bolter +10, Hunter-Killer Missile +10, and Smoke Launchers +10 are independent optional Paid Wargear choices.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -4751,12 +4844,21 @@
             "id": "155f-3e55-3bbd-c33b",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "f68f-4d6c-ee3b-18f7",
+                "type": "upgrade",
+                "import": true,
+                "name": "Storm Bolter",
                 "hidden": false,
+                "id": "4bc7-5ffb-b9ca-4c8c",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4767,30 +4869,22 @@
                     "id": "ea25-0014-67f4-7e59",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Storm Bolter",
-                    "hidden": false,
-                    "id": "4bc7-5ffb-b9ca-4c8c",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "1469-80c4-464f-2336",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "d6f7-3ae6-d558-2987",
                 "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4801,30 +4895,22 @@
                     "id": "e148-783a-f7ff-d6b1",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "d6f7-3ae6-d558-2987",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "​",
-                "id": "891f-0765-1229-7ff1",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "2b87-9ffe-5ece-937a",
                 "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -4834,23 +4920,6 @@
                     "shared": true,
                     "id": "b05b-2508-d2c0-7c22",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "2b87-9ffe-5ece-937a",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -4882,7 +4951,7 @@
           {
             "targetId": "5c3b-2012-fca1-7b34",
             "id": "f871-aaa1-3387-76ca",
-            "primary": false,
+            "primary": true,
             "name": "Other"
           },
           {
@@ -4907,7 +4976,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Mirrors the established Chaos Vindicator player-facing shape: fixed Demolisher Cannon and Storm Bolter on separate lines, with optional Smoke Launchers +10 under Paid Wargear. Siege Shield is intrinsic battlefield rules text and does not need a listbuilding choice.\nREV15 CORRECTION: added fixed Siege Shield to the Vindicator loadout. The omission originated from the source PDF's equipment-list typo; the weapon/profile itself is present and the model is intended to carry it. Existing Demolisher Cannon, Storm Bolter, Smoke Launchers, points, categories, and copy-cost semantics are unchanged.\nMANUFACTORUM IMPERIUM LIBRARY V9: synchronized from Space Marines 3.3.7 REV15 using the same stable root ID and corrected loadout tree. Library presentation remains non-primary; consumer catalogues own local presentation.",
+        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Mirrors the established Chaos Vindicator player-facing shape: fixed Demolisher Cannon and Storm Bolter on separate lines, with optional Smoke Launchers +10 under Paid Wargear. Siege Shield is intrinsic battlefield rules text and does not need a listbuilding choice.\nREV15 CORRECTION: added fixed Siege Shield to the Vindicator loadout. The omission originated from the source PDF's equipment-list typo; the weapon/profile itself is present and the model is intended to carry it. Existing Demolisher Cannon, Storm Bolter, Smoke Launchers, points, categories, and copy-cost semantics are unchanged.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -5041,12 +5110,21 @@
             "id": "245f-ce78-aa6a-88bc",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "3c13-d061-6133-8a91",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "ca3b-dbe2-1f60-39ca",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -5056,23 +5134,6 @@
                     "shared": true,
                     "id": "6a9d-a3e4-3a98-2a6f",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "ca3b-dbe2-1f60-39ca",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -5104,7 +5165,7 @@
           {
             "targetId": "5c3b-2012-fca1-7b34",
             "id": "fa22-fee5-d219-3193",
-            "primary": false,
+            "primary": true,
             "name": "Other"
           },
           {
@@ -5129,7 +5190,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Land Speeder uses two mandatory anonymous weapon choices: Multi-Melta / Heavy Bolter and the five Hull weapon options, with Hull Cerebus Launcher +10. Advanced Jamming Beacon is a separate optional +20 Unit Upgrade because it adds an ability rather than equipment. Krak / Frag / Stun Missiles are one optional +20 Paid Wargear choice.\nMANUFACTORUM IMPERIUM LIBRARY V8: synchronized from Space Marines 3.3.7 REV14 using the same stable root ID and full loadout tree. This library copy owns no primary presentation; consuming catalogues provide their local Space Marines Vehicles presentation through entryLinks.",
+        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Land Speeder uses two mandatory anonymous weapon choices: Multi-Melta / Heavy Bolter and the five Hull weapon options, with Hull Cerebus Launcher +10. Advanced Jamming Beacon is a separate optional +20 Unit Upgrade because it adds an ability rather than equipment. Krak / Frag / Stun Missiles are one optional +20 Paid Wargear choice.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -5273,12 +5334,21 @@
             "id": "8406-d322-2b81-2ba1",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "8502-6e12-ed5b-328b",
+                "type": "upgrade",
+                "import": true,
+                "name": "Advanced Jamming Beacon",
                 "hidden": false,
+                "id": "e4ce-39d0-15fc-72d3",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -5288,23 +5358,6 @@
                     "shared": true,
                     "id": "180b-86ad-eb9d-a783",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Advanced Jamming Beacon",
-                    "hidden": false,
-                    "id": "e4ce-39d0-15fc-72d3",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
                   }
                 ]
               }
@@ -5408,7 +5461,7 @@
           {
             "targetId": "5c3b-2012-fca1-7b34",
             "id": "c01a-a93d-2b4e-d801",
-            "primary": false,
+            "primary": true,
             "name": "Other"
           },
           {
@@ -5433,7 +5486,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Uses the same asymmetric two-pool presentation as the Chaos Dreadnought while suppressing physical left/right arm headers. Dreadnought Power Fist + auxiliary weapon combinations are atomic final-state choices. Missile Launcher costs +20 in the first pool. Venerable is a separate +10 Unit Upgrade because it improves Health rather than adding wargear.\nMANUFACTORUM IMPERIUM LIBRARY V8: synchronized from Space Marines 3.3.7 REV14 using the same stable root ID and full loadout tree. This library copy owns no primary presentation; consuming catalogues provide their local Space Marines Vehicles presentation through entryLinks.",
+        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Uses the same asymmetric two-pool presentation as the Chaos Dreadnought while suppressing physical left/right arm headers. Dreadnought Power Fist + auxiliary weapon combinations are atomic final-state choices. Missile Launcher costs +20 in the first pool. Venerable is a separate +10 Unit Upgrade because it improves Health rather than adding wargear.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -5617,12 +5670,21 @@
             "id": "bbe2-1d40-e1d7-1f57",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "ff23-b790-4bc2-e5ad",
+                "type": "upgrade",
+                "import": true,
+                "name": "Venerable",
                 "hidden": false,
+                "id": "964d-9feb-59c7-863c",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -5632,23 +5694,6 @@
                     "shared": true,
                     "id": "ff56-1a92-7ef7-9f37",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Venerable",
-                    "hidden": false,
-                    "id": "964d-9feb-59c7-863c",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -5680,7 +5725,7 @@
           {
             "targetId": "5c3b-2012-fca1-7b34",
             "id": "b62b-9024-1ae6-f0c7",
-            "primary": false,
+            "primary": true,
             "name": "Other"
           },
           {
@@ -5705,7 +5750,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Mirrors the normalized Chaos Contemptor architecture: two identical anonymous weapon selectors instead of exposing replacement plumbing. Each selector offers the six normal guns, Heavy Conversion Beamer, Dreadnought Chainfist &, or Dreadnought Power Fist &. Fist packages reveal a mandatory Combi-Bolter / Graviton Gun / Heavy Flamer / Meltagun / Plasma Blaster auxiliary choice, with the fist itself retained as a hidden semantic child. Duplicate normal guns, Chainfists and Heavy Conversion Beamers are permitted by the established project convention; Dreadnought Power Fist is the sole cross-selector restriction. Cyclone Missile Launcher is optional +10 Paid Wargear.\nMANUFACTORUM IMPERIUM LIBRARY V8: synchronized from Space Marines 3.3.7 REV14 using the same stable root ID and full loadout tree. This library copy owns no primary presentation; consuming catalogues provide their local Space Marines Vehicles presentation through entryLinks.",
+        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Mirrors the normalized Chaos Contemptor architecture: two identical anonymous weapon selectors instead of exposing replacement plumbing. Each selector offers the six normal guns, Heavy Conversion Beamer, Dreadnought Chainfist &, or Dreadnought Power Fist &. Fist packages reveal a mandatory Combi-Bolter / Graviton Gun / Heavy Flamer / Meltagun / Plasma Blaster auxiliary choice, with the fist itself retained as a hidden semantic child. Duplicate normal guns, Chainfists and Heavy Conversion Beamers are permitted by the established project convention; Dreadnought Power Fist is the sole cross-selector restriction. Cyclone Missile Launcher is optional +10 Paid Wargear.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -6404,12 +6449,21 @@
             "id": "4af5-ecf0-f700-9d83",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "3cdb-d887-0240-fbf9",
+                "type": "upgrade",
+                "import": true,
+                "name": "Cyclone Missile Launcher",
                 "hidden": false,
+                "id": "40e8-ed36-845a-fa38",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -6419,23 +6473,6 @@
                     "shared": true,
                     "id": "6867-2306-fd29-4dd8",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Cyclone Missile Launcher",
-                    "hidden": false,
-                    "id": "40e8-ed36-845a-fa38",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -6696,6 +6733,6 @@
         ]
       }
     ],
-    "comment": "MANUFACTORUM IMPERIUM LIBRARY V1\nReusable cross-faction vehicle library for the Adeptus Mechanicus Manufactorum Imperium rule. V1 contains every Vehicle unit currently implemented in Astra Militarum 3.3.3 Rev18. Space Marine Arsenal vehicles are intentionally not implemented yet. Unit trees, costs, loadouts, Rare semantics, Leader Capacity markers, and Other soft-copy markers are preserved from their source catalogue.\n\nLIBRARY V2 — GAME SYSTEM REV14\nRetargeted to Warhammer 40k Reforged Game System Rev14, which now owns the visible Space Marines Vehicles and Astra Militarum Vehicles presentation categories. No unit trees, costs, loadouts, IDs, or imported Astra Militarum semantics changed.\n\nLIBRARY V3 POLISH SYNC\nMirrored the Astra Militarum REV19 presentation polish across all eleven imported vehicle trees: direct Loadout headings are now Loadout Options; Tank Commander, Chimera, Taurox, Leman Russ Battle Tank, Hellhound, Basilisk, Wyvern, and Manticore use the same explicit model-header IDs as the source catalogue; Basilisk, Wyvern, and Manticore suppress the redundant Hull Weapon group label; Chimera and Taurox use Storm Bolter spelling; and Tank Commander uses the standardized Rare error wording. Unit IDs, existing loadout IDs, costs, categories, Rare semantics, Leader Capacity markers, Other soft-copy markers, and Manufactorum-specific category presentation remain unchanged.\n\nLIBRARY V4 RETROSPECTIVE POLISH SYNC\nMirrored the final Astra Militarum REV20 vehicle presentation cleanup across all eleven imported vehicle trees. Redundant one-item Paid Wargear wrappers are suppressed where the equipment name already identifies the choice; vehicle multi-option accessory/pintle groups use Pintle Weapons; the Taurox Twin Autocannon double wrapper is suppressed; and existing self-identifying hull, sponson, and coaxial equipment names remain free of redundant slot labels. The historical V1 provenance notes remain unchanged. All pre-existing IDs, unit names, points, costs, categories, Rare semantics, Leader Capacity markers, Other soft-copy markers, Manufactorum source-switch behavior, and imported Astra Militarum rules semantics remain unchanged.\n\nLIBRARY V5 — GAME SYSTEM REV17\nRetargeted the Manufactorum Imperium shared vehicle library to Warhammer 40k Reforged Game System revision 17. This library contains only shared Astra Militarum Vehicle/Other units, so no Troop copy-cost families or Troop semantic markers are added here. Existing Other soft-copy markers, Additional Copy Costs rule links, Rare semantics, Leader Capacity markers, shared unit IDs, costs, loadouts, and Manufactorum presentation semantics remain unchanged.\n\nLIBRARY V6 — SPACE MARINE VEHICLE BRIDGE / GS18\nRetargeted the library to Game System REV18 and added ten chapter-independent Space Marines 3.3.5 vehicle shells mirrored from Space Marines REV2 with identical stable unit IDs. Baal Predator is deliberately excluded because the Adeptus Mechanicus consumer cannot choose a Space Marine Chapter and therefore can never legally satisfy its Blood Angels restriction. The existing eleven Astra Militarum shared units remain structurally unchanged. All shared entries keep intrinsic unit-type/class/copy-cost semantics non-primary; consuming catalogues own their presentation category through local entryLinks.\n\nV7 — GAME SYSTEM 21 SYNC\nRetargeted this library from Game System revision 18 to revision 21. This is a compatibility-only sync: no rules version, unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, Patch Notes, validation, library links, or other executable catalogue content changed.\n\nV8 — SPACE MARINE VEHICLE LOADOUT SYNC\nPopulated the six previously-empty Space Marine vehicle bridge roots from Space Marines 3.3.7 REV14: Whirlwind, Vindicator, Land Speeder, Dreadnought, Contemptor Dreadnought, and Leviathan Dreadnought. Stable root IDs, Space Marines Vehicles bridge tags, cost semantics, and non-primary library presentation are preserved. Consuming entryLinks therefore continue resolving the same unit identities while receiving the completed loadout trees. Game System remains revision 21.\n\nV9 — SPACE MARINE CORRECTION SYNC\nSynchronized corrected Space Marine Vindicator, Astartes Basilisk, Predator, and Land Raider roots from Space Marines 3.3.7 REV15. Vindicator gains fixed Siege Shield; Basilisk can select Smoke Launchers and Armour Piercing High Explosive Shells independently; Predator and Land Raider use true empty optional states instead of literal '(None)' selections. Stable bridge root IDs, non-primary library presentation, points, and Game System revision 21 are preserved."
+    "comment": "MANUFACTORUM IMPERIUM LIBRARY V1\nReusable cross-faction vehicle library for the Adeptus Mechanicus Manufactorum Imperium rule. V1 contains every Vehicle unit currently implemented in Astra Militarum 3.3.3 Rev18. Space Marine Arsenal vehicles are intentionally not implemented yet. Unit trees, costs, loadouts, Rare semantics, Leader Capacity markers, and Other soft-copy markers are preserved from their source catalogue.\n\nLIBRARY V2 — GAME SYSTEM REV14\nRetargeted to Warhammer 40k Reforged Game System Rev14, which now owns the visible Space Marines Vehicles and Astra Militarum Vehicles presentation categories. No unit trees, costs, loadouts, IDs, or imported Astra Militarum semantics changed.\n\nLIBRARY V3 POLISH SYNC\nMirrored the Astra Militarum REV19 presentation polish across all eleven imported vehicle trees: direct Loadout headings are now Loadout Options; Tank Commander, Chimera, Taurox, Leman Russ Battle Tank, Hellhound, Basilisk, Wyvern, and Manticore use the same explicit model-header IDs as the source catalogue; Basilisk, Wyvern, and Manticore suppress the redundant Hull Weapon group label; Chimera and Taurox use Storm Bolter spelling; and Tank Commander uses the standardized Rare error wording. Unit IDs, existing loadout IDs, costs, categories, Rare semantics, Leader Capacity markers, Other soft-copy markers, and Manufactorum-specific category presentation remain unchanged.\n\nLIBRARY V4 RETROSPECTIVE POLISH SYNC\nMirrored the final Astra Militarum REV20 vehicle presentation cleanup across all eleven imported vehicle trees. Redundant one-item Paid Wargear wrappers are suppressed where the equipment name already identifies the choice; vehicle multi-option accessory/pintle groups use Pintle Weapons; the Taurox Twin Autocannon double wrapper is suppressed; and existing self-identifying hull, sponson, and coaxial equipment names remain free of redundant slot labels. The historical V1 provenance notes remain unchanged. All pre-existing IDs, unit names, points, costs, categories, Rare semantics, Leader Capacity markers, Other soft-copy markers, Manufactorum source-switch behavior, and imported Astra Militarum rules semantics remain unchanged.\n\nLIBRARY V5 — GAME SYSTEM REV17\nRetargeted the Manufactorum Imperium shared vehicle library to Warhammer 40k Reforged Game System revision 17. This library contains only shared Astra Militarum Vehicle/Other units, so no Troop copy-cost families or Troop semantic markers are added here. Existing Other soft-copy markers, Additional Copy Costs rule links, Rare semantics, Leader Capacity markers, shared unit IDs, costs, loadouts, and Manufactorum presentation semantics remain unchanged.\n\nLIBRARY V6 — SPACE MARINE VEHICLE BRIDGE / GS18\nRetargeted the library to Game System REV18 and added ten chapter-independent Space Marines 3.3.5 vehicle shells mirrored from Space Marines REV2 with identical stable unit IDs. Baal Predator is deliberately excluded because the Adeptus Mechanicus consumer cannot choose a Space Marine Chapter and therefore can never legally satisfy its Blood Angels restriction. The existing eleven Astra Militarum shared units remain structurally unchanged. All shared entries keep intrinsic unit-type/class/copy-cost semantics non-primary; consuming catalogues own their presentation category through local entryLinks.\n\nV7 — GAME SYSTEM 21 SYNC\nRetargeted this library from Game System revision 18 to revision 21. This is a compatibility-only sync: no rules version, unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, Patch Notes, validation, library links, or other executable catalogue content changed.\n\nV8 — SPACE MARINE VEHICLE LOADOUT SYNC\nPopulated the six previously-empty Space Marine vehicle bridge roots from Space Marines 3.3.7 REV14: Whirlwind, Vindicator, Land Speeder, Dreadnought, Contemptor Dreadnought, and Leviathan Dreadnought. Stable root IDs, Space Marines Vehicles bridge tags, cost semantics, and non-primary library presentation are preserved. Consuming entryLinks therefore continue resolving the same unit identities while receiving the completed loadout trees. Game System remains revision 21.\n\nV9 — SPACE MARINE CORRECTION SYNC\nSynchronized corrected Space Marine Vindicator, Astartes Basilisk, Predator, and Land Raider roots from Space Marines 3.3.7 REV15. Vindicator gains fixed Siege Shield; Basilisk can select Smoke Launchers and Armour Piercing High Explosive Shells independently; Predator and Land Raider use true empty optional states instead of literal '(None)' selections. Stable bridge root IDs, non-primary library presentation, points, and Game System revision 21 are preserved.\n\nV10 — SPACE MARINES REV17 CHECKBOX SYNC\nSynced all portable Space Marines roots touched by REV17 from the playable catalogue, preserving stable root IDs and exact presentation/constraint changes. GS21 retained."
   }
 }
