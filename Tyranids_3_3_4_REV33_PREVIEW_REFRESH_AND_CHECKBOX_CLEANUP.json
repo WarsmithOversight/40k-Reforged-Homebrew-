@@ -5,7 +5,7 @@
     "name": "Tyranids 3.3.4",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 32,
+    "revision": 33,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -72,7 +72,7 @@
             ]
           }
         ],
-        "comment": "ADDITIONAL COPY COSTS REV22 / GS17. Permanent required accounting entry. The single parent exposes Troops and Other accounting children. Hormagaunts (10), normal Termagants (10), and Gargoyles (10) use the 4 / 6 / 8 Troop normal-copy allowance. Other uses the established 1 / 2 / 3 arithmetic for 12 non-Rare Other copy families. Neurolictor is Rare and does not participate in soft-copy accounting. LIVING INCUBATOR EXCEPTION: the free Termagant broods nested under Tervigon do not consume the normal Termagant Troop allowance because each brood already has its own distinct nested unit ID. The parent retains automatic insertion, Required Additional Copy Costs Configuration, and duplicate-entry validation.",
+        "comment": "CURRENT ADDITIONAL COPY COSTS. Permanent required accounting entry with Troops and Other ledgers. Hormagaunts (10), normal Termagants (10), and Gargoyles (10) use the 4 / 6 / 8 Troop normal-copy allowance. Other uses the established 1 / 2 / 3 allowance across 15 non-Rare Other copy families, including the Screamer-Killer, Tyrannofex, and Stone-Crusher Carnifex preview units. Neurolictor is Rare and does not participate in soft-copy accounting. Living Incubator's free nested Termagant broods are deliberately excluded from the normal Termagant Troop allowance because they are distinct generated unit IDs. The parent remains automatically present and carries duplicate-entry validation.",
         "selectionEntryGroups": [
           {
             "name": "​",
@@ -773,7 +773,7 @@
                     ]
                   }
                 ],
-                "comment": "TROOP COPY-COST LEDGER. Hormagaunts (10), normal Termagants (10), and Gargoyles (10) use the GS17 4 / 6 / 8 normal-copy allowance. Living Incubator Termagant broods nested under Tervigon do not consume this allowance. They are distinct zero-point nested unit IDs and are deliberately not referenced by this ledger."
+                "comment": "CURRENT TROOP COPY-COST LEDGER. Hormagaunts (10), normal Termagants (10), and Gargoyles (10) use the 4 / 6 / 8 normal-copy allowance. Living Incubator Termagant broods do not consume this allowance because they are distinct zero-point generated unit IDs and are deliberately absent from this ledger."
               }
             ],
             "defaultSelectionEntryId": "a462-fc2f-02c6-89b3"
@@ -3665,9 +3665,447 @@
                         "childName": "Screamer-Killer"
                       }
                     ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4d9d-7c19-91be-0b40",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Tyrannofex"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "4d9d-7c19-91be-0b40",
+                        "childName": "Tyrannofex",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4d9d-7c19-91be-0b40",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Tyrannofex"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4d9d-7c19-91be-0b40",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Tyrannofex"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "4d9d-7c19-91be-0b40",
+                        "childName": "Tyrannofex",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4d9d-7c19-91be-0b40",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Tyrannofex"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4d9d-7c19-91be-0b40",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Tyrannofex"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "4d9d-7c19-91be-0b40",
+                        "childName": "Tyrannofex",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "4d9d-7c19-91be-0b40",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Tyrannofex"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "9dde-af5f-3ae7-4bf9",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Stone-Crusher Carnifex"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "9dde-af5f-3ae7-4bf9",
+                        "childName": "Stone-Crusher Carnifex",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "9dde-af5f-3ae7-4bf9",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Stone-Crusher Carnifex"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "9dde-af5f-3ae7-4bf9",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Stone-Crusher Carnifex"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "9dde-af5f-3ae7-4bf9",
+                        "childName": "Stone-Crusher Carnifex",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "9dde-af5f-3ae7-4bf9",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Stone-Crusher Carnifex"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "9dde-af5f-3ae7-4bf9",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Stone-Crusher Carnifex"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "9dde-af5f-3ae7-4bf9",
+                        "childName": "Stone-Crusher Carnifex",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "9dde-af5f-3ae7-4bf9",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Stone-Crusher Carnifex"
+                      }
+                    ]
                   }
                 ],
-                "comment": "OTHER COPY-COST LEDGER. Contains 78 point modifiers covering 13 non-Rare Other copy families with the established 1 / 2 / 3 allowance. REV29 adds Screamer-Killer as an independent Other family. Neurolictor remains Rare and is excluded from this soft-copy ledger."
+                "comment": "CURRENT OTHER COPY-COST LEDGER. Contains 90 point modifiers covering 15 non-Rare Other copy families with the established 1 / 2 / 3 allowance. Screamer-Killer, Tyrannofex, and Stone-Crusher Carnifex each participate as independent preview-unit families. Neurolictor is Rare and is excluded."
               }
             ],
             "defaultSelectionEntryId": "c8a1-203d-bea9-f9aa"
@@ -3694,7 +4132,7 @@
             "name": "Patch Notes",
             "id": "04ad-f5b1-8bfb-d85b",
             "hidden": false,
-            "description": "## Tyranids 3.3.4\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 11th)\n\n• Added Ripper Swarm model counter.\n• 3.3.5 preview unit added: Screamer-Killer.\n• Hive Guard loadouts combined into atomic cannon & Powerful Limbs choices.\n• Zoanthrope and Trygon: Neurothrope - Leech Essence and Trygon Prime - Synapse now use checkbox-style Unit Upgrade selections.\n• Hive Guard and Tyrant Guard: optional third models now use checkbox-style Additional Model selections.\n• 3.3.5 preview unit added: Tyrannofex (250 Points, Other / Monster).",
+            "description": "## Tyranids 3.3.4\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 12th)\n\n• Added Ripper Swarm model counter.\n• 3.3.5 preview unit added: Screamer-Killer.\n• Hive Guard loadouts combined into atomic cannon & Powerful Limbs choices.\n• Zoanthrope and Trygon: Neurothrope - Leech Essence and Trygon Prime - Synapse now use checkbox-style Unit Upgrade selections.\n• Hive Guard and Tyrant Guard: optional third models now use checkbox-style Additional Model selections.\n• 3.3.5 preview unit added: Tyrannofex.\n• 3.3.5 preview unit added: Stone-Crusher Carnifex.\n• Warrior: Attached Warrior selections now use checkbox-style nested-unit controls on all eligible hosts.\n• Ripper Swarms: both optional additional models now use checkbox-style Additional Ripper Swarm Model selections.",
             "noindex": false
           }
         ],
@@ -3712,7 +4150,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV26: Automatically present Configuration entry using the standard two-section Patch Notes format. Tyranids 3.3.4 intentionally lists no army-rules changes here; Catalogue Bugfixes (September 4th) records catalogue creation.\nREV28: Catalogue Bugfixes updated with 'Added Ripper Swarm model counter.'\nREV29: Catalogue Bugfixes updated with the 3.3.5 Screamer-Killer preview unit and Hive Guard atomic-loadout presentation correction.\nREV30: reset Catalogue Bugfixes to September 10th, removed stale prior bugfix entries, and retained only the current bugfixes from this update cycle.\nREV31: added the Zoanthrope and Trygon checkbox-style Unit Upgrade presentation cleanup to Catalogue Bugfixes (September 10th).\nREV32: updated the cumulative Catalogue Bugfixes heading to September 11th and appended Additional Model checkbox cleanup plus the Tyrannofex preview."
+        "comment": "CURRENT PATCH NOTES: automatically present Configuration entry. The Tyranids 3.3.4 army-rules section is intentionally bare; full rules patch notes remain external. Catalogue Bugfixes is the retained cumulative player-facing maintenance log and is dated September 12th for REV33. Preview-unit bullets record that a preview unit was added, not every later preview-data refresh.\nHISTORY: REV26 introduced standard Patch Notes; REV28-29 added the Frenzied Feeders/Screamer-Killer/Hive Guard entries; REV30 established the retained bugfix baseline; REV31-32 appended Unit Upgrade and Additional Model checkbox cleanup plus Tyrannofex. REV33 preserves those bullets and appends Stone-Crusher Carnifex, Attached Warrior checkbox cleanup, and Ripper Swarm additional-model cleanup."
       },
       {
         "type": "upgrade",
@@ -4722,7 +5160,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV28 CLEAN REBUILD: automatically present Frenzied Feeders Configuration. Replaces the failed defaultAmount experiments with a hidden-category aggregate and fixed result label."
+        "comment": "CURRENT STATE: automatically present Frenzied Feeders Configuration. A hidden roster-wide semantic category counts normal Hormagaunts, normal Termagants, and Living Incubator Termagant broods; a fixed result selection reports the corresponding Ripper Swarm Size. This is informational only and does not create a battlefield Ripper Swarm roster unit."
       },
       {
         "type": "unit",
@@ -4780,7 +5218,7 @@
             "noindex": false
           }
         ],
-        "comment": "PHASE 0.1 COMPILER NOTE: UUS marks this as a counted Leader, but generic counted-Leader enforcement is omitted here because the faction-specific rule 'Your army list may have only one HIVE TYRANT or TERVIGON or NEUROTYRANT.' is strictly stronger for the current faction roster. Rare remains descriptive; its local max-1 constraint is likewise redundant and omitted.\nLOADOUT UI: Monstrous Wings is a +20 final-state alternative to Monstrous Scything Talons inside the arm-pair loadout lists, not a separate Paid Wargear checkbox. Only one arm pair may select Wings.",
+        "comment": "CURRENT LEADER LIMIT: the source rule allowing only one HIVE TYRANT, TERVIGON, or NEUROTYRANT is stricter than generic Leader Capacity for the current Tyranid roster, so the pooled hidden-category restriction is the authoritative list-construction limit. Rare remains descriptive and no redundant per-unit Rare error is emitted.\nLOADOUT UI: Monstrous Wings is a +20 final-state alternative to Monstrous Scything Talons inside the arm-pair loadout lists, not a separate Paid Wargear checkbox. Only one arm pair may select Wings.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -5025,7 +5463,7 @@
           }
         ],
         "sortIndex": 2,
-        "comment": "PHASE 0.1 COMPILER NOTE: UUS marks this as a counted Leader, but generic counted-Leader enforcement is omitted here because the faction-specific rule 'Your army list may have only one HIVE TYRANT or TERVIGON or NEUROTYRANT.' is strictly stronger for the current faction roster. Rare remains descriptive; its local max-1 constraint is likewise redundant and omitted.\nLIVING INCUBATOR WARRIOR INTEGRATION: auto-granted broods use the same Attached Warrior group as normal Termagant units. The Warrior is nested directly inside the brood.\nTROOP COPY-COST EXEMPTION REV21: Living Incubator's generated Termagant broods do not count toward the normal Termagants (10) Additional Copy Costs allowance. They remain Troop presentation units, but their distinct nested brood IDs are intentionally absent from the Troops accounting ledger.",
+        "comment": "CURRENT LEADER LIMIT: the source rule allowing only one HIVE TYRANT, TERVIGON, or NEUROTYRANT is stricter than generic Leader Capacity for the current Tyranid roster, so the pooled hidden-category restriction is the authoritative list-construction limit. Rare remains descriptive and no redundant per-unit Rare error is emitted.\nLIVING INCUBATOR: the Tervigon automatically contains 1 / 2 / 3 zero-point Termagant brood units at 800 / 1200 / 1600 Points. Each granted brood uses the normal Termagant loadout grammar at zero cost and may optionally include the shared Countless Warrior through a checkbox-style Attached Warrior entryLink.\nCOPY-COST EXEMPTION: Living Incubator broods are distinct generated unit IDs and are deliberately absent from the normal Termagants (10) Troop copy-cost ledger.",
         "rules": [
           {
             "name": "Leader Attachment",
@@ -5102,16 +5540,6 @@
                         "id": "3d5d-a669-2e5d-b5c5",
                         "hidden": false,
                         "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "cf52-0c79-2adf-78fe"
-                          }
-                        ],
                         "entryLinks": [
                           {
                             "import": true,
@@ -5119,7 +5547,17 @@
                             "hidden": false,
                             "id": "05a6-3480-1307-ed39",
                             "type": "selectionEntry",
-                            "targetId": "95e6-81e5-2943-cbac"
+                            "targetId": "95e6-81e5-2943-cbac",
+                            "constraints": [
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "cf52-0c79-2adf-78fe"
+                              }
+                            ]
                           }
                         ]
                       },
@@ -5503,7 +5941,7 @@
                         ]
                       }
                     ],
-                    "comment": "LIVING INCUBATOR GRANTED BROOD 1: generated from the normal Termagants unit tree. This nested unit and all of its paid loadout choices cost 0 Points. The normal Warrior attachment category is intentionally preserved for the nested-association test.\nATTACHED WARRIOR: this granted brood may include one nested Warrior through its Attached Warrior group. No external association is required.\nTROOP COPY-COST EXEMPTION REV21: this Living Incubator brood is free and does not consume one of the 4 / 6 / 8 normal Termagants (10) copies for Additional Copy Costs.",
+                    "comment": "CURRENT LIVING INCUBATOR BROOD 1: generated from the normal Termagants unit tree. This nested unit and all of its paid loadout choices cost 0 Points. It may include one nested shared Warrior through the checkbox-style Attached Warrior entryLink; no external association is required. The brood is a distinct generated unit ID and does not consume one of the 4 / 6 / 8 normal Termagants (10) copies for Additional Copy Costs.",
                     "modifiers": [
                       {
                         "type": "set",
@@ -5563,16 +6001,6 @@
                         "id": "166e-c811-f0e9-c58c",
                         "hidden": false,
                         "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "1be3-b45c-4218-02aa"
-                          }
-                        ],
                         "entryLinks": [
                           {
                             "import": true,
@@ -5580,7 +6008,17 @@
                             "hidden": false,
                             "id": "b1b3-2f79-87aa-c8cf",
                             "type": "selectionEntry",
-                            "targetId": "95e6-81e5-2943-cbac"
+                            "targetId": "95e6-81e5-2943-cbac",
+                            "constraints": [
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "1be3-b45c-4218-02aa"
+                              }
+                            ]
                           }
                         ]
                       },
@@ -5964,7 +6402,7 @@
                         ]
                       }
                     ],
-                    "comment": "LIVING INCUBATOR GRANTED BROOD 2: generated from the normal Termagants unit tree. This nested unit and all of its paid loadout choices cost 0 Points. The normal Warrior attachment category is intentionally preserved for the nested-association test.\nATTACHED WARRIOR: this granted brood may include one nested Warrior through its Attached Warrior group. No external association is required.\nTROOP COPY-COST EXEMPTION REV21: this Living Incubator brood is free and does not consume one of the 4 / 6 / 8 normal Termagants (10) copies for Additional Copy Costs.",
+                    "comment": "CURRENT LIVING INCUBATOR BROOD 2: generated from the normal Termagants unit tree. This nested unit and all of its paid loadout choices cost 0 Points. It may include one nested shared Warrior through the checkbox-style Attached Warrior entryLink; no external association is required. The brood is a distinct generated unit ID and does not consume one of the 4 / 6 / 8 normal Termagants (10) copies for Additional Copy Costs.",
                     "modifiers": [
                       {
                         "type": "set",
@@ -6119,16 +6557,6 @@
                         "id": "db6f-fada-1962-9836",
                         "hidden": false,
                         "sortIndex": 1,
-                        "constraints": [
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "cba2-be4e-77c4-519c"
-                          }
-                        ],
                         "entryLinks": [
                           {
                             "import": true,
@@ -6136,7 +6564,17 @@
                             "hidden": false,
                             "id": "a3df-8a37-fc57-9f68",
                             "type": "selectionEntry",
-                            "targetId": "95e6-81e5-2943-cbac"
+                            "targetId": "95e6-81e5-2943-cbac",
+                            "constraints": [
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "cba2-be4e-77c4-519c"
+                              }
+                            ]
                           }
                         ]
                       },
@@ -6520,7 +6958,7 @@
                         ]
                       }
                     ],
-                    "comment": "LIVING INCUBATOR GRANTED BROOD 3: generated from the normal Termagants unit tree. This nested unit and all of its paid loadout choices cost 0 Points. The normal Warrior attachment category is intentionally preserved for the nested-association test.\nATTACHED WARRIOR: this granted brood may include one nested Warrior through its Attached Warrior group. No external association is required.\nTROOP COPY-COST EXEMPTION REV21: this Living Incubator brood is free and does not consume one of the 4 / 6 / 8 normal Termagants (10) copies for Additional Copy Costs.",
+                    "comment": "CURRENT LIVING INCUBATOR BROOD 3: generated from the normal Termagants unit tree. This nested unit and all of its paid loadout choices cost 0 Points. It may include one nested shared Warrior through the checkbox-style Attached Warrior entryLink; no external association is required. The brood is a distinct generated unit ID and does not consume one of the 4 / 6 / 8 normal Termagants (10) copies for Additional Copy Costs.",
                     "modifiers": [
                       {
                         "type": "set",
@@ -6975,7 +7413,7 @@
             "sortIndex": 2
           }
         ],
-        "comment": "REV24 PRESENTATION: Neurotyrant Loadout Options are shown first, followed by Attached Neuroloids. No selection IDs, constraints, attachment mechanics, costs, or loadout semantics changed.",
+        "comment": "CURRENT PRESENTATION: Loadout Options are shown first, followed by the mandatory Attached Neuroloids nested unit. The Neurotyrant participates in the pooled Hive Tyrant / Tervigon / Neurotyrant army limit.",
         "modifiers": [
           {
             "type": "add",
@@ -7044,16 +7482,6 @@
             "id": "b3c5-745b-9b5e-5315",
             "hidden": false,
             "sortIndex": 1,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "c0f5-89d7-f5cd-3337"
-              }
-            ],
             "entryLinks": [
               {
                 "import": true,
@@ -7061,7 +7489,17 @@
                 "hidden": false,
                 "id": "f9c6-9503-2f33-e9fc",
                 "type": "selectionEntry",
-                "targetId": "95e6-81e5-2943-cbac"
+                "targetId": "95e6-81e5-2943-cbac",
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "c0f5-89d7-f5cd-3337"
+                  }
+                ]
               }
             ]
           },
@@ -7165,16 +7603,6 @@
             "id": "a0ea-613b-f4a0-e726",
             "hidden": false,
             "sortIndex": 1,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "be13-1208-a545-5fb4"
-              }
-            ],
             "entryLinks": [
               {
                 "import": true,
@@ -7182,7 +7610,17 @@
                 "hidden": false,
                 "id": "8932-e46c-37d1-84df",
                 "type": "selectionEntry",
-                "targetId": "95e6-81e5-2943-cbac"
+                "targetId": "95e6-81e5-2943-cbac",
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "be13-1208-a545-5fb4"
+                  }
+                ]
               }
             ]
           },
@@ -8548,7 +8986,7 @@
             ]
           }
         ],
-        "comment": "\nREV22 RARE CORRECTION: Neurolictor is Rare. The previous Counts Toward Other Soft Copy Cost category was corrected to Rare, the Additional Copy Costs reminder was removed, and its six 1 / 2 / 3 soft-copy accounting modifiers were removed. Its Other / Infantry presentation and all loadout content remain unchanged."
+        "comment": "CURRENT STATE: Neurolictor is Rare and therefore excluded from Other soft-copy accounting. It remains presented as Other / Infantry."
       },
       {
         "type": "unit",
@@ -8858,7 +9296,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "\nREV31 PRESENTATION CLEANUP: Neurothrope - Leech Essence is now a direct optional Unit Upgrade selection, producing a checkbox-style control in New Recruit. The former Bioform Upgrade section is renamed Unit Upgrade. Existing parent-group ID, upgrade selection ID, +20 Point cost, rule text, and max-1 constraint ID are preserved."
+        "comment": "CURRENT PRESENTATION: Neurothrope - Leech Essence is a direct optional max-1 Unit Upgrade checkbox. Its +20 Point cost, rule text, and stable selection/constraint IDs are preserved."
       },
       {
         "type": "unit",
@@ -8894,7 +9332,7 @@
           }
         ],
         "sortIndex": 16,
-        "comment": "REV23 VARIABLE UNIT SIZE / EXPORT: the root represents Ripper Swarms 1-4 at 80 Points and exports their fixed equipment as 4x Ripping Jaws. Ripper Swarm 5 and Ripper Swarm 6 remain optional +20 Point individual models and each contributes one Ripping Jaws. This yields the correct total of 4 / 5 / 6 Ripping Jaws for 4 / 5 / 6-model units without exposing a quantity spinner.",
+        "comment": "CURRENT VARIABLE SIZE / EXPORT: the root represents four Ripper Swarm models at 80 Points and exports their fixed equipment through the canonical 4x Ripping Jaws package. Two independent +20 Point checkbox slots under Additional Models may each add one Additional Ripper Swarm Model; the slots are interchangeable and have no sequencing or model-number meaning. Each optional model contributes one Ripping Jaws, yielding the correct 4 / 5 / 6 total for a 4 / 5 / 6-model unit without a quantity spinner.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -8950,25 +9388,15 @@
             ]
           },
           {
-            "name": "Additional Model 1",
+            "name": "Additional Models",
             "id": "809c-26d6-757c-6a33",
             "hidden": false,
             "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "c88e-aa9d-2edf-a355"
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "model",
                 "import": true,
-                "name": "Ripper Swarm 5",
+                "name": "Additional Ripper Swarm Model",
                 "hidden": false,
                 "id": "0d0d-41ea-63f6-b56e",
                 "costs": [
@@ -9015,30 +9443,22 @@
                     "defaultSelectionEntryId": "eb1f-4828-ab72-f9b3"
                   }
                 ],
-                "sortIndex": 1
-              }
-            ]
-          },
-          {
-            "name": "Additional Model 2",
-            "id": "a934-59fd-1486-e0e0",
-            "hidden": false,
-            "sortIndex": 3,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "e9ab-d401-58b0-3059"
-              }
-            ],
-            "selectionEntries": [
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "c88e-aa9d-2edf-a355"
+                  }
+                ]
+              },
               {
                 "type": "model",
                 "import": true,
-                "name": "Ripper Swarm 6",
+                "name": "Additional Ripper Swarm Model",
                 "hidden": false,
                 "id": "a15b-f5e5-44d3-3cca",
                 "costs": [
@@ -9048,7 +9468,7 @@
                     "value": 20
                   }
                 ],
-                "sortIndex": 1,
+                "sortIndex": 2,
                 "selectionEntryGroups": [
                   {
                     "name": "​",
@@ -9084,6 +9504,16 @@
                       }
                     ],
                     "defaultSelectionEntryId": "a3c8-d0a7-f3e9-7da7"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "e9ab-d401-58b0-3059"
                   }
                 ]
               }
@@ -9298,7 +9728,7 @@
           }
         ],
         "sortIndex": 18,
-        "comment": "VARIABLE UNIT SIZE: the root represents 2 Hive Guard at 80 Points. Hive Guard 3 is an optional +40 Point model with its own loadout choice. REV29 PRESENTATION UPDATE: each model now makes one atomic final-state choice between Shock Cannon & Powerful Limbs or Impaler Cannon & Powerful Limbs. Existing Shock Cannon and Impaler Cannon selection IDs are preserved under the combined names; redundant standalone Powerful Limbs selections were removed.",
+        "comment": "CURRENT VARIABLE SIZE: the root represents 2 Hive Guard at 80 Points. Hive Guard 3 is an optional +40 Point checkbox model with its own loadout choice. Each model makes one atomic final-state choice between Shock Cannon & Powerful Limbs or Impaler Cannon & Powerful Limbs.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -9532,7 +9962,7 @@
           }
         ],
         "sortIndex": 19,
-        "comment": "VARIABLE UNIT SIZE: the root represents 2 Tyrant Guard at 80 Points. Tyrant Guard 3 is an optional +40 Point model with its own armament choice.",
+        "comment": "CURRENT VARIABLE SIZE: the root represents 2 Tyrant Guard at 80 Points. Tyrant Guard 3 is an optional +40 Point checkbox model with its own armament choice.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -9898,7 +10328,7 @@
             ]
           }
         ],
-        "comment": "\nREV31 PRESENTATION CLEANUP: Trygon Prime - Synapse is now a direct optional Unit Upgrade selection, producing a checkbox-style control in New Recruit. The former Bioform Upgrade section is renamed Unit Upgrade. Existing parent-group ID, upgrade selection ID, +20 Point cost, rule text, and max-1 constraint ID are preserved."
+        "comment": "CURRENT PRESENTATION: Trygon Prime - Synapse is a direct optional max-1 Unit Upgrade checkbox. Its +20 Point cost, rule text, and stable selection/constraint IDs are preserved."
       },
       {
         "type": "unit",
@@ -10360,7 +10790,7 @@
             "noindex": false
           }
         ],
-        "comment": "REV29 PREVIEW UNIT: Screamer-Killer is intentionally exposed early as a 130 Point Other / Monster preview for the upcoming Tyranids 3.3.5 release. Only list-construction information currently supplied by the maintainer is represented here. No speculative weapon/loadout or battlefield-rule content has been added."
+        "comment": "CURRENT PREVIEW UNIT: Screamer-Killer is exposed early as a 130 Point Other / Monster preview for the upcoming Tyranids 3.3.5 release. Only list-construction information supplied by the maintainer is represented here. No speculative weapon, loadout, or battlefield-rule content is added."
       },
       {
         "type": "unit",
@@ -10373,7 +10803,7 @@
           {
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
-            "value": 250
+            "value": 260
           }
         ],
         "categoryLinks": [
@@ -10414,7 +10844,61 @@
             "noindex": false
           }
         ],
-        "comment": "REV32 PREVIEW UNIT: Tyrannofex is intentionally exposed early as a 250 Point Other / Monster preview for the upcoming Tyranids 3.3.5 release. Only list-construction information currently supplied by the maintainer is represented here. No speculative weapon/loadout or battlefield-rule content has been added."
+        "comment": "CURRENT PREVIEW UNIT: Tyrannofex is exposed early as a 260 Point Other / Monster preview for the upcoming Tyranids 3.3.5 release. Only list-construction information supplied by the maintainer is represented here. No speculative weapon, loadout, or battlefield-rule content is added."
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "Stone-Crusher Carnifex",
+        "hidden": false,
+        "id": "9dde-af5f-3ae7-4bf9",
+        "sortIndex": 26,
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "51b2-306e-1021-d207",
+            "value": 180
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "d7eb-f6f6-975e-edc7",
+            "primary": true,
+            "name": "Other"
+          },
+          {
+            "targetId": "e6ed-c065-8a16-4cd8",
+            "id": "1835-c307-7c18-da05",
+            "primary": false,
+            "name": "Monster"
+          },
+          {
+            "targetId": "5fc2-c0ae-4fa3-59b9",
+            "id": "4b15-bcef-90d5-98b5",
+            "primary": false,
+            "name": "Counts Toward Other Soft Copy Cost"
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "33e0-d5f3-1d37-6bb0",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "e02a-f56c-ccaa-b1a9"
+          }
+        ],
+        "rules": [
+          {
+            "name": "3.3.5 Preview",
+            "id": "8317-fb8b-0e93-7146",
+            "hidden": false,
+            "description": "Upcoming unit for Tyranids 3.3.5. Join the Reforged Discord Server to be notified of rules updates instantly: https://discord.gg/BpjkaNmMVB",
+            "noindex": false
+          }
+        ],
+        "comment": "CURRENT PREVIEW UNIT: Stone-Crusher Carnifex is exposed early as a 180 Point Other / Monster preview for the upcoming Tyranids 3.3.5 release. Only list-construction information supplied by the maintainer is represented here. No speculative weapon, loadout, or battlefield-rule content is added."
       }
     ],
     "categoryEntries": [
@@ -10758,7 +11242,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: the Warrior is represented as two final-state arm-pair lists. Each arm pair can record one melee package or one ranged bio-weapon.\nNESTED COUNTLESS LEADER: Warrior is no longer a root Leader selection. Eligible Hormagaunt and Termagant units offer it through an Attached Warrior group. It remains Countless and does not consume Leader capacity."
+        "comment": "CURRENT LOADOUT UI: the Warrior uses two final-state arm-pair lists; each arm pair records one melee package or one ranged bio-weapon.\nNESTED COUNTLESS LEADER: Warrior is a shared full unit rather than a root Leader. Eligible Hormagaunt and Termagant hosts, including Living Incubator broods, expose it through checkbox-style Attached Warrior entryLinks. It remains Countless and does not consume Leader Capacity."
       },
       {
         "type": "upgrade",
@@ -10766,9 +11250,9 @@
         "name": "4x Ripping Jaws",
         "hidden": false,
         "id": "67d5-22a1-5889-135a",
-        "comment": "REV23 CANONICAL EXPORT PACKAGE: represents the fixed four Ripper Swarms in the base unit. The editor uses the local label 'Ripping Jaws'; New Recruit exports the canonical target name '4x Ripping Jaws'."
+        "comment": "CURRENT EXPORT PACKAGE: represents the fixed four Ripper Swarm models in the base unit. The editor uses the concise local label Ripping Jaws while New Recruit exports the canonical target name 4x Ripping Jaws."
       }
     ],
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTyranids now use the final-state fancy-notepad loadout grammar. Hive Tyrant Wings are inline loadout alternatives; Warrior and Warrior Brood use two arm-pair lists; Termagants 1-7 use one shared ordinary weapon slot while 8-10 are paid specialist slots. Ripper Swarms, Hive Guard, and Tyrant Guard use variable-size controls. All native non-Rare Other units use Additional Copy Costs. The existing Tervigon Living Incubator free-Termagant TODO remains intentionally untouched.\n\nRIPPER SWARM VARIABLE-SIZE UI FIX\nRipper Swarms now use one quantity-style +20 Point Additional Model entry capped at two, rather than separate Ripper Swarm 5 and Ripper Swarm 6 model subtrees.\n\nRIPPER SWARM ADDITIONAL-MODEL UI CORRECTION\nRipper Swarms now use the same max-1 optional-model radio pattern as Hive Guard. Ripper Swarm 5 is the first optional +20 model; when selected it exposes Ripper Swarm 6 as a second optional +20 model.\n\nTERVIGON LIVING INCUBATOR IMPLEMENTATION\nLiving Incubator now uses required Tervigon-to-Termagant associations: 1 brood at 800, 2 at 1200, 3 at 1600. Associated Termagant units and their paid specialist weapons cost 0 Points. The full Living Incubator rule text is displayed on the Tervigon.\n\nTERVIGON HIDDEN-ASSOCIATION MINIMUM FIX\nLiving Incubator association slots now have min 0 individually. A single dynamic association-count constraint enforces 1 / 2 / 3 attached broods by Game Size, preventing hidden Brood 3 from generating a phantom requirement at 1200 Points.\n\nTERVIGON DISTINCT-BROOD PICKER FIX\nLiving Incubator now uses one game-size-specific multi-select association picker rather than separate Brood 1/2/3 pickers. Each Termagant unit appears once, so the same unit cannot be selected for multiple granted broods.\n\nTERVIGON PLAYER-FACING ERROR MESSAGE\nReplaced New Recruit's generic 'requires N associations more' minimum error with explicit Living Incubator errors for 800 / 1200 / 1600 Points. The messages tell the player how many free Termagant broods are required, to add Termagant units first, where to select them, and that the selected broods cost 0 Points.\n\nTERVIGON AUTO-GRANTED BROODS PROTOTYPE\nLiving Incubator now prototypes Neuroloid-style nested Termagant broods. The Tervigon automatically selects 1 / 2 / 3 zero-point brood units according to Game Size. Each brood preserves the normal Warrior attachment category so nested association targeting can be tested.\n\nNESTED WARRIOR COUNTLESS LEADER\nWarrior has been removed from the root Leader section and moved into sharedSelectionEntries. Hormagaunts, normal Termagants, and Tervigon-granted Termagant broods now expose Warrior through an Attached Warrior group, matching the proven nested Nob-style architecture.\n\nREV11 CONSTRUCTIVE VALIDATION MIGRATION\nTargets Game System revision 11. Additional Copy Costs uses the current required-configuration semantic tag and self-owned duplicate warning. Trygon and Mawloc Rare limits are constructive. The Hive Tyrant / Tervigon / Neurotyrant shared restriction is now self-monitored by those units rather than enforced by a hidden-category stock max. The obsolete Neuroloid roster cap is removed. Living Incubator no longer uses dynamic stock exact-count constraints: each granted brood is max one, Brood 2/3 use selected-safe visibility across Game Size changes, and Tervigon/Brood entries provide constructive missing/invalid-brood errors. Nested Warrior architecture is unchanged.\n\nREV13 NEW RECRUIT EXPORT COMPATIBILITY\nPromoted the proven revision-12 Points-ID test build to the canonical Tyranids catalogue for Warhammer 40k Reforged Game System revision 12. All Points cost references use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, categories, constraints, nested Warrior architecture, Living Incubator logic, or constructive validation semantics were otherwise changed.\n\nREV20 RETROSPECTIVE POLISH PASS\nRevisited Tyranids against the final cross-faction presentation standard. Added explicit Hive Tyrant and shared Warrior model headers around their existing two anonymous arm-pair choice lists without reintroducing physical Arm Pair labels. Renamed Neurotyrant Attached Unit to Attached Neuroloids. Renamed Hive Guard and Tyrant Guard Additional Models to Additional Model because each group adds only one model. Standardized all twelve Monstrous/Warrior/Guard Bone Sword + Lash Whip package names to '&' grammar while preserving every existing selection ID. Refreshed durable Warrior-nesting comments to use the current Attached Warrior terminology. Ripper Swarm Additional Model 1 / Additional Model 2 sequencing, Bioform Upgrade, Living Incubator, nested Warrior architecture, Termagant specialist structure, variable-size mechanics, Hive Tyrant/Tervigon/Neurotyrant shared limit, Rare validation, points, categories, associations, Additional Copy Costs, and all other rules semantics remain unchanged.\n\nREV21 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Hormagaunts (10), normal Termagants (10), and Gargoyles (10) now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical root copy costs +20 Points. All 78 pre-existing Other point modifiers were moved unchanged to the Other child. LIVING INCUBATOR EXCEPTION: Tervigon's free Termagant Brood 1 / 2 / 3 units do not count toward the normal Termagant allowance. They already use distinct nested unit IDs, so the Troop ledger simply excludes those IDs rather than applying a compensating refund. All unrelated unit rules, loadouts, Leader limits, Rare behavior, generated-brood requirements, and attachment mechanics are unchanged.\n\nREV22 — NEUROLICTOR RARE + WARRIOR EXPORT CLEANUP\nCorrected Neurolictor to Rare. Its previous Counts Toward Other Soft Copy Cost link was retargeted to Rare using the same category-link ID, its Additional Copy Costs reminder was removed, and its six normal Other copy-cost modifiers were removed. The Other ledger therefore moves from 78 to 72 modifiers / 12 non-Rare Other families. Separately, renamed the six Warrior Brood (3) '2x Warrior Bone Sword' selections to 'Paired Warrior Bone Swords' while preserving every existing selection ID, producing cleaner quantity-prefixed roster exports. No other Tyranids unit, loadout, point cost, category, Troop accounting rule, Living Incubator behavior, or Game System semantic was changed.\n\nREV23 — RIPPER SWARM EXPORT QUANTITY FIX\nCorrected Ripper Swarms weapon export. The fixed Ripper Swarms 1-4 block now uses a canonical shared 4x Ripping Jaws export package while retaining the concise Ripping Jaws editor label. Optional Ripper Swarm 5 and Ripper Swarm 6 continue to contribute one Ripping Jaws each. A full six-model unit therefore records six total Ripping Jaws: four on the root block plus one on each additional model. Points, variable-size sequencing, Bioform Upgrade, Additional Copy Costs, and all unrelated mechanics are unchanged.\n\nREV24 — NEUROTYRANT SECTION ORDER\nReordered the Neurotyrant editor presentation so Loadout Options appears above Attached Neuroloids. This is a presentation-only change; all IDs, costs, constraints, attachment behavior, and unit semantics are unchanged.\n\nREV25 — GS20 TROOP COPY RULE\nUpdated to Game System revision 20 and retargeted Hormagaunts (10), Termagants (10), and Gargoyles (10) to the Additional Copy Cost - Troop short-form rule. Existing infoLink IDs, Neurotyrant section ordering, Ripper Swarm export presentation, Termagant loadout structure, points, categories, and unrelated mechanics are unchanged.\n\nREV26 — TYRANIDS 3.3.4 + STANDARD PATCH NOTES\nUpdated the catalogue title from Tyranids 3.3.3 to Tyranids 3.3.4 and added the standard automatically present Patch Notes Configuration. The army-rules section is intentionally bare; Catalogue Bugfixes (September 4th) contains 'Catalogue created.' No mechanical selections, points, generated-unit behavior, nested leaders, copy-cost arithmetic, validation, categories, or unrelated catalogue semantics changed.\n\nREV27 — GAME SYSTEM 21 SYNC\nRetargeted this catalogue from Game System revision 20 to revision 21. This is a compatibility-only sync: no rules version, unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, Patch Notes, validation, library links, or other executable catalogue content changed.\n\nREV28 — FRENZIED FEEDERS CATEGORY COUNTER\nBuilt directly from clean GS21 REV27. Added a catalogue-local hidden Counts Toward Frenzied Feeders category to normal Hormagaunts, normal Termagants, and Living Incubator Termagant Broods 1-3. Added an automatically present Frenzied Feeders Configuration with a fixed result selection whose name reports Ripper Swarm Size from the aggregate hidden-category count. Supports sizes 0-30. Added 'Added Ripper Swarm model counter.' to Catalogue Bugfixes. No Game System change, points change, copy-cost change, loadout change, attachment change, or generated Ripper Swarm roster unit was introduced.\n\nREV29 — SCREAMER-KILLER 3.3.5 PREVIEW + HIVE GUARD ATOMIC LOADOUTS\nAdded Screamer-Killer as a 130 Point Other / Monster preview for upcoming Tyranids 3.3.5, with a visible preview notice directing players to the Reforged Discord Server. Screamer-Killer participates in the normal Other Additional Copy Cost system as its own family. Updated Hive Guard so each model chooses one atomic Shock Cannon & Powerful Limbs or Impaler Cannon & Powerful Limbs final state, preserving the existing cannon selection IDs. Catalogue remains Tyranids 3.3.4 on Game System revision 21. Frenzied Feeders, points, attachments, unit-size logic, and unrelated mechanics are unchanged.\n\nREV30 — BUGFIX LOG CLEANUP\nRebuilt the player-facing Catalogue Bugfixes section for September 10th, removed stale entries from earlier catalogue-update cycles, and retained only the current bugfix entries. No unit data, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, validation behavior, Game System target, or other mechanics changed.\n\nREV31 — TYRANID UNIT UPGRADE CHECKBOXES\nFlattened Neurothrope - Leech Essence on Zoanthrope and Trygon Prime - Synapse on Trygon from one-item optional wrapper groups into direct max-1 Unit Upgrade selections. Renamed those two visible parent sections from Bioform Upgrade to Unit Upgrade. Existing group IDs, upgrade selection IDs, +20 Point costs, rule text, and max-1 constraint IDs are unchanged. Added the cleanup to Catalogue Bugfixes (September 10th). No points, categories, Additional Copy Cost arithmetic, Frenzied Feeders, Screamer-Killer preview, Hive Guard loadouts, Game System target, or unrelated mechanics changed.\n\nREV32 — ADDITIONAL MODEL CHECKBOXES + TYRANNOFEX PREVIEW\nConverted every optional Additional Model slot currently present in the Tyranids catalogue to direct checkbox-style model selections by moving each existing group max-1 constraint onto its existing model entry. This affects Hive Guard 3 and Tyrant Guard 3. Their model type, stable IDs, points costs, nested loadouts, defaults, and rules remain unchanged. Added Tyrannofex as a 250 Point Other / Monster 3.3.5 preview unit using the established Screamer-Killer preview convention, including the Other soft-copy-cost category and Additional Copy Costs infoLink. No Tyrannofex weapons, loadouts, or battlefield rules have been invented. The cumulative Catalogue Bugfixes log was retained, its heading date updated to September 11th, and the new changes appended. Existing Frenzied Feeders, Unit Upgrade checkboxes, Additional Copy Costs, GS21 target, root points, and unrelated mechanics are unchanged."
+    "comment": "CURRENT STATE — REV33 / GS21\nTyranids 3.3.4 uses the mature final-state companion-listbuilder grammar. Native Troops Hormagaunts (10), Termagants (10), and Gargoyles (10) use the 4 / 6 / 8 Additional Copy Cost allowance; 15 non-Rare Other families use the 1 / 2 / 3 allowance. Neurolictor is Rare and excluded from soft-copy accounting. The 3.3.5 preview currently exposes Screamer-Killer (130 Points), Tyrannofex (260 Points), and Stone-Crusher Carnifex (180 Points) as Other / Monster units; all three participate in normal Other copy-cost accounting.\n\nCURRENT FACTION ARCHITECTURE\n- Hive Tyrant, Tervigon, and Neurotyrant share one pooled army-list maximum. That source restriction is stricter than generic Leader Capacity for the current Tyranid roster and is the authoritative limit.\n- Living Incubator is implemented as 1 / 2 / 3 zero-point nested Termagant brood units at 800 / 1200 / 1600 Points. These generated broods use distinct unit IDs, preserve the normal Termagant loadout grammar at zero cost, may include one nested shared Warrior, and deliberately do not consume normal Termagant Additional Copy Cost allowance.\n- Warrior is a shared full Countless Leader unit exposed through checkbox-style Attached Warrior entryLinks on eligible Hormagaunt and Termagant hosts, including Living Incubator broods. It does not consume Leader Capacity.\n- Neurotyrant includes mandatory nested Neuroloids.\n- Frenzied Feeders is an informational roster counter driven by a hidden semantic category. It reports Ripper Swarm Size but creates no battlefield Ripper Swarm unit.\n- Ripper Swarms use a four-model 80 Point root plus two independent +20 Point checkbox slots, both named Additional Ripper Swarm Model. The slots are interchangeable and have no sequencing or model-number meaning. The fixed core exports through the shared 4x Ripping Jaws package.\n- Hive Guard 3 and Tyrant Guard 3 use direct checkbox-style Additional Model selections. Zoanthrope and Trygon optional upgrades use direct Unit Upgrade checkboxes.\n\nAUTHORING / RUNTIME NOTES\n- Rules descriptions sourced from the authoritative rules PDF are verbatim source text and are not editorialized by catalogue maintenance.\n- Preview units contain only list-construction information supplied by the maintainer. Do not invent weapons, loadouts, or battlefield rules for incomplete previews.\n- Living Incubator broods are generated units, not normal Termagant copies. Keep their IDs out of the normal Troop copy-cost ledger.\n- Attached Warrior is a nested full-unit relationship. Keep the relationship section, but max-1 belongs on the Warrior entryLink so New Recruit renders a checkbox.\n- The Ripper Swarm base package intentionally separates concise editor labels from the canonical 4x Ripping Jaws export target.\n\nPRE-REV11 HISTORICAL IMPLEMENTATION NOTES — SUPERSEDED\nEarly Tyranid builds passed through several now-obsolete prototypes: Ripper Swarms briefly used quantity-style additional-model controls before returning to explicit models; Living Incubator was first modelled through external Termagant associations, then dynamic association counts and a distinct-brood picker, before becoming the current automatically generated nested-brood implementation. Those experiments are retained here only as history and are not current authoring instructions. The nested shared Warrior architecture survived that migration and became production behavior.\n\nREV11 — CONSTRUCTIVE VALIDATION MIGRATION\nMoved Rare and pooled Leader restrictions to constructive player-facing validation and finalized selected-safe Living Incubator brood handling. Nested Warrior architecture remained intact.\n\nREV13 — NEW RECRUIT EXPORT COMPATIBILITY\nMoved all Points references to canonical cost type 51b2-306e-1021-d207 without changing rules semantics.\n\nREV20 — RETROSPECTIVE POLISH PASS\nStandardized model headers, Attached Neuroloids naming, Additional Model labels, and '&' package grammar while preserving IDs and mechanics.\n\nREV21 / GS17 — TROOP COPY COSTS\nAdded unified Troops / Other Additional Copy Costs. Normal Hormagaunts, Termagants, and Gargoyles use 4 / 6 / 8; Living Incubator broods remain exempt by distinct generated IDs.\n\nREV22 — NEUROLICTOR RARE + WARRIOR EXPORT CLEANUP\nCorrected Neurolictor to Rare and removed it from Other soft-copy accounting. Cleaned Warrior Brood export wording while preserving IDs.\n\nREV23 — RIPPER SWARM EXPORT QUANTITY FIX\nIntroduced the canonical 4x Ripping Jaws shared export package for the fixed four-model core.\n\nREV24 — NEUROTYRANT SECTION ORDER\nMoved Loadout Options above Attached Neuroloids.\n\nREV25 — GS20 TROOP COPY RULE\nRetargeted native Troops to the short-form Additional Copy Cost - Troop rule.\n\nREV26 — TYRANIDS 3.3.4 + STANDARD PATCH NOTES\nUpdated the rules baseline to Tyranids 3.3.4 and added the automatically present Patch Notes Configuration.\n\nREV27 — GAME SYSTEM 21 SYNC\nRetargeted the catalogue to Game System revision 21 without semantic changes.\n\nREV28 — FRENZIED FEEDERS COUNTER\nAdded the roster-derived Ripper Swarm Size informational counter.\n\nREV29 — SCREAMER-KILLER PREVIEW + HIVE GUARD ATOMIC LOADOUTS\nAdded Screamer-Killer as an incomplete 3.3.5 preview and consolidated Hive Guard weapons into atomic final-state packages.\n\nREV30 — BUGFIX LOG BASELINE\nRebuilt the player-facing Catalogue Bugfixes section and established the retained maintenance baseline. Later workflow treats this list as cumulative from that baseline onward.\n\nREV31 — UNIT UPGRADE CHECKBOXES\nConverted Neurothrope - Leech Essence and Trygon Prime - Synapse to direct Unit Upgrade checkboxes.\n\nREV32 — ADDITIONAL MODEL CHECKBOXES + TYRANNOFEX PREVIEW\nConverted Hive Guard 3 and Tyrant Guard 3 to direct Additional Model checkboxes and added Tyrannofex as an incomplete preview.\n\nREV33 — PREVIEW REFRESH + NESTED/VARIABLE-SIZE CLEANUP\nUpdated Tyrannofex preview cost to 260 Points, added Stone-Crusher Carnifex at 180 Points, and completed normal Other copy-cost accounting for both preview families. Converted all five Attached Warrior relationships to checkbox-style entryLinks. Consolidated the two interchangeable Ripper Swarm optional models under one Additional Models section, renamed both selections Additional Ripper Swarm Model, and moved their max-1 constraints onto the model entries for checkbox rendering. Updated the cumulative Catalogue Bugfixes heading to September 12th and consolidated stale/conflicting comments into current-state, durable authoring, and clearly historical sections."
   }
 }

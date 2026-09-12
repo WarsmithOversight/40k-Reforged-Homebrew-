@@ -5,7 +5,7 @@
     "name": "T'au 3.3.6",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 16,
+    "revision": 17,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -72,7 +72,7 @@
             ]
           }
         ],
-        "comment": "ADDITIONAL COPY COSTS REV7 / GS17. Permanent required accounting entry. The single parent now exposes Troops and Other accounting children. Strike Team and Breacher Team use the 4 / 6 / 8 Troop normal-copy allowance; Other preserves the existing 1 / 2 / 3 arithmetic exactly. No faction-specific free/generated Troop exception is present in this catalogue. The parent retains automatic insertion, Required Additional Copy Costs Configuration, and duplicate-entry validation.",
+        "comment": "CURRENT ADDITIONAL COPY COSTS. Permanent required accounting entry with Troops and Other children. Strike Team and Breacher Team use the 4 / 6 / 8 Troop normal-copy allowance; the twelve native Other copy families use the established 1 / 2 / 3 allowance. No faction-specific free or generated Troop exception is present. The parent remains automatically inserted, carries Required Additional Copy Costs Configuration, and validates duplicate accounting entries.",
         "selectionEntryGroups": [
           {
             "name": "​",
@@ -554,7 +554,7 @@
                     ]
                   }
                 ],
-                "comment": "TROOP COPY-COST LEDGER. Strike Team and Breacher Team use the GS17 4 / 6 / 8 normal-copy allowance."
+                "comment": "TROOP COPY-COST LEDGER. Strike Team and Breacher Team use the 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points."
               }
             ],
             "defaultSelectionEntryId": "0248-42d0-70d3-3891"
@@ -3229,7 +3229,7 @@
                     ]
                   }
                 ],
-                "comment": "OTHER COPY-COST LEDGER. Contains all 72 pre-existing Other point modifiers unchanged, preserving the established 1 / 2 / 3 allowance."
+                "comment": "OTHER COPY-COST LEDGER. Twelve independent native Other copy families use the 1 / 2 / 3 normal-copy allowance. The ledger contains 72 point modifiers total."
               }
             ],
             "defaultSelectionEntryId": "7cd4-7093-1e3c-d345"
@@ -3256,7 +3256,7 @@
             "name": "Patch Notes",
             "id": "5411-0bad-59f3-470a",
             "hidden": false,
-            "description": "## T'au 3.3.6\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 11th)\n\n• Seeker Missiles: all optional Seeker Missile purchases now use checkbox-style Paid Wargear selections; units that can take two show two identical Seeker Missile entries.\n• Recon Pathfinders: loadout presentation reworked into Recon Shas'la 1, Recon Shas'la 2-5, and Recon Drone; the Photon Grenade Launcher is now an inline Shas'la 1 weapon choice.\n• Hunter Pathfinders: loadout presentation reworked into Hunter Shas'la 1, Hunter Shas'la 2, and Hunter Shas'la 3-5; the Photon Grenade Launcher is now an inline Shas'la 1 weapon choice and specialist rifles are chosen as one 3-model package.\n• Strike Team and Breacher Team: Photon Grenade now uses a checkbox-style Paid Wargear selection.\n• Added Support Turret model counter for Strike Team and Breacher Team units.\n• XV8 Crisis Battlesuits: optional Crisis Shas'ui 3 now uses a checkbox-style Additional Model selection.",
+            "description": "## T'au 3.3.6\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 12th)\n\n• Seeker Missiles: all optional Seeker Missile purchases now use checkbox-style Paid Wargear selections; units that can take two show two identical Seeker Missile entries.\n• Recon Pathfinders: loadout presentation reworked into Recon Shas'la 1, Recon Shas'la 2-5, and Recon Drone; the Photon Grenade Launcher is now an inline Shas'la 1 weapon choice.\n• Hunter Pathfinders: loadout presentation reworked into Hunter Shas'la 1, Hunter Shas'la 2, and Hunter Shas'la 3-5; the Photon Grenade Launcher is now an inline Shas'la 1 weapon choice and specialist rifles are chosen as one 3-model package.\n• Strike Team and Breacher Team: Photon Grenade now uses a checkbox-style Paid Wargear selection.\n• Added Support Turret model counter for Strike Team and Breacher Team units.\n• XV8 Crisis Battlesuits: optional Crisis Shas'ui 3 now uses a checkbox-style Additional Model selection.\n• Catalogue maintenance: current implementation notes and historical comments consolidated for the live GS21 catalogue.",
             "noindex": false
           }
         ],
@@ -3274,7 +3274,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV14: rebuilt the September 10th Catalogue Bugfixes section around the current UI cleanup batch: checkbox-style optional Seeker Missiles, Recon/Hunter Pathfinder loadout restructuring, and checkbox-style Photon Grenades on Strike and Breacher Teams.\nREV15: added the Support Turret model counter to Catalogue Bugfixes (September 10th).\nREV16: updated the cumulative Catalogue Bugfixes heading to September 11th and appended checkbox-style Additional Model cleanup for XV8 Crisis Battlesuits."
+        "comment": "CURRENT PATCH-NOTES STATE: Catalogue Bugfixes is cumulative from the retained September 10th baseline onward. REV17 updates the visible maintenance marker to September 12th and records the comment/documentation consolidation pass; no list-construction mechanics changed.\n\nREV14: established the retained September 10th baseline with optional Seeker Missile checkboxes, Recon/Hunter Pathfinder loadout restructuring, and Strike/Breacher Photon Grenade checkboxes.\nREV15: added the Support Turret model counter.\nREV16: updated the heading to September 11th and added the XV8 Crisis Battlesuits Additional Model checkbox cleanup.\nREV17: updated the heading to September 12th and added the catalogue-maintenance marker."
       },
       {
         "type": "unit",
@@ -5034,7 +5034,7 @@
                         "sortIndex": 1
                       }
                     ],
-                    "comment": "REV9: New Recruit cannot represent one radio-style fixed choice as nine copies without exposing a quantity control. The fixed equipment for Kroot Carnivores 1-9 is therefore represented directly as one literal final-state package: 9x Kroot Rifles & Knives."
+                    "comment": "NEW RECRUIT EXPORT NOTE. Fixed equipment for Kroot Carnivores 1-9 is represented as one literal final-state package, 9x Kroot Rifles & Knives, because a structural quantity of nine exposes an unwanted quantity control in New Recruit."
                   }
                 ]
               },
@@ -5084,7 +5084,7 @@
             ]
           }
         ],
-        "comment": "REV9 LOADOUT UI: Kroot Carnivores 1-9 use one literal fixed package, 9x Kroot Rifles & Knives. This intentionally avoids New Recruit's quantity spinner for fixed multi-model equipment. Kroot Carnivore 10 remains the free Tanglebomb Launcher specialist. The obsolete REV8 shared package and hidden legacy Rifle Knives branch were removed.",
+        "comment": "LOADOUT UI: Kroot Carnivores 1-9 use one literal fixed package, 9x Kroot Rifles & Knives, to avoid New Recruit's quantity control for fixed multi-model equipment. Kroot Carnivore 10 is the free Tanglebomb Launcher specialist.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -5292,7 +5292,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "\nREV13 PRESENTATION CLEANUP: Seeker Missile and Additional Seeker Missile are now direct optional Paid Wargear selections with independent max-1 constraints, producing a simple checkbox-style list in New Recruit. Existing missile selection IDs, +10 Point costs, and max-1 constraint IDs are preserved."
+        "comment": "PAID WARGEAR UI: this unit has two independent identically named Seeker Missile selections. Each costs +10 Points and carries its own max-1 constraint, producing two checkbox-style purchases while preserving the existing missile selection and constraint IDs."
       },
       {
         "type": "unit",
@@ -5482,7 +5482,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Photon Grenade Launcher is unit-level paid wargear. The builder does not track which Recon Shas'la carries unmodelled additive wargear.",
+        "comment": "LOADOUT UI: Recon Shas'la 1 chooses either Pulse Carbine or Pulse Carbine with Photon Grenade Launcher (+10 Points); Recon Shas'la 2-5 retain Pulse Carbines, and the Recon Drone retains its Recon Drone Burst Cannon. The builder records the final loadout state directly rather than a replace-then-upgrade procedure.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -5689,7 +5689,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Hunter Shas'la 3-5 are treated as the three canonical free special-weapon models and therefore present only Rail Rifle / Ion Rifle choices. Hunter Shas'la 1-2 and Hunter Shas'la 3-5 are presented together under Loadout Options. Photon Grenade Launcher remains unit-level paid wargear.",
+        "comment": "LOADOUT UI: Hunter Shas'la 1 chooses either Pulse Carbine or Pulse Carbine with Photon Grenade Launcher (+10 Points); Hunter Shas'la 2 retains a Pulse Carbine; Hunter Shas'la 3-5 are the three canonical free special-weapon models and choose one 3x Rail Rifle or 3x Ion Rifle package with no ordinary fallback.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -5986,7 +5986,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "\nREV13 PRESENTATION CLEANUP: Seeker Missile and Additional Seeker Missile are now direct optional Paid Wargear selections with independent max-1 constraints, producing a simple checkbox-style list in New Recruit. Existing missile selection IDs, +10 Point costs, and max-1 constraint IDs are preserved."
+        "comment": "PAID WARGEAR UI: this unit has two independent identically named Seeker Missile selections. Each costs +10 Points and carries its own max-1 constraint, producing two checkbox-style purchases while preserving the existing missile selection and constraint IDs."
       },
       {
         "type": "unit",
@@ -6605,7 +6605,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "\nREV13 PRESENTATION CLEANUP: Seeker Missile and Additional Seeker Missile are now direct optional Paid Wargear selections with independent max-1 constraints, producing a simple checkbox-style list in New Recruit. Existing missile selection IDs, +10 Point costs, and max-1 constraint IDs are preserved."
+        "comment": "PAID WARGEAR UI: this unit has two independent identically named Seeker Missile selections. Each costs +10 Points and carries its own max-1 constraint, producing two checkbox-style purchases while preserving the existing missile selection and constraint IDs."
       },
       {
         "type": "unit",
@@ -7743,7 +7743,7 @@
                     "value": 0
                   }
                 ],
-                "comment": "SUPPORT TURRETS COUNTER. Fixed informational selection. Its visible name is driven by the roster-wide count of the catalogue-local Counts Toward Support Turrets category. No editable quantity and no battlefield-generated Support Turrets roster unit."
+                "comment": "SUPPORT TURRETS COUNTER. Fixed informational selection whose visible name is driven by the roster-wide count of the hidden Counts Toward Support Turrets category. It has no editable quantity and does not create the battlefield-generated Support Turrets unit in the roster."
               }
             ],
             "defaultSelectionEntryId": "73cc-1d5c-1f18-61b6"
@@ -7763,7 +7763,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV15 SUPPORT TURRETS COUNTER. Automatically present Configuration entry using the same hidden-category aggregate + fixed dynamic-label architecture as Tyranids Frenzied Feeders. Counts Strike Team and Breacher Team units in the Army List only; it does not create the battlefield-generated Support Turrets unit in the roster."
+        "comment": "CURRENT SUPPORT TURRETS COUNTER. Automatically present informational Configuration. Strike Team and Breacher Team carry the hidden Counts Toward Support Turrets category; this entry reports their combined count as Support Turret Size: X Model(s). It does not create a Support Turrets roster unit because that unit is generated on the battlefield."
       }
     ],
     "categoryEntries": [
@@ -7785,7 +7785,7 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "\n\nCOMPLETE LOADOUT + VARIABLE SIZE + ADDITIONAL COPY COST PASS\nTau loadouts follow the fancy-notepad presentation: named Tau model nouns replace generic Model X labels, sergeant titles appear only where there is a distinct sergeant loadout, unmodelled grenade/additive wargear is unit-level, free specialist weapon slots omit ordinary fallback loadouts, Crisis Battlesuits use optional extra-model sizing, and all native non-Rare Other units use Additional Copy Costs.\n\nCONSTRUCTIVE ERROR MIGRATION\nT'au now use Game System revision 11. Game System revision 11 supplies current Game Size and Leader Capacity validation. Additional Copy Costs, mandatory Leader attachments, and host Leader limits use constructive player-facing errors. Existing faction semantics remain unchanged; Ethereal continues not to count toward Leader Capacity.\n\nREV4 NEW RECRUIT EXPORT COMPATIBILITY\nUpdated to Warhammer 40k Reforged Game System revision 12. All Points cost references now use New Recruit's canonical Warhammer 40,000 cost-type identifier 51b2-306e-1021-d207. No unit costs, loadouts, validation, Leader behavior, categories, or Additional Copy Costs arithmetic were otherwise changed.\n\nREV5 POLISH PASS\nStandardized player-facing loadout hierarchy by adding explicit model headers to single-model units, removing non-semantic Weapon 1 / Weapon 2 labels from the XV8 Commander and Crisis Battlesuits, flattening Kroot Carnivore and Hunter Pathfinder specialist sections into Loadout Options, renaming the Crisis optional-size group to Additional Model, and presenting XV8 Commander frame upgrades as Battlesuit Configuration rather than Paid Wargear. No points, eligibility, Leader behavior, Additional Copy Costs arithmetic, paid wargear semantics, or underlying weapon-choice logic were otherwise changed.\n\nREV6 RETROSPECTIVE POLISH PASS\nRevisited T'au against the final cross-faction presentation standard. Kroot Carnivores 1-9 now show fixed 9x Kroot Rifle and Rifle Knives as separate equipment lines. TY7 Devilfish, TX4 Piranha, and TX7 Hammerhead Gunship now label their two independent paid missile slots Seeker Missile and Additional Seeker Missile rather than implementation-facing Seeker Missile 1/2. XV88 Broadside Battlesuit now presents its fixed drones as a 2x Missile Drone model/group header with a 2x Missile Pod equipment line. Strike Team and Breacher Team use the current grammar-safe 'This unit...' host-limit error. Battlesuit Configuration, Crisis weapon-choice logic, optional-size mechanics, Pathfinder/Kroot specialist handling, additive wargear treatment, Additional Copy Costs, points, categories, Leader behavior, and all other rules semantics remain unchanged.\n\nREV7 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Strike Team and Breacher Team now use the Troop 4 / 6 / 8 normal-copy allowance; each further identical copy costs +20 Points. All 72 pre-existing Other point modifiers were moved unchanged to the Other child. No zero-point, generated, or otherwise exempt Troop unit exists in this catalogue. Kroot Carnivores remain an Other unit and therefore continue using the existing Other 1 / 2 / 3 allowance rather than the Troop allowance. All unrelated unit rules, loadouts, Leader behavior, attachments, Battlesuit Configuration, and other catalogue mechanics are unchanged.\n\nREV8 — KROOT RIFLES & KNIVES EXPORT PACKAGE\nConsolidated Kroot Carnivores 1-9 from separate '9x Kroot Rifle' and 'Rifle Knives' live selections into structural quantity 9 of one shared Kroot Rifles & Knives entry. The old Kroot Rifle selection ID is preserved as the live entryLink ID; the old Rifle Knives branch remains as a hidden, unselected legacy shell so every pre-existing ID survives. Tanglebomb Launcher and Kroot Carnivore 10 are unchanged. No points, Additional Copy Costs, categories, Leader behavior, Battlesuit logic, or unrelated unit mechanics changed.\n\nREV9 — KROOT FIXED EXPORT LABEL\nReplaced the REV8 structural quantity-9 Kroot Rifles & Knives selection with one literal '9x Kroot Rifles & Knives' fixed package because New Recruit exposes a quantity control when a radio-style choice represents multiple instances. Removed the now-unused shared Kroot Rifles & Knives object and the hidden Rifle Knives legacy shell. Kroot Carnivore 10, Tanglebomb Launcher, points, categories, Additional Copy Costs, and all unrelated mechanics are unchanged.\n\nREV10 — GS20 TROOP COPY RULE\nUpdated to Game System revision 20 and retargeted Strike Team and Breacher Team to the Additional Copy Cost - Troop short-form rule. Existing infoLink IDs, Kroot fixed-package presentation, points, categories, loadouts, and unrelated mechanics are unchanged.\n\nREV11 — T'AU 3.3.5 + STANDARD PATCH NOTES\nUpdated the catalogue title from T'au 3.3.3 to T'au 3.3.5 and added the standard automatically present Patch Notes Configuration. The army-rules section is intentionally bare; Catalogue Bugfixes (September 4th) contains 'Catalogue created.' No mechanical selections, points, loadouts, validation, copy-cost arithmetic, categories, or unrelated catalogue semantics changed.\n\nREV12 — RULES BASELINE SYNC\nUpdated the player-facing army-rules baseline from T'au 3.3.5 to T'au 3.3.6 and retargeted the catalogue from Game System revision 20 to the current Game System revision 21. No unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, validation, or other catalogue mechanics changed in this pass.\n\nREV13 — SEEKER MISSILE CHECKBOX PRESENTATION\nFlattened the two independent +10 Point Seeker Missile selections on TX7 Hammerhead Gunship, TX4 Piranha, and TY7 Devilfish from zero-width one-item subgroups into direct Paid Wargear entries. Each missile retains its stable selection ID and now carries the former subgroup's max-1 constraint directly, producing the intended checkbox-style UI while preserving independent selection of both missiles. Reset Catalogue Bugfixes to September 10th and replaced the old bugfix entries with the three current presentation-cleanup entries. No points, categories, Additional Copy Cost arithmetic, unit loadouts outside these Paid Wargear wrappers, Leader behavior, or Game System target changed.\n\nREV14 — CHECKBOX STANDARD + PATHFINDER LOADOUT REWORK\nStandardized all optional Seeker Missile purchases as direct checkbox-style Paid Wargear selections. TY7 Devilfish, TX4 Piranha, and TX7 Hammerhead Gunship now show two identically named Seeker Missile checkboxes when two may be purchased; XV88 Broadside Battlesuit now uses the same direct checkbox pattern for its single Seeker Missile. Strike Team and Breacher Team Photon Grenade options are also direct checkboxes. Recon Pathfinders were restructured to Recon Shas'la 1 with Pulse Carbine or Pulse Carbine with Photon Grenade Launcher +10, Recon Shas'la 2-5 with Pulse Carbine, and Recon Drone with Recon Drone Burst Cannon. Hunter Pathfinders were restructured to Hunter Shas'la 1 with Pulse Carbine or Pulse Carbine with Photon Grenade Launcher +10, Hunter Shas'la 2 with Pulse Carbine, and Hunter Shas'la 3-5 choosing 3x Rail Rifle or 3x Ion Rifle. XV8 Battlesuit Commander XV86 Coldstar / XV85 Enforcer remains mutually exclusive and unchanged. Existing stable IDs were preserved wherever the old semantic selection maps directly to the new presentation; new semantic nodes use deterministic SHA256-derived IDs. Additional Copy Costs, root points, categories, Leader behavior, Game System target, TX78 Skyray fixed Seeker Missiles 1-6 loadout, and unrelated mechanics are unchanged.\n\nREV15 — SUPPORT TURRETS MODEL COUNTER\nAdded an automatically present Support Turrets Configuration counter using the proven hidden-category aggregate + dynamic fixed-label architecture from the Tyranids Frenzied Feeders counter. Strike Team and Breacher Team now carry a hidden Counts Toward Support Turrets category. The visible informational result reads Support Turret Size: X Model(s), where X equals the number of Strike Team and Breacher Team units in the roster. No editable quantity and no Support Turrets roster unit are created because the unit is generated after initiative in battle round 1. Added the change to Catalogue Bugfixes (September 10th). No points, loadouts, categories other than the new hidden semantic counter tag, Additional Copy Cost arithmetic, Commander configuration, Game System target, or unrelated mechanics changed.\n\nREV16 — ADDITIONAL MODEL CHECKBOX\nConverted the catalogue's only optional Additional Model slot, Crisis Shas'ui 3, to a direct checkbox-style model selection by moving the existing group-level max-1 constraint onto the existing model entry. Stable IDs, model type, 50 Point cost, nested Crisis loadout groups, rules, modifiers, and categories are unchanged. The cumulative Catalogue Bugfixes history was retained, its heading updated to September 11th, and the new cleanup bullet appended. Existing Seeker Missile checkbox presentation, Pathfinder rework, Photon Grenade checkboxes, Support Turret counter, Additional Copy Costs, GS21 target, root points, and unrelated mechanics are unchanged.",
+    "comment": "CURRENT STATE (REV17 / GS21)\nT'au 3.3.6 targets Game System revision 21. XV8 Battlesuit Commander and Cadre Fireblade count toward the normal Leader maximum; Ethereal is intentionally displayed as a Leader but does not count toward Leader Capacity. Strike Team and Breacher Team use the 4 / 6 / 8 Troop Additional Copy Cost allowance. Twelve native Other copy families use the 1 / 2 / 3 allowance. XV8 Crisis Battlesuits use a two-model root plus optional Crisis Shas'ui 3 checkbox. Optional Seeker Missiles use direct checkbox-style Paid Wargear selections. Recon and Hunter Pathfinders record final model/loadout choices directly. Support Turrets is an informational derived counter only.\n\nAUTHORING / RUNTIME NOTES\n- Ethereal's missing Counts Toward Leader Maximum category is intentional; do not add it unless the source semantics change.\n- Named T'au model roles are preferred over generic Model X labels. Sergeant titles appear only when a distinct sergeant loadout exists.\n- Free specialist weapon models omit ordinary fallback loadouts when the specialist identity is the meaningful final choice.\n- Additive unmodelled wargear may be represented at unit level when model identity is irrelevant; Pathfinder Photon Grenade Launchers are instead inline Shas'la 1 final-state weapon choices.\n- Drones may be represented as internal model/loadout components rather than independent roster units where that matches the list-building decision.\n- XV8 Commander Coldstar / Enforcer options are mutually exclusive Battlesuit Configuration choices, not generic Paid Wargear.\n- Kroot Carnivores 1-9 use a literal 9x Kroot Rifles & Knives package because New Recruit exposes an unwanted quantity control for structural quantity nine.\n- Support Turrets counts Strike Team and Breacher Team units through a hidden semantic category and reports a fixed informational label; it never creates the battlefield-generated unit in the roster.\n- Source-derived rules[].description text is verbatim rules authority and is not editorialized during catalogue maintenance.\n\nREVISION HISTORY\nREV4 — New Recruit export compatibility: moved all Points references to canonical cost type 51b2-306e-1021-d207 and targeted GS12.\nREV5 — Polish pass: standardized loadout hierarchy, removed non-semantic Weapon 1 / Weapon 2 labels, introduced Battlesuit Configuration presentation, and normalized specialist sections.\nREV6 — Retrospective polish: refined Kroot, Seeker Missile, Broadside drone, and constructive host-limit presentation.\nREV7 — GS17 Troop copy costs: introduced Troops/Other Additional Copy Cost children; Strike Team and Breacher Team adopted 4 / 6 / 8 while Other retained 1 / 2 / 3.\nREV8 — Kroot export experiment: attempted a structural quantity-9 Kroot Rifles & Knives package while preserving old IDs.\nREV9 — Kroot fixed export label: replaced that quantity structure with the current literal 9x Kroot Rifles & Knives package to avoid New Recruit's quantity control.\nREV10 — GS20 Troop copy rule: retargeted Strike Team and Breacher Team to the short-form Troop Additional Copy Cost rule.\nREV11 — T'au 3.3.5 + standard Patch Notes Configuration.\nREV12 — Rules baseline sync: updated to T'au 3.3.6 and Game System revision 21.\nREV13 — Seeker Missile checkbox presentation. Historical note: the Catalogue Bugfixes section was reset at this revision; current maintenance policy treats the retained later list as cumulative from that baseline onward.\nREV14 — Checkbox standard + Pathfinder rework: identical Seeker Missile checkboxes, Strike/Breacher Photon Grenade checkboxes, and final-state Recon/Hunter Pathfinder loadouts.\nREV15 — Added the informational Support Turrets model counter.\nREV16 — Converted Crisis Shas'ui 3 to the proven checkbox-style Additional Model structure.\nREV17 — Comment/documentation consolidation. Corrected stale Pathfinder and Seeker Missile comments, made Additional Copy Costs and Support Turrets notes self-contained, and updated Catalogue Bugfixes to September 12th. No list-construction mechanics changed.",
     "sharedSelectionEntries": []
   }
 }
