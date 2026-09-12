@@ -5,7 +5,7 @@
     "name": "Space Marines 3.3.7",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 17,
+    "revision": 18,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -29,7 +29,7 @@
             "name": "⚠️ CATALOGUE UNDER CONSTRUCTION ⚠️",
             "id": "4fae-07c4-a165-5a51",
             "hidden": false,
-            "description": "# ⚠️ SPACE MARINES CATALOGUE UNDER CONSTRUCTION ⚠️\n\n## Current rules version: 3.3.7\n\n**This catalogue is still under active construction and is not yet a complete representation of the Space Marines army rules.**\n\nSome units, loadouts, restrictions, or options may be missing, incomplete, or still awaiting implementation.\n\n**The Space Marines army rules PDF remains authoritative. If the listbuilder and the army rules disagree, follow the army rules PDF.**\n\n*For the current rules, development status, and to report catalogue problems, visit the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 11th)\n\n• Converted standalone optional Cyclone Missile Launcher, Venerable, Advanced Jamming Beacon, Smoke Launchers, Whirlwind Storm Bolter, Armour Piercing High Explosive Shells, Hunter-Killer Missile, Dozer Blade, Combat Shield, Haywire Mine, Jump Packs, Storm Shield, and Trapmaster Melta Bomb options to checkbox-style selections.\n• Sanguinary Guard: Sanguinary Banner now uses a checkbox-style Unit Upgrade selection.\n• Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans now show a concise temporary Coming Soon message directing players to the Space Marines PDF in the Reforged Discord.",
+            "description": "# ⚠️ SPACE MARINES CATALOGUE UNDER CONSTRUCTION ⚠️\n\n## Current rules version: 3.3.7\n\n**This catalogue is still under active construction and is not yet a complete representation of the Space Marines army rules.**\n\nSome units, loadouts, restrictions, or options may be missing, incomplete, or still awaiting implementation.\n\n**The Space Marines army rules PDF remains authoritative. If the listbuilder and the army rules disagree, follow the army rules PDF.**\n\n*For the current rules, development status, and to report catalogue problems, visit the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 11th)\n\n• Converted standalone optional Cyclone Missile Launcher, Venerable, Advanced Jamming Beacon, Smoke Launchers, Whirlwind Storm Bolter, Armour Piercing High Explosive Shells, Hunter-Killer Missile, Dozer Blade, Combat Shield, Haywire Mine, Jump Packs, Storm Shield, and Trapmaster Melta Bomb options to checkbox-style selections.\n• Sanguinary Guard: Sanguinary Banner now uses a checkbox-style Unit Upgrade selection.\n• Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans now show a concise temporary Coming Soon message directing players to the Space Marines PDF in the Reforged Discord.\n• Victrix Guard, Victrix Honour Guard, Sanguinary Guard, Sternguard Veterans, Bladeguard Veterans, Devastator Centurions, and Assault Centurions: optional additional models now use checkbox-style Additional Model selections.",
             "noindex": false
           }
         ],
@@ -47,7 +47,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV11: Automatically present construction-status notice used instead of the normal Patch Notes template while the Space Marines catalogue remains incomplete.\nREV17: added September 11th Catalogue Bugfixes for checkbox-style optional upgrades, Sanguinary Banner Unit Upgrade presentation, and concise placeholder messages for the four unfinished units."
+        "comment": "REV11: Automatically present construction-status notice used instead of the normal Patch Notes template while the Space Marines catalogue remains incomplete.\nREV17: added September 11th Catalogue Bugfixes for checkbox-style optional upgrades, Sanguinary Banner Unit Upgrade presentation, and concise placeholder messages for the four unfinished units.\nREV18: appended checkbox-style Additional Model cleanup for all seven eligible Space Marine units."
       },
       {
         "type": "upgrade",
@@ -12586,17 +12586,6 @@
             "id": "13ec-ef5c-51f4-9811",
             "hidden": false,
             "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "d7ae-c712-9f1e-8615",
-                "includeChildSelections": false
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -12651,7 +12640,18 @@
                     "defaultSelectionEntryId": "4028-3e1d-62cf-f7e9"
                   }
                 ],
-                "comment": "Space Marines 3.3.7: optional third Victrix Guard. The source cost is 50 Points per model; the two-model root is 100 Points and this child carries the additional 50."
+                "comment": "Space Marines 3.3.7: optional third Victrix Guard. The source cost is 50 Points per model; the two-model root is 100 Points and this child carries the additional 50.",
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "d7ae-c712-9f1e-8615",
+                    "includeChildSelections": false
+                  }
+                ]
               }
             ]
           }
@@ -12873,17 +12873,6 @@
             "id": "6ea8-1f32-4f29-45fa",
             "hidden": false,
             "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "3ffc-5311-e8fb-ff85",
-                "includeChildSelections": false
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -12938,7 +12927,18 @@
                     "defaultSelectionEntryId": "d9cc-0f6b-8012-8dc7"
                   }
                 ],
-                "comment": "Space Marines 3.3.7: optional third Victrix Honour Guard. The source cost is 50 Points per model; the two-model root is 100 Points and this child carries the additional 50."
+                "comment": "Space Marines 3.3.7: optional third Victrix Honour Guard. The source cost is 50 Points per model; the two-model root is 100 Points and this child carries the additional 50.",
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "3ffc-5311-e8fb-ff85",
+                    "includeChildSelections": false
+                  }
+                ]
               }
             ]
           }
@@ -13236,17 +13236,6 @@
             "id": "2f4a-d6f2-3d6f-bc45",
             "hidden": false,
             "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "7dbb-c2a9-469f-527b",
-                "includeChildSelections": false
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -13317,7 +13306,18 @@
                     "defaultSelectionEntryId": "bf69-0e7b-c4ca-4ace"
                   }
                 ],
-                "comment": "REV5: optional third Sanguinary Guard. The unit's source cost is 50 Points per model; the two-model root therefore remains 100 Points and this child carries the additional 50."
+                "comment": "REV5: optional third Sanguinary Guard. The unit's source cost is 50 Points per model; the two-model root therefore remains 100 Points and this child carries the additional 50.",
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "7dbb-c2a9-469f-527b",
+                    "includeChildSelections": false
+                  }
+                ]
               }
             ]
           },
@@ -26605,17 +26605,6 @@
             "id": "fd96-28fa-5c83-b50d",
             "hidden": false,
             "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "8bb5-5a8f-38e3-0630",
-                "includeChildSelections": false
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -26729,6 +26718,17 @@
                       }
                     ],
                     "defaultSelectionEntryId": "dc52-2a99-aaf3-4d85"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "8bb5-5a8f-38e3-0630",
+                    "includeChildSelections": false
                   }
                 ]
               }
@@ -26990,17 +26990,6 @@
             "id": "4697-b502-2ff0-7365",
             "hidden": false,
             "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "6aba-e208-4122-c8bc",
-                "includeChildSelections": false
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -27106,6 +27095,17 @@
                       }
                     ],
                     "defaultSelectionEntryId": "7c20-b509-d7c3-92ca"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "6aba-e208-4122-c8bc",
+                    "includeChildSelections": false
                   }
                 ]
               }
@@ -29638,17 +29638,6 @@
             "id": "bf55-5b09-bb61-22f2",
             "hidden": false,
             "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "d30a-e37f-0bb3-88cb",
-                "includeChildSelections": false
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -29762,6 +29751,17 @@
                       }
                     ],
                     "defaultSelectionEntryId": "0b83-5fc9-ab4e-1652"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "d30a-e37f-0bb3-88cb",
+                    "includeChildSelections": false
                   }
                 ]
               }
@@ -29962,17 +29962,6 @@
             "id": "7d7e-81f2-1402-d35f",
             "hidden": false,
             "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "ddb9-1aaf-6388-0279",
-                "includeChildSelections": false
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -30115,6 +30104,17 @@
                       }
                     ],
                     "defaultSelectionEntryId": "f477-9dca-9dd6-3ca9"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "ddb9-1aaf-6388-0279",
+                    "includeChildSelections": false
                   }
                 ]
               }
@@ -32821,7 +32821,7 @@
     ],
     "authorName": "Varmint",
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
-    "comment": "SPACE MARINES REV1 / GS18 — VEHICLE SCAFFOLD ONLY.\nThis catalogue is intentionally incomplete. It exists to establish the Space Marine Chapter selector, Chapter presentation semantics, Space Marines Vehicles presentation, stable vehicle unit IDs, source points/type/class metadata, and Additional Copy Costs infrastructure before any vehicle loadouts or rules are implemented. No Infantry, Leader, Troop, chapter-exclusive non-vehicle unit, weapon choice, paid wargear, unit rule, attachment rule, relic, psychic power, or other gameplay payload is implemented in this revision. The army rules PDF remains authoritative.\n\nREV2 — MANUFACTORUM-READY VEHICLE SCAFFOLD\nAligned native vehicle presentation with the established Astra Militarum / Manufactorum bridge pattern. All eleven native Space Marine vehicle shells now present under Other while retaining their existing Space Marines Vehicles category links as non-primary compatibility tags. The ten chapter-independent vehicle shells are mirrored into Manufactorum Imperium V6 using the same unit IDs. Baal Predator remains local to Space Marines / Blood Angels and is not exported through Manufactorum.\n\nREV3 — SPACE MARINES 3.3.6 / GS20 COMPLETE EMPTY UNIT SHELLS\nExpanded the catalogue from the eleven-vehicle scaffold to all 71 unit roots in source skeleton order while preserving the existing catalogue ID, Chapter Configuration IDs, Additional Copy Costs Configuration IDs, and all eleven established vehicle IDs / Space Marines Vehicles bridge tags. Updated to Game System revision 20.\nThis phase intentionally implements only unit-level list-building structure: Points, Leader/Troop/Other, Infantry/Vehicle, counted unit-type semantics, Chapter gating, base Leader attachment relationships, host one-Leader capacity, and GS20 Troop/Other Additional Copy Costs. No internal loadouts, model cards, paid wargear, unit rules/profiles, or Additional Model controls are implemented.\nASSAULT INTERCESSORS ATTACHMENT NOTE: the source skeleton's Jump Packs option contains the only attachment_override in the army. The 3.3.6 PDF confirms the distinction explicitly: normal Captain/Librarian/Lieutenant attach to Assault Intercessors without Fly, while Jump Pack Captain/Librarian/Lieutenant/Chaplain attach to Assault Intercessors with Fly. Base Assault Intercessors therefore use the normal-Leader host state in REV3; the Jump Pack Leader host state will be added when the deferred Jump Packs loadout is implemented.\n\nREV4 — CHAPTER-FIRST ARMY LIST PRESENTATION\nApplied the established Chaos Space Marines Legion presentation pattern to Space Marine Chapters. All 15 chapter-exclusive units now use Ultramarines, Blood Angels, Space Wolves, or Salamanders as their primary Army List presentation category. Their source Leader/Troop/Other role remains as a secondary semantic category, together with Infantry/Vehicle, Leader Capacity, Additional Copy Cost, attachment, and other existing tags. No unit IDs, category-link IDs, points, Chapter gating, Additional Copy Cost arithmetic, attachments, or other mechanics changed. Existing sort indices already place all chapter-specific units at 1-15 and generic Leaders from 16 onward, so the selected Chapter category appears above the standard Leader category.\n\nREV5 — BLOOD ANGELS LOADOUT BATCH 1\nImplemented player-facing loadouts for Sanguinary Guard, Sanguinary Priest, Death Company Assault Intercessors, Jump Pack Assault Death Company, Death Company Intercessors, and Baal Predator. Sanguinary Guard uses separate model cards, one optional +50 Point third model, and Sanguinary Banner Paid Wargear. Sanguinary Priest has its fixed weapon package and +10 Point Jump Pack. The two assault Death Company units use the approved three-card compressed layout; Death Company Intercessors use one veteran weapon card plus fixed models 2 and 3-5. Baal Predator keeps paid Sponson Weapons inside Loadout Options with (None) default; Dozer Blade remains Paid Wargear. No other unit roots, categories, Chapter presentation, attachments, Additional Copy Costs, points outside these loadouts, or existing stable IDs were changed.\n\nREV6 — SPACE WOLVES LOADOUT BATCH\nImplemented Wolf Guard Battle Leader, Blood Claws, Grey Hunters, Wolf Guard Terminators, and Wolf Scouts using the approved compact final-state presentations. Wolf Guard Terminators expose identical per-model final-state choices while constructive semantic validators preserve the source max-one special-melee and max-one Assault Cannon limits. Wolf Scouts use named role cards, including a checklist-style Melta Bomb upgrade on Trapmaster. Thunderwolf Cavalry remains intentionally unimplemented and now uses the same mandatory content-message pattern as Adepta Sororitas Sisters Novitiates, adapted to Space Marines. No other unit roots, Chapter presentation, attachments, Additional Copy Costs, points, or existing stable IDs were changed.\n\nREV7 — THUNDERWOLF CAVALRY PERMISSIVE-CORRECTIVE LOADOUT\nReplaced the Thunderwolf Cavalry placeholder with three clean model cards and enforced its cross-model equipment caps through constructive semantic errors rather than cross-hiding. Storm Shields may be selected independently by all three models for +10 each. Melee Power Fist, Great Axe/Thunder Hammer, Plasma Pistol, and sidearm Power Fist each retain their source max-one unit limits. Also standardized the Wolf Guard Terminator special-melee error repair instruction to 'Choose a different loadout for one of those models.' No other unit mechanics, categories, Chapter presentation, attachments, points, or Additional Copy Costs were changed.\n\nREV8 — RAPID-FIRE LOADOUT BATCH\nImplemented the 44 approved simple Space Marine unit loadouts from Pyroclasts through Astartes Basilisk. Presentation uses melee-first ordering where practical, explicit specialist/model cards where requested, atomic final-state packages, single-step Additional Model groups for the variable-size 2/3-model and 1/2-model units, and checklist-style direct Paid Wargear. Assault Intercessors now implement +20 Jump Packs with exact permissive-corrective attachment-state validation: normal Leaders are legal only without Jump Packs, while Jump Pack Captain/Librarian/Lieutenant/Chaplain are legal only with Jump Packs. The Sergeant melee dependency is also enforced constructively. Wolf Scouts Pack Leader was renamed to include its unit name while preserving its existing ID. Existing unit IDs, Chapter-first presentation, Additional Copy Costs, points outside newly represented wargear/additional-model choices, prior Blood Angels/Space Wolves loadouts, and unrelated mechanics remain unchanged.\n\nREV9 — GS21 CHAPTER CATEGORY ORDER\nRetargeted to Game System revision 21. GS21 moves the four Chapter presentation categories above Leader in Army section ordering. No Space Marine unit IDs, loadouts, categories, points, attachments, Additional Copy Costs, or other catalogue mechanics changed.\n\nREV10 — LOADOUT CORRECTION BATCH\nApplied focused presentation and role corrections to Pyroclasts, Astartes Basilisk, Predator, Scout Infiltrators, Scout Skirmishers, Techmarine, Aggressors, Inceptors, Sternguard Veterans, Devastators, Reivers, and Melta Eradicators; implemented Hellblasters; removed Eliminators from the playable catalogue. Eliminators were also removed from Other Additional Copy Cost arithmetic and from the constructive Phobos Leader attachment text. Existing surviving IDs are preserved where the same player-facing decision survives.\n\nREV11 — SPACE MARINES 3.3.7\nMelta Eradicators and Heavy Bolter Eradicators changed from 120 to 110 Points. Added an automatically present under-construction notice instead of the normal Patch Notes template. Game System remains revision 21. No other catalogue mechanics changed.\n\nREV12 — VICTRIX REWORK + FLY ATTACHMENT AUDIT\nAdded the new Victrix Guard and fully implemented the reworked Victrix Honour Guard from Space Marines 3.3.7. Both are 2-3 model Ultramarines Other units at 50 Points per model with an explicit +50 Additional Model. Victrix Guard carries Bolt Carbine, Power Weapon & Ultima Storm Shield; Victrix Honour Guard carries Bolt Carbine & Power Weapon. Both use the existing Captain/Librarian/Lieutenant/Chaplain host semantics. Added Victrix Guard as a new independent Other Additional Copy Cost family. Audited Assault Intercessor Fly-dependent Leader attachments against the current PDF: preserved all eight normal-vs-Jump-Pack Leader state validators because the new Unit Skeleton omits those qualifiers, and removed the stale Wolf Guard Battle Leader Fly restriction because the current PDF does not state one. The catalogue remains Space Marines 3.3.7 on Game System revision 21 and retains the under-construction notice.\n\nREV13 — TROOP LOADOUT BATCH + DEATH COMPANY / BAAL CLEANUP\nCorrected Death Company Intercessor 1 to the 3.3.7 conditional Bolt Rifle replacement structure. Suppressed the redundant Baal Predator Sponson Weapons header. Implemented complete player-facing loadout trees for Tactical Squad, Intercessors, and Heavy Intercessors using direct model-role presentation rather than procedural replacement wording. All source point costs are represented visibly: Tactical combi packages +10, Heavy Intercessor Hellstorm/Executor rifle upgrades +10 each, and Heavy Weapons Specialist Hellstorm/Executor Heavy Bolter upgrades +10. No root points, categories, attachments, Additional Copy Cost arithmetic, Fly-state validation, Victrix work, or unrelated mechanics changed.\n\nREV14 — VEHICLE LOADOUT BATCH\nImplemented complete listbuilder loadouts for Whirlwind, Vindicator, Land Speeder, Dreadnought, Contemptor Dreadnought, and Leviathan Dreadnought from the Space Marines 3.3.7 source. Player-facing architecture intentionally follows established CSM vehicle conventions where equivalent: anonymous weapon pools instead of physical arm labels, atomic fist + auxiliary packages, Venerable as a Unit Upgrade, and independent repeated selectors for 'any two' / 'four of any' source wording. No root points, categories, Additional Copy Cost arithmetic, attachment logic, Fly-state validation, Victrix work, Troop loadouts, or unrelated catalogue mechanics changed. The six stable vehicle roots are synchronized into Manufactorum Imperium Library V8 in the same pass.\n\nREV15 — CATALOGUE CORRECTION BATCH\nAdded the Vindicator's fixed Siege Shield; corrected Astartes Basilisk Paid Wargear so Smoke Launchers and Armour Piercing High Explosive Shells may be selected together; replaced Predator and Land Raider literal '(None)' options with genuinely optional selectors; removed Boltgun from the Scout Infiltrator Heavy Weapons Specialist; and split Techmarine Omnissian Axe & Servo-Arm into separate fixed equipment lines. No root points, categories, attachment logic, Additional Copy Cost arithmetic, Fly-state validation, chapter gating, or unrelated loadouts changed. The four affected shared vehicle roots are synchronized into Manufactorum Imperium Library V9.\n\nREV16 — ELIMINATORS RESTORED / PERMISSIVE-CORRECTIVE LOADOUT\nRestored Eliminators using their original stable root ID 17c7-9184-1413-efff. All three models now expose the same five loadout choices, with +10 Point Bolt Carbine & Covering Fire and +10 Point Las Fusil. Four catalogue-local hidden semantic categories and constructive errors enforce the source one-model caps for Hyperfrag, Executioner, Mortis Bolts, and Bolt Carbine & Covering Fire. Restored Eliminators as an eligible Phobos Captain / Librarian / Lieutenant attachment host and restored its six-modifier Other Additional Copy Cost family. No Game System change or unrelated mechanics changed.\n\nREV17 — CHECKBOX + PLACEHOLDER CLEANUP\nFlattened standalone optional one-item wrappers into direct checkbox-style selections for Cyclone Missile Launcher, Venerable, Advanced Jamming Beacon, Smoke Launchers, Whirlwind Storm Bolter, Armour Piercing High Explosive Shells, Hunter-Killer Missile, Dozer Blade, Combat Shield, Haywire Mine, Jump Packs, Storm Shield, and Wolf Scouts Trapmaster Melta Bomb. Only genuinely independent binary options were flattened: Land Speeder missile choices, Land Raider pintle choices, Predator/Baal weapon packages, Thunderwolf Storm Shields, Wolf Guard Storm Shields, and other mutually exclusive loadout choices remain radio-style selectors. Baal Predator Dozer Blade was converted by moving its existing Paid Wargear max1 constraint directly onto the existing selection. Sanguinary Banner was moved from Paid Wargear to Unit Upgrade and given the same direct checkbox treatment. Added a concise Coming Soon rule to Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans pointing players to the authoritative Space Marines PDF in the Reforged Discord. Root points, loadout legality, attachment rules, Eliminator permissive-corrective validation, Additional Copy Costs, GS21 target, and unrelated mechanics are unchanged.",
+    "comment": "SPACE MARINES REV1 / GS18 — VEHICLE SCAFFOLD ONLY.\nThis catalogue is intentionally incomplete. It exists to establish the Space Marine Chapter selector, Chapter presentation semantics, Space Marines Vehicles presentation, stable vehicle unit IDs, source points/type/class metadata, and Additional Copy Costs infrastructure before any vehicle loadouts or rules are implemented. No Infantry, Leader, Troop, chapter-exclusive non-vehicle unit, weapon choice, paid wargear, unit rule, attachment rule, relic, psychic power, or other gameplay payload is implemented in this revision. The army rules PDF remains authoritative.\n\nREV2 — MANUFACTORUM-READY VEHICLE SCAFFOLD\nAligned native vehicle presentation with the established Astra Militarum / Manufactorum bridge pattern. All eleven native Space Marine vehicle shells now present under Other while retaining their existing Space Marines Vehicles category links as non-primary compatibility tags. The ten chapter-independent vehicle shells are mirrored into Manufactorum Imperium V6 using the same unit IDs. Baal Predator remains local to Space Marines / Blood Angels and is not exported through Manufactorum.\n\nREV3 — SPACE MARINES 3.3.6 / GS20 COMPLETE EMPTY UNIT SHELLS\nExpanded the catalogue from the eleven-vehicle scaffold to all 71 unit roots in source skeleton order while preserving the existing catalogue ID, Chapter Configuration IDs, Additional Copy Costs Configuration IDs, and all eleven established vehicle IDs / Space Marines Vehicles bridge tags. Updated to Game System revision 20.\nThis phase intentionally implements only unit-level list-building structure: Points, Leader/Troop/Other, Infantry/Vehicle, counted unit-type semantics, Chapter gating, base Leader attachment relationships, host one-Leader capacity, and GS20 Troop/Other Additional Copy Costs. No internal loadouts, model cards, paid wargear, unit rules/profiles, or Additional Model controls are implemented.\nASSAULT INTERCESSORS ATTACHMENT NOTE: the source skeleton's Jump Packs option contains the only attachment_override in the army. The 3.3.6 PDF confirms the distinction explicitly: normal Captain/Librarian/Lieutenant attach to Assault Intercessors without Fly, while Jump Pack Captain/Librarian/Lieutenant/Chaplain attach to Assault Intercessors with Fly. Base Assault Intercessors therefore use the normal-Leader host state in REV3; the Jump Pack Leader host state will be added when the deferred Jump Packs loadout is implemented.\n\nREV4 — CHAPTER-FIRST ARMY LIST PRESENTATION\nApplied the established Chaos Space Marines Legion presentation pattern to Space Marine Chapters. All 15 chapter-exclusive units now use Ultramarines, Blood Angels, Space Wolves, or Salamanders as their primary Army List presentation category. Their source Leader/Troop/Other role remains as a secondary semantic category, together with Infantry/Vehicle, Leader Capacity, Additional Copy Cost, attachment, and other existing tags. No unit IDs, category-link IDs, points, Chapter gating, Additional Copy Cost arithmetic, attachments, or other mechanics changed. Existing sort indices already place all chapter-specific units at 1-15 and generic Leaders from 16 onward, so the selected Chapter category appears above the standard Leader category.\n\nREV5 — BLOOD ANGELS LOADOUT BATCH 1\nImplemented player-facing loadouts for Sanguinary Guard, Sanguinary Priest, Death Company Assault Intercessors, Jump Pack Assault Death Company, Death Company Intercessors, and Baal Predator. Sanguinary Guard uses separate model cards, one optional +50 Point third model, and Sanguinary Banner Paid Wargear. Sanguinary Priest has its fixed weapon package and +10 Point Jump Pack. The two assault Death Company units use the approved three-card compressed layout; Death Company Intercessors use one veteran weapon card plus fixed models 2 and 3-5. Baal Predator keeps paid Sponson Weapons inside Loadout Options with (None) default; Dozer Blade remains Paid Wargear. No other unit roots, categories, Chapter presentation, attachments, Additional Copy Costs, points outside these loadouts, or existing stable IDs were changed.\n\nREV6 — SPACE WOLVES LOADOUT BATCH\nImplemented Wolf Guard Battle Leader, Blood Claws, Grey Hunters, Wolf Guard Terminators, and Wolf Scouts using the approved compact final-state presentations. Wolf Guard Terminators expose identical per-model final-state choices while constructive semantic validators preserve the source max-one special-melee and max-one Assault Cannon limits. Wolf Scouts use named role cards, including a checklist-style Melta Bomb upgrade on Trapmaster. Thunderwolf Cavalry remains intentionally unimplemented and now uses the same mandatory content-message pattern as Adepta Sororitas Sisters Novitiates, adapted to Space Marines. No other unit roots, Chapter presentation, attachments, Additional Copy Costs, points, or existing stable IDs were changed.\n\nREV7 — THUNDERWOLF CAVALRY PERMISSIVE-CORRECTIVE LOADOUT\nReplaced the Thunderwolf Cavalry placeholder with three clean model cards and enforced its cross-model equipment caps through constructive semantic errors rather than cross-hiding. Storm Shields may be selected independently by all three models for +10 each. Melee Power Fist, Great Axe/Thunder Hammer, Plasma Pistol, and sidearm Power Fist each retain their source max-one unit limits. Also standardized the Wolf Guard Terminator special-melee error repair instruction to 'Choose a different loadout for one of those models.' No other unit mechanics, categories, Chapter presentation, attachments, points, or Additional Copy Costs were changed.\n\nREV8 — RAPID-FIRE LOADOUT BATCH\nImplemented the 44 approved simple Space Marine unit loadouts from Pyroclasts through Astartes Basilisk. Presentation uses melee-first ordering where practical, explicit specialist/model cards where requested, atomic final-state packages, single-step Additional Model groups for the variable-size 2/3-model and 1/2-model units, and checklist-style direct Paid Wargear. Assault Intercessors now implement +20 Jump Packs with exact permissive-corrective attachment-state validation: normal Leaders are legal only without Jump Packs, while Jump Pack Captain/Librarian/Lieutenant/Chaplain are legal only with Jump Packs. The Sergeant melee dependency is also enforced constructively. Wolf Scouts Pack Leader was renamed to include its unit name while preserving its existing ID. Existing unit IDs, Chapter-first presentation, Additional Copy Costs, points outside newly represented wargear/additional-model choices, prior Blood Angels/Space Wolves loadouts, and unrelated mechanics remain unchanged.\n\nREV9 — GS21 CHAPTER CATEGORY ORDER\nRetargeted to Game System revision 21. GS21 moves the four Chapter presentation categories above Leader in Army section ordering. No Space Marine unit IDs, loadouts, categories, points, attachments, Additional Copy Costs, or other catalogue mechanics changed.\n\nREV10 — LOADOUT CORRECTION BATCH\nApplied focused presentation and role corrections to Pyroclasts, Astartes Basilisk, Predator, Scout Infiltrators, Scout Skirmishers, Techmarine, Aggressors, Inceptors, Sternguard Veterans, Devastators, Reivers, and Melta Eradicators; implemented Hellblasters; removed Eliminators from the playable catalogue. Eliminators were also removed from Other Additional Copy Cost arithmetic and from the constructive Phobos Leader attachment text. Existing surviving IDs are preserved where the same player-facing decision survives.\n\nREV11 — SPACE MARINES 3.3.7\nMelta Eradicators and Heavy Bolter Eradicators changed from 120 to 110 Points. Added an automatically present under-construction notice instead of the normal Patch Notes template. Game System remains revision 21. No other catalogue mechanics changed.\n\nREV12 — VICTRIX REWORK + FLY ATTACHMENT AUDIT\nAdded the new Victrix Guard and fully implemented the reworked Victrix Honour Guard from Space Marines 3.3.7. Both are 2-3 model Ultramarines Other units at 50 Points per model with an explicit +50 Additional Model. Victrix Guard carries Bolt Carbine, Power Weapon & Ultima Storm Shield; Victrix Honour Guard carries Bolt Carbine & Power Weapon. Both use the existing Captain/Librarian/Lieutenant/Chaplain host semantics. Added Victrix Guard as a new independent Other Additional Copy Cost family. Audited Assault Intercessor Fly-dependent Leader attachments against the current PDF: preserved all eight normal-vs-Jump-Pack Leader state validators because the new Unit Skeleton omits those qualifiers, and removed the stale Wolf Guard Battle Leader Fly restriction because the current PDF does not state one. The catalogue remains Space Marines 3.3.7 on Game System revision 21 and retains the under-construction notice.\n\nREV13 — TROOP LOADOUT BATCH + DEATH COMPANY / BAAL CLEANUP\nCorrected Death Company Intercessor 1 to the 3.3.7 conditional Bolt Rifle replacement structure. Suppressed the redundant Baal Predator Sponson Weapons header. Implemented complete player-facing loadout trees for Tactical Squad, Intercessors, and Heavy Intercessors using direct model-role presentation rather than procedural replacement wording. All source point costs are represented visibly: Tactical combi packages +10, Heavy Intercessor Hellstorm/Executor rifle upgrades +10 each, and Heavy Weapons Specialist Hellstorm/Executor Heavy Bolter upgrades +10. No root points, categories, attachments, Additional Copy Cost arithmetic, Fly-state validation, Victrix work, or unrelated mechanics changed.\n\nREV14 — VEHICLE LOADOUT BATCH\nImplemented complete listbuilder loadouts for Whirlwind, Vindicator, Land Speeder, Dreadnought, Contemptor Dreadnought, and Leviathan Dreadnought from the Space Marines 3.3.7 source. Player-facing architecture intentionally follows established CSM vehicle conventions where equivalent: anonymous weapon pools instead of physical arm labels, atomic fist + auxiliary packages, Venerable as a Unit Upgrade, and independent repeated selectors for 'any two' / 'four of any' source wording. No root points, categories, Additional Copy Cost arithmetic, attachment logic, Fly-state validation, Victrix work, Troop loadouts, or unrelated catalogue mechanics changed. The six stable vehicle roots are synchronized into Manufactorum Imperium Library V8 in the same pass.\n\nREV15 — CATALOGUE CORRECTION BATCH\nAdded the Vindicator's fixed Siege Shield; corrected Astartes Basilisk Paid Wargear so Smoke Launchers and Armour Piercing High Explosive Shells may be selected together; replaced Predator and Land Raider literal '(None)' options with genuinely optional selectors; removed Boltgun from the Scout Infiltrator Heavy Weapons Specialist; and split Techmarine Omnissian Axe & Servo-Arm into separate fixed equipment lines. No root points, categories, attachment logic, Additional Copy Cost arithmetic, Fly-state validation, chapter gating, or unrelated loadouts changed. The four affected shared vehicle roots are synchronized into Manufactorum Imperium Library V9.\n\nREV16 — ELIMINATORS RESTORED / PERMISSIVE-CORRECTIVE LOADOUT\nRestored Eliminators using their original stable root ID 17c7-9184-1413-efff. All three models now expose the same five loadout choices, with +10 Point Bolt Carbine & Covering Fire and +10 Point Las Fusil. Four catalogue-local hidden semantic categories and constructive errors enforce the source one-model caps for Hyperfrag, Executioner, Mortis Bolts, and Bolt Carbine & Covering Fire. Restored Eliminators as an eligible Phobos Captain / Librarian / Lieutenant attachment host and restored its six-modifier Other Additional Copy Cost family. No Game System change or unrelated mechanics changed.\n\nREV17 — CHECKBOX + PLACEHOLDER CLEANUP\nFlattened standalone optional one-item wrappers into direct checkbox-style selections for Cyclone Missile Launcher, Venerable, Advanced Jamming Beacon, Smoke Launchers, Whirlwind Storm Bolter, Armour Piercing High Explosive Shells, Hunter-Killer Missile, Dozer Blade, Combat Shield, Haywire Mine, Jump Packs, Storm Shield, and Wolf Scouts Trapmaster Melta Bomb. Only genuinely independent binary options were flattened: Land Speeder missile choices, Land Raider pintle choices, Predator/Baal weapon packages, Thunderwolf Storm Shields, Wolf Guard Storm Shields, and other mutually exclusive loadout choices remain radio-style selectors. Baal Predator Dozer Blade was converted by moving its existing Paid Wargear max1 constraint directly onto the existing selection. Sanguinary Banner was moved from Paid Wargear to Unit Upgrade and given the same direct checkbox treatment. Added a concise Coming Soon rule to Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans pointing players to the authoritative Space Marines PDF in the Reforged Discord. Root points, loadout legality, attachment rules, Eliminator permissive-corrective validation, Additional Copy Costs, GS21 target, and unrelated mechanics are unchanged.\n\nREV18 — ADDITIONAL MODEL CHECKBOXES\nConverted all seven optional Additional Model slots currently present in the Space Marines catalogue to direct checkbox-style selections by moving each existing group-level max-1 constraint onto its existing child entry. This affects Victrix Guard 3, Victrix Honour Guard 3, Sanguinary Guard 3, Sternguard Veteran 3, Bladeguard Veteran 3, Devastator Centurion 2, and Assault Centurion 2. No groups or entries were moved, renamed, reordered, added, or removed. Existing entry types, stable IDs, names, hidden values, sortIndex values, points costs, nested loadouts, rules, modifiers, categories, and infoLinks are unchanged. Existing REV17 checkbox cleanup, concise Coming Soon placeholders, Additional Copy Costs, GS21 target, root points, and unrelated mechanics are unchanged. Catalogue Bugfixes remains cumulative and the new checkbox entry was appended.",
     "categoryEntries": [
       {
         "name": "May Attach To: Wolf Guard Battle Leader",
