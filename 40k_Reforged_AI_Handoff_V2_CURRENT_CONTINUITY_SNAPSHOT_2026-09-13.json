@@ -1,0 +1,391 @@
+{
+  "handoff_meta": {
+    "title": "40k Reforged Listbuilder Project - AI Handoff",
+    "version": 2,
+    "date": "2026-09-13",
+    "status": "Current continuity snapshot",
+    "project": "Warhammer 40k Reforged Homebrew listbuilder / New Recruit catalogue project",
+    "purpose": "This document transfers the current state of the project from one AI/chat to the next. It is intentionally exhaustive about recent work, current files, unresolved questions, dependencies, and pickup context.",
+    "critical_length_instruction": "THERE IS NO MAXIMUM LENGTH OR SIZE FOR A PROJECT HANDOFF. Continuity is more important than brevity.",
+    "staleness_contract": "THIS HANDOFF IS INTENTIONALLY A POINT-IN-TIME SNAPSHOT AND IS EXPECTED TO BECOME STALE AS WORK CONTINUES. Use it to understand recent project state and reasoning, not as permanent authoring doctrine. Current executable files, authoritative source rules, the current Game System, the current Maintenance Guide, and observed New Recruit runtime behavior outrank stale statements in this handoff.",
+    "successor_to": "40k_Reforged_AI_Handoff_2026-08-24(3)(1).json",
+    "why_v2_exists": "The original handoff successfully onboarded multiple chats because it preserved enormous amounts of context. Over time it also accumulated permanent doctrine and temporary project state in the same artifact. V2 preserves the exhaustive continuity function while moving durable doctrine to the Game System and repeatable procedure to the Maintenance Guide."
+  },
+  "how_to_use_this_handoff": {
+    "read_order": [
+      "Read the current Pre-Introduction first.",
+      "Read this handoff completely enough to understand current state and unresolved work.",
+      "Research current New Recruit / BattleScribe documentation before relying on remembered schema behavior.",
+      "Read the current Game System and Catalogue Maintenance & Presentation Guide.",
+      "Inspect the current executable catalogue/library files relevant to the task.",
+      "Reconcile contradictions before editing."
+    ],
+    "authority_boundary": [
+      "This handoff owns continuity, not permanent doctrine.",
+      "The authoritative army rules PDF / UUS owns faction game meaning.",
+      "The current Game System owns reusable cross-faction listbuilder doctrine and proven engine conventions.",
+      "The current executable catalogue and linked libraries own deployed implementation state.",
+      "Observed New Recruit runtime behavior owns engine reality.",
+      "The Catalogue Maintenance & Presentation Guide owns recurring maintenance/update procedure.",
+      "Historical handoffs and archived documents are archaeology once superseded."
+    ],
+    "conflict_rule": "If this handoff disagrees with a current file or current canonical document, do not preserve the handoff blindly. Identify the disagreement, determine whether the handoff is stale, and use the current source appropriate to that kind of truth.",
+    "promotion_rule": "If current work establishes a reusable cross-faction lesson, promote the durable lesson into the Game System. If it establishes repeatable maintenance procedure, promote it into the Maintenance Guide. Do not rely on future handoffs to preserve permanent doctrine."
+  },
+  "current_canonical_document_stack": {
+    "pre_introduction": {
+      "file": "40k_Reforged_PreIntroduction_V2_TIMELESS_ONBOARDING.json",
+      "role": "Timeless project orientation, authority model, cold-start sequence, and mindset.",
+      "status": "New V2 candidate generated 2026-09-13. Old Pre-Introduction should remain archived until the onboarding pair is fully reviewed."
+    },
+    "game_system": {
+      "file": "Warhammer_40k_Reforged_CORE_3_3_3_REV23_PREINTRO_DOCTRINE_PROMOTION_COMMENT_ONLY.json",
+      "game_system_id": "sys-b298-09dc-9597-23fd",
+      "revision": 23,
+      "core_rules_baseline": "3.3.3",
+      "points_cost_type_id": "51b2-306e-1021-d207",
+      "role": "Canonical reusable listbuilder infrastructure and durable authoring/runtime doctrine.",
+      "important_recent_status": "REV23 remains the revision after multiple comment-only doctrine promotions. The most recent promotion explicitly defines the Game System authority boundary, separates UI shape from semantic validation, strengthens the evidence standard for New Recruit runtime claims, and clarifies nested attached-Leader wording."
+    },
+    "maintenance_guide": {
+      "file": "Listbuilder_Catalogue_Maintenance_and_Presentation_Guide_V3.json",
+      "version": 3,
+      "role": "Active operational playbook for catalogue audits, presentation maintenance, rules-version updates, libraries, validation, and patch-cycle completion."
+    },
+    "handoff": {
+      "file": "40k_Reforged_AI_Handoff_V2_CURRENT_CONTINUITY_SNAPSHOT_2026-09-13.json",
+      "role": "Deliberately perishable current-state continuity snapshot."
+    },
+    "retired_active_documents": [
+      {
+        "document": "Polish Pass Guide",
+        "status": "Retired as active authority.",
+        "migration": "Durable presentation doctrine moved into the Game System; repeatable maintenance procedure moved into the Maintenance Guide; faction-by-faction historical residue left as archaeology."
+      },
+      {
+        "document": "LISTBUILDER_UPDATE_WORKFLOW",
+        "status": "Retired as active authority.",
+        "migration": "Minimal update contract, rules-version updates, cumulative Patch Notes handling, baseline-only updates, compatibility-only Game System validation, portable shared-unit synchronization, and patch-cycle completion sweep moved into Maintenance Guide V3."
+      },
+      {
+        "document": "Original 2026-08-24 Pre-Introduction",
+        "status": "Superseded by the V2 timeless candidate once the current onboarding cleanup is accepted.",
+        "reason": "It mixed timeless orientation with Game System revision 10, Harlequins reference-state assumptions, and a Drukhari-specific pickup point."
+      },
+      {
+        "document": "Original 2026-08-24 Handoff",
+        "status": "Archive after V2 is accepted.",
+        "reason": "It was a successful continuity snapshot but now contains superseded doctrine and obsolete August project state."
+      }
+    ]
+  },
+  "current_project_state": {
+    "overall": "The mature catalogue-maintenance tour has been completed across the active army set. Current work has shifted from broad catalogue discovery into maintenance, rules-version updates, documentation consolidation, shared-library synchronization, and targeted bugfix/presentation work.",
+    "known_exception": "Space Marines remains the notable WIP catalogue. Treat its current state as unfinished rather than assuming every apparent gap is a regression.",
+    "current_documentation_cleanup": "The project is actively consolidating its onboarding/documentation architecture. Pre-Introduction V2 and this Handoff V2 are intended to preserve successful cold-start behavior while separating timeless orientation, durable doctrine, repeatable procedure, and temporary continuity.",
+    "game_system_rollout_caution": "Many catalogue-maintenance artifacts were produced against Game System revision 21. The current Game System is revision 23. Do not assume every active catalogue has already been retargeted to GS23. A compatibility/patch-cycle sweep should be deliberate and validated rather than silently mixed into unrelated work."
+  },
+  "current_catalogue_baselines": [
+    {
+      "faction": "World Eaters",
+      "current_artifact": "World_Eaters_3_3_4_REV20_FRESH_INITIATES_AND_COMMENT_CLEANUP_FINAL.json",
+      "status": "Maintained current baseline from catalogue sweep."
+    },
+    {
+      "faction": "Tyranids",
+      "current_artifact": "Tyranids_3_3_4_REV33_PREVIEW_REFRESH_AND_CHECKBOX_CLEANUP.json",
+      "status": "Maintained current baseline from catalogue sweep."
+    },
+    {
+      "faction": "Necrons",
+      "current_artifact": "Necrons_3_3_5_REV15_COMMENT_CONSOLIDATION.json",
+      "status": "Maintained current baseline from catalogue sweep."
+    },
+    {
+      "faction": "T'au",
+      "current_artifact": "Tau_3_3_6_REV17_COMMENT_CONSOLIDATION.json",
+      "status": "Maintained current baseline from catalogue sweep."
+    },
+    {
+      "faction": "Grey Knights",
+      "current_artifact": "Grey_Knights_3_3_6_REV22_INTERCEPTOR_STAVE_AND_COMMENT_CLEANUP.json",
+      "status": "Maintained current baseline from catalogue sweep."
+    },
+    {
+      "faction": "Adeptus Mechanicus",
+      "current_artifact": "Adeptus_Mechanicus_3_3_4_REV25_ALPHA_HEADER_SUPPRESSION_CORRECTED.json",
+      "status": "Maintained current baseline from catalogue sweep."
+    },
+    {
+      "faction": "Space Marines",
+      "current_artifact": "Space_Marines_3_3_7_REV19_PRIEST_CHECKBOX_AND_COMMENT_CONSOLIDATION_WITH_MAINTENANCE_NOTE.json",
+      "status": "WIP. Do not treat catalogue-wide incompleteness as a maintenance regression."
+    },
+    {
+      "faction": "Manufactorum Imperium shared library",
+      "current_artifact": "Manufactorum_Imperium_3_3_3_LIBRARY_V11_ASTRA_SYNC_AND_COMMENT_CONSOLIDATION.json",
+      "status": "Shared library baseline from maintenance sweep."
+    },
+    {
+      "faction": "Astra Militarum",
+      "current_artifact": "Astra_Militarum_3_3_5_REV37_SENTINEL_AND_MINE_CHECKBOXES_COMMENT_CONSOLIDATION.json",
+      "status": "Maintained current baseline from catalogue sweep."
+    },
+    {
+      "faction": "Chaos Space Marines",
+      "current_artifact": "Chaos_Space_Marines_3_3_6_REV40_LERNAEAN_LIMIT_REMOVED_AND_VINDICATOR_SHIELD.json",
+      "status": "Most recently updated army catalogue in this handoff. Targets GS23."
+    },
+    {
+      "faction": "Chaos Space Marines Arsenal Library",
+      "current_artifact": "Chaos_Space_Marines_3_3_6_ARSENAL_LIBRARY_V13_VINDICATOR_SHIELD_SYNC.json",
+      "catalogue_id": "21eb-113e-8367-c075",
+      "status": "Portable CSM shared content synchronized with CSM 3.3.6 REV40. Targets GS23."
+    },
+    {
+      "faction": "Adepta Sororitas",
+      "current_artifact": "Adepta_Sororitas_3_3_5_REV23_PARAGON_CASTIGATOR_CHECKBOXES_AND_COMMENT_CONSOLIDATION.json",
+      "status": "Maintained current baseline from catalogue sweep."
+    },
+    {
+      "faction": "Adeptus Custodes",
+      "current_artifact": "Adeptus_Custodes_3_3_5_REV14_LAND_RAIDER_PINTLE_AND_COMMENT_CONSOLIDATION.json",
+      "status": "Maintained current baseline from catalogue sweep."
+    },
+    {
+      "faction": "Aeldari / Craftworlds",
+      "current_artifact": "Aeldari_Craftworlds_3_3_4_REV29_ADDITIONAL_MODEL_CHECKBOXES_AND_COMMENT_CONSOLIDATION.json",
+      "status": "Maintained current baseline from catalogue sweep."
+    },
+    {
+      "faction": "Death Guard",
+      "current_artifact": "Death_Guard_3_3_4_REV25_CHAOS_LORD_ATTACHMENTS_AND_COMMENT_CONSOLIDATION.json",
+      "status": "Maintained current baseline from catalogue sweep. Uses Great Traitors' Arsenal consumer integration."
+    },
+    {
+      "faction": "Harlequins playable",
+      "current_artifact": "Harlequins_3_3_6_V13_TROOP_COPY_COST_FIX_AND_COMMENT_CONSOLIDATION.json",
+      "status": "Thin playable catalogue baseline."
+    },
+    {
+      "faction": "Harlequins shared library",
+      "current_artifact": "Harlequins_3_3_6_LIBRARY_V14_COMMENT_CONSOLIDATION.json",
+      "status": "Reusable intrinsic Harlequin unit content baseline."
+    },
+    {
+      "faction": "Thousand Sons",
+      "current_artifact": "Thousand_Sons_3_3_5_REV17_GREAT_TRAITORS_ARSENAL_INTEGRATION.json",
+      "status": "Maintained current baseline with Great Traitors' Arsenal integration."
+    },
+    {
+      "faction": "Drukhari",
+      "current_artifact": "Drukhari_3_3_4_REV33_TROOP_COPY_COST_FIX_AND_COMMENT_CONSOLIDATION.json",
+      "status": "Maintained current baseline. The August handoff's Drukhari migration task is complete and obsolete."
+    },
+    {
+      "faction": "Orkz",
+      "current_artifact": "Orkz_3_3_6_REV27_FINAL_ARMY_RULE_MAINTENANCE.json",
+      "status": "Maintained current baseline from catalogue sweep."
+    }
+  ],
+  "latest_completed_work": {
+    "documentation_architecture": [
+      "Polish Pass Guide was decomposed: durable presentation doctrine promoted into the Game System, operational procedure moved into the Maintenance Guide, obsolete faction-history residue retired.",
+      "LISTBUILDER_UPDATE_WORKFLOW was decomposed: the surviving operational content moved into Maintenance Guide V3 and the standalone document is safe to retire from active project folders.",
+      "Pre-Introduction V2 was created as a timeless cold-start orientation layer. It no longer contains live revision numbers, a fixed reference faction, or an immediate faction task.",
+      "Game System REV23 received a comment-only Pre-Introduction doctrine promotion. No executable/player-visible Game System data changed.",
+      "Handoff V2 is being created as an intentionally perishable continuity snapshot."
+    ],
+    "chaos_space_marines_3_3_6": [
+      "Rules baseline updated from Chaos Space Marines 3.3.5 to 3.3.6.",
+      "Lernaean Terminators no longer enforce the one-Heavy-Weapon-Terminator-per-unit limit.",
+      "The separate Chaos Terminators one-Heavy-Weapon-Terminator cap remains live.",
+      "The old cumulative Bugfix bullet that combined Chaos Terminators and Lernaean Terminators was split so the now-invalid Lernaean claim was removed while the still-live Chaos Terminator correction remains.",
+      "Chaos Vindicator was checked against the army rules and found to be missing the fixed Siege Shield weapon in the catalogue.",
+      "Siege Shield was added as fixed default equipment and recorded as a genuine Catalogue Bugfix.",
+      "The portable Chaos Vindicator root was synchronized into the CSM Arsenal Library V13.",
+      "Lernaean Terminators remain Legion-bound and are not part of the Arsenal library, so their 3.3.6 cap removal required no library change."
+    ]
+  },
+  "current_working_method": {
+    "cadence": [
+      "Implementation-first for clearly understood fixes and established patterns.",
+      "Discuss genuinely weird/nontrivial mechanics before implementation.",
+      "User manually tests generated JSON in New Recruit and reports observed behavior.",
+      "Observed New Recruit behavior and screenshots are ground truth for engine behavior.",
+      "Current executable files override stale comments and old handoffs."
+    ],
+    "maintenance_boundary": [
+      "A catalogue-maintenance request normally begins with an audit unless the user explicitly asks to implement immediately.",
+      "Straightforward established presentation cleanup can be applied directly when requested.",
+      "Do not broaden a targeted task into a rules redesign.",
+      "Bugfix bullets are only for states that actually went live.",
+      "Source-derived rules descriptions remain verbatim unless the authoritative source changes."
+    ],
+    "artifact_expectation": [
+      "Return named downloadable JSON artifacts.",
+      "Preserve existing stable IDs.",
+      "Use deterministic IDs only for genuinely new objects.",
+      "Validate duplicate IDs and references.",
+      "When portable shared content changes intrinsically, synchronize the owned library/source in the same pass."
+    ]
+  },
+  "important_current_project_truths": [
+    "The listbuilder is a companion to the army rules PDF and a fancy notepad, not a replacement rules engine.",
+    "The builder represents meaningful final player decisions rather than blindly replaying procedural replacement wording.",
+    "Source game meaning belongs to the authoritative army rules / UUS. New Recruit is an output format.",
+    "Current executable data and observed New Recruit runtime behavior outrank stale comments or historical handoffs.",
+    "Presentation categories are not semantic authority.",
+    "The Game System now explicitly separates player-facing UI shape from semantic validation.",
+    "A stock New Recruit constraint may be relaxed or removed when the same legality is preserved through a cleaner constructive validator.",
+    "Selected-hidden states are invalid and should be avoided.",
+    "Optional model and direct max-1 upgrade checkbox behavior have been runtime-proven and are documented in the current Game System.",
+    "Comments should describe current state and intentional rationale, not accumulate archaeology indefinitely.",
+    "Shared libraries own intrinsic reusable unit-tree content; consumer catalogues own host-specific availability, presentation, and consumer-local semantics."
+  ],
+  "known_superseded_legacy_guidance": [
+    {
+      "legacy": "Points cost type ID 121e-e068-ad7a-3063",
+      "current": "Use 51b2-306e-1021-d207.",
+      "why_it_matters": "The old August handoff hardcoded the older ID."
+    },
+    {
+      "legacy": "Additional Copy Costs apply only to Other units and Troops have no generic copy allowance.",
+      "current": "Current Game System uses separate Troop and Other ledgers. Troops use 4 / 6 / 8 normal-copy allowances at 800 / 1200 / 1600; Other uses 1 / 2 / 3. Each excess identical copy costs +20 Points.",
+      "why_it_matters": "Do not resurrect the August Other-only architecture."
+    },
+    {
+      "legacy": "Standard top-level labels include Additional Leader, Special Weapon Loadouts, and Additional Models.",
+      "current": "Do not use Special Weapon Loadouts merely as taxonomy; use singular Additional Model for the max-one pattern; use meaningful Attached [MODEL / LEADER] relationship names instead of generic Additional Leader when player-facing.",
+      "why_it_matters": "The presentation grammar matured during the catalogue sweep."
+    },
+    {
+      "legacy": "Single paid wargear should be wrapped in an optional max-1 subgroup to avoid a spinner.",
+      "current": "Direct optional upgrade + max 1 is the proven checkbox-style pattern. Do not add a one-item wrapper merely to force presentation.",
+      "why_it_matters": "The August Sororitas-era workaround was superseded by later runtime proof."
+    },
+    {
+      "legacy": "Maintain a large named library of standard error templates.",
+      "current": "Game System REV23 retired the large template library. Prefer structural prevention when clean; otherwise use the three-part corrective pattern: invalid condition, allowed condition, repair.",
+      "why_it_matters": "Do not rebuild the retired template bureaucracy."
+    },
+    {
+      "legacy": "Harlequins are the canonical current reference implementation and Drukhari is the immediate next task.",
+      "current": "Harlequins remain useful historical/proven examples, but no faction is permanently privileged as the sole reference. Drukhari maintenance is complete through REV33.",
+      "why_it_matters": "This was temporary August project state."
+    },
+    {
+      "legacy": "Cross-model ancestor hiding is broadly preferred for weapon caps.",
+      "current": "Cross-hide is an engine capability, not a default design goal. Prefer local clean prevention only when it cannot hide an already-selected choice; otherwise permissive-corrective validation is often safer.",
+      "why_it_matters": "Selected-hidden invalid states and brittle dependencies are now explicitly avoided."
+    }
+  ],
+  "shared_library_and_dependency_notes": {
+    "chaos_space_marines_arsenal": {
+      "catalogue_id": "21eb-113e-8367-c075",
+      "current_file": "Chaos_Space_Marines_3_3_6_ARSENAL_LIBRARY_V13_VINDICATOR_SHIELD_SYNC.json",
+      "current_role": "Reusable portable generic CSM unit content.",
+      "known_consumers": [
+        "Death Guard via Great Traitors' Arsenal integration.",
+        "Thousand Sons via Great Traitors' Arsenal integration.",
+        "Other consumers must be verified from their current catalogueLinks rather than assumed from old documentation."
+      ],
+      "important_rule": "Consumer-specific availability/attachment/accounting stays consumer-local unless the semantic rule is intrinsic to the reusable shared root."
+    },
+    "harlequins": {
+      "playable_file": "Harlequins_3_3_6_V13_TROOP_COPY_COST_FIX_AND_COMMENT_CONSOLIDATION.json",
+      "library_file": "Harlequins_3_3_6_LIBRARY_V14_COMMENT_CONSOLIDATION.json",
+      "role": "Playable thin catalogue plus reusable intrinsic shared Harlequin unit content.",
+      "important_rule": "Inspect current consumers and links. Do not assume the old August Roaming Performers graph is the only or current consumer relationship."
+    },
+    "manufactorum": {
+      "current_file": "Manufactorum_Imperium_3_3_3_LIBRARY_V11_ASTRA_SYNC_AND_COMMENT_CONSOLIDATION.json",
+      "role": "Shared Imperium vehicle/library content used by current consumer catalogues.",
+      "important_rule": "Verify current consumer links and target metadata before renaming, retargeting, or synchronizing."
+    }
+  },
+  "legacy_runtime_observations_not_to_lose": {
+    "status": "These observations came from the successful August handoff and later work. Many are already represented in the current Game System. If one is absent there, treat this handoff entry as continuity evidence, not automatic permanent doctrine; verify current runtime before promoting it.",
+    "observations": [
+      "Nested shared units are accepted.",
+      "Nested units can be valid Association targets.",
+      "Shared-library sharedSelectionEntries with importRootEntries:false plus consumer-local entryLinks work.",
+      "Cross-library categories/associations have worked in deployed project structures.",
+      "Modifiers with repeats can implement dynamic copy-cost arithmetic.",
+      "Candidate-side association-count invalidation can self-invalidate after attachment and should not be used casually for host exclusivity.",
+      "A selected entry becoming hidden creates invalid state. Avoid selected-hidden designs.",
+      "Dynamically revealed mandatory/default child selectors may not instantiate their default exactly as expected and require runtime testing.",
+      "Root Configuration selections appear as siblings.",
+      "Multiple separate association pickers can permit duplicate targeting unless the structure prevents it.",
+      "Custom player-facing errors can be emitted with modifier field='error'.",
+      "Auto-granted nested units can remain fully configurable.",
+      "Association logic can discover nested units."
+    ]
+  },
+  "known_pending_or_deferred_work": [
+    {
+      "item": "Space Marines catalogue",
+      "status": "Still WIP.",
+      "instruction": "Treat missing/incomplete areas as unfinished work unless current source and comments show a live regression."
+    },
+    {
+      "item": "Project-wide Game System REV23 compatibility sweep",
+      "status": "Not established as complete.",
+      "instruction": "Many maintained catalogue outputs predate GS23. When appropriate, use the Maintenance Guide V3 patch-cycle completion sweep: audit active catalogues/libraries for stale GS targets and perform strict compatibility-only retargeting with normalized-equivalence validation."
+    },
+    {
+      "item": "Onboarding-document cleanup",
+      "status": "In progress in this chat.",
+      "instruction": "Pre-Introduction V2 and Handoff V2 should be reviewed together for function preservation. Keep the original August documents archived until the new pair is accepted."
+    }
+  ],
+  "what_the_next_ai_should_do_on_pickup": [
+    "Read 40k_Reforged_PreIntroduction_V2_TIMELESS_ONBOARDING.json.",
+    "Read this handoff.",
+    "Research current New Recruit / BattleScribe documentation rather than relying only on model memory.",
+    "Read Warhammer_40k_Reforged_CORE_3_3_3_REV23_PREINTRO_DOCTRINE_PROMOTION_COMMENT_ONLY.json.",
+    "Read Listbuilder_Catalogue_Maintenance_and_Presentation_Guide_V3.json.",
+    "Inspect the actual current catalogue/library files relevant to the user's next request.",
+    "If the request concerns an army-rules version update, use the Maintenance Guide V3 minimal update contract rather than asking the user to restate routine maintenance steps.",
+    "If current files disagree with this snapshot, identify whether this handoff is stale and proceed from the correct current authority.",
+    "Do not re-import doctrine from the archived August handoff merely because it is more verbose.",
+    "Do not begin broad cleanup until the current source, file relationships, and intended task are understood."
+  ],
+  "future_handoff_generation_contract": {
+    "purpose": "Future handoffs should stay large enough to preserve continuity while remaining deliberately perishable.",
+    "always_include": [
+      "Current date and explicit staleness contract.",
+      "Current canonical document stack and filenames.",
+      "Current Game System revision and any rollout caveats.",
+      "Current active catalogue/library baselines relevant to ongoing work.",
+      "What changed during the departing chat.",
+      "Immediate active work and exact pickup point.",
+      "Known pending issues, deferred work, intentional exceptions, and unresolved uncertainties.",
+      "Relevant shared-library dependency relationships.",
+      "New runtime observations not yet promoted to permanent doctrine.",
+      "Known temporary workarounds that the next AI must not mistake for permanent architecture."
+    ],
+    "do_not_duplicate_as_permanent_doctrine": [
+      "Full deterministic-ID algorithm.",
+      "Full presentation grammar.",
+      "Full Paid Wargear doctrine.",
+      "Full variable-size doctrine.",
+      "Full attachment doctrine.",
+      "Full Additional Copy Cost architecture.",
+      "Full shared-library doctrine.",
+      "Full error-template library.",
+      "Routine maintenance/update workflow."
+    ],
+    "where_permanent_lessons_go": {
+      "Game System": "Reusable cross-faction authoring/runtime doctrine.",
+      "Maintenance Guide": "Repeatable maintenance, audit, update, synchronization, and validation procedure.",
+      "Pre-Introduction": "Timeless orientation and cold-start mental model."
+    },
+    "regeneration_rule": "A new handoff should summarize the current state afresh rather than indefinitely appending every historical handoff. Keep previous handoffs as archive/archaeology when useful."
+  },
+  "closing_context": {
+    "project_state": "The project is mature enough that documentation boundaries now matter as much as individual catalogue mechanics. The successful cold-start process is being preserved while the authority surfaces are being separated cleanly.",
+    "central_continuity_rule": "Preserve context generously, but preserve permanent knowledge in its permanent home.",
+    "length_restatement": "THERE IS NO MAXIMUM LENGTH OR SIZE FOR A PROJECT HANDOFF. A future AI should receive enough current context to continue safely without archaeological guesswork."
+  }
+}

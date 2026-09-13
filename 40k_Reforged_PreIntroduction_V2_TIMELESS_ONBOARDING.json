@@ -1,0 +1,212 @@
+{
+  "pre_introduction_meta": {
+    "title": "40k Reforged Listbuilder Project - Pre-Introduction for the Next AI",
+    "version": 2,
+    "date": "2026-09-13",
+    "status": "Timeless onboarding layer",
+    "purpose": "This document is the orientation layer for a new AI entering the 40k Reforged Listbuilder project. It should be read before the current handoff and before editing project files.",
+    "critical_length_instruction": "THERE IS NO MAXIMUM LENGTH OR SIZE FOR THIS PRE-INTRODUCTION OR FOR PROJECT HAND-OFF MATERIALS.",
+    "why_completeness_matters": "An omitted architectural assumption, proven New Recruit behavior, naming convention, or design principle can cause subtle regressions across many faction catalogues. A few extra kilobytes are cheaper than rediscovering or corrupting project knowledge.",
+    "instruction_to_next_ai": "Do not compress this project into a generic BattleScribe/New Recruit task. Treat the supplied files and conventions as a mature, evolving system with deliberately tested UX, semantics, and maintenance architecture.",
+    "timelessness_rule": "This document deliberately avoids live revision numbers, current faction status, immediate next tasks, and temporary reference implementations. Those belong in the current handoff and current project files."
+  },
+  "project_at_a_glance": {
+    "project_name": "Warhammer 40k Reforged Homebrew Listbuilder",
+    "domain": "New Recruit / BattleScribe-style JSON catalogues for the homebrew Warhammer 40k ruleset called 40k Reforged",
+    "primary_goal": "Build a clean, reliable, low-friction army listbuilder that acts as a companion to the authoritative army rules rather than attempting to reproduce the entire ruleset.",
+    "secondary_goal": "Maintain a reusable catalogue architecture and authoring grammar that can be applied consistently across factions without erasing meaningful faction-specific differences.",
+    "maturity": "This is a mature multi-faction system with shared infrastructure, reusable libraries, established New Recruit runtime knowledge, and a growing body of maintenance doctrine.",
+    "what_success_looks_like": [
+      "A player can build an army quickly without wrestling with New Recruit implementation details.",
+      "The builder records meaningful final choices rather than mirroring every procedural replacement sentence from the PDF.",
+      "Illegal list states are either prevented cleanly or explained constructively.",
+      "The UI remains visually simple and readable.",
+      "The same class of mechanic is represented consistently across factions unless the game rules genuinely differ.",
+      "The project can be maintained without repeatedly rediscovering old decisions."
+    ]
+  },
+  "why_this_project_needs_orientation": {
+    "starting_point": "The project began as a relatively direct catalogue transcription exercise: units, categories, points, legal selections, and stock validation.",
+    "what_was_learned": [
+      "Literal PDF transcription often produces poor listbuilding UX.",
+      "New Recruit data structures frequently expose implementation details rather than player decisions.",
+      "Apparently reasonable BattleScribe JSON can render as awkward spinners, redundant rows, blank wrappers, confusing nested menus, or implementation-language errors.",
+      "Clean UI and semantic legality do not always need to be enforced by the same object.",
+      "Some unusual structures exist because they were tested against actual New Recruit behavior and solved a real runtime problem."
+    ],
+    "resulting_shift": "The project evolved from 'encode the army rules into New Recruit' into 'design a disciplined translation layer between source semantics and the player's listbuilding experience.'",
+    "important_warning": "Do not normalize, flatten, simplify, or rewrite an unfamiliar structure merely because it looks odd in JSON. First determine what behavior it owns and whether the shape is intentional."
+  },
+  "core_design_philosophy": {
+    "fancy_notepad_not_rules_engine": "The listbuilder is intended to replace a notepad, not the army rules PDF. It quickly records the choices that make up an army and catches illegal list construction without reproducing every battlefield rule, weapon profile, or procedural clause.",
+    "meaningful_choices": "Represent the decisions players actually make. Prefer clean final-state choices over procedural replacement chains when the resulting game meaning is exact.",
+    "not_every_legal_option_needs_a_button": "The builder should make common choices quick rather than give every technically legal option equal prominence. The army rules remain authoritative when an uncommon or default option is not represented.",
+    "constructive_validation": "When permissive-corrective validation is appropriate, prefer the three-part pattern: state the invalid condition, state the allowed condition, then state the repair.",
+    "individual_consideration": "Standardize the visual grammar and authoring conventions, but do not force unlike rules into identical shapes. Individual consideration beats blind homogenisation."
+  },
+  "authority_hierarchy": {
+    "principle": "Different project sources own different kinds of truth. Do not let convenience or stale documentation silently override the correct authority.",
+    "order": [
+      {
+        "source": "Authoritative army rules PDF / Universal Unit Skeleton",
+        "owns": "Game meaning, legal choices, points, unit identity, faction semantics, and player-facing source rules."
+      },
+      {
+        "source": "Current Game System",
+        "owns": "Reusable listbuilder doctrine, canonical shared infrastructure, universal categories, proven engine conventions, and cross-faction authoring standards."
+      },
+      {
+        "source": "Current executable catalogue and linked libraries",
+        "owns": "What is actually deployed and how that catalogue currently implements its rules."
+      },
+      {
+        "source": "Observed New Recruit runtime behavior",
+        "owns": "Engine reality when BattleScribe/New Recruit behavior differs from expectation or documentation."
+      },
+      {
+        "source": "Catalogue Maintenance & Presentation Guide",
+        "owns": "Audit workflow, maintenance discipline, presentation review, rules-version update procedure, and validation process."
+      },
+      {
+        "source": "Current project handoff",
+        "owns": "Current project state, recent decisions, active work, known pending issues, current file relationships, and continuity between chats."
+      },
+      {
+        "source": "Historical comments and archived documents",
+        "owns": "Archaeology and rationale only. Historical state does not override current executable behavior or current doctrine."
+      }
+    ],
+    "conflict_rule": "If current sources disagree, identify the contradiction explicitly. Do not silently choose the interpretation that is easiest to implement."
+  },
+  "semantic_source_of_truth": {
+    "canonical_principle": "The Universal Unit Skeleton and authoritative army rules define game meaning. New Recruit is an output format, not a source of additional semantics.",
+    "implications": [
+      "New Recruit categories, groups, constraints, modifiers, and associations are implementation tools.",
+      "They must never silently redefine what a unit is, what it may take, or how a source rule works.",
+      "If the source does not contain enough information to compile a rule deterministically, fail loudly or ask for clarification rather than inventing behavior."
+    ]
+  },
+  "operating_mindset": {
+    "semantics": [
+      "Never invent faction game semantics because New Recruit needs a convenient structure.",
+      "Preserve existing stable IDs whenever the same semantic object still exists.",
+      "Do not use names or display order as surrogate semantic identity when stable source IDs exist.",
+      "Never hide points or create invisible taxes.",
+      "Treat source-derived rule descriptions as source authority and preserve them verbatim unless the authoritative source changes."
+    ],
+    "new_recruit": [
+      "Treat actual runtime testing as evidence.",
+      "Distinguish proven engine behavior from hypotheses.",
+      "Never hide an already-selected option.",
+      "Prefer boring, robust mechanics with constructive validation over clever structures that depend on unproven engine behavior.",
+      "Do not assume stock New Recruit constraints or messages are preferable merely because they are familiar."
+    ],
+    "maintenance": [
+      "Preserve working architecture unless the source changed, a live bug exists, or a mechanical redesign is explicitly intended.",
+      "Presentation cleanup should not silently become rules redesign.",
+      "Investigate unusual structures before deleting them.",
+      "When shared content is involved, determine whether a change is intrinsic to the reusable unit tree or consumer-local before syncing libraries."
+    ]
+  },
+  "onboarding_sequence": {
+    "instruction": "Use this sequence for a cold start. The order is deliberate because each stage gives context needed to interpret the next one.",
+    "steps": [
+      {
+        "step": 1,
+        "name": "Read this Pre-Introduction",
+        "purpose": "Establish the mental model, authority hierarchy, and project philosophy before encountering implementation detail."
+      },
+      {
+        "step": 2,
+        "name": "Read the current Handoff",
+        "purpose": "Learn current project state, active work, recent decisions, pending issues, current file relationships, and the intended pickup point."
+      },
+      {
+        "step": 3,
+        "name": "Research current New Recruit / BattleScribe documentation",
+        "purpose": "Refresh the underlying schema and engine vocabulary rather than relying on old model knowledge. Treat documentation as engine reference, not as project-specific doctrine."
+      },
+      {
+        "step": 4,
+        "name": "Read the current Game System and Maintenance Guide",
+        "purpose": "Load the project's current reusable doctrine, engine conventions, authoring rules, maintenance workflow, and validation expectations."
+      },
+      {
+        "step": 5,
+        "name": "Examine current representative catalogues and linked libraries",
+        "purpose": "See how the doctrine is actually deployed. Prefer the current files identified by the handoff rather than any historically favored faction."
+      },
+      {
+        "step": 6,
+        "name": "Reconcile before editing",
+        "purpose": "Compare the handoff, Game System, Maintenance Guide, current catalogues, linked libraries, and source rules. Call out genuine contradictions or stale guidance before changing executable data."
+      }
+    ]
+  },
+  "what_this_document_deliberately_does_not_contain": {
+    "reason": "The old Pre-Introduction mixed timeless orientation with a snapshot of one particular work session. That made the document gradually stale even though its onboarding method remained successful.",
+    "excluded_from_this_layer": [
+      "Live Game System revision numbers.",
+      "Current catalogue revision numbers.",
+      "A fixed reference faction or reference catalogue.",
+      "Immediate next faction or implementation task.",
+      "Faction-specific status snapshots.",
+      "Current filenames that are expected to change over time.",
+      "Exhaustive implementation recipes already owned by the Game System.",
+      "Routine maintenance procedure already owned by the Maintenance Guide.",
+      "Detailed historical revision archaeology."
+    ],
+    "where_to_find_those_things": "Use the current handoff for live project state, the Game System for durable doctrine, the Maintenance Guide for workflow, and the current files themselves for deployed implementation."
+  },
+  "how_to_read_unusual_project_data": {
+    "rule": "A strange structure is not evidence that it is wrong. Many recurring shapes exist because simpler-looking alternatives failed in New Recruit.",
+    "before_changing_an_unfamiliar_pattern": [
+      "Read the local comment and current Game System doctrine.",
+      "Check whether the shape is reused elsewhere.",
+      "Check the handoff for recent rationale or known runtime behavior.",
+      "Determine whether it owns semantics, presentation, validation, compatibility, export shape, or library identity.",
+      "If engine behavior is uncertain, identify the runtime test needed instead of pretending certainty."
+    ]
+  },
+  "revision_and_documentation_hygiene": {
+    "rules": [
+      "Executable or player-visible catalogue changes normally bump the catalogue revision.",
+      "Executable or player-visible shared Game System changes require a Game System revision bump.",
+      "Comment-only documentation cleanup does not inherently require a revision bump.",
+      "Catalogue Bugfixes record corrections to states that actually went live. Corrections to unreleased work belong in implementation history instead.",
+      "Comments are durable project knowledge when they explain current state, proven runtime behavior, or why an unusual structure exists."
+    ]
+  },
+  "communication_style_expected_from_the_next_ai": {
+    "with_user": [
+      "Be concise and technically clear.",
+      "Use implementation summaries rather than essays unless the task genuinely requires depth.",
+      "Dry humor is fine.",
+      "Do not use customer-service language.",
+      "Do not use em dash punctuation.",
+      "When producing artifacts, provide direct download links.",
+      "When New Recruit behavior is uncertain, state what needs to be tested instead of pretending certainty."
+    ],
+    "with_project_data": [
+      "Be conservative about semantics.",
+      "Be aggressive about consistency where the underlying rules are genuinely equivalent.",
+      "Treat actual New Recruit testing as evidence.",
+      "Distinguish proven patterns from hypotheses.",
+      "Distinguish current authority from historical archaeology."
+    ]
+  },
+  "expected_first_response_after_onboarding": {
+    "after_reading_the_required_sources": [
+      "State the authority hierarchy in your own words.",
+      "Summarize the project philosophy in a few crisp sentences.",
+      "Identify the current project state and intended next task from the handoff and current files, not from this Pre-Introduction.",
+      "Mention any contradiction, stale guidance, missing dependency, or uncertainty that should be resolved before editing.",
+      "Do not begin a broad cleanup merely because unfamiliar structures look inconsistent."
+    ]
+  },
+  "closing_orientation": {
+    "central_insight": "The valuable asset is not merely the JSON. It is the accumulated knowledge about how source semantics, player-facing choices, New Recruit behavior, reusable libraries, and maintenance discipline fit together.",
+    "what_to_preserve": "Keep the architecture coherent, keep authority boundaries clear, preserve stable identity, and let observed New Recruit behavior drive further refinement.",
+    "final_length_restatement": "THERE IS NO MAXIMUM ACCEPTABLE HANDOFF SIZE. OMITTING A CRITICAL DETAIL IS MORE EXPENSIVE THAN ADDING EXTRA BYTES."
+  }
+}
