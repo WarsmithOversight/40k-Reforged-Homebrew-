@@ -1,0 +1,1713 @@
+{
+  "catalogue": {
+    "library": false,
+    "id": "e85f-5832-af6e-845f",
+    "name": "Harlequins 3.3.6",
+    "gameSystemId": "sys-b298-09dc-9597-23fd",
+    "gameSystemRevision": 21,
+    "revision": 13,
+    "battleScribeVersion": "2.03",
+    "type": "catalogue",
+    "selectionEntries": [
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Additional Copy Costs",
+        "hidden": false,
+        "id": "24a4-8bac-d6d6-fe96",
+        "sortIndex": 1,
+        "categoryLinks": [
+          {
+            "targetId": "default-category",
+            "id": "fecc-a36c-a33c-037f",
+            "primary": true,
+            "name": "Configuration"
+          },
+          {
+            "targetId": "54e9-a5b4-e275-00c5",
+            "id": "8788-2058-2eda-deca",
+            "primary": false,
+            "name": "Required Additional Copy Costs Configuration"
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Additional Copy Costs",
+            "id": "c2f1-c2d2-89e2-2a11",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "80a9-6b43-631f-5a4f"
+          }
+        ],
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "51b2-306e-1021-d207",
+            "value": 0
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "1",
+            "field": "defaultAmount"
+          },
+          {
+            "type": "add",
+            "value": "Additional Copy Costs is automatically managed by the listbuilder and should appear only once. Remove any extra Additional Copy Costs entries.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "24a4-8bac-d6d6-fe96",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Additional Copy Costs"
+              }
+            ]
+          }
+        ],
+        "comment": "ADDITIONAL COPY COSTS / GS21. Permanent required accounting entry with separate Troops and Other ledgers. Light, Dark, and Twilight Troupes use independent 4 / 6 / 8 Troop normal-copy allowances; Skyweaver, Voidweaver, and Starweaver retain the existing 1 / 2 / 3 Other arithmetic. The parent retains automatic insertion, Required Additional Copy Costs Configuration semantics, linked player-facing rule, and duplicate-entry validation.",
+        "selectionEntryGroups": [
+          {
+            "name": "​",
+            "id": "4061-bbff-3630-9317",
+            "hidden": false,
+            "sortIndex": 1,
+            "constraints": [
+              {
+                "type": "min",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "9361-ac47-a989-bb23",
+                "includeChildSelections": false
+              },
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "2439-578c-4d41-41c8",
+                "includeChildSelections": false
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Troops",
+                "hidden": false,
+                "id": "8e9f-59f0-7a63-0d3d",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 0
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 5,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0263-e721-5014-6588",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Light Troupe"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "0263-e721-5014-6588",
+                        "childName": "Light Troupe",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 80,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 5,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0263-e721-5014-6588",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Light Troupe"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 7,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0263-e721-5014-6588",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Light Troupe"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "0263-e721-5014-6588",
+                        "childName": "Light Troupe",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 120,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 7,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0263-e721-5014-6588",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Light Troupe"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 9,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0263-e721-5014-6588",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Light Troupe"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "0263-e721-5014-6588",
+                        "childName": "Light Troupe",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 160,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 9,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0263-e721-5014-6588",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Light Troupe"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 5,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "10cc-b7dd-6b20-9193",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Dark Troupe"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "10cc-b7dd-6b20-9193",
+                        "childName": "Dark Troupe",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 80,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 5,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "10cc-b7dd-6b20-9193",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Dark Troupe"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 7,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "10cc-b7dd-6b20-9193",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Dark Troupe"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "10cc-b7dd-6b20-9193",
+                        "childName": "Dark Troupe",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 120,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 7,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "10cc-b7dd-6b20-9193",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Dark Troupe"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 9,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "10cc-b7dd-6b20-9193",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Dark Troupe"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "10cc-b7dd-6b20-9193",
+                        "childName": "Dark Troupe",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 160,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 9,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "10cc-b7dd-6b20-9193",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Dark Troupe"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 5,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "5c4d-4c21-ffd4-1f5c",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Twilight Troupe"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "5c4d-4c21-ffd4-1f5c",
+                        "childName": "Twilight Troupe",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 80,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 5,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "5c4d-4c21-ffd4-1f5c",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Twilight Troupe"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 7,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "5c4d-4c21-ffd4-1f5c",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Twilight Troupe"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "5c4d-4c21-ffd4-1f5c",
+                        "childName": "Twilight Troupe",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 120,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 7,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "5c4d-4c21-ffd4-1f5c",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Twilight Troupe"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 9,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "5c4d-4c21-ffd4-1f5c",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Twilight Troupe"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "5c4d-4c21-ffd4-1f5c",
+                        "childName": "Twilight Troupe",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 160,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 9,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "5c4d-4c21-ffd4-1f5c",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Twilight Troupe"
+                      }
+                    ]
+                  }
+                ],
+                "comment": "TROOP COPY-COST LEDGER. Light Troupe, Dark Troupe, and Twilight Troupe are three independent Troop copy families using the current Game System 4 / 6 / 8 normal-copy allowance. Each further identical copy costs +20 Points."
+              }
+            ],
+            "defaultSelectionEntryId": "8e9f-59f0-7a63-0d3d"
+          },
+          {
+            "name": "​",
+            "id": "7f23-9669-3371-28fd",
+            "hidden": false,
+            "sortIndex": 2,
+            "constraints": [
+              {
+                "type": "min",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "f380-79b3-df39-5b23",
+                "includeChildSelections": false
+              },
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "a6b8-f04f-c4d8-de67",
+                "includeChildSelections": false
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Other",
+                "hidden": false,
+                "id": "d5a3-11ef-d7bf-a544",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 0
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "3468-3f0a-a805-f22b",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Skyweaver"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "3468-3f0a-a805-f22b",
+                        "childName": "Skyweaver",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "3468-3f0a-a805-f22b",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Skyweaver"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "3468-3f0a-a805-f22b",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Skyweaver"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "3468-3f0a-a805-f22b",
+                        "childName": "Skyweaver",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "3468-3f0a-a805-f22b",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Skyweaver"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "3468-3f0a-a805-f22b",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Skyweaver"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "3468-3f0a-a805-f22b",
+                        "childName": "Skyweaver",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "3468-3f0a-a805-f22b",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Skyweaver"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "6637-ad91-396b-5fbf",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Voidweaver"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "6637-ad91-396b-5fbf",
+                        "childName": "Voidweaver",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "6637-ad91-396b-5fbf",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Voidweaver"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "6637-ad91-396b-5fbf",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Voidweaver"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "6637-ad91-396b-5fbf",
+                        "childName": "Voidweaver",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "6637-ad91-396b-5fbf",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Voidweaver"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "6637-ad91-396b-5fbf",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Voidweaver"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "6637-ad91-396b-5fbf",
+                        "childName": "Voidweaver",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "6637-ad91-396b-5fbf",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Voidweaver"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0e67-0338-4edd-0d3c",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Starweaver"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "0e67-0338-4edd-0d3c",
+                        "childName": "Starweaver",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0b81-3579-ad7e-49b2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "800 Points (Quick)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 2,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0e67-0338-4edd-0d3c",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Starweaver"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0e67-0338-4edd-0d3c",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Starweaver"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "0e67-0338-4edd-0d3c",
+                        "childName": "Starweaver",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 40,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d0e1-6785-e168-b595",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1200 Points (Standard)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 3,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0e67-0338-4edd-0d3c",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Starweaver"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "increment",
+                    "value": 20,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0e67-0338-4edd-0d3c",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Starweaver"
+                      }
+                    ],
+                    "repeats": [
+                      {
+                        "field": "selections",
+                        "scope": "roster",
+                        "value": 1,
+                        "percentValue": false,
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "0e67-0338-4edd-0d3c",
+                        "childName": "Starweaver",
+                        "repeats": 1,
+                        "roundUp": false
+                      }
+                    ]
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 60,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "91f0-51d4-3148-07c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "1600 Points (Long)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 4,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "0e67-0338-4edd-0d3c",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Starweaver"
+                      }
+                    ]
+                  }
+                ],
+                "comment": "OTHER COPY-COST LEDGER. Contains the 18 pre-existing Skyweaver, Voidweaver, and Starweaver point modifiers unchanged, preserving the established 1 / 2 / 3 allowance."
+              }
+            ],
+            "defaultSelectionEntryId": "d5a3-11ef-d7bf-a544"
+          }
+        ]
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Patch Notes",
+        "hidden": false,
+        "id": "99e6-8083-7ef4-ae7e",
+        "sortIndex": 2,
+        "categoryLinks": [
+          {
+            "targetId": "default-category",
+            "id": "11cb-80dc-14c8-e8f4",
+            "primary": true,
+            "name": "Configuration"
+          }
+        ],
+        "rules": [
+          {
+            "name": "Patch Notes",
+            "id": "642e-440f-8e97-ec1a",
+            "hidden": false,
+            "description": "## Harlequins 3.3.6\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 12th)\n\n• Additional Copy Costs now correctly applies Troop copy surcharges to Light Troupe, Dark Troupe, and Twilight Troupe using the 4 / 6 / 8 normal-copy allowance.\n• Catalogue maintenance: current implementation notes and historical comments consolidated for the Harlequins 3.3.6 / GS21 baseline.",
+            "noindex": false
+          }
+        ],
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "51b2-306e-1021-d207",
+            "value": 0
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "1",
+            "field": "defaultAmount"
+          }
+        ],
+        "comment": "V12: Patch Notes baseline updated to Harlequins 3.3.6 and GS21.\nV13: replaced the placeholder creation note with the live Troop Additional Copy Costs fix and catalogue-maintenance fingerprint."
+      }
+    ],
+    "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
+    "authorName": "Varmint",
+    "catalogueLinks": [
+      {
+        "type": "catalogue",
+        "name": "Harlequins 3.3.6 - Library",
+        "id": "1d44-b184-eae0-e1bc",
+        "targetId": "8663-2a1b-7470-d347",
+        "importRootEntries": false
+      }
+    ],
+    "entryLinks": [
+      {
+        "import": true,
+        "name": "Troupe Master",
+        "hidden": false,
+        "id": "40fe-923f-3ebb-f319",
+        "type": "selectionEntry",
+        "targetId": "217c-3b14-778d-b90f",
+        "sortIndex": 1,
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "ef1b-5184-f504-b3fd",
+            "primary": true,
+            "name": "Leader"
+          }
+        ]
+      },
+      {
+        "import": true,
+        "name": "Shadowseer",
+        "hidden": false,
+        "id": "5646-a67f-71a8-0f2f",
+        "type": "selectionEntry",
+        "targetId": "ba23-6f4f-cd58-a417",
+        "sortIndex": 2,
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "adb7-d2ee-4d15-b8e0",
+            "primary": true,
+            "name": "Leader"
+          }
+        ]
+      },
+      {
+        "import": true,
+        "name": "Light Troupe",
+        "hidden": false,
+        "id": "99f1-9bbe-935e-210a",
+        "type": "selectionEntry",
+        "targetId": "0263-e721-5014-6588",
+        "sortIndex": 3,
+        "categoryLinks": [
+          {
+            "targetId": "1f85-4f85-d07e-1af5",
+            "id": "f345-3d8b-5e20-6009",
+            "primary": true,
+            "name": "Troop"
+          }
+        ]
+      },
+      {
+        "import": true,
+        "name": "Dark Troupe",
+        "hidden": false,
+        "id": "18d8-3535-4bce-646d",
+        "type": "selectionEntry",
+        "targetId": "10cc-b7dd-6b20-9193",
+        "sortIndex": 4,
+        "categoryLinks": [
+          {
+            "targetId": "1f85-4f85-d07e-1af5",
+            "id": "a603-66c0-b9d0-68d0",
+            "primary": true,
+            "name": "Troop"
+          }
+        ]
+      },
+      {
+        "import": true,
+        "name": "Twilight Troupe",
+        "hidden": false,
+        "id": "29f8-3feb-ab63-4037",
+        "type": "selectionEntry",
+        "targetId": "5c4d-4c21-ffd4-1f5c",
+        "sortIndex": 5,
+        "categoryLinks": [
+          {
+            "targetId": "1f85-4f85-d07e-1af5",
+            "id": "edb7-8fc4-8f4c-f503",
+            "primary": true,
+            "name": "Troop"
+          }
+        ]
+      },
+      {
+        "import": true,
+        "name": "Solitaire",
+        "hidden": false,
+        "id": "6578-1fae-463c-73ea",
+        "type": "selectionEntry",
+        "targetId": "30e9-6fb4-5180-5bab",
+        "sortIndex": 6,
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "0d63-e78d-dee6-22bc",
+            "primary": true,
+            "name": "Other"
+          }
+        ]
+      },
+      {
+        "import": true,
+        "name": "Death Jester",
+        "hidden": false,
+        "id": "7026-0af2-cb20-8ba9",
+        "type": "selectionEntry",
+        "targetId": "04b8-acd2-a5bf-e9d8",
+        "sortIndex": 7,
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "7e0c-bc63-4ecf-ac5e",
+            "primary": true,
+            "name": "Other"
+          }
+        ]
+      },
+      {
+        "import": true,
+        "name": "Skyweaver",
+        "hidden": false,
+        "id": "bd47-fbf0-47f1-f827",
+        "type": "selectionEntry",
+        "targetId": "3468-3f0a-a805-f22b",
+        "sortIndex": 8,
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "f990-8539-a000-3524",
+            "primary": true,
+            "name": "Other"
+          }
+        ]
+      },
+      {
+        "import": true,
+        "name": "Voidweaver",
+        "hidden": false,
+        "id": "e621-a143-2cb5-c24d",
+        "type": "selectionEntry",
+        "targetId": "6637-ad91-396b-5fbf",
+        "sortIndex": 9,
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "8484-a8b4-142c-51d8",
+            "primary": true,
+            "name": "Other"
+          }
+        ]
+      },
+      {
+        "import": true,
+        "name": "Starweaver",
+        "hidden": false,
+        "id": "162b-fb87-c23b-02e9",
+        "type": "selectionEntry",
+        "targetId": "0e67-0338-4edd-0d3c",
+        "sortIndex": 10,
+        "categoryLinks": [
+          {
+            "targetId": "5c3b-2012-fca1-7b34",
+            "id": "6d97-490f-2c2c-f42f",
+            "primary": true,
+            "name": "Other"
+          }
+        ]
+      }
+    ],
+    "comment": "CURRENT STATE\nPlayable Harlequins adapter for Harlequins 3.3.6 on Game System revision 21. All ten playable unit trees are supplied by the linked Harlequins 3.3.6 - Library; this catalogue owns root availability, primary presentation categories, Patch Notes, and standalone Additional Copy Costs accounting.\n\nAUTHORING / RUNTIME NOTES\nThe library link does not import root entries automatically; the ten stable entryLinks are the playable roster surface. Additional Copy Costs is a permanent required Configuration entry. Its Troops ledger charges +20 Points per identical Light, Dark, or Twilight Troupe beyond the selected Game Size's 4 / 6 / 8 allowance. Its Other ledger preserves the existing Skyweaver, Voidweaver, and Starweaver 1 / 2 / 3 allowance arithmetic unchanged. Duplicate Additional Copy Costs entries use the custom automatic_configuration_duplicate error; missing-entry validation is owned by the Game System Required Additional Copy Costs Configuration semantic.\n\nHISTORICAL REVISION LOG\nREV8: New Recruit cost-type compatibility sync. REV9-10: presentation / error-UX companion cleanup. V11: Harlequins 3.3.5 title and standard Patch Notes baseline. V12: Harlequins 3.3.6 and GS21 baseline sync. V13: unified Troops / Other Additional Copy Costs presentation and fixed missing standalone Troop copy surcharges."
+  }
+}

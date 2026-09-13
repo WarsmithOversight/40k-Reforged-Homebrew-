@@ -5,7 +5,7 @@
     "name": "Space Marines 3.3.7",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 18,
+    "revision": 19,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -29,7 +29,7 @@
             "name": "⚠️ CATALOGUE UNDER CONSTRUCTION ⚠️",
             "id": "4fae-07c4-a165-5a51",
             "hidden": false,
-            "description": "# ⚠️ SPACE MARINES CATALOGUE UNDER CONSTRUCTION ⚠️\n\n## Current rules version: 3.3.7\n\n**This catalogue is still under active construction and is not yet a complete representation of the Space Marines army rules.**\n\nSome units, loadouts, restrictions, or options may be missing, incomplete, or still awaiting implementation.\n\n**The Space Marines army rules PDF remains authoritative. If the listbuilder and the army rules disagree, follow the army rules PDF.**\n\n*For the current rules, development status, and to report catalogue problems, visit the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 11th)\n\n• Converted standalone optional Cyclone Missile Launcher, Venerable, Advanced Jamming Beacon, Smoke Launchers, Whirlwind Storm Bolter, Armour Piercing High Explosive Shells, Hunter-Killer Missile, Dozer Blade, Combat Shield, Haywire Mine, Jump Packs, Storm Shield, and Trapmaster Melta Bomb options to checkbox-style selections.\n• Sanguinary Guard: Sanguinary Banner now uses a checkbox-style Unit Upgrade selection.\n• Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans now show a concise temporary Coming Soon message directing players to the Space Marines PDF in the Reforged Discord.\n• Victrix Guard, Victrix Honour Guard, Sanguinary Guard, Sternguard Veterans, Bladeguard Veterans, Devastator Centurions, and Assault Centurions: optional additional models now use checkbox-style Additional Model selections.",
+            "description": "# ⚠️ SPACE MARINES CATALOGUE UNDER CONSTRUCTION ⚠️\n\n## Current rules version: 3.3.7\n\n**This catalogue is still under active construction and is not yet a complete representation of the Space Marines army rules.**\n\nSome units, loadouts, restrictions, or options may be missing, incomplete, or still awaiting implementation.\n\n**The Space Marines army rules PDF remains authoritative. If the listbuilder and the army rules disagree, follow the army rules PDF.**\n\n*For the current rules, development status, and to report catalogue problems, visit the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 12th)\n\n• Converted standalone optional Cyclone Missile Launcher, Venerable, Advanced Jamming Beacon, Smoke Launchers, Whirlwind Storm Bolter, Armour Piercing High Explosive Shells, Hunter-Killer Missile, Dozer Blade, Combat Shield, Haywire Mine, Jump Packs, Storm Shield, and Trapmaster Melta Bomb options to checkbox-style selections.\n• Sanguinary Guard: Sanguinary Banner now uses a checkbox-style Unit Upgrade selection.\n• Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans now show a concise temporary Coming Soon message directing players to the Space Marines PDF in the Reforged Discord.\n• Victrix Guard, Victrix Honour Guard, Sanguinary Guard, Sternguard Veterans, Bladeguard Veterans, Devastator Centurions, and Assault Centurions: optional additional models now use checkbox-style Additional Model selections.\n• Sanguinary Priest: Jump Pack now uses a checkbox-style Paid Wargear selection.\n• Catalogue maintenance: current implementation notes and historical comments consolidated for the live GS21 catalogue.",
             "noindex": false
           }
         ],
@@ -47,7 +47,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV11: Automatically present construction-status notice used instead of the normal Patch Notes template while the Space Marines catalogue remains incomplete.\nREV17: added September 11th Catalogue Bugfixes for checkbox-style optional upgrades, Sanguinary Banner Unit Upgrade presentation, and concise placeholder messages for the four unfinished units.\nREV18: appended checkbox-style Additional Model cleanup for all seven eligible Space Marine units."
+        "comment": "CURRENT STATE: automatically present construction-status notice used instead of the normal Patch Notes template while the Space Marines catalogue remains incomplete. The Catalogue Bugfixes section is cumulative for changes that have reached the live catalogue.\nREV19: updated the loaded-version fingerprint to September 12th and appended the Sanguinary Priest Jump Pack checkbox correction.\nREV19 NOTE: Catalogue maintenance fingerprint bullet retained by author preference; it records the live documentation consolidation rather than a pre-live implementation correction."
       },
       {
         "type": "upgrade",
@@ -158,7 +158,7 @@
             ]
           }
         ],
-        "comment": "CHAPTER CONFIGURATION SCAFFOLD. The PDF requires one of Ultramarines, Blood Angels, Space Wolves, or Salamanders during list building. Ultramarines is the listbuilder's presentation default because it is the first chapter listed in the source; this is not an additional rules statement. Future chapter-specific units should use safe-hide plus constructive wrong-Chapter validation against these stable option IDs.\nREV3 COMPLETE EMPTY-SHELL PASS: Chapter gating is now applied to all 15 chapter-restricted unit roots from the unit skeleton. Existing Chapter entry and option IDs are preserved."
+        "comment": "CURRENT STATE: required Chapter Configuration. Exactly one of Ultramarines, Blood Angels, Space Wolves, or Salamanders is selected; Ultramarines remains the presentation default because it is first in the source. Chapter-restricted roots use stable option IDs, selected-safe hiding, and constructive wrong-Chapter validation. The visible Chapter presentation category does not replace each unit's semantic Leader/Troop/Other role."
       },
       {
         "type": "upgrade",
@@ -12364,13 +12364,13 @@
                     ]
                   }
                 ],
-                "comment": "OTHER COPY-COST LEDGER. REV16 restores Eliminators as an independent Other copy family. The normal 1 / 2 / 3 free Other allowance at 800 / 1200 / 1600 Points and +20 excess-copy surcharge remain unchanged."
+                "comment": "CURRENT STATE: Other copy-cost ledger. Eliminators are an independent Other copy family. The normal 1 / 2 / 3 free Other allowance at 800 / 1200 / 1600 Points and +20 excess-copy surcharge apply per counted datasheet family."
               }
             ],
             "defaultSelectionEntryId": "081a-a640-96e2-7545"
           }
         ],
-        "comment": "REV3 GS20 ADDITIONAL COPY COSTS. This automatically-managed Configuration now accounts for every counted Space Marine Troop and non-Rare Other unit in the complete empty-shell catalogue. Troops allow 4 / 6 / 8 identical copies at 800 / 1200 / 1600 Points before each excess copy adds +20 Points. Other allows 1 / 2 / 3 identical copies at 800 / 1200 / 1600 Points before each excess copy adds +20 Points. The Troops and Other child IDs and surrounding Configuration structure are preserved from the earlier scaffold."
+        "comment": "CURRENT STATE / GS21: automatically managed Additional Copy Costs Configuration for every counted Space Marine Troop and non-Rare Other family. Troops allow 4 / 6 / 8 identical copies at 800 / 1200 / 1600 Points before each excess copy adds +20 Points. Other allows 1 / 2 / 3 identical copies at 800 / 1200 / 1600 Points before each excess copy adds +20 Points. Copy accounting is per datasheet family, not pooled by presentation category."
       },
       {
         "type": "unit",
@@ -13099,7 +13099,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: SANGUINARY GUARD. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models (source allows 2-3; Additional Model deferred); base cost represented here=100 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV5 BLOOD ANGELS LOADOUT: compact final-state model presentation. Sanguinary Guard 1 is the squad's Inferno Pistol bearer and independently chooses Encarmine Sword, Spear, or Axe. Sanguinary Guard 2 uses Angelus Bolter with the same three Encarmine choices. One optional Sanguinary Guard 3 may be added for 50 Points and uses Angelus Bolter with the same Encarmine choices. Sanguinary Banner is optional Paid Wargear for 10 Points with its full player-facing rule.",
+        "comment": "REV5 BLOOD ANGELS LOADOUT: compact final-state model presentation. Sanguinary Guard 1 is the squad's Inferno Pistol bearer and independently chooses Encarmine Sword, Spear, or Axe. Sanguinary Guard 2 uses Angelus Bolter with the same three Encarmine choices. One optional Sanguinary Guard 3 may be added for 50 Points and uses Angelus Bolter with the same Encarmine choices. Sanguinary Banner is optional Paid Wargear for 10 Points with its full player-facing rule.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -13479,7 +13479,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: SANGUINARY PRIEST. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=40 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV5 BLOOD ANGELS LOADOUT: fixed Bolt Pistol & Chainsword model. Jump Pack is optional Paid Wargear for 10 Points and carries the source Fly / Move Roll effect as player-facing rule text.",
+        "comment": "CURRENT STATE: Blood Angels Other / Infantry unit. Fixed Bolt Pistol & Chainsword loadout. Jump Pack is an independent +10 Point Paid Wargear checkbox and carries its source Fly / Move Roll rule text.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -13531,17 +13531,6 @@
             "id": "b183-9b72-3d35-7380",
             "hidden": false,
             "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "3b77-055a-9153-b120",
-                "includeChildSelections": false
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -13564,6 +13553,17 @@
                     "hidden": false,
                     "description": "This unit gains Fly. For each Move Roll made for this unit, add 1 D6 to that roll.",
                     "noindex": false
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "3b77-055a-9153-b120",
+                    "includeChildSelections": false
                   }
                 ]
               }
@@ -13708,7 +13708,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: DEATH COMPANY ASSAULT INTERCESSORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=150 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV5 BLOOD ANGELS LOADOUT: approved compressed final-state presentation. Model 1 is the special-pistol / heavy-melee model and independently chooses one Power Fist / Power Sword / Thunder Hammer and one Flamer Pistol / Plasma Pistol / Inferno Pistol. Model 2 is the Eviscerator & Heavy Bolt Pistol bearer. Models 3-5 are represented as one fixed 3x Chainsword & Heavy Bolt Pistol package.",
+        "comment": "REV5 BLOOD ANGELS LOADOUT: approved compressed final-state presentation. Model 1 is the special-pistol / heavy-melee model and independently chooses one Power Fist / Power Sword / Thunder Hammer and one Flamer Pistol / Plasma Pistol / Inferno Pistol. Model 2 is the Eviscerator & Heavy Bolt Pistol bearer. Models 3-5 are represented as one fixed 3x Chainsword & Heavy Bolt Pistol package.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -14045,7 +14045,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: JUMP PACK ASSAULT DEATH COMPANY. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=160 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV5 BLOOD ANGELS LOADOUT: approved compressed final-state presentation. Model 1 is the special-pistol / heavy-melee model and independently chooses one Power Fist / Power Sword / Thunder Hammer and one Flamer Pistol / Plasma Pistol / Inferno Pistol. Model 2 is the Eviscerator & Heavy Bolt Pistol bearer. Models 3-5 are represented as one fixed 3x Chainsword & Heavy Bolt Pistol package.",
+        "comment": "REV5 BLOOD ANGELS LOADOUT: approved compressed final-state presentation. Model 1 is the special-pistol / heavy-melee model and independently chooses one Power Fist / Power Sword / Thunder Hammer and one Flamer Pistol / Plasma Pistol / Inferno Pistol. Model 2 is the Eviscerator & Heavy Bolt Pistol bearer. Models 3-5 are represented as one fixed 3x Chainsword & Heavy Bolt Pistol package.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -14382,7 +14382,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: DEATH COMPANY INTERCESSORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=150 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV5 BLOOD ANGELS LOADOUT: approved compact final-state presentation. Death Company Intercessor 1 independently chooses one melee weapon (Chainsword, Power Fist, Power Weapon, or Thunder Hammer) and one pistol (Bolt Pistol, Flamer Pistol, Plasma Pistol, or Grav-Pistol). Death Company Intercessor 2 is fixed as Bolt Rifle & Grenade Launcher. Models 3-5 are one fixed 3x Bolt Rifle package.\nREV13 / 3.3.7: Death Company Intercessor 1 corrected to the source replacement sequence. It defaults to Bolt Rifle. Replacing that rifle with Bolt Pistol, Flamer Pistol, Plasma Pistol, Grav-Pistol, Chainsword, or Power Sword opens a mandatory follow-up choice of Chainsword, Power Fist, Power Weapon, or Thunder Hammer. Existing surviving pistol IDs and the original melee-follow-up IDs are preserved where possible.",
+        "comment": "REV5 BLOOD ANGELS LOADOUT: approved compact final-state presentation. Death Company Intercessor 1 independently chooses one melee weapon (Chainsword, Power Fist, Power Weapon, or Thunder Hammer) and one pistol (Bolt Pistol, Flamer Pistol, Plasma Pistol, or Grav-Pistol). Death Company Intercessor 2 is fixed as Bolt Rifle & Grenade Launcher. Models 3-5 are one fixed 3x Bolt Rifle package.\nREV13 / 3.3.7: Death Company Intercessor 1 corrected to the source replacement sequence. It defaults to Bolt Rifle. Replacing that rifle with Bolt Pistol, Flamer Pistol, Plasma Pistol, Grav-Pistol, Chainsword, or Power Sword opens a mandatory follow-up choice of Chainsword, Power Fist, Power Weapon, or Thunder Hammer. Existing surviving pistol IDs and the original melee-follow-up IDs are preserved where possible.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -14994,7 +14994,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV1 VEHICLE SHELL ONLY. Source: BAAL PREDATOR. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=120 Points. Source characteristics recorded for future population only: T 4, Sv 4+, H 11, Rv 6+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nBaal Predator remains a native Blood Angels vehicle only. It is deliberately excluded from Manufactorum Imperium because Adeptus Mechanicus has no Chapter selector and therefore cannot satisfy the Blood Angels requirement.\nREV3 EMPTY UNIT SHELL. Source skeleton: BAAL PREDATOR. unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=120 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV5 BLOOD ANGELS LOADOUT: main weapon and free optional secondary weapon are under the Baal Predator model. Sponson Weapons deliberately remain in Loadout Options, with (None) as the default and either Sponson Heavy Flamers or Sponson Multi-Meltas costing 20 Points. Dozer Blade is the sole Paid Wargear option at 10 Points.\nREV13 PRESENTATION CLEANUP: suppressed the redundant 'Sponson Weapons' header. The existing (None) / Sponson Heavy Flamers +20 / Sponson Multi-Meltas +20 choices are unchanged.",
+        "comment": "CURRENT STATE: Blood Angels Other / Vehicle unit, deliberately excluded from Manufactorum because the consumer has no Chapter selector. Loadout Options contain the mandatory main weapon choice, the optional Hunter-Killer Missile / Storm Bolter secondary selector, and the optional Sponson Heavy Flamers / Sponson Multi-Meltas selector with true (None) states. Dozer Blade is an independent +10 Point Paid Wargear checkbox.",
         "modifiers": [
           {
             "type": "set",
@@ -15414,7 +15414,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: WOLF GUARD BATTLE LEADER. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=40 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV6 SPACE WOLVES LOADOUT: Wolf Guard Battle Leader uses two independent mandatory weapon choices, melee first then secondary equipment. Defaults are Chainsword and Heavy Bolt Pistol.",
+        "comment": "REV6 SPACE WOLVES LOADOUT: Wolf Guard Battle Leader uses two independent mandatory weapon choices, melee first then secondary equipment. Defaults are Chainsword and Heavy Bolt Pistol.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -15709,7 +15709,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: BLOOD CLAWS. unit_type=troop; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=130 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV6 SPACE WOLVES LOADOUT: approved two-card troop presentation. Blood Claw Pack Leader chooses one melee weapon and one secondary weapon; the other four models are represented as one fixed 4x Chainsword & Bolt Pistol package.",
+        "comment": "REV6 SPACE WOLVES LOADOUT: approved two-card troop presentation. Blood Claw Pack Leader chooses one melee weapon and one secondary weapon; the other four models are represented as one fixed 4x Chainsword & Bolt Pistol package.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -16041,7 +16041,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: GREY HUNTERS. unit_type=troop; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=150 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV6 SPACE WOLVES LOADOUT: approved two-card troop presentation. Grey Hunter Pack Leader chooses one melee weapon and one secondary weapon; the other four models are represented as one fixed 4x Chainsword & Bolt Pistol package.",
+        "comment": "REV6 SPACE WOLVES LOADOUT: approved two-card troop presentation. Grey Hunter Pack Leader chooses one melee weapon and one secondary weapon; the other four models are represented as one fixed 4x Chainsword & Bolt Pistol package.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -16399,7 +16399,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: WOLF GUARD TERMINATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models; base cost represented here=120 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV6 SPACE WOLVES LOADOUT: two explicit Terminator model cards with identical final-state choices. Power Weapon + Storm Bolter/Storm Shield are represented as atomic packages. Lightning Claws and Great Axe share a hidden semantic category with a constructive unit-level max-one validator; Power Fist & Assault Cannon uses a separate max-one semantic validator.\nREV7 ERROR WORDING: standardized the special-melee corrective instruction from 'Choose a standard Power Weapon loadout...' to 'Choose a different loadout for one of those models.'",
+        "comment": "REV6 SPACE WOLVES LOADOUT: two explicit Terminator model cards with identical final-state choices. Power Weapon + Storm Bolter/Storm Shield are represented as atomic packages. Lightning Claws and Great Axe share a hidden semantic category with a constructive unit-level max-one validator; Power Fist & Assault Cannon uses a separate max-one semantic validator.\nREV7 ERROR WORDING: standardized the special-melee corrective instruction from 'Choose a standard Power Weapon loadout...' to 'Choose a different loadout for one of those models.'",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -16762,7 +16762,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: WOLF SCOUTS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=130 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV6 SPACE WOLVES LOADOUT: approved five-role final-state presentation. Pack Leader selects Power Weapon or Instigator Bolt Carbine; one ordinary Wolf Scout retains Plasma Pistol & Combat Blade; the Weapons Specialist is fixed to Plasma Gun; Trapmaster keeps Combat Blade & Plasma Pistol with a direct +20 Point Melta Bomb checkbox; Rune Priest Skjald chooses the default Combat Blade & Plasma Pistol or +10 Point Runic Stave.\nREV8: renamed Pack Leader to Wolf Scouts Pack Leader so Pack Leader cards consistently identify their parent unit.",
+        "comment": "REV6 SPACE WOLVES LOADOUT: approved five-role final-state presentation. Pack Leader selects Power Weapon or Instigator Bolt Carbine; one ordinary Wolf Scout retains Plasma Pistol & Combat Blade; the Weapons Specialist is fixed to Plasma Gun; Trapmaster keeps Combat Blade & Plasma Pistol with a direct +20 Point Melta Bomb checkbox; Rune Priest Skjald chooses the default Combat Blade & Plasma Pistol or +10 Point Runic Stave.\nREV8: renamed Pack Leader to Wolf Scouts Pack Leader so Pack Leader cards consistently identify their parent unit.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -17224,7 +17224,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: THUNDERWOLF CAVALRY. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=3 base models; base cost represented here=150 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV6 SPACE WOLVES PLACEHOLDER: full Thunderwolf Cavalry loadout intentionally deferred. Uses the same mandatory player-facing content-message pattern as Sisters Novitiates, adapted to direct players to the Space Marines army rules PDF.\nREV7 THUNDERWOLF PERMISSIVE-CORRECTIVE LOADOUT: replaced the temporary content-message placeholder with three explicit model cards. Every model independently chooses one melee state (Chainsword, Power Fist, Great Axe, or +10 Thunder Hammer) and one sidearm state (Bolt Pistol, Boltgun, Plasma Pistol, +10 Power Fist, or +10 Storm Shield). Four hidden semantic categories plus player-facing custom errors enforce the source unit-level limits: max one melee Power Fist, max one Great Axe/Thunder Hammer total, max one Plasma Pistol, and max one sidearm Power Fist. Storm Shields remain unrestricted across all three models.",
+        "comment": "CURRENT STATE: three explicit model cards. Every model independently chooses one melee state and one sidearm state. Hidden semantic counters plus constructive errors enforce max one melee Power Fist, max one Great Axe/Thunder Hammer total, max one Plasma Pistol, and max one sidearm Power Fist. Storm Shields remain unrestricted across all three models.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -17982,7 +17982,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: FIREDRAKE TERMINATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models; base cost represented here=150 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
+        "comment": "CURRENT STATE / INCOMPLETE: selectable Salamanders Other / Infantry root with current points, Chapter gate, copy accounting, and Leader-host validation. Internal models, equipment and loadout choices are intentionally not implemented yet; the visible Coming Soon rule directs players to the authoritative PDF.",
         "rules": [
           {
             "name": "Coming Soon",
@@ -18148,7 +18148,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: PYROCLASTS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=150 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV8: Pyroclasts use a dedicated Pyroclast Sergeant card for the optional melee weapon; Pyroclasts 2-5 are a fixed 4x Flame Projector package.\nREV10: Pyroclast Sergeant no longer exposes the ordinary lone Flame Projector state; the Sergeant card is limited to Power Fist & Flame Projector or Power Sword & Flame Projector.",
+        "comment": "REV8: Pyroclasts use a dedicated Pyroclast Sergeant card for the optional melee weapon; Pyroclasts 2-5 are a fixed 4x Flame Projector package.\nREV10: Pyroclast Sergeant no longer exposes the ordinary lone Flame Projector state; the Sergeant card is limited to Power Fist & Flame Projector or Power Sword & Flame Projector.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -18319,7 +18319,6 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: CAPTAIN. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=80 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -18564,7 +18563,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: GRAVIS CAPTAIN. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=100 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV8: player-facing names simplify Power/Relic Sword to Power Sword and Boltstorm Gauntlet + Left Power Fist to Power Fist & Boltstorm Gauntlet.",
+        "comment": "REV8: player-facing names simplify Power/Relic Sword to Power Sword and Boltstorm Gauntlet + Left Power Fist to Power Fist & Boltstorm Gauntlet.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -18751,7 +18750,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: PHOBOS CAPTAIN. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=60 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV16: Eliminators restored as an eligible attachment host. Existing Attaches To association ID and hidden Phobos host category are unchanged.",
+        "comment": "REV16: Eliminators restored as an eligible attachment host. Existing Attaches To association ID and hidden Phobos host category are unchanged.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -18869,7 +18868,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: JUMP PACK CAPTAIN. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=110 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV8: Choose-two weapon rule is represented as two independent mandatory choices, preserving legal duplicate weapon selections while avoiding quantity spinners.",
+        "comment": "REV8: Choose-two weapon rule is represented as two independent mandatory choices, preserving legal duplicate weapon selections while avoiding quantity spinners.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -19128,7 +19127,6 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: TERMINATOR CAPTAIN. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=120 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -19360,7 +19358,6 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: LIBRARIAN. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=60 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -19478,7 +19475,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: PHOBOS LIBRARIAN. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=60 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV16: Eliminators restored as an eligible attachment host. Existing Attaches To association ID and hidden Phobos host category are unchanged.",
+        "comment": "REV16: Eliminators restored as an eligible attachment host. Existing Attaches To association ID and hidden Phobos host category are unchanged.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -19596,7 +19593,6 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: TERMINATOR LIBRARIAN. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=100 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -19836,7 +19832,6 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: JUMP PACK LIBRARIAN. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=70 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -19954,7 +19949,6 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: LIEUTENANT. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=40 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -20207,7 +20201,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: PHOBOS LIEUTENANT. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=40 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV16: Eliminators restored as an eligible attachment host. Existing Attaches To association ID and hidden Phobos host category are unchanged.",
+        "comment": "REV16: Eliminators restored as an eligible attachment host. Existing Attaches To association ID and hidden Phobos host category are unchanged.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -20325,7 +20319,6 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: JUMP PACK LIEUTENANT. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=50 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -20578,7 +20571,6 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: CHAPLAIN. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=60 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -20696,7 +20688,6 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: TERMINATOR CHAPLAIN. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=100 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -20904,7 +20895,6 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: JUMP PACK CHAPLAIN. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=70 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -21131,7 +21121,6 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: APOTHECARY BIOLOGIS. unit_type=leader; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=20 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -22841,7 +22830,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: ASSAULT INTERCESSORS. unit_type=troop; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=130 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred. The source Jump Packs option later overrides this unit's attachment eligibility from normal Leaders to Jump Pack Leaders; the 3.3.6 PDF phrases these as Assault Intercessors without Fly versus with Fly. That conditional attachment state is intentionally deferred with the Jump Packs loadout.\nREV8: Jump Packs use permissive-corrective attachment validation. Base Assault Intercessors accept Captain/Librarian/Lieutenant/Chaplain/Wolf Guard Battle Leader; Jump Pack Assault Intercessors instead accept the four Jump Pack Leader variants. The same unit root remains visible in either state.\nREV12 / 3.3.7 FLY ATTACHMENT AUDIT: preserved the eight explicit PDF-backed state validators that require Captain/Librarian/Lieutenant/Chaplain to use Assault Intercessors without Fly and their Jump Pack variants to use Assault Intercessors with Fly. The new Unit Skeleton does not encode this state distinction. Removed the older Wolf Guard Battle Leader Fly restriction because the current 3.3.7 PDF lists ASSAULT INTERCESSORS for that Leader without a Fly qualifier.",
+        "comment": "CURRENT STATE: Troop / Infantry unit with optional +20 Point Jump Packs. The builder preserves the source attachment-state distinction constructively: Captain/Librarian/Lieutenant/Chaplain are legal only without Jump Packs, while Jump Pack Captain/Librarian/Lieutenant/Chaplain are legal only with Jump Packs. The Sergeant special-melee dependency is also enforced through constructive validation rather than hiding legal choices.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -23168,7 +23157,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: TERMINATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models; base cost represented here=110 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
+        "comment": "CURRENT STATE / INCOMPLETE: selectable Other / Infantry root with current points, copy accounting and Leader-host validation. Internal models, equipment and loadout choices are intentionally not implemented yet; the visible Coming Soon rule directs players to the authoritative PDF.",
         "rules": [
           {
             "name": "Coming Soon",
@@ -23260,7 +23249,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: ASSAULT TERMINATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models; base cost represented here=110 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
+        "comment": "CURRENT STATE / INCOMPLETE: selectable Other / Infantry root with current points, copy accounting and Leader-host validation. Internal models, equipment and loadout choices are intentionally not implemented yet; the visible Coming Soon rule directs players to the authoritative PDF.",
         "rules": [
           {
             "name": "Coming Soon",
@@ -23346,7 +23335,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: MELTA ERADICATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=3 base models; base cost represented here=120 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV10: Melta Eradicators 1 and 2 now each choose Melta Rifle or +10 Heavy Melta Rifle. The third model is presented as Heavy Melta Eradicator and is locked to Multi-Melta with no paid upgrade.\nREV11 / SPACE MARINES 3.3.7: Melta Eradicators base cost changed from 120 to 110 Points.",
+        "comment": "REV10: Melta Eradicators 1 and 2 now each choose Melta Rifle or +10 Heavy Melta Rifle. The third model is presented as Heavy Melta Eradicator and is locked to Multi-Melta with no paid upgrade.\nREV11 / SPACE MARINES 3.3.7: Melta Eradicators base cost changed from 120 to 110 Points.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -23598,7 +23587,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: HEAVY BOLTER ERADICATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=3 base models; base cost represented here=120 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV11 / SPACE MARINES 3.3.7: Heavy Bolter Eradicators base cost changed from 120 to 110 Points.",
+        "comment": "REV11 / SPACE MARINES 3.3.7: Heavy Bolter Eradicators base cost changed from 120 to 110 Points.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -24266,7 +24255,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: REIVERS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=130 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV10: Reiver Captain is the one-model combined-loadout bearer and now exposes Heavy Bolt Pistol, Bolt Carbine, Combat Knife, and Shock Grenade as four separate fixed items. Reivers 2-5 each show Combat Knife & Shock Grenade plus an independent Heavy Bolt Pistol / Bolt Carbine choice.",
+        "comment": "REV10: Reiver Captain is the one-model combined-loadout bearer and now exposes Heavy Bolt Pistol, Bolt Carbine, Combat Knife, and Shock Grenade as four separate fixed items. Reivers 2-5 each show Combat Knife & Shock Grenade plus an independent Heavy Bolt Pistol / Bolt Carbine choice.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -24837,7 +24826,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: HELLBLASTERS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=140 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV10: Hellblasters implemented. Sergeant carries the unit's Plasma Pistol and chooses one of the three Incinerator patterns. Hellblaster 2-3 shares one presentation header but contains two independent unlabeled weapon lists, preserving the source +10 per-model upgrade cost. Hellblasters 4 and 5 use separate cards.",
+        "comment": "REV10: Hellblasters implemented. Sergeant carries the unit's Plasma Pistol and chooses one of the three Incinerator patterns. Hellblaster 2-3 shares one presentation header but contains two independent unlabeled weapon lists, preserving the source +10 per-model upgrade cost. Hellblasters 4 and 5 use separate cards.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -25259,7 +25248,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: DEVASTATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=160 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV8: all five Devastators are explicit. The Sergeant carries the source heavy weapon plus sidearm and melee choices. Only Devastator 2 exposes the +10 combi-weapon full-replacement branch, per the approved presentation.\nREV10: Devastator Sergeant is limited to Sergeant melee + sidearm loadouts and no longer receives a Devastator heavy weapon. Devastator 2 retains the sole +10 combi-weapon upgrade list.",
+        "comment": "REV8: all five Devastators are explicit. The Sergeant carries the source heavy weapon plus sidearm and melee choices. Only Devastator 2 exposes the +10 combi-weapon full-replacement branch, per the approved presentation.\nREV10: Devastator Sergeant is limited to Sergeant melee + sidearm loadouts and no longer receives a Devastator heavy weapon. Devastator 2 retains the sole +10 combi-weapon upgrade list.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -25884,7 +25873,6 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: DESOLATION SQUAD. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=160 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -26188,7 +26176,6 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: INFERNUS SQUAD. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=140 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -26324,7 +26311,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: VANGUARD VETERANS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models (source allows 2-3; Additional Model deferred); base cost represented here=80 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
+        "comment": "CURRENT STATE / INCOMPLETE: selectable Other / Infantry root with current points, copy accounting and Leader-host validation. Internal models, equipment and loadout choices are intentionally not implemented yet; the visible Coming Soon rule directs players to the authoritative PDF.",
         "rules": [
           {
             "name": "Coming Soon",
@@ -26378,7 +26365,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: STERNGUARD VETERANS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models (source allows 2-3; Additional Model deferred); base cost represented here=80 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV10: Sternguard Sergeant is limited to the Sergeant melee and pistol loadouts and no longer also receives the standard Sternguard Veteran primary-weapon list.",
+        "comment": "REV10: Sternguard Sergeant is limited to the Sergeant melee and pistol loadouts and no longer also receives the standard Sternguard Veteran primary-weapon list.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -26779,7 +26766,6 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: BLADEGUARD VETERANS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=2 base models (source allows 2-3; Additional Model deferred); base cost represented here=80 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -27200,7 +27186,6 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: SUPPRESSORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=3 base models; base cost represented here=100 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -27336,7 +27321,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: INCEPTORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=3 base models; base cost represented here=100 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV10: collapsed the three identical Inceptor model cards into one Inceptor 1-3 card with 3x Plasma Exterminators or 3x Assault Bolters.",
+        "comment": "REV10: collapsed the three identical Inceptor model cards into one Inceptor 1-3 card with 3x Plasma Exterminators or 3x Assault Bolters.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -27476,7 +27461,7 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: AGGRESSORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=3 base models; base cost represented here=130 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV10: each Aggressor now has two lists. The first represents the inseparable Power Fists + Boltstorm/Flamestorm Gauntlets assembly; the second separately records the fixed Fragstorm Grenade Launcher.",
+        "comment": "REV10: each Aggressor now has two lists. The first represents the inseparable Power Fists + Boltstorm/Flamestorm Gauntlets assembly; the second separately records the fixed Fragstorm Grenade Launcher.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -27801,7 +27786,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: TECHMARINE. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=40 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV10: expanded the Techmarine fixed equipment package into three separate mandatory single-item lists: Omnissian Axe & Servo-Arm, Grav-Pistol, and Forge Bolter.\nREV15 PRESENTATION CORRECTION: split the former atomic 'Omnissian Axe & Servo-Arm' line into four independent fixed one-item lists: Omnissian Axe, Servo-Arm, Grav-Pistol, and Forge Bolter. The former combined selection ID is preserved as Omnissian Axe; Servo-Arm receives a new deterministic ID. Also removed a stale model-level defaultSelectionEntryId that did not resolve to a live child selection.",
+        "comment": "REV10: expanded the Techmarine fixed equipment package into three separate mandatory single-item lists: Omnissian Axe & Servo-Arm, Grav-Pistol, and Forge Bolter.\nREV15 PRESENTATION CORRECTION: split the former atomic 'Omnissian Axe & Servo-Arm' line into four independent fixed one-item lists: Omnissian Axe, Servo-Arm, Grav-Pistol, and Forge Bolter. The former combined selection ID is preserved as Omnissian Axe; Servo-Arm receives a new deterministic ID. Also removed a stale model-level defaultSelectionEntryId that did not resolve to a live child selection.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -28012,7 +27997,6 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: APOTHECARY. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=40 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -28561,7 +28545,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: SCOUT SKIRMISHERS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=100 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV10: Scout Skirmishers Sergeant is locked to Chainsword, Scout Skirmishers Sniper is locked to Sniper Rifle, and the remaining three Scouts are represented by one Scout Skirmisher 3-5 card with 3x-prefixed ordinary loadouts.",
+        "comment": "REV10: Scout Skirmishers Sergeant is locked to Chainsword, Scout Skirmishers Sniper is locked to Sniper Rifle, and the remaining three Scouts are represented by one Scout Skirmisher 3-5 card with 3x-prefixed ordinary loadouts.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -28767,7 +28751,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: SCOUT INFILTRATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=110 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV8: Sergeant owns the Chainsword specialization and defaults to Bolt Pistol & Chainsword. The named Heavy Weapons Specialist defaults to Heavy Bolter, may choose Missile Launcher, and retains Boltgun as the ordinary fallback.\nREV10: Scout Infiltrators Sergeant is fixed to Chainsword & Bolt Pistol. Former Scout Infiltrators 3, 4 and 5 are collapsed into one Scout Infiltrator 3-5 card with 3x-prefixed ordinary loadout states.\nREV15 CORRECTION: Scout Infiltrator Heavy Weapons Specialist may now choose only Heavy Bolter or Missile Launcher. The erroneous Boltgun fallback option was removed. Existing Heavy Bolter / Missile Launcher IDs and Heavy Bolter default are preserved.",
+        "comment": "REV8: Sergeant owns the Chainsword specialization and defaults to Bolt Pistol & Chainsword. The named Heavy Weapons Specialist defaults to Heavy Bolter, may choose Missile Launcher, and retains Boltgun as the ordinary fallback.\nREV10: Scout Infiltrators Sergeant is fixed to Chainsword & Bolt Pistol. Former Scout Infiltrators 3, 4 and 5 are collapsed into one Scout Infiltrator 3-5 card with 3x-prefixed ordinary loadout states.\nREV15 CORRECTION: Scout Infiltrator Heavy Weapons Specialist may now choose only Heavy Bolter or Missile Launcher. The erroneous Boltgun fallback option was removed. Existing Heavy Bolter / Missile Launcher IDs and Heavy Bolter default are preserved.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -29019,7 +29003,6 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: INFILTRATORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=100 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -29149,7 +29132,6 @@
             ]
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: INCURSORS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=5 base models; base cost represented here=100 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -29275,7 +29257,6 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: CHAPTER ANCIENT. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=60 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -29391,7 +29372,6 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: CHAPTER CHAMPION. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=80 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -29517,7 +29497,6 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: DEVASTATOR CENTURIONS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model (source allows 1-2; Additional Model deferred); base cost represented here=100 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -29812,7 +29791,6 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV3 EMPTY UNIT SHELL. Source skeleton: ASSAULT CENTURIONS. unit_type=other; unit_class=infantry; rare=false; counts_toward_unit_type_limit=true; base=1 base model (source allows 1-2; Additional Model deferred); base cost represented here=100 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -32821,7 +32799,7 @@
     ],
     "authorName": "Varmint",
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
-    "comment": "SPACE MARINES REV1 / GS18 — VEHICLE SCAFFOLD ONLY.\nThis catalogue is intentionally incomplete. It exists to establish the Space Marine Chapter selector, Chapter presentation semantics, Space Marines Vehicles presentation, stable vehicle unit IDs, source points/type/class metadata, and Additional Copy Costs infrastructure before any vehicle loadouts or rules are implemented. No Infantry, Leader, Troop, chapter-exclusive non-vehicle unit, weapon choice, paid wargear, unit rule, attachment rule, relic, psychic power, or other gameplay payload is implemented in this revision. The army rules PDF remains authoritative.\n\nREV2 — MANUFACTORUM-READY VEHICLE SCAFFOLD\nAligned native vehicle presentation with the established Astra Militarum / Manufactorum bridge pattern. All eleven native Space Marine vehicle shells now present under Other while retaining their existing Space Marines Vehicles category links as non-primary compatibility tags. The ten chapter-independent vehicle shells are mirrored into Manufactorum Imperium V6 using the same unit IDs. Baal Predator remains local to Space Marines / Blood Angels and is not exported through Manufactorum.\n\nREV3 — SPACE MARINES 3.3.6 / GS20 COMPLETE EMPTY UNIT SHELLS\nExpanded the catalogue from the eleven-vehicle scaffold to all 71 unit roots in source skeleton order while preserving the existing catalogue ID, Chapter Configuration IDs, Additional Copy Costs Configuration IDs, and all eleven established vehicle IDs / Space Marines Vehicles bridge tags. Updated to Game System revision 20.\nThis phase intentionally implements only unit-level list-building structure: Points, Leader/Troop/Other, Infantry/Vehicle, counted unit-type semantics, Chapter gating, base Leader attachment relationships, host one-Leader capacity, and GS20 Troop/Other Additional Copy Costs. No internal loadouts, model cards, paid wargear, unit rules/profiles, or Additional Model controls are implemented.\nASSAULT INTERCESSORS ATTACHMENT NOTE: the source skeleton's Jump Packs option contains the only attachment_override in the army. The 3.3.6 PDF confirms the distinction explicitly: normal Captain/Librarian/Lieutenant attach to Assault Intercessors without Fly, while Jump Pack Captain/Librarian/Lieutenant/Chaplain attach to Assault Intercessors with Fly. Base Assault Intercessors therefore use the normal-Leader host state in REV3; the Jump Pack Leader host state will be added when the deferred Jump Packs loadout is implemented.\n\nREV4 — CHAPTER-FIRST ARMY LIST PRESENTATION\nApplied the established Chaos Space Marines Legion presentation pattern to Space Marine Chapters. All 15 chapter-exclusive units now use Ultramarines, Blood Angels, Space Wolves, or Salamanders as their primary Army List presentation category. Their source Leader/Troop/Other role remains as a secondary semantic category, together with Infantry/Vehicle, Leader Capacity, Additional Copy Cost, attachment, and other existing tags. No unit IDs, category-link IDs, points, Chapter gating, Additional Copy Cost arithmetic, attachments, or other mechanics changed. Existing sort indices already place all chapter-specific units at 1-15 and generic Leaders from 16 onward, so the selected Chapter category appears above the standard Leader category.\n\nREV5 — BLOOD ANGELS LOADOUT BATCH 1\nImplemented player-facing loadouts for Sanguinary Guard, Sanguinary Priest, Death Company Assault Intercessors, Jump Pack Assault Death Company, Death Company Intercessors, and Baal Predator. Sanguinary Guard uses separate model cards, one optional +50 Point third model, and Sanguinary Banner Paid Wargear. Sanguinary Priest has its fixed weapon package and +10 Point Jump Pack. The two assault Death Company units use the approved three-card compressed layout; Death Company Intercessors use one veteran weapon card plus fixed models 2 and 3-5. Baal Predator keeps paid Sponson Weapons inside Loadout Options with (None) default; Dozer Blade remains Paid Wargear. No other unit roots, categories, Chapter presentation, attachments, Additional Copy Costs, points outside these loadouts, or existing stable IDs were changed.\n\nREV6 — SPACE WOLVES LOADOUT BATCH\nImplemented Wolf Guard Battle Leader, Blood Claws, Grey Hunters, Wolf Guard Terminators, and Wolf Scouts using the approved compact final-state presentations. Wolf Guard Terminators expose identical per-model final-state choices while constructive semantic validators preserve the source max-one special-melee and max-one Assault Cannon limits. Wolf Scouts use named role cards, including a checklist-style Melta Bomb upgrade on Trapmaster. Thunderwolf Cavalry remains intentionally unimplemented and now uses the same mandatory content-message pattern as Adepta Sororitas Sisters Novitiates, adapted to Space Marines. No other unit roots, Chapter presentation, attachments, Additional Copy Costs, points, or existing stable IDs were changed.\n\nREV7 — THUNDERWOLF CAVALRY PERMISSIVE-CORRECTIVE LOADOUT\nReplaced the Thunderwolf Cavalry placeholder with three clean model cards and enforced its cross-model equipment caps through constructive semantic errors rather than cross-hiding. Storm Shields may be selected independently by all three models for +10 each. Melee Power Fist, Great Axe/Thunder Hammer, Plasma Pistol, and sidearm Power Fist each retain their source max-one unit limits. Also standardized the Wolf Guard Terminator special-melee error repair instruction to 'Choose a different loadout for one of those models.' No other unit mechanics, categories, Chapter presentation, attachments, points, or Additional Copy Costs were changed.\n\nREV8 — RAPID-FIRE LOADOUT BATCH\nImplemented the 44 approved simple Space Marine unit loadouts from Pyroclasts through Astartes Basilisk. Presentation uses melee-first ordering where practical, explicit specialist/model cards where requested, atomic final-state packages, single-step Additional Model groups for the variable-size 2/3-model and 1/2-model units, and checklist-style direct Paid Wargear. Assault Intercessors now implement +20 Jump Packs with exact permissive-corrective attachment-state validation: normal Leaders are legal only without Jump Packs, while Jump Pack Captain/Librarian/Lieutenant/Chaplain are legal only with Jump Packs. The Sergeant melee dependency is also enforced constructively. Wolf Scouts Pack Leader was renamed to include its unit name while preserving its existing ID. Existing unit IDs, Chapter-first presentation, Additional Copy Costs, points outside newly represented wargear/additional-model choices, prior Blood Angels/Space Wolves loadouts, and unrelated mechanics remain unchanged.\n\nREV9 — GS21 CHAPTER CATEGORY ORDER\nRetargeted to Game System revision 21. GS21 moves the four Chapter presentation categories above Leader in Army section ordering. No Space Marine unit IDs, loadouts, categories, points, attachments, Additional Copy Costs, or other catalogue mechanics changed.\n\nREV10 — LOADOUT CORRECTION BATCH\nApplied focused presentation and role corrections to Pyroclasts, Astartes Basilisk, Predator, Scout Infiltrators, Scout Skirmishers, Techmarine, Aggressors, Inceptors, Sternguard Veterans, Devastators, Reivers, and Melta Eradicators; implemented Hellblasters; removed Eliminators from the playable catalogue. Eliminators were also removed from Other Additional Copy Cost arithmetic and from the constructive Phobos Leader attachment text. Existing surviving IDs are preserved where the same player-facing decision survives.\n\nREV11 — SPACE MARINES 3.3.7\nMelta Eradicators and Heavy Bolter Eradicators changed from 120 to 110 Points. Added an automatically present under-construction notice instead of the normal Patch Notes template. Game System remains revision 21. No other catalogue mechanics changed.\n\nREV12 — VICTRIX REWORK + FLY ATTACHMENT AUDIT\nAdded the new Victrix Guard and fully implemented the reworked Victrix Honour Guard from Space Marines 3.3.7. Both are 2-3 model Ultramarines Other units at 50 Points per model with an explicit +50 Additional Model. Victrix Guard carries Bolt Carbine, Power Weapon & Ultima Storm Shield; Victrix Honour Guard carries Bolt Carbine & Power Weapon. Both use the existing Captain/Librarian/Lieutenant/Chaplain host semantics. Added Victrix Guard as a new independent Other Additional Copy Cost family. Audited Assault Intercessor Fly-dependent Leader attachments against the current PDF: preserved all eight normal-vs-Jump-Pack Leader state validators because the new Unit Skeleton omits those qualifiers, and removed the stale Wolf Guard Battle Leader Fly restriction because the current PDF does not state one. The catalogue remains Space Marines 3.3.7 on Game System revision 21 and retains the under-construction notice.\n\nREV13 — TROOP LOADOUT BATCH + DEATH COMPANY / BAAL CLEANUP\nCorrected Death Company Intercessor 1 to the 3.3.7 conditional Bolt Rifle replacement structure. Suppressed the redundant Baal Predator Sponson Weapons header. Implemented complete player-facing loadout trees for Tactical Squad, Intercessors, and Heavy Intercessors using direct model-role presentation rather than procedural replacement wording. All source point costs are represented visibly: Tactical combi packages +10, Heavy Intercessor Hellstorm/Executor rifle upgrades +10 each, and Heavy Weapons Specialist Hellstorm/Executor Heavy Bolter upgrades +10. No root points, categories, attachments, Additional Copy Cost arithmetic, Fly-state validation, Victrix work, or unrelated mechanics changed.\n\nREV14 — VEHICLE LOADOUT BATCH\nImplemented complete listbuilder loadouts for Whirlwind, Vindicator, Land Speeder, Dreadnought, Contemptor Dreadnought, and Leviathan Dreadnought from the Space Marines 3.3.7 source. Player-facing architecture intentionally follows established CSM vehicle conventions where equivalent: anonymous weapon pools instead of physical arm labels, atomic fist + auxiliary packages, Venerable as a Unit Upgrade, and independent repeated selectors for 'any two' / 'four of any' source wording. No root points, categories, Additional Copy Cost arithmetic, attachment logic, Fly-state validation, Victrix work, Troop loadouts, or unrelated catalogue mechanics changed. The six stable vehicle roots are synchronized into Manufactorum Imperium Library V8 in the same pass.\n\nREV15 — CATALOGUE CORRECTION BATCH\nAdded the Vindicator's fixed Siege Shield; corrected Astartes Basilisk Paid Wargear so Smoke Launchers and Armour Piercing High Explosive Shells may be selected together; replaced Predator and Land Raider literal '(None)' options with genuinely optional selectors; removed Boltgun from the Scout Infiltrator Heavy Weapons Specialist; and split Techmarine Omnissian Axe & Servo-Arm into separate fixed equipment lines. No root points, categories, attachment logic, Additional Copy Cost arithmetic, Fly-state validation, chapter gating, or unrelated loadouts changed. The four affected shared vehicle roots are synchronized into Manufactorum Imperium Library V9.\n\nREV16 — ELIMINATORS RESTORED / PERMISSIVE-CORRECTIVE LOADOUT\nRestored Eliminators using their original stable root ID 17c7-9184-1413-efff. All three models now expose the same five loadout choices, with +10 Point Bolt Carbine & Covering Fire and +10 Point Las Fusil. Four catalogue-local hidden semantic categories and constructive errors enforce the source one-model caps for Hyperfrag, Executioner, Mortis Bolts, and Bolt Carbine & Covering Fire. Restored Eliminators as an eligible Phobos Captain / Librarian / Lieutenant attachment host and restored its six-modifier Other Additional Copy Cost family. No Game System change or unrelated mechanics changed.\n\nREV17 — CHECKBOX + PLACEHOLDER CLEANUP\nFlattened standalone optional one-item wrappers into direct checkbox-style selections for Cyclone Missile Launcher, Venerable, Advanced Jamming Beacon, Smoke Launchers, Whirlwind Storm Bolter, Armour Piercing High Explosive Shells, Hunter-Killer Missile, Dozer Blade, Combat Shield, Haywire Mine, Jump Packs, Storm Shield, and Wolf Scouts Trapmaster Melta Bomb. Only genuinely independent binary options were flattened: Land Speeder missile choices, Land Raider pintle choices, Predator/Baal weapon packages, Thunderwolf Storm Shields, Wolf Guard Storm Shields, and other mutually exclusive loadout choices remain radio-style selectors. Baal Predator Dozer Blade was converted by moving its existing Paid Wargear max1 constraint directly onto the existing selection. Sanguinary Banner was moved from Paid Wargear to Unit Upgrade and given the same direct checkbox treatment. Added a concise Coming Soon rule to Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans pointing players to the authoritative Space Marines PDF in the Reforged Discord. Root points, loadout legality, attachment rules, Eliminator permissive-corrective validation, Additional Copy Costs, GS21 target, and unrelated mechanics are unchanged.\n\nREV18 — ADDITIONAL MODEL CHECKBOXES\nConverted all seven optional Additional Model slots currently present in the Space Marines catalogue to direct checkbox-style selections by moving each existing group-level max-1 constraint onto its existing child entry. This affects Victrix Guard 3, Victrix Honour Guard 3, Sanguinary Guard 3, Sternguard Veteran 3, Bladeguard Veteran 3, Devastator Centurion 2, and Assault Centurion 2. No groups or entries were moved, renamed, reordered, added, or removed. Existing entry types, stable IDs, names, hidden values, sortIndex values, points costs, nested loadouts, rules, modifiers, categories, and infoLinks are unchanged. Existing REV17 checkbox cleanup, concise Coming Soon placeholders, Additional Copy Costs, GS21 target, root points, and unrelated mechanics are unchanged. Catalogue Bugfixes remains cumulative and the new checkbox entry was appended.",
+    "comment": "CURRENT STATE — SPACE MARINES 3.3.7 / GS21\nThe catalogue is broadly playable but remains under construction. Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans intentionally retain temporary Coming Soon payloads; use the army PDF for those four units.\nChapter is a required one-of-four Configuration: Ultramarines, Blood Angels, Space Wolves, or Salamanders. Chapter-specific roots use selected-safe hiding plus constructive wrong-Chapter validation while retaining their semantic Leader/Troop/Other categories.\nAll counted Leaders use explicit attachment associations and constructive missing-attachment validation. Eligible hosts enforce the one-attached-Leader limit. Assault Intercessors are the deliberate stateful exception: Jump Packs switch legal attachment state between normal and Jump Pack Leaders through permissive-corrective validation.\nAdditional Copy Costs are catalogue-local arithmetic over stable unit IDs: Troop families use 4 / 6 / 8 free copies by game size, Other families use 1 / 2 / 3, and each excess identical copy adds +20 Points.\nEliminators, Wolf Guard Terminators, and Thunderwolf Cavalry use hidden semantic counters plus constructive errors for cross-model equipment caps rather than cross-hiding legal options.\nThe ten chapter-independent Space Marine vehicle roots are the source side of the Manufactorum Imperium mirror. Manufactorum Library V10 was audited against Space Marines REV18 before REV19; the portable executable trees are current. REV19 changes no portable vehicle executable payload, so no library sync is required.\n\nAUTHORING / RUNTIME NOTES\nThe army PDF remains authoritative. Builder presentation models meaningful final-state decisions rather than reproducing every procedural replacement step.\nExisting stable IDs are preserved. Optional one-item upgrades should use direct checkbox-style constraints on the selectable entry; optional Additional Model wrappers may remain when the max-one constraint lives on the model entry.\nSource-derived rules text is not editorialized. Catalogue comments document implementation and runtime intent only.\nThe ten portable Space Marine vehicle root comments retain their existing source/mirror provenance wording in REV19 to avoid documentation-only divergence from Manufactorum V10.\n\nHISTORICAL REVISION LOG\nSPACE MARINES REV1 / GS18 — VEHICLE SCAFFOLD ONLY.\nThis catalogue is intentionally incomplete. It exists to establish the Space Marine Chapter selector, Chapter presentation semantics, Space Marines Vehicles presentation, stable vehicle unit IDs, source points/type/class metadata, and Additional Copy Costs infrastructure before any vehicle loadouts or rules are implemented. No Infantry, Leader, Troop, chapter-exclusive non-vehicle unit, weapon choice, paid wargear, unit rule, attachment rule, relic, psychic power, or other gameplay payload is implemented in this revision. The army rules PDF remains authoritative.\n\nREV2 — MANUFACTORUM-READY VEHICLE SCAFFOLD\nAligned native vehicle presentation with the established Astra Militarum / Manufactorum bridge pattern. All eleven native Space Marine vehicle shells now present under Other while retaining their existing Space Marines Vehicles category links as non-primary compatibility tags. The ten chapter-independent vehicle shells are mirrored into Manufactorum Imperium V6 using the same unit IDs. Baal Predator remains local to Space Marines / Blood Angels and is not exported through Manufactorum.\n\nREV3 — SPACE MARINES 3.3.6 / GS20 COMPLETE EMPTY UNIT SHELLS\nExpanded the catalogue from the eleven-vehicle scaffold to all 71 unit roots in source skeleton order while preserving the existing catalogue ID, Chapter Configuration IDs, Additional Copy Costs Configuration IDs, and all eleven established vehicle IDs / Space Marines Vehicles bridge tags. Updated to Game System revision 20.\nThis phase intentionally implements only unit-level list-building structure: Points, Leader/Troop/Other, Infantry/Vehicle, counted unit-type semantics, Chapter gating, base Leader attachment relationships, host one-Leader capacity, and GS20 Troop/Other Additional Copy Costs. No internal loadouts, model cards, paid wargear, unit rules/profiles, or Additional Model controls are implemented.\nASSAULT INTERCESSORS ATTACHMENT NOTE: the source skeleton's Jump Packs option contains the only attachment_override in the army. The 3.3.6 PDF confirms the distinction explicitly: normal Captain/Librarian/Lieutenant attach to Assault Intercessors without Fly, while Jump Pack Captain/Librarian/Lieutenant/Chaplain attach to Assault Intercessors with Fly. Base Assault Intercessors therefore use the normal-Leader host state in REV3; the Jump Pack Leader host state will be added when the deferred Jump Packs loadout is implemented.\n\nREV4 — CHAPTER-FIRST ARMY LIST PRESENTATION\nApplied the established Chaos Space Marines Legion presentation pattern to Space Marine Chapters. All 15 chapter-exclusive units now use Ultramarines, Blood Angels, Space Wolves, or Salamanders as their primary Army List presentation category. Their source Leader/Troop/Other role remains as a secondary semantic category, together with Infantry/Vehicle, Leader Capacity, Additional Copy Cost, attachment, and other existing tags. No unit IDs, category-link IDs, points, Chapter gating, Additional Copy Cost arithmetic, attachments, or other mechanics changed. Existing sort indices already place all chapter-specific units at 1-15 and generic Leaders from 16 onward, so the selected Chapter category appears above the standard Leader category.\n\nREV5 — BLOOD ANGELS LOADOUT BATCH 1\nImplemented player-facing loadouts for Sanguinary Guard, Sanguinary Priest, Death Company Assault Intercessors, Jump Pack Assault Death Company, Death Company Intercessors, and Baal Predator. Sanguinary Guard uses separate model cards, one optional +50 Point third model, and Sanguinary Banner Paid Wargear. Sanguinary Priest has its fixed weapon package and +10 Point Jump Pack. The two assault Death Company units use the approved three-card compressed layout; Death Company Intercessors use one veteran weapon card plus fixed models 2 and 3-5. Baal Predator keeps paid Sponson Weapons inside Loadout Options with (None) default; Dozer Blade remains Paid Wargear. No other unit roots, categories, Chapter presentation, attachments, Additional Copy Costs, points outside these loadouts, or existing stable IDs were changed.\n\nREV6 — SPACE WOLVES LOADOUT BATCH\nImplemented Wolf Guard Battle Leader, Blood Claws, Grey Hunters, Wolf Guard Terminators, and Wolf Scouts using the approved compact final-state presentations. Wolf Guard Terminators expose identical per-model final-state choices while constructive semantic validators preserve the source max-one special-melee and max-one Assault Cannon limits. Wolf Scouts use named role cards, including a checklist-style Melta Bomb upgrade on Trapmaster. Thunderwolf Cavalry remains intentionally unimplemented and now uses the same mandatory content-message pattern as Adepta Sororitas Sisters Novitiates, adapted to Space Marines. No other unit roots, Chapter presentation, attachments, Additional Copy Costs, points, or existing stable IDs were changed.\n\nREV7 — THUNDERWOLF CAVALRY PERMISSIVE-CORRECTIVE LOADOUT\nReplaced the Thunderwolf Cavalry placeholder with three clean model cards and enforced its cross-model equipment caps through constructive semantic errors rather than cross-hiding. Storm Shields may be selected independently by all three models for +10 each. Melee Power Fist, Great Axe/Thunder Hammer, Plasma Pistol, and sidearm Power Fist each retain their source max-one unit limits. Also standardized the Wolf Guard Terminator special-melee error repair instruction to 'Choose a different loadout for one of those models.' No other unit mechanics, categories, Chapter presentation, attachments, points, or Additional Copy Costs were changed.\n\nREV8 — RAPID-FIRE LOADOUT BATCH\nImplemented the 44 approved simple Space Marine unit loadouts from Pyroclasts through Astartes Basilisk. Presentation uses melee-first ordering where practical, explicit specialist/model cards where requested, atomic final-state packages, single-step Additional Model groups for the variable-size 2/3-model and 1/2-model units, and checklist-style direct Paid Wargear. Assault Intercessors now implement +20 Jump Packs with exact permissive-corrective attachment-state validation: normal Leaders are legal only without Jump Packs, while Jump Pack Captain/Librarian/Lieutenant/Chaplain are legal only with Jump Packs. The Sergeant melee dependency is also enforced constructively. Wolf Scouts Pack Leader was renamed to include its unit name while preserving its existing ID. Existing unit IDs, Chapter-first presentation, Additional Copy Costs, points outside newly represented wargear/additional-model choices, prior Blood Angels/Space Wolves loadouts, and unrelated mechanics remain unchanged.\n\nREV9 — GS21 CHAPTER CATEGORY ORDER\nRetargeted to Game System revision 21. GS21 moves the four Chapter presentation categories above Leader in Army section ordering. No Space Marine unit IDs, loadouts, categories, points, attachments, Additional Copy Costs, or other catalogue mechanics changed.\n\nREV10 — LOADOUT CORRECTION BATCH\nApplied focused presentation and role corrections to Pyroclasts, Astartes Basilisk, Predator, Scout Infiltrators, Scout Skirmishers, Techmarine, Aggressors, Inceptors, Sternguard Veterans, Devastators, Reivers, and Melta Eradicators; implemented Hellblasters; removed Eliminators from the playable catalogue. Eliminators were also removed from Other Additional Copy Cost arithmetic and from the constructive Phobos Leader attachment text. Existing surviving IDs are preserved where the same player-facing decision survives.\n\nREV11 — SPACE MARINES 3.3.7\nMelta Eradicators and Heavy Bolter Eradicators changed from 120 to 110 Points. Added an automatically present under-construction notice instead of the normal Patch Notes template. Game System remains revision 21. No other catalogue mechanics changed.\n\nREV12 — VICTRIX REWORK + FLY ATTACHMENT AUDIT\nAdded the new Victrix Guard and fully implemented the reworked Victrix Honour Guard from Space Marines 3.3.7. Both are 2-3 model Ultramarines Other units at 50 Points per model with an explicit +50 Additional Model. Victrix Guard carries Bolt Carbine, Power Weapon & Ultima Storm Shield; Victrix Honour Guard carries Bolt Carbine & Power Weapon. Both use the existing Captain/Librarian/Lieutenant/Chaplain host semantics. Added Victrix Guard as a new independent Other Additional Copy Cost family. Audited Assault Intercessor Fly-dependent Leader attachments against the current PDF: preserved all eight normal-vs-Jump-Pack Leader state validators because the new Unit Skeleton omits those qualifiers, and removed the stale Wolf Guard Battle Leader Fly restriction because the current PDF does not state one. The catalogue remains Space Marines 3.3.7 on Game System revision 21 and retains the under-construction notice.\n\nREV13 — TROOP LOADOUT BATCH + DEATH COMPANY / BAAL CLEANUP\nCorrected Death Company Intercessor 1 to the 3.3.7 conditional Bolt Rifle replacement structure. Suppressed the redundant Baal Predator Sponson Weapons header. Implemented complete player-facing loadout trees for Tactical Squad, Intercessors, and Heavy Intercessors using direct model-role presentation rather than procedural replacement wording. All source point costs are represented visibly: Tactical combi packages +10, Heavy Intercessor Hellstorm/Executor rifle upgrades +10 each, and Heavy Weapons Specialist Hellstorm/Executor Heavy Bolter upgrades +10. No root points, categories, attachments, Additional Copy Cost arithmetic, Fly-state validation, Victrix work, or unrelated mechanics changed.\n\nREV14 — VEHICLE LOADOUT BATCH\nImplemented complete listbuilder loadouts for Whirlwind, Vindicator, Land Speeder, Dreadnought, Contemptor Dreadnought, and Leviathan Dreadnought from the Space Marines 3.3.7 source. Player-facing architecture intentionally follows established CSM vehicle conventions where equivalent: anonymous weapon pools instead of physical arm labels, atomic fist + auxiliary packages, Venerable as a Unit Upgrade, and independent repeated selectors for 'any two' / 'four of any' source wording. No root points, categories, Additional Copy Cost arithmetic, attachment logic, Fly-state validation, Victrix work, Troop loadouts, or unrelated catalogue mechanics changed. The six stable vehicle roots are synchronized into Manufactorum Imperium Library V8 in the same pass.\n\nREV15 — CATALOGUE CORRECTION BATCH\nAdded the Vindicator's fixed Siege Shield; corrected Astartes Basilisk Paid Wargear so Smoke Launchers and Armour Piercing High Explosive Shells may be selected together; replaced Predator and Land Raider literal '(None)' options with genuinely optional selectors; removed Boltgun from the Scout Infiltrator Heavy Weapons Specialist; and split Techmarine Omnissian Axe & Servo-Arm into separate fixed equipment lines. No root points, categories, attachment logic, Additional Copy Cost arithmetic, Fly-state validation, chapter gating, or unrelated loadouts changed. The four affected shared vehicle roots are synchronized into Manufactorum Imperium Library V9.\n\nREV16 — ELIMINATORS RESTORED / PERMISSIVE-CORRECTIVE LOADOUT\nRestored Eliminators using their original stable root ID 17c7-9184-1413-efff. All three models now expose the same five loadout choices, with +10 Point Bolt Carbine & Covering Fire and +10 Point Las Fusil. Four catalogue-local hidden semantic categories and constructive errors enforce the source one-model caps for Hyperfrag, Executioner, Mortis Bolts, and Bolt Carbine & Covering Fire. Restored Eliminators as an eligible Phobos Captain / Librarian / Lieutenant attachment host and restored its six-modifier Other Additional Copy Cost family. No Game System change or unrelated mechanics changed.\n\nREV17 — CHECKBOX + PLACEHOLDER CLEANUP\nFlattened standalone optional one-item wrappers into direct checkbox-style selections for Cyclone Missile Launcher, Venerable, Advanced Jamming Beacon, Smoke Launchers, Whirlwind Storm Bolter, Armour Piercing High Explosive Shells, Hunter-Killer Missile, Dozer Blade, Combat Shield, Haywire Mine, Jump Packs, Storm Shield, and Wolf Scouts Trapmaster Melta Bomb. Only genuinely independent binary options were flattened: Land Speeder missile choices, Land Raider pintle choices, Predator/Baal weapon packages, Thunderwolf Storm Shields, Wolf Guard Storm Shields, and other mutually exclusive loadout choices remain radio-style selectors. Baal Predator Dozer Blade was converted by moving its existing Paid Wargear max1 constraint directly onto the existing selection. Sanguinary Banner was moved from Paid Wargear to Unit Upgrade and given the same direct checkbox treatment. Added a concise Coming Soon rule to Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans pointing players to the authoritative Space Marines PDF in the Reforged Discord. Root points, loadout legality, attachment rules, Eliminator permissive-corrective validation, Additional Copy Costs, GS21 target, and unrelated mechanics are unchanged.\n\nREV18 — ADDITIONAL MODEL CHECKBOXES\nConverted all seven optional Additional Model slots currently present in the Space Marines catalogue to direct checkbox-style selections by moving each existing group-level max-1 constraint onto its existing child entry. This affects Victrix Guard 3, Victrix Honour Guard 3, Sanguinary Guard 3, Sternguard Veteran 3, Bladeguard Veteran 3, Devastator Centurion 2, and Assault Centurion 2. No groups or entries were moved, renamed, reordered, added, or removed. Existing entry types, stable IDs, names, hidden values, sortIndex values, points costs, nested loadouts, rules, modifiers, categories, and infoLinks are unchanged. Existing REV17 checkbox cleanup, concise Coming Soon placeholders, Additional Copy Costs, GS21 target, root points, and unrelated mechanics are unchanged. Catalogue Bugfixes remains cumulative and the new checkbox entry was appended.\n\nREV19 — SANGUINARY PRIEST CHECKBOX + COMMENT CONSOLIDATION\nMoved the Sanguinary Priest Jump Pack's existing max-one constraint from its one-item Paid Wargear wrapper onto the existing Jump Pack entry so it renders as a direct checkbox while preserving the same ID, +10 Point cost, and source rule text. Consolidated live catalogue documentation: current-state guidance now precedes the historical build log, obsolete EMPTY UNIT SHELL declarations were removed from implemented non-library units, the four genuinely unfinished units are explicitly marked current/incomplete, and Chapter / Additional Copy Costs comments now describe GS21 behavior. No points, Chapter gating, attachment topology, Additional Copy Cost arithmetic, unit availability, source-derived rules text, or portable Manufactorum vehicle executable payload changed. Manufactorum Imperium Library V10 was audited against Space Marines REV18 and required no sync.",
     "categoryEntries": [
       {
         "name": "May Attach To: Wolf Guard Battle Leader",

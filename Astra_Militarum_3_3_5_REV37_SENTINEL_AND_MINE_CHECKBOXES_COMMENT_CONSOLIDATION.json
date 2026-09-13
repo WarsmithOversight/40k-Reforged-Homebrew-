@@ -5,7 +5,7 @@
     "name": "Astra Militarum 3.3.5",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 36,
+    "revision": 37,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -181,7 +181,7 @@
             ]
           }
         ],
-        "comment": "ADDITIONAL COPY COSTS REV21 / GS17. Permanent required accounting entry. The single parent now exposes Troops and Other accounting children. Cadian Shock Troops, Death Korps Of Krieg, and Mordian Iron Guard use independent 4 / 6 / 8 Troop normal-copy allowances; Other preserves the existing 1 / 2 / 3 arithmetic exactly. Regiment configuration controls which Troop is normally available but does not merge their copy families. No generated, free, attached-zero-point, or otherwise exempt Troop unit exists in this catalogue. The parent retains automatic insertion, Required Additional Copy Costs Configuration, Uses Regiment Configuration, and duplicate-entry validation.",
+        "comment": "ADDITIONAL COPY COSTS / GS21 CURRENT STATE. Permanent required accounting entry with separate Troops and Other ledgers. Cadian Shock Troops, Death Korps Of Krieg, and Mordian Iron Guard are independent Troop copy families using the 4 / 6 / 8 normal-copy allowance at 800 / 1200 / 1600 Points; each further identical copy costs +20 Points. Other units use the established 1 / 2 / 3 normal-copy allowance. Regiment configuration controls normal Troop availability but does not pool copy families. No generated, free, attached-zero-point, or otherwise exempt Troop unit requires a refund path in this catalogue.",
         "selectionEntryGroups": [
           {
             "name": "​",
@@ -882,7 +882,7 @@
                     ]
                   }
                 ],
-                "comment": "TROOP COPY-COST LEDGER. Cadian Shock Troops, Death Korps Of Krieg, and Mordian Iron Guard are three independent Regiment Troop copy families using the GS17 4 / 6 / 8 normal-copy allowance. Regiment configuration already makes these mutually exclusive in ordinary use; the accounting remains per actual datasheet ID."
+                "comment": "TROOP COPY-COST LEDGER / GS21. Cadian Shock Troops, Death Korps Of Krieg, and Mordian Iron Guard are three independent datasheet families using the 4 / 6 / 8 normal-copy allowance. Regiment selection normally makes the families mutually exclusive, but accounting remains keyed to the actual unit IDs."
               }
             ],
             "defaultSelectionEntryId": "c6ec-755f-e9dd-1964"
@@ -4871,7 +4871,7 @@
                     ]
                   }
                 ],
-                "comment": "OTHER COPY-COST LEDGER. Contains all 108 pre-existing Other point modifiers unchanged, preserving the established 1 / 2 / 3 allowance across the same 18 copy families."
+                "comment": "OTHER COPY-COST LEDGER / GS21. Eighteen independent non-Rare Other copy families use the 1 / 2 / 3 normal-copy allowance; each further identical copy costs +20 Points."
               }
             ],
             "defaultSelectionEntryId": "44a5-4834-e174-4774"
@@ -8599,7 +8599,7 @@
             ]
           }
         ],
-        "comment": "TANK COMMANDER CURRENT STATE: complete points/categories/loadout. Vanquisher Cannon exposes its mandatory Coaxial Weapon choice. Redundant turret, hull, and sponson slot labels are suppressed because the equipment names already identify their mounting position. Paid Wargear uses Pintle Weapons as the semantic multi-option header; one-item paid-wargear wrappers are suppressed.\n\nREV23 PRESENTATION: Pintle Weapons is now a top-level section between Loadout Options and Paid Wargear instead of being nested inside Paid Wargear. Pintle weapon options, costs, constraints, IDs, and all other mechanics are unchanged."
+        "comment": "TANK COMMANDER CURRENT STATE: complete Rare Leader / Vehicle loadout. Vanquisher Cannon exposes its mandatory Coaxial Weapon choice. Redundant turret, hull, and sponson slot labels are suppressed. Pintle Weapons is a top-level section between Loadout Options and Paid Wargear; one-item Paid Wargear options use direct checkbox-style selections."
       },
       {
         "type": "unit",
@@ -8691,7 +8691,7 @@
             "noindex": false
           }
         ],
-        "comment": "ENGINSEER ENVOY REV10: fixed Archeotech Pistol + Omnissian Axe loadout; counts toward Leader Capacity and cannot attach."
+        "comment": "ENGINSEER ENVOY CURRENT STATE: fixed Archeotech Pistol & Omnissian Axe loadout; counts toward Leader Capacity and cannot attach."
       },
       {
         "type": "unit",
@@ -8897,7 +8897,7 @@
             ]
           }
         ],
-        "comment": "COMMISSAR REV10: normal required attachment Leader using the proven association pattern. Does not count toward Leader Capacity. Rare max-one uses constructive error.\nREV11 ATTACHMENT POINTS: verified Commissar attachment points on Cadian Shock Troops, Death Korps of Krieg, and Mordian Iron Guard. Since Regiment selection exposes only the matching Troops unit in normal use, the Commissar's Attaches To control naturally resolves to the relevant Regiment Troop(s) already present in the roster."
+        "comment": "COMMISSAR CURRENT STATE: Rare, capacity-exempt Leader that must attach to a Troops unit. Uses constructive missing-attachment and Rare max-one errors; eligible attachment points are the three Regiment Troops."
       },
       {
         "type": "unit",
@@ -10305,7 +10305,7 @@
             ]
           }
         ],
-        "comment": "KASRKIN REV22: compact Kill Team-inspired final-state presentation retained unchanged. The former dynamic roster max has been removed so New Recruit does not emit its stock maximum error. ERROR TEMPLATE: ratio_limit. While Regiments of Cadia is selected, mutually exclusive constructive validation bands enforce one Kasrkin unit per two Cadian Shock Troops, through 11 supporting Cadian Shock Troops. Wrong-Regiment safe-hide and constructive validation, points, loadouts, Additional Copy Costs, and the visible Cadian Support Requirement remain unchanged.\n\nREV27 PRESENTATION: renamed Gunner to Kasrkin Gunner and Sharpshooter / Demo Trooper to Kasrkin Sharpshooter / Demo Trooper. IDs, loadouts, points, Regiment behavior, ratio validation, and all other mechanics are unchanged."
+        "comment": "KASRKIN CURRENT STATE: compact Kill Team-inspired final-state presentation. While Regiments of Cadia is selected, mutually exclusive constructive ratio bands enforce one Kasrkin unit per two Cadian Shock Troops through 11 supporting units, avoiding New Recruit's stock maximum error. Wrong-Regiment safe-hide and constructive validation, points, loadouts, and Additional Copy Costs remain independent."
       },
       {
         "type": "unit",
@@ -10612,7 +10612,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "CHIMERA CURRENT STATE: Vehicle / Other. Fixed Lasgun Array, mandatory turret and hull choices, then Pintle Weapons, Hunter-Killer Missile, and Smoke Launchers under Paid Wargear.\n\nREV23 PRESENTATION: Pintle Weapons is now a top-level section between Loadout Options and Paid Wargear instead of being nested inside Paid Wargear. Pintle weapon options, costs, constraints, IDs, and all other mechanics are unchanged.\n\nREV24 PRESENTATION: reordered the Chimera's Loadout Options so the turret weapon choice appears first, the hull weapon choice second, and the fixed Lasgun Array last. No IDs, options, costs, constraints, Pintle Weapons, Paid Wargear, or other mechanics changed."
+        "comment": "CHIMERA CURRENT STATE: Vehicle / Other. Loadout Options presents turret weapon, hull weapon, then fixed Lasgun Array. Pintle Weapons is a top-level section. Hunter-Killer Missile and Smoke Launchers are direct Paid Wargear checkboxes."
       },
       {
         "type": "unit",
@@ -10810,7 +10810,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "TAUROX CURRENT STATE: Vehicle / Other. Optional Twin Autocannon remains a primary Loadout Options choice with its redundant duplicate wrapper suppressed. Pintle Weapons, Hunter-Killer Missile, and Smoke Launchers remain under Paid Wargear.\n\nREV23 PRESENTATION: Pintle Weapons is now a top-level section between Loadout Options and Paid Wargear instead of being nested inside Paid Wargear. Pintle weapon options, costs, constraints, IDs, and all other mechanics are unchanged."
+        "comment": "TAUROX CURRENT STATE: Vehicle / Other. Optional Twin Autocannon is a direct Loadout Options checkbox. Pintle Weapons is a top-level section. Hunter-Killer Missile and Smoke Launchers are direct Paid Wargear checkboxes."
       },
       {
         "type": "unit",
@@ -11280,7 +11280,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "LEMAN RUSS CURRENT STATE: Vehicle / Other. Mirrors the cleaned Tank Commander presentation: turret, hull, and paid sponson choices live under Loadout Options with redundant slot labels suppressed. Vanquisher exposes its mandatory coaxial choice. Paid Wargear uses Pintle Weapons as the semantic multi-option header.\n\nREV23 PRESENTATION: Pintle Weapons is now a top-level section between Loadout Options and Paid Wargear instead of being nested inside Paid Wargear. Pintle weapon options, costs, constraints, IDs, and all other mechanics are unchanged."
+        "comment": "LEMAN RUSS CURRENT STATE: Vehicle / Other. Turret, hull, and optional sponson choices live under Loadout Options with redundant slot labels suppressed; Vanquisher exposes its mandatory coaxial choice. Pintle Weapons is a top-level section. Hunter-Killer Missile, Dozer Blade, and Smoke Launchers use direct Paid Wargear checkboxes."
       },
       {
         "type": "unit",
@@ -11324,7 +11324,7 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Scout Sentinel 1",
+                "name": "Sentinel",
                 "id": "c374-6bd5-528c-13b7",
                 "hidden": false,
                 "sortIndex": 1,
@@ -11478,22 +11478,11 @@
                 "id": "d094-6b30-e74f-f012",
                 "hidden": false,
                 "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "1d6d-0ab9-de35-d34a",
-                    "includeChildSelections": false
-                  }
-                ],
                 "selectionEntries": [
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Scout Sentinel 2",
+                    "name": "Additional Sentinel",
                     "hidden": false,
                     "id": "b1d3-b7cc-14eb-6c9b",
                     "sortIndex": 1,
@@ -11647,6 +11636,17 @@
                           }
                         ]
                       }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1d6d-0ab9-de35-d34a",
+                        "includeChildSelections": false
+                      }
                     ]
                   }
                 ]
@@ -11689,7 +11689,7 @@
                         "includeChildSelections": true,
                         "includeChildForces": false,
                         "queryFromSelf": false,
-                        "childName": "Scout Sentinel 2"
+                        "childName": "Additional Sentinel"
                       }
                     ]
                   }
@@ -11718,7 +11718,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "SCOUT SENTINELS REV13: Vehicle / Other, 1-2 models. The first model is included in the root cost; the optional second model costs 60 Points and owns independent weapon/Hunter-Killer choices. Smoke Launchers cost 10 Points per model and scale to 20 Points when the second Sentinel is present."
+        "comment": "SCOUT SENTINELS CURRENT STATE: Vehicle / Other, 1-2 models. The included model is presented simply as Sentinel. The optional second model is an Additional Sentinel checkbox at +60 Points and owns an independent main weapon and Hunter-Killer Missile choice. Smoke Launchers cost +10 Points per model and scale to +20 when Additional Sentinel is selected."
       },
       {
         "type": "unit",
@@ -11762,7 +11762,7 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Armoured Sentinel 1",
+                "name": "Sentinel",
                 "id": "3ae8-95f4-3ffd-b205",
                 "hidden": false,
                 "sortIndex": 1,
@@ -11916,22 +11916,11 @@
                 "id": "21b1-e77f-33ff-86e7",
                 "hidden": false,
                 "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "139c-ffe8-5341-bffd",
-                    "includeChildSelections": false
-                  }
-                ],
                 "selectionEntries": [
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Armoured Sentinel 2",
+                    "name": "Additional Sentinel",
                     "hidden": false,
                     "id": "3f0f-5aa3-362c-8ea5",
                     "sortIndex": 1,
@@ -12085,6 +12074,17 @@
                           }
                         ]
                       }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "139c-ffe8-5341-bffd",
+                        "includeChildSelections": false
+                      }
                     ]
                   }
                 ]
@@ -12127,7 +12127,7 @@
                         "includeChildSelections": true,
                         "includeChildForces": false,
                         "queryFromSelf": false,
-                        "childName": "Armoured Sentinel 2"
+                        "childName": "Additional Sentinel"
                       }
                     ]
                   }
@@ -12156,7 +12156,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "ARMOURED SENTINELS REV13: Vehicle / Other, 1-2 models. The first model is included in the root cost; the optional second model costs 80 Points and owns independent weapon/Hunter-Killer choices. Smoke Launchers cost 10 Points per model and scale to 20 Points when the second Sentinel is present."
+        "comment": "ARMOURED SENTINELS CURRENT STATE: Vehicle / Other, 1-2 models. The included model is presented simply as Sentinel. The optional second model is an Additional Sentinel checkbox at +80 Points and owns an independent main weapon and Hunter-Killer Missile choice. Smoke Launchers cost +10 Points per model and scale to +20 when Additional Sentinel is selected."
       },
       {
         "type": "unit",
@@ -12434,7 +12434,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "HELLHOUND CURRENT STATE: Vehicle / Other. Weapon choices are shown without Primary/Secondary headers; the second weapon list is identified directly as Hull Heavy Bolter, Hull Heavy Flamer, or Hull Multi-Melta. Hunter-Killer Missile, Pintle Weapons, and Smoke Launchers remain under Paid Wargear.\n\nREV23 PRESENTATION: Pintle Weapons is now a top-level section between Loadout Options and Paid Wargear instead of being nested inside Paid Wargear. Pintle weapon options, costs, constraints, IDs, and all other mechanics are unchanged."
+        "comment": "HELLHOUND CURRENT STATE: Vehicle / Other. Weapon choices are shown without redundant Primary / Secondary headers, with hull weapons named directly. Pintle Weapons is a top-level section. Hunter-Killer Missile and Smoke Launchers are direct Paid Wargear checkboxes."
       },
       {
         "type": "unit",
@@ -14183,7 +14183,7 @@
             "noindex": false
           }
         ],
-        "comment": "DEATH KORPS GRENADIERS REV22: compact five-model final-state presentation retained unchanged. The former dynamic roster max has been removed so New Recruit does not emit its stock maximum error. ERROR TEMPLATE: ratio_limit. While Death Korps of Krieg is selected, mutually exclusive constructive validation bands enforce one Death Korps Grenadier unit per two Death Korps Of Krieg units, through 11 supporting Death Korps Of Krieg units. Wrong-Regiment safe-hide and constructive validation, points, loadouts, Additional Copy Costs, and the visible support rule remain unchanged.",
+        "comment": "DEATH KORPS GRENADIERS CURRENT STATE: compact five-model final-state presentation. While Death Korps of Krieg is selected, mutually exclusive constructive ratio bands enforce one Grenadier unit per two Death Korps Of Krieg units through 11 supporting units, avoiding New Recruit's stock maximum error. Wrong-Regiment safe-hide, points, loadouts, and Additional Copy Costs remain independent.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -14593,85 +14593,6 @@
             "id": "7baf-1593-87e6-5b26",
             "hidden": false,
             "sortIndex": 3,
-            "selectionEntryGroups": [
-              {
-                "name": "​",
-                "id": "b0a8-4ddc-e4b7-5aa7",
-                "hidden": false,
-                "sortIndex": 4,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "a202-f3f4-1f2d-544d",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Explosive Mines",
-                    "hidden": false,
-                    "id": "e05e-ebe3-8fda-5e6e",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Explosive Mines",
-                        "id": "103c-ef79-5165-5ed5",
-                        "hidden": false,
-                        "description": "After an enemy unit finishes an Advance and is within 18” of this unit, you may roll 3D6. If that unit is within X” of this unit where X is equal to the result of that roll, roll a D6 and if that unit finished that Advance within engagement range of any friendly units, add 1 to that roll. On a 5+, that unit suffers 5 Suppression.",
-                        "noindex": false
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "​",
-                "id": "fdc4-e620-b522-5cd1",
-                "hidden": false,
-                "sortIndex": 5,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "c07a-8d3a-78aa-5cc0",
-                    "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Remote Mine",
-                    "hidden": false,
-                    "id": "54cb-8e13-f384-5a28",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -14750,9 +14671,70 @@
                     "includeChildSelections": false
                   }
                 ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Explosive Mines",
+                "hidden": false,
+                "id": "e05e-ebe3-8fda-5e6e",
+                "sortIndex": 4,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Explosive Mines",
+                    "id": "103c-ef79-5165-5ed5",
+                    "hidden": false,
+                    "description": "After an enemy unit finishes an Advance and is within 18” of this unit, you may roll 3D6. If that unit is within X” of this unit where X is equal to the result of that roll, roll a D6 and if that unit finished that Advance within engagement range of any friendly units, add 1 to that roll. On a 5+, that unit suffers 5 Suppression.",
+                    "noindex": false
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "a202-f3f4-1f2d-544d",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Remote Mine",
+                "hidden": false,
+                "id": "54cb-8e13-f384-5a28",
+                "sortIndex": 5,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "c07a-8d3a-78aa-5cc0",
+                    "includeChildSelections": false
+                  }
+                ]
               }
             ],
-            "comment": "REV26: Frag Grenades are flattened into three independent 10-point checkboxes, matching the Fire Dragon bearer-checkbox presentation pattern. Explosive Mines and Remote Mine remain normal optional (None) selectors."
+            "comment": "PAID WARGEAR CURRENT STATE: three independent Frag Grenade checkboxes, then Explosive Mines and Remote Mine as independent direct checkboxes. Each option preserves its existing ID, cost, rule text, and max-one constraint."
           }
         ],
         "modifiers": [
@@ -14871,7 +14853,7 @@
             "noindex": false
           }
         ],
-        "comment": "REV26 COMBAT ENGINEER REBUILD: Watchmaster and Death Korps Combat Engineer 2 are unchanged. Death Korps Combat Engineer 3-5 now chooses one literal fixed package: 3x Shotgun or 3x Trench Baton & Autopistol. Paid Wargear now exposes Frag Grenade 1, Frag Grenade 2, and Frag Grenade 3 as three independent 10-point checkboxes, followed by the existing optional Explosive Mines and Remote Mine selectors. Regiment visibility, prerequisite validation, points, categories, Additional Copy Costs, Explosive Mines rule text, and unrelated mechanics are unchanged.",
+        "comment": "DEATH KORPS COMBAT ENGINEERS CURRENT STATE: Death Korps-only Other unit using constructive prerequisite validation. Watchmaster and Engineer 2 retain their final-state weapon choices; the remaining models use the Engineer 3 plus Engineers 4-5 / Mole Launcher Team structure. Paid Wargear exposes three independent Frag Grenade checkboxes plus direct Explosive Mines and Remote Mine checkboxes. Regiment visibility, prerequisite validation, Additional Copy Costs, and source-derived Explosive Mines rule text remain unchanged.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -15030,7 +15012,7 @@
             ]
           }
         ],
-        "comment": "DEATH KORPS FIELD ARTILLERY REV16: normal Astra Militarum Infantry / Other unit. The unit has no roster prerequisite or ratio restriction. Choose one artillery weapon. Gas Dispersion is optional Paid Wargear.",
+        "comment": "FIELD ARTILLERY CURRENT STATE: unrestricted Astra Militarum Infantry / Other unit with one mandatory artillery weapon choice. Gas Dispersion is direct optional Paid Wargear.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -15173,7 +15155,7 @@
             ]
           }
         ],
-        "comment": "PRIMARIS PSYKER REV17: fixed Laspistol + Psyker Stave loadout. Normal Infantry Leader that counts toward Leader Capacity and must attach to any Troops unit. Uses the Battle Psykers psychic-power table."
+        "comment": "PRIMARIS PSYKER CURRENT STATE: fixed Laspistol & Psyker Stave loadout. Counts toward Leader Capacity, must attach to a Troops unit, and uses constructive missing-attachment validation."
       },
       {
         "type": "unit",
@@ -15613,7 +15595,7 @@
             "name": "Patch Notes",
             "id": "d879-6ff2-dcac-f3b0",
             "hidden": false,
-            "description": "## Astra Militarum 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 10th)\n\n• Converted Hunter-Killer Missile, Smoke Launchers, Armour Piercing High Explosive Shells, Dozer Blade, Taurox Twin Autocannon, Gas Dispersion, Krak Grenade, and Frag Grenade options to checkbox-style selections.\n• Death Korps Combat Engineers: the three independent Frag Grenade checkboxes now use the same unnumbered Frag Grenade label.\n• Cadian, Death Korps, and Mordian Platoon Commanders: all Command Squad members now use direct checkbox-style selections while remaining linked unit entries.",
+            "description": "## Astra Militarum 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 12th)\n\n• Converted Hunter-Killer Missile, Smoke Launchers, Armour Piercing High Explosive Shells, Dozer Blade, Taurox Twin Autocannon, Gas Dispersion, Krak Grenade, and Frag Grenade options to checkbox-style selections.\n• Death Korps Combat Engineers: the three independent Frag Grenade checkboxes now use the same unnumbered Frag Grenade label.\n• Cadian, Death Korps, and Mordian Platoon Commanders: all Command Squad members now use direct checkbox-style selections while remaining linked unit entries.\n• Scout and Armoured Sentinels: the included model is now presented as Sentinel and the optional second model as an Additional Sentinel checkbox.\n• Death Korps Combat Engineers: Explosive Mines and Remote Mine now use direct checkbox-style Paid Wargear selections.\n• Catalogue maintenance: current implementation notes and historical comments consolidated for the live GS21 catalogue.",
             "noindex": false
           }
         ],
@@ -15631,7 +15613,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV35: Automatically present Configuration entry using the standard two-section Patch Notes format. Astra Militarum 3.3.5 is the current army-rules baseline. No new army-rules changes are mirrored into the listbuilder in this baseline-sync pass; the existing Catalogue Bugfixes section is retained unchanged.\nREV36: refreshed Catalogue Bugfixes to September 10th with the broad checkbox-style wargear cleanup and Command Squad member presentation cleanup."
+        "comment": "CURRENT STATE: automatically present Patch Notes Configuration for Astra Militarum 3.3.5 / GS21. Catalogue Bugfixes is a cumulative loaded-version fingerprint.\nREV37: September 12th maintenance adds Sentinel Additional Model checkbox presentation, direct Combat Engineer mine checkboxes, and current-state comment consolidation."
       }
     ],
     "sharedSelectionEntries": [
@@ -16468,7 +16450,7 @@
         ]
       }
     ],
-    "comment": "PHASE 0.1 — REGIMENT + COMMAND SQUAD FOUNDATION\nFocused assembly implementing the Astra Militarum Regiment selector, the three Regiment Troop anchors, the three Platoon Commanders, and the reusable Command Squad Officer pool. Regiments of Cadia is selected by default. The explicit Regiment selector is a listbuilder presentation abstraction over the PDF's indirect mutually exclusive Troop mechanic. Matching Platoon Commander Troop prerequisites remain enforced separately. Command Squad Officers are nested complete Leader units, reuse the Additional Leader architecture, and do not count toward Leader Capacity. Detailed Troop model/loadout trees and the remainder of the Astra Militarum catalogue are intentionally deferred to later assembly.\n\nREV2 REGIMENT NAME CORRECTION\nCorrected the player-facing Regiment option names to Cadia, Death Korps of Krieg, and Mordian Iron Guard. Updated Regiment-related constructive error text and condition labels accordingly. No unit names, IDs, costs, loadouts, visibility logic, Command Squad structure, or validation semantics were otherwise changed.\n\nREV3 CADIAN REGIMENT LABEL\nChanged the player-facing Regiment option from 'Cadia' to 'Regiments of Cadia' to better represent the broader Cadian military identity rather than a single regiment. Updated Regiment-related constructive error text and condition labels accordingly. Existing unit names, IDs, costs, loadouts, visibility logic, Command Squad structure, and validation semantics are unchanged.\n\nREV4 CADIAN SHOCK TROOPS LOADOUT TEST\nImplemented the complete player-facing Cadian Shock Troops loadout using a compressed final-state model: Cadian Sergeant; four fixed Lasguns; two paid special-weapon-capable Lasgun models; one independent free special-weapon-capable model; and a mandatory branch between two additional free special-weapon-capable models or one Heavy Weapons Team. This is a focused navigation test. Death Korps of Krieg and Mordian Iron Guard detailed Troop loadouts remain deferred.\n\nREV5 CADIAN MILITARY-JARGON PRESENTATION\nBaked the approved Cadian Shock Troops presentation labels. Loadout now contains Sergeant, Cadian Shock Troopers 2-5, 6, and 7. The independent free specialist is presented under Weapon Specialist as Cadian Shock Trooper 8. The remaining branch is presented as Special Weapons Team / Heavy Weapons Team, with Cadian Shock Troopers 9-10 under Special Weapons Team or the Heavy Weapons Team weapon choice. Existing selection IDs, costs, defaults, and legality logic are unchanged.\n\nREV6 WEAPON SPECIALIST PRESENTATION\nCollapsed the redundant Weapon Specialist wrapper. The free specialist now appears directly in Loadout after Cadian Shock Trooper 7, labeled Weapon Specialist. The obsolete presentation-wrapper object was removed; all actual choice/option IDs are preserved. Special Weapons Team / Heavy Weapons Team remains the next top-level section. Costs, defaults, and legality logic are unchanged.\n\nREV7 DEATH KORPS AND MORDIAN TROOP LOADOUTS\nImplemented the approved compact troop presentations for Death Korps of Krieg and Mordian Iron Guard. Death Korps uses Watchmaster, Death Korps Guardsman 2-8, and two Weapon Specialist slots. Mordian Iron Guard uses Mordian Sergeant, Mordian Guardsman 2-6, Mordian Guardsman 7, Mordian Guardsman 8, and two Weapon Specialist slots. Mordian Guardsmen 7-8 carry the two paid +10 special-weapon options; the two Weapon Specialist slots are free. All new IDs are deterministic; existing IDs are preserved.\n\nREV8 WEAPON SPECIALIST DEFAULTS\nFor the three Regiment Troops, every player-facing Weapon Specialist slot now omits Lasgun and defaults to Grenade Launcher. This is an intentional listbuilder simplification: Grenade Launcher is a free specialist choice and the Lasgun fallback is not presented for these role-labeled specialists. Paid special-weapon-capable ordinary models retain Lasgun as their default because declining the +10 upgrade is still a meaningful decision. Cadian Special Weapons Team model slots are otherwise unchanged.\n\nREV9 CADIAN SPECIAL WEAPONS TEAM DEFAULTS\nApplied the same dedicated-specialist presentation to Cadian Shock Troopers 9-10 under Special Weapons Team: Lasgun removed, Grenade Launcher defaulted. No other loadout, points, Regiment, Commander, or Command Squad behavior changed.\n\nREV10 TANK COMMANDER / ENGINSEER / COMMISSAR / TEMPESTUS SCIONS\nAdded the next three Leaders and the first Other unit. Tank Commander includes complete turret/hull choices, Vanquisher coaxial dependency, and Paid Wargear. Enginseer Envoy uses its fixed loadout. Commissar uses normal required Troops attachment semantics, does not consume Leader Capacity, and is Rare. Tempestus Scions use the approved compact five-model presentation with Tempestor, two fixed Scions, one paid-capable Scion, one Weapon Specialist, and Paid Wargear. Tempestus Scions also participate in generic Additional Copy Costs as a non-Rare Other unit.\n\nREV11 TANK COMMANDER UI / COMMISSAR ATTACHMENT POINTS\nSimplified Tank Commander Loadout presentation by suppressing redundant Turret/Hull/Sponson group labels. Moved the paid Sponson weapon choice into Loadout directly after the Hull weapon choice while preserving its points costs. Verified and retained Commissar attachment points on all three Regiment Troops; the Commissar remains a normal required-attached Leader.\n\nREV12 KASRKINS\nAdded Kasrkins with Kill Team-inspired player-facing role names: Kasrkin Sergeant, Gunner, and Sharpshooter / Demo Trooper. The decisive source restriction is compiled as a dynamic roster max: one Kasrkin unit per two Cadian Shock Troops, rounded down. Kasrkins safely hide outside Regiments of Cadia and remain constructively invalid if already included when the Regiment changes. As a native non-Rare Other unit, Kasrkins also use Additional Copy Costs.\n\nREV13 TRANSPORTS / VEHICLES / ARTILLERY\nAdded Chimera, Taurox, Leman Russ Battle Tank, Scout Sentinels, Armoured Sentinels, Hellhound, Basilisk, Wyvern, Manticore, Field Ordnance Battery, and Heavy Lascannon Battery. All are native non-Rare Other units and participate in Additional Copy Costs. Vehicle/Infantry semantic categories are applied from the UUS. Sentinel units implement 1-2 model construction with independent model loadouts, per-model Hunter-Killer Missile choices, and Smoke Launchers priced at 10 Points per model. Heavy Lascannon Battery includes the PDF note that it uses Field Ordnance Battery models with the Heavy Lascannon option.\n\nREV15 KRIEG SPECIALISTS\nAdded Death Korps Grenadiers and Death Korps Combat Engineers with approved compact model-slot loadouts, paid wargear, full Explosive Mines text, and hard roster prerequisites/ratio limits.\n\nREV16 DEATH KORPS FIELD ARTILLERY\nAdded Field Artillery as an unrestricted Astra Militarum unit, with a four-way artillery loadout and paid Gas Dispersion carrying full rule text.\n\nREV17 COMPLETION PASS\nAdded the three units found missing in the full catalogue-to-skeleton audit: Primaris Psyker, Heavy Weapons Squad, and Minotaur. Primaris Psyker uses the standard required Troops-association pattern; Heavy Weapons Squad uses three independent team weapon slots; Minotaur includes paid APHE Shells with full text.\n\nREV18 AUDIT FIXES\nCorrected the catalogue header revision and completed Additional Copy Costs for Death Korps Grenadiers, Death Korps Combat Engineers, Field Artillery, Heavy Weapons Squad, and Minotaur. Death Korps Grenadiers and Death Korps Combat Engineers now use the established safe-hide Regiment presentation for Death Korps of Krieg while retaining their existing hard ratio/prerequisite restrictions. Per review, the Hellhound hull weapon labels and the mandatory Heavy Flamer presentation in Death Korps Combat Engineers are intentionally unchanged.\n\nREV19 POLISH PASS\nStandardized direct unit loadout headings from Loadout to Loadout Options across all 25 affected native units. Added explicit model headers to the three Platoon Commanders, Commissar, Tank Commander, Chimera, Taurox, Leman Russ Battle Tank, Hellhound, Basilisk, Wyvern, Manticore, and Field Artillery; presented Heavy Lascannon Team 1-2 as the Heavy Lascannon Battery model-set header; and added explicit model headers to all eight shared Command Squad Officer models. Flattened Kasrkin Gunner and Sharpshooter / Demo Trooper into Loadout Options while preserving the Cadian Special Weapons Team / Heavy Weapons Team branch. Suppressed the remaining Basilisk, Wyvern, and Manticore Hull Weapon group labels while retaining all actual weapon names and mechanics. Standardized fourteen atomic package names to '&', with meaningful-choice-first ordering for Bodyguard packages; corrected Chimera and Taurox Stormbolter to Storm Bolter; standardized Tank Commander and Commissar Rare errors; and standardized the three Regiment Troop host-limit errors. Regiment configuration, safe-hide behavior, Platoon Commander prerequisites, Command Squad Officer architecture, Additional Copy Costs, Kasrkin/Krieg ratios, Sentinel 1-2 arithmetic, Vanquisher coaxial dependencies, vehicle costs, sponsons, Death Korps Combat Engineer Heavy Flamer behavior, and all other rules semantics are unchanged.\n\nREV20 RETROSPECTIVE POLISH PASS\nFinal retrospective pass against the mature cross-faction presentation standard. Replaced the obsolete live Additional Copy Costs Phase 0.1 comment with a current-state description of Other-unit surcharge arithmetic and shared configuration validation. Kasrkins now present Sharpshooter / Demo Trooper as the model name with Hot-Shot Marksman Rifle or Melta Mine & Hot-Shot Laspistol as the visible equipment choice; the obsolete nested one-option Loadout objects are hidden compatibility remnants preserving their IDs. Suppressed redundant one-item Paid Wargear wrappers where the equipment name is already self-identifying, renamed every multi-option vehicle accessory/pintle group to Pintle Weapons, suppressed the Taurox Twin Autocannon double wrapper, and retained self-identifying hull/sponson/coaxial equipment names without redundant slot labels. Heavy Lascannon Battery now separates the Heavy Lascannon Team 1-2 model-set header from its 2x Heavy Lascannon equipment line. Mirrored every applicable vehicle presentation change into Manufactorum Imperium Library V4. All pre-existing IDs, points, costs, defaults, constraints, Regiment behavior, safe-hide logic, Platoon Commander prerequisites, Command Squad Officer architecture, Additional Copy Costs arithmetic, Kasrkin/Krieg ratios, Sentinel model ownership and scaling, Vanquisher coaxial dependencies, vehicle costs, sponson costs, Rare validation, and all other rules semantics remain unchanged.\n\nREV21 / GS17 TROOP COPY COSTS\nUpdated to Game System revision 17 and adopted the unified Additional Copy Costs presentation with Troops and Other child ledgers. Cadian Shock Troops, Death Korps Of Krieg, and Mordian Iron Guard now use separate Troop 4 / 6 / 8 normal-copy allowances; each further identical copy costs +20 Points. The Regiment selector continues to control normal availability and the three Troop datasheets are not pooled into a generic Regiment Troop count. All 108 pre-existing Other point modifiers were moved unchanged to the Other child, preserving the same 18 Other copy families. No zero-point, generated, attached-free, or otherwise exempt Troop unit exists in this catalogue. All Regiment safe-hide behavior, Platoon Commander prerequisites, Commissar attachments, Kasrkin/Krieg ratio rules, variable-size Sentinel arithmetic, Rare semantics, vehicle/loadout presentation, and other catalogue mechanics remain unchanged.\n\nREV22 CONSTRUCTIVE DEPENDENCY ERRORS\nReplaced the old stock-constraint enforcement on Kasrkins, Death Korps Grenadiers, and Death Korps Combat Engineers with permissive constructive validation. Kasrkin and Death Korps Grenadiers now use ratio_limit validation bands rather than dynamic hard roster maxima; each validates one specialist unit per two supporting Regiment Troops through 11 supporting units. Death Korps Combat Engineers now use prerequisite_limit validation rather than a max-0/set-99 gate. The three Platoon Commanders were audited and already used the intended permissive + constructive Regimental prerequisite pattern, so they were left unchanged. Existing Regiment safe-hide behavior, wrong-Regiment errors, visible source rules, points, loadouts, Additional Copy Costs, categories, and all other catalogue semantics remain unchanged.\n\nREV23 — TOP-LEVEL PINTLE WEAPONS\nPromoted every Astra Militarum Pintle Weapons group from inside Paid Wargear to a top-level unit section. Affected units: Tank Commander, Chimera, Taurox, Leman Russ Battle Tank, Hellhound. Each affected vehicle now presents Loadout Options, Pintle Weapons, then Paid Wargear. Existing Pintle group and option IDs, points, constraints, and unrelated mechanics are unchanged.\n\nREV24 — CHIMERA LOADOUT ORDER\nReordered the Chimera model's loadout groups to turret weapons, hull weapons, then Lasgun Array. This is presentation-only; all existing IDs and mechanics are preserved.\n\nREV25 — FIELD ARTILLERY NAME CLEANUP\nRenamed the formerly Death Korps-labelled artillery unit to Field Artillery because it is not restricted to the Death Korps of Krieg Regiment. Preserved the existing unit ID, model-header ID, points, loadout, Additional Copy Costs, categories, and all other mechanics. Updated matching childName labels accordingly.\n\nREV26 — DEATH KORPS COMBAT ENGINEER REBUILD\nSimplified Death Korps Combat Engineer 3-5 into one literal three-model package choice: 3x Shotgun or 3x Trench Baton & Autopistol. Replaced the quantity-3 Frag Grenade control with three independent 10-point bearer checkboxes, Frag Grenade 1-3, using the same flattened checkbox presentation pattern established for Fire Dragons. Explosive Mines and Remote Mine remain optional (None) selectors. Watchmaster and Death Korps Combat Engineer 2 are unchanged.\n\nREV27 — KASRKIN ROLE NAMES\nRenamed the Kasrkin Loadout Options headers Gunner to Kasrkin Gunner and Sharpshooter / Demo Trooper to Kasrkin Sharpshooter / Demo Trooper. Presentation-only; all IDs and mechanics are preserved.\n\nREV28 — WEAPONS SPECIALIST ROLE NAMES\nStandardized Astra Militarum specialist model headers so the troop/model identity comes first and the role is consistently named Weapons Specialist. Renamed Kasrkin Gunner to Kasrkin Weapons Specialist; prefixed the existing generic Weapon Specialist headers for Cadian Shock Troops, Death Korps Of Krieg, Mordian Iron Guard, and Tempestus Scions. Existing IDs, loadouts, costs, defaults, constraints, Regiment behavior, and all other mechanics are unchanged.\n\nREV29 — SERGEANT LOADOUT CLEANUP\nCleaned up the Cadian Sergeant, Mordian Sergeant, and Death Korps Watchmaster presentations. All three now present melee choice first and ranged choice second with redundant slot labels suppressed. Cadian Sergeant is explicitly named Cadian Sergeant. Mordian Sergeant now correctly chooses Chainsword or Power Sword rather than the malformed combined Chainsword & Power Sword entry. Watchmaster Power Weapon was renamed Power Sword, Plasma Pistol was removed, and Drum-Fed Autogun was added. Existing surviving IDs, defaults where still meaningful, points, Regiment behavior, and unrelated mechanics are preserved.\n\nREV30 — SERGEANT PDF CORRECTION + COMMISSAR LAYOUT\nCorrected the three Regiment Troop sergeant/watchmaster weapon options directly against the supplied PDF text while retaining the approved no-header, melee-first presentation. Cadian Sergeant sidearms are Drum-Fed Autogun, Laspistol, Bolt Pistol. Watchmaster sidearms are Laspistol, Bolt Pistol, Plasma Pistol, Boltgun and its melee option is correctly named Power Weapon. Mordian Sergeant sidearms are Drum-Fed Autogun, Laspistol, Bolt Pistol. Commissar now uses the same no-header, melee-first layout without changing its weapon options.\n\nREV31 — HEADER CLEANUP + GS20 TROOP COPY RULE\nSuppressed every remaining player-facing Sidearm and Melee Weapon slot header across the catalogue. Affected Cadian, Death Korps, and Mordian Platoon Commanders; Tempestus Scions; Kasrkins; Death Korps Grenadiers; and Death Korps Combat Engineers. Updated to Game System revision 20 and retargeted Cadian Shock Troops, Death Korps Of Krieg, and Mordian Iron Guard to the Additional Copy Cost - Troop short-form rule. Existing IDs, loadout choices, ordering, points, Regiment behavior, validation, copy-cost arithmetic, and unrelated mechanics are unchanged.\n\nREV32 — ASTRA MILITARUM 3.3.4 PATCH UPDATE\nUpdated Mordian Iron Guard final four models to include Bayonets on all loadout options. Death Korps Combat Engineer 2 now chooses Flamer or Heavy Flamer. Split the previous Engineer 3-5 package into a single Engineer 3 and a Cadian-style Engineers 4-5 / Mole Launcher Team state. Existing IDs were preserved where the old player-facing decision survived; new states use deterministic IDs. Added Patch Notes (3.3.4) under Configuration. GS20 and unrelated mechanics are unchanged.\n\nREV33 — MOLE LAUNCHER TEAM COST\nDeath Korps Mole Launcher Team now costs +20 Points. Patch Notes (3.3.4) updated accordingly. No other mechanics changed.\n\nREV34 — STANDARD PATCH NOTES FORMAT\nReworked the existing Patch Notes Configuration into the standard two-section format. Astra Militarum 3.3.4 now lists only the Death Korps Combat Engineer rules changes relevant to the catalogue: Flamer added as an alternative to Heavy Flamer, and Mole Launcher Team added as a +20 Point replacement upgrade for removing one model. Added the Reforged Discord Server reference for the full rules patch. Added Catalogue Bugfixes (September 4th) with 'Catalogue created.' Existing Patch Notes entry/rule IDs, automatic default insertion, mechanical changes from REV32-33, and unrelated catalogue semantics are unchanged.\n\nREV35 — RULES BASELINE SYNC\nUpdated the player-facing army-rules baseline from Astra Militarum 3.3.4 to Astra Militarum 3.3.5 and retargeted the catalogue from Game System revision 20 to the current Game System revision 21. No unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, validation, or other catalogue mechanics changed in this pass.\n\nREV36 — CHECKBOX PRESENTATION CLEANUP\nFlattened one-item optional wrappers for Hunter-Killer Missile, Smoke Launchers, Armour Piercing High Explosive Shells, Dozer Blade, Taurox Twin Autocannon, Gas Dispersion, Krak Grenade, and Frag Grenade into direct checkbox-style selections wherever applicable, including per-model Sentinel Hunter-Killer Missiles. Existing stable selection IDs, costs, rules, modifiers, and max-1 constraint IDs are preserved. Death Korps Combat Engineers' three already-direct Frag Grenade entries were normalized to the same visible name while preserving separate IDs and constraints. For Cadian, Death Korps, and Mordian Platoon Commanders, all ten Command Squad member wrapper groups were flattened into direct entryLinks under Command Squad, moving each existing max-1 constraint onto its existing link. Shared Command Squad member targets remain type=unit; their shared definitions, costs, loadouts, rules, and IDs are unchanged. Duplicate Bodyguard and Weapons Specialist slots therefore appear as repeated checkboxes with the same visible name. No root points, loadout legality, Regiment restrictions, associations, Additional Copy Costs, GS21 target, or unrelated mechanics changed.",
+    "comment": "CURRENT STATE — ASTRA MILITARUM 3.3.5 / GS21\nComplete playable catalogue using an explicit Regiment selector as a listbuilder presentation abstraction. Regiments of Cadia is the default. Regiment selection controls normal availability; matching Platoon Commander Troop prerequisites remain separately enforced. Cadian Shock Troops, Death Korps Of Krieg, and Mordian Iron Guard are independent Troop Additional Copy Cost families. Non-Rare Other units use the normal Other copy-cost ledger.\nCommand Squad members are reusable complete nested Leader units beneath Platoon Commanders. They do not consume normal Leader Capacity and are selected through direct linked-unit checkboxes. Commissar and Primaris Psyker use mandatory Troops attachment validation. Tank Commander and Commissar are Rare with constructive max-one errors. Kasrkins and Death Korps Grenadiers use permissive ratio validation instead of New Recruit stock maxima; Death Korps Combat Engineers use constructive prerequisite validation.\nSentinel units are 1-2 models. The included model is presented as Sentinel and the optional second model as Additional Sentinel under the retained Additional Model wrapper; the max-one constraint lives on the optional model entry so New Recruit presents it as a checkbox. Smoke Launchers scale by selected model count.\nPortable Astra Militarum vehicle trees in this catalogue are the canonical source for the Manufactorum Imperium shared library. Synchronize verified source changes into the library without changing source IDs or Manufactorum-specific presentation semantics.\n\nAUTHORING / RUNTIME NOTES\nThe army-rules PDF is authoritative for player rules and source-derived rules[].description text. The listbuilder represents meaningful final-state choices rather than every procedural replacement step.\nRegiment-gated units use selected-safe hiding plus constructive wrong-Regiment validation. Dedicated specialist roles may omit an ordinary fallback where declining the specialist is not a meaningful list-building decision.\nAdditional Copy Costs are per datasheet family: Troops allow 4 / 6 / 8 normal copies at 800 / 1200 / 1600 Points; Other allows 1 / 2 / 3. Each further identical copy costs +20 Points.\nCommand Squad member entryLinks remain type=unit because they are complete nested units. Duplicate Bodyguard and Weapons Specialist slots are independent repeated checkboxes.\nSentinel per-model Hunter-Killer Missiles remain model-owned. Explosive Mines, Remote Mine, grenade upgrades, and other independent binary wargear choices use direct max-one checkboxes.\n\nHISTORICAL / REVISION NOTES\nREV1-9 — Established Regiment abstraction, Regiment Troops, Platoon Commanders, Command Squad pool, compact Troop loadouts, and specialist presentation.\nREV10-18 — Added remaining Leaders, specialists, vehicles, artillery, Krieg units, completion-pass units, Regiment safe-hide behavior, and complete Additional Copy Cost coverage.\nREV19-20 — Mature presentation polish; standardized Loadout Options, model headers, atomic package naming, vehicle presentation, and synchronized the then-current Astra vehicle presentation into Manufactorum.\nREV21-22 — Adopted unified Troop / Other Additional Copy Costs and constructive dependency / ratio validation.\nREV23-31 — Promoted Pintle Weapons, cleaned vehicle and specialist presentation, rebuilt Combat Engineer presentation, standardized role names, corrected Sergeant / Watchmaster loadouts, and suppressed redundant Sidearm / Melee headers.\nREV32-35 — Applied Astra Militarum 3.3.4 Combat Engineer changes, standardized Patch Notes, then synchronized the baseline to Astra Militarum 3.3.5 / GS21.\nREV36 — Flattened independent checkbox-style wargear and Command Squad member entryLinks while preserving stable IDs and semantics.\nREV37 — Converted Scout / Armoured Sentinel optional second models to Additional Sentinel checkboxes, flattened Explosive Mines and Remote Mine, and consolidated live implementation comments.",
     "categoryEntries": [
       {
         "name": "May Attach To: Commissar",

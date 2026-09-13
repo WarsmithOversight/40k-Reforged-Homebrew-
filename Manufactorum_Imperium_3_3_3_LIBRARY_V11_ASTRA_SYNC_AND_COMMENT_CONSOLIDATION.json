@@ -5,7 +5,7 @@
     "name": "Manufactorum Imperium 3.3.3 - Library",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 10,
+    "revision": 11,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [],
@@ -340,16 +340,74 @@
             ]
           },
           {
+            "name": "Pintle Weapons",
+            "id": "fa9d-2461-b102-b0a1",
+            "hidden": false,
+            "sortIndex": 2,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "ec04-7c8f-600d-ef09",
+                "includeChildSelections": false
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Pintle Heavy Stubber",
+                "hidden": false,
+                "id": "1bdd-3db9-6d35-80d6",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Pintle Storm Bolter",
+                "hidden": false,
+                "id": "a8cf-e17d-9199-7c58",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "name": "Paid Wargear",
             "id": "14c8-9efa-e13e-f776",
             "hidden": false,
-            "sortIndex": 2,
-            "selectionEntryGroups": [
+            "sortIndex": 3,
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "af20-52ae-2cf0-db28",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "b2d3-d3a1-90a5-f2f1",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -360,79 +418,22 @@
                     "id": "ce36-442d-df3e-f8a8",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "b2d3-d3a1-90a5-f2f1",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
                 ]
               },
               {
-                "name": "Pintle Weapons",
-                "id": "fa9d-2461-b102-b0a1",
+                "type": "upgrade",
+                "import": true,
+                "name": "Dozer Blade",
                 "hidden": false,
+                "id": "af1e-8061-f507-ba6b",
                 "sortIndex": 2,
-                "constraints": [
+                "costs": [
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "ec04-7c8f-600d-ef09",
-                    "includeChildSelections": false
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
                   }
                 ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Pintle Heavy Stubber",
-                    "hidden": false,
-                    "id": "1bdd-3db9-6d35-80d6",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Pintle Storm Bolter",
-                    "hidden": false,
-                    "id": "a8cf-e17d-9199-7c58",
-                    "sortIndex": 2,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "​",
-                "id": "7dc2-6577-3e78-a085",
-                "hidden": false,
-                "sortIndex": 3,
                 "constraints": [
                   {
                     "type": "max",
@@ -442,23 +443,6 @@
                     "shared": true,
                     "id": "6713-8241-f5b3-683a",
                     "includeChildSelections": false
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Dozer Blade",
-                    "hidden": false,
-                    "id": "af1e-8061-f507-ba6b",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
                   }
                 ]
               }
@@ -495,7 +479,7 @@
             ]
           }
         ],
-        "comment": "TANK COMMANDER CURRENT STATE: complete points/categories/loadout. Vanquisher Cannon exposes its mandatory Coaxial Weapon choice. Redundant turret, hull, and sponson slot labels are suppressed because the equipment names already identify their mounting position. Paid Wargear uses Pintle Weapons as the semantic multi-option header; one-item paid-wargear wrappers are suppressed.\nMANUFACTORUM IMPERIUM LIBRARY V1: copied intact from the audited Astra Militarum Rev18 unit tree. The consuming catalogue supplies the player-facing Manufactorum category and availability switch."
+        "comment": "TANK COMMANDER CURRENT STATE: complete Rare Leader / Vehicle loadout. Vanquisher Cannon exposes its mandatory Coaxial Weapon choice. Redundant turret, hull, and sponson slot labels are suppressed. Pintle Weapons is a top-level section between Loadout Options and Paid Wargear; one-item Paid Wargear options use direct checkbox-style selections.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
       },
       {
         "type": "unit",
@@ -544,43 +528,6 @@
                 "hidden": false,
                 "sortIndex": 1,
                 "selectionEntryGroups": [
-                  {
-                    "name": "​",
-                    "id": "e944-1235-7df4-fedf",
-                    "hidden": false,
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "c520-1c7a-bbfa-5870",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "8451-d868-575b-4c17",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Lasgun Array",
-                        "hidden": false,
-                        "id": "f68c-6b04-2482-1461",
-                        "sortIndex": 1
-                      }
-                    ],
-                    "defaultSelectionEntryId": "f68c-6b04-2482-1461",
-                    "sortIndex": 1
-                  },
                   {
                     "name": "​",
                     "id": "9cdd-0ffc-c4ab-e240",
@@ -632,7 +579,7 @@
                       }
                     ],
                     "defaultSelectionEntryId": "881f-20dc-624d-4654",
-                    "sortIndex": 2
+                    "sortIndex": 1
                   },
                   {
                     "name": "​",
@@ -677,6 +624,43 @@
                       }
                     ],
                     "defaultSelectionEntryId": "4f4c-52a9-c4b7-183d",
+                    "sortIndex": 2
+                  },
+                  {
+                    "name": "​",
+                    "id": "e944-1235-7df4-fedf",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c520-1c7a-bbfa-5870",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8451-d868-575b-4c17",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lasgun Array",
+                        "hidden": false,
+                        "id": "f68c-6b04-2482-1461",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "f68c-6b04-2482-1461",
                     "sortIndex": 3
                   }
                 ]
@@ -684,64 +668,74 @@
             ]
           },
           {
+            "name": "Pintle Weapons",
+            "id": "c6e1-b61d-b901-3a97",
+            "hidden": false,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "1c01-eee8-00dd-9d87",
+                "includeChildSelections": false
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Heavy Stubber",
+                "hidden": false,
+                "id": "312e-e1c4-1da6-cd71",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Storm Bolter",
+                "hidden": false,
+                "id": "be13-bc28-1b02-0faf",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ]
+              }
+            ],
+            "sortIndex": 2
+          },
+          {
             "name": "Paid Wargear",
             "id": "1dff-5a46-0ea7-1905",
             "hidden": false,
-            "sortIndex": 2,
-            "selectionEntryGroups": [
+            "sortIndex": 3,
+            "selectionEntries": [
               {
-                "name": "Pintle Weapons",
-                "id": "c6e1-b61d-b901-3a97",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
-                "constraints": [
+                "id": "ee77-1fe8-5b63-a77a",
+                "sortIndex": 1,
+                "costs": [
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "1c01-eee8-00dd-9d87",
-                    "includeChildSelections": false
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
                   }
                 ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Heavy Stubber",
-                    "hidden": false,
-                    "id": "312e-e1c4-1da6-cd71",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Storm Bolter",
-                    "hidden": false,
-                    "id": "be13-bc28-1b02-0faf",
-                    "sortIndex": 2,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 1
-              },
-              {
-                "name": "​",
-                "id": "1e8a-932b-8095-6e55",
-                "hidden": false,
                 "constraints": [
                   {
                     "type": "max",
@@ -752,30 +746,22 @@
                     "id": "f81a-3bc8-4e87-9966",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "ee77-1fe8-5b63-a77a",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 2
+                ]
               },
               {
-                "name": "​",
-                "id": "a640-6aa5-2886-ffce",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "236d-4ea9-7c3d-a8fd",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -786,25 +772,7 @@
                     "id": "9982-3c68-1673-3265",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "236d-4ea9-7c3d-a8fd",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 3
+                ]
               }
             ]
           }
@@ -818,7 +786,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "CHIMERA CURRENT STATE: Vehicle / Other. Fixed Lasgun Array, mandatory turret and hull choices, then Pintle Weapons, Hunter-Killer Missile, and Smoke Launchers under Paid Wargear.\nMANUFACTORUM IMPERIUM LIBRARY V1: copied intact from the audited Astra Militarum Rev18 unit tree. The consuming catalogue supplies the player-facing Manufactorum category and availability switch."
+        "comment": "CHIMERA CURRENT STATE: Vehicle / Other. Loadout Options presents turret weapon, hull weapon, then fixed Lasgun Array. Pintle Weapons is a top-level section. Hunter-Killer Missile and Smoke Launchers are direct Paid Wargear checkboxes.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
       },
       {
         "type": "unit",
@@ -866,11 +834,21 @@
                 "id": "26e3-e61a-bb4f-1b3f",
                 "hidden": false,
                 "sortIndex": 1,
-                "selectionEntryGroups": [
+                "selectionEntries": [
                   {
-                    "name": "​",
-                    "id": "31e1-7837-58d1-f990",
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Twin Autocannon",
                     "hidden": false,
+                    "id": "0015-7cca-8a9e-3b6b",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 20
+                      }
+                    ],
                     "constraints": [
                       {
                         "type": "max",
@@ -881,89 +859,81 @@
                         "id": "e269-c6f9-0ce4-2512",
                         "includeChildSelections": false
                       }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Twin Autocannon",
-                        "hidden": false,
-                        "id": "0015-7cca-8a9e-3b6b",
-                        "sortIndex": 1,
-                        "costs": [
-                          {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 20
-                          }
-                        ]
-                      }
-                    ],
-                    "sortIndex": 1
+                    ]
                   }
                 ]
               }
             ]
           },
           {
+            "name": "Pintle Weapons",
+            "id": "99de-3d18-35ba-2f1d",
+            "hidden": false,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "439c-717d-b70c-deae",
+                "includeChildSelections": false
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Heavy Stubber",
+                "hidden": false,
+                "id": "0ebd-810d-9988-5fc8",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Storm Bolter",
+                "hidden": false,
+                "id": "eb37-dccb-e11e-86f6",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ]
+              }
+            ],
+            "sortIndex": 2
+          },
+          {
             "name": "Paid Wargear",
             "id": "580c-e89a-84a3-efe6",
             "hidden": false,
-            "sortIndex": 2,
-            "selectionEntryGroups": [
+            "sortIndex": 3,
+            "selectionEntries": [
               {
-                "name": "Pintle Weapons",
-                "id": "99de-3d18-35ba-2f1d",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
-                "constraints": [
+                "id": "56bc-546c-d707-7f41",
+                "sortIndex": 1,
+                "costs": [
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "439c-717d-b70c-deae",
-                    "includeChildSelections": false
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
                   }
                 ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Heavy Stubber",
-                    "hidden": false,
-                    "id": "0ebd-810d-9988-5fc8",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Storm Bolter",
-                    "hidden": false,
-                    "id": "eb37-dccb-e11e-86f6",
-                    "sortIndex": 2,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 1
-              },
-              {
-                "name": "​",
-                "id": "8034-02c6-9968-8ab1",
-                "hidden": false,
                 "constraints": [
                   {
                     "type": "max",
@@ -974,30 +944,22 @@
                     "id": "66e5-be05-9ea2-0c49",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "56bc-546c-d707-7f41",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 2
+                ]
               },
               {
-                "name": "​",
-                "id": "19a2-46a7-e3c4-b9b5",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "befa-cfc8-0eff-9239",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -1008,25 +970,7 @@
                     "id": "962d-0f59-dfbe-6b88",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "befa-cfc8-0eff-9239",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 3
+                ]
               }
             ]
           }
@@ -1040,7 +984,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "TAUROX CURRENT STATE: Vehicle / Other. Optional Twin Autocannon remains a primary Loadout Options choice with its redundant duplicate wrapper suppressed. Pintle Weapons, Hunter-Killer Missile, and Smoke Launchers remain under Paid Wargear.\nMANUFACTORUM IMPERIUM LIBRARY V1: copied intact from the audited Astra Militarum Rev18 unit tree. The consuming catalogue supplies the player-facing Manufactorum category and availability switch."
+        "comment": "TAUROX CURRENT STATE: Vehicle / Other. Optional Twin Autocannon is a direct Loadout Options checkbox. Pintle Weapons is a top-level section. Hunter-Killer Missile and Smoke Launchers are direct Paid Wargear checkboxes.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
       },
       {
         "type": "unit",
@@ -1366,15 +1310,74 @@
             ]
           },
           {
+            "name": "Pintle Weapons",
+            "id": "6e90-58b4-c0cb-cd6b",
+            "hidden": false,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "5bc1-7572-9074-63f7",
+                "includeChildSelections": false
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Pintle Heavy Stubber",
+                "hidden": false,
+                "id": "d6ff-5938-ee1e-6608",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Pintle Storm Bolter",
+                "hidden": false,
+                "id": "3084-a45c-cafd-04dd",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ]
+              }
+            ],
+            "sortIndex": 2
+          },
+          {
             "name": "Paid Wargear",
             "id": "095d-32ef-8773-a4ad",
             "hidden": false,
-            "sortIndex": 2,
-            "selectionEntryGroups": [
+            "sortIndex": 3,
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "d617-1d8f-734a-1b2d",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "d11b-87cb-33dc-f3ed",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -1385,79 +1388,22 @@
                     "id": "2aac-56b7-b2fe-fc01",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "d11b-87cb-33dc-f3ed",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 1
+                ]
               },
               {
-                "name": "Pintle Weapons",
-                "id": "6e90-58b4-c0cb-cd6b",
+                "type": "upgrade",
+                "import": true,
+                "name": "Dozer Blade",
                 "hidden": false,
-                "constraints": [
+                "id": "1e1d-a850-9956-26a0",
+                "sortIndex": 2,
+                "costs": [
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "5bc1-7572-9074-63f7",
-                    "includeChildSelections": false
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
                   }
                 ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Pintle Heavy Stubber",
-                    "hidden": false,
-                    "id": "d6ff-5938-ee1e-6608",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Pintle Storm Bolter",
-                    "hidden": false,
-                    "id": "3084-a45c-cafd-04dd",
-                    "sortIndex": 2,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 2
-              },
-              {
-                "name": "​",
-                "id": "cbc9-7102-b356-94be",
-                "hidden": false,
                 "constraints": [
                   {
                     "type": "max",
@@ -1468,30 +1414,22 @@
                     "id": "c7ad-e491-5d24-2c45",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Dozer Blade",
-                    "hidden": false,
-                    "id": "1e1d-a850-9956-26a0",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 3
+                ]
               },
               {
-                "name": "​",
-                "id": "0f07-c87d-9231-c350",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "86a6-3eca-c7d9-b285",
+                "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -1502,25 +1440,7 @@
                     "id": "b3ae-dbbd-9ce0-7185",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "86a6-3eca-c7d9-b285",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 4
+                ]
               }
             ]
           }
@@ -1534,7 +1454,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "LEMAN RUSS CURRENT STATE: Vehicle / Other. Mirrors the cleaned Tank Commander presentation: turret, hull, and paid sponson choices live under Loadout Options with redundant slot labels suppressed. Vanquisher exposes its mandatory coaxial choice. Paid Wargear uses Pintle Weapons as the semantic multi-option header.\nMANUFACTORUM IMPERIUM LIBRARY V1: copied intact from the audited Astra Militarum Rev18 unit tree. The consuming catalogue supplies the player-facing Manufactorum category and availability switch."
+        "comment": "LEMAN RUSS CURRENT STATE: Vehicle / Other. Turret, hull, and optional sponson choices live under Loadout Options with redundant slot labels suppressed; Vanquisher exposes its mandatory coaxial choice. Pintle Weapons is a top-level section. Hunter-Killer Missile, Dozer Blade, and Smoke Launchers use direct Paid Wargear checkboxes.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
       },
       {
         "type": "unit",
@@ -1578,7 +1498,7 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Scout Sentinel 1",
+                "name": "Sentinel",
                 "id": "c374-6bd5-528c-13b7",
                 "hidden": false,
                 "sortIndex": 1,
@@ -1696,11 +1616,23 @@
                     ],
                     "defaultSelectionEntryId": "19a6-c1ee-1b81-156a",
                     "sortIndex": 2
-                  },
+                  }
+                ],
+                "selectionEntries": [
                   {
-                    "name": "​",
-                    "id": "840c-a469-045d-0a85",
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Hunter-Killer Missile",
                     "hidden": false,
+                    "id": "273d-f68c-a1b0-adf1",
+                    "sortIndex": 3,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 10
+                      }
+                    ],
                     "constraints": [
                       {
                         "type": "max",
@@ -1711,25 +1643,7 @@
                         "id": "0b9d-b256-5093-9c83",
                         "includeChildSelections": false
                       }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Hunter-Killer Missile",
-                        "hidden": false,
-                        "id": "273d-f68c-a1b0-adf1",
-                        "sortIndex": 1,
-                        "costs": [
-                          {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
-                          }
-                        ]
-                      }
-                    ],
-                    "sortIndex": 3
+                    ]
                   }
                 ]
               },
@@ -1738,22 +1652,11 @@
                 "id": "d094-6b30-e74f-f012",
                 "hidden": false,
                 "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "1d6d-0ab9-de35-d34a",
-                    "includeChildSelections": false
-                  }
-                ],
                 "selectionEntries": [
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Scout Sentinel 2",
+                    "name": "Additional Sentinel",
                     "hidden": false,
                     "id": "b1d3-b7cc-14eb-6c9b",
                     "sortIndex": 1,
@@ -1878,11 +1781,23 @@
                         ],
                         "defaultSelectionEntryId": "8886-981c-3bf1-b7ba",
                         "sortIndex": 2
-                      },
+                      }
+                    ],
+                    "selectionEntries": [
                       {
-                        "name": "​",
-                        "id": "ac2a-c9eb-3426-410b",
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hunter-Killer Missile",
                         "hidden": false,
+                        "id": "24cc-df55-b7af-8558",
+                        "sortIndex": 3,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ],
                         "constraints": [
                           {
                             "type": "max",
@@ -1893,25 +1808,18 @@
                             "id": "608f-7e70-9505-5e7b",
                             "includeChildSelections": false
                           }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Hunter-Killer Missile",
-                            "hidden": false,
-                            "id": "24cc-df55-b7af-8558",
-                            "sortIndex": 1,
-                            "costs": [
-                              {
-                                "name": "Points",
-                                "typeId": "51b2-306e-1021-d207",
-                                "value": 10
-                              }
-                            ]
-                          }
-                        ],
-                        "sortIndex": 3
+                        ]
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1d6d-0ab9-de35-d34a",
+                        "includeChildSelections": false
                       }
                     ]
                   }
@@ -1924,11 +1832,42 @@
             "id": "585e-6c38-5eb0-b421",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "9935-9f2c-7bb0-24fe",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "b928-72da-6ea5-df77",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "type": "increment",
+                    "value": 10,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "b1d3-b7cc-14eb-6c9b",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": false,
+                        "queryFromSelf": false,
+                        "childName": "Additional Sentinel"
+                      }
+                    ]
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -1939,46 +1878,7 @@
                     "id": "6106-06ae-0435-e664",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "b928-72da-6ea5-df77",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "modifiers": [
-                      {
-                        "type": "increment",
-                        "value": 10,
-                        "field": "51b2-306e-1021-d207",
-                        "conditions": [
-                          {
-                            "type": "atLeast",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b1d3-b7cc-14eb-6c9b",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "includeChildForces": false,
-                            "queryFromSelf": false,
-                            "childName": "Scout Sentinel 2"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 1
+                ]
               }
             ]
           }
@@ -1992,7 +1892,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "SCOUT SENTINELS REV13: Vehicle / Other, 1-2 models. The first model is included in the root cost; the optional second model costs 60 Points and owns independent weapon/Hunter-Killer choices. Smoke Launchers cost 10 Points per model and scale to 20 Points when the second Sentinel is present.\nMANUFACTORUM IMPERIUM LIBRARY V1: copied intact from the audited Astra Militarum Rev18 unit tree. The consuming catalogue supplies the player-facing Manufactorum category and availability switch."
+        "comment": "SCOUT SENTINELS CURRENT STATE: Vehicle / Other, 1-2 models. The included model is presented simply as Sentinel. The optional second model is an Additional Sentinel checkbox at +60 Points and owns an independent main weapon and Hunter-Killer Missile choice. Smoke Launchers cost +10 Points per model and scale to +20 when Additional Sentinel is selected.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
       },
       {
         "type": "unit",
@@ -2036,7 +1936,7 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Armoured Sentinel 1",
+                "name": "Sentinel",
                 "id": "3ae8-95f4-3ffd-b205",
                 "hidden": false,
                 "sortIndex": 1,
@@ -2154,11 +2054,23 @@
                     ],
                     "defaultSelectionEntryId": "bb7f-ddf4-8c91-10a8",
                     "sortIndex": 2
-                  },
+                  }
+                ],
+                "selectionEntries": [
                   {
-                    "name": "​",
-                    "id": "84ee-6408-a128-3b23",
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Hunter-Killer Missile",
                     "hidden": false,
+                    "id": "79e4-b28b-9f91-0172",
+                    "sortIndex": 3,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 10
+                      }
+                    ],
                     "constraints": [
                       {
                         "type": "max",
@@ -2169,25 +2081,7 @@
                         "id": "ae3d-7387-7a73-c063",
                         "includeChildSelections": false
                       }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Hunter-Killer Missile",
-                        "hidden": false,
-                        "id": "79e4-b28b-9f91-0172",
-                        "sortIndex": 1,
-                        "costs": [
-                          {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
-                          }
-                        ]
-                      }
-                    ],
-                    "sortIndex": 3
+                    ]
                   }
                 ]
               },
@@ -2196,22 +2090,11 @@
                 "id": "21b1-e77f-33ff-86e7",
                 "hidden": false,
                 "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "139c-ffe8-5341-bffd",
-                    "includeChildSelections": false
-                  }
-                ],
                 "selectionEntries": [
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Armoured Sentinel 2",
+                    "name": "Additional Sentinel",
                     "hidden": false,
                     "id": "3f0f-5aa3-362c-8ea5",
                     "sortIndex": 1,
@@ -2336,11 +2219,23 @@
                         ],
                         "defaultSelectionEntryId": "31b2-77c1-e2ff-0f32",
                         "sortIndex": 2
-                      },
+                      }
+                    ],
+                    "selectionEntries": [
                       {
-                        "name": "​",
-                        "id": "cafc-1453-33dc-d66f",
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Hunter-Killer Missile",
                         "hidden": false,
+                        "id": "ef3a-e5ea-edde-4cbb",
+                        "sortIndex": 3,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ],
                         "constraints": [
                           {
                             "type": "max",
@@ -2351,25 +2246,18 @@
                             "id": "41c1-c98c-e457-c420",
                             "includeChildSelections": false
                           }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Hunter-Killer Missile",
-                            "hidden": false,
-                            "id": "ef3a-e5ea-edde-4cbb",
-                            "sortIndex": 1,
-                            "costs": [
-                              {
-                                "name": "Points",
-                                "typeId": "51b2-306e-1021-d207",
-                                "value": 10
-                              }
-                            ]
-                          }
-                        ],
-                        "sortIndex": 3
+                        ]
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "139c-ffe8-5341-bffd",
+                        "includeChildSelections": false
                       }
                     ]
                   }
@@ -2382,11 +2270,42 @@
             "id": "098c-9588-e844-d541",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "411b-771e-a282-82dd",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "24af-e07a-b38c-7b77",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "type": "increment",
+                    "value": 10,
+                    "field": "51b2-306e-1021-d207",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "3f0f-5aa3-362c-8ea5",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": false,
+                        "queryFromSelf": false,
+                        "childName": "Additional Sentinel"
+                      }
+                    ]
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -2397,46 +2316,7 @@
                     "id": "901a-2930-ad52-2a5e",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "24af-e07a-b38c-7b77",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "modifiers": [
-                      {
-                        "type": "increment",
-                        "value": 10,
-                        "field": "51b2-306e-1021-d207",
-                        "conditions": [
-                          {
-                            "type": "atLeast",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "3f0f-5aa3-362c-8ea5",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "includeChildForces": false,
-                            "queryFromSelf": false,
-                            "childName": "Armoured Sentinel 2"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 1
+                ]
               }
             ]
           }
@@ -2450,7 +2330,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "ARMOURED SENTINELS REV13: Vehicle / Other, 1-2 models. The first model is included in the root cost; the optional second model costs 80 Points and owns independent weapon/Hunter-Killer choices. Smoke Launchers cost 10 Points per model and scale to 20 Points when the second Sentinel is present.\nMANUFACTORUM IMPERIUM LIBRARY V1: copied intact from the audited Astra Militarum Rev18 unit tree. The consuming catalogue supplies the player-facing Manufactorum category and availability switch."
+        "comment": "ARMOURED SENTINELS CURRENT STATE: Vehicle / Other, 1-2 models. The included model is presented simply as Sentinel. The optional second model is an Additional Sentinel checkbox at +80 Points and owns an independent main weapon and Hunter-Killer Missile choice. Smoke Launchers cost +10 Points per model and scale to +20 when Additional Sentinel is selected.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
       },
       {
         "type": "unit",
@@ -2610,15 +2490,74 @@
             ]
           },
           {
+            "name": "Pintle Weapons",
+            "id": "defe-3a8e-615e-274e",
+            "hidden": false,
+            "constraints": [
+              {
+                "type": "max",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "9521-e6c1-536a-df03",
+                "includeChildSelections": false
+              }
+            ],
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Pintle Heavy Stubber",
+                "hidden": false,
+                "id": "9b75-db80-2d3f-88a3",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Pintle Storm Bolter",
+                "hidden": false,
+                "id": "5123-6f69-646c-ef39",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ]
+              }
+            ],
+            "sortIndex": 2
+          },
+          {
             "name": "Paid Wargear",
             "id": "b1f0-bbd4-fd20-5a88",
             "hidden": false,
-            "sortIndex": 2,
-            "selectionEntryGroups": [
+            "sortIndex": 3,
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "51ce-4276-b5af-80dd",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "d722-3bd3-b5bd-7d9d",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -2629,79 +2568,22 @@
                     "id": "748c-43fc-8e08-4dea",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "d722-3bd3-b5bd-7d9d",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 1
+                ]
               },
               {
-                "name": "Pintle Weapons",
-                "id": "defe-3a8e-615e-274e",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
-                "constraints": [
+                "id": "8ad3-e896-26e4-1511",
+                "sortIndex": 2,
+                "costs": [
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "9521-e6c1-536a-df03",
-                    "includeChildSelections": false
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
                   }
                 ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Pintle Heavy Stubber",
-                    "hidden": false,
-                    "id": "9b75-db80-2d3f-88a3",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Pintle Storm Bolter",
-                    "hidden": false,
-                    "id": "5123-6f69-646c-ef39",
-                    "sortIndex": 2,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 2
-              },
-              {
-                "name": "​",
-                "id": "b1ad-87e3-1757-d943",
-                "hidden": false,
                 "constraints": [
                   {
                     "type": "max",
@@ -2712,25 +2594,7 @@
                     "id": "7ef7-55db-074c-4283",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "8ad3-e896-26e4-1511",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 3
+                ]
               }
             ]
           }
@@ -2744,7 +2608,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "HELLHOUND CURRENT STATE: Vehicle / Other. Weapon choices are shown without Primary/Secondary headers; the second weapon list is identified directly as Hull Heavy Bolter, Hull Heavy Flamer, or Hull Multi-Melta. Hunter-Killer Missile, Pintle Weapons, and Smoke Launchers remain under Paid Wargear.\nMANUFACTORUM IMPERIUM LIBRARY V1: copied intact from the audited Astra Militarum Rev18 unit tree. The consuming catalogue supplies the player-facing Manufactorum category and availability switch."
+        "comment": "HELLHOUND CURRENT STATE: Vehicle / Other. Weapon choices are shown without redundant Primary / Secondary headers, with hull weapons named directly. Pintle Weapons is a top-level section. Hunter-Killer Missile and Smoke Launchers are direct Paid Wargear checkboxes.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
       },
       {
         "type": "unit",
@@ -2884,11 +2748,21 @@
             "id": "ef2a-637d-380c-8eca",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "e026-6bbb-3e17-fa33",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "24b2-b063-6b80-8260",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -2899,30 +2773,22 @@
                     "id": "5c88-b3a2-1972-78f9",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "24b2-b063-6b80-8260",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 1
+                ]
               },
               {
-                "name": "​",
-                "id": "1c55-44db-291a-d988",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "f044-409d-0a5e-8683",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -2933,30 +2799,31 @@
                     "id": "1421-2638-a9d2-08f1",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "f044-409d-0a5e-8683",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 2
+                ]
               },
               {
-                "name": "​",
-                "id": "8af7-e710-1602-306d",
+                "type": "upgrade",
+                "import": true,
+                "name": "Armour Piercing High Explosive Shells",
                 "hidden": false,
+                "id": "a2f2-9cd3-148b-6c74",
+                "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Armour Piercing High Explosive Shells",
+                    "id": "6493-14d8-b4a0-c3c0",
+                    "hidden": false,
+                    "description": "After this unit’s Move step, you may have its Earthshaker Cannon weapon lose Suppressive and gain Breach until the End step.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -2967,34 +2834,7 @@
                     "id": "1fd4-27b3-78bd-2f46",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Armour Piercing High Explosive Shells",
-                    "hidden": false,
-                    "id": "a2f2-9cd3-148b-6c74",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Armour Piercing High Explosive Shells",
-                        "id": "6493-14d8-b4a0-c3c0",
-                        "hidden": false,
-                        "description": "After this unit’s Move step, you may have its Earthshaker Cannon weapon lose Suppressive and gain Breach until the End step.",
-                        "noindex": false
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 3
+                ]
               }
             ]
           }
@@ -3008,7 +2848,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "BASILISK REV14: Vehicle / Other. Fixed Earthshaker Cannon and mandatory hull weapon; Hunter-Killer Missile, Smoke Launchers, and Armour Piercing High Explosive Shells are Paid Wargear. Armour Piercing High Explosive Shells now includes its visible rules entry.\nMANUFACTORUM IMPERIUM LIBRARY V1: copied intact from the audited Astra Militarum Rev18 unit tree. The consuming catalogue supplies the player-facing Manufactorum category and availability switch."
+        "comment": "BASILISK REV14: Vehicle / Other. Fixed Earthshaker Cannon and mandatory hull weapon; Hunter-Killer Missile, Smoke Launchers, and Armour Piercing High Explosive Shells are Paid Wargear. Armour Piercing High Explosive Shells now includes its visible rules entry.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
       },
       {
         "type": "unit",
@@ -3148,11 +2988,21 @@
             "id": "0ac2-3333-008e-06e5",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "0041-80a5-eaa0-0d3d",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "cd64-6871-d700-8a35",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -3163,30 +3013,22 @@
                     "id": "68ea-b6bd-369f-ee15",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "cd64-6871-d700-8a35",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 1
+                ]
               },
               {
-                "name": "​",
-                "id": "6fa5-5419-e2ac-7686",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "62e9-f923-bae7-79cf",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -3197,25 +3039,7 @@
                     "id": "573c-4dc1-448c-2b84",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "62e9-f923-bae7-79cf",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 2
+                ]
               }
             ]
           }
@@ -3229,7 +3053,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "WYVERN REV13: Vehicle / Other. Fixed Quad Stormshard Mortar and mandatory hull weapon; Hunter-Killer Missile and Smoke Launchers are Paid Wargear.\nMANUFACTORUM IMPERIUM LIBRARY V1: copied intact from the audited Astra Militarum Rev18 unit tree. The consuming catalogue supplies the player-facing Manufactorum category and availability switch."
+        "comment": "WYVERN REV13: Vehicle / Other. Fixed Quad Stormshard Mortar and mandatory hull weapon; Hunter-Killer Missile and Smoke Launchers are Paid Wargear.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
       },
       {
         "type": "unit",
@@ -3369,11 +3193,21 @@
             "id": "ee2f-660c-72a8-9c4d",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "5699-c42f-a338-2bf4",
+                "type": "upgrade",
+                "import": true,
+                "name": "Hunter-Killer Missile",
                 "hidden": false,
+                "id": "f9f6-38d8-e060-d510",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -3384,30 +3218,22 @@
                     "id": "320e-192f-9288-94e4",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Hunter-Killer Missile",
-                    "hidden": false,
-                    "id": "f9f6-38d8-e060-d510",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 1
+                ]
               },
               {
-                "name": "​",
-                "id": "69c3-66d0-d10d-636a",
+                "type": "upgrade",
+                "import": true,
+                "name": "Smoke Launchers",
                 "hidden": false,
+                "id": "90d0-5069-af6e-4932",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -3418,25 +3244,7 @@
                     "id": "c89b-0371-2a10-a851",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Smoke Launchers",
-                    "hidden": false,
-                    "id": "90d0-5069-af6e-4932",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 10
-                      }
-                    ]
-                  }
-                ],
-                "sortIndex": 2
+                ]
               }
             ]
           }
@@ -3450,7 +3258,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "MANTICORE REV14: Vehicle / Other. Fixed Storm Eagle Rocket 1-4 and mandatory hull weapon; Hunter-Killer Missile and Smoke Launchers are Paid Wargear.\nMANUFACTORUM IMPERIUM LIBRARY V1: copied intact from the audited Astra Militarum Rev18 unit tree. The consuming catalogue supplies the player-facing Manufactorum category and availability switch."
+        "comment": "MANTICORE REV14: Vehicle / Other. Fixed Storm Eagle Rocket 1-4 and mandatory hull weapon; Hunter-Killer Missile and Smoke Launchers are Paid Wargear.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
       },
       {
         "type": "unit",
@@ -3537,12 +3345,30 @@
             "id": "eb5e-a811-67c0-502b",
             "hidden": false,
             "sortIndex": 2,
-            "selectionEntryGroups": [
+            "selectionEntries": [
               {
-                "name": "​",
-                "id": "7e49-9d40-c341-5d7c",
+                "type": "upgrade",
+                "import": true,
+                "name": "Armour Piercing High Explosive Shells",
                 "hidden": false,
+                "id": "8f01-4288-24d2-5833",
                 "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 20
+                  }
+                ],
+                "rules": [
+                  {
+                    "name": "Armour Piercing High Explosive Shells",
+                    "id": "bf54-5094-6ad6-560d",
+                    "hidden": false,
+                    "description": "After this unit’s Move step, you may have its Twin Earthshaker Cannon weapon lose Suppressive and gain Breach until the End step.",
+                    "noindex": false
+                  }
+                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -3553,38 +3379,12 @@
                     "id": "9700-6887-6350-59bc",
                     "includeChildSelections": false
                   }
-                ],
-                "selectionEntries": [
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Armour Piercing High Explosive Shells",
-                    "hidden": false,
-                    "id": "8f01-4288-24d2-5833",
-                    "sortIndex": 1,
-                    "costs": [
-                      {
-                        "name": "Points",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 20
-                      }
-                    ],
-                    "rules": [
-                      {
-                        "name": "Armour Piercing High Explosive Shells",
-                        "id": "bf54-5094-6ad6-560d",
-                        "hidden": false,
-                        "description": "After this unit’s Move step, you may have its Twin Earthshaker Cannon weapon lose Suppressive and gain Breach until the End step.",
-                        "noindex": false
-                      }
-                    ]
-                  }
                 ]
               }
             ]
           }
         ],
-        "comment": "MINOTAUR REV17: fixed Twin Earthshaker Cannon. Armour Piercing High Explosive Shells is optional Paid Wargear at +20 and includes its full rule text.\nMANUFACTORUM IMPERIUM LIBRARY V1: copied intact from the audited Astra Militarum Rev18 unit tree. The consuming catalogue supplies the player-facing Manufactorum category and availability switch.",
+        "comment": "MINOTAUR REV17: fixed Twin Earthshaker Cannon. Armour Piercing High Explosive Shells is optional Paid Wargear at +20 and includes its full rule text.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -6733,6 +6533,6 @@
         ]
       }
     ],
-    "comment": "MANUFACTORUM IMPERIUM LIBRARY V1\nReusable cross-faction vehicle library for the Adeptus Mechanicus Manufactorum Imperium rule. V1 contains every Vehicle unit currently implemented in Astra Militarum 3.3.3 Rev18. Space Marine Arsenal vehicles are intentionally not implemented yet. Unit trees, costs, loadouts, Rare semantics, Leader Capacity markers, and Other soft-copy markers are preserved from their source catalogue.\n\nLIBRARY V2 — GAME SYSTEM REV14\nRetargeted to Warhammer 40k Reforged Game System Rev14, which now owns the visible Space Marines Vehicles and Astra Militarum Vehicles presentation categories. No unit trees, costs, loadouts, IDs, or imported Astra Militarum semantics changed.\n\nLIBRARY V3 POLISH SYNC\nMirrored the Astra Militarum REV19 presentation polish across all eleven imported vehicle trees: direct Loadout headings are now Loadout Options; Tank Commander, Chimera, Taurox, Leman Russ Battle Tank, Hellhound, Basilisk, Wyvern, and Manticore use the same explicit model-header IDs as the source catalogue; Basilisk, Wyvern, and Manticore suppress the redundant Hull Weapon group label; Chimera and Taurox use Storm Bolter spelling; and Tank Commander uses the standardized Rare error wording. Unit IDs, existing loadout IDs, costs, categories, Rare semantics, Leader Capacity markers, Other soft-copy markers, and Manufactorum-specific category presentation remain unchanged.\n\nLIBRARY V4 RETROSPECTIVE POLISH SYNC\nMirrored the final Astra Militarum REV20 vehicle presentation cleanup across all eleven imported vehicle trees. Redundant one-item Paid Wargear wrappers are suppressed where the equipment name already identifies the choice; vehicle multi-option accessory/pintle groups use Pintle Weapons; the Taurox Twin Autocannon double wrapper is suppressed; and existing self-identifying hull, sponson, and coaxial equipment names remain free of redundant slot labels. The historical V1 provenance notes remain unchanged. All pre-existing IDs, unit names, points, costs, categories, Rare semantics, Leader Capacity markers, Other soft-copy markers, Manufactorum source-switch behavior, and imported Astra Militarum rules semantics remain unchanged.\n\nLIBRARY V5 — GAME SYSTEM REV17\nRetargeted the Manufactorum Imperium shared vehicle library to Warhammer 40k Reforged Game System revision 17. This library contains only shared Astra Militarum Vehicle/Other units, so no Troop copy-cost families or Troop semantic markers are added here. Existing Other soft-copy markers, Additional Copy Costs rule links, Rare semantics, Leader Capacity markers, shared unit IDs, costs, loadouts, and Manufactorum presentation semantics remain unchanged.\n\nLIBRARY V6 — SPACE MARINE VEHICLE BRIDGE / GS18\nRetargeted the library to Game System REV18 and added ten chapter-independent Space Marines 3.3.5 vehicle shells mirrored from Space Marines REV2 with identical stable unit IDs. Baal Predator is deliberately excluded because the Adeptus Mechanicus consumer cannot choose a Space Marine Chapter and therefore can never legally satisfy its Blood Angels restriction. The existing eleven Astra Militarum shared units remain structurally unchanged. All shared entries keep intrinsic unit-type/class/copy-cost semantics non-primary; consuming catalogues own their presentation category through local entryLinks.\n\nV7 — GAME SYSTEM 21 SYNC\nRetargeted this library from Game System revision 18 to revision 21. This is a compatibility-only sync: no rules version, unit IDs, points, loadouts, categories, attachments, Additional Copy Cost arithmetic, Patch Notes, validation, library links, or other executable catalogue content changed.\n\nV8 — SPACE MARINE VEHICLE LOADOUT SYNC\nPopulated the six previously-empty Space Marine vehicle bridge roots from Space Marines 3.3.7 REV14: Whirlwind, Vindicator, Land Speeder, Dreadnought, Contemptor Dreadnought, and Leviathan Dreadnought. Stable root IDs, Space Marines Vehicles bridge tags, cost semantics, and non-primary library presentation are preserved. Consuming entryLinks therefore continue resolving the same unit identities while receiving the completed loadout trees. Game System remains revision 21.\n\nV9 — SPACE MARINE CORRECTION SYNC\nSynchronized corrected Space Marine Vindicator, Astartes Basilisk, Predator, and Land Raider roots from Space Marines 3.3.7 REV15. Vindicator gains fixed Siege Shield; Basilisk can select Smoke Launchers and Armour Piercing High Explosive Shells independently; Predator and Land Raider use true empty optional states instead of literal '(None)' selections. Stable bridge root IDs, non-primary library presentation, points, and Game System revision 21 are preserved.\n\nV10 — SPACE MARINES REV17 CHECKBOX SYNC\nSynced all portable Space Marines roots touched by REV17 from the playable catalogue, preserving stable root IDs and exact presentation/constraint changes. GS21 retained."
+    "comment": "CURRENT STATE\nReusable cross-faction shared vehicle library for the Adeptus Mechanicus Manufactorum Imperium rule. This catalogue contains no root selectionEntries; all twenty-one portable vehicle roots live in sharedSelectionEntries. The library currently mirrors eleven Astra Militarum vehicle roots through Astra Militarum 3.3.5 REV37 and ten chapter-independent Space Marine vehicle roots through Space Marines 3.3.7 REV17/REV18. Stable shared root IDs are preserved across all mirrors.\n\nAUTHORING & RUNTIME NOTES\nAll shared entries keep their intrinsic unit semantics, including points, loadouts, Rare markers, Leader-Capacity markers, and Other soft-copy markers, but those semantics remain non-primary inside the library. Consuming catalogues own visible presentation through local entryLinks and category links. Adeptus Mechanicus currently consumes this library through separate Astra Militarum Vehicles and Space Marines Vehicles switches. Baal Predator remains intentionally excluded because the consuming catalogue cannot satisfy its Blood Angels restriction.\n\nSOURCE SYNC HISTORY\nV1: initial Astra Militarum vehicle bridge from Astra Militarum 3.3.3 REV18.\nV2: retargeted to Game System REV14.\nV3-V4: mirrored Astra Militarum REV19-20 presentation polish across all eleven Astra vehicles.\nV5: retargeted to Game System REV17.\nV6: retargeted to Game System REV18 and added ten chapter-independent Space Marine vehicle bridge roots.\nV7: retargeted to Game System REV21.\nV8: populated the six previously empty Space Marine vehicle bridge roots from Space Marines 3.3.7 REV14.\nV9: synchronized Space Marine Vindicator, Astartes Basilisk, Predator, and Land Raider from Space Marines REV15.\nV10: synchronized all portable Space Marine roots touched by Space Marines REV17.\nV11: synchronized all eleven Astra Militarum vehicle roots from Astra Militarum 3.3.5 REV37 and consolidated library comments for the live GS21 state."
   }
 }

@@ -5,7 +5,7 @@
     "name": "Chaos Space Marines 3.3.5 - Arsenal Library",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 21,
-    "revision": 9,
+    "revision": 12,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "sharedSelectionEntries": [
@@ -263,7 +263,16 @@
             ]
           }
         ],
-        "comment": "LOADOUT REV13: mandatory ranged package plus fixed Sorcerer Weapon. Combi packages use meaningful-choice-first '&' naming. The required psychic allegiance choice is presented directly as Chaos Allegiance, with Undivided presented as Disciple of Chaos Undivided. This unit remains unable to attach."
+        "comment": "TERMINATOR CHAOS SORCERER LORD CURRENT STATE: mandatory ranged package plus fixed Sorcerer Weapon, with the required psychic allegiance presented directly as Chaos Allegiance and Undivided shown as Disciple of Chaos Undivided. The unit cannot attach to anything and exposes that state through a visible Leader Attachment rule. Combi packages retain meaningful-choice-first '&' naming.",
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "753a-7df9-92ec-c732",
+            "hidden": false,
+            "description": "Cannot attach to anything.",
+            "noindex": false
+          }
+        ]
       },
       {
         "type": "unit",
@@ -1120,7 +1129,16 @@
             ]
           }
         ],
-        "comment": "LOADOUT REV11: fixed Plasma Pistol, Flamer Tendril, and Melta Tendril on separate lines; mandatory Heavy Daemon Hammer / Power Axe choice."
+        "comment": "WARPSMITH CURRENT STATE: fixed Plasma Pistol, Flamer Tendril, and Melta Tendril on separate lines with a mandatory Heavy Daemon Hammer / Power Axe choice. The unit cannot attach to anything and now exposes that state through a visible Leader Attachment rule. Points, categories, copy-cost accounting, and loadout legality are unchanged.",
+        "rules": [
+          {
+            "name": "Leader Attachment",
+            "id": "4852-68c0-7850-3cdd",
+            "hidden": false,
+            "description": "Cannot attach to anything.",
+            "noindex": false
+          }
+        ]
       },
       {
         "type": "unit",
@@ -3526,6 +3544,14 @@
                               }
                             ]
                           }
+                        ],
+                        "categoryLinks": [
+                          {
+                            "targetId": "1a13-1be9-7076-5f96",
+                            "id": "9fbe-5214-3a4a-9dcd",
+                            "primary": false,
+                            "name": "Heavy Weapon Terminator Role"
+                          }
                         ]
                       },
                       {
@@ -4001,6 +4027,14 @@
                               }
                             ]
                           }
+                        ],
+                        "categoryLinks": [
+                          {
+                            "targetId": "1a13-1be9-7076-5f96",
+                            "id": "1886-f657-0c19-c9d5",
+                            "primary": false,
+                            "name": "Heavy Weapon Terminator Role"
+                          }
                         ]
                       },
                       {
@@ -4203,7 +4237,28 @@
             ]
           }
         ],
-        "comment": "LOADOUT REV17: the two-model Chaos Terminator unit is presented as two explicit independent model records because its battlefield roles differ substantially despite the PDF expressing them through overlapping replacement clauses. Each model chooses one of three player-facing roles: Combi-weapon Terminator, Heavy Weapon Terminator, or Assault Terminator. Combi-weapon Terminators select one melee weapon plus one Combi package; the Combi packages use a single visible choice with hidden semantic child items, and Combi-Melta & Combi-Bolter costs +10. Heavy Weapon Terminators select one melee weapon plus Reaper Autocannon or Heavy Flamer. Assault Terminators select two independent melee weapons; choosing Lightning Claw in both lists represents paired Lightning Claws without a separate Lightning Claws option. By project convention, both Terminators may use identical roles and identical loadouts even where the PDF's one-model replacement language would ordinarily restrict that. Cyclone Missiles remains a single +20 Paid Wargear choice at unit level because the physical model makes its bearer unambiguous during play.\nSHARED WEAPON IDS REV25: every repeated player-facing weapon/loadout in Chaos Terminators now links to one shared selection identity. This covers Chainfist, Power Fist, Power Weapon, Chainsword, Lightning Claw, the four Combi-weapon loadouts, Reaper Autocannon, and Heavy Flamer. All existing per-branch selection IDs are retained as entryLink IDs, so defaults and the builder hierarchy stay unchanged. Combined Combi loadouts are treated as the meaningful export leaf; their historical hidden semantic component groups are retained under the shared target but made optional so they do not auto-select. Lernaean Terminators and other Terminator units are intentionally unchanged.\nREV28 PRESENTATION REPLAY: suppressed redundant Melee Weapon, Combi-weapon, and Heavy Weapon headers inside the existing role choices. The healthy production shared-weapon IDs are retained; the abandoned export-aggregation branch is not carried forward."
+        "comment": "LOADOUT REV17: the two-model Chaos Terminator unit is presented as two explicit independent model records because its battlefield roles differ substantially despite the PDF expressing them through overlapping replacement clauses. Each model chooses one of three player-facing roles: Combi-weapon Terminator, Heavy Weapon Terminator, or Assault Terminator. Combi-weapon Terminators select one melee weapon plus one Combi package; the Combi packages use a single visible choice with hidden semantic child items, and Combi-Melta & Combi-Bolter costs +10. Heavy Weapon Terminators select one melee weapon plus Reaper Autocannon or Heavy Flamer. Assault Terminators select two independent melee weapons; choosing Lightning Claw in both lists represents paired Lightning Claws without a separate Lightning Claws option. The two models otherwise choose roles and loadouts independently, but the unit may include only one Heavy Weapon Terminator. Cyclone Missiles remains a single +20 Paid Wargear choice at unit level because the physical model makes its bearer unambiguous during play.\nSHARED WEAPON IDS REV25: every repeated player-facing weapon/loadout in Chaos Terminators now links to one shared selection identity. This covers Chainfist, Power Fist, Power Weapon, Chainsword, Lightning Claw, the four Combi-weapon loadouts, Reaper Autocannon, and Heavy Flamer. All existing per-branch selection IDs are retained as entryLink IDs, so defaults and the builder hierarchy stay unchanged. Combined Combi loadouts are treated as the meaningful export leaf; their historical hidden semantic component groups are retained under the shared target but made optional so they do not auto-select. Lernaean Terminators and other Terminator units are intentionally unchanged.\nREV28 PRESENTATION REPLAY: suppressed redundant Melee Weapon, Combi-weapon, and Heavy Weapon headers inside the existing role choices. The healthy production shared-weapon IDs are retained; the abandoned export-aggregation branch is not carried forward.\nERROR TEMPLATE: heavy_weapon_terminator_limit. Both Heavy Weapon Terminator role choices remain visible and selectable. A custom corrective error triggers at 2+ selected Heavy Weapon Terminator roles and tells the player to choose a different role for one model.",
+        "modifiers": [
+          {
+            "type": "add",
+            "field": "error",
+            "value": "This unit has more than one Heavy Weapon Terminator. It may include only one Heavy Weapon Terminator. Choose a different role for one of those models.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "self",
+                "childId": "1a13-1be9-7076-5f96",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "queryFromSelf": false,
+                "childName": "Heavy Weapon Terminator Role"
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -4334,17 +4389,6 @@
             "id": "9da6-d0dd-5122-54f3",
             "hidden": false,
             "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "b28b-ed0a-f3c0-b4bb",
-                "includeChildSelections": false
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "model",
@@ -4397,6 +4441,17 @@
                       }
                     ],
                     "defaultSelectionEntryId": "e37c-d1dd-0a9b-8367"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "b28b-ed0a-f3c0-b4bb",
+                    "includeChildSelections": false
                   }
                 ]
               }
@@ -4459,7 +4514,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "LOADOUT REV14: Chosen are 3-5 models at 40 Points per model. Pack your lunch? defaults to the normal manual builder. The manual branch exposes Chosen 1-3 as fixed model headers and optional Chosen 4-5 at +40 Points each. Chosen 1-2 include the source paid Combi-Bolter replacement packages in their ranged list; Chosen 3-5 do not. Every model independently selects one ranged and one melee weapon. By project convention, Lightning Claw is additionally offered in every ranged list, allowing the paired-claw state by selecting Lightning Claw in both lists and intentionally ignoring the PDF's one-model restriction because it does not alter the unit's total damage budget for project purposes. Frag Grenade and Krak Grenade remain independent +10 Paid Wargear choices in the manual branch.\nSANDVICHES EASTER EGG: selecting Yes, please! constructs the five-model preset by adding +80 Points over the three-model base and presents Sandviches: > Chosen 1-5 > 5x Power Sword / 5x Plasma Pistol. The Power Sword label is an intentional player-specific presentation name for the source-generic Power Weapon. The lunch preset is a separate mutually-exclusive implementation branch rather than a modifier-driven attempt to auto-click the manual controls.",
+        "comment": "CHOSEN CURRENT STATE: 3-5 models at 40 Points per model. The preset-selector wrapper header is suppressed as redundant. Manual Loadout is the default and exposes Chosen 1-3 as the fixed three-model base and Chosen 4 / Chosen 5 as optional +40 Point model checkboxes; each selected model retains its independent ranged and melee choices. Chosen 1-2 include the source paid Combi-Bolter replacement packages; Chosen 3-5 use the normal ranged list. By project convention Lightning Claw is offered in both ranged and melee lists so selecting it in both represents the paired-claw state without a separate Lightning Claws option or one-model cap. Frag Grenade and Krak Grenade remain independent +10 Paid Wargear checkboxes in the Manual Loadout branch.\nSANDVICH'S CHOSEN: the alternate preset adds the two extra models as +80 Points and presents Chosen 1-5 with 5x Power Sword / 5x Plasma Pistol. The Power Sword label is an intentional player-specific presentation name for the source-generic Power Weapon. The preset remains a separate mutually exclusive branch rather than modifier-driven auto-selection.\nREV37 PRESENTATION: moved the existing Chosen 4 and Chosen 5 max-1 constraints from their retained structural wrappers onto the model entries so New Recruit renders the optional models as checkboxes. IDs, costs, loadouts, preset logic, and legality are unchanged.\nREV38 PRESENTATION: suppressed the redundant Presets wrapper header and renamed No Preset to Manual Loadout. The branch nesting, preset logic, model ownership, defaults, costs, IDs, and legality are unchanged.",
         "modifiers": [
           {
             "type": "add",
@@ -4488,7 +4543,7 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Presets",
+                "name": "​",
                 "id": "fb89-21ea-7313-8115",
                 "hidden": false,
                 "sortIndex": 1,
@@ -4516,7 +4571,7 @@
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "No Preset",
+                    "name": "Manual Loadout",
                     "hidden": false,
                     "id": "3e12-7e63-1781-b139",
                     "sortIndex": 1,
@@ -5132,17 +5187,6 @@
                         "id": "342b-1c66-1b46-f12d",
                         "hidden": false,
                         "sortIndex": 4,
-                        "constraints": [
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "899d-bf00-1684-7cfc",
-                            "includeChildSelections": false
-                          }
-                        ],
                         "selectionEntries": [
                           {
                             "type": "model",
@@ -5313,6 +5357,17 @@
                                 ],
                                 "defaultSelectionEntryId": "19ef-c0bf-c60f-de96"
                               }
+                            ],
+                            "constraints": [
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "899d-bf00-1684-7cfc",
+                                "includeChildSelections": false
+                              }
                             ]
                           }
                         ]
@@ -5322,17 +5377,6 @@
                         "id": "91f7-e30d-02a7-560a",
                         "hidden": false,
                         "sortIndex": 5,
-                        "constraints": [
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "500b-2f54-0c74-ffb3",
-                            "includeChildSelections": false
-                          }
-                        ],
                         "selectionEntries": [
                           {
                             "type": "model",
@@ -5502,6 +5546,17 @@
                                   }
                                 ],
                                 "defaultSelectionEntryId": "acfd-90d6-b338-d043"
+                              }
+                            ],
+                            "constraints": [
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "500b-2f54-0c74-ffb3",
+                                "includeChildSelections": false
                               }
                             ]
                           }
@@ -5748,7 +5803,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "LOADOUT REV21: the three-model base is presented as Breacher Champion, Breacher 2, and Breacher 3, with optional Breacher 4 and Breacher 5 at +40 Points each. Breacher Champion chooses one melee weapon (Chainsword / Power Weapon / Power Fist / Lightning Claw / Daemon Hammer), one ranged weapon (Boltgun / Bolt Pistol / Plasma Pistol / +10 Combi packages / +20 Combi-Melta package), and retains Boarding Shield. Boltgun is intentionally presented as a genuine Champion ranged option rather than merely an intermediary state in the PDF replacement grammar. Breacher 2 similarly chooses Boltgun / Flamer / Meltagun / Graviton Gun / Plasma Gun / Lascutter and retains Boarding Shield, explicitly presenting Boltgun as the ordinary legal state. Breacher 3 is fixed Boltgun + Boarding Shield. Additional Breachers use a compact Boltgun & Boarding Shield package with hidden semantic child items. Frag Grenades, Krak Grenades, and Breacher Charge are each optional +10 Paid Wargear. Existing Chaos Lord attachment eligibility, one-Leader host validation, root minimum cost, and Other copy-cost behavior remain unchanged.\nSHARED GUN & SHIELD PACKAGES REV25: Breacher ranged equipment is now represented as one meaningful gun-plus-Boarding-Shield package. The Breacher Champion keeps its independent melee weapon choice, then chooses Boltgun / Bolt Pistol / Plasma Pistol / Combi loadout & Boarding Shield. Breacher 2 chooses Boltgun / Flamer / Meltagun / Graviton Gun / Plasma Gun / Lascutter & Boarding Shield. Breacher 3, Breacher 4, and Breacher 5 use Boltgun & Boarding Shield. Every identical Boltgun & Boarding Shield selection links to the same shared target, including the Champion and Breacher 2 option. Existing weapon/package IDs are retained as entryLink IDs, historical standalone Boarding Shield IDs remain hidden and optional, and Breacher 4/5 retain their existing model wrappers and +40 Points costs. Paid Wargear, attachments, root points, and copy-cost behavior are unchanged.\nREV28 PRESENTATION REPLAY: Breacher 2 uses atomic weapon & Boarding Shield packages; the redundant separate hidden Boarding Shield payload was removed. Breacher Champion retains Daemon Hammer, and Breacher 3-5 retain the healthy REV27 implementation.",
+        "comment": "BREACHER SIEGE SQUAD CURRENT STATE: the three-model base is Breacher Champion, Breacher 2, and Breacher 3. Breacher 4 and Breacher 5 are optional +40 Point model checkboxes under Additional Models. Breacher Champion keeps its independent melee choice and chooses a ranged weapon & Boarding Shield package; Breacher 2 chooses its weapon & Boarding Shield package; Breacher 3-5 use Boltgun & Boarding Shield. The identical Boltgun & Boarding Shield states reuse the shared package target while retaining stable local link IDs. Frag Grenades, Krak Grenades, and Breacher Charge are independent +10 Paid Wargear checkboxes. Chaos Lord attachment eligibility, one-external-Leader validation, root points, and Other copy-cost accounting are unchanged.\nREV37 PRESENTATION: moved the existing Breacher 4 and Breacher 5 max-1 constraints from their retained structural wrappers onto the model entries so New Recruit renders both additional models as checkboxes.",
         "modifiers": [
           {
             "type": "add",
@@ -6167,17 +6222,6 @@
                 "id": "ae13-539b-4b07-077f",
                 "hidden": false,
                 "sortIndex": 1,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "89c6-95df-1920-ad2a",
-                    "includeChildSelections": false
-                  }
-                ],
                 "selectionEntries": [
                   {
                     "type": "model",
@@ -6231,6 +6275,17 @@
                           }
                         ]
                       }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "89c6-95df-1920-ad2a",
+                        "includeChildSelections": false
+                      }
                     ]
                   }
                 ]
@@ -6240,17 +6295,6 @@
                 "id": "398e-257c-65e1-48ef",
                 "hidden": false,
                 "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "d34b-6f4e-1a1c-259b",
-                    "includeChildSelections": false
-                  }
-                ],
                 "selectionEntries": [
                   {
                     "type": "model",
@@ -6303,6 +6347,17 @@
                             "sortIndex": 1
                           }
                         ]
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d34b-6f4e-1a1c-259b",
+                        "includeChildSelections": false
                       }
                     ]
                   }
@@ -7853,18 +7908,18 @@
                     ],
                     "defaultSelectionEntryId": "5224-fdd2-118b-5618"
                   }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "bf80-04f7-75ca-6d13",
+                    "includeChildSelections": false
+                  }
                 ]
-              }
-            ],
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "bf80-04f7-75ca-6d13",
-                "includeChildSelections": false
               }
             ]
           }
@@ -7999,17 +8054,6 @@
             "id": "d2a7-6b26-e02b-4b3b",
             "hidden": false,
             "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "437f-a18d-41bc-371e",
-                "includeChildSelections": false
-              }
-            ],
             "selectionEntries": [
               {
                 "type": "model",
@@ -8062,6 +8106,17 @@
                       }
                     ],
                     "defaultSelectionEntryId": "f67a-c8ad-7649-6119"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "437f-a18d-41bc-371e",
+                    "includeChildSelections": false
                   }
                 ]
               }
@@ -13360,9 +13415,14 @@
         "name": "Counts As: Legionaries",
         "id": "1a4c-202e-1eea-3192",
         "hidden": true
+      },
+      {
+        "name": "Heavy Weapon Terminator Role",
+        "id": "1a13-1be9-7076-5f96",
+        "hidden": true
       }
     ],
     "authorName": "40k Reforged Homebrew",
-    "comment": "GREAT TRAITORS' ARSENAL LIBRARY V1 / GS17.\nGenerated from Chaos Space Marines 3.3.5 REV26 as the reusable unit source for Great Traitors' Arsenal host catalogues. Contains the 28 mechanically portable generic Chaos Space Marines root units plus their shared weapon / loadout package dependencies and CSM-local attachment/counts-as categories. Legion-section units are excluded. The current main CSM listbuilder compiles Chaos Lord and Terminator Chaos Lord into Legion-specific player-facing entries, so those compiled Legion-bound versions are not exported into this reusable library. All copied unit-tree IDs are deliberately preserved so host entryLinks can target the same semantic unit identities and future library rebuilds can be diffed against the production CSM catalogue.\n\nLIBRARY V2 — DAEMON HAMMER TERMINOLOGY\nMirrored the Chaos Space Marines REV27 terminology correction into the reusable Arsenal unit trees while preserving all shared unit and weapon IDs: Warpsmith Heavy Thunder Hammer → Heavy Daemon Hammer, and Breacher Champion Thunder Hammer → Daemon Hammer. No other library structure or semantics changed.\n\nREV3 — GS20 COMPATIBILITY\nCompatibility update from the healthy V2 line: gameSystemRevision 17 → 20. Catalogue ID and imported unit IDs remain stable.\n\nREV4 — SAFE-BRANCH RECOVERY / CSM POST-REV27 SYNC\nRebuilt from the healthy V2 Daemon Hammer library and synchronized the 28 portable generic CSM unit trees to the recovered main CSM REV30 safe-branch build while preserving the library catalogue ID and all surviving root IDs. Portable intended updates mirrored here include: Chaos Bikers as 3x Bolters & Bike Spikes; GS20 Troop short-form links for Legionaries and Cultists with existing infoLink IDs and Troop-counting categories preserved; Chaos Predator top-level Pintle Weapons; Breacher 2 atomic weapon & Boarding Shield presentation while retaining Daemon Hammer and the healthy additional-model structure; the healthy/repaired Possessed presentation; Chaos Terminator redundant-header suppression; and the recovered Havoc/Raptor direct-model normalization using healthy local weapon/package identities.\nLegion-specific changes remain excluded, including Lernaean Terminators, Iron Circle Automata, Tyrant Siege Terminators, legion presentation, and legion-only rules.\nFORENSIC PROVENANCE: the abandoned CSM REV25 export-aggregation experiment and REV26 additional-model / export-shape experiment are documented in the recovered main CSM catalogue but are not imported into this library. No experimental shared-export targets or hidden compatibility graveyard from that branch are carried forward.\n\nV5 — VERSION LABEL SYNC\nCorrected the shared Arsenal library title from Chaos Space Marines 3.3.5 - Arsenal Library to Chaos Space Marines 3.3.4 - Arsenal Library. The previous 3.3.5 label originated from the same catalogue-version typo later corrected in the playable Chaos Space Marines catalogue. The catalogue ID, shared unit IDs, unit trees, loadouts, costs, categories, validation, and all other executable library content are unchanged.\n\nV6 / 3.3.5 DEFILER REWORK SYNC\nSynced the portable Chaos Defiler root from Chaos Space Marines 3.3.5 while preserving library ID 21eb-113e-8367-c075 and Defiler target ID 29c8-79f3-3c49-1a2f. Consumers therefore continue to resolve the same imported unit identity while receiving the reworked loadout.\n\nV7 — DEFILER COST + LEGIONARIES CHAMPION CORRECTION\nSynchronized the corrected portable Chaos Defiler and Legionaries roots from playable CSM REV33. Defiler is 260 Points; Excruciator Cannons and Magma Cutters are +20 Points. Legionaries Chaos Champion ranged choices are Champion Boltgun, Champion Bolt Pistol, and Champion Plasma Pistol. Stable library and unit IDs are preserved. Retargeted Game System revision 20 to 21.\n\nV8 — DEFILER MISSILE LAUNCHER CORRECTION\nSynchronized the corrected Chaos Defiler root from playable CSM REV34. Missile Launcher is now available on both independent flexible weapon mounts. Stable library ID, Defiler ID, all surviving weapon selection IDs, points, and unrelated portable unit content remain unchanged.\n\nV9 — REV35 UI CLEANUP SYNC\nSynced every portable shared unit root touched by Chaos Space Marines 3.3.5 REV35 exactly from the playable catalogue, including checkbox presentation changes and the Wardog/Predator/Defiler presentation cleanup where those roots are portable. Stable root IDs remain unchanged. GS21 retained."
+    "comment": "CURRENT STATE\nGreat Traitors' Arsenal reusable library for Chaos Space Marines 3.3.5 on Game System revision 21. It contains the 28 mechanically portable generic Chaos Space Marines unit roots plus the shared weapon / loadout package dependencies and CSM-local attachment / counts-as categories required by those roots. The portable unit trees are synchronized to the playable Chaos Space Marines catalogue through REV37 with stable root IDs preserved. Legion-section compilations are intentionally excluded, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, and other Legion-only roots.\n\nAUTHORING & RUNTIME NOTES\nPortable roots are mirrored from the playable catalogue rather than re-authored here. Shared root IDs and shared package IDs are preserved so host entryLinks continue resolving the same semantic identities. The library carries the generic attachment and Counts As: Legionaries categories needed by imported roots. Host catalogues own their own availability rules and any host-specific presentation. The abandoned export-aggregation / proxy-shape experiments from the contaminated CSM sibling branch are not part of this library.\n\nSOURCE SYNC HISTORY\nV1: generated from the healthy CSM REV26 portable set.\nV2: synchronized Daemon Hammer terminology from CSM REV27.\nV3: retargeted to GS20.\nV4: rebuilt from the healthy line and synchronized the recovered post-REV27 portable changes through CSM REV30.\nV5: corrected the temporary library version-label typo.\nV6: synchronized the CSM 3.3.5 Defiler rework.\nV7: synchronized corrected Defiler cost and Legionaries Champion ranged choices; retargeted to GS21.\nV8: synchronized the Defiler Missile Launcher correction.\nV9: synchronized all portable roots touched by CSM REV35, including checkbox and vehicle-presentation cleanup.\nV10: synchronized the complete 28-root portable set to CSM REV37. This brings in REV36 Additional Model checkbox changes for Possessed, Havocs, and Warp Talons; REV37 checkbox changes for Chosen and Breacher Siege Squad; and the confirmed visible Cannot attach to anything rules for Terminator Chaos Sorcerer Lord and Warpsmith. Library comments were consolidated for the live GS21 state.\nV11 — CSM REV38 CHOSEN PRESENTATION SYNC\nSynchronized the portable Chosen root from Chaos Space Marines 3.3.5 REV38: the redundant preset-selector wrapper header is suppressed and No Preset is renamed Manual Loadout. Stable Chosen root/selection IDs, branch nesting, model loadouts, preset behavior, points, validation, and all unrelated portable roots remain unchanged. GS21 retained.\nV12 — CSM REV39 CHAOS TERMINATOR HEAVY WEAPON LIMIT SYNC\nSynchronized the portable Chaos Terminators root from playable CSM REV39 and added the shared hidden Heavy Weapon Terminator Role semantic category required by its permissive-corrective one-heavy-role limit. Lernaean Terminators remain Legion-bound and are intentionally not part of the Arsenal library. All other 27 portable unit roots remain unchanged; GS21 retained."
   }
 }
