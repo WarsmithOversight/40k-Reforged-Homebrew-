@@ -2,10 +2,10 @@
   "catalogue": {
     "library": true,
     "id": "21eb-113e-8367-c075",
-    "name": "Chaos Space Marines 3.3.5 - Arsenal Library",
+    "name": "Chaos Space Marines 3.3.6 - Arsenal Library",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 21,
-    "revision": 12,
+    "gameSystemRevision": 23,
+    "revision": 13,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "sharedSelectionEntries": [
@@ -9854,6 +9854,43 @@
                       }
                     ],
                     "defaultSelectionEntryId": "eed0-7289-59b6-9810"
+                  },
+                  {
+                    "name": "​",
+                    "id": "482e-3ac2-a705-9470",
+                    "hidden": false,
+                    "sortIndex": 3,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "53cb-2b93-d1c3-cee6",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ad59-8d4f-8b6f-8af8",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Siege Shield",
+                        "hidden": false,
+                        "id": "3e34-dc5d-86e8-09e6",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "3e34-dc5d-86e8-09e6"
                   }
                 ]
               }
@@ -9903,7 +9940,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT REV11: fixed Demolisher Cannon and Storm Bolter on separate lines. Smoke Launchers +10 is optional Paid Wargear."
+        "comment": "LOADOUT REV11: fixed Demolisher Cannon and Storm Bolter on separate lines. Smoke Launchers +10 is optional Paid Wargear.\nREV40: added the missing fixed Siege Shield weapon to the Chaos Vindicator loadout. Demolisher Cannon, Storm Bolter, points, Smoke Launchers, categories, and Additional Copy Cost behavior are unchanged."
       },
       {
         "type": "unit",
@@ -13423,6 +13460,6 @@
       }
     ],
     "authorName": "40k Reforged Homebrew",
-    "comment": "CURRENT STATE\nGreat Traitors' Arsenal reusable library for Chaos Space Marines 3.3.5 on Game System revision 21. It contains the 28 mechanically portable generic Chaos Space Marines unit roots plus the shared weapon / loadout package dependencies and CSM-local attachment / counts-as categories required by those roots. The portable unit trees are synchronized to the playable Chaos Space Marines catalogue through REV37 with stable root IDs preserved. Legion-section compilations are intentionally excluded, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, and other Legion-only roots.\n\nAUTHORING & RUNTIME NOTES\nPortable roots are mirrored from the playable catalogue rather than re-authored here. Shared root IDs and shared package IDs are preserved so host entryLinks continue resolving the same semantic identities. The library carries the generic attachment and Counts As: Legionaries categories needed by imported roots. Host catalogues own their own availability rules and any host-specific presentation. The abandoned export-aggregation / proxy-shape experiments from the contaminated CSM sibling branch are not part of this library.\n\nSOURCE SYNC HISTORY\nV1: generated from the healthy CSM REV26 portable set.\nV2: synchronized Daemon Hammer terminology from CSM REV27.\nV3: retargeted to GS20.\nV4: rebuilt from the healthy line and synchronized the recovered post-REV27 portable changes through CSM REV30.\nV5: corrected the temporary library version-label typo.\nV6: synchronized the CSM 3.3.5 Defiler rework.\nV7: synchronized corrected Defiler cost and Legionaries Champion ranged choices; retargeted to GS21.\nV8: synchronized the Defiler Missile Launcher correction.\nV9: synchronized all portable roots touched by CSM REV35, including checkbox and vehicle-presentation cleanup.\nV10: synchronized the complete 28-root portable set to CSM REV37. This brings in REV36 Additional Model checkbox changes for Possessed, Havocs, and Warp Talons; REV37 checkbox changes for Chosen and Breacher Siege Squad; and the confirmed visible Cannot attach to anything rules for Terminator Chaos Sorcerer Lord and Warpsmith. Library comments were consolidated for the live GS21 state.\nV11 — CSM REV38 CHOSEN PRESENTATION SYNC\nSynchronized the portable Chosen root from Chaos Space Marines 3.3.5 REV38: the redundant preset-selector wrapper header is suppressed and No Preset is renamed Manual Loadout. Stable Chosen root/selection IDs, branch nesting, model loadouts, preset behavior, points, validation, and all unrelated portable roots remain unchanged. GS21 retained.\nV12 — CSM REV39 CHAOS TERMINATOR HEAVY WEAPON LIMIT SYNC\nSynchronized the portable Chaos Terminators root from playable CSM REV39 and added the shared hidden Heavy Weapon Terminator Role semantic category required by its permissive-corrective one-heavy-role limit. Lernaean Terminators remain Legion-bound and are intentionally not part of the Arsenal library. All other 27 portable unit roots remain unchanged; GS21 retained."
+    "comment": "CURRENT STATE\nGreat Traitors' Arsenal reusable library for Chaos Space Marines 3.3.5 on Game System revision 21. It contains the 28 mechanically portable generic Chaos Space Marines unit roots plus the shared weapon / loadout package dependencies and CSM-local attachment / counts-as categories required by those roots. The portable unit trees are synchronized to the playable Chaos Space Marines catalogue through REV37 with stable root IDs preserved. Legion-section compilations are intentionally excluded, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, and other Legion-only roots.\n\nAUTHORING & RUNTIME NOTES\nPortable roots are mirrored from the playable catalogue rather than re-authored here. Shared root IDs and shared package IDs are preserved so host entryLinks continue resolving the same semantic identities. The library carries the generic attachment and Counts As: Legionaries categories needed by imported roots. Host catalogues own their own availability rules and any host-specific presentation. The abandoned export-aggregation / proxy-shape experiments from the contaminated CSM sibling branch are not part of this library.\n\nSOURCE SYNC HISTORY\nV1: generated from the healthy CSM REV26 portable set.\nV2: synchronized Daemon Hammer terminology from CSM REV27.\nV3: retargeted to GS20.\nV4: rebuilt from the healthy line and synchronized the recovered post-REV27 portable changes through CSM REV30.\nV5: corrected the temporary library version-label typo.\nV6: synchronized the CSM 3.3.5 Defiler rework.\nV7: synchronized corrected Defiler cost and Legionaries Champion ranged choices; retargeted to GS21.\nV8: synchronized the Defiler Missile Launcher correction.\nV9: synchronized all portable roots touched by CSM REV35, including checkbox and vehicle-presentation cleanup.\nV10: synchronized the complete 28-root portable set to CSM REV37. This brings in REV36 Additional Model checkbox changes for Possessed, Havocs, and Warp Talons; REV37 checkbox changes for Chosen and Breacher Siege Squad; and the confirmed visible Cannot attach to anything rules for Terminator Chaos Sorcerer Lord and Warpsmith. Library comments were consolidated for the live GS21 state.\nV11 — CSM REV38 CHOSEN PRESENTATION SYNC\nSynchronized the portable Chosen root from Chaos Space Marines 3.3.5 REV38: the redundant preset-selector wrapper header is suppressed and No Preset is renamed Manual Loadout. Stable Chosen root/selection IDs, branch nesting, model loadouts, preset behavior, points, validation, and all unrelated portable roots remain unchanged. GS21 retained.\nV12 — CSM REV39 CHAOS TERMINATOR HEAVY WEAPON LIMIT SYNC\nSynchronized the portable Chaos Terminators root from playable CSM REV39 and added the shared hidden Heavy Weapon Terminator Role semantic category required by its permissive-corrective one-heavy-role limit. Lernaean Terminators remain Legion-bound and are intentionally not part of the Arsenal library. All other 27 portable unit roots remain unchanged; GS21 retained.\nV13 — CSM 3.3.6 / CHAOS VINDICATOR SIEGE SHIELD SYNC\nUpdated the library baseline to Chaos Space Marines 3.3.6 and Game System revision 23. Synchronized the portable Chaos Vindicator root from playable CSM REV40 so its fixed loadout now includes the missing Siege Shield. Lernaean Terminators are Legion-bound and remain outside the Arsenal library, so the 3.3.6 removal of their Heavy Weapon Terminator cap requires no library change. All other portable roots remain unchanged."
   }
 }
