@@ -4,8 +4,8 @@
     "id": "8ff6-481d-e968-777c",
     "name": "Adepta Sororitas 3.3.5",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 21,
-    "revision": 23,
+    "gameSystemRevision": 24,
+    "revision": 24,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -20,6 +20,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 40
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -266,6 +271,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 40
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -449,6 +459,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 20
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -616,6 +631,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 20
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -6329,7 +6349,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT UI: Retributor Superior is represented directly with the standard Superior ranged list and Chainsword / Power Weapon melee list. Retributors 2-5 each use an optional 0/1 heavy-weapon list, so New Recruit displays its normal (None) option instead of auto-selecting an illegal weapon. A hidden semantic counter requires four actual heavy-weapon selections and provides a player-facing error until every model is assigned one. Heavy Flamer / Heavy Bolter / Multi-Melta remain capped at two each.",
+        "comment": "LOADOUT UI: Retributor Superior is represented directly with the standard Superior ranged list and Chainsword / Power Weapon melee list. Retributors 2-5 each use a mandatory one-of-three heavy-weapon selection and default to Heavy Flamer. Each model independently chooses Heavy Flamer, Heavy Bolter, or Multi-Melta.",
         "modifiers": [
           {
             "type": "add",
@@ -10212,6 +10232,6 @@
       }
     ],
     "authorName": "40k Reforged Homebrew",
-    "comment": "CURRENT STATE\nAdepta Sororitas 3.3.5 is a live GS21 catalogue. Native unit points, categories, attachments, Rare validation, Additional Copy Costs, ratio validation, and implemented loadouts are active. Sisters Novitiates and Seraphim are the only units whose full listbuilder loadouts remain intentionally pending; each keeps a stable Loadout Options placeholder directing players to the authoritative PDF. Imagifier is a reusable nested Attached Leader exposed by Battle Sisters, Dominions, and Retributors; it does not consume the host's external Leader association slot or army Leader Capacity.\n\nAUTHORING & RUNTIME NOTES\nBattle Sisters and Sisters Novitiates are separate Troop copy-cost families using the GS21 4 / 6 / 8 allowance. Sisters Novitiates additionally use permissive constructive validation for the source one-per-Battle-Sisters requirement. The validator intentionally covers Battle Sisters support counts 0-6; larger support counts are outside supported game-size use. Battle Sisters, Dominions, and Retributors allow one external Leader plus an optional nested Imagifier. Retributors 2-5 use mandatory one-of-three heavy-weapon selections and default to Heavy Flamer. Zephyrim Hand Flamer and Inferno Pistol limits use permissive choices with constructive max-two errors. Binary paid wargear and optional model choices use checkbox-style max-1 constraints on the selectable entry where New Recruit renders that cleanly. Source-derived rules descriptions remain verbatim from the army PDF.\n\nHISTORICAL REVISION LOG\nPHASES 0.1-0.5C: built the structural roster, Leader loadouts, Battle Sisters, elites, vehicles, Retributors, Imagifier nesting, and early Paid Wargear / Retributor validation.\nREV9-12: migrated to the Universal Game System and New Recruit cost ID, added constructive attachment/Rare/host validation, completed broad presentation polish, and standardized authoring notes.\nREV13: adopted GS17 Troops/Other Additional Copy Costs; Battle Sisters and Sisters Novitiates became independent Troop families.\nREV14: added permissive constructive Sisters Novitiates support-ratio validation.\nREV15: compiled Celestian Sacresants 2-5 into meaningful combined squad-loadout packages.\nREV16: retargeted Troop short-form rules, added Zephyrim constructive max-two validation, introduced the temporary Novitiate/Seraphim loadout placeholders, promoted Castigator Pintle Weapons, suppressed Paragon slot headers, and applied broad presentation ordering.\nREV17-20: synchronized Adepta Sororitas 3.3.4/3.3.5 rules baselines, Retributor points/weapon legality/defaults, standard Patch Notes, and GS21.\nREV21-22: completed the main checkbox cleanup cycle for Attached Imagifier, Munitorum Cherub, vehicle wargear, Anchorite Sarcophagus, Dominions Paid Wargear, Simulacrum Imperialis, and Rhino/Immolator Dozer Blade.\nREV23: converted Paragon Warsuit 3 and Castigator Pintle Storm Bolter to checkbox-style selections, shortened the two temporary pending-loadout messages, and consolidated live documentation for GS21."
+    "comment": "CURRENT STATE\nAdepta Sororitas 3.3.5 is a live GS24 catalogue using the Leader Points resource system. Native unit points, categories, attachments, Rare validation, Additional Copy Costs, ratio validation, and implemented loadouts are active. Sisters Novitiates and Seraphim are the only units whose full listbuilder loadouts remain intentionally pending; each keeps a stable Loadout Options placeholder directing players to the authoritative PDF. Imagifier is a reusable nested Attached Leader exposed by Battle Sisters, Dominions, and Retributors; it does not consume the host's external Leader association slot and has no LP cost.\n\nAUTHORING & RUNTIME NOTES\nBattle Sisters and Sisters Novitiates are separate Troop copy-cost families using the Game System 4 / 6 / 8 allowance. Sisters Novitiates additionally use permissive constructive validation for the source one-per-Battle-Sisters requirement. The validator intentionally covers Battle Sisters support counts 0-6; larger support counts are outside supported game-size use. Battle Sisters, Dominions, and Retributors allow one external Leader plus an optional nested Imagifier. Retributors 2-5 use mandatory one-of-three heavy-weapon selections and default to Heavy Flamer. Zephyrim Hand Flamer and Inferno Pistol limits use permissive choices with constructive max-two errors. Binary paid wargear and optional model choices use checkbox-style max-1 constraints on the selectable entry where New Recruit renders that cleanly. Source-derived rules descriptions remain verbatim from the army PDF.\n\nHISTORICAL REVISION LOG\nPHASES 0.1-0.5C: built the structural roster, Leader loadouts, Battle Sisters, elites, vehicles, Retributors, Imagifier nesting, and early Paid Wargear / Retributor validation.\nREV9-12: migrated to the Universal Game System and New Recruit cost ID, added constructive attachment/Rare/host validation, completed broad presentation polish, and standardized authoring notes.\nREV13: adopted GS17 Troops/Other Additional Copy Costs; Battle Sisters and Sisters Novitiates became independent Troop families.\nREV14: added permissive constructive Sisters Novitiates support-ratio validation.\nREV15: compiled Celestian Sacresants 2-5 into meaningful combined squad-loadout packages.\nREV16: retargeted Troop short-form rules, added Zephyrim constructive max-two validation, introduced the temporary Novitiate/Seraphim loadout placeholders, promoted Castigator Pintle Weapons, suppressed Paragon slot headers, and applied broad presentation ordering.\nREV17-20: synchronized Adepta Sororitas 3.3.4/3.3.5 rules baselines, Retributor points/weapon legality/defaults, standard Patch Notes, and GS21.\nREV21-22: completed the main checkbox cleanup cycle for Attached Imagifier, Munitorum Cherub, vehicle wargear, Anchorite Sarcophagus, Dominions Paid Wargear, Simulacrum Imperialis, and Rhino/Immolator Dozer Blade.\nREV23: converted Paragon Warsuit 3 and Castigator Pintle Storm Bolter to checkbox-style selections, shortened the two temporary pending-loadout messages, and consolidated live documentation for GS21.\n\nREV24 — LEADER POINTS MIGRATION\nRetargeted the catalogue to Game System revision 24 and added a 1 LP cost to Canoness, Palatine, Dogmata, and Dialogus, exactly matching the existing Counts Toward Leader Maximum semantic category. Imagifier remains without an LP cost and keeps its existing nested attachment behavior. The legacy Counts Toward Leader Maximum category remains intact during the migration and continues to support the parallel legacy Game System validator. No Rare, attachment, ratio, Additional Copy Cost, points, loadout, or other faction mechanic changed."
   }
 }
