@@ -4,8 +4,8 @@
     "id": "08ec-05e9-e427-8151",
     "name": "Tyranids 3.3.4",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 23,
-    "revision": 34,
+    "gameSystemRevision": 24,
+    "revision": 35,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -4789,7 +4789,7 @@
             "name": "Patch Notes",
             "id": "04ad-f5b1-8bfb-d85b",
             "hidden": false,
-            "description": "## Tyranids 3.3.4\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 14th)\n\n• Added Ripper Swarm model counter.\n• 3.3.5 preview unit added: Screamer-Killer.\n• Hive Guard loadouts combined into atomic cannon & Powerful Limbs choices.\n• Zoanthrope and Trygon: Neurothrope - Leech Essence and Trygon Prime - Synapse now use checkbox-style Unit Upgrade selections.\n• Hive Guard and Tyrant Guard: optional third models now use checkbox-style Additional Model selections.\n• 3.3.5 preview unit added: Tyrannofex.\n• 3.3.5 preview unit added: Stone-Crusher Carnifex.\n• Warrior: Attached Warrior selections now use checkbox-style nested-unit controls on all eligible hosts.\n• Ripper Swarms: both optional additional models now use checkbox-style Additional Ripper Swarm Model selections.\n• 3.3.5 preview unit added: Pyrovore.\n• 3.3.5 preview unit added: Raveners.\n• 3.3.5 preview unit added: Biovore.",
+            "description": "## Tyranids 3.3.4\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 14th)\n\n• Added Ripper Swarm model counter.\n• 3.3.5 preview unit added: Screamer-Killer.\n• Hive Guard loadouts combined into atomic cannon & Powerful Limbs choices.\n• Zoanthrope and Trygon: Neurothrope - Leech Essence and Trygon Prime - Synapse now use checkbox-style Unit Upgrade selections.\n• Hive Guard and Tyrant Guard: optional third models now use checkbox-style Additional Model selections.\n• 3.3.5 preview unit added: Tyrannofex.\n• 3.3.5 preview unit added: Stone-Crusher Carnifex.\n• Warrior: Attached Warrior selections now use checkbox-style nested-unit controls on all eligible hosts.\n• Ripper Swarms: both optional additional models now use checkbox-style Additional Ripper Swarm Model selections.\n• 3.3.5 preview unit added: Pyrovore.\n• 3.3.5 preview unit added: Raveners.\n• 3.3.5 preview unit added: Biovore.\n• Leader Points migration: Hive Tyrant, Tervigon, and Neurotyrant now spend all Leader Points granted by Game Size (2 / 3 / 4 LP at 800 / 1200 / 1600 Points).\n• Warrior: updated the source-derived Leader rule to the current official wording, “This unit costs 0 leader points.”\n• Catalogue compatibility: retargeted to Game System revision 24 while preserving the independent Hive Tyrant / Tervigon / Neurotyrant pooled max-one restriction.",
             "noindex": false
           }
         ],
@@ -4807,7 +4807,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "CURRENT PATCH NOTES: automatically present Configuration entry. The Tyranids 3.3.4 army-rules section is intentionally bare; full rules patch notes remain external. Catalogue Bugfixes is the retained cumulative player-facing maintenance log and is dated September 14th for REV34. Preview-unit bullets record that a preview unit was added, not every later preview-data refresh.\nHISTORY: REV26 introduced standard Patch Notes; REV28-29 added the Frenzied Feeders/Screamer-Killer/Hive Guard entries; REV30 established the retained bugfix baseline; REV31-32 appended Unit Upgrade and Additional Model checkbox cleanup plus Tyrannofex. REV33 preserved those bullets and appended Stone-Crusher Carnifex, Attached Warrior checkbox cleanup, and Ripper Swarm additional-model cleanup. REV34 appends Pyrovore, Raveners, and Biovore preview-unit additions."
+        "comment": "CURRENT PATCH NOTES: automatically present Configuration entry. The Tyranids 3.3.4 army-rules section is intentionally bare; full rules patch notes remain external. Catalogue Bugfixes is the retained cumulative player-facing maintenance log and is dated September 14th for REV34. Preview-unit bullets record that a preview unit was added, not every later preview-data refresh.\nHISTORY: REV26 introduced standard Patch Notes; REV28-29 added the Frenzied Feeders/Screamer-Killer/Hive Guard entries; REV30 established the retained bugfix baseline; REV31-32 appended Unit Upgrade and Additional Model checkbox cleanup plus Tyrannofex. REV33 preserved those bullets and appended Stone-Crusher Carnifex, Attached Warrior checkbox cleanup, and Ripper Swarm additional-model cleanup. REV34 appends Pyrovore, Raveners, and Biovore preview-unit additions.\nREV35: Retargeted to GS24 Leader Points. Hive Tyrant, Tervigon, and Neurotyrant use the production-proven 2 / 3 / 4 LP all-points pattern. Warrior's existing Leader Capacity rule object was updated in-place to the official 0 leader points wording while preserving its stable rule ID."
       },
       {
         "type": "upgrade",
@@ -5830,6 +5830,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 120
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 2
           }
         ],
         "categoryLinks": [
@@ -5868,6 +5873,13 @@
             "noindex": false
           },
           {
+            "name": "Leader Points",
+            "id": "a9f6-06b8-7fc9-df34",
+            "hidden": false,
+            "description": "This unit costs all your leader points.",
+            "noindex": false
+          },
+          {
             "name": "Leader Restriction",
             "id": "d802-65be-8376-bff5",
             "hidden": false,
@@ -5875,7 +5887,7 @@
             "noindex": false
           }
         ],
-        "comment": "CURRENT LEADER LIMIT: the source rule allowing only one HIVE TYRANT, TERVIGON, or NEUROTYRANT is stricter than generic Leader Capacity for the current Tyranid roster, so the pooled hidden-category restriction is the authoritative list-construction limit. Rare remains descriptive and no redundant per-unit Rare error is emitted.\nLOADOUT UI: Monstrous Wings is a +20 final-state alternative to Monstrous Scything Talons inside the arm-pair loadout lists, not a separate Paid Wargear checkbox. Only one arm pair may select Wings.",
+        "comment": "CURRENT LEADER POINTS / POOLED LIMIT: this unit costs all Leader Points granted by Game Size, represented as 2 / 3 / 4 LP at 800 / 1200 / 1600 Points. Independently, the source rule allows only one HIVE TYRANT, TERVIGON, or NEUROTYRANT, so the pooled hidden-category max-one restriction remains fully active. Rare remains descriptive and no redundant per-unit Rare error is emitted. These apex Leaders intentionally did not carry Counts Toward Leader Maximum before migration because the pooled max-one rule already superseded the old generic count limit; no legacy tag is invented in REV35.\nLOADOUT UI: Monstrous Wings is a +20 final-state alternative to Monstrous Scything Talons inside the arm-pair loadout lists, not a separate Paid Wargear checkbox. Only one arm pair may select Wings.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -6077,6 +6089,63 @@
                 "childName": "Hive Tyrant / Tervigon / Neurotyrant Limit"
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "b300-4825-598a-c53d",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "800 Points (Quick)"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 3,
+            "field": "b300-4825-598a-c53d",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "1200 Points (Standard)"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 4,
+            "field": "b300-4825-598a-c53d",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "1600 Points (Long)"
+              }
+            ]
           }
         ]
       },
@@ -6091,6 +6160,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 120
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 2
           }
         ],
         "categoryLinks": [
@@ -6120,13 +6194,20 @@
           }
         ],
         "sortIndex": 2,
-        "comment": "CURRENT LEADER LIMIT: the source rule allowing only one HIVE TYRANT, TERVIGON, or NEUROTYRANT is stricter than generic Leader Capacity for the current Tyranid roster, so the pooled hidden-category restriction is the authoritative list-construction limit. Rare remains descriptive and no redundant per-unit Rare error is emitted.\nLIVING INCUBATOR: the Tervigon automatically contains 1 / 2 / 3 zero-point Termagant brood units at 800 / 1200 / 1600 Points. Each granted brood uses the normal Termagant loadout grammar at zero cost and may optionally include the shared Countless Warrior through a checkbox-style Attached Warrior entryLink.\nCOPY-COST EXEMPTION: Living Incubator broods are distinct generated unit IDs and are deliberately absent from the normal Termagants (10) Troop copy-cost ledger.",
+        "comment": "CURRENT LEADER POINTS / POOLED LIMIT: this unit costs all Leader Points granted by Game Size, represented as 2 / 3 / 4 LP at 800 / 1200 / 1600 Points. Independently, the source rule allows only one HIVE TYRANT, TERVIGON, or NEUROTYRANT, so the pooled hidden-category max-one restriction remains fully active. Rare remains descriptive and no redundant per-unit Rare error is emitted. These apex Leaders intentionally did not carry Counts Toward Leader Maximum before migration because the pooled max-one rule already superseded the old generic count limit; no legacy tag is invented in REV35.\nLIVING INCUBATOR: the Tervigon automatically contains 1 / 2 / 3 zero-point Termagant brood units at 800 / 1200 / 1600 Points. Each granted brood uses the normal Termagant loadout grammar at zero cost and may optionally include the shared Countless Warrior through a checkbox-style Attached Warrior entryLink.\nCOPY-COST EXEMPTION: Living Incubator broods are distinct generated unit IDs and are deliberately absent from the normal Termagants (10) Troop copy-cost ledger.",
         "rules": [
           {
             "name": "Leader Attachment",
             "id": "ae62-3e50-4b32-c37a",
             "hidden": false,
             "description": "This unit cannot attach to anything.",
+            "noindex": false
+          },
+          {
+            "name": "Leader Points",
+            "id": "3945-e5ec-117d-96a6",
+            "hidden": false,
+            "description": "This unit costs all your leader points.",
             "noindex": false
           },
           {
@@ -7929,6 +8010,63 @@
                 "childName": "Termagants (10) - Brood 3"
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "b300-4825-598a-c53d",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "800 Points (Quick)"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 3,
+            "field": "b300-4825-598a-c53d",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "1200 Points (Standard)"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 4,
+            "field": "b300-4825-598a-c53d",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "1600 Points (Long)"
+              }
+            ]
           }
         ]
       },
@@ -7943,6 +8081,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 120
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 2
           }
         ],
         "categoryLinks": [
@@ -7978,6 +8121,13 @@
             "id": "93a5-71fe-e2c9-18b7",
             "hidden": false,
             "description": "This unit must attach to:\n● NEUROLOIDS",
+            "noindex": false
+          },
+          {
+            "name": "Leader Points",
+            "id": "0ecb-fad9-8151-831e",
+            "hidden": false,
+            "description": "This unit costs all your leader points.",
             "noindex": false
           },
           {
@@ -8070,7 +8220,7 @@
             "sortIndex": 2
           }
         ],
-        "comment": "CURRENT PRESENTATION: Loadout Options are shown first, followed by the mandatory Attached Neuroloids nested unit. The Neurotyrant participates in the pooled Hive Tyrant / Tervigon / Neurotyrant army limit.",
+        "comment": "CURRENT LEADER POINTS / POOLED LIMIT: this unit costs all Leader Points granted by Game Size, represented as 2 / 3 / 4 LP at 800 / 1200 / 1600 Points. Independently, the source rule allows only one HIVE TYRANT, TERVIGON, or NEUROTYRANT, so the pooled hidden-category max-one restriction remains fully active. Rare remains descriptive and no redundant per-unit Rare error is emitted. These apex Leaders intentionally did not carry Counts Toward Leader Maximum before migration because the pooled max-one rule already superseded the old generic count limit; no legacy tag is invented in REV35.\nCURRENT PRESENTATION: Loadout Options are shown first, followed by the mandatory Attached Neuroloids nested unit. The Neurotyrant participates in the pooled Hive Tyrant / Tervigon / Neurotyrant army limit.",
         "modifiers": [
           {
             "type": "add",
@@ -8088,6 +8238,63 @@
                 "includeChildForces": true,
                 "queryFromSelf": false,
                 "childName": "Hive Tyrant / Tervigon / Neurotyrant Limit"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "b300-4825-598a-c53d",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "800 Points (Quick)"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 3,
+            "field": "b300-4825-598a-c53d",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "1200 Points (Standard)"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 4,
+            "field": "b300-4825-598a-c53d",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "1600 Points (Long)"
               }
             ]
           }
@@ -11854,10 +12061,10 @@
             "noindex": false
           },
           {
-            "name": "Leader Capacity",
+            "name": "Leader Points",
             "id": "5fc6-d025-2883-79f2",
             "hidden": false,
-            "description": "This unit does not count towards the army list’s leader unit capacity.",
+            "description": "This unit costs 0 leader points.",
             "noindex": false
           }
         ],
@@ -12061,7 +12268,7 @@
             ]
           }
         ],
-        "comment": "CURRENT LOADOUT UI: the Warrior uses two final-state arm-pair lists; each arm pair records one melee package or one ranged bio-weapon.\nNESTED COUNTLESS LEADER: Warrior is a shared full unit rather than a root Leader. Eligible Hormagaunt and Termagant hosts, including Living Incubator broods, expose it through checkbox-style Attached Warrior entryLinks. It remains Countless and does not consume Leader Capacity."
+        "comment": "CURRENT LOADOUT UI: the Warrior uses two final-state arm-pair lists; each arm pair records one melee package or one ranged bio-weapon.\nNESTED COUNTLESS LEADER: Warrior is a shared full unit rather than a root Leader. Eligible Hormagaunt and Termagant hosts, including Living Incubator broods, expose it through checkbox-style Attached Warrior entryLinks. It remains Countless and costs 0 leader points; no LP cost object is added."
       },
       {
         "type": "upgrade",
@@ -12072,6 +12279,6 @@
         "comment": "CURRENT EXPORT PACKAGE: represents the fixed four Ripper Swarm models in the base unit. The editor uses the concise local label Ripping Jaws while New Recruit exports the canonical target name 4x Ripping Jaws."
       }
     ],
-    "comment": "CURRENT STATE — REV34 / GS23\nTyranids 3.3.4 uses the mature final-state companion-listbuilder grammar. Native Troops Hormagaunts (10), Termagants (10), and Gargoyles (10) use the 4 / 6 / 8 Additional Copy Cost allowance; 18 non-Rare Other families use the 1 / 2 / 3 allowance. Neurolictor is Rare and excluded from soft-copy accounting. The 3.3.5 preview currently exposes Screamer-Killer (130 Points, Monster), Tyrannofex (260 Points, Monster), Stone-Crusher Carnifex (180 Points, Monster), Pyrovore (90 Points, Monster), Raveners (90 Points, Infantry), and Biovore (100 Points, Monster) as Other units; all six participate in normal Other copy-cost accounting.\n\nCURRENT FACTION ARCHITECTURE\n- Hive Tyrant, Tervigon, and Neurotyrant share one pooled army-list maximum. That source restriction is stricter than generic Leader Capacity for the current Tyranid roster and is the authoritative limit.\n- Living Incubator is implemented as 1 / 2 / 3 zero-point nested Termagant brood units at 800 / 1200 / 1600 Points. These generated broods use distinct unit IDs, preserve the normal Termagant loadout grammar at zero cost, may include one nested shared Warrior, and deliberately do not consume normal Termagant Additional Copy Cost allowance.\n- Warrior is a shared full Countless Leader unit exposed through checkbox-style Attached Warrior entryLinks on eligible Hormagaunt and Termagant hosts, including Living Incubator broods. It does not consume Leader Capacity.\n- Neurotyrant includes mandatory nested Neuroloids.\n- Frenzied Feeders is an informational roster counter driven by a hidden semantic category. It reports Ripper Swarm Size but creates no battlefield Ripper Swarm unit.\n- Ripper Swarms use a four-model 80 Point root plus two independent +20 Point checkbox slots, both named Additional Ripper Swarm Model. The slots are interchangeable and have no sequencing or model-number meaning. The fixed core exports through the shared 4x Ripping Jaws package.\n- Hive Guard 3 and Tyrant Guard 3 use direct checkbox-style Additional Model selections. Zoanthrope and Trygon optional upgrades use direct Unit Upgrade checkboxes.\n\nAUTHORING / RUNTIME NOTES\n- Rules descriptions sourced from the authoritative rules PDF are verbatim source text and are not editorialized by catalogue maintenance.\n- Preview units contain only list-construction information supplied by the maintainer. Do not invent weapons, loadouts, or battlefield rules for incomplete previews.\n- Living Incubator broods are generated units, not normal Termagant copies. Keep their IDs out of the normal Troop copy-cost ledger.\n- Attached Warrior is a nested full-unit relationship. Keep the relationship section, but max-1 belongs on the Warrior entryLink so New Recruit renders a checkbox.\n- The Ripper Swarm base package intentionally separates concise editor labels from the canonical 4x Ripping Jaws export target.\n\nPRE-REV11 HISTORICAL IMPLEMENTATION NOTES — SUPERSEDED\nEarly Tyranid builds passed through several now-obsolete prototypes: Ripper Swarms briefly used quantity-style additional-model controls before returning to explicit models; Living Incubator was first modelled through external Termagant associations, then dynamic association counts and a distinct-brood picker, before becoming the current automatically generated nested-brood implementation. Those experiments are retained here only as history and are not current authoring instructions. The nested shared Warrior architecture survived that migration and became production behavior.\n\nREV11 — CONSTRUCTIVE VALIDATION MIGRATION\nMoved Rare and pooled Leader restrictions to constructive player-facing validation and finalized selected-safe Living Incubator brood handling. Nested Warrior architecture remained intact.\n\nREV13 — NEW RECRUIT EXPORT COMPATIBILITY\nMoved all Points references to canonical cost type 51b2-306e-1021-d207 without changing rules semantics.\n\nREV20 — RETROSPECTIVE POLISH PASS\nStandardized model headers, Attached Neuroloids naming, Additional Model labels, and '&' package grammar while preserving IDs and mechanics.\n\nREV21 / GS17 — TROOP COPY COSTS\nAdded unified Troops / Other Additional Copy Costs. Normal Hormagaunts, Termagants, and Gargoyles use 4 / 6 / 8; Living Incubator broods remain exempt by distinct generated IDs.\n\nREV22 — NEUROLICTOR RARE + WARRIOR EXPORT CLEANUP\nCorrected Neurolictor to Rare and removed it from Other soft-copy accounting. Cleaned Warrior Brood export wording while preserving IDs.\n\nREV23 — RIPPER SWARM EXPORT QUANTITY FIX\nIntroduced the canonical 4x Ripping Jaws shared export package for the fixed four-model core.\n\nREV24 — NEUROTYRANT SECTION ORDER\nMoved Loadout Options above Attached Neuroloids.\n\nREV25 — GS20 TROOP COPY RULE\nRetargeted native Troops to the short-form Additional Copy Cost - Troop rule.\n\nREV26 — TYRANIDS 3.3.4 + STANDARD PATCH NOTES\nUpdated the rules baseline to Tyranids 3.3.4 and added the automatically present Patch Notes Configuration.\n\nREV27 — GAME SYSTEM 21 SYNC\nRetargeted the catalogue to Game System revision 21 without semantic changes.\n\nREV28 — FRENZIED FEEDERS COUNTER\nAdded the roster-derived Ripper Swarm Size informational counter.\n\nREV29 — SCREAMER-KILLER PREVIEW + HIVE GUARD ATOMIC LOADOUTS\nAdded Screamer-Killer as an incomplete 3.3.5 preview and consolidated Hive Guard weapons into atomic final-state packages.\n\nREV30 — BUGFIX LOG BASELINE\nRebuilt the player-facing Catalogue Bugfixes section and established the retained maintenance baseline. Later workflow treats this list as cumulative from that baseline onward.\n\nREV31 — UNIT UPGRADE CHECKBOXES\nConverted Neurothrope - Leech Essence and Trygon Prime - Synapse to direct Unit Upgrade checkboxes.\n\nREV32 — ADDITIONAL MODEL CHECKBOXES + TYRANNOFEX PREVIEW\nConverted Hive Guard 3 and Tyrant Guard 3 to direct Additional Model checkboxes and added Tyrannofex as an incomplete preview.\n\nREV33 — PREVIEW REFRESH + NESTED/VARIABLE-SIZE CLEANUP\nUpdated Tyrannofex preview cost to 260 Points, added Stone-Crusher Carnifex at 180 Points, and completed normal Other copy-cost accounting for both preview families. Converted all five Attached Warrior relationships to checkbox-style entryLinks. Consolidated the two interchangeable Ripper Swarm optional models under one Additional Models section, renamed both selections Additional Ripper Swarm Model, and moved their max-1 constraints onto the model entries for checkbox rendering. Updated the cumulative Catalogue Bugfixes heading to September 12th and consolidated stale/conflicting comments into current-state, durable authoring, and clearly historical sections.\n\nREV34 — PYROVORE / RAVENERS / BIOVORE PREVIEWS + GS23 SYNC\nAdded Pyrovore (90 Points, Other / Monster), Raveners (90 Points, Other / Infantry), and Biovore (100 Points, Other / Monster) as incomplete Tyranids 3.3.5 preview units. All three use the normal Other 1 / 2 / 3 Additional Copy Cost accounting and contain no speculative loadout or battlefield-rule content. Retargeted the catalogue from Game System revision 21 to revision 23 as a compatibility-only metadata sync; no existing catalogue mechanic was changed by the Game System retarget."
+    "comment": "CURRENT STATE — REV35 / GS24\nTyranids 3.3.4 uses the mature final-state companion-listbuilder grammar. Native Troops Hormagaunts (10), Termagants (10), and Gargoyles (10) use the 4 / 6 / 8 Additional Copy Cost allowance; 18 non-Rare Other families use the 1 / 2 / 3 allowance. Neurolictor is Rare and excluded from soft-copy accounting. The 3.3.5 preview currently exposes Screamer-Killer (130 Points, Monster), Tyrannofex (260 Points, Monster), Stone-Crusher Carnifex (180 Points, Monster), Pyrovore (90 Points, Monster), Raveners (90 Points, Infantry), and Biovore (100 Points, Monster) as Other units; all six participate in normal Other copy-cost accounting.\n\nCURRENT FACTION ARCHITECTURE\n- Hive Tyrant, Tervigon, and Neurotyrant each cost all Leader Points granted by Game Size (2 / 3 / 4 LP at 800 / 1200 / 1600) and independently share one pooled army-list maximum. The pooled max-one restriction remains a separate legality axis from LP.\n- Living Incubator is implemented as 1 / 2 / 3 zero-point nested Termagant brood units at 800 / 1200 / 1600 Points. These generated broods use distinct unit IDs, preserve the normal Termagant loadout grammar at zero cost, may include one nested shared Warrior, and deliberately do not consume normal Termagant Additional Copy Cost allowance.\n- Warrior is a shared full Countless Leader unit exposed through checkbox-style Attached Warrior entryLinks on eligible Hormagaunt and Termagant hosts, including Living Incubator broods. It costs 0 leader points and therefore has no LP cost object.\n- Neurotyrant includes mandatory nested Neuroloids.\n- Frenzied Feeders is an informational roster counter driven by a hidden semantic category. It reports Ripper Swarm Size but creates no battlefield Ripper Swarm unit.\n- Ripper Swarms use a four-model 80 Point root plus two independent +20 Point checkbox slots, both named Additional Ripper Swarm Model. The slots are interchangeable and have no sequencing or model-number meaning. The fixed core exports through the shared 4x Ripping Jaws package.\n- Hive Guard 3 and Tyrant Guard 3 use direct checkbox-style Additional Model selections. Zoanthrope and Trygon optional upgrades use direct Unit Upgrade checkboxes.\n\nAUTHORING / RUNTIME NOTES\n- Rules descriptions sourced from the authoritative rules PDF are verbatim source text and are not editorialized by catalogue maintenance.\n- Preview units contain only list-construction information supplied by the maintainer. Do not invent weapons, loadouts, or battlefield rules for incomplete previews.\n- Living Incubator broods are generated units, not normal Termagant copies. Keep their IDs out of the normal Troop copy-cost ledger.\n- Attached Warrior is a nested full-unit relationship. Keep the relationship section, but max-1 belongs on the Warrior entryLink so New Recruit renders a checkbox.\n- The Ripper Swarm base package intentionally separates concise editor labels from the canonical 4x Ripping Jaws export target.\n\nPRE-REV11 HISTORICAL IMPLEMENTATION NOTES — SUPERSEDED\nEarly Tyranid builds passed through several now-obsolete prototypes: Ripper Swarms briefly used quantity-style additional-model controls before returning to explicit models; Living Incubator was first modelled through external Termagant associations, then dynamic association counts and a distinct-brood picker, before becoming the current automatically generated nested-brood implementation. Those experiments are retained here only as history and are not current authoring instructions. The nested shared Warrior architecture survived that migration and became production behavior.\n\nREV11 — CONSTRUCTIVE VALIDATION MIGRATION\nMoved Rare and pooled Leader restrictions to constructive player-facing validation and finalized selected-safe Living Incubator brood handling. Nested Warrior architecture remained intact.\n\nREV13 — NEW RECRUIT EXPORT COMPATIBILITY\nMoved all Points references to canonical cost type 51b2-306e-1021-d207 without changing rules semantics.\n\nREV20 — RETROSPECTIVE POLISH PASS\nStandardized model headers, Attached Neuroloids naming, Additional Model labels, and '&' package grammar while preserving IDs and mechanics.\n\nREV21 / GS17 — TROOP COPY COSTS\nAdded unified Troops / Other Additional Copy Costs. Normal Hormagaunts, Termagants, and Gargoyles use 4 / 6 / 8; Living Incubator broods remain exempt by distinct generated IDs.\n\nREV22 — NEUROLICTOR RARE + WARRIOR EXPORT CLEANUP\nCorrected Neurolictor to Rare and removed it from Other soft-copy accounting. Cleaned Warrior Brood export wording while preserving IDs.\n\nREV23 — RIPPER SWARM EXPORT QUANTITY FIX\nIntroduced the canonical 4x Ripping Jaws shared export package for the fixed four-model core.\n\nREV24 — NEUROTYRANT SECTION ORDER\nMoved Loadout Options above Attached Neuroloids.\n\nREV25 — GS20 TROOP COPY RULE\nRetargeted native Troops to the short-form Additional Copy Cost - Troop rule.\n\nREV26 — TYRANIDS 3.3.4 + STANDARD PATCH NOTES\nUpdated the rules baseline to Tyranids 3.3.4 and added the automatically present Patch Notes Configuration.\n\nREV27 — GAME SYSTEM 21 SYNC\nRetargeted the catalogue to Game System revision 21 without semantic changes.\n\nREV28 — FRENZIED FEEDERS COUNTER\nAdded the roster-derived Ripper Swarm Size informational counter.\n\nREV29 — SCREAMER-KILLER PREVIEW + HIVE GUARD ATOMIC LOADOUTS\nAdded Screamer-Killer as an incomplete 3.3.5 preview and consolidated Hive Guard weapons into atomic final-state packages.\n\nREV30 — BUGFIX LOG BASELINE\nRebuilt the player-facing Catalogue Bugfixes section and established the retained maintenance baseline. Later workflow treats this list as cumulative from that baseline onward.\n\nREV31 — UNIT UPGRADE CHECKBOXES\nConverted Neurothrope - Leech Essence and Trygon Prime - Synapse to direct Unit Upgrade checkboxes.\n\nREV32 — ADDITIONAL MODEL CHECKBOXES + TYRANNOFEX PREVIEW\nConverted Hive Guard 3 and Tyrant Guard 3 to direct Additional Model checkboxes and added Tyrannofex as an incomplete preview.\n\nREV33 — PREVIEW REFRESH + NESTED/VARIABLE-SIZE CLEANUP\nUpdated Tyrannofex preview cost to 260 Points, added Stone-Crusher Carnifex at 180 Points, and completed normal Other copy-cost accounting for both preview families. Converted all five Attached Warrior relationships to checkbox-style entryLinks. Consolidated the two interchangeable Ripper Swarm optional models under one Additional Models section, renamed both selections Additional Ripper Swarm Model, and moved their max-1 constraints onto the model entries for checkbox rendering. Updated the cumulative Catalogue Bugfixes heading to September 12th and consolidated stale/conflicting comments into current-state, durable authoring, and clearly historical sections.\n\nREV34 — PYROVORE / RAVENERS / BIOVORE PREVIEWS + GS23 SYNC\nAdded Pyrovore (90 Points, Other / Monster), Raveners (90 Points, Other / Infantry), and Biovore (100 Points, Other / Monster) as incomplete Tyranids 3.3.5 preview units. All three use the normal Other 1 / 2 / 3 Additional Copy Cost accounting and contain no speculative loadout or battlefield-rule content. Retargeted the catalogue from Game System revision 21 to revision 23 as a compatibility-only metadata sync; no existing catalogue mechanic was changed by the Game System retarget.\n\nREV35 — LEADER POINTS MIGRATION\n- Retargeted catalogue from GS23 to GS24.\n- Hive Tyrant, Tervigon, and Neurotyrant now carry intrinsic LP costs representing the source rule \"This unit costs all your leader points.\": 2 LP at 800, 3 LP at 1200, 4 LP at 1600.\n- Warrior remains Countless with no LP cost object; its existing source-derived rule object now uses the official 3.3.4 wording \"This unit costs 0 leader points.\" and keeps the same rule ID.\n- The three apex Leaders intentionally remain absent from Counts Toward Leader Maximum because that was the pre-migration Tyranid architecture; their independent pooled max-one restriction and Rare semantics remain unchanged.\n- No Points, loadouts, generated Living Incubator broods, attachment topology, Additional Copy Cost arithmetic, preview-unit structure, or other faction mechanics changed."
   }
 }
