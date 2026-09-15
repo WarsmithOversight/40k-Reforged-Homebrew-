@@ -1,0 +1,393 @@
+{
+  "document": {
+    "title": "Leader Points Implementation, Migration & Cleanup Handoff",
+    "version": 3,
+    "date": "2026-09-14",
+    "supersedes": "Leader_Points_Implementation_Handoff_V2_2026-09-14.json",
+    "status": "MIGRATION STRUCTURALLY COMPLETE — RUNTIME-GATED CATALOGUE CLEANUP ACTIVE",
+    "purpose": "Continuity handoff for the 40k Reforged Leader Points project after the full structural migration. The active phase is now catalogue-by-catalogue runtime validation followed by removal of the obsolete Leader Capacity/counting layer and Patch Notes presentation cleanup.",
+    "critical_instruction": "Do not restart Leader Points research or migration from first principles. The weighted LP architecture is proven and every active catalogue/shared library has already received its structural migration. Resume from the cleanup protocol in this file. Before removing the legacy count system from any catalogue, give the user a short targeted runtime checklist for that catalogue and wait for their pass/fail report.",
+    "backup_and_recovery_policy": "The user manages backups and manual rollback. Treat the current production path as a point of no return rather than creating extra safety branches/revisions solely for fear of rollback. If something catastrophic happens, the user will manually revert to a stable build."
+  },
+  "phase_state": {
+    "architecture_state": "FINAL WEIGHTED LP ARCHITECTURE ADOPTED",
+    "structural_migration_state": "COMPLETE across active catalogues and relevant shared libraries",
+    "cleanup_state": "ACTIVE",
+    "runtime_strategy": "The user is now runtime-checking one catalogue at a time before cleanup. The checklist should be concise and faction-specific, normally 3-5 checks: ordinary LP spend, any 0-LP/all-LP exception, and one dangerous nested/shared/attachment path where relevant. Do not repeat the very exhaustive first Sororitas checklist unless a catalogue genuinely needs it.",
+    "first_cleanup_completed": "Adepta Sororitas REV25",
+    "next_catalogue": "Not predetermined. The user will name the next catalogue. Respond with its targeted runtime checklist first; only perform cleanup after the user reports that runtime behavior is clean."
+  },
+  "authoritative_rules": {
+    "source": "User-provided image of the updated Core Rules — SETUP > ARMY LIST BUILDING > ARMY LIST, supplied 2026-09-14.",
+    "source_policy": "Rules text shown to players must use official source phrasing. Listbuilder error messages may be custom-written for clarity and repair guidance. Do not editorialize source-derived faction rule descriptions merely to update terminology.",
+    "general_army_list_text_verbatim": "The size of players’ army lists are measured in points. Choose a size for the battle from below. Each player can select units for their army list totalling up to that size. Each size comes with list building restrictions and a number of leader points to spend on adding leader units to your army. You must spend one leader point to add a leader unit to your army list.",
+    "game_size_grants": {
+      "800": {
+        "leader_points": 2,
+        "verbatim": "You have two leader points."
+      },
+      "1200": {
+        "leader_points": 3,
+        "verbatim": "You have three leader points."
+      },
+      "1600": {
+        "leader_points": 4,
+        "verbatim": "You have four leader points."
+      }
+    },
+    "faction_overrides": {
+      "principle": "Faction-specific source rules may override the ordinary one-Leader-point cost. Do not force all tagged Leaders to 1 LP when the authoritative faction PDF says otherwise.",
+      "known_pattern": "Shield-Captain and Hive Tyrant source rules use the concept '<all of your Leader Points>'. The user explicitly wants this represented as 2 LP at 800, 3 LP at 1200, and 4 LP at 1600. Hardcoding those values by Game Size is accepted and preferred over unnecessary abstraction if it is simpler and robust."
+    }
+  },
+  "canonical_ids": {
+    "game_system_id": "sys-b298-09dc-9597-23fd",
+    "points_cost_type": {
+      "name": "Points",
+      "id": "51b2-306e-1021-d207"
+    },
+    "leader_points_cost_type": {
+      "name": "LP",
+      "semantic_name": "Leader Points",
+      "id": "b300-4825-598a-c53d",
+      "defaultCostLimit": -1,
+      "status": "ADOPTED_CANONICAL_ID"
+    },
+    "leader_points_tracker": {
+      "id": "270c-8f7d-3269-f1f7",
+      "status": "ADOPTED_CANONICAL_ID"
+    },
+    "legacy_count_category": {
+      "name": "Counts Toward Leader Maximum",
+      "id": "43ec-4d99-c48e-1de7",
+      "status": "TEMPORARILY RETAINED UNCHANGED AND STILL EXECUTABLE DURING MIGRATION"
+    },
+    "game_size_entries": {
+      "800": {
+        "name": "800 Points (Quick)",
+        "id": "0b81-3579-ad7e-49b2",
+        "leader_points": 2
+      },
+      "1200": {
+        "name": "1200 Points (Standard)",
+        "id": "d0e1-6785-e168-b595",
+        "leader_points": 3
+      },
+      "1600": {
+        "name": "1600 Points (Long)",
+        "id": "91f0-51d4-3148-07c8",
+        "leader_points": 4
+      }
+    }
+  },
+  "global_game_system_state": {
+    "canonical_file": "Warhammer_40k_Reforged_CORE_3_3_3_REV24_LEADER_POINTS_DUAL_VALIDATION_TRACKER_ERRORS.json",
+    "game_system_revision": 24,
+    "weighted_lp_system": {
+      "cost_type_id": "b300-4825-598a-c53d",
+      "cost_type_name": "LP",
+      "tracker_id": "270c-8f7d-3269-f1f7",
+      "budgets": {
+        "800": 2,
+        "1200": 3,
+        "1600": 4
+      },
+      "status": "PROVEN"
+    },
+    "legacy_count_system": {
+      "category_name": "Counts Toward Leader Maximum",
+      "category_id": "43ec-4d99-c48e-1de7",
+      "game_size_count_validators": "STILL PRESENT IN THE GAME SYSTEM FOR NOW",
+      "cleanup_behavior": "As each catalogue passes runtime validation, its catalogue-side references to the legacy category may be removed. The global Game System count validators remain until catalogue/library cleanup is complete. A cleaned catalogue may therefore rely solely on weighted LP validation while other not-yet-cleaned catalogues still retain the old count layer."
+    },
+    "tracker_recovery": "REV24 includes a constructive error on Army > Configuration if the permanent Leader Points tracker is deleted. Weighted overspend errors live on the tracker. These placements were structurally validated; the main weighted LP behavior itself has already been runtime-proven."
+  },
+  "validated_runtime_behavior": {
+    "prototype": {
+      "files": [
+        "Leader_Points_TEST_Game_System_REV1.json",
+        "Leader_Points_TEST_Catalogue_REV1.json",
+        "Leader_Points_TEST_Library_V1.json",
+        "Leader_Points_TEST_System_REV1.zip"
+      ],
+      "user_result": "All tests successful.",
+      "proven": [
+        "Positive LP costs display natively on units and in roster totals.",
+        "Roster-scope conditions can query the summed LP cost type directly.",
+        "LP total can drive the live remaining/max tracker name.",
+        "Weighted LP overspend validation works.",
+        "A 3-LP Leader plus a 1-LP Leader fails at a 3-LP budget even though only two Leaders are selected.",
+        "Changing Game Size updates the LP budget/tracker.",
+        "Nested/shared/imported Leader costs can aggregate exactly once without double-charging.",
+        "Explicit 0 LP is suppressed by New Recruit's native visible cost display."
+      ]
+    },
+    "adepta_sororitas_migration": {
+      "status": "PASS",
+      "details": "Original production migration runtime passed. Cleanup-phase pre-removal runtime gate also passed on 2026-09-14: Canoness, Palatine, Dogmata, and Dialogus each spend 1 LP; Imagifier spends 0 LP; exact budget, overspend, and Game Size switching behaved correctly."
+    },
+    "adeptus_custodes_migration": {
+      "file": "Adeptus_Custodes_3_3_5_REV15_LEADER_POINTS_MIGRATION.json",
+      "user_result": "Works like a charm.",
+      "proven": [
+        "A production unit LP cost can change live with Game Size.",
+        "Hardcoded 2 / 3 / 4 LP modifiers are a valid implementation of 'all your Leader Points'.",
+        "Rare and a stronger independent SHIELD-CAPTAIN max-1 restriction coexist with LP without interference.",
+        "The legacy Counts Toward Leader Maximum tag can remain active alongside a variable weighted LP cost."
+      ]
+    },
+    "cleanup_policy": "Runtime success is the authorization to remove the old catalogue-side count system. Structural matching alone is not enough for this cleanup phase."
+  },
+  "leader_points_semantics": {
+    "ordinary_paid_leader": "Normally one positive LP cost object on the semantic unit root: {\"name\":\"LP\",\"typeId\":\"b300-4825-598a-c53d\",\"value\":1}.",
+    "zero_lp_unit": "No LP cost object. If the authoritative faction PDF explicitly says the unit costs 0 leader points, keep/add that player-facing source rule text without creating an LP:0 cost.",
+    "all_leader_points_unit": "Base LP 2 plus Game Size-conditioned set modifiers to 2 / 3 / 4 for 800 / 1200 / 1600. This is runtime-proven by Adeptus Custodes.",
+    "shared_content": "Intrinsic LP belongs to the semantic shared root exactly once. Consumer entryLinks must not duplicate it. Local compiled/consumer-specific Leaders own their own LP locally.",
+    "independent_restrictions": "Rare, attachment legality, pooled faction caps, ratios, Additional Copy Costs, source switches, and other restrictions remain independent of LP and must not be removed during cleanup."
+  },
+  "structural_migration_completion": {
+    "status": "COMPLETE",
+    "catalogues_and_libraries": {
+      "Adepta Sororitas": {
+        "migration_file": "Adepta_Sororitas_3_3_5_REV24_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PASS",
+        "cleanup": "COMPLETE -> REV25"
+      },
+      "Adeptus Custodes": {
+        "migration_file": "Adeptus_Custodes_3_3_5_REV15_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PASS",
+        "cleanup": "PENDING"
+      },
+      "Tyranids": {
+        "migration_file": "Tyranids_3_3_4_REV35_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "Hive Tyrant, Tervigon, Neurotyrant cost all LP (2/3/4); Tyranid Warrior costs 0 LP by source."
+      },
+      "Necrons": {
+        "migration_file": "Necrons_3_3_5_REV16_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "Canoptek Plasmacyte costs 0 LP by source; Cryptothralls are not LP-charged."
+      },
+      "T'au": {
+        "migration_file": "Tau_3_3_6_REV18_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "Ethereal costs 0 LP by source."
+      },
+      "Grey Knights": {
+        "migration_file": "Grey_Knights_3_3_6_REV23_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE"
+      },
+      "Drukhari": {
+        "migration_file": "Drukhari_3_3_4_REV34_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "Lhamaean is a complete nested 1-LP Leader. Old host-side category modifiers were legacy count scaffolding and must be audited/removed with the old system without disturbing local attachment capacity."
+      },
+      "Aeldari": {
+        "migration_file": "Aeldari_Craftworlds_3_3_4_REV30_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE"
+      },
+      "Harlequins playable": {
+        "migration_file": "Harlequins_3_3_6_V14_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "No local LP costs on adapter links; shared library owns intrinsic LP."
+      },
+      "Harlequins shared library": {
+        "migration_file": "Harlequins_3_3_6_LIBRARY_V15_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "Troupe Master and Shadowseer shared roots each own 1 LP."
+      },
+      "Space Marines": {
+        "migration_file": "Space_Marines_3_3_7_REV20_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "17 ordinary paid Leaders at 1 LP; Sanguinary Priest is not an LP Leader."
+      },
+      "Astra Militarum": {
+        "migration_file": "Astra_Militarum_3_3_5_REV38_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "Six paid 1-LP Leaders. Commissar plus eight Command Squad support Leaders cost 0 leader points by source. Tank Commander is also mirrored into Manufactorum."
+      },
+      "Adeptus Mechanicus": {
+        "migration_file": "Adeptus_Mechanicus_3_3_4_REV26_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "Six paid 1-LP native Leaders; Skitarii Marshal costs 0 LP by source; Servitors are not LP Leaders."
+      },
+      "Manufactorum Imperium shared library": {
+        "migration_file": "Manufactorum_Imperium_3_3_3_LIBRARY_V12_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "Tank Commander is the only LP-bearing shared root and owns 1 LP exactly once."
+      },
+      "World Eaters": {
+        "migration_file": "World_Eaters_3_3_4_REV21_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "Six native 1-LP Leaders; Arsenal imports have no local LP."
+      },
+      "Thousand Sons": {
+        "migration_file": "Thousand_Sons_3_3_5_REV18_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "Five native 1-LP Leaders; Scarab Occult Sorcerer and Aspiring Sorcerer cost 0 LP by source."
+      },
+      "Death Guard": {
+        "migration_file": "Death_Guard_3_3_4_REV26_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "Ten native 1-LP Leaders; Arsenal imports have no local LP."
+      },
+      "Chaos Space Marines": {
+        "migration_file": "Chaos_Space_Marines_3_3_6_REV42_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "14 player-facing 1-LP Leader roots. Chaos Lord and Terminator Chaos Lord are compiled into four Legion-specific roots each; portable generic shared Leaders are synchronized separately into Arsenal."
+      },
+      "Chaos Space Marines Arsenal shared library": {
+        "migration_file": "Chaos_Space_Marines_3_3_6_ARSENAL_LIBRARY_V15_LEADER_POINTS_MIGRATION.json",
+        "runtime": "PENDING CLEANUP GATE",
+        "special": "Exactly five portable shared 1-LP Leaders: Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, Chaos Apothecary. World Eaters, Thousand Sons, and Death Guard consume them without local LP duplication."
+      }
+    }
+  },
+  "cleanup_protocol": {
+    "trigger": "The user names a catalogue. First provide a short faction-specific runtime checklist. Do not edit/remove the old system yet. After the user reports a clean pass, perform the cleanup.",
+    "default_runtime_checklist_shape": [
+      "Verify one ordinary paid Leader spends the expected LP.",
+      "Verify any important exception: 0-LP, all-LP, nested, or shared/imported Leader.",
+      "Verify exact-budget/overspend or Game Size switching only when useful for this faction.",
+      "Verify one faction-specific dangerous path if it could plausibly be affected by removing old count scaffolding."
+    ],
+    "cleanup_operations": [
+      {
+        "operation": 1,
+        "name": "Reverse Catalogue Bugfixes bullets",
+        "rule": "Reverse the existing bugfix bullet order so newest is at the top. Preserve the existing bullet text unless another cleanup item explicitly requires a wording change."
+      },
+      {
+        "operation": 2,
+        "name": "Update bugfix header and add Leader Points bullet",
+        "rule": "Change the Catalogue Bugfixes header date to exactly 'September 14th'. Add a concise army-specific Leader Points bugfix bullet as the newest/top bullet."
+      },
+      {
+        "operation": 3,
+        "name": "Rename export-visible Patch Notes item",
+        "rule": "Rename the selectable Configuration item named 'Patch Notes' to exactly 'Updated: September 14th'. This item name is intentionally visible in exports so players can show which catalogue update they used. Do not automatically rename the internal Patch Notes rule unless separately required."
+      },
+      {
+        "operation": 4,
+        "name": "Audit and remove legacy catalogue-side Leader Capacity system",
+        "rule": "Before deletion, prove the old Counts Toward Leader Maximum semantics line up with current positive LP semantics, including any nested/shared/host-side legacy scaffolding. If they line up and runtime passed, remove catalogue-side references that existed only for the old count system. Preserve LP costs and all independent mechanics."
+      }
+    ],
+    "legacy_removal_detail": {
+      "legacy_category_id": "43ec-4d99-c48e-1de7",
+      "what_to_remove": "Direct categoryLinks to the old count category plus modifiers/categories/proxies whose sole job was feeding the old Leader Capacity count system. Do not blindly delete a structure merely because it mentions a Leader.",
+      "stale_player_facing_rules": "Search for listbuilder-owned 'Leader Capacity' wording during cleanup. If the authoritative PDF now has explicit Leader Points wording, update the existing rule in place while preserving its ID. If the old rule has no current source equivalent and existed only for the obsolete system, remove it. Source text outranks historical catalogue prose.",
+      "zero_lp_policy": "Still no explicit LP:0 cost objects."
+    },
+    "revision_policy": "Increment the catalogue/library revision once for the cleanup output. Use a clear LEADER_POINTS_CLEANUP filename.",
+    "post_edit_validation": [
+      "Valid JSON; zero duplicate IDs.",
+      "Only deliberately obsolete legacy-system IDs may disappear; do not churn unrelated IDs.",
+      "Positive LP owners remain unchanged.",
+      "No unintended LP costs appear.",
+      "No old mechanical count-category references remain in a catalogue once its old system is declared removed.",
+      "Patch item is 'Updated: September 14th'.",
+      "Catalogue Bugfixes header is September 14th and bullets are newest-first with Leader Points at the top.",
+      "Regression-check unrelated points, loadouts, attachment, Rare, ACC, ratio, and other mechanics."
+    ]
+  },
+  "cleanup_status": {
+    "Adepta Sororitas": {
+      "runtime_gate": "PASS",
+      "source": "Adepta_Sororitas_3_3_5_REV24_LEADER_POINTS_MIGRATION.json",
+      "output": "Adepta_Sororitas_3_3_5_REV25_LEADER_POINTS_CLEANUP.json",
+      "revision": 25,
+      "game_system_revision": 24,
+      "legacy_audit": {
+        "old_count_roots": [
+          "Canoness",
+          "Palatine",
+          "Dogmata",
+          "Dialogus"
+        ],
+        "lp_1_roots": [
+          "Canoness",
+          "Palatine",
+          "Dogmata",
+          "Dialogus"
+        ],
+        "result": "EXACT MATCH"
+      },
+      "legacy_removal": "Removed the four direct Counts Toward Leader Maximum category links. No mechanical references to the old category remain in the cleaned Sororitas catalogue.",
+      "imagifier": "Negative control remains uncharged. The current 3.3.5 source explicitly says 'This unit cost 0 leader points.' The existing Leader Capacity rule ID b003-0895-eb32-b3e0 was preserved and renamed to Leader Points with that exact source wording.",
+      "patch_notes_cleanup": {
+        "selection_item_name": "Updated: September 14th",
+        "header": "Catalogue Bugfixes (September 14th)",
+        "order": "newest first",
+        "leader_points_bullet": "Leader Points: Canoness, Palatine, Dogmata, and Dialogus now cost 1 LP each; Imagifier costs 0 leader points."
+      },
+      "id_result": "No new IDs; exactly four obsolete categoryLink IDs deleted; zero duplicate IDs.",
+      "regression_result": "PASS"
+    }
+  },
+  "shared_library_cleanup_notes": {
+    "general": "Libraries are semantic owners, not ordinary playable consumers. Runtime-check the relevant consumer path before removing legacy tags from a shared library. Keep intrinsic LP on the shared root and verify consumers do not locally duplicate it.",
+    "Harlequins": "Troupe Master and Shadowseer LP belongs in the shared library. Drukhari/Aeldari/playable Harlequins adapter links should remain uncharged locally.",
+    "Manufactorum": "Tank Commander is the only LP-bearing shared root. AdMech consumer must inherit exactly 1 LP with no local duplicate.",
+    "Arsenal": "Five portable shared Leaders own 1 LP in the Arsenal library. World Eaters, Thousand Sons, and Death Guard consumer entryLinks remain uncharged locally."
+  },
+  "final_global_cleanup_after_catalogues": {
+    "timing": "Only after every active catalogue and relevant shared library has passed its runtime gate and catalogue-side cleanup.",
+    "actions": [
+      "Remove the three old count-based Game Size Leader Capacity validators from the canonical Game System.",
+      "Confirm zero active catalogue/library references remain to Counts Toward Leader Maximum.",
+      "If the hidden category is truly unreferenced and redundant, remove its Game System category definition as the final weed-pulling step.",
+      "Run a small representative final smoke test: ordinary 1-LP Leader, explicit 0-LP Leader, all-LP Leader, nested Leader, and imported/shared Leader.",
+      "Search player-facing listbuilder-owned text for stale Leader Capacity / Leader Maximum terminology."
+    ],
+    "not_required": "Do not do another giant faction-by-faction rules audit. The cleanup phase already gates each catalogue with targeted runtime testing."
+  },
+  "pitfalls_and_guardrails": [
+    "Do not remove catalogue-side legacy count semantics before the user reports the catalogue's runtime checklist passed.",
+    "Do not remove the global Game System legacy count validators yet.",
+    "Do not infer LP from visible Leader category membership.",
+    "Do not add explicit 0 LP costs.",
+    "Do not double-charge shared/imported Leaders on both shared root and consumer entryLink.",
+    "Do not collapse Rare, attachment, pooled faction, ratio, ACC, or other restrictions into Leader Points.",
+    "Do not delete host-side or nested structures until you establish they exist only for legacy count accounting.",
+    "Do not rewrite authoritative source rules merely for vocabulary consistency; preserve exact current source wording where it exists.",
+    "Do not renumber/churn stable IDs except when deleting obsolete legacy-system objects.",
+    "Do not rename the internal Patch Notes rule just because the export-visible selection item becomes 'Updated: September 14th'.",
+    "Do not reverse the new Leader Points bullet to the bottom; it is the newest bugfix and belongs at the top.",
+    "Do not restart prototype research unless runtime behavior contradicts the proven architecture."
+  ],
+  "current_canonical_files": {
+    "game_system": "Warhammer_40k_Reforged_CORE_3_3_3_REV24_LEADER_POINTS_DUAL_VALIDATION_TRACKER_ERRORS.json",
+    "maintenance_guide": "Listbuilder_Catalogue_Maintenance_and_Presentation_Guide_V3(1).json",
+    "leader_points_handoff": "Leader_Points_Implementation_Handoff_V3_CLEANUP_PHASE_2026-09-14.json",
+    "cleaned_catalogues": {
+      "Adepta Sororitas": "Adepta_Sororitas_3_3_5_REV25_LEADER_POINTS_CLEANUP.json"
+    },
+    "migrated_not_yet_cleaned": {
+      "Adeptus Custodes": "Adeptus_Custodes_3_3_5_REV15_LEADER_POINTS_MIGRATION.json",
+      "Tyranids": "Tyranids_3_3_4_REV35_LEADER_POINTS_MIGRATION.json",
+      "Necrons": "Necrons_3_3_5_REV16_LEADER_POINTS_MIGRATION.json",
+      "T'au": "Tau_3_3_6_REV18_LEADER_POINTS_MIGRATION.json",
+      "Grey Knights": "Grey_Knights_3_3_6_REV23_LEADER_POINTS_MIGRATION.json",
+      "Drukhari": "Drukhari_3_3_4_REV34_LEADER_POINTS_MIGRATION.json",
+      "Aeldari": "Aeldari_Craftworlds_3_3_4_REV30_LEADER_POINTS_MIGRATION.json",
+      "Harlequins playable": "Harlequins_3_3_6_V14_LEADER_POINTS_MIGRATION.json",
+      "Harlequins library": "Harlequins_3_3_6_LIBRARY_V15_LEADER_POINTS_MIGRATION.json",
+      "Space Marines": "Space_Marines_3_3_7_REV20_LEADER_POINTS_MIGRATION.json",
+      "Astra Militarum": "Astra_Militarum_3_3_5_REV38_LEADER_POINTS_MIGRATION.json",
+      "Adeptus Mechanicus": "Adeptus_Mechanicus_3_3_4_REV26_LEADER_POINTS_MIGRATION.json",
+      "Manufactorum Imperium": "Manufactorum_Imperium_3_3_3_LIBRARY_V12_LEADER_POINTS_MIGRATION.json",
+      "World Eaters": "World_Eaters_3_3_4_REV21_LEADER_POINTS_MIGRATION.json",
+      "Thousand Sons": "Thousand_Sons_3_3_5_REV18_LEADER_POINTS_MIGRATION.json",
+      "Death Guard": "Death_Guard_3_3_4_REV26_LEADER_POINTS_MIGRATION.json",
+      "Chaos Space Marines": "Chaos_Space_Marines_3_3_6_REV42_LEADER_POINTS_MIGRATION.json",
+      "Chaos Space Marines Arsenal": "Chaos_Space_Marines_3_3_6_ARSENAL_LIBRARY_V15_LEADER_POINTS_MIGRATION.json"
+    }
+  },
+  "historical_context": {
+    "previous_handoff": "Leader_Points_Implementation_Handoff_V2_2026-09-14.json",
+    "migration_strategy": "V2 documented the dual-validation migration phase: old count validation remained live while weighted LP was added catalogue-by-catalogue. That structural migration is now complete. V3 supersedes V2 for active work.",
+    "research_reuse": "The weighted custom-cost architecture, tracker behavior, variable 2/3/4 LP pattern, and shared-root ownership conclusions from V2 remain authoritative. Consult V2 only for deep historical/research detail, not for next-step sequencing."
+  },
+  "resume_prompt_for_next_ai": "Continue the 40k Reforged Leader Points cleanup phase from Leader_Points_Implementation_Handoff_V3_CLEANUP_PHASE_2026-09-14.json. The structural migration is complete. Adepta Sororitas has already passed runtime and is cleaned as REV25. Wait for the user to name the next catalogue. Give a concise faction-specific runtime checklist first. If the user reports a clean pass, reverse existing Catalogue Bugfixes bullets to newest-first, set the header date to September 14th, prepend an army-specific Leader Points bugfix bullet, rename the export-visible Patch Notes selection item to 'Updated: September 14th', audit legacy Counts Toward Leader Maximum semantics against current LP semantics, and if they match remove the obsolete catalogue-side count system. Preserve LP costs, source-backed 0-LP wording, stable IDs where possible, and all independent restrictions. Do not remove the global Game System legacy count validators until every catalogue/library has completed this cleanup phase."
+}

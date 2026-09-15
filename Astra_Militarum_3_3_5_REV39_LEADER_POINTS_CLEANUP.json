@@ -4,8 +4,8 @@
     "id": "6230-6a49-e838-d1e7",
     "name": "Astra Militarum 3.3.5",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 21,
-    "revision": 37,
+    "gameSystemRevision": 24,
+    "revision": 39,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -6704,6 +6704,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 10
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -6718,12 +6723,6 @@
             "id": "9e9f-b0b3-ff82-f8cf",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "c2c3-1669-dcec-f3f9",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
           }
         ],
         "sortIndex": 1,
@@ -6858,52 +6857,12 @@
             "entryLinks": [
               {
                 "import": true,
-                "name": "Master Vox Operator",
-                "hidden": false,
-                "id": "3975-0986-a0df-7c7f",
-                "type": "selectionEntry",
-                "targetId": "daf0-d00e-2621-5851",
-                "sortIndex": 1,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "00bc-d2ea-bdad-7740",
-                    "includeChildSelections": false
-                  }
-                ]
-              },
-              {
-                "import": true,
-                "name": "Standard Bearer",
-                "hidden": false,
-                "id": "057f-15b3-5442-6c29",
-                "type": "selectionEntry",
-                "targetId": "d810-7476-b4b1-9ceb",
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "4fb8-2af0-4fcf-a62c",
-                    "includeChildSelections": false
-                  }
-                ]
-              },
-              {
-                "import": true,
                 "name": "Medic",
                 "hidden": false,
                 "id": "2104-f6a1-6aeb-9d41",
                 "type": "selectionEntry",
                 "targetId": "103b-a653-a172-a9d0",
-                "sortIndex": 3,
+                "sortIndex": 1,
                 "constraints": [
                   {
                     "type": "max",
@@ -6918,12 +6877,32 @@
               },
               {
                 "import": true,
+                "name": "Astropath",
+                "hidden": false,
+                "id": "e5e6-b10f-45f5-04b3",
+                "type": "selectionEntry",
+                "targetId": "00af-5852-b364-4f70",
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "c764-bf56-8283-15b4",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "import": true,
                 "name": "Bodyguard",
                 "hidden": false,
                 "id": "6565-2eaa-6ab7-2c0b",
                 "type": "selectionEntry",
                 "targetId": "1562-9776-8b13-1706",
-                "sortIndex": 4,
+                "sortIndex": 3,
                 "constraints": [
                   {
                     "type": "max",
@@ -6943,7 +6922,7 @@
                 "id": "8ace-ae8f-e16d-6894",
                 "type": "selectionEntry",
                 "targetId": "1562-9776-8b13-1706",
-                "sortIndex": 5,
+                "sortIndex": 4,
                 "constraints": [
                   {
                     "type": "max",
@@ -6958,12 +6937,52 @@
               },
               {
                 "import": true,
+                "name": "Standard Bearer",
+                "hidden": false,
+                "id": "057f-15b3-5442-6c29",
+                "type": "selectionEntry",
+                "targetId": "d810-7476-b4b1-9ceb",
+                "sortIndex": 5,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "4fb8-2af0-4fcf-a62c",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "import": true,
+                "name": "Master Of Ordnance",
+                "hidden": false,
+                "id": "8c30-ef4c-3fa1-9013",
+                "type": "selectionEntry",
+                "targetId": "adb6-c32c-571f-2fd3",
+                "sortIndex": 6,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "d3e5-cff3-e428-fc4f",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "import": true,
                 "name": "Weapons Specialist",
                 "hidden": false,
                 "id": "bf57-b260-7d17-7837",
                 "type": "selectionEntry",
                 "targetId": "aded-3409-ce99-fa58",
-                "sortIndex": 6,
+                "sortIndex": 7,
                 "constraints": [
                   {
                     "type": "max",
@@ -6983,7 +7002,7 @@
                 "id": "3bed-0544-e891-6325",
                 "type": "selectionEntry",
                 "targetId": "aded-3409-ce99-fa58",
-                "sortIndex": 7,
+                "sortIndex": 8,
                 "constraints": [
                   {
                     "type": "max",
@@ -6998,12 +7017,12 @@
               },
               {
                 "import": true,
-                "name": "Master Of Ordnance",
+                "name": "Master Vox Operator",
                 "hidden": false,
-                "id": "8c30-ef4c-3fa1-9013",
+                "id": "3975-0986-a0df-7c7f",
                 "type": "selectionEntry",
-                "targetId": "adb6-c32c-571f-2fd3",
-                "sortIndex": 8,
+                "targetId": "daf0-d00e-2621-5851",
+                "sortIndex": 9,
                 "constraints": [
                   {
                     "type": "max",
@@ -7011,7 +7030,7 @@
                     "field": "selections",
                     "scope": "parent",
                     "shared": true,
-                    "id": "d3e5-cff3-e428-fc4f",
+                    "id": "00bc-d2ea-bdad-7740",
                     "includeChildSelections": false
                   }
                 ]
@@ -7023,26 +7042,6 @@
                 "id": "3c63-8580-c4a7-df1c",
                 "type": "selectionEntry",
                 "targetId": "78c2-6b89-473c-6b80",
-                "sortIndex": 9,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "7416-5a91-b177-fa76",
-                    "includeChildSelections": false
-                  }
-                ]
-              },
-              {
-                "import": true,
-                "name": "Astropath",
-                "hidden": false,
-                "id": "e5e6-b10f-45f5-04b3",
-                "type": "selectionEntry",
-                "targetId": "00af-5852-b364-4f70",
                 "sortIndex": 10,
                 "constraints": [
                   {
@@ -7051,7 +7050,7 @@
                     "field": "selections",
                     "scope": "parent",
                     "shared": true,
-                    "id": "c764-bf56-8283-15b4",
+                    "id": "7416-5a91-b177-fa76",
                     "includeChildSelections": false
                   }
                 ]
@@ -7170,7 +7169,7 @@
             ]
           }
         ],
-        "comment": "REGIMENT COMMANDER: root Leader controlled by the Regiment selector. Its matching Regiment Troop remains a real prerequisite; Regiment choice controls availability but does not satisfy the prerequisite. Command Squad Officers are complete nested Leader units and do not consume normal Leader Capacity."
+        "comment": "REGIMENT COMMANDER: root Leader controlled by the Regiment selector. Its matching Regiment Troop remains a real prerequisite; Regiment choice controls availability but does not satisfy the prerequisite. Command Squad Officers are complete nested Leader units and cost 0 leader points."
       },
       {
         "type": "unit",
@@ -7183,6 +7182,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 10
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -7197,12 +7201,6 @@
             "id": "62cd-2399-783b-ef9d",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "e64c-0e02-d651-7681",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
           }
         ],
         "sortIndex": 2,
@@ -7337,52 +7335,12 @@
             "entryLinks": [
               {
                 "import": true,
-                "name": "Master Vox Operator",
-                "hidden": false,
-                "id": "f371-1f81-93d2-b089",
-                "type": "selectionEntry",
-                "targetId": "daf0-d00e-2621-5851",
-                "sortIndex": 1,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "a2bc-ad57-9416-3edc",
-                    "includeChildSelections": false
-                  }
-                ]
-              },
-              {
-                "import": true,
-                "name": "Standard Bearer",
-                "hidden": false,
-                "id": "f50f-ce9d-3c97-eddc",
-                "type": "selectionEntry",
-                "targetId": "d810-7476-b4b1-9ceb",
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "260f-d170-9a8c-7a61",
-                    "includeChildSelections": false
-                  }
-                ]
-              },
-              {
-                "import": true,
                 "name": "Medic",
                 "hidden": false,
                 "id": "96a3-79f6-775c-9a83",
                 "type": "selectionEntry",
                 "targetId": "103b-a653-a172-a9d0",
-                "sortIndex": 3,
+                "sortIndex": 1,
                 "constraints": [
                   {
                     "type": "max",
@@ -7397,12 +7355,32 @@
               },
               {
                 "import": true,
+                "name": "Astropath",
+                "hidden": false,
+                "id": "647e-574c-0517-945e",
+                "type": "selectionEntry",
+                "targetId": "00af-5852-b364-4f70",
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "edc5-7dd7-c6a9-f46c",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "import": true,
                 "name": "Bodyguard",
                 "hidden": false,
                 "id": "852e-de89-6033-e8d8",
                 "type": "selectionEntry",
                 "targetId": "1562-9776-8b13-1706",
-                "sortIndex": 4,
+                "sortIndex": 3,
                 "constraints": [
                   {
                     "type": "max",
@@ -7422,7 +7400,7 @@
                 "id": "c463-f1b3-2e2a-d4fd",
                 "type": "selectionEntry",
                 "targetId": "1562-9776-8b13-1706",
-                "sortIndex": 5,
+                "sortIndex": 4,
                 "constraints": [
                   {
                     "type": "max",
@@ -7437,12 +7415,52 @@
               },
               {
                 "import": true,
+                "name": "Standard Bearer",
+                "hidden": false,
+                "id": "f50f-ce9d-3c97-eddc",
+                "type": "selectionEntry",
+                "targetId": "d810-7476-b4b1-9ceb",
+                "sortIndex": 5,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "260f-d170-9a8c-7a61",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "import": true,
+                "name": "Master Of Ordnance",
+                "hidden": false,
+                "id": "0f35-efd4-0b68-60ff",
+                "type": "selectionEntry",
+                "targetId": "adb6-c32c-571f-2fd3",
+                "sortIndex": 6,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "3af0-4355-ba48-de3a",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "import": true,
                 "name": "Weapons Specialist",
                 "hidden": false,
                 "id": "3162-4a51-640b-e2bd",
                 "type": "selectionEntry",
                 "targetId": "aded-3409-ce99-fa58",
-                "sortIndex": 6,
+                "sortIndex": 7,
                 "constraints": [
                   {
                     "type": "max",
@@ -7462,7 +7480,7 @@
                 "id": "be2e-0ab5-d03c-99f3",
                 "type": "selectionEntry",
                 "targetId": "aded-3409-ce99-fa58",
-                "sortIndex": 7,
+                "sortIndex": 8,
                 "constraints": [
                   {
                     "type": "max",
@@ -7477,12 +7495,12 @@
               },
               {
                 "import": true,
-                "name": "Master Of Ordnance",
+                "name": "Master Vox Operator",
                 "hidden": false,
-                "id": "0f35-efd4-0b68-60ff",
+                "id": "f371-1f81-93d2-b089",
                 "type": "selectionEntry",
-                "targetId": "adb6-c32c-571f-2fd3",
-                "sortIndex": 8,
+                "targetId": "daf0-d00e-2621-5851",
+                "sortIndex": 9,
                 "constraints": [
                   {
                     "type": "max",
@@ -7490,7 +7508,7 @@
                     "field": "selections",
                     "scope": "parent",
                     "shared": true,
-                    "id": "3af0-4355-ba48-de3a",
+                    "id": "a2bc-ad57-9416-3edc",
                     "includeChildSelections": false
                   }
                 ]
@@ -7502,26 +7520,6 @@
                 "id": "9a35-4f2f-1914-0d17",
                 "type": "selectionEntry",
                 "targetId": "78c2-6b89-473c-6b80",
-                "sortIndex": 9,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "a8eb-d5ae-fef2-d363",
-                    "includeChildSelections": false
-                  }
-                ]
-              },
-              {
-                "import": true,
-                "name": "Astropath",
-                "hidden": false,
-                "id": "647e-574c-0517-945e",
-                "type": "selectionEntry",
-                "targetId": "00af-5852-b364-4f70",
                 "sortIndex": 10,
                 "constraints": [
                   {
@@ -7530,7 +7528,7 @@
                     "field": "selections",
                     "scope": "parent",
                     "shared": true,
-                    "id": "edc5-7dd7-c6a9-f46c",
+                    "id": "a8eb-d5ae-fef2-d363",
                     "includeChildSelections": false
                   }
                 ]
@@ -7649,7 +7647,7 @@
             ]
           }
         ],
-        "comment": "REGIMENT COMMANDER: root Leader controlled by the Regiment selector. Its matching Regiment Troop remains a real prerequisite; Regiment choice controls availability but does not satisfy the prerequisite. Command Squad Officers are complete nested Leader units and do not consume normal Leader Capacity."
+        "comment": "REGIMENT COMMANDER: root Leader controlled by the Regiment selector. Its matching Regiment Troop remains a real prerequisite; Regiment choice controls availability but does not satisfy the prerequisite. Command Squad Officers are complete nested Leader units and cost 0 leader points."
       },
       {
         "type": "unit",
@@ -7662,6 +7660,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 10
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -7676,12 +7679,6 @@
             "id": "ddac-48c8-b6c6-c50a",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "1006-76b9-fcb3-1157",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
           }
         ],
         "sortIndex": 3,
@@ -7816,52 +7813,12 @@
             "entryLinks": [
               {
                 "import": true,
-                "name": "Master Vox Operator",
-                "hidden": false,
-                "id": "fbb3-3010-73a6-b8d0",
-                "type": "selectionEntry",
-                "targetId": "daf0-d00e-2621-5851",
-                "sortIndex": 1,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "f6f0-22d7-6789-e7de",
-                    "includeChildSelections": false
-                  }
-                ]
-              },
-              {
-                "import": true,
-                "name": "Standard Bearer",
-                "hidden": false,
-                "id": "bb19-5bb6-b7f4-ca23",
-                "type": "selectionEntry",
-                "targetId": "d810-7476-b4b1-9ceb",
-                "sortIndex": 2,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "fef6-64b2-c4f4-09b3",
-                    "includeChildSelections": false
-                  }
-                ]
-              },
-              {
-                "import": true,
                 "name": "Medic",
                 "hidden": false,
                 "id": "b394-fbe4-cf15-1bbf",
                 "type": "selectionEntry",
                 "targetId": "103b-a653-a172-a9d0",
-                "sortIndex": 3,
+                "sortIndex": 1,
                 "constraints": [
                   {
                     "type": "max",
@@ -7876,12 +7833,32 @@
               },
               {
                 "import": true,
+                "name": "Astropath",
+                "hidden": false,
+                "id": "b2e9-2210-c5ec-6acd",
+                "type": "selectionEntry",
+                "targetId": "00af-5852-b364-4f70",
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "841e-b65f-4b57-728a",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "import": true,
                 "name": "Bodyguard",
                 "hidden": false,
                 "id": "8f12-4c19-a0d5-1178",
                 "type": "selectionEntry",
                 "targetId": "1562-9776-8b13-1706",
-                "sortIndex": 4,
+                "sortIndex": 3,
                 "constraints": [
                   {
                     "type": "max",
@@ -7901,7 +7878,7 @@
                 "id": "2a94-b14f-1d6a-7ca7",
                 "type": "selectionEntry",
                 "targetId": "1562-9776-8b13-1706",
-                "sortIndex": 5,
+                "sortIndex": 4,
                 "constraints": [
                   {
                     "type": "max",
@@ -7916,12 +7893,52 @@
               },
               {
                 "import": true,
+                "name": "Standard Bearer",
+                "hidden": false,
+                "id": "bb19-5bb6-b7f4-ca23",
+                "type": "selectionEntry",
+                "targetId": "d810-7476-b4b1-9ceb",
+                "sortIndex": 5,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "fef6-64b2-c4f4-09b3",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "import": true,
+                "name": "Master Of Ordnance",
+                "hidden": false,
+                "id": "7410-b848-a261-5ed7",
+                "type": "selectionEntry",
+                "targetId": "adb6-c32c-571f-2fd3",
+                "sortIndex": 6,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "6486-01bb-b1a7-d7af",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "import": true,
                 "name": "Weapons Specialist",
                 "hidden": false,
                 "id": "08e4-1e90-fdff-c9e6",
                 "type": "selectionEntry",
                 "targetId": "aded-3409-ce99-fa58",
-                "sortIndex": 6,
+                "sortIndex": 7,
                 "constraints": [
                   {
                     "type": "max",
@@ -7941,7 +7958,7 @@
                 "id": "c80a-3380-3381-e7bf",
                 "type": "selectionEntry",
                 "targetId": "aded-3409-ce99-fa58",
-                "sortIndex": 7,
+                "sortIndex": 8,
                 "constraints": [
                   {
                     "type": "max",
@@ -7956,12 +7973,12 @@
               },
               {
                 "import": true,
-                "name": "Master Of Ordnance",
+                "name": "Master Vox Operator",
                 "hidden": false,
-                "id": "7410-b848-a261-5ed7",
+                "id": "fbb3-3010-73a6-b8d0",
                 "type": "selectionEntry",
-                "targetId": "adb6-c32c-571f-2fd3",
-                "sortIndex": 8,
+                "targetId": "daf0-d00e-2621-5851",
+                "sortIndex": 9,
                 "constraints": [
                   {
                     "type": "max",
@@ -7969,7 +7986,7 @@
                     "field": "selections",
                     "scope": "parent",
                     "shared": true,
-                    "id": "6486-01bb-b1a7-d7af",
+                    "id": "f6f0-22d7-6789-e7de",
                     "includeChildSelections": false
                   }
                 ]
@@ -7981,26 +7998,6 @@
                 "id": "22cd-8af1-5dcb-8951",
                 "type": "selectionEntry",
                 "targetId": "78c2-6b89-473c-6b80",
-                "sortIndex": 9,
-                "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "0b4f-eecf-39fd-31e8",
-                    "includeChildSelections": false
-                  }
-                ]
-              },
-              {
-                "import": true,
-                "name": "Astropath",
-                "hidden": false,
-                "id": "b2e9-2210-c5ec-6acd",
-                "type": "selectionEntry",
-                "targetId": "00af-5852-b364-4f70",
                 "sortIndex": 10,
                 "constraints": [
                   {
@@ -8009,7 +8006,7 @@
                     "field": "selections",
                     "scope": "parent",
                     "shared": true,
-                    "id": "841e-b65f-4b57-728a",
+                    "id": "0b4f-eecf-39fd-31e8",
                     "includeChildSelections": false
                   }
                 ]
@@ -8128,7 +8125,7 @@
             ]
           }
         ],
-        "comment": "REGIMENT COMMANDER: root Leader controlled by the Regiment selector. Its matching Regiment Troop remains a real prerequisite; Regiment choice controls availability but does not satisfy the prerequisite. Command Squad Officers are complete nested Leader units and do not consume normal Leader Capacity."
+        "comment": "REGIMENT COMMANDER: root Leader controlled by the Regiment selector. Its matching Regiment Troop remains a real prerequisite; Regiment choice controls availability but does not satisfy the prerequisite. Command Squad Officers are complete nested Leader units and cost 0 leader points."
       },
       {
         "type": "unit",
@@ -8142,6 +8139,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 140
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -8162,12 +8164,6 @@
             "id": "f957-a824-a44e-f170",
             "primary": false,
             "name": "Rare"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "7f56-ff16-018a-fd4d",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
           }
         ],
         "selectionEntryGroups": [
@@ -8599,7 +8595,7 @@
             ]
           }
         ],
-        "comment": "TANK COMMANDER CURRENT STATE: complete Rare Leader / Vehicle loadout. Vanquisher Cannon exposes its mandatory Coaxial Weapon choice. Redundant turret, hull, and sponson slot labels are suppressed. Pintle Weapons is a top-level section between Loadout Options and Paid Wargear; one-item Paid Wargear options use direct checkbox-style selections."
+        "comment": "TANK COMMANDER CURRENT STATE: complete Rare Leader / Vehicle loadout. Vanquisher Cannon exposes its mandatory Coaxial Weapon choice. Redundant turret, hull, and sponson slot labels are suppressed. Pintle Weapons is a top-level section between Loadout Options and Paid Wargear; one-item Paid Wargear options use direct checkbox-style selections.\nLEADER POINTS: costs 1 LP on this canonical Astra source root. Manufactorum Imperium must mirror this intrinsic cost during its dedicated shared-library migration."
       },
       {
         "type": "unit",
@@ -8613,6 +8609,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 30
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -8627,12 +8628,6 @@
             "id": "53fd-2b6b-1d5c-042d",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "74ff-94da-e08e-101c",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
           }
         ],
         "selectionEntryGroups": [
@@ -8691,7 +8686,7 @@
             "noindex": false
           }
         ],
-        "comment": "ENGINSEER ENVOY CURRENT STATE: fixed Archeotech Pistol & Omnissian Axe loadout; counts toward Leader Capacity and cannot attach."
+        "comment": "ENGINSEER ENVOY CURRENT STATE: fixed Archeotech Pistol & Omnissian Axe loadout; costs 1 LP and cannot attach."
       },
       {
         "type": "unit",
@@ -8851,10 +8846,10 @@
             "noindex": false
           },
           {
-            "name": "Leader Capacity",
+            "name": "Leader Points",
             "id": "589d-03dd-dc38-133e",
             "hidden": false,
-            "description": "This unit does not count towards the leader capacity of your army list.",
+            "description": "This unit costs 0 leader points.",
             "noindex": false
           }
         ],
@@ -8897,7 +8892,7 @@
             ]
           }
         ],
-        "comment": "COMMISSAR CURRENT STATE: Rare, capacity-exempt Leader that must attach to a Troops unit. Uses constructive missing-attachment and Rare max-one errors; eligible attachment points are the three Regiment Troops."
+        "comment": "COMMISSAR CURRENT STATE: Rare, 0-LP Leader that must attach to a Troops unit. Uses constructive missing-attachment and Rare max-one errors; eligible attachment points are the three Regiment Troops."
       },
       {
         "type": "unit",
@@ -15035,6 +15030,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 20
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -15049,12 +15049,6 @@
             "id": "45e6-d9e3-2d18-58c4",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "7b80-e420-dca9-5aae",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
           }
         ],
         "selectionEntryGroups": [
@@ -15155,7 +15149,7 @@
             ]
           }
         ],
-        "comment": "PRIMARIS PSYKER CURRENT STATE: fixed Laspistol & Psyker Stave loadout. Counts toward Leader Capacity, must attach to a Troops unit, and uses constructive missing-attachment validation."
+        "comment": "PRIMARIS PSYKER CURRENT STATE: fixed Laspistol & Psyker Stave loadout. Costs 1 LP, must attach to a Troops unit, and uses constructive missing-attachment validation."
       },
       {
         "type": "unit",
@@ -15578,7 +15572,7 @@
       {
         "type": "upgrade",
         "import": true,
-        "name": "Patch Notes",
+        "name": "Updated: September 14th",
         "hidden": false,
         "id": "1b4b-7ad8-542d-2706",
         "sortIndex": 1,
@@ -15595,7 +15589,7 @@
             "name": "Patch Notes",
             "id": "d879-6ff2-dcac-f3b0",
             "hidden": false,
-            "description": "## Astra Militarum 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 12th)\n\n• Converted Hunter-Killer Missile, Smoke Launchers, Armour Piercing High Explosive Shells, Dozer Blade, Taurox Twin Autocannon, Gas Dispersion, Krak Grenade, and Frag Grenade options to checkbox-style selections.\n• Death Korps Combat Engineers: the three independent Frag Grenade checkboxes now use the same unnumbered Frag Grenade label.\n• Cadian, Death Korps, and Mordian Platoon Commanders: all Command Squad members now use direct checkbox-style selections while remaining linked unit entries.\n• Scout and Armoured Sentinels: the included model is now presented as Sentinel and the optional second model as an Additional Sentinel checkbox.\n• Death Korps Combat Engineers: Explosive Mines and Remote Mine now use direct checkbox-style Paid Wargear selections.\n• Catalogue maintenance: current implementation notes and historical comments consolidated for the live GS21 catalogue.",
+            "description": "## Astra Militarum 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 14th)\n\n• Leader Points: Cadian Platoon Commander, Death Korps Platoon Commander, Mordian Platoon Commander, Tank Commander, Enginseer Envoy, and Primaris Psyker cost 1 LP each; Commissar and the eight Command Squad support Leaders cost 0 LP.\n• Platoon Commanders: Command Squad entries are now ordered by name length, shortest first, for a cleaner presentation.\n• Catalogue maintenance: current implementation notes and historical comments consolidated for the live GS21 catalogue.\n• Death Korps Combat Engineers: Explosive Mines and Remote Mine now use direct checkbox-style Paid Wargear selections.\n• Scout and Armoured Sentinels: the included model is now presented as Sentinel and the optional second model as an Additional Sentinel checkbox.\n• Cadian, Death Korps, and Mordian Platoon Commanders: all Command Squad members now use direct checkbox-style selections while remaining linked unit entries.\n• Death Korps Combat Engineers: the three independent Frag Grenade checkboxes now use the same unnumbered Frag Grenade label.\n• Converted Hunter-Killer Missile, Smoke Launchers, Armour Piercing High Explosive Shells, Dozer Blade, Taurox Twin Autocannon, Gas Dispersion, Krak Grenade, and Frag Grenade options to checkbox-style selections.",
             "noindex": false
           }
         ],
@@ -15613,7 +15607,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "CURRENT STATE: automatically present Patch Notes Configuration for Astra Militarum 3.3.5 / GS21. Catalogue Bugfixes is a cumulative loaded-version fingerprint.\nREV37: September 12th maintenance adds Sentinel Additional Model checkbox presentation, direct Combat Engineer mine checkboxes, and current-state comment consolidation."
+        "comment": "REV39: renamed the export-visible update marker to Updated: September 14th; Catalogue Bugfixes is dated September 14th with newest entries first. Consolidated the migration-stage Leader Points notes into one final LP bullet, removed the six obsolete counted-Leader links, and reordered all three Platoon Commander Command Squad groups by visible entry-name length."
       }
     ],
     "sharedSelectionEntries": [
@@ -15653,14 +15647,14 @@
             "noindex": false
           },
           {
-            "name": "Leader Capacity",
+            "name": "Leader Points",
             "id": "2d1c-df8f-9338-8b69",
             "hidden": false,
-            "description": "This unit does not count towards the leader maximum of the army list.",
+            "description": "This unit costs 0 leader points.",
             "noindex": false
           }
         ],
-        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It does not consume normal Leader Capacity. Its per-host maximum is enforced by the Command Squad slot structure.",
+        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It costs 0 leader points. Its per-host maximum is enforced by the Command Squad slot structure.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -15761,14 +15755,14 @@
             "noindex": false
           },
           {
-            "name": "Leader Capacity",
+            "name": "Leader Points",
             "id": "8132-6d05-f782-7cea",
             "hidden": false,
-            "description": "This unit does not count towards the leader maximum of the army list.",
+            "description": "This unit costs 0 leader points.",
             "noindex": false
           }
         ],
-        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It does not consume normal Leader Capacity. Its per-host maximum is enforced by the Command Squad slot structure.",
+        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It costs 0 leader points. Its per-host maximum is enforced by the Command Squad slot structure.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -15853,14 +15847,14 @@
             "noindex": false
           },
           {
-            "name": "Leader Capacity",
+            "name": "Leader Points",
             "id": "b872-8f5e-5ad3-6a77",
             "hidden": false,
-            "description": "This unit does not count towards the leader maximum of the army list.",
+            "description": "This unit costs 0 leader points.",
             "noindex": false
           }
         ],
-        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It does not consume normal Leader Capacity. Its per-host maximum is enforced by the Command Squad slot structure.",
+        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It costs 0 leader points. Its per-host maximum is enforced by the Command Squad slot structure.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -15961,14 +15955,14 @@
             "noindex": false
           },
           {
-            "name": "Leader Capacity",
+            "name": "Leader Points",
             "id": "962c-3a50-3d9c-575c",
             "hidden": false,
-            "description": "This unit does not count towards the leader maximum of the army list.",
+            "description": "This unit costs 0 leader points.",
             "noindex": false
           }
         ],
-        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It does not consume normal Leader Capacity. Its per-host maximum is enforced by the Command Squad slot structure.",
+        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It costs 0 leader points. Its per-host maximum is enforced by the Command Squad slot structure.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -16085,14 +16079,14 @@
             "noindex": false
           },
           {
-            "name": "Leader Capacity",
+            "name": "Leader Points",
             "id": "319a-175a-9e61-d862",
             "hidden": false,
-            "description": "This unit does not count towards the leader maximum of the army list.",
+            "description": "This unit costs 0 leader points.",
             "noindex": false
           }
         ],
-        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It does not consume normal Leader Capacity. Its per-host maximum is enforced by the Command Squad slot structure.",
+        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It costs 0 leader points. Its per-host maximum is enforced by the Command Squad slot structure.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -16209,14 +16203,14 @@
             "noindex": false
           },
           {
-            "name": "Leader Capacity",
+            "name": "Leader Points",
             "id": "0b3f-140e-3dc5-05a9",
             "hidden": false,
-            "description": "This unit does not count towards the leader maximum of the army list.",
+            "description": "This unit costs 0 leader points.",
             "noindex": false
           }
         ],
-        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It does not consume normal Leader Capacity. Its per-host maximum is enforced by the Command Squad slot structure.",
+        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It costs 0 leader points. Its per-host maximum is enforced by the Command Squad slot structure.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -16301,14 +16295,14 @@
             "noindex": false
           },
           {
-            "name": "Leader Capacity",
+            "name": "Leader Points",
             "id": "4486-9e4b-ad08-62ba",
             "hidden": false,
-            "description": "This unit does not count towards the leader maximum of the army list.",
+            "description": "This unit costs 0 leader points.",
             "noindex": false
           }
         ],
-        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It does not consume normal Leader Capacity. Its per-host maximum is enforced by the Command Squad slot structure.",
+        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It costs 0 leader points. Its per-host maximum is enforced by the Command Squad slot structure.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -16393,14 +16387,14 @@
             "noindex": false
           },
           {
-            "name": "Leader Capacity",
+            "name": "Leader Points",
             "id": "c6ea-f7c0-c96f-814e",
             "hidden": false,
-            "description": "This unit does not count towards the leader maximum of the army list.",
+            "description": "This unit costs 0 leader points.",
             "noindex": false
           }
         ],
-        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It does not consume normal Leader Capacity. Its per-host maximum is enforced by the Command Squad slot structure.",
+        "comment": "COMMAND SQUAD OFFICER: compiled as a complete nested Leader unit beneath a Platoon Commander. It costs 0 leader points. Its per-host maximum is enforced by the Command Squad slot structure.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -16450,7 +16444,7 @@
         ]
       }
     ],
-    "comment": "CURRENT STATE — ASTRA MILITARUM 3.3.5 / GS21\nComplete playable catalogue using an explicit Regiment selector as a listbuilder presentation abstraction. Regiments of Cadia is the default. Regiment selection controls normal availability; matching Platoon Commander Troop prerequisites remain separately enforced. Cadian Shock Troops, Death Korps Of Krieg, and Mordian Iron Guard are independent Troop Additional Copy Cost families. Non-Rare Other units use the normal Other copy-cost ledger.\nCommand Squad members are reusable complete nested Leader units beneath Platoon Commanders. They do not consume normal Leader Capacity and are selected through direct linked-unit checkboxes. Commissar and Primaris Psyker use mandatory Troops attachment validation. Tank Commander and Commissar are Rare with constructive max-one errors. Kasrkins and Death Korps Grenadiers use permissive ratio validation instead of New Recruit stock maxima; Death Korps Combat Engineers use constructive prerequisite validation.\nSentinel units are 1-2 models. The included model is presented as Sentinel and the optional second model as Additional Sentinel under the retained Additional Model wrapper; the max-one constraint lives on the optional model entry so New Recruit presents it as a checkbox. Smoke Launchers scale by selected model count.\nPortable Astra Militarum vehicle trees in this catalogue are the canonical source for the Manufactorum Imperium shared library. Synchronize verified source changes into the library without changing source IDs or Manufactorum-specific presentation semantics.\n\nAUTHORING / RUNTIME NOTES\nThe army-rules PDF is authoritative for player rules and source-derived rules[].description text. The listbuilder represents meaningful final-state choices rather than every procedural replacement step.\nRegiment-gated units use selected-safe hiding plus constructive wrong-Regiment validation. Dedicated specialist roles may omit an ordinary fallback where declining the specialist is not a meaningful list-building decision.\nAdditional Copy Costs are per datasheet family: Troops allow 4 / 6 / 8 normal copies at 800 / 1200 / 1600 Points; Other allows 1 / 2 / 3. Each further identical copy costs +20 Points.\nCommand Squad member entryLinks remain type=unit because they are complete nested units. Duplicate Bodyguard and Weapons Specialist slots are independent repeated checkboxes.\nSentinel per-model Hunter-Killer Missiles remain model-owned. Explosive Mines, Remote Mine, grenade upgrades, and other independent binary wargear choices use direct max-one checkboxes.\n\nHISTORICAL / REVISION NOTES\nREV1-9 — Established Regiment abstraction, Regiment Troops, Platoon Commanders, Command Squad pool, compact Troop loadouts, and specialist presentation.\nREV10-18 — Added remaining Leaders, specialists, vehicles, artillery, Krieg units, completion-pass units, Regiment safe-hide behavior, and complete Additional Copy Cost coverage.\nREV19-20 — Mature presentation polish; standardized Loadout Options, model headers, atomic package naming, vehicle presentation, and synchronized the then-current Astra vehicle presentation into Manufactorum.\nREV21-22 — Adopted unified Troop / Other Additional Copy Costs and constructive dependency / ratio validation.\nREV23-31 — Promoted Pintle Weapons, cleaned vehicle and specialist presentation, rebuilt Combat Engineer presentation, standardized role names, corrected Sergeant / Watchmaster loadouts, and suppressed redundant Sidearm / Melee headers.\nREV32-35 — Applied Astra Militarum 3.3.4 Combat Engineer changes, standardized Patch Notes, then synchronized the baseline to Astra Militarum 3.3.5 / GS21.\nREV36 — Flattened independent checkbox-style wargear and Command Squad member entryLinks while preserving stable IDs and semantics.\nREV37 — Converted Scout / Armoured Sentinel optional second models to Additional Sentinel checkboxes, flattened Explosive Mines and Remote Mine, and consolidated live implementation comments.",
+    "comment": "CURRENT STATE — ASTRA MILITARUM 3.3.5 / GS24\nComplete playable catalogue using an explicit Regiment selector as a listbuilder presentation abstraction. Regiments of Cadia is the default. Regiment selection controls normal availability; matching Platoon Commander Troop prerequisites remain separately enforced. Cadian Shock Troops, Death Korps Of Krieg, and Mordian Iron Guard are independent Troop Additional Copy Cost families. Non-Rare Other units use the normal Other copy-cost ledger.\nCommand Squad members are reusable complete nested Leader units beneath Platoon Commanders. They cost 0 leader points and are selected through direct linked-unit checkboxes. Commissar also costs 0 leader points; Commissar and Primaris Psyker retain mandatory Troops attachment validation. Tank Commander and Commissar are Rare with constructive max-one errors. Kasrkins and Death Korps Grenadiers use permissive ratio validation instead of New Recruit stock maxima; Death Korps Combat Engineers use constructive prerequisite validation.\nSentinel units are 1-2 models. The included model is presented as Sentinel and the optional second model as Additional Sentinel under the retained Additional Model wrapper; the max-one constraint lives on the optional model entry so New Recruit presents it as a checkbox. Smoke Launchers scale by selected model count.\nPortable Astra Militarum vehicle trees in this catalogue are the canonical source for the Manufactorum Imperium shared library. Synchronize verified source changes into the library without changing source IDs or Manufactorum-specific presentation semantics.\n\nAUTHORING / RUNTIME NOTES\nThe army-rules PDF is authoritative for player rules and source-derived rules[].description text. The listbuilder represents meaningful final-state choices rather than every procedural replacement step.\nRegiment-gated units use selected-safe hiding plus constructive wrong-Regiment validation. Dedicated specialist roles may omit an ordinary fallback where declining the specialist is not a meaningful list-building decision.\nAdditional Copy Costs are per datasheet family: Troops allow 4 / 6 / 8 normal copies at 800 / 1200 / 1600 Points; Other allows 1 / 2 / 3. Each further identical copy costs +20 Points.\nCommand Squad member entryLinks remain type=unit because they are complete nested units. Duplicate Bodyguard and Weapons Specialist slots are independent repeated checkboxes.\nSentinel per-model Hunter-Killer Missiles remain model-owned. Explosive Mines, Remote Mine, grenade upgrades, and other independent binary wargear choices use direct max-one checkboxes.\n\nHISTORICAL / REVISION NOTES\nREV1-9 — Established Regiment abstraction, Regiment Troops, Platoon Commanders, Command Squad pool, compact Troop loadouts, and specialist presentation.\nREV10-18 — Added remaining Leaders, specialists, vehicles, artillery, Krieg units, completion-pass units, Regiment safe-hide behavior, and complete Additional Copy Cost coverage.\nREV19-20 — Mature presentation polish; standardized Loadout Options, model headers, atomic package naming, vehicle presentation, and synchronized the then-current Astra vehicle presentation into Manufactorum.\nREV21-22 — Adopted unified Troop / Other Additional Copy Costs and constructive dependency / ratio validation.\nREV23-31 — Promoted Pintle Weapons, cleaned vehicle and specialist presentation, rebuilt Combat Engineer presentation, standardized role names, corrected Sergeant / Watchmaster loadouts, and suppressed redundant Sidearm / Melee headers.\nREV32-35 — Applied Astra Militarum 3.3.4 Combat Engineer changes, standardized Patch Notes, then synchronized the baseline to Astra Militarum 3.3.5 / GS21.\nREV36 — Flattened independent checkbox-style wargear and Command Squad member entryLinks while preserving stable IDs and semantics.\nREV37 — Converted Scout / Armoured Sentinel optional second models to Additional Sentinel checkboxes, flattened Explosive Mines and Remote Mine, and consolidated live implementation comments.\n\nREV38 — LEADER POINTS MIGRATION\nRetargeted the catalogue to Game System revision 24. Cadian Platoon Commander, Death Korps Platoon Commander, Mordian Platoon Commander, Tank Commander, Enginseer Envoy, and Primaris Psyker now each cost 1 LP, exactly matching the six existing Counts Toward Leader Maximum roots. Commissar, Master Vox Operator, Standard Bearer, Medic, Bodyguard, Weapons Specialist, Master Of Ordnance, Officer Of The Fleet, and Astropath remain uncharged; their existing Leader Capacity rule objects were updated in place to the current source wording \"This unit costs 0 leader points.\" No explicit 0 LP cost objects were added. The legacy count tags remain unchanged for parallel migration validation. Tank Commander is one of the canonical portable Astra vehicle roots; its new intrinsic LP cost will be synchronized into Manufactorum Imperium during the dedicated shared-library pass. Regiment selection, nested Command Squad structure, attachment limits, Rare validation, proportional restrictions, Additional Copy Costs, points, loadouts, Sentinel model-count behavior, and all unrelated mechanics are unchanged.\n\nREV39 — LEADER POINTS CLEANUP + COMMAND SQUAD PRESENTATION\nRuntime validation passed for a native paid Leader, an authoritative 0-LP Leader, and Tank Commander. The six legacy Counts Toward Leader Maximum links matched the six native 1-LP roots exactly and were removed. Commissar and the eight Command Squad support Leaders remain source-backed 0-LP Leaders with no LP cost objects. The Command Squad entryLinks under Cadian, Death Korps, and Mordian Platoon Commanders are now ordered shortest-name-first with alphabetical tie-breaking and duplicate entries kept adjacent; this changes presentation only. Patch Notes presentation was updated to the September 14th cleanup convention. No unit points, loadouts, attachment legality, quotas, Additional Copy Costs, Sentinel logic, mine logic, Manufactorum mirroring, or other faction mechanics changed.",
     "categoryEntries": [
       {
         "name": "May Attach To: Commissar",

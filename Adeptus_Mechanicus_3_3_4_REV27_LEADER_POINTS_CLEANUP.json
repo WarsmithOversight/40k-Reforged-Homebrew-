@@ -4,8 +4,8 @@
     "id": "203b-0b03-c0cd-5fe9",
     "name": "Adeptus Mechanicus 3.3.4",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 21,
-    "revision": 25,
+    "gameSystemRevision": 24,
+    "revision": 27,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -9296,7 +9296,7 @@
       {
         "type": "upgrade",
         "import": true,
-        "name": "Patch Notes",
+        "name": "Updated: September 14th",
         "hidden": false,
         "id": "6859-121d-96fb-2ea6",
         "sortIndex": 2,
@@ -9313,7 +9313,7 @@
             "name": "Patch Notes",
             "id": "ca7f-4648-d56c-1fa4",
             "hidden": false,
-            "description": "## Adeptus Mechanicus 3.3.4\n\n• Skitarii Marshal is now a Countless Leader and no longer counts toward Leader Capacity.\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 12th)\n\n• Cleaned up redundant loadout headers on Macrocarid Explorator, Thanatar Class Siege-Automata, Skorpius Disintegrator, Sulphurhounds, and Ursarax.\n• Graviton Ram and Mindscrambler Grenade now use checkbox-style optional selections.\n• Onager Dunecrawler: Neutron Laser & Coaxial Cognis Heavy Stubber is now presented as one atomic loadout option.\n• Sicarian Infiltrators and Sicarian Ruststalkers: removed accidental quantity spinners from atomic multi-model weapon choices.\n• Ursarax loadouts are now atomic Lightning Claws & Volkite Incinerator / Power Fists & Volkite Incinerator choices for each model.\n• Audited Leader loadout presentation and moved melee weapon choices before pistols and ranged weapons where applicable.\n• Kataphron Breachers, Kataphron Destroyers, and Vorax-Class Battle-Automata: optional third models now use checkbox-style Additional Model selections.\n• Skitarii Rangers: restored the Galvanic Rifle loadout for the Skitarii Ranger Alpha, by request of SgtXRecon.\n• Servitors: rebuilt as weapon-specific model checkboxes; select 1-4 different Servitors at 10 Points each, with each selected model retaining its melee weapon choice.\n• Skitarii Ranger Alpha: suppressed the redundant Melee Weapon and Sidearm headers beneath Alpha Melee Weapon & Pistol.",
+            "description": "## Adeptus Mechanicus 3.3.4\n\n• Skitarii Marshal costs 0 leader points.\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 14th)\n\n• Leader Points: Dominus, Macrotek Enginseer, Manipulus, Enginseer, Datasmith, and Techno-Archeologist cost 1 LP each; Skitarii Marshal costs 0 LP, and the Manufactorum Tank Commander inherits its 1 LP cost from the shared library.\n• Skitarii Ranger Alpha: suppressed the redundant Melee Weapon and Sidearm headers beneath Alpha Melee Weapon & Pistol.\n• Servitors: rebuilt as weapon-specific model checkboxes; select 1-4 different Servitors at 10 Points each, with each selected model retaining its melee weapon choice.\n• Skitarii Rangers: restored the Galvanic Rifle loadout for the Skitarii Ranger Alpha, by request of SgtXRecon.\n• Kataphron Breachers, Kataphron Destroyers, and Vorax-Class Battle-Automata: optional third models now use checkbox-style Additional Model selections.\n• Audited Leader loadout presentation and moved melee weapon choices before pistols and ranged weapons where applicable.\n• Ursarax loadouts are now atomic Lightning Claws & Volkite Incinerator / Power Fists & Volkite Incinerator choices for each model.\n• Sicarian Infiltrators and Sicarian Ruststalkers: removed accidental quantity spinners from atomic multi-model weapon choices.\n• Onager Dunecrawler: Neutron Laser & Coaxial Cognis Heavy Stubber is now presented as one atomic loadout option.\n• Graviton Ram and Mindscrambler Grenade now use checkbox-style optional selections.\n• Cleaned up redundant loadout headers on Macrocarid Explorator, Thanatar Class Siege-Automata, Skorpius Disintegrator, Sulphurhounds, and Ursarax.",
             "noindex": false
           }
         ],
@@ -9331,7 +9331,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV21: Patch Notes updated to Adeptus Mechanicus 3.3.4; Skitarii Marshal became a Countless Leader.\nREV22: Catalogue Bugfixes added the UI cleanup pass covering redundant headers, direct optional checkboxes, Onager atomic Neutron package, Sicarian spinner removal, Ursarax atomic loadouts, and melee-first Leader presentation.\nREV23: appended checkbox-style Additional Model cleanup for Kataphron Breachers, Kataphron Destroyers, and Vorax-Class Battle-Automata.\nREV24: updated Catalogue Bugfixes to September 12th; restored the Skitarii Ranger Alpha Galvanic Rifle final state by request of SgtXRecon and rebuilt Servitors as weapon-specific model checkboxes with 1-4 permissive-corrective model-count validation.\nREV25: suppressed the redundant Melee Weapon and Sidearm headers beneath the Skitarii Ranger Alpha melee-and-pistol branch; IDs, defaults, choices, and legality are unchanged."
+        "comment": "REV27: renamed the export-visible update marker to Updated: September 14th; Catalogue Bugfixes is dated September 14th with newest entries first. The temporary migration-stage LP/compatibility bullets were consolidated into one final Leader Points bullet. The six obsolete native counted-Leader category links were removed after runtime validation."
       },
       {
         "type": "unit",
@@ -9345,6 +9345,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 80
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -9365,12 +9370,6 @@
             "id": "0b06-755f-104b-3946",
             "primary": false,
             "name": "Rare"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "83d8-e1f8-0220-4710",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
           }
         ],
         "modifiers": [
@@ -9577,6 +9576,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 60
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -9597,12 +9601,6 @@
             "id": "b7f2-52c0-8c75-71f8",
             "primary": false,
             "name": "Rare"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "ac1c-a62a-75d8-26ff",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
           }
         ],
         "modifiers": [
@@ -9755,6 +9753,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 40
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -9769,12 +9772,6 @@
             "id": "e254-b87a-f640-b778",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "625a-8203-887d-e976",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
           }
         ],
         "associations": [
@@ -9915,6 +9912,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 30
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -9929,12 +9931,6 @@
             "id": "e216-a948-2321-1ee0",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "88d5-3cf3-4d5f-c884",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
           }
         ],
         "associations": [
@@ -10066,6 +10062,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 20
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -10080,12 +10081,6 @@
             "id": "78e4-c534-6201-a6cd",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "9854-dbbe-8031-9326",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
           }
         ],
         "associations": [
@@ -10217,6 +10212,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 20
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -10231,12 +10231,6 @@
             "id": "3ea7-a891-61fc-b0be",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "83d4-0f1b-fee2-4da2",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
           }
         ],
         "associations": [
@@ -10369,6 +10363,13 @@
             "hidden": false,
             "description": "This unit must attach to either:\n● SKITARII RANGERS\n● SKITARII VANGUARDS",
             "noindex": false
+          },
+          {
+            "name": "Leader Points",
+            "id": "1d1b-66e0-dcef-4453",
+            "hidden": false,
+            "description": "This unit costs 0 leader points.",
+            "noindex": false
           }
         ],
         "modifiers": [
@@ -10483,7 +10484,7 @@
             ]
           }
         ],
-        "comment": "REV21 / ADEPTUS MECHANICUS 3.3.4: Skitarii Marshal is now a Countless Leader. Under GS21 it remains in the visible Leader presentation category but no longer carries Counts Toward Leader Maximum, so it does not consume the army-wide Leader Capacity allowance. Attachment and all other unit mechanics are unchanged."
+        "comment": "ADEPTUS MECHANICUS 3.3.4 / GS24: Skitarii Marshal is a visible Leader with the source rule \"This unit costs 0 leader points.\" It therefore has no LP cost object. Its mandatory Skitarii Rangers / Skitarii Vanguards attachment and all other mechanics remain unchanged."
       },
       {
         "type": "unit",
@@ -10570,7 +10571,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "CURRENT STATE. Servitors are displayed in the Leader section to match the army-rules presentation, while remaining semantic Other / Infantry, using normal Other Additional Copy Costs, and consuming no Leader Capacity. The unit root costs 0 Points; its 1-4 models are selected directly as ten mutually unique weapon-named Servitor checkboxes at 10 Points each. Because each ranged/tool weapon exists as exactly one model option, the source requirement that every Servitor use a different ranged/tool weapon is enforced structurally rather than through cross-hiding. Every selected Servitor then chooses Arc Claw, Taser Goad, or Servo Claw, defaulting to Arc Claw. Unit-level constructive validation requires at least one selected Servitor model and flags five or more with an instruction to remove one or more models. Exactly one eligible Dominus, Macrotek Enginseer, Manipulus, Enginseer, Datasmith, or Techno-Archeologist must attach to the unit; this reverse attachment remains self-scope association validation.",
+        "comment": "CURRENT STATE. Servitors are displayed in the Leader section to match the army-rules presentation, while remaining semantic Other / Infantry, using normal Other Additional Copy Costs, and carrying no Leader Points cost. The unit root costs 0 Points; its 1-4 models are selected directly as ten mutually unique weapon-named Servitor checkboxes at 10 Points each. Because each ranged/tool weapon exists as exactly one model option, the source requirement that every Servitor use a different ranged/tool weapon is enforced structurally rather than through cross-hiding. Every selected Servitor then chooses Arc Claw, Taser Goad, or Servo Claw, defaulting to Arc Claw. Unit-level constructive validation requires at least one selected Servitor model and flags five or more with an instruction to remove one or more models. Exactly one eligible Dominus, Macrotek Enginseer, Manipulus, Enginseer, Datasmith, or Techno-Archeologist must attach to the unit; this reverse attachment remains self-scope association validation.",
         "rules": [
           {
             "name": "Attachment Requirement",
@@ -16971,7 +16972,7 @@
         "hidden": true
       }
     ],
-    "comment": "CURRENT STATE — ADEPTUS MECHANICUS 3.3.4 / GS21\nThe native catalogue is fully implemented and uses current listbuilder presentation conventions. Skitarii Marshal is a visible Countless Leader: it retains mandatory Ranger/Vanguard attachment but does not carry Counts Toward Leader Maximum. Servitors are shown in the Leader section to match the PDF while remaining semantic Other / Infantry, using reverse attached-by validation, normal Other copy accounting, and no Leader Capacity. Skitarii Rangers, Skitarii Vanguards, Kataphron Breachers, and Kataphron Destroyers are the four Troop copy families. Native non-Rare Other units and eligible Manufactorum imports use the normal Other 1 / 2 / 3 Additional Copy Cost system. Manufactorum Imperium provides independent, fully functional Astra Militarum Vehicles and Space Marines Vehicles switches with selected-safe hiding. Standard optional third models on Breachers, Destroyers and Vorax use checkbox-style model selections.\n\nAUTHORING / RUNTIME NOTES\nSource-derived rules[].description text mirrors the authoritative PDF and is not prose-cleanup territory. The listbuilder represents final player decisions rather than every procedural replacement step. The Skitarii Ranger Alpha therefore normally defaults directly to Alpha Melee Weapon & Pistol; REV24 additionally exposes the legal Galvanic Rifle final state because a player specifically needed that retained-rifle configuration. This option carries the internal RECON PATTERN note for SgtXRecon. Servitors use weapon identity as model identity: ten unique 10-Point model checkboxes structurally enforce the one-of-each ranged/tool restriction, while each selected model independently chooses Arc Claw, Taser Goad or Servo Claw. The Servitors root is 0 Points and unit-level constructive validation enforces 1-4 selected models. Servitor attachment remains a self-scope association check and should not be replaced with a roster-level proxy. Sicarian Infiltrators and Ruststalkers deliberately use literal 2x / 3x / 4x atomic labels without quantity payloads because quantity entryLinks produced New Recruit spinners; unusual per-model mixtures remain PDF-only. Onager Dunecrawler's Neutron Laser & Coaxial Cognis Heavy Stubber is intentionally one atomic selection. Manufactorum is a consumer relationship: the library owns imported unit trees, while this catalogue owns switches, selected-safe availability and local copy-cost arithmetic. Do not locally rewrite imported payloads to chase upstream changes; synchronize the library separately from verified sources. The ten old Servitor weapon semantic category IDs are retained as inert internal shells after the REV24 model-identity rewrite.\n\nHISTORICAL / REVISION HISTORY\nFOUNDATION / REV1-5: imported native semantic structure, established reverse-attached Servitors, activated Astra Militarum Manufactorum support, then completed native loadouts. REV6-7: broad presentation cleanup, hidden redundant physical-slot labels, and standardized atomic packages. REV8 / GS17: introduced unified Troop and Other Additional Copy Cost ledgers. REV9 / GS18: activated ten chapter-independent Space Marines Manufactorum vehicle families; Baal Predator deliberately remained unavailable. REV10-11: temporary export experiments, later superseded. REV12-13: export and Sicarian cleanup, Onager semantic experiments, Ironstrider naming cleanup, and final suppression of redundant Servitor choice headers. REV14 / GS20: adopted short-form Troop copy rules and further presentation cleanup. REV15: Raiders became atomic final-state packages. REV16-17: Vorax and then all standard AdMech Additional Model structures were standardized. REV18: final presentation cleanup including Thallax atomic package and Weapons Specialist naming. REV19: standard Patch Notes introduced. REV20: Game System 21 compatibility sync. REV21: Adeptus Mechanicus 3.3.4; Skitarii Marshal became Countless and stopped consuming Leader Capacity. REV22: major UI cleanup; optional upgrades became direct checkboxes where appropriate, Onager Neutron package became fully atomic, Sicarian quantity payloads were removed to eliminate spinners, Ursarax became atomic per-model loadouts, and Leader presentation was reordered melee-first. REV23: Breacher 3, Destroyer 3 and Vorax 3 Additional Model selections converted to checkbox-style model entries. REV24: Skitarii Ranger Alpha gained the legal Galvanic Rifle final state by request of SgtXRecon; Servitors were rebuilt from positional model slots into ten weapon-named model checkboxes with direct 1-4 corrective validation; current-state comments were consolidated for GS21. REV25: suppressed the redundant Melee Weapon and Sidearm headers beneath Alpha Melee Weapon & Pistol on the Skitarii Ranger Alpha; stable group IDs, defaults, and all loadout legality remain unchanged.",
+    "comment": "CURRENT STATE — ADEPTUS MECHANICUS 3.3.4 / GS24\nThe native catalogue is fully implemented and uses current listbuilder presentation conventions. Skitarii Marshal is a visible 0-LP Leader: it retains mandatory Ranger/Vanguard attachment, carries no LP cost object, and its source rule states \"This unit costs 0 leader points.\" Servitors are shown in the Leader section to match the PDF while remaining semantic Other / Infantry, using reverse attached-by validation, normal Other copy accounting, and no Leader Points cost. Skitarii Rangers, Skitarii Vanguards, Kataphron Breachers, and Kataphron Destroyers are the four Troop copy families. Native non-Rare Other units and eligible Manufactorum imports use the normal Other 1 / 2 / 3 Additional Copy Cost system. Manufactorum Imperium provides independent, fully functional Astra Militarum Vehicles and Space Marines Vehicles switches with selected-safe hiding. Standard optional third models on Breachers, Destroyers and Vorax use checkbox-style model selections.\n\nAUTHORING / RUNTIME NOTES\nSource-derived rules[].description text mirrors the authoritative PDF and is not prose-cleanup territory. The listbuilder represents final player decisions rather than every procedural replacement step. The Skitarii Ranger Alpha therefore normally defaults directly to Alpha Melee Weapon & Pistol; REV24 additionally exposes the legal Galvanic Rifle final state because a player specifically needed that retained-rifle configuration. This option carries the internal RECON PATTERN note for SgtXRecon. Servitors use weapon identity as model identity: ten unique 10-Point model checkboxes structurally enforce the one-of-each ranged/tool restriction, while each selected model independently chooses Arc Claw, Taser Goad or Servo Claw. The Servitors root is 0 Points and unit-level constructive validation enforces 1-4 selected models. Servitor attachment remains a self-scope association check and should not be replaced with a roster-level proxy. Sicarian Infiltrators and Ruststalkers deliberately use literal 2x / 3x / 4x atomic labels without quantity payloads because quantity entryLinks produced New Recruit spinners; unusual per-model mixtures remain PDF-only. Onager Dunecrawler's Neutron Laser & Coaxial Cognis Heavy Stubber is intentionally one atomic selection. Manufactorum is a consumer relationship: the library owns imported unit trees, while this catalogue owns switches, selected-safe availability and local copy-cost arithmetic. Do not locally rewrite imported payloads to chase upstream changes; synchronize the library separately from verified sources. The ten old Servitor weapon semantic category IDs are retained as inert internal shells after the REV24 model-identity rewrite.\n\nHISTORICAL / REVISION HISTORY\nFOUNDATION / REV1-5: imported native semantic structure, established reverse-attached Servitors, activated Astra Militarum Manufactorum support, then completed native loadouts. REV6-7: broad presentation cleanup, hidden redundant physical-slot labels, and standardized atomic packages. REV8 / GS17: introduced unified Troop and Other Additional Copy Cost ledgers. REV9 / GS18: activated ten chapter-independent Space Marines Manufactorum vehicle families; Baal Predator deliberately remained unavailable. REV10-11: temporary export experiments, later superseded. REV12-13: export and Sicarian cleanup, Onager semantic experiments, Ironstrider naming cleanup, and final suppression of redundant Servitor choice headers. REV14 / GS20: adopted short-form Troop copy rules and further presentation cleanup. REV15: Raiders became atomic final-state packages. REV16-17: Vorax and then all standard AdMech Additional Model structures were standardized. REV18: final presentation cleanup including Thallax atomic package and Weapons Specialist naming. REV19: standard Patch Notes introduced. REV20: Game System 21 compatibility sync. REV21: Adeptus Mechanicus 3.3.4; Skitarii Marshal became Countless and stopped consuming Leader Capacity. REV22: major UI cleanup; optional upgrades became direct checkboxes where appropriate, Onager Neutron package became fully atomic, Sicarian quantity payloads were removed to eliminate spinners, Ursarax became atomic per-model loadouts, and Leader presentation was reordered melee-first. REV23: Breacher 3, Destroyer 3 and Vorax 3 Additional Model selections converted to checkbox-style model entries. REV24: Skitarii Ranger Alpha gained the legal Galvanic Rifle final state by request of SgtXRecon; Servitors were rebuilt from positional model slots into ten weapon-named model checkboxes with direct 1-4 corrective validation; current-state comments were consolidated for GS21. REV25: suppressed the redundant Melee Weapon and Sidearm headers beneath Alpha Melee Weapon & Pistol on the Skitarii Ranger Alpha; stable group IDs, defaults, and all loadout legality remain unchanged.\n\nREV26 — LEADER POINTS MIGRATION\nRetargeted the catalogue to Game System revision 24. Dominus, Macrotek Enginseer, Manipulus, Enginseer, Datasmith, and Techno-Archeologist now each cost 1 LP, exactly matching the six existing Counts Toward Leader Maximum roots. Skitarii Marshal remains uncharged because Adeptus Mechanicus 3.3.4 explicitly states \"This unit costs 0 leader points.\" A visible Leader Points rule with that exact wording was added to the existing Marshal root; no explicit 0 LP cost object was added. Servitors remain presentation-only under Leader while semantically Other / Infantry and receive no LP mechanics. The legacy counted-Leader tags remain unchanged for parallel migration validation. Manufactorum Imperium remains a pure consumer relationship in this catalogue: imported Astra Militarum and Space Marine vehicle entryLinks receive no local LP costs. Tank Commander inherits its intrinsic 1 LP cost from the shared Manufactorum library exactly once. Attachments, Rare validation, Servitor reverse-attachment/model-identity logic, Troop/Other Additional Copy Costs, source switches, selected-safe hiding, points, loadouts, Alpha final-state presentation, and all unrelated mechanics are unchanged.\n\nREV27 — LEADER POINTS CLEANUP\nRuntime validation passed for a native 1-LP Leader, the 0-LP Skitarii Marshal, and the imported Manufactorum Tank Commander. The six legacy Counts Toward Leader Maximum links matched the six native 1-LP roots exactly and were removed. Skitarii Marshal remains a source-backed 0-LP Leader with no LP cost object. Servitors remain presentation-only under Leader while semantically Other / Infantry and receive no LP mechanics. Manufactorum imports remain locally uncharged; Tank Commander inherits 1 LP from the shared library. Patch Notes presentation was updated to the September 14th cleanup convention. No attachments, source switches, selected-safe gating, Additional Copy Costs, points, loadouts, Servitor logic, or other faction mechanics changed.",
     "catalogueLinks": [
       {
         "type": "catalogue",

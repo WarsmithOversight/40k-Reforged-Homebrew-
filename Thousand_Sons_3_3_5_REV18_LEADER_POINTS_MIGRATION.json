@@ -4,8 +4,8 @@
     "id": "032d-4ed1-d1e6-09c7",
     "name": "Thousand Sons 3.3.5",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 21,
-    "revision": 17,
+    "gameSystemRevision": 24,
+    "revision": 18,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -6632,7 +6632,7 @@
             "name": "Patch Notes",
             "id": "9f7a-1cb5-63e1-7958",
             "hidden": false,
-            "description": "## Thousand Sons 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 13th)\n\n• Cleaned up presentation of Loadout Options menu for Ahzek Ahriman and Sekhetar Robots.\n• Rubric Marines: Icon of Flame now uses a checkbox-style Paid Wargear selection.\n• Scarab Occult Terminators: Hellfyre Missile Rack now uses a checkbox-style Paid Wargear selection.\n• Mutalith Vortex Beast: Mutating Horrors now uses a checkbox-style Unit Upgrade selection.\n• Great Traitors’ Arsenal is now fully supported through Configuration, exposing the reusable Chaos Space Marines unit roster when Included.\n• Great Traitors’ Arsenal units now participate in the correct Troop and Other Additional Copy Costs accounting.\n• Catalogue maintenance: current implementation notes and historical comments consolidated for the live GS21 catalogue.",
+            "description": "## Thousand Sons 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 13th)\n\n• Cleaned up presentation of Loadout Options menu for Ahzek Ahriman and Sekhetar Robots.\n• Rubric Marines: Icon of Flame now uses a checkbox-style Paid Wargear selection.\n• Scarab Occult Terminators: Hellfyre Missile Rack now uses a checkbox-style Paid Wargear selection.\n• Mutalith Vortex Beast: Mutating Horrors now uses a checkbox-style Unit Upgrade selection.\n• Great Traitors’ Arsenal is now fully supported through Configuration, exposing the reusable Chaos Space Marines unit roster when Included.\n• Great Traitors’ Arsenal units now participate in the correct Troop and Other Additional Copy Costs accounting.\n• Catalogue maintenance: current implementation notes and historical comments consolidated for the live GS21 catalogue.\n• Leader Points migration: Exalted Sorcerer, Discborne Exalted Sorcerer, Infernal Master, Time Cult Sorcerer, and Tzaangor Shaman now cost 1 LP each.\n• Scarab Occult Sorcerer and Aspiring Sorcerer now use the current source wording, “This unit costs 0 leader points.”\n• Catalogue compatibility: retargeted to Game System revision 24. Great Traitors’ Arsenal imports remain locally unchanged pending the Arsenal library migration.",
             "noindex": false
           }
         ],
@@ -6650,7 +6650,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV13: standard Patch Notes baseline for Thousand Sons 3.3.5 / GS21.\nREV14: Ahzek Ahriman and Sekhetar Robots presentation cleanup added to Catalogue Bugfixes.\nREV15: corrected the Catalogue Bugfixes heading date.\nREV16: added checkbox-style cleanup entries for Icon of Flame, Hellfyre Missile Rack, and Mutating Horrors.\nREV17: fully integrated Great Traitors’ Arsenal V12, extended Additional Copy Costs to imported eligible families, and consolidated current implementation comments."
+        "comment": "REV13: standard Patch Notes baseline for Thousand Sons 3.3.5 / GS21.\nREV14: Ahzek Ahriman and Sekhetar Robots presentation cleanup added to Catalogue Bugfixes.\nREV15: corrected the Catalogue Bugfixes heading date.\nREV16: added checkbox-style cleanup entries for Icon of Flame, Hellfyre Missile Rack, and Mutating Horrors.\nREV17: fully integrated Great Traitors’ Arsenal V12, extended Additional Copy Costs to imported eligible families, and consolidated current implementation comments.\nREV18: GS24 Leader Points migration. Five existing counted native Leader roots received 1 LP; Scarab Occult Sorcerer and Aspiring Sorcerer remain 0-LP Leaders using current source wording."
       },
       {
         "type": "unit",
@@ -6663,6 +6663,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 100
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -6846,6 +6851,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 120
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -6994,6 +7004,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 80
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -7186,6 +7201,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 70
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -7369,6 +7389,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 30
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -7534,14 +7559,14 @@
             "noindex": false
           },
           {
-            "name": "Leader Capacity",
+            "name": "Leader Points",
             "id": "3012-c6a0-18ca-e72e",
             "hidden": false,
-            "description": "This unit does not count towards the leader maximum of the army list.",
+            "description": "This unit costs 0 leader points.",
             "noindex": false
           }
         ],
-        "comment": "PHASE 0.1 COUNTLESS LEADER: retained as a root Leader because the PDF presents it in the Leaders section. It uses the normal attachment point of its host but does not carry Counts Toward Leader Maximum.",
+        "comment": "LEADER POINTS: retained as a root Leader because the PDF presents it in the Leaders section. The current source explicitly states that this unit costs 0 leader points. It carries no LP cost object and does not carry Counts Toward Leader Maximum. Its normal attachment behavior remains unchanged.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -7711,14 +7736,14 @@
             "noindex": false
           },
           {
-            "name": "Leader Capacity",
+            "name": "Leader Points",
             "id": "491c-712a-2ad3-05a3",
             "hidden": false,
-            "description": "This unit does not count towards the leader maximum of the army list.",
+            "description": "This unit costs 0 leader points.",
             "noindex": false
           }
         ],
-        "comment": "PHASE 0.1 COUNTLESS LEADER: retained as a root Leader because the PDF presents it in the Leaders section. It uses the normal attachment point of its host but does not carry Counts Toward Leader Maximum.",
+        "comment": "LEADER POINTS: retained as a root Leader because the PDF presents it in the Leaders section. The current source explicitly states that this unit costs 0 leader points. It carries no LP cost object and does not carry Counts Toward Leader Maximum. Its normal attachment behavior remains unchanged.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -9980,7 +10005,7 @@
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "CURRENT STATE\nThousand Sons 3.3.5 on Game System revision 21. Fifteen native datasheets are selectable; the four Summon Only datasheets remain intentionally excluded from army-list selections. All seven printed native Leaders remain root selections; Scarab Occult Sorcerer and Aspiring Sorcerer are Countless and therefore do not consume Leader Capacity. Great Traitors’ Arsenal is fully integrated through the linked Chaos Space Marines 3.3.5 Arsenal Library V12 and is disabled by default.\n\nAUTHORING & RUNTIME NOTES\nGreat Traitors’ Arsenal is an automatically present Configuration with Not Included / Included states. Included reveals 28 thin entryLinks to the reusable Arsenal library; selected imported units remain visible and receive a constructive repair error if the setting is later changed to Not Included. The library owns intrinsic imported unit trees, while Thousand Sons owns availability, primary Great Traitors’ Arsenal presentation, and host-roster copy-cost accounting. Additional Copy Costs uses separate Troops and Other ledgers. Rubric Marines, Tzaangors, Legionaries, and Cultists use independent 4 / 6 / 8 Troop allowances; the five native eligible Other families and twenty imported eligible Other families use independent 1 / 2 / 3 allowances. Native unit trees, points, attachments, Rare behavior, and loadout legality are otherwise unchanged.\n\nHISTORICAL REVISION LOG\nREV4: New Recruit cost-type compatibility. REV5-6: presentation and constructive-error polish. REV7: unified Troops / Other Additional Copy Costs. REV8: Osiron nested melee loadouts. REV9: Scarab Occult atomic loadouts. REV10: split Rubric Marine model loadouts. REV11: GS20 Troop rule retarget. REV12: Sekhetar any-two weapons. REV13: Thousand Sons 3.3.5 / GS21 baseline. REV14: Ahzek Ahriman and Sekhetar presentation cleanup. REV15: Patch Notes date correction. REV16: checkbox upgrade cleanup. REV17: Great Traitors’ Arsenal V12 integration, imported copy-cost accounting, and current-state comment consolidation.",
+    "comment": "CURRENT STATE\nThousand Sons 3.3.5 on Game System revision 24 using the Leader Points resource system. Fifteen native datasheets are selectable; the four Summon Only datasheets remain intentionally excluded from army-list selections. All seven printed native Leaders remain root selections. Exalted Sorcerer, Discborne Exalted Sorcerer, Infernal Master, Time Cult Sorcerer, and Tzaangor Shaman each cost 1 LP. Scarab Occult Sorcerer and Aspiring Sorcerer each cost 0 leader points. Great Traitors’ Arsenal is fully integrated through the linked Chaos Space Marines 3.3.5 Arsenal Library V12 and is disabled by default.\n\nAUTHORING & RUNTIME NOTES\nGreat Traitors’ Arsenal is an automatically present Configuration with Not Included / Included states. Included reveals 28 thin entryLinks to the reusable Arsenal library; selected imported units remain visible and receive a constructive repair error if the setting is later changed to Not Included. The library owns intrinsic imported unit trees, including Leader Points once the Arsenal library is migrated, while Thousand Sons owns availability, primary Great Traitors’ Arsenal presentation, and host-roster copy-cost accounting. Additional Copy Costs uses separate Troops and Other ledgers. Rubric Marines, Tzaangors, Legionaries, and Cultists use independent 4 / 6 / 8 Troop allowances; the five native eligible Other families and twenty imported eligible Other families use independent 1 / 2 / 3 allowances. Native unit trees, points, attachments, Rare behavior, and loadout legality are otherwise unchanged.\n\nHISTORICAL REVISION LOG\nREV4: New Recruit cost-type compatibility. REV5-6: presentation and constructive-error polish. REV7: unified Troops / Other Additional Copy Costs. REV8: Osiron nested melee loadouts. REV9: Scarab Occult atomic loadouts. REV10: split Rubric Marine model loadouts. REV11: GS20 Troop rule retarget. REV12: Sekhetar any-two weapons. REV13: Thousand Sons 3.3.5 / GS21 baseline. REV14: Ahzek Ahriman and Sekhetar presentation cleanup. REV15: Patch Notes date correction. REV16: checkbox upgrade cleanup. REV17: Great Traitors’ Arsenal V12 integration, imported copy-cost accounting, and current-state comment consolidation.\n\nREV18 — LEADER POINTS MIGRATION\nRetargeted the catalogue to Game System revision 24. Exalted Sorcerer, Discborne Exalted Sorcerer, Infernal Master, Time Cult Sorcerer, and Tzaangor Shaman now each cost 1 LP, exactly matching the five existing Counts Toward Leader Maximum roots. Scarab Occult Sorcerer and Aspiring Sorcerer remain uncharged; their existing Leader Capacity rule objects were updated in place to the current source wording \"This unit costs 0 leader points.\" No explicit 0 LP cost objects were added. The legacy counted-Leader tags remain unchanged for parallel migration validation. The 28 Great Traitors’ Arsenal entryLinks receive no local LP costs; imported Leaders will inherit intrinsic LP from the Arsenal library during the dedicated shared-library migration. Great Traitors’ Arsenal gating, native attachments, Rare behavior, Summon Only exclusions, Troop/Other Additional Copy Costs, points, loadouts, checkbox presentation, and all unrelated mechanics are unchanged.",
     "sharedSelectionEntries": [
       {
         "type": "upgrade",

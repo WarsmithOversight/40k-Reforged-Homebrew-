@@ -5,7 +5,7 @@
     "name": "Adeptus Custodes 3.3.5",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 24,
-    "revision": 15,
+    "revision": 16,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -2180,7 +2180,7 @@
       {
         "type": "upgrade",
         "import": true,
-        "name": "Patch Notes",
+        "name": "Updated: September 14th",
         "hidden": false,
         "id": "0853-764c-42b2-0f1c",
         "sortIndex": 2,
@@ -2197,7 +2197,7 @@
             "name": "Patch Notes",
             "id": "731f-3f5e-60ee-ac54",
             "hidden": false,
-            "description": "## Adeptus Custodes 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 12th)\n\n• Smoke Launchers now uses a checkbox-style Paid Wargear selection.\n• Misericordia now uses checkbox-style Paid Wargear selections across all eligible units.\n• Custodian Guard: Praesidium Shield now uses a checkbox-style Paid Wargear selection.\n• Arae-Shrike now uses checkbox-style Paid Wargear selections on all eligible Shield-Captains.\n• Venerable Land Raider: pintle weapon choices now appear directly beneath its main loadout choices with an empty default option.\n• Catalogue maintenance: current implementation notes and historical comments consolidated for the live GS21 catalogue.",
+            "description": "## Adeptus Custodes 3.3.5\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 14th)\n\n• Leader Points: Shield-Captain, Allarus Armour Shield-Captain, and Dawneagle Jetbike Shield-Captain now cost all your Leader Points; redundant Rare and pooled max-one listbuilder restrictions have been removed.\n• Catalogue maintenance: current implementation notes and historical comments consolidated for the live GS21 catalogue.\n• Venerable Land Raider: pintle weapon choices now appear directly beneath its main loadout choices with an empty default option.\n• Arae-Shrike now uses checkbox-style Paid Wargear selections on all eligible Shield-Captains.\n• Custodian Guard: Praesidium Shield now uses a checkbox-style Paid Wargear selection.\n• Misericordia now uses checkbox-style Paid Wargear selections across all eligible units.\n• Smoke Launchers now uses a checkbox-style Paid Wargear selection.",
             "noindex": false
           }
         ],
@@ -2215,7 +2215,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV12: Automatically present Configuration entry using the standard two-section Patch Notes format. Adeptus Custodes 3.3.5 is the current army-rules baseline.\nREV13: refreshed Catalogue Bugfixes to September 11th with checkbox-style optional wargear presentation.\nREV14: moved the Venerable Land Raider pintle radio selector directly into its model loadout and consolidated live catalogue documentation for GS21.\nREV15: Retargeted to Game System revision 24 and migrated Shield-Captains to the Leader Points resource system. No source-derived Patch Notes rule text was rewritten."
+        "comment": "REV16: renamed the export-visible update marker to Updated: September 14th; Catalogue Bugfixes is dated September 14th with newest entries first. Added the Leader Points cleanup bullet. The obsolete counted-Leader layer, Rare tags on Shield-Captains, and the redundant pooled Shield-Captain max-one listbuilder restriction were removed after runtime validation."
       },
       {
         "type": "unit",
@@ -2247,24 +2247,6 @@
             "id": "fdcd-a14f-b072-5ba5",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "c417-3a43-73d4-f4bf",
-            "id": "93f9-e556-f2f6-1df6",
-            "primary": false,
-            "name": "Rare"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "3a64-9513-da2b-cea2",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
-          },
-          {
-            "targetId": "c6bf-210a-4b2b-b2c7",
-            "id": "b3c1-b489-1edc-2226",
-            "primary": false,
-            "name": "SHIELD-CAPTAIN Limit"
           }
         ],
         "sortIndex": 1,
@@ -2275,16 +2257,9 @@
             "hidden": false,
             "description": "This unit cannot attach to anything.",
             "noindex": false
-          },
-          {
-            "name": "Army List Restriction",
-            "id": "4abd-40f2-140d-8a3e",
-            "hidden": false,
-            "description": "Your army list may have only one SHIELD-CAPTAIN, ALLARUS ARMOUR SHIELD-CAPTAIN or\nDAWNEAGLE JETBIKE SHIELD-CAPTAIN.",
-            "noindex": false
           }
         ],
-        "comment": "SHIELD-CAPTAIN LIMIT: Rare remains a visible descriptive category, but the redundant individual Rare max-1 constraint is omitted. The explicit shared SHIELD-CAPTAIN max-1 restriction is stronger, avoiding duplicate (1/1) counters.\nLEADER POINTS: This Shield-Captain costs all Leader Points granted by Game Size. The listbuilder represents this directly as 2 LP at 800 Points, 3 LP at 1200 Points, and 4 LP at 1600 Points. The legacy Counts Toward Leader Maximum tag is intentionally retained during migration, and the independent SHIELD-CAPTAIN max-1 and Rare semantics remain unchanged.",
+        "comment": "LEADER POINTS: This Shield-Captain costs all Leader Points granted by Game Size. The listbuilder represents this directly as 2 LP at 800 Points, 3 LP at 1200 Points, and 4 LP at 1600 Points. Rare, legacy counted-Leader tagging, and the pooled max-one Shield-Captain restriction are intentionally omitted because the all-LP cost already enforces the same roster legality.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -2458,25 +2433,6 @@
         ],
         "modifiers": [
           {
-            "type": "add",
-            "field": "error",
-            "value": "Your army may include only one Shield-Captain, Allarus Armour Shield-Captain, or Dawneagle Jetbike Shield-Captain. Remove any additional Shield-Captain units until only one remains.",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 2,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "c6bf-210a-4b2b-b2c7",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "queryFromSelf": false,
-                "childName": "SHIELD-CAPTAIN Limit"
-              }
-            ]
-          },
-          {
             "type": "set",
             "value": 2,
             "field": "b300-4825-598a-c53d",
@@ -2565,24 +2521,6 @@
             "id": "28b8-c999-ecbe-aa21",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "c417-3a43-73d4-f4bf",
-            "id": "38fe-61ba-d6c7-30ef",
-            "primary": false,
-            "name": "Rare"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "88f5-f5aa-5da8-213b",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
-          },
-          {
-            "targetId": "c6bf-210a-4b2b-b2c7",
-            "id": "ec82-c156-4663-c562",
-            "primary": false,
-            "name": "SHIELD-CAPTAIN Limit"
           }
         ],
         "sortIndex": 2,
@@ -2593,16 +2531,9 @@
             "hidden": false,
             "description": "This unit cannot attach to anything.",
             "noindex": false
-          },
-          {
-            "name": "Army List Restriction",
-            "id": "7565-f472-a65d-2f7b",
-            "hidden": false,
-            "description": "Your army list may have only one SHIELD-CAPTAIN, ALLARUS ARMOUR SHIELD-CAPTAIN or\nDAWNEAGLE JETBIKE SHIELD-CAPTAIN.",
-            "noindex": false
           }
         ],
-        "comment": "SHIELD-CAPTAIN LIMIT: Rare remains a visible descriptive category, but the redundant individual Rare max-1 constraint is omitted. The explicit shared SHIELD-CAPTAIN max-1 restriction is stronger, avoiding duplicate (1/1) counters.\nLOADOUT UI: the +10 Pyrithite Spear replacement is represented as a complete loadout, so choosing it removes the Ballistus Grenade Launcher from the represented equipment state. Complete package names place the distinguishing weapon first for easier scanning.\n\nREV9 PRESENTATION: Allarus Armour Shield-Captain now chooses between Castellan Axe & Bolter, Guardian Spear & Bolter, or Pyrithite Spear & Melta [+10], with Ballistus Grenade Launcher shown separately as fixed equipment.\nLEADER POINTS: This Shield-Captain costs all Leader Points granted by Game Size. The listbuilder represents this directly as 2 LP at 800 Points, 3 LP at 1200 Points, and 4 LP at 1600 Points. The legacy Counts Toward Leader Maximum tag is intentionally retained during migration, and the independent SHIELD-CAPTAIN max-1 and Rare semantics remain unchanged.",
+        "comment": "LOADOUT UI: the +10 Pyrithite Spear replacement is represented as a complete loadout, so choosing it removes the Ballistus Grenade Launcher from the represented equipment state. Complete package names place the distinguishing weapon first for easier scanning.\n\nREV9 PRESENTATION: Allarus Armour Shield-Captain now chooses between Castellan Axe & Bolter, Guardian Spear & Bolter, or Pyrithite Spear & Melta [+10], with Ballistus Grenade Launcher shown separately as fixed equipment.\nLEADER POINTS: This Shield-Captain costs all Leader Points granted by Game Size. The listbuilder represents this directly as 2 LP at 800 Points, 3 LP at 1200 Points, and 4 LP at 1600 Points. Rare, legacy counted-Leader tagging, and the pooled max-one Shield-Captain restriction are intentionally omitted because the all-LP cost already enforces the same roster legality.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -2779,25 +2710,6 @@
         ],
         "modifiers": [
           {
-            "type": "add",
-            "field": "error",
-            "value": "Your army may include only one Shield-Captain, Allarus Armour Shield-Captain, or Dawneagle Jetbike Shield-Captain. Remove any additional Shield-Captain units until only one remains.",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 2,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "c6bf-210a-4b2b-b2c7",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "queryFromSelf": false,
-                "childName": "SHIELD-CAPTAIN Limit"
-              }
-            ]
-          },
-          {
             "type": "set",
             "value": 2,
             "field": "b300-4825-598a-c53d",
@@ -2886,24 +2798,6 @@
             "id": "9905-5e73-b3c4-4ac7",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "c417-3a43-73d4-f4bf",
-            "id": "53d3-6795-5c9c-b7d3",
-            "primary": false,
-            "name": "Rare"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "c39c-1201-f64d-a0c7",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
-          },
-          {
-            "targetId": "c6bf-210a-4b2b-b2c7",
-            "id": "7543-938f-645d-d011",
-            "primary": false,
-            "name": "SHIELD-CAPTAIN Limit"
           }
         ],
         "sortIndex": 3,
@@ -2914,16 +2808,9 @@
             "hidden": false,
             "description": "This unit cannot attach to anything.",
             "noindex": false
-          },
-          {
-            "name": "Army List Restriction",
-            "id": "59eb-8e18-e73c-3db7",
-            "hidden": false,
-            "description": "Your army list may have only one SHIELD-CAPTAIN, ALLARUS ARMOUR SHIELD-CAPTAIN or\nDAWNEAGLE JETBIKE SHIELD-CAPTAIN.",
-            "noindex": false
           }
         ],
-        "comment": "SHIELD-CAPTAIN LIMIT: Rare remains a visible descriptive category, but the redundant individual Rare max-1 constraint is omitted. The explicit shared SHIELD-CAPTAIN max-1 restriction is stronger, avoiding duplicate (1/1) counters.\nLEADER POINTS: This Shield-Captain costs all Leader Points granted by Game Size. The listbuilder represents this directly as 2 LP at 800 Points, 3 LP at 1200 Points, and 4 LP at 1600 Points. The legacy Counts Toward Leader Maximum tag is intentionally retained during migration, and the independent SHIELD-CAPTAIN max-1 and Rare semantics remain unchanged.",
+        "comment": "LEADER POINTS: This Shield-Captain costs all Leader Points granted by Game Size. The listbuilder represents this directly as 2 LP at 800 Points, 3 LP at 1200 Points, and 4 LP at 1600 Points. Rare, legacy counted-Leader tagging, and the pooled max-one Shield-Captain restriction are intentionally omitted because the all-LP cost already enforces the same roster legality.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -3095,25 +2982,6 @@
           }
         ],
         "modifiers": [
-          {
-            "type": "add",
-            "field": "error",
-            "value": "Your army may include only one Shield-Captain, Allarus Armour Shield-Captain, or Dawneagle Jetbike Shield-Captain. Remove any additional Shield-Captain units until only one remains.",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 2,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "c6bf-210a-4b2b-b2c7",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "queryFromSelf": false,
-                "childName": "SHIELD-CAPTAIN Limit"
-              }
-            ]
-          },
           {
             "type": "set",
             "value": 2,
@@ -4791,15 +4659,10 @@
         "name": "Configuration",
         "id": "7c87-14a7-ad9a-1842",
         "hidden": false
-      },
-      {
-        "name": "SHIELD-CAPTAIN Limit",
-        "id": "c6bf-210a-4b2b-b2c7",
-        "hidden": true
       }
     ],
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
     "authorName": "Varmint",
-    "comment": "CURRENT STATE\nAdeptus Custodes 3.3.5 targets Game System revision 24 and uses the Leader Points resource system. All 12 native datasheets are complete fixed one-model selections. The three Shield-Captains are Rare Leaders, retain the legacy Counts Toward Leader Maximum migration tag, cannot attach, and share one explicit army-wide SHIELD-CAPTAIN max-1 restriction; redundant individual Rare max constraints are intentionally omitted. Each Shield-Captain costs all Leader Points granted by Game Size: 2 LP at 800 Points, 3 LP at 1200 Points, and 4 LP at 1600 Points. Custodian Guard is the sole native Troop copy family. Left Hand of the Emperor remains an optional unchecked placeholder for a future reusable Sisters of Silence library and emits no unresolved external catalogue target.\n\nAUTHORING & RUNTIME NOTES\nAll native datasheets expose their current list-building loadouts and paid wargear. Optional binary wargear uses direct checkbox-style selections. The Venerable Land Raider keeps its optional pintle choice as a zero-minimum radio selector directly beneath its two mandatory main weapon selectors, allowing New Recruit to show an empty option without an extra visible header. Additional Copy Costs uses the Game System Troops/Other accounting presentation: Custodian Guard uses the 4 / 6 / 8 Troop allowance and the eight native non-Rare Other families retain the established 1 / 2 / 3 allowance. Source-derived rule descriptions remain authoritative and are not edited for prose consistency.\n\nHISTORICAL REVISION LOG\nREV5: migrated Points references for New Recruit export compatibility.\nREV6: added explicit model headers and polished Allarus Armour Shield-Captain package naming/order.\nREV7: retrospective presentation/comment cleanup and current-state terminology.\nREV8: adopted Troops/Other Additional Copy Costs at Game System revision 17.\nREV9: retargeted to Game System revision 20, short-form Troop copy-cost rule, and Allarus loadout polish.\nREV10: removed erroneous +10 Points costs from Pyrithite Spear & Melta options.\nREV11: updated army-rules baseline to 3.3.4 and added standard Patch Notes.\nREV12: updated army-rules baseline to 3.3.5 and Game System revision 21.\nREV13: converted optional Smoke Launchers, Misericordia, Custodian Guard Praesidium Shield, and Arae-Shrike selections to checkbox-style presentation.\nREV14: moved the Venerable Land Raider pintle selector directly beneath its main loadout choices and consolidated live GS21 documentation.\nREV15: migrated to Game System revision 24 Leader Points. Shield-Captain, Allarus Armour Shield-Captain, and Dawneagle Jetbike Shield-Captain now cost all Leader Points granted by Game Size, represented directly as 2 / 3 / 4 LP at 800 / 1200 / 1600 Points. The legacy Counts Toward Leader Maximum tags, Rare category, non-attaching Leader semantics, and shared SHIELD-CAPTAIN max-1 restriction remain unchanged."
+    "comment": "CURRENT STATE\nAdeptus Custodes 3.3.5 targets Game System revision 24 and uses the Leader Points resource system. All 12 native datasheets are complete fixed one-model selections. Shield-Captain, Allarus Armour Shield-Captain, and Dawneagle Jetbike Shield-Captain cannot attach and each costs all Leader Points granted by Game Size: 2 LP at 800 Points, 3 LP at 1200 Points, and 4 LP at 1600 Points. Rare and the separate pooled Shield-Captain max-one listbuilder restriction are intentionally omitted because the all-LP cost already enforces the same roster legality. Custodian Guard is the sole native Troop copy family. Left Hand of the Emperor remains an optional unchecked placeholder for a future reusable Sisters of Silence library and emits no unresolved external catalogue target.\n\nAUTHORING & RUNTIME NOTES\nAll native datasheets expose their current list-building loadouts and paid wargear. Optional binary wargear uses direct checkbox-style selections. The Venerable Land Raider keeps its optional pintle choice as a zero-minimum radio selector directly beneath its two mandatory main weapon selectors, allowing New Recruit to show an empty option without an extra visible header. Additional Copy Costs uses the Game System Troops/Other accounting presentation: Custodian Guard uses the 4 / 6 / 8 Troop allowance and the eight native non-Rare Other families retain the established 1 / 2 / 3 allowance. Source-derived rule descriptions remain authoritative and are not edited for prose consistency.\n\nHISTORICAL REVISION LOG\nREV5: migrated Points references for New Recruit export compatibility.\nREV6: added explicit model headers and polished Allarus Armour Shield-Captain package naming/order.\nREV7: retrospective presentation/comment cleanup and current-state terminology.\nREV8: adopted Troops/Other Additional Copy Costs at Game System revision 17.\nREV9: retargeted to Game System revision 20, short-form Troop copy-cost rule, and Allarus loadout polish.\nREV10: removed erroneous +10 Points costs from Pyrithite Spear & Melta options.\nREV11: updated army-rules baseline to 3.3.4 and added standard Patch Notes.\nREV12: updated army-rules baseline to 3.3.5 and Game System revision 21.\nREV13: converted optional Smoke Launchers, Misericordia, Custodian Guard Praesidium Shield, and Arae-Shrike selections to checkbox-style presentation.\nREV14: moved the Venerable Land Raider pintle selector directly beneath its main loadout choices and consolidated live GS21 documentation.\nREV15: migrated to Game System revision 24 Leader Points. Shield-Captain, Allarus Armour Shield-Captain, and Dawneagle Jetbike Shield-Captain now cost all Leader Points granted by Game Size, represented directly as 2 / 3 / 4 LP at 800 / 1200 / 1600 Points. The legacy Counts Toward Leader Maximum tags, Rare category, non-attaching Leader semantics, and shared SHIELD-CAPTAIN max-1 restriction remain unchanged.\nREV16: Leader Points cleanup after successful runtime validation. The three Shield-Captain roots retain their proven 2 / 3 / 4 LP all-points behavior. Removed their obsolete Counts Toward Leader Maximum links, Rare category links, hidden SHIELD-CAPTAIN Limit links and category, pooled max-one corrective errors, and the redundant player-facing Army List Restriction. Patch Notes presentation was updated to the September 14th cleanup convention. No points, loadouts, attachment rules, Additional Copy Costs, or other faction mechanics changed."
   }
 }

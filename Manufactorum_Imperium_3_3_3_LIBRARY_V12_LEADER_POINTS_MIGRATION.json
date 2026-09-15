@@ -4,8 +4,8 @@
     "id": "19d4-d5d6-f831-bb68",
     "name": "Manufactorum Imperium 3.3.3 - Library",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 21,
-    "revision": 11,
+    "gameSystemRevision": 24,
+    "revision": 12,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [],
@@ -22,6 +22,11 @@
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
             "value": 140
+          },
+          {
+            "name": "LP",
+            "typeId": "b300-4825-598a-c53d",
+            "value": 1
           }
         ],
         "categoryLinks": [
@@ -479,7 +484,7 @@
             ]
           }
         ],
-        "comment": "TANK COMMANDER CURRENT STATE: complete Rare Leader / Vehicle loadout. Vanquisher Cannon exposes its mandatory Coaxial Weapon choice. Redundant turret, hull, and sponson slot labels are suppressed. Pintle Weapons is a top-level section between Loadout Options and Paid Wargear; one-item Paid Wargear options use direct checkbox-style selections.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
+        "comment": "TANK COMMANDER CURRENT STATE: complete Rare Leader / Vehicle loadout. Vanquisher Cannon exposes its mandatory Coaxial Weapon choice. Redundant turret, hull, and sponson slot labels are suppressed. Pintle Weapons is a top-level section between Loadout Options and Paid Wargear; one-item Paid Wargear options use direct checkbox-style selections.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch.\nMANUFACTORUM IMPERIUM LIBRARY V12 / LEADER POINTS: synchronized the intrinsic Tank Commander Leader Points semantic from Astra Militarum REV38. This shared root costs 1 LP. Consuming catalogues inherit that cost through their existing entryLinks and must not duplicate it locally. The legacy Counts Toward Leader Maximum tag remains intact during dual-system migration."
       },
       {
         "type": "unit",
@@ -6533,6 +6538,6 @@
         ]
       }
     ],
-    "comment": "CURRENT STATE\nReusable cross-faction shared vehicle library for the Adeptus Mechanicus Manufactorum Imperium rule. This catalogue contains no root selectionEntries; all twenty-one portable vehicle roots live in sharedSelectionEntries. The library currently mirrors eleven Astra Militarum vehicle roots through Astra Militarum 3.3.5 REV37 and ten chapter-independent Space Marine vehicle roots through Space Marines 3.3.7 REV17/REV18. Stable shared root IDs are preserved across all mirrors.\n\nAUTHORING & RUNTIME NOTES\nAll shared entries keep their intrinsic unit semantics, including points, loadouts, Rare markers, Leader-Capacity markers, and Other soft-copy markers, but those semantics remain non-primary inside the library. Consuming catalogues own visible presentation through local entryLinks and category links. Adeptus Mechanicus currently consumes this library through separate Astra Militarum Vehicles and Space Marines Vehicles switches. Baal Predator remains intentionally excluded because the consuming catalogue cannot satisfy its Blood Angels restriction.\n\nSOURCE SYNC HISTORY\nV1: initial Astra Militarum vehicle bridge from Astra Militarum 3.3.3 REV18.\nV2: retargeted to Game System REV14.\nV3-V4: mirrored Astra Militarum REV19-20 presentation polish across all eleven Astra vehicles.\nV5: retargeted to Game System REV17.\nV6: retargeted to Game System REV18 and added ten chapter-independent Space Marine vehicle bridge roots.\nV7: retargeted to Game System REV21.\nV8: populated the six previously empty Space Marine vehicle bridge roots from Space Marines 3.3.7 REV14.\nV9: synchronized Space Marine Vindicator, Astartes Basilisk, Predator, and Land Raider from Space Marines REV15.\nV10: synchronized all portable Space Marine roots touched by Space Marines REV17.\nV11: synchronized all eleven Astra Militarum vehicle roots from Astra Militarum 3.3.5 REV37 and consolidated library comments for the live GS21 state."
+    "comment": "CURRENT STATE\nReusable cross-faction shared vehicle library for the Adeptus Mechanicus Manufactorum Imperium rule on Game System revision 24. This catalogue contains no root selectionEntries; all twenty-one portable vehicle roots live in sharedSelectionEntries. The library mirrors eleven Astra Militarum vehicle roots from Astra Militarum 3.3.5 REV37, with Tank Commander Leader Points semantics synchronized from REV38, and ten chapter-independent Space Marine vehicle roots through Space Marines 3.3.7 REV17/REV18. Stable shared root IDs are preserved across all mirrors.\n\nAUTHORING & RUNTIME NOTES\nAll shared entries keep their intrinsic unit semantics, including points, loadouts, Rare markers, Leader Points, legacy Leader-Capacity markers, and Other soft-copy markers, but those semantics remain non-primary inside the library. Consuming catalogues own visible presentation through local entryLinks and category links. Adeptus Mechanicus currently consumes this library through separate Astra Militarum Vehicles and Space Marines Vehicles switches. Baal Predator remains intentionally excluded because the consuming catalogue cannot satisfy its Blood Angels restriction.\n\nSOURCE SYNC HISTORY\nV1: initial Astra Militarum vehicle bridge from Astra Militarum 3.3.3 REV18.\nV2: retargeted to Game System REV14.\nV3-V4: mirrored Astra Militarum REV19-20 presentation polish across all eleven Astra vehicles.\nV5: retargeted to Game System REV17.\nV6: retargeted to Game System REV18 and added ten chapter-independent Space Marine vehicle bridge roots.\nV7: retargeted to Game System REV21.\nV8: populated the six previously empty Space Marine vehicle bridge roots from Space Marines 3.3.7 REV14.\nV9: synchronized Space Marine Vindicator, Astartes Basilisk, Predator, and Land Raider from Space Marines REV15.\nV10: synchronized all portable Space Marine roots touched by Space Marines REV17.\nV11: synchronized all eleven Astra Militarum vehicle roots from Astra Militarum 3.3.5 REV37 and consolidated library comments for the live GS21 state.\nV12: retargeted to Game System REV24 for the Leader Points migration. Tank Commander is the only shared Manufactorum root carrying both Leader and Counts Toward Leader Maximum semantics, and now intrinsically costs 1 LP. The other twenty portable vehicle roots receive no LP mechanics. The old Tank Commander count tag remains unchanged for parallel migration validation. Adeptus Mechanicus continues to consume the library through its existing local entryLinks, source switches, presentation categories, selected-safe hiding, and local copy-cost arithmetic; no consumer-local LP cost is required. No shared root IDs, points, loadouts, Rare semantics, Other soft-copy semantics, or unrelated executable mechanics changed."
   }
 }
