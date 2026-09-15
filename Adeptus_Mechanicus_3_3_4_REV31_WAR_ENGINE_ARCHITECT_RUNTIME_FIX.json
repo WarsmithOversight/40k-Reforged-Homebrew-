@@ -4,8 +4,8 @@
     "id": "203b-0b03-c0cd-5fe9",
     "name": "Adeptus Mechanicus 3.3.4",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 24,
-    "revision": 27,
+    "gameSystemRevision": 25,
+    "revision": 31,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -9296,7 +9296,7 @@
       {
         "type": "upgrade",
         "import": true,
-        "name": "Updated: September 14th",
+        "name": "Updated: September 15th",
         "hidden": false,
         "id": "6859-121d-96fb-2ea6",
         "sortIndex": 2,
@@ -9313,7 +9313,7 @@
             "name": "Patch Notes",
             "id": "ca7f-4648-d56c-1fa4",
             "hidden": false,
-            "description": "## Adeptus Mechanicus 3.3.4\n\n• Skitarii Marshal costs 0 leader points.\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 14th)\n\n• Leader Points: Dominus, Macrotek Enginseer, Manipulus, Enginseer, Datasmith, and Techno-Archeologist cost 1 LP each; Skitarii Marshal costs 0 LP, and the Manufactorum Tank Commander inherits its 1 LP cost from the shared library.\n• Skitarii Ranger Alpha: suppressed the redundant Melee Weapon and Sidearm headers beneath Alpha Melee Weapon & Pistol.\n• Servitors: rebuilt as weapon-specific model checkboxes; select 1-4 different Servitors at 10 Points each, with each selected model retaining its melee weapon choice.\n• Skitarii Rangers: restored the Galvanic Rifle loadout for the Skitarii Ranger Alpha, by request of SgtXRecon.\n• Kataphron Breachers, Kataphron Destroyers, and Vorax-Class Battle-Automata: optional third models now use checkbox-style Additional Model selections.\n• Audited Leader loadout presentation and moved melee weapon choices before pistols and ranged weapons where applicable.\n• Ursarax loadouts are now atomic Lightning Claws & Volkite Incinerator / Power Fists & Volkite Incinerator choices for each model.\n• Sicarian Infiltrators and Sicarian Ruststalkers: removed accidental quantity spinners from atomic multi-model weapon choices.\n• Onager Dunecrawler: Neutron Laser & Coaxial Cognis Heavy Stubber is now presented as one atomic loadout option.\n• Graviton Ram and Mindscrambler Grenade now use checkbox-style optional selections.\n• Cleaned up redundant loadout headers on Macrocarid Explorator, Thanatar Class Siege-Automata, Skorpius Disintegrator, Sulphurhounds, and Ursarax.",
+            "description": "## Adeptus Mechanicus 3.3.4\n\n• Macrotek Enginseer: Field Reforging → War-Engine Architect: reworked; if your army includes one or more single-model vehicle units, one of those units adds 100 fewer points to your army list.\n• Skitarii Marshal costs 0 leader points.\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 15th)\n\n• War-Engine Architect: added a Configuration accounting entry for Macrotek Enginseer's 100 Point one-model Vehicle discount; eligible Vehicles are counted only while Macrotek is present, and Scout / Armoured Sentinels qualify only while fielded as one model.\n• Leader Points: Dominus, Macrotek Enginseer, Manipulus, Enginseer, Datasmith, and Techno-Archeologist cost 1 LP each; Skitarii Marshal costs 0 LP, and the Manufactorum Tank Commander inherits its 1 LP cost from the shared library.\n• Skitarii Ranger Alpha: suppressed the redundant Melee Weapon and Sidearm headers beneath Alpha Melee Weapon & Pistol.\n• Servitors: rebuilt as weapon-specific model checkboxes; select 1-4 different Servitors at 10 Points each, with each selected model retaining its melee weapon choice.\n• Skitarii Rangers: restored the Galvanic Rifle loadout for the Skitarii Ranger Alpha, by request of SgtXRecon.\n• Kataphron Breachers, Kataphron Destroyers, and Vorax-Class Battle-Automata: optional third models now use checkbox-style Additional Model selections.\n• Audited Leader loadout presentation and moved melee weapon choices before pistols and ranged weapons where applicable.\n• Ursarax loadouts are now atomic Lightning Claws & Volkite Incinerator / Power Fists & Volkite Incinerator choices for each model.\n• Sicarian Infiltrators and Sicarian Ruststalkers: removed accidental quantity spinners from atomic multi-model weapon choices.\n• Onager Dunecrawler: Neutron Laser & Coaxial Cognis Heavy Stubber is now presented as one atomic loadout option.\n• Graviton Ram and Mindscrambler Grenade now use checkbox-style optional selections.\n• Cleaned up redundant loadout headers on Macrocarid Explorator, Thanatar Class Siege-Automata, Skorpius Disintegrator, Sulphurhounds, and Ursarax.",
             "noindex": false
           }
         ],
@@ -9331,7 +9331,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV27: renamed the export-visible update marker to Updated: September 14th; Catalogue Bugfixes is dated September 14th with newest entries first. The temporary migration-stage LP/compatibility bullets were consolidated into one final Leader Points bullet. The six obsolete native counted-Leader category links were removed after runtime validation."
+        "comment": "REV31: runtime-corrected War-Engine Architect. Returned the discount to the proven single-condition eligibility calculation and moved Macrotek presence into Vehicle eligibility. The Configuration entry remains permanently defaulted for new rosters, with a constructive missing-entry error for existing rosters where New Recruit does not retroactively inject newly-added defaults."
       },
       {
         "type": "unit",
@@ -9622,6 +9622,25 @@
                 "childName": "Macrotek Enginseer"
               }
             ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "War-Engine Architect accounting is missing. Add War-Engine Architect under Configuration so Macrotek Enginseer's Vehicle discount can be calculated.",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2b64-6250-d73b-5b17",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "War-Engine Architect"
+              }
+            ]
           }
         ],
         "associations": [
@@ -9645,6 +9664,13 @@
             "id": "037e-92a0-4ee8-8d34",
             "hidden": false,
             "description": "This unit may attach to:\n● SERVITORS\nThis unit may instead not attach to anything.",
+            "noindex": false
+          },
+          {
+            "name": "War-Engine Architect",
+            "id": "d37a-4f99-2909-4c60",
+            "hidden": false,
+            "description": "If your army list includes one or more vehicle units with one model, one of those units adds 100 less points to your army list.",
             "noindex": false
           }
         ],
@@ -9739,7 +9765,8 @@
               }
             ]
           }
-        ]
+        ],
+        "comment": "REV31 WAR-ENGINE ARCHITECT: source rule remains on Macrotek. Vehicle eligibility is now conditional on Macrotek being present, allowing the separate Configuration accounting entry to use the same proven single eligibility condition as REV28. Existing rosters that predate the new Configuration entry may need it added once manually; a constructive error identifies that state."
       },
       {
         "type": "unit",
@@ -13985,7 +14012,28 @@
             ]
           }
         ],
-        "comment": "REV12: renamed Ironstrider Ballistarii to Ironstrider Ballistarius because this selection represents one model. ID, points, loadout, categories, and copy-cost behavior are unchanged.\n\nREV18 PRESENTATION: suppressed the Primary Weapon slot header."
+        "comment": "REV12: renamed Ironstrider Ballistarii to Ironstrider Ballistarius because this selection represents one model. ID, points, loadout, categories, and copy-cost behavior are unchanged.\n\nREV18 PRESENTATION: suppressed the Primary Weapon slot header.",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -14759,6 +14807,27 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
+          }
         ]
       },
       {
@@ -14940,6 +15009,27 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
+          }
         ]
       },
       {
@@ -15114,7 +15204,28 @@
             ]
           }
         ],
-        "comment": "VULTARAX LOADOUT: fixed equipment is shown as separate weapon lines. The two Setheno Pattern Havoc Launchers are aggregated as 2x Setheno Pattern Havoc Launcher."
+        "comment": "VULTARAX LOADOUT: fixed equipment is shown as separate weapon lines. The two Setheno Pattern Havoc Launchers are aggregated as 2x Setheno Pattern Havoc Launcher.",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -16124,7 +16235,28 @@
             ]
           }
         ],
-        "comment": "CURRENT STATE. The primary weapon choice is presented without a redundant header. Neutron Laser & Coaxial Cognis Heavy Stubber is one literal atomic player-facing option; the old nested component/export-consolidation experiment was removed. The fixed Cognis Heavy Stubber remains a separate fixed line after the primary weapon choice."
+        "comment": "CURRENT STATE. The primary weapon choice is presented without a redundant header. Neutron Laser & Coaxial Cognis Heavy Stubber is one literal atomic player-facing option; the old nested component/export-consolidation experiment was removed. The fixed Cognis Heavy Stubber remains a separate fixed line after the primary weapon choice.",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -16289,7 +16421,28 @@
             ]
           }
         ],
-        "comment": "REV12: Renamed the +10 paid Heavy Phosphor Blaster to Additional Heavy Phosphor Blaster for clearer roster export. ID, cost, and all mechanics are unchanged.\n\nREV14 PRESENTATION: suppressed the Primary Weapons slot header."
+        "comment": "REV12: Renamed the +10 paid Heavy Phosphor Blaster to Additional Heavy Phosphor Blaster for clearer roster export. ID, cost, and all mechanics are unchanged.\n\nREV14 PRESENTATION: suppressed the Primary Weapons slot header.",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -16479,7 +16632,28 @@
             ]
           }
         ],
-        "comment": "REV14 PRESENTATION: suppressed the Secondary Weapon slot header."
+        "comment": "REV14 PRESENTATION: suppressed the Secondary Weapon slot header.",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "unit",
@@ -16657,6 +16831,27 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
+          }
         ]
       },
       {
@@ -16710,6 +16905,25 @@
                 "includeChildForces": true,
                 "queryFromSelf": false,
                 "childName": "Macrocarid Explorator"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
               }
             ]
           }
@@ -16878,6 +17092,75 @@
             ]
           }
         ]
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "War-Engine Architect",
+        "hidden": false,
+        "id": "2b64-6250-d73b-5b17",
+        "sortIndex": 3,
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "51b2-306e-1021-d207",
+            "value": 0
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "1",
+            "field": "defaultAmount"
+          },
+          {
+            "type": "decrement",
+            "value": 100,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2dd2-cf56-0bdd-7bc1",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "War-Engine Architect Eligible Vehicle"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "War-Engine Architect is automatically managed by the listbuilder and should appear only once. Remove any extra War-Engine Architect entries.",
+            "field": "error",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2b64-6250-d73b-5b17",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "War-Engine Architect"
+              }
+            ]
+          }
+        ],
+        "comment": "REV31 RUNTIME FIX: War-Engine Architect remains a permanently defaulted top-level Configuration entry with base cost 0 Points. Its discount has been returned to the proven REV28 single-condition mechanic: -100 Points whenever the roster contains at least one War-Engine Architect Eligible Vehicle. Macrotek presence is now encoded into Vehicle eligibility itself instead of being a second condition on this accounting item. New Recruit may not retroactively inject a newly-added default Configuration item into an already-existing roster; Macrotek carries a constructive missing-entry error for that case.",
+        "categoryLinks": [
+          {
+            "targetId": "default-category",
+            "id": "f248-3b03-a3e1-5503",
+            "primary": true,
+            "name": "Configuration"
+          }
+        ]
       }
     ],
     "categoryEntries": [
@@ -16970,9 +17253,14 @@
         "name": "Servitor Model",
         "id": "f79b-9150-01ce-ba22",
         "hidden": true
+      },
+      {
+        "name": "War-Engine Architect Eligible Vehicle",
+        "id": "2dd2-cf56-0bdd-7bc1",
+        "hidden": true
       }
     ],
-    "comment": "CURRENT STATE — ADEPTUS MECHANICUS 3.3.4 / GS24\nThe native catalogue is fully implemented and uses current listbuilder presentation conventions. Skitarii Marshal is a visible 0-LP Leader: it retains mandatory Ranger/Vanguard attachment, carries no LP cost object, and its source rule states \"This unit costs 0 leader points.\" Servitors are shown in the Leader section to match the PDF while remaining semantic Other / Infantry, using reverse attached-by validation, normal Other copy accounting, and no Leader Points cost. Skitarii Rangers, Skitarii Vanguards, Kataphron Breachers, and Kataphron Destroyers are the four Troop copy families. Native non-Rare Other units and eligible Manufactorum imports use the normal Other 1 / 2 / 3 Additional Copy Cost system. Manufactorum Imperium provides independent, fully functional Astra Militarum Vehicles and Space Marines Vehicles switches with selected-safe hiding. Standard optional third models on Breachers, Destroyers and Vorax use checkbox-style model selections.\n\nAUTHORING / RUNTIME NOTES\nSource-derived rules[].description text mirrors the authoritative PDF and is not prose-cleanup territory. The listbuilder represents final player decisions rather than every procedural replacement step. The Skitarii Ranger Alpha therefore normally defaults directly to Alpha Melee Weapon & Pistol; REV24 additionally exposes the legal Galvanic Rifle final state because a player specifically needed that retained-rifle configuration. This option carries the internal RECON PATTERN note for SgtXRecon. Servitors use weapon identity as model identity: ten unique 10-Point model checkboxes structurally enforce the one-of-each ranged/tool restriction, while each selected model independently chooses Arc Claw, Taser Goad or Servo Claw. The Servitors root is 0 Points and unit-level constructive validation enforces 1-4 selected models. Servitor attachment remains a self-scope association check and should not be replaced with a roster-level proxy. Sicarian Infiltrators and Ruststalkers deliberately use literal 2x / 3x / 4x atomic labels without quantity payloads because quantity entryLinks produced New Recruit spinners; unusual per-model mixtures remain PDF-only. Onager Dunecrawler's Neutron Laser & Coaxial Cognis Heavy Stubber is intentionally one atomic selection. Manufactorum is a consumer relationship: the library owns imported unit trees, while this catalogue owns switches, selected-safe availability and local copy-cost arithmetic. Do not locally rewrite imported payloads to chase upstream changes; synchronize the library separately from verified sources. The ten old Servitor weapon semantic category IDs are retained as inert internal shells after the REV24 model-identity rewrite.\n\nHISTORICAL / REVISION HISTORY\nFOUNDATION / REV1-5: imported native semantic structure, established reverse-attached Servitors, activated Astra Militarum Manufactorum support, then completed native loadouts. REV6-7: broad presentation cleanup, hidden redundant physical-slot labels, and standardized atomic packages. REV8 / GS17: introduced unified Troop and Other Additional Copy Cost ledgers. REV9 / GS18: activated ten chapter-independent Space Marines Manufactorum vehicle families; Baal Predator deliberately remained unavailable. REV10-11: temporary export experiments, later superseded. REV12-13: export and Sicarian cleanup, Onager semantic experiments, Ironstrider naming cleanup, and final suppression of redundant Servitor choice headers. REV14 / GS20: adopted short-form Troop copy rules and further presentation cleanup. REV15: Raiders became atomic final-state packages. REV16-17: Vorax and then all standard AdMech Additional Model structures were standardized. REV18: final presentation cleanup including Thallax atomic package and Weapons Specialist naming. REV19: standard Patch Notes introduced. REV20: Game System 21 compatibility sync. REV21: Adeptus Mechanicus 3.3.4; Skitarii Marshal became Countless and stopped consuming Leader Capacity. REV22: major UI cleanup; optional upgrades became direct checkboxes where appropriate, Onager Neutron package became fully atomic, Sicarian quantity payloads were removed to eliminate spinners, Ursarax became atomic per-model loadouts, and Leader presentation was reordered melee-first. REV23: Breacher 3, Destroyer 3 and Vorax 3 Additional Model selections converted to checkbox-style model entries. REV24: Skitarii Ranger Alpha gained the legal Galvanic Rifle final state by request of SgtXRecon; Servitors were rebuilt from positional model slots into ten weapon-named model checkboxes with direct 1-4 corrective validation; current-state comments were consolidated for GS21. REV25: suppressed the redundant Melee Weapon and Sidearm headers beneath Alpha Melee Weapon & Pistol on the Skitarii Ranger Alpha; stable group IDs, defaults, and all loadout legality remain unchanged.\n\nREV26 — LEADER POINTS MIGRATION\nRetargeted the catalogue to Game System revision 24. Dominus, Macrotek Enginseer, Manipulus, Enginseer, Datasmith, and Techno-Archeologist now each cost 1 LP, exactly matching the six existing Counts Toward Leader Maximum roots. Skitarii Marshal remains uncharged because Adeptus Mechanicus 3.3.4 explicitly states \"This unit costs 0 leader points.\" A visible Leader Points rule with that exact wording was added to the existing Marshal root; no explicit 0 LP cost object was added. Servitors remain presentation-only under Leader while semantically Other / Infantry and receive no LP mechanics. The legacy counted-Leader tags remain unchanged for parallel migration validation. Manufactorum Imperium remains a pure consumer relationship in this catalogue: imported Astra Militarum and Space Marine vehicle entryLinks receive no local LP costs. Tank Commander inherits its intrinsic 1 LP cost from the shared Manufactorum library exactly once. Attachments, Rare validation, Servitor reverse-attachment/model-identity logic, Troop/Other Additional Copy Costs, source switches, selected-safe hiding, points, loadouts, Alpha final-state presentation, and all unrelated mechanics are unchanged.\n\nREV27 — LEADER POINTS CLEANUP\nRuntime validation passed for a native 1-LP Leader, the 0-LP Skitarii Marshal, and the imported Manufactorum Tank Commander. The six legacy Counts Toward Leader Maximum links matched the six native 1-LP roots exactly and were removed. Skitarii Marshal remains a source-backed 0-LP Leader with no LP cost object. Servitors remain presentation-only under Leader while semantically Other / Infantry and receive no LP mechanics. Manufactorum imports remain locally uncharged; Tank Commander inherits 1 LP from the shared library. Patch Notes presentation was updated to the September 14th cleanup convention. No attachments, source switches, selected-safe gating, Additional Copy Costs, points, loadouts, Servitor logic, or other faction mechanics changed.",
+    "comment": "CURRENT STATE — ADEPTUS MECHANICUS 3.3.4 / GS24\nThe native catalogue is fully implemented and uses current listbuilder presentation conventions. Skitarii Marshal is a visible 0-LP Leader: it retains mandatory Ranger/Vanguard attachment, carries no LP cost object, and its source rule states \"This unit costs 0 leader points.\" Servitors are shown in the Leader section to match the PDF while remaining semantic Other / Infantry, using reverse attached-by validation, normal Other copy accounting, and no Leader Points cost. Skitarii Rangers, Skitarii Vanguards, Kataphron Breachers, and Kataphron Destroyers are the four Troop copy families. Native non-Rare Other units and eligible Manufactorum imports use the normal Other 1 / 2 / 3 Additional Copy Cost system. Manufactorum Imperium provides independent, fully functional Astra Militarum Vehicles and Space Marines Vehicles switches with selected-safe hiding. Standard optional third models on Breachers, Destroyers and Vorax use checkbox-style model selections.\n\nAUTHORING / RUNTIME NOTES\nSource-derived rules[].description text mirrors the authoritative PDF and is not prose-cleanup territory. The listbuilder represents final player decisions rather than every procedural replacement step. The Skitarii Ranger Alpha therefore normally defaults directly to Alpha Melee Weapon & Pistol; REV24 additionally exposes the legal Galvanic Rifle final state because a player specifically needed that retained-rifle configuration. This option carries the internal RECON PATTERN note for SgtXRecon. Servitors use weapon identity as model identity: ten unique 10-Point model checkboxes structurally enforce the one-of-each ranged/tool restriction, while each selected model independently chooses Arc Claw, Taser Goad or Servo Claw. The Servitors root is 0 Points and unit-level constructive validation enforces 1-4 selected models. Servitor attachment remains a self-scope association check and should not be replaced with a roster-level proxy. Sicarian Infiltrators and Ruststalkers deliberately use literal 2x / 3x / 4x atomic labels without quantity payloads because quantity entryLinks produced New Recruit spinners; unusual per-model mixtures remain PDF-only. Onager Dunecrawler's Neutron Laser & Coaxial Cognis Heavy Stubber is intentionally one atomic selection. Manufactorum is a consumer relationship: the library owns imported unit trees, while this catalogue owns switches, selected-safe availability and local copy-cost arithmetic. Do not locally rewrite imported payloads to chase upstream changes; synchronize the library separately from verified sources. The ten old Servitor weapon semantic category IDs are retained as inert internal shells after the REV24 model-identity rewrite.\n\nHISTORICAL / REVISION HISTORY\nFOUNDATION / REV1-5: imported native semantic structure, established reverse-attached Servitors, activated Astra Militarum Manufactorum support, then completed native loadouts. REV6-7: broad presentation cleanup, hidden redundant physical-slot labels, and standardized atomic packages. REV8 / GS17: introduced unified Troop and Other Additional Copy Cost ledgers. REV9 / GS18: activated ten chapter-independent Space Marines Manufactorum vehicle families; Baal Predator deliberately remained unavailable. REV10-11: temporary export experiments, later superseded. REV12-13: export and Sicarian cleanup, Onager semantic experiments, Ironstrider naming cleanup, and final suppression of redundant Servitor choice headers. REV14 / GS20: adopted short-form Troop copy rules and further presentation cleanup. REV15: Raiders became atomic final-state packages. REV16-17: Vorax and then all standard AdMech Additional Model structures were standardized. REV18: final presentation cleanup including Thallax atomic package and Weapons Specialist naming. REV19: standard Patch Notes introduced. REV20: Game System 21 compatibility sync. REV21: Adeptus Mechanicus 3.3.4; Skitarii Marshal became Countless and stopped consuming Leader Capacity. REV22: major UI cleanup; optional upgrades became direct checkboxes where appropriate, Onager Neutron package became fully atomic, Sicarian quantity payloads were removed to eliminate spinners, Ursarax became atomic per-model loadouts, and Leader presentation was reordered melee-first. REV23: Breacher 3, Destroyer 3 and Vorax 3 Additional Model selections converted to checkbox-style model entries. REV24: Skitarii Ranger Alpha gained the legal Galvanic Rifle final state by request of SgtXRecon; Servitors were rebuilt from positional model slots into ten weapon-named model checkboxes with direct 1-4 corrective validation; current-state comments were consolidated for GS21. REV25: suppressed the redundant Melee Weapon and Sidearm headers beneath Alpha Melee Weapon & Pistol on the Skitarii Ranger Alpha; stable group IDs, defaults, and all loadout legality remain unchanged.\n\nREV26 — LEADER POINTS MIGRATION\nRetargeted the catalogue to Game System revision 24. Dominus, Macrotek Enginseer, Manipulus, Enginseer, Datasmith, and Techno-Archeologist now each cost 1 LP, exactly matching the six existing Counts Toward Leader Maximum roots. Skitarii Marshal remains uncharged because Adeptus Mechanicus 3.3.4 explicitly states \"This unit costs 0 leader points.\" A visible Leader Points rule with that exact wording was added to the existing Marshal root; no explicit 0 LP cost object was added. Servitors remain presentation-only under Leader while semantically Other / Infantry and receive no LP mechanics. The legacy counted-Leader tags remain unchanged for parallel migration validation. Manufactorum Imperium remains a pure consumer relationship in this catalogue: imported Astra Militarum and Space Marine vehicle entryLinks receive no local LP costs. Tank Commander inherits its intrinsic 1 LP cost from the shared Manufactorum library exactly once. Attachments, Rare validation, Servitor reverse-attachment/model-identity logic, Troop/Other Additional Copy Costs, source switches, selected-safe hiding, points, loadouts, Alpha final-state presentation, and all unrelated mechanics are unchanged.\n\nREV27 — LEADER POINTS CLEANUP\nRuntime validation passed for a native 1-LP Leader, the 0-LP Skitarii Marshal, and the imported Manufactorum Tank Commander. The six legacy Counts Toward Leader Maximum links matched the six native 1-LP roots exactly and were removed. Skitarii Marshal remains a source-backed 0-LP Leader with no LP cost object. Servitors remain presentation-only under Leader while semantically Other / Infantry and receive no LP mechanics. Manufactorum imports remain locally uncharged; Tank Commander inherits 1 LP from the shared library. Patch Notes presentation was updated to the September 14th cleanup convention. No attachments, source switches, selected-safe gating, Additional Copy Costs, points, loadouts, Servitor logic, or other faction mechanics changed.\n\nREV28 — WAR-ENGINE ARCHITECT / SEPTEMBER 15\nImplemented the Macrotek Enginseer 3.3.4 War-Engine Architect rule. A new hidden consumer-local eligibility category marks one-model Vehicle selections. The nine fixed one-model native Adeptus Mechanicus Vehicles and nineteen fixed one-model Manufactorum imports carry it directly. Scout and Armoured Sentinels add it dynamically only while their Additional Sentinel is absent, preserving the source distinction between one-model and two-model Vehicle units. Macrotek owns a mandatory fixed War-Engine Architect accounting child whose Points cost is decremented by 100 when at least one eligible Vehicle exists. Target identity is not exposed because it has no downstream listbuilding effect. Retargeted the catalogue to Game System revision 25 after final Leader Points legacy cleanup. Patch Notes and Catalogue Bugfixes are dated September 15th.\n\nREV29 — WAR-ENGINE ARCHITECT CONFIGURATION PRESENTATION\nMoved the existing War-Engine Architect accounting selection from Macrotek Enginseer's nested selection tree to top-level Configuration while preserving its stable ID. Conditional defaultAmount automatically inserts the entry when Macrotek is selected; a constructive Macrotek-side error remains as a fallback if New Recruit fails to instantiate it. The entry is hidden only while both Macrotek and the entry itself are absent, avoiding selected-hidden state. The proven -100 Point eligibility mechanic and all one-model Vehicle tagging remain unchanged.\n\nREV30 — WAR-ENGINE ARCHITECT PERMANENT CONFIGURATION\nRuntime testing showed that New Recruit did not reliably instantiate the REV29 conditional defaultAmount Configuration entry. War-Engine Architect is now permanently inserted under Configuration with a base cost of 0 Points. Its -100 Point modifier requires both Macrotek Enginseer and at least one eligible one-model Vehicle, preventing any discount when Macrotek is absent. The selected-safe hiding experiment and Macrotek fallback error were removed because the Configuration entry no longer disappears. All REV28/29 Vehicle eligibility semantics remain unchanged.\n\nREV31 — WAR-ENGINE ARCHITECT RUNTIME FIX\nREV30 failed runtime because adding Macrotek as a second direct condition on the Configuration cost modifier stopped the previously proven discount path, while New Recruit also did not retroactively insert the new default Configuration entry into the existing test roster. REV31 restores the exact single category-count condition proven in REV28. Macrotek presence is instead encoded into eligibility: the nine native fixed one-model Vehicles and nineteen fixed one-model Manufactorum imports dynamically gain the eligibility category while Macrotek is present; Scout and Armoured Sentinels gain it only while Macrotek is present and no Additional Sentinel is selected. The Configuration entry remains an unconditional default for newly-created rosters. Existing rosters receive a constructive error if the entry is absent.",
     "catalogueLinks": [
       {
         "type": "catalogue",
@@ -17117,6 +17405,25 @@
                 "childName": "Included"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
           }
         ]
       },
@@ -17252,6 +17559,25 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
               }
             ]
           }
@@ -17391,6 +17717,25 @@
                 "childName": "Included"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
           }
         ]
       },
@@ -17526,6 +17871,25 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
               }
             ]
           }
@@ -17665,6 +18029,35 @@
                 "childName": "Included"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "b1d3-b7cc-14eb-6c9b",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Additional Sentinel"
+              }
+            ]
           }
         ]
       },
@@ -17800,6 +18193,35 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "3f0f-5aa3-362c-8ea5",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Additional Sentinel"
               }
             ]
           }
@@ -17939,6 +18361,25 @@
                 "childName": "Included"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
           }
         ]
       },
@@ -18074,6 +18515,25 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
               }
             ]
           }
@@ -18213,6 +18673,25 @@
                 "childName": "Included"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
           }
         ]
       },
@@ -18348,6 +18827,25 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
               }
             ]
           }
@@ -18487,6 +18985,25 @@
                 "childName": "Included"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
           }
         ]
       },
@@ -18622,6 +19139,25 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
               }
             ]
           }
@@ -18761,6 +19297,25 @@
                 "childName": "Included"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
           }
         ]
       },
@@ -18896,6 +19451,25 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
               }
             ]
           }
@@ -19035,6 +19609,25 @@
                 "childName": "Included"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
           }
         ]
       },
@@ -19170,6 +19763,25 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
               }
             ]
           }
@@ -19309,6 +19921,25 @@
                 "childName": "Included"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
           }
         ]
       },
@@ -19444,6 +20075,25 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
               }
             ]
           }
@@ -19583,6 +20233,25 @@
                 "childName": "Included"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
           }
         ]
       },
@@ -19720,6 +20389,25 @@
                 "childName": "Included"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
+              }
+            ]
           }
         ]
       },
@@ -19855,6 +20543,25 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "childName": "Included"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "2dd2-cf56-0bdd-7bc1",
+            "field": "category",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e5a9-7c78-cdda-adbb",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Macrotek Enginseer"
               }
             ]
           }
