@@ -5,7 +5,7 @@
     "name": "Harlequins 3.3.6 - Library",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 24,
-    "revision": 15,
+    "revision": 16,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [],
@@ -54,12 +54,6 @@
             "id": "1792-9322-61a7-8cf1",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "7676-9198-afa8-08de",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
           }
         ],
         "sortIndex": 1,
@@ -352,12 +346,6 @@
             "id": "1703-cb91-4d44-7c74",
             "primary": false,
             "name": "Infantry"
-          },
-          {
-            "targetId": "43ec-4d99-c48e-1de7",
-            "id": "6c46-dc19-c472-72c3",
-            "primary": false,
-            "name": "Counts Toward Leader Maximum"
           }
         ],
         "sortIndex": 2,
@@ -2594,6 +2582,6 @@
         ]
       }
     ],
-    "comment": "CURRENT STATE\nReusable Harlequins 3.3.6 shared library on Game System revision 24. The Universal Unit Skeleton remains the semantic source of truth; this compiled catalogue owns intrinsic shared-unit data including points, Leader Points, loadouts, paid wargear, unit-internal validation, attachment associations, and reusable semantic categories.\n\nAUTHORING / RUNTIME NOTES\nConsumer catalogues own availability, configuration gating, primary presentation categories, host-army-specific restrictions, and the actual Additional Copy Costs ledger arithmetic. Light Troupe, Dark Troupe, and Twilight Troupe each carry the Troop soft-copy semantic independently; Skyweaver, Voidweaver, and Starweaver carry the Other soft-copy semantic. Troupe Master and Shadowseer use constructive missing-attachment errors; Troupe hosts use constructive one-Leader validation; Solitaire and Death Jester use constructive Rare-limit errors. Shared root IDs and consumer entryLink targets are stable.\n\nHISTORICAL REVISION LOG\nREV7: New Recruit cost-type compatibility sync. REV8: presentation polish. REV9: durable shared-unit comments and grammar-safe host-limit errors. REV10: Troop soft-copy semantics added. V11: atomic Troupe Players 1-3 baseline packages. REV12: GS20 Troop copy-rule retarget. REV13: Harlequins 3.3.5 title sync. REV14: Harlequins 3.3.6 title and GS21 baseline sync. Current V14 comment consolidation is mechanics-neutral and does not change the library revision.\n\nREV15: Leader Points migration. Troupe Master and Shadowseer now each carry an intrinsic 1 LP cost on their shared semantic unit roots, exactly matching the existing Counts Toward Leader Maximum migration set. Consumer catalogues inherit these LP costs through their existing entryLinks and must not add duplicate local LP costs. Retargeted the library to Game System revision 24. Shared root IDs, legacy count tags, attachment validation, Troupe host-limit validation, Rare limits, Troop/Other soft-copy semantics, points, loadouts, paid wargear, and all unrelated library mechanics remain unchanged."
+    "comment": "CURRENT STATE\nReusable Harlequins 3.3.6 shared library on Game System revision 24. The Universal Unit Skeleton remains the semantic source of truth; this compiled catalogue owns intrinsic shared-unit data including points, Leader Points, loadouts, paid wargear, unit-internal validation, attachment associations, and reusable semantic categories.\n\nAUTHORING / RUNTIME NOTES\nConsumer catalogues own availability, configuration gating, primary presentation categories, host-army-specific restrictions, and the actual Additional Copy Costs ledger arithmetic. Light Troupe, Dark Troupe, and Twilight Troupe each carry the Troop soft-copy semantic independently; Skyweaver, Voidweaver, and Starweaver carry the Other soft-copy semantic. Troupe Master and Shadowseer use constructive missing-attachment errors; Troupe hosts use constructive one-Leader validation; Solitaire and Death Jester use constructive Rare-limit errors. Shared root IDs and consumer entryLink targets are stable.\n\nHISTORICAL REVISION LOG\nREV7: New Recruit cost-type compatibility sync. REV8: presentation polish. REV9: durable shared-unit comments and grammar-safe host-limit errors. REV10: Troop soft-copy semantics added. V11: atomic Troupe Players 1-3 baseline packages. REV12: GS20 Troop copy-rule retarget. REV13: Harlequins 3.3.5 title sync. REV14: Harlequins 3.3.6 title and GS21 baseline sync. Current V14 comment consolidation is mechanics-neutral and does not change the library revision.\n\nREV15: Leader Points migration. Troupe Master and Shadowseer now each carry an intrinsic 1 LP cost on their shared semantic unit roots, exactly matching the existing Counts Toward Leader Maximum migration set. Consumer catalogues inherit these LP costs through their existing entryLinks and must not add duplicate local LP costs. Retargeted the library to Game System revision 24. Shared root IDs, legacy count tags, attachment validation, Troupe host-limit validation, Rare limits, Troop/Other soft-copy semantics, points, loadouts, paid wargear, and all unrelated library mechanics remain unchanged.\n\nV16 — LEADER POINTS CLEANUP\nRuntime validation passed through the playable Harlequins catalogue and through Aeldari/Drukhari consumers. The two legacy Counts Toward Leader Maximum links matched the two intrinsic 1-LP shared Leader roots exactly and were removed. Troupe Master and Shadowseer retain 1 LP on their shared semantic roots, so every consumer inherits the cost exactly once. No other shared unit receives LP mechanics. No points, loadouts, attachment, Additional Copy Cost, or other library-owned mechanics changed."
   }
 }
