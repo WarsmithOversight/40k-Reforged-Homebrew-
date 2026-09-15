@@ -4,8 +4,8 @@
     "id": "19d4-d5d6-f831-bb68",
     "name": "Manufactorum Imperium 3.3.3 - Library",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 24,
-    "revision": 13,
+    "gameSystemRevision": 26,
+    "revision": 14,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [],
@@ -333,55 +333,55 @@
                         ]
                       }
                     ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Pintle Weapons",
-            "id": "fa9d-2461-b102-b0a1",
-            "hidden": false,
-            "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "ec04-7c8f-600d-ef09",
-                "includeChildSelections": false
-              }
-            ],
-            "selectionEntries": [
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Pintle Heavy Stubber",
-                "hidden": false,
-                "id": "1bdd-3db9-6d35-80d6",
-                "sortIndex": 1,
-                "costs": [
+                  },
                   {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 20
-                  }
-                ]
-              },
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Pintle Storm Bolter",
-                "hidden": false,
-                "id": "a8cf-e17d-9199-7c58",
-                "sortIndex": 2,
-                "costs": [
-                  {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 20
+                    "name": "​",
+                    "id": "fa9d-2461-b102-b0a1",
+                    "hidden": false,
+                    "sortIndex": 4,
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ec04-7c8f-600d-ef09",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pintle Heavy Stubber",
+                        "hidden": false,
+                        "id": "1bdd-3db9-6d35-80d6",
+                        "sortIndex": 1,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 20
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pintle Storm Bolter",
+                        "hidden": false,
+                        "id": "a8cf-e17d-9199-7c58",
+                        "sortIndex": 2,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 20
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
@@ -391,7 +391,7 @@
             "name": "Paid Wargear",
             "id": "14c8-9efa-e13e-f776",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 2,
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -478,7 +478,7 @@
             ]
           }
         ],
-        "comment": "TANK COMMANDER CURRENT STATE: complete Rare Leader / Vehicle loadout. Vanquisher Cannon exposes its mandatory Coaxial Weapon choice. Redundant turret, hull, and sponson slot labels are suppressed. Pintle Weapons is a top-level section between Loadout Options and Paid Wargear; one-item Paid Wargear options use direct checkbox-style selections.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch.\nMANUFACTORUM IMPERIUM LIBRARY V12 / LEADER POINTS: synchronized the intrinsic Tank Commander Leader Points semantic from Astra Militarum REV38. This shared root costs 1 LP. Consuming catalogues inherit that cost through their existing entryLinks and must not duplicate it locally. The legacy Counts Toward Leader Maximum tag remains intact during dual-system migration."
+        "comment": "TANK COMMANDER CURRENT STATE: complete Rare Leader / Vehicle loadout. Vanquisher Cannon exposes its mandatory Coaxial Weapon choice. Redundant turret, hull, sponson, and Pintle Weapons headers are suppressed; the optional pintle selector sits at the bottom of Loadout Options. One-item Paid Wargear options use direct checkbox-style selections.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch.\nMANUFACTORUM IMPERIUM LIBRARY V12 / LEADER POINTS: synchronized the intrinsic Tank Commander Leader Points semantic from Astra Militarum REV38. This shared root costs 1 LP. Consuming catalogues inherit that cost through their existing entryLinks and must not duplicate it locally. The legacy Counts Toward Leader Maximum tag remains intact during dual-system migration."
       },
       {
         "type": "unit",
@@ -661,65 +661,65 @@
                     ],
                     "defaultSelectionEntryId": "f68c-6b04-2482-1461",
                     "sortIndex": 3
+                  },
+                  {
+                    "name": "​",
+                    "id": "c6e1-b61d-b901-3a97",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1c01-eee8-00dd-9d87",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pintle Heavy Stubber",
+                        "hidden": false,
+                        "id": "312e-e1c4-1da6-cd71",
+                        "sortIndex": 1,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 20
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pintle Storm Bolter",
+                        "hidden": false,
+                        "id": "be13-bc28-1b02-0faf",
+                        "sortIndex": 2,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 20
+                          }
+                        ]
+                      }
+                    ],
+                    "sortIndex": 4
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Pintle Weapons",
-            "id": "c6e1-b61d-b901-3a97",
-            "hidden": false,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "1c01-eee8-00dd-9d87",
-                "includeChildSelections": false
-              }
-            ],
-            "selectionEntries": [
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Heavy Stubber",
-                "hidden": false,
-                "id": "312e-e1c4-1da6-cd71",
-                "sortIndex": 1,
-                "costs": [
-                  {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 20
-                  }
-                ]
-              },
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Storm Bolter",
-                "hidden": false,
-                "id": "be13-bc28-1b02-0faf",
-                "sortIndex": 2,
-                "costs": [
-                  {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 20
-                  }
-                ]
-              }
-            ],
-            "sortIndex": 2
-          },
-          {
             "name": "Paid Wargear",
             "id": "1dff-5a46-0ea7-1905",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 2,
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -785,7 +785,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "CHIMERA CURRENT STATE: Vehicle / Other. Loadout Options presents turret weapon, hull weapon, then fixed Lasgun Array. Pintle Weapons is a top-level section. Hunter-Killer Missile and Smoke Launchers are direct Paid Wargear checkboxes.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
+        "comment": "CHIMERA CURRENT STATE: Vehicle / Other. Loadout Options presents turret weapon, hull weapon, fixed Lasgun Array, then the optional pintle selector. Pintle Heavy Stubber / Pintle Storm Bolter bake the removed header context into the choice names. Hunter-Killer Missile and Smoke Launchers are direct Paid Wargear checkboxes.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
       },
       {
         "type": "unit",
@@ -860,64 +860,66 @@
                       }
                     ]
                   }
+                ],
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "99de-3d18-35ba-2f1d",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "439c-717d-b70c-deae",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pintle Heavy Stubber",
+                        "hidden": false,
+                        "id": "0ebd-810d-9988-5fc8",
+                        "sortIndex": 1,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pintle Storm Bolter",
+                        "hidden": false,
+                        "id": "eb37-dccb-e11e-86f6",
+                        "sortIndex": 2,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      }
+                    ],
+                    "sortIndex": 1
+                  }
                 ]
               }
             ]
           },
           {
-            "name": "Pintle Weapons",
-            "id": "99de-3d18-35ba-2f1d",
-            "hidden": false,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "439c-717d-b70c-deae",
-                "includeChildSelections": false
-              }
-            ],
-            "selectionEntries": [
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Heavy Stubber",
-                "hidden": false,
-                "id": "0ebd-810d-9988-5fc8",
-                "sortIndex": 1,
-                "costs": [
-                  {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 10
-                  }
-                ]
-              },
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Storm Bolter",
-                "hidden": false,
-                "id": "eb37-dccb-e11e-86f6",
-                "sortIndex": 2,
-                "costs": [
-                  {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 10
-                  }
-                ]
-              }
-            ],
-            "sortIndex": 2
-          },
-          {
             "name": "Paid Wargear",
             "id": "580c-e89a-84a3-efe6",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 2,
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -983,7 +985,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "TAUROX CURRENT STATE: Vehicle / Other. Optional Twin Autocannon is a direct Loadout Options checkbox. Pintle Weapons is a top-level section. Hunter-Killer Missile and Smoke Launchers are direct Paid Wargear checkboxes.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
+        "comment": "TAUROX CURRENT STATE: Vehicle / Other. Optional Twin Autocannon is shown in Loadout Options, followed by the optional pintle selector. Pintle Heavy Stubber / Pintle Storm Bolter bake the removed header context into the choice names. Hunter-Killer Missile and Smoke Launchers are direct Paid Wargear checkboxes.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
       },
       {
         "type": "unit",
@@ -1303,65 +1305,65 @@
                       }
                     ],
                     "sortIndex": 3
+                  },
+                  {
+                    "name": "​",
+                    "id": "6e90-58b4-c0cb-cd6b",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5bc1-7572-9074-63f7",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pintle Heavy Stubber",
+                        "hidden": false,
+                        "id": "d6ff-5938-ee1e-6608",
+                        "sortIndex": 1,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pintle Storm Bolter",
+                        "hidden": false,
+                        "id": "3084-a45c-cafd-04dd",
+                        "sortIndex": 2,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      }
+                    ],
+                    "sortIndex": 4
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Pintle Weapons",
-            "id": "6e90-58b4-c0cb-cd6b",
-            "hidden": false,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "5bc1-7572-9074-63f7",
-                "includeChildSelections": false
-              }
-            ],
-            "selectionEntries": [
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Pintle Heavy Stubber",
-                "hidden": false,
-                "id": "d6ff-5938-ee1e-6608",
-                "sortIndex": 1,
-                "costs": [
-                  {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 10
-                  }
-                ]
-              },
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Pintle Storm Bolter",
-                "hidden": false,
-                "id": "3084-a45c-cafd-04dd",
-                "sortIndex": 2,
-                "costs": [
-                  {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 10
-                  }
-                ]
-              }
-            ],
-            "sortIndex": 2
-          },
-          {
             "name": "Paid Wargear",
             "id": "095d-32ef-8773-a4ad",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 2,
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -1453,7 +1455,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "LEMAN RUSS CURRENT STATE: Vehicle / Other. Turret, hull, and optional sponson choices live under Loadout Options with redundant slot labels suppressed; Vanquisher exposes its mandatory coaxial choice. Pintle Weapons is a top-level section. Hunter-Killer Missile, Dozer Blade, and Smoke Launchers use direct Paid Wargear checkboxes.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
+        "comment": "LEMAN RUSS CURRENT STATE: Vehicle / Other. Turret, hull, optional sponson, and optional pintle choices all live under Loadout Options with redundant slot headers suppressed; Vanquisher exposes its mandatory coaxial choice. Hunter-Killer Missile, Dozer Blade, and Smoke Launchers use direct Paid Wargear checkboxes.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
       },
       {
         "type": "unit",
@@ -2483,65 +2485,65 @@
                     ],
                     "defaultSelectionEntryId": "1c1e-8889-1419-8138",
                     "sortIndex": 2
+                  },
+                  {
+                    "name": "​",
+                    "id": "defe-3a8e-615e-274e",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9521-e6c1-536a-df03",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pintle Heavy Stubber",
+                        "hidden": false,
+                        "id": "9b75-db80-2d3f-88a3",
+                        "sortIndex": 1,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 20
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Pintle Storm Bolter",
+                        "hidden": false,
+                        "id": "5123-6f69-646c-ef39",
+                        "sortIndex": 2,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 20
+                          }
+                        ]
+                      }
+                    ],
+                    "sortIndex": 3
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Pintle Weapons",
-            "id": "defe-3a8e-615e-274e",
-            "hidden": false,
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "9521-e6c1-536a-df03",
-                "includeChildSelections": false
-              }
-            ],
-            "selectionEntries": [
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Pintle Heavy Stubber",
-                "hidden": false,
-                "id": "9b75-db80-2d3f-88a3",
-                "sortIndex": 1,
-                "costs": [
-                  {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 20
-                  }
-                ]
-              },
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Pintle Storm Bolter",
-                "hidden": false,
-                "id": "5123-6f69-646c-ef39",
-                "sortIndex": 2,
-                "costs": [
-                  {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 20
-                  }
-                ]
-              }
-            ],
-            "sortIndex": 2
-          },
-          {
             "name": "Paid Wargear",
             "id": "b1f0-bbd4-fd20-5a88",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 2,
             "selectionEntries": [
               {
                 "type": "upgrade",
@@ -2607,7 +2609,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "HELLHOUND CURRENT STATE: Vehicle / Other. Weapon choices are shown without redundant Primary / Secondary headers, with hull weapons named directly. Pintle Weapons is a top-level section. Hunter-Killer Missile and Smoke Launchers are direct Paid Wargear checkboxes.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
+        "comment": "HELLHOUND CURRENT STATE: Vehicle / Other. Weapon choices are shown without redundant Primary / Secondary / Pintle Weapons headers, with hull and pintle weapons named directly. The optional pintle selector sits at the bottom of Loadout Options. Hunter-Killer Missile and Smoke Launchers are direct Paid Wargear checkboxes.\nMANUFACTORUM IMPERIUM LIBRARY V11: mirrored from Astra Militarum 3.3.5 REV37 with stable root ID preserved. All intrinsic points, loadouts, validation, and soft-copy semantics are retained; the consuming catalogue owns the visible presentation category and availability switch."
       },
       {
         "type": "unit",
@@ -6532,6 +6534,6 @@
         ]
       }
     ],
-    "comment": "CURRENT STATE\nReusable cross-faction shared vehicle library for the Adeptus Mechanicus Manufactorum Imperium rule on Game System revision 24. This catalogue contains no root selectionEntries; all twenty-one portable vehicle roots live in sharedSelectionEntries. The library mirrors eleven Astra Militarum vehicle roots from Astra Militarum 3.3.5 REV37, with Tank Commander Leader Points semantics synchronized from REV38, and ten chapter-independent Space Marine vehicle roots through Space Marines 3.3.7 REV17/REV18. Stable shared root IDs are preserved across all mirrors.\n\nAUTHORING & RUNTIME NOTES\nAll shared entries keep their intrinsic unit semantics, including points, loadouts, Rare markers, Leader Points, legacy Leader-Capacity markers, and Other soft-copy markers, but those semantics remain non-primary inside the library. Consuming catalogues own visible presentation through local entryLinks and category links. Adeptus Mechanicus currently consumes this library through separate Astra Militarum Vehicles and Space Marines Vehicles switches. Baal Predator remains intentionally excluded because the consuming catalogue cannot satisfy its Blood Angels restriction.\n\nSOURCE SYNC HISTORY\nV1: initial Astra Militarum vehicle bridge from Astra Militarum 3.3.3 REV18.\nV2: retargeted to Game System REV14.\nV3-V4: mirrored Astra Militarum REV19-20 presentation polish across all eleven Astra vehicles.\nV5: retargeted to Game System REV17.\nV6: retargeted to Game System REV18 and added ten chapter-independent Space Marine vehicle bridge roots.\nV7: retargeted to Game System REV21.\nV8: populated the six previously empty Space Marine vehicle bridge roots from Space Marines 3.3.7 REV14.\nV9: synchronized Space Marine Vindicator, Astartes Basilisk, Predator, and Land Raider from Space Marines REV15.\nV10: synchronized all portable Space Marine roots touched by Space Marines REV17.\nV11: synchronized all eleven Astra Militarum vehicle roots from Astra Militarum 3.3.5 REV37 and consolidated library comments for the live GS21 state.\nV12: retargeted to Game System REV24 for the Leader Points migration. Tank Commander is the only shared Manufactorum root carrying both Leader and Counts Toward Leader Maximum semantics, and now intrinsically costs 1 LP. The other twenty portable vehicle roots receive no LP mechanics. The old Tank Commander count tag remains unchanged for parallel migration validation. Adeptus Mechanicus continues to consume the library through its existing local entryLinks, source switches, presentation categories, selected-safe hiding, and local copy-cost arithmetic; no consumer-local LP cost is required. No shared root IDs, points, loadouts, Rare semantics, Other soft-copy semantics, or unrelated executable mechanics changed.\n\nV13 — LEADER POINTS CLEANUP\nRuntime inheritance was previously validated through the Adeptus Mechanicus consumer catalogue: Tank Commander contributes exactly 1 LP from this shared Manufactorum root with no consumer-local double-charge. The single legacy Counts Toward Leader Maximum link on Tank Commander matched that 1-LP ownership exactly and was removed. Tank Commander retains its intrinsic 1 LP cost. The other 20 shared Manufactorum unit roots remain without Leader Points mechanics. No shared-unit costs, profiles, loadouts, category ownership, or other library mechanics changed. This library carries no player-facing Patch Notes / Updated configuration item, so no export-marker presentation change was added."
+    "comment": "CURRENT STATE\nReusable cross-faction shared vehicle library for the Adeptus Mechanicus Manufactorum Imperium rule on Game System revision 24. This catalogue contains no root selectionEntries; all twenty-one portable vehicle roots live in sharedSelectionEntries. The library mirrors eleven Astra Militarum vehicle roots from Astra Militarum 3.3.5 REV37, with Tank Commander Leader Points semantics synchronized from REV38, and ten chapter-independent Space Marine vehicle roots through Space Marines 3.3.7 REV17/REV18. Stable shared root IDs are preserved across all mirrors.\n\nAUTHORING & RUNTIME NOTES\nAll shared entries keep their intrinsic unit semantics, including points, loadouts, Rare markers, Leader Points, legacy Leader-Capacity markers, and Other soft-copy markers, but those semantics remain non-primary inside the library. Consuming catalogues own visible presentation through local entryLinks and category links. Adeptus Mechanicus currently consumes this library through separate Astra Militarum Vehicles and Space Marines Vehicles switches. Baal Predator remains intentionally excluded because the consuming catalogue cannot satisfy its Blood Angels restriction.\n\nSOURCE SYNC HISTORY\nV1: initial Astra Militarum vehicle bridge from Astra Militarum 3.3.3 REV18.\nV2: retargeted to Game System REV14.\nV3-V4: mirrored Astra Militarum REV19-20 presentation polish across all eleven Astra vehicles.\nV5: retargeted to Game System REV17.\nV6: retargeted to Game System REV18 and added ten chapter-independent Space Marine vehicle bridge roots.\nV7: retargeted to Game System REV21.\nV8: populated the six previously empty Space Marine vehicle bridge roots from Space Marines 3.3.7 REV14.\nV9: synchronized Space Marine Vindicator, Astartes Basilisk, Predator, and Land Raider from Space Marines REV15.\nV10: synchronized all portable Space Marine roots touched by Space Marines REV17.\nV11: synchronized all eleven Astra Militarum vehicle roots from Astra Militarum 3.3.5 REV37 and consolidated library comments for the live GS21 state.\nV12: retargeted to Game System REV24 for the Leader Points migration. Tank Commander is the only shared Manufactorum root carrying both Leader and Counts Toward Leader Maximum semantics, and now intrinsically costs 1 LP. The other twenty portable vehicle roots receive no LP mechanics. The old Tank Commander count tag remains unchanged for parallel migration validation. Adeptus Mechanicus continues to consume the library through its existing local entryLinks, source switches, presentation categories, selected-safe hiding, and local copy-cost arithmetic; no consumer-local LP cost is required. No shared root IDs, points, loadouts, Rare semantics, Other soft-copy semantics, or unrelated executable mechanics changed.\n\nV13 — LEADER POINTS CLEANUP\nRuntime inheritance was previously validated through the Adeptus Mechanicus consumer catalogue: Tank Commander contributes exactly 1 LP from this shared Manufactorum root with no consumer-local double-charge. The single legacy Counts Toward Leader Maximum link on Tank Commander matched that 1-LP ownership exactly and was removed. Tank Commander retains its intrinsic 1 LP cost. The other 20 shared Manufactorum unit roots remain without Leader Points mechanics. No shared-unit costs, profiles, loadouts, category ownership, or other library mechanics changed. This library carries no player-facing Patch Notes / Updated configuration item, so no export-marker presentation change was added.\n\nV14 — ASTRA PINTLE PRESENTATION SYNC\nSynchronized Astra REV40 presentation for Tank Commander, Chimera, Taurox, Leman Russ Battle Tank, and Hellhound. Their existing max-one Pintle Weapons selector objects were moved intact beneath the unit/model block at the bottom of Loadout Options, with the wrapper heading suppressed. Chimera and Taurox now bake the Pintle prefix into their pintle weapon names. Stable root, group, selection, constraint, cost, and infoLink IDs are preserved. The touched library was compatibility-only retargeted from GS24 to GS26."
   }
 }
