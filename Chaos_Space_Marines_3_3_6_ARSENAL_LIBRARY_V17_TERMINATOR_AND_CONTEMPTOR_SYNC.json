@@ -5,7 +5,7 @@
     "name": "Chaos Space Marines 3.3.6 - Arsenal Library",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 24,
-    "revision": 16,
+    "revision": 17,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "sharedSelectionEntries": [
@@ -3550,14 +3550,6 @@
                               }
                             ]
                           }
-                        ],
-                        "categoryLinks": [
-                          {
-                            "targetId": "1a13-1be9-7076-5f96",
-                            "id": "9fbe-5214-3a4a-9dcd",
-                            "primary": false,
-                            "name": "Heavy Weapon Terminator Role"
-                          }
                         ]
                       },
                       {
@@ -4033,14 +4025,6 @@
                               }
                             ]
                           }
-                        ],
-                        "categoryLinks": [
-                          {
-                            "targetId": "1a13-1be9-7076-5f96",
-                            "id": "1886-f657-0c19-c9d5",
-                            "primary": false,
-                            "name": "Heavy Weapon Terminator Role"
-                          }
                         ]
                       },
                       {
@@ -4243,28 +4227,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT REV17: the two-model Chaos Terminator unit is presented as two explicit independent model records because its battlefield roles differ substantially despite the PDF expressing them through overlapping replacement clauses. Each model chooses one of three player-facing roles: Combi-weapon Terminator, Heavy Weapon Terminator, or Assault Terminator. Combi-weapon Terminators select one melee weapon plus one Combi package; the Combi packages use a single visible choice with hidden semantic child items, and Combi-Melta & Combi-Bolter costs +10. Heavy Weapon Terminators select one melee weapon plus Reaper Autocannon or Heavy Flamer. Assault Terminators select two independent melee weapons; choosing Lightning Claw in both lists represents paired Lightning Claws without a separate Lightning Claws option. The two models otherwise choose roles and loadouts independently, but the unit may include only one Heavy Weapon Terminator. Cyclone Missiles remains a single +20 Paid Wargear choice at unit level because the physical model makes its bearer unambiguous during play.\nSHARED WEAPON IDS REV25: every repeated player-facing weapon/loadout in Chaos Terminators now links to one shared selection identity. This covers Chainfist, Power Fist, Power Weapon, Chainsword, Lightning Claw, the four Combi-weapon loadouts, Reaper Autocannon, and Heavy Flamer. All existing per-branch selection IDs are retained as entryLink IDs, so defaults and the builder hierarchy stay unchanged. Combined Combi loadouts are treated as the meaningful export leaf; their historical hidden semantic component groups are retained under the shared target but made optional so they do not auto-select. Lernaean Terminators and other Terminator units are intentionally unchanged.\nREV28 PRESENTATION REPLAY: suppressed redundant Melee Weapon, Combi-weapon, and Heavy Weapon headers inside the existing role choices. The healthy production shared-weapon IDs are retained; the abandoned export-aggregation branch is not carried forward.\nERROR TEMPLATE: heavy_weapon_terminator_limit. Both Heavy Weapon Terminator role choices remain visible and selectable. A custom corrective error triggers at 2+ selected Heavy Weapon Terminator roles and tells the player to choose a different role for one model.",
-        "modifiers": [
-          {
-            "type": "add",
-            "field": "error",
-            "value": "This unit has more than one Heavy Weapon Terminator. It may include only one Heavy Weapon Terminator. Choose a different role for one of those models.",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 2,
-                "field": "selections",
-                "scope": "self",
-                "childId": "1a13-1be9-7076-5f96",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": false,
-                "queryFromSelf": false,
-                "childName": "Heavy Weapon Terminator Role"
-              }
-            ]
-          }
-        ]
+        "comment": "LOADOUT REV17: the two-model Chaos Terminator unit is presented as two explicit independent model records because its battlefield roles differ substantially despite the PDF expressing them through overlapping replacement clauses. Each model chooses one of three player-facing roles: Combi-weapon Terminator, Heavy Weapon Terminator, or Assault Terminator. Combi-weapon Terminators select one melee weapon plus one Combi package; the Combi packages use a single visible choice with hidden semantic child items, and Combi-Melta & Combi-Bolter costs +10. Heavy Weapon Terminators select one melee weapon plus Reaper Autocannon or Heavy Flamer. Assault Terminators select two independent melee weapons; choosing Lightning Claw in both lists represents paired Lightning Claws without a separate Lightning Claws option. The two models choose roles and loadouts independently, including both models taking the Heavy Weapon Terminator role. Cyclone Missiles remains a single +20 Paid Wargear choice at unit level because the physical model makes its bearer unambiguous during play.\nSHARED WEAPON IDS REV25: every repeated player-facing weapon/loadout in Chaos Terminators now links to one shared selection identity. This covers Chainfist, Power Fist, Power Weapon, Chainsword, Lightning Claw, the four Combi-weapon loadouts, Reaper Autocannon, and Heavy Flamer. All existing per-branch selection IDs are retained as entryLink IDs, so defaults and the builder hierarchy stay unchanged. Combined Combi loadouts are treated as the meaningful export leaf; their historical hidden semantic component groups are retained under the shared target but made optional so they do not auto-select. Lernaean Terminators and other Terminator units are intentionally unchanged.\nREV28 PRESENTATION REPLAY: suppressed redundant Melee Weapon, Combi-weapon, and Heavy Weapon headers inside the existing role choices. The healthy production shared-weapon IDs are retained; the abandoned export-aggregation branch is not carried forward.\nREV44 BUGFIX: removed the obsolete one-Heavy-Weapon-Terminator restriction. Both Terminator models may now independently select the Heavy Weapon Terminator role."
       },
       {
         "type": "unit",
@@ -11401,27 +11364,6 @@
                             ],
                             "defaultSelectionEntryId": "e9ab-4860-bb94-4f79"
                           }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "5fd5-8344-3aa2-5f59",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Power Fist &"
-                              }
-                            ]
-                          }
                         ]
                       }
                     ],
@@ -11739,27 +11681,6 @@
                             ],
                             "defaultSelectionEntryId": "256d-ddd6-8a26-7d99"
                           }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "d2a0-d2f6-a010-fe4c",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Power Fist &"
-                              }
-                            ]
-                          }
                         ]
                       }
                     ],
@@ -11804,7 +11725,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT REV19: the PDF's replacement plumbing is intentionally flattened because the permitted combinations are output-normalized for project purposes. The model therefore has two identical anonymous weapon selectors and may duplicate any normal gun, Chainfist package, or Heavy Conversion Beamer. Chainfist & and Power Fist & are compact parent choices that each reveal a mandatory auxiliary selector containing Combi-Bolter, Graviton Gun, Heavy Flamer, Meltagun, or Plasma Blaster; the fist itself is retained as a hidden semantic child item. Power Fist is the sole cross-selector restriction because it is slightly above budget: selecting Power Fist & in either selector hides Power Fist & from the other selector without hiding the already-selected option. Cyclone Missiles remains optional +10 Paid Wargear."
+        "comment": "LOADOUT REV19: the PDF's replacement plumbing is intentionally flattened because the permitted combinations are output-normalized for project purposes. The model therefore has two identical anonymous weapon selectors and may duplicate any normal gun, Chainfist package, or Heavy Conversion Beamer. Chainfist & and Power Fist & are compact parent choices that each reveal a mandatory auxiliary selector containing Combi-Bolter, Graviton Gun, Heavy Flamer, Meltagun, or Plasma Blaster; the fist itself is retained as a hidden semantic child item. Power Fist packages may be selected in both weapon selectors, allowing a double Power Fist loadout. Cyclone Missiles remains optional +10 Paid Wargear.\nREV16 BUGFIX: removed the mutual-hide restriction between the two Power Fist selectors. Both arms may now independently select the Power Fist package."
       },
       {
         "type": "unit",
@@ -13458,14 +13379,9 @@
         "name": "Counts As: Legionaries",
         "id": "1a4c-202e-1eea-3192",
         "hidden": true
-      },
-      {
-        "name": "Heavy Weapon Terminator Role",
-        "id": "1a13-1be9-7076-5f96",
-        "hidden": true
       }
     ],
     "authorName": "40k Reforged Homebrew",
-    "comment": "CURRENT STATE\nGreat Traitors' Arsenal reusable library for Chaos Space Marines 3.3.6 on Game System revision 24. It contains the 28 mechanically portable generic Chaos Space Marines unit roots plus the shared weapon / loadout package dependencies and CSM-local attachment / counts-as categories required by those roots. The portable unit trees are synchronized to the playable Chaos Space Marines catalogue through REV41, with Leader Points semantics synchronized from REV42 and stable root IDs preserved. Legion-section compilations are intentionally excluded, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, and other Legion-only roots.\n\nAUTHORING & RUNTIME NOTES\nPortable roots are mirrored from the playable catalogue rather than re-authored here. Shared root IDs and shared package IDs are preserved so host entryLinks continue resolving the same semantic identities. Intrinsic Leader Points live on portable shared unit roots exactly once and are inherited by consumers. The library carries the generic attachment and Counts As: Legionaries categories needed by imported roots. Host catalogues own their own availability rules and any host-specific presentation. The abandoned export-aggregation / proxy-shape experiments from the contaminated CSM sibling branch are not part of this library.\n\nSOURCE SYNC HISTORY\nV1: generated from the healthy CSM REV26 portable set.\nV2: synchronized Daemon Hammer terminology from CSM REV27.\nV3: retargeted to GS20.\nV4: rebuilt from the healthy line and synchronized the recovered post-REV27 portable changes through CSM REV30.\nV5: corrected the temporary library version-label typo.\nV6: synchronized the CSM 3.3.5 Defiler rework.\nV7: synchronized corrected Defiler cost and Legionaries Champion ranged choices; retargeted to GS21.\nV8: synchronized the Defiler Missile Launcher correction.\nV9: synchronized all portable roots touched by CSM REV35, including checkbox and vehicle-presentation cleanup.\nV10: synchronized the complete 28-root portable set to CSM REV37. This brings in REV36 Additional Model checkbox changes for Possessed, Havocs, and Warp Talons; REV37 checkbox changes for Chosen and Breacher Siege Squad; and the confirmed visible Cannot attach to anything rules for Terminator Chaos Sorcerer Lord and Warpsmith. Library comments were consolidated for the live GS21 state.\nV11 — CSM REV38 CHOSEN PRESENTATION SYNC\nSynchronized the portable Chosen root from Chaos Space Marines 3.3.5 REV38: the redundant preset-selector wrapper header is suppressed and No Preset is renamed Manual Loadout. Stable Chosen root/selection IDs, branch nesting, model loadouts, preset behavior, points, validation, and all unrelated portable roots remain unchanged. GS21 retained.\nV12 — CSM REV39 CHAOS TERMINATOR HEAVY WEAPON LIMIT SYNC\nSynchronized the portable Chaos Terminators root from playable CSM REV39 and added the shared hidden Heavy Weapon Terminator Role semantic category required by its permissive-corrective one-heavy-role limit. Lernaean Terminators remain Legion-bound and are intentionally not part of the Arsenal library. All other 27 portable unit roots remain unchanged; GS21 retained.\nV13 — CSM 3.3.6 / CHAOS VINDICATOR SIEGE SHIELD SYNC\nUpdated the library baseline to Chaos Space Marines 3.3.6 and Game System revision 23. Synchronized the portable Chaos Vindicator root from playable CSM REV40 so its fixed loadout now includes the missing Siege Shield. Lernaean Terminators are Legion-bound and remain outside the Arsenal library, so the 3.3.6 removal of their Heavy Weapon Terminator cap requires no library change. All other portable roots remain unchanged.\nV14 — CSM REV41 LEGIONARIES CHAMPION CHAINSWORD SYNC\nSynchronized the portable Legionaries root from playable CSM REV41 so the Chaos Champion melee selector now includes Chainsword alongside Power Weapon, Power Fist, and Daemon Hammer. The existing shared Chainsword target and stable entryLink ID from the playable root are preserved. All other portable roots and library mechanics remain unchanged.\nV15 — LEADER POINTS MIGRATION\nRetargeted the library to Game System revision 24. Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary are the only five portable shared roots carrying both Leader and Counts Toward Leader Maximum semantics; each now intrinsically costs 1 LP, synchronized from playable Chaos Space Marines REV42. Consumer catalogues inherit those costs through their existing entryLinks and must not add duplicate local LP costs. Legion-section compilations remain intentionally excluded from Arsenal, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, and other Legion-only roots. The other 23 portable unit roots receive no LP mechanics. Legacy counted-Leader tags remain unchanged for parallel migration validation. Shared IDs, points, loadouts, attachments, Rare semantics, Additional Copy Cost semantics, Counts As categories, and all unrelated library mechanics remain unchanged.\n\nV16 — LEADER POINTS CLEANUP\nRuntime validation passed through multiple Great Traitors consumer catalogues. The five legacy Counts Toward Leader Maximum links matched the five shared 1-LP Leader roots exactly and were removed. Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary retain intrinsic 1 LP costs on their shared semantic roots. Consumer catalogues remain locally uncharged, so imported Leaders continue to inherit exactly one LP cost. The other 23 portable shared unit roots receive no LP mechanics. Legion-specific compiled Leaders remain outside this library. No points, loadouts, attachments, category ownership, or other shared-library mechanics changed."
+    "comment": "CURRENT STATE\nGreat Traitors' Arsenal reusable library for Chaos Space Marines 3.3.6 on Game System revision 24. It contains the 28 mechanically portable generic Chaos Space Marines unit roots plus the shared weapon / loadout package dependencies and CSM-local attachment / counts-as categories required by those roots. The portable unit trees are synchronized to the playable Chaos Space Marines catalogue through REV41, with Leader Points semantics synchronized from REV42 and stable root IDs preserved. Legion-section compilations are intentionally excluded, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, and other Legion-only roots.\n\nAUTHORING & RUNTIME NOTES\nPortable roots are mirrored from the playable catalogue rather than re-authored here. Shared root IDs and shared package IDs are preserved so host entryLinks continue resolving the same semantic identities. Intrinsic Leader Points live on portable shared unit roots exactly once and are inherited by consumers. The library carries the generic attachment and Counts As: Legionaries categories needed by imported roots. Host catalogues own their own availability rules and any host-specific presentation. The abandoned export-aggregation / proxy-shape experiments from the contaminated CSM sibling branch are not part of this library.\n\nSOURCE SYNC HISTORY\nV1: generated from the healthy CSM REV26 portable set.\nV2: synchronized Daemon Hammer terminology from CSM REV27.\nV3: retargeted to GS20.\nV4: rebuilt from the healthy line and synchronized the recovered post-REV27 portable changes through CSM REV30.\nV5: corrected the temporary library version-label typo.\nV6: synchronized the CSM 3.3.5 Defiler rework.\nV7: synchronized corrected Defiler cost and Legionaries Champion ranged choices; retargeted to GS21.\nV8: synchronized the Defiler Missile Launcher correction.\nV9: synchronized all portable roots touched by CSM REV35, including checkbox and vehicle-presentation cleanup.\nV10: synchronized the complete 28-root portable set to CSM REV37. This brings in REV36 Additional Model checkbox changes for Possessed, Havocs, and Warp Talons; REV37 checkbox changes for Chosen and Breacher Siege Squad; and the confirmed visible Cannot attach to anything rules for Terminator Chaos Sorcerer Lord and Warpsmith. Library comments were consolidated for the live GS21 state.\nV11 — CSM REV38 CHOSEN PRESENTATION SYNC\nSynchronized the portable Chosen root from Chaos Space Marines 3.3.5 REV38: the redundant preset-selector wrapper header is suppressed and No Preset is renamed Manual Loadout. Stable Chosen root/selection IDs, branch nesting, model loadouts, preset behavior, points, validation, and all unrelated portable roots remain unchanged. GS21 retained.\nV12 — CSM REV39 CHAOS TERMINATOR HEAVY WEAPON LIMIT SYNC\nSynchronized the portable Chaos Terminators root from playable CSM REV39 and added the shared hidden Heavy Weapon Terminator Role semantic category required by its permissive-corrective one-heavy-role limit. Lernaean Terminators remain Legion-bound and are intentionally not part of the Arsenal library. All other 27 portable unit roots remain unchanged; GS21 retained.\nV13 — CSM 3.3.6 / CHAOS VINDICATOR SIEGE SHIELD SYNC\nUpdated the library baseline to Chaos Space Marines 3.3.6 and Game System revision 23. Synchronized the portable Chaos Vindicator root from playable CSM REV40 so its fixed loadout now includes the missing Siege Shield. Lernaean Terminators are Legion-bound and remain outside the Arsenal library, so the 3.3.6 removal of their Heavy Weapon Terminator cap requires no library change. All other portable roots remain unchanged.\nV14 — CSM REV41 LEGIONARIES CHAMPION CHAINSWORD SYNC\nSynchronized the portable Legionaries root from playable CSM REV41 so the Chaos Champion melee selector now includes Chainsword alongside Power Weapon, Power Fist, and Daemon Hammer. The existing shared Chainsword target and stable entryLink ID from the playable root are preserved. All other portable roots and library mechanics remain unchanged.\nV15 — LEADER POINTS MIGRATION\nRetargeted the library to Game System revision 24. Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary are the only five portable shared roots carrying both Leader and Counts Toward Leader Maximum semantics; each now intrinsically costs 1 LP, synchronized from playable Chaos Space Marines REV42. Consumer catalogues inherit those costs through their existing entryLinks and must not add duplicate local LP costs. Legion-section compilations remain intentionally excluded from Arsenal, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, and other Legion-only roots. The other 23 portable unit roots receive no LP mechanics. Legacy counted-Leader tags remain unchanged for parallel migration validation. Shared IDs, points, loadouts, attachments, Rare semantics, Additional Copy Cost semantics, Counts As categories, and all unrelated library mechanics remain unchanged.\n\nV16 — LEADER POINTS CLEANUP\nRuntime validation passed through multiple Great Traitors consumer catalogues. The five legacy Counts Toward Leader Maximum links matched the five shared 1-LP Leader roots exactly and were removed. Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary retain intrinsic 1 LP costs on their shared semantic roots. Consumer catalogues remain locally uncharged, so imported Leaders continue to inherit exactly one LP cost. The other 23 portable shared unit roots receive no LP mechanics. Legion-specific compiled Leaders remain outside this library. No points, loadouts, attachments, category ownership, or other shared-library mechanics changed.\n\nV17 — TERMINATOR / CONTEMPTOR BUGFIX SYNC\nSynchronized the playable CSM REV44 fixes into portable shared content. Chaos Terminators no longer carry the obsolete Heavy Weapon Terminator role cap or its hidden counting category. Chaos Contemptor Dreadnought now permits Power Fist & in both weapon selectors. Stable unit, weapon, selector, auxiliary, and profile IDs are preserved."
   }
 }

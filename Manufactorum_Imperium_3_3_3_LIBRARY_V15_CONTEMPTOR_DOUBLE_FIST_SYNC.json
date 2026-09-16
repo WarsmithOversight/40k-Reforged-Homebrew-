@@ -5,7 +5,7 @@
     "name": "Manufactorum Imperium 3.3.3 - Library",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 26,
-    "revision": 14,
+    "revision": 15,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [],
@@ -5551,7 +5551,7 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           }
         ],
-        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Mirrors the normalized Chaos Contemptor architecture: two identical anonymous weapon selectors instead of exposing replacement plumbing. Each selector offers the six normal guns, Heavy Conversion Beamer, Dreadnought Chainfist &, or Dreadnought Power Fist &. Fist packages reveal a mandatory Combi-Bolter / Graviton Gun / Heavy Flamer / Meltagun / Plasma Blaster auxiliary choice, with the fist itself retained as a hidden semantic child. Duplicate normal guns, Chainfists and Heavy Conversion Beamers are permitted by the established project convention; Dreadnought Power Fist is the sole cross-selector restriction. Cyclone Missile Launcher is optional +10 Paid Wargear.",
+        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Mirrors the normalized Chaos Contemptor architecture: two identical anonymous weapon selectors instead of exposing replacement plumbing. Each selector offers the six normal guns, Heavy Conversion Beamer, Dreadnought Chainfist &, or Dreadnought Power Fist &. Fist packages reveal a mandatory Combi-Bolter / Graviton Gun / Heavy Flamer / Meltagun / Plasma Blaster auxiliary choice, with the fist itself retained as a hidden semantic child. Duplicate normal guns, Chainfists, Heavy Conversion Beamers, and Dreadnought Power Fists are permitted. Cyclone Missile Launcher is optional +10 Paid Wargear.\nREV16 BUGFIX: removed the mutual-hide restriction between the two Power Fist selectors. Both arms may now independently select the Power Fist package.",
         "selectionEntryGroups": [
           {
             "name": "Loadout Options",
@@ -5877,27 +5877,6 @@
                             ],
                             "defaultSelectionEntryId": "5313-e938-b55b-9a8b"
                           }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "9ddf-801d-c733-f082",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Dreadnought Power Fist &"
-                              }
-                            ]
-                          }
                         ]
                       }
                     ],
@@ -6215,27 +6194,6 @@
                             ],
                             "defaultSelectionEntryId": "d424-c284-8479-e7d9"
                           }
-                        ],
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "1ee5-616e-1dfd-30be",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Dreadnought Power Fist &"
-                              }
-                            ]
-                          }
                         ]
                       }
                     ],
@@ -6534,6 +6492,6 @@
         ]
       }
     ],
-    "comment": "CURRENT STATE\nReusable cross-faction shared vehicle library for the Adeptus Mechanicus Manufactorum Imperium rule on Game System revision 24. This catalogue contains no root selectionEntries; all twenty-one portable vehicle roots live in sharedSelectionEntries. The library mirrors eleven Astra Militarum vehicle roots from Astra Militarum 3.3.5 REV37, with Tank Commander Leader Points semantics synchronized from REV38, and ten chapter-independent Space Marine vehicle roots through Space Marines 3.3.7 REV17/REV18. Stable shared root IDs are preserved across all mirrors.\n\nAUTHORING & RUNTIME NOTES\nAll shared entries keep their intrinsic unit semantics, including points, loadouts, Rare markers, Leader Points, legacy Leader-Capacity markers, and Other soft-copy markers, but those semantics remain non-primary inside the library. Consuming catalogues own visible presentation through local entryLinks and category links. Adeptus Mechanicus currently consumes this library through separate Astra Militarum Vehicles and Space Marines Vehicles switches. Baal Predator remains intentionally excluded because the consuming catalogue cannot satisfy its Blood Angels restriction.\n\nSOURCE SYNC HISTORY\nV1: initial Astra Militarum vehicle bridge from Astra Militarum 3.3.3 REV18.\nV2: retargeted to Game System REV14.\nV3-V4: mirrored Astra Militarum REV19-20 presentation polish across all eleven Astra vehicles.\nV5: retargeted to Game System REV17.\nV6: retargeted to Game System REV18 and added ten chapter-independent Space Marine vehicle bridge roots.\nV7: retargeted to Game System REV21.\nV8: populated the six previously empty Space Marine vehicle bridge roots from Space Marines 3.3.7 REV14.\nV9: synchronized Space Marine Vindicator, Astartes Basilisk, Predator, and Land Raider from Space Marines REV15.\nV10: synchronized all portable Space Marine roots touched by Space Marines REV17.\nV11: synchronized all eleven Astra Militarum vehicle roots from Astra Militarum 3.3.5 REV37 and consolidated library comments for the live GS21 state.\nV12: retargeted to Game System REV24 for the Leader Points migration. Tank Commander is the only shared Manufactorum root carrying both Leader and Counts Toward Leader Maximum semantics, and now intrinsically costs 1 LP. The other twenty portable vehicle roots receive no LP mechanics. The old Tank Commander count tag remains unchanged for parallel migration validation. Adeptus Mechanicus continues to consume the library through its existing local entryLinks, source switches, presentation categories, selected-safe hiding, and local copy-cost arithmetic; no consumer-local LP cost is required. No shared root IDs, points, loadouts, Rare semantics, Other soft-copy semantics, or unrelated executable mechanics changed.\n\nV13 — LEADER POINTS CLEANUP\nRuntime inheritance was previously validated through the Adeptus Mechanicus consumer catalogue: Tank Commander contributes exactly 1 LP from this shared Manufactorum root with no consumer-local double-charge. The single legacy Counts Toward Leader Maximum link on Tank Commander matched that 1-LP ownership exactly and was removed. Tank Commander retains its intrinsic 1 LP cost. The other 20 shared Manufactorum unit roots remain without Leader Points mechanics. No shared-unit costs, profiles, loadouts, category ownership, or other library mechanics changed. This library carries no player-facing Patch Notes / Updated configuration item, so no export-marker presentation change was added.\n\nV14 — ASTRA PINTLE PRESENTATION SYNC\nSynchronized Astra REV40 presentation for Tank Commander, Chimera, Taurox, Leman Russ Battle Tank, and Hellhound. Their existing max-one Pintle Weapons selector objects were moved intact beneath the unit/model block at the bottom of Loadout Options, with the wrapper heading suppressed. Chimera and Taurox now bake the Pintle prefix into their pintle weapon names. Stable root, group, selection, constraint, cost, and infoLink IDs are preserved. The touched library was compatibility-only retargeted from GS24 to GS26."
+    "comment": "CURRENT STATE\nReusable cross-faction shared vehicle library for the Adeptus Mechanicus Manufactorum Imperium rule on Game System revision 26. This catalogue contains no root selectionEntries; all twenty-one portable vehicle roots live in sharedSelectionEntries. The library mirrors eleven Astra Militarum vehicle roots from Astra Militarum 3.3.5 REV37, with Tank Commander Leader Points semantics synchronized from REV38, and ten chapter-independent Space Marine vehicle roots through Space Marines 3.3.7 REV17/REV18. Stable shared root IDs are preserved across all mirrors.\n\nAUTHORING & RUNTIME NOTES\nAll shared entries keep their intrinsic unit semantics, including points, loadouts, Rare markers, Leader Points, legacy Leader-Capacity markers, and Other soft-copy markers, but those semantics remain non-primary inside the library. Consuming catalogues own visible presentation through local entryLinks and category links. Adeptus Mechanicus currently consumes this library through separate Astra Militarum Vehicles and Space Marines Vehicles switches. Baal Predator remains intentionally excluded because the consuming catalogue cannot satisfy its Blood Angels restriction.\n\nSOURCE SYNC HISTORY\nV1: initial Astra Militarum vehicle bridge from Astra Militarum 3.3.3 REV18.\nV2: retargeted to Game System REV14.\nV3-V4: mirrored Astra Militarum REV19-20 presentation polish across all eleven Astra vehicles.\nV5: retargeted to Game System REV17.\nV6: retargeted to Game System REV18 and added ten chapter-independent Space Marine vehicle bridge roots.\nV7: retargeted to Game System REV21.\nV8: populated the six previously empty Space Marine vehicle bridge roots from Space Marines 3.3.7 REV14.\nV9: synchronized Space Marine Vindicator, Astartes Basilisk, Predator, and Land Raider from Space Marines REV15.\nV10: synchronized all portable Space Marine roots touched by Space Marines REV17.\nV11: synchronized all eleven Astra Militarum vehicle roots from Astra Militarum 3.3.5 REV37 and consolidated library comments for the live GS21 state.\nV12: retargeted to Game System REV24 for the Leader Points migration. Tank Commander is the only shared Manufactorum root carrying both Leader and Counts Toward Leader Maximum semantics, and now intrinsically costs 1 LP. The other twenty portable vehicle roots receive no LP mechanics. The old Tank Commander count tag remains unchanged for parallel migration validation. Adeptus Mechanicus continues to consume the library through its existing local entryLinks, source switches, presentation categories, selected-safe hiding, and local copy-cost arithmetic; no consumer-local LP cost is required. No shared root IDs, points, loadouts, Rare semantics, Other soft-copy semantics, or unrelated executable mechanics changed.\n\nV13 — LEADER POINTS CLEANUP\nRuntime inheritance was previously validated through the Adeptus Mechanicus consumer catalogue: Tank Commander contributes exactly 1 LP from this shared Manufactorum root with no consumer-local double-charge. The single legacy Counts Toward Leader Maximum link on Tank Commander matched that 1-LP ownership exactly and was removed. Tank Commander retains its intrinsic 1 LP cost. The other 20 shared Manufactorum unit roots remain without Leader Points mechanics. No shared-unit costs, profiles, loadouts, category ownership, or other library mechanics changed. This library carries no player-facing Patch Notes / Updated configuration item, so no export-marker presentation change was added.\n\nV14 — ASTRA PINTLE PRESENTATION SYNC\nSynchronized Astra REV40 presentation for Tank Commander, Chimera, Taurox, Leman Russ Battle Tank, and Hellhound. Their existing max-one Pintle Weapons selector objects were moved intact beneath the unit/model block at the bottom of Loadout Options, with the wrapper heading suppressed. Chimera and Taurox now bake the Pintle prefix into their pintle weapon names. Stable root, group, selection, constraint, cost, and infoLink IDs are preserved. The touched library was compatibility-only retargeted from GS24 to GS26.\n\nV15 — CONTEMPTOR DOUBLE POWER FIST SYNC\nSynchronized Space Marines REV22: Contemptor Dreadnought may now select Dreadnought Power Fist & in both weapon selectors. The previous mutual-hide modifiers were removed; all weapon package IDs, hidden fist semantic children, auxiliary selectors, costs, and profiles are unchanged."
   }
 }
