@@ -5,7 +5,7 @@
     "name": "Space Marines 3.3.7",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 26,
-    "revision": 22,
+    "revision": 23,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -29,7 +29,7 @@
             "name": "⚠️ CATALOGUE UNDER CONSTRUCTION ⚠️",
             "id": "4fae-07c4-a165-5a51",
             "hidden": false,
-            "description": "# ⚠️ SPACE MARINES CATALOGUE UNDER CONSTRUCTION ⚠️\n\n## Current rules version: 3.3.7\n\n**This catalogue is still under active construction and is not yet a complete representation of the Space Marines army rules.**\n\nSome units, loadouts, restrictions, or options may be missing, incomplete, or still awaiting implementation.\n\n**The Space Marines army rules PDF remains authoritative. If the listbuilder and the army rules disagree, follow the army rules PDF.**\n\n*For the current rules, development status, and to report catalogue problems, visit the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 16th)\n\n• Contemptor Dreadnought: Dreadnought Power Fist packages may now be selected in both weapon slots, allowing a double Power Fist loadout.\n• Leader Points: the 17 existing paid Leader roots cost 1 LP each; Sanguinary Priest remains uncharged.\n• Catalogue maintenance: current implementation notes and historical comments consolidated for the live GS26 catalogue.\n• Sanguinary Priest: Jump Pack now uses a checkbox-style Paid Wargear selection.\n• Victrix Guard, Victrix Honour Guard, Sanguinary Guard, Sternguard Veterans, Bladeguard Veterans, Devastator Centurions, and Assault Centurions: optional additional models now use checkbox-style Additional Model selections.\n• Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans now show a concise temporary Coming Soon message directing players to the Space Marines PDF in the Reforged Discord.\n• Sanguinary Guard: Sanguinary Banner now uses a checkbox-style Unit Upgrade selection.\n• Converted standalone optional Cyclone Missile Launcher, Venerable, Advanced Jamming Beacon, Smoke Launchers, Whirlwind Storm Bolter, Armour Piercing High Explosive Shells, Hunter-Killer Missile, Dozer Blade, Combat Shield, Haywire Mine, Jump Packs, Storm Shield, and Trapmaster Melta Bomb options to checkbox-style selections.",
+            "description": "# ⚠️ SPACE MARINES CATALOGUE UNDER CONSTRUCTION ⚠️\n\n## Current rules version: 3.3.7\n\n**This catalogue is still under active construction and is not yet a complete representation of the Space Marines army rules.**\n\nSome units, loadouts, restrictions, or options may be missing, incomplete, or still awaiting implementation.\n\n**The Space Marines army rules PDF remains authoritative. If the listbuilder and the army rules disagree, follow the army rules PDF.**\n\n*For the current rules, development status, and to report catalogue problems, visit the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 16th)\n\n• Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans: replaced the temporary Coming Soon placeholders with complete player-facing loadout trees; Terminator heavy weapons and Vanguard Relic Blades use permissive-corrective cross-model validation.\n• Contemptor Dreadnought: Dreadnought Power Fist packages may now be selected in both weapon slots, allowing a double Power Fist loadout.\n• Leader Points: the 17 existing paid Leader roots cost 1 LP each; Sanguinary Priest remains uncharged.\n• Catalogue maintenance: current implementation notes and historical comments consolidated for the live GS26 catalogue.\n• Sanguinary Priest: Jump Pack now uses a checkbox-style Paid Wargear selection.\n• Victrix Guard, Victrix Honour Guard, Sanguinary Guard, Sternguard Veterans, Bladeguard Veterans, Devastator Centurions, and Assault Centurions: optional additional models now use checkbox-style Additional Model selections.\n• Sanguinary Guard: Sanguinary Banner now uses a checkbox-style Unit Upgrade selection.\n• Converted standalone optional Cyclone Missile Launcher, Venerable, Advanced Jamming Beacon, Smoke Launchers, Whirlwind Storm Bolter, Armour Piercing High Explosive Shells, Hunter-Killer Missile, Dozer Blade, Combat Shield, Haywire Mine, Jump Packs, Storm Shield, and Trapmaster Melta Bomb options to checkbox-style selections.",
             "noindex": false
           }
         ],
@@ -47,7 +47,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV22: September 16th Contemptor bugfix. Removed the cross-selector Dreadnought Power Fist hide restriction while preserving the catalogue's under-construction status."
+        "comment": "REV23: September 16th final-four implementation. Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans now have complete player-facing loadout trees. The under-construction notice remains temporarily in place pending runtime validation."
       },
       {
         "type": "upgrade",
@@ -17981,14 +17981,509 @@
             ]
           }
         ],
-        "comment": "CURRENT STATE / INCOMPLETE: selectable Salamanders Other / Infantry root with current points, Chapter gate, copy accounting, and Leader-host validation. Internal models, equipment and loadout choices are intentionally not implemented yet; the visible Coming Soon rule directs players to the authoritative PDF.",
-        "rules": [
+        "comment": "CURRENT STATE: complete two-model polymorphic Firedrake loadout. Each model chooses one of three final-state roles: Dragonscale Shield Terminator, Lightning Claws Terminator, or +10 Point Combi-Bolter Terminator. Dragonscale Shield Terminators choose Thunder Hammer / Power Weapon / Power Fist. Combi-Bolter Terminators choose Storm Bolter or one of the four Combi-Bolter packages, plus the same melee choice. Lightning Claws Terminator is an atomic whole-model replacement. This models meaningful final states rather than the source replacement procedure.",
+        "selectionEntryGroups": [
           {
-            "name": "Coming Soon",
-            "id": "8371-a6a3-0634-868c",
+            "name": "Loadout Options",
+            "id": "c931-75ac-ec8c-865a",
             "hidden": false,
-            "description": "This unit will be added shortly. Until then, use the Space Marines army PDF in the Reforged Discord: https://discord.gg/BpjkaNmMVB",
-            "noindex": false
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Terminator 1",
+                "id": "568c-3583-abd2-e464",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "9a32-a044-8a58-ba99",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "fdad-b62a-a367-6aa6",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4d1c-3e64-3e2b-60ec",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dragonscale Shield Terminator",
+                        "hidden": false,
+                        "id": "ff97-2615-65d1-250e",
+                        "sortIndex": 1,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "​",
+                            "id": "dd6b-ae4b-19f5-bbe5",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "cf03-6ead-f401-3297",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "c12f-4fe0-9b83-75ab",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Thunder Hammer",
+                                "hidden": false,
+                                "id": "5b2e-05eb-9a74-fa0a",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Power Weapon",
+                                "hidden": false,
+                                "id": "e482-b2d4-c12a-f406",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Power Fist",
+                                "hidden": false,
+                                "id": "cd29-0332-0a54-3403",
+                                "sortIndex": 3
+                              }
+                            ],
+                            "defaultSelectionEntryId": "5b2e-05eb-9a74-fa0a"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claws Terminator",
+                        "hidden": false,
+                        "id": "0d78-363f-225e-d4c1",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combi-Bolter Terminator",
+                        "hidden": false,
+                        "id": "026b-7ae6-dc52-34fd",
+                        "sortIndex": 3,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ],
+                        "selectionEntryGroups": [
+                          {
+                            "name": "​",
+                            "id": "2dc2-6362-6ab0-5b5b",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "c2ed-3655-7de5-7e1d",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "eb55-b15c-6621-3a3a",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Storm Bolter",
+                                "hidden": false,
+                                "id": "4459-1784-8ae8-2f6a",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Combi-Bolter & Combi-Plasma",
+                                "hidden": false,
+                                "id": "d1dc-c1d1-d10b-15a8",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Combi-Bolter & Combi-Grav",
+                                "hidden": false,
+                                "id": "e0c4-3815-6f76-bf4b",
+                                "sortIndex": 3
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Combi-Bolter & Combi-Flamer",
+                                "hidden": false,
+                                "id": "7412-271e-5300-a0e8",
+                                "sortIndex": 4
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Combi-Bolter & Combi-Melta",
+                                "hidden": false,
+                                "id": "4320-0116-d67e-58d4",
+                                "sortIndex": 5
+                              }
+                            ],
+                            "defaultSelectionEntryId": "4459-1784-8ae8-2f6a"
+                          },
+                          {
+                            "name": "​",
+                            "id": "d5b5-7531-4bc4-6f57",
+                            "hidden": false,
+                            "sortIndex": 2,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "2230-d2b3-9db0-da9c",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "4f6b-07e6-1138-5356",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Thunder Hammer",
+                                "hidden": false,
+                                "id": "2620-0ceb-f4db-1ff1",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Power Weapon",
+                                "hidden": false,
+                                "id": "7a0f-de6d-dd77-57a7",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Power Fist",
+                                "hidden": false,
+                                "id": "9ba6-2d8f-0ee6-3052",
+                                "sortIndex": 3
+                              }
+                            ],
+                            "defaultSelectionEntryId": "2620-0ceb-f4db-1ff1"
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "ff97-2615-65d1-250e"
+                  }
+                ]
+              },
+              {
+                "name": "Terminator 2",
+                "id": "0a8e-51eb-63c7-73d5",
+                "hidden": false,
+                "sortIndex": 2,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "47c5-5970-4a1b-f974",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "ad22-2299-9c67-40cc",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "1387-1241-8952-b2b9",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Dragonscale Shield Terminator",
+                        "hidden": false,
+                        "id": "d1b9-b35a-9f1a-5d94",
+                        "sortIndex": 1,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "​",
+                            "id": "aa5b-f2d6-2c8f-3b46",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "a257-9c60-f345-3140",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "b82e-b7e5-0944-01e7",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Thunder Hammer",
+                                "hidden": false,
+                                "id": "803d-97c4-01ea-cca1",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Power Weapon",
+                                "hidden": false,
+                                "id": "3e1f-5035-a671-c637",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Power Fist",
+                                "hidden": false,
+                                "id": "d4a7-4386-aff5-d14a",
+                                "sortIndex": 3
+                              }
+                            ],
+                            "defaultSelectionEntryId": "803d-97c4-01ea-cca1"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claws Terminator",
+                        "hidden": false,
+                        "id": "c9e4-fe1d-78ac-4c8b",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combi-Bolter Terminator",
+                        "hidden": false,
+                        "id": "744e-274d-2ab3-54cf",
+                        "sortIndex": 3,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ],
+                        "selectionEntryGroups": [
+                          {
+                            "name": "​",
+                            "id": "45dc-f729-f03e-6413",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "c012-fbac-8fc5-18ca",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "73a6-a32a-678a-9d81",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Storm Bolter",
+                                "hidden": false,
+                                "id": "b7b7-a8ff-5857-9b29",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Combi-Bolter & Combi-Plasma",
+                                "hidden": false,
+                                "id": "0532-5d00-3267-4688",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Combi-Bolter & Combi-Grav",
+                                "hidden": false,
+                                "id": "26e8-da98-3ccf-ffae",
+                                "sortIndex": 3
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Combi-Bolter & Combi-Flamer",
+                                "hidden": false,
+                                "id": "d1c9-73fb-0282-2261",
+                                "sortIndex": 4
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Combi-Bolter & Combi-Melta",
+                                "hidden": false,
+                                "id": "ebb1-ea5f-2318-9df6",
+                                "sortIndex": 5
+                              }
+                            ],
+                            "defaultSelectionEntryId": "b7b7-a8ff-5857-9b29"
+                          },
+                          {
+                            "name": "​",
+                            "id": "882d-7574-5186-0d56",
+                            "hidden": false,
+                            "sortIndex": 2,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "38c4-8f3f-5e18-8121",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "0d41-bf97-f140-cbd1",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Thunder Hammer",
+                                "hidden": false,
+                                "id": "7d1a-7cc7-c533-80e0",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Power Weapon",
+                                "hidden": false,
+                                "id": "eba8-78a1-cbca-d5bb",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Power Fist",
+                                "hidden": false,
+                                "id": "8bb9-38eb-ff00-3428",
+                                "sortIndex": 3
+                              }
+                            ],
+                            "defaultSelectionEntryId": "7d1a-7cc7-c533-80e0"
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d1b9-b35a-9f1a-5d94"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -23138,16 +23633,330 @@
                 "queryFromSelf": false
               }
             ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "This unit has more than one Terminator equipped with a Heavy Flamer or Assault Cannon. Only one model may replace its Storm Bolter with a Heavy Flamer or Assault Cannon. Choose Storm Bolter for one of those models.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "self",
+                "childId": "06ec-0086-03f0-a801",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "queryFromSelf": false,
+                "childName": "Terminator Heavy Weapon Equipped"
+              }
+            ]
           }
         ],
-        "comment": "CURRENT STATE / INCOMPLETE: selectable Other / Infantry root with current points, copy accounting and Leader-host validation. Internal models, equipment and loadout choices are intentionally not implemented yet; the visible Coming Soon rule directs players to the authoritative PDF.",
-        "rules": [
+        "comment": "CURRENT STATE: complete two-model Terminator loadout. Each Terminator independently selects one ranged weapon (Storm Bolter / Heavy Flamer / Assault Cannon) and one melee weapon (Power Fist / Chainfist / Power Weapon). Heavy Flamer and Assault Cannon choices remain visible on both models; a permissive-corrective semantic validator enforces the source one-model heavy-weapon cap. Cyclone Missile Launcher is a direct +10 Point Paid Wargear checkbox because which physical model carries it has no downstream listbuilding consequence.",
+        "selectionEntryGroups": [
           {
-            "name": "Coming Soon",
-            "id": "ba4d-b8aa-115a-8075",
+            "name": "Loadout Options",
+            "id": "1bc1-e704-caf6-c290",
             "hidden": false,
-            "description": "This unit will be added shortly. Until then, use the Space Marines army PDF in the Reforged Discord: https://discord.gg/BpjkaNmMVB",
-            "noindex": false
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Terminator 1",
+                "id": "430b-13cd-4309-aa30",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "cc80-3343-120e-b6e8",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3641-7420-11e3-5949",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "e8bb-46d1-c374-5d2f",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Storm Bolter",
+                        "hidden": false,
+                        "id": "babd-092c-47f7-94bc",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Flamer",
+                        "hidden": false,
+                        "id": "340f-6f75-63da-e867",
+                        "sortIndex": 2,
+                        "categoryLinks": [
+                          {
+                            "targetId": "06ec-0086-03f0-a801",
+                            "id": "69ac-3558-5cc3-1a06",
+                            "primary": false,
+                            "name": "Terminator Heavy Weapon Equipped"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Assault Cannon",
+                        "hidden": false,
+                        "id": "18e4-58f3-3c00-4cbb",
+                        "sortIndex": 3,
+                        "categoryLinks": [
+                          {
+                            "targetId": "06ec-0086-03f0-a801",
+                            "id": "82da-84b8-2aae-655b",
+                            "primary": false,
+                            "name": "Terminator Heavy Weapon Equipped"
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "babd-092c-47f7-94bc"
+                  },
+                  {
+                    "name": "​",
+                    "id": "35be-7d67-5274-ae9b",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9960-7fae-c634-3002",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c90e-fe9d-d2af-f42c",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Fist",
+                        "hidden": false,
+                        "id": "d4b4-65f8-bde1-ef3b",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainfist",
+                        "hidden": false,
+                        "id": "34e1-dd52-72e8-2cc9",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Weapon",
+                        "hidden": false,
+                        "id": "818d-f37f-3706-b456",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d4b4-65f8-bde1-ef3b"
+                  }
+                ]
+              },
+              {
+                "name": "Terminator 2",
+                "id": "8ab9-de64-8d09-9ace",
+                "hidden": false,
+                "sortIndex": 2,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "143f-6ac0-237c-6ac0",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "cedd-d412-c858-8ae3",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "05d8-87a6-c9ab-af5e",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Storm Bolter",
+                        "hidden": false,
+                        "id": "3033-e7d5-39d1-3e04",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Heavy Flamer",
+                        "hidden": false,
+                        "id": "8818-c5d1-aa48-d0ca",
+                        "sortIndex": 2,
+                        "categoryLinks": [
+                          {
+                            "targetId": "06ec-0086-03f0-a801",
+                            "id": "96a9-59b0-45ab-a7fe",
+                            "primary": false,
+                            "name": "Terminator Heavy Weapon Equipped"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Assault Cannon",
+                        "hidden": false,
+                        "id": "bd3a-e998-44cf-6034",
+                        "sortIndex": 3,
+                        "categoryLinks": [
+                          {
+                            "targetId": "06ec-0086-03f0-a801",
+                            "id": "410a-12ee-85c4-4846",
+                            "primary": false,
+                            "name": "Terminator Heavy Weapon Equipped"
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "3033-e7d5-39d1-3e04"
+                  },
+                  {
+                    "name": "​",
+                    "id": "73c3-affa-41aa-2b83",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0cc4-93b5-e81d-f273",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c108-421b-559e-22e9",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Fist",
+                        "hidden": false,
+                        "id": "a7ec-a1c8-5b04-b293",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainfist",
+                        "hidden": false,
+                        "id": "931b-c3cc-8528-b98c",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Weapon",
+                        "hidden": false,
+                        "id": "9900-85ec-b434-f402",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "a7ec-a1c8-5b04-b293"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "3578-35ef-7f9d-158e",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Cyclone Missile Launcher",
+                "hidden": false,
+                "id": "372d-4a8c-a0a2-57d2",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "36fc-5c43-c560-ed66",
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -23232,14 +24041,135 @@
             ]
           }
         ],
-        "comment": "CURRENT STATE / INCOMPLETE: selectable Other / Infantry root with current points, copy accounting and Leader-host validation. Internal models, equipment and loadout choices are intentionally not implemented yet; the visible Coming Soon rule directs players to the authoritative PDF.",
-        "rules": [
+        "comment": "CURRENT STATE: complete two-model Assault Terminator loadout. Each model independently selects either its default Lightning Claws or a +10 Point Thunder Hammer & Storm Shield atomic package.",
+        "selectionEntryGroups": [
           {
-            "name": "Coming Soon",
-            "id": "073c-e32e-8ddb-4a24",
+            "name": "Loadout Options",
+            "id": "8950-379b-42cd-81e7",
             "hidden": false,
-            "description": "This unit will be added shortly. Until then, use the Space Marines army PDF in the Reforged Discord: https://discord.gg/BpjkaNmMVB",
-            "noindex": false
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Assault Terminator 1",
+                "id": "ed5e-7776-328f-14d1",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "e9c6-58a8-ffe9-d0d3",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "68fd-21ab-d99c-e3cb",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "82ba-c55d-75b7-7185",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claws",
+                        "hidden": false,
+                        "id": "bf3d-782b-9d87-6dc7",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Thunder Hammer & Storm Shield",
+                        "hidden": false,
+                        "id": "fc9f-1b34-2bf7-c6f4",
+                        "sortIndex": 2,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "bf3d-782b-9d87-6dc7"
+                  }
+                ]
+              },
+              {
+                "name": "Assault Terminator 2",
+                "id": "4cba-b875-9082-548a",
+                "hidden": false,
+                "sortIndex": 2,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "ca23-3d52-97b3-a1ff",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "bd82-c03e-cae8-c3d1",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a70a-98da-45ef-eb42",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claws",
+                        "hidden": false,
+                        "id": "5072-5b4b-459b-a50d",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Thunder Hammer & Storm Shield",
+                        "hidden": false,
+                        "id": "efef-4364-5cca-d3c3",
+                        "sortIndex": 2,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "5072-5b4b-459b-a50d"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -26292,16 +27222,729 @@
                 "queryFromSelf": false
               }
             ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "This unit has more than one Relic Blade Vanguard Veteran. Only one model may replace its Bolt Pistol and Chainsword with a Relic Blade. Choose a different role for one of those models.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "self",
+                "childId": "2764-7a1b-5320-5272",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "queryFromSelf": false,
+                "childName": "Vanguard Veteran Relic Blade Equipped"
+              }
+            ]
           }
         ],
-        "comment": "CURRENT STATE / INCOMPLETE: selectable Other / Infantry root with current points, copy accounting and Leader-host validation. Internal models, equipment and loadout choices are intentionally not implemented yet; the visible Coming Soon rule directs players to the authoritative PDF.",
-        "rules": [
+        "comment": "CURRENT STATE: complete 2-3 model polymorphic Vanguard Veteran loadout. Models 1 and 2 are mandatory; Vanguard Veteran 3 is a direct +40 Point Additional Model checkbox. Each model chooses one final-state role: ordinary Vanguard Veteran, Relic Blade Vanguard Veteran, or Lightning Claw Vanguard Veteran. Ordinary Veterans choose one sidearm and one melee weapon. Relic Blade and Lightning Claw roles are atomic whole-model replacements. The source max-one Relic Blade cap uses permissive-corrective semantic validation. Frag Grenade, Krak Grenade, and Melta Bomb are independent +10 Point Paid Wargear checkboxes.",
+        "selectionEntryGroups": [
           {
-            "name": "Coming Soon",
-            "id": "25f6-d632-eef7-9b8a",
+            "name": "Loadout Options",
+            "id": "7897-f475-b9f5-3ebe",
             "hidden": false,
-            "description": "This unit will be added shortly. Until then, use the Space Marines army PDF in the Reforged Discord: https://discord.gg/BpjkaNmMVB",
-            "noindex": false
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "Vanguard Veteran 1",
+                "id": "6735-50d3-c022-472f",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "bfb9-f3ce-7371-616a",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "708b-d371-c999-a6fc",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4c5e-2e21-fd9e-7abe",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Vanguard Veteran",
+                        "hidden": false,
+                        "id": "ed39-bc27-54af-16a7",
+                        "sortIndex": 1,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "​",
+                            "id": "34c3-0166-87a8-6f54",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "5d8c-65c6-0e8b-2317",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "4af2-6b4b-9f52-ffe6",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Bolt Pistol",
+                                "hidden": false,
+                                "id": "d676-23eb-71d6-4eb1",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Storm Shield",
+                                "hidden": false,
+                                "id": "d6a1-c56d-6277-9809",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Grav Pistol",
+                                "hidden": false,
+                                "id": "c94b-2273-3b11-7d03",
+                                "sortIndex": 3
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Plasma Pistol",
+                                "hidden": false,
+                                "id": "f39d-86fe-17ff-e8cc",
+                                "sortIndex": 4
+                              }
+                            ],
+                            "defaultSelectionEntryId": "d676-23eb-71d6-4eb1"
+                          },
+                          {
+                            "name": "​",
+                            "id": "d144-97f2-e1e6-c2bb",
+                            "hidden": false,
+                            "sortIndex": 2,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "f60a-af2b-c553-4657",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "a6b5-2b93-8791-332d",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Chainsword",
+                                "hidden": false,
+                                "id": "08e5-72db-a67c-071e",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Thunder Hammer",
+                                "hidden": false,
+                                "id": "a46d-3162-12ff-1595",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Power Weapon",
+                                "hidden": false,
+                                "id": "f2e7-1d8c-31a8-4dfa",
+                                "sortIndex": 3
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Power Fist",
+                                "hidden": false,
+                                "id": "a5ad-0a5f-682f-580c",
+                                "sortIndex": 4
+                              }
+                            ],
+                            "defaultSelectionEntryId": "08e5-72db-a67c-071e"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Relic Blade Vanguard Veteran",
+                        "hidden": false,
+                        "id": "6c69-5519-81b0-57df",
+                        "sortIndex": 2,
+                        "categoryLinks": [
+                          {
+                            "targetId": "2764-7a1b-5320-5272",
+                            "id": "3d64-bb71-7530-d298",
+                            "primary": false,
+                            "name": "Vanguard Veteran Relic Blade Equipped"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claw Vanguard Veteran",
+                        "hidden": false,
+                        "id": "3a56-41a0-0083-0834",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "ed39-bc27-54af-16a7"
+                  }
+                ]
+              },
+              {
+                "name": "Vanguard Veteran 2",
+                "id": "cf59-4639-ce90-017b",
+                "hidden": false,
+                "sortIndex": 2,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "38a9-0fd9-cad4-9921",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0771-49d3-396e-cf9a",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d6d1-fb27-4cdb-84d3",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Vanguard Veteran",
+                        "hidden": false,
+                        "id": "2bfc-0ffb-fa85-9b99",
+                        "sortIndex": 1,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "​",
+                            "id": "411b-65d5-baae-86c3",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "bd99-1b56-7d86-0f81",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "658c-de7a-eb83-b064",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Bolt Pistol",
+                                "hidden": false,
+                                "id": "1df4-021a-e671-eaae",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Storm Shield",
+                                "hidden": false,
+                                "id": "016c-c4c1-57a0-1bd8",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Grav Pistol",
+                                "hidden": false,
+                                "id": "0488-ebb3-bed6-c0d0",
+                                "sortIndex": 3
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Plasma Pistol",
+                                "hidden": false,
+                                "id": "31ce-6a3a-ccf3-f860",
+                                "sortIndex": 4
+                              }
+                            ],
+                            "defaultSelectionEntryId": "1df4-021a-e671-eaae"
+                          },
+                          {
+                            "name": "​",
+                            "id": "7131-dc86-fe03-819e",
+                            "hidden": false,
+                            "sortIndex": 2,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "9532-3132-d6b2-90f6",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "4e1f-de70-ee4d-ed97",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Chainsword",
+                                "hidden": false,
+                                "id": "2346-90e1-1a92-9aa2",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Thunder Hammer",
+                                "hidden": false,
+                                "id": "0a52-5869-445a-e791",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Power Weapon",
+                                "hidden": false,
+                                "id": "62cd-9be8-36f9-c501",
+                                "sortIndex": 3
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Power Fist",
+                                "hidden": false,
+                                "id": "a547-4c6b-6b5d-cd4b",
+                                "sortIndex": 4
+                              }
+                            ],
+                            "defaultSelectionEntryId": "2346-90e1-1a92-9aa2"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Relic Blade Vanguard Veteran",
+                        "hidden": false,
+                        "id": "7863-cb43-62f2-54c7",
+                        "sortIndex": 2,
+                        "categoryLinks": [
+                          {
+                            "targetId": "2764-7a1b-5320-5272",
+                            "id": "f0c3-335b-e337-47d1",
+                            "primary": false,
+                            "name": "Vanguard Veteran Relic Blade Equipped"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claw Vanguard Veteran",
+                        "hidden": false,
+                        "id": "b76d-c090-c1d9-4c9d",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "2bfc-0ffb-fa85-9b99"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Additional Model",
+            "id": "77f4-02f7-6e6a-3681",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Vanguard Veteran 3",
+                "hidden": false,
+                "id": "a0c4-6072-f00a-91e9",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 40
+                  }
+                ],
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "2fdd-6ab7-ebb7-f154",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "4a45-c6f1-dbdd-b17c",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9e4e-9a66-7205-ce49",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Vanguard Veteran",
+                        "hidden": false,
+                        "id": "934c-3582-fc2e-02dd",
+                        "sortIndex": 1,
+                        "selectionEntryGroups": [
+                          {
+                            "name": "​",
+                            "id": "82ec-57c0-4a59-3408",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "fe32-3306-9d1e-b1c4",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "0a8e-d866-f259-0ed2",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Bolt Pistol",
+                                "hidden": false,
+                                "id": "e941-4430-c58d-22d4",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Storm Shield",
+                                "hidden": false,
+                                "id": "4246-2c5d-5faf-e981",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Grav Pistol",
+                                "hidden": false,
+                                "id": "5adc-a3b0-aeb6-68c1",
+                                "sortIndex": 3
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Plasma Pistol",
+                                "hidden": false,
+                                "id": "804c-47e0-73c7-ef49",
+                                "sortIndex": 4
+                              }
+                            ],
+                            "defaultSelectionEntryId": "e941-4430-c58d-22d4"
+                          },
+                          {
+                            "name": "​",
+                            "id": "bda4-1743-9869-f126",
+                            "hidden": false,
+                            "sortIndex": 2,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "3fb7-cd97-dea7-4e76",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "9eff-4098-ce4b-b9d5",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Chainsword",
+                                "hidden": false,
+                                "id": "e1f1-3f1c-8a85-8870",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Thunder Hammer",
+                                "hidden": false,
+                                "id": "c5a2-1e04-7b34-3e0d",
+                                "sortIndex": 2
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Power Weapon",
+                                "hidden": false,
+                                "id": "5e79-057a-b104-17ab",
+                                "sortIndex": 3
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Power Fist",
+                                "hidden": false,
+                                "id": "a372-9ddd-ca8b-67d0",
+                                "sortIndex": 4
+                              }
+                            ],
+                            "defaultSelectionEntryId": "e1f1-3f1c-8a85-8870"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Relic Blade Vanguard Veteran",
+                        "hidden": false,
+                        "id": "78b2-fdd8-140f-81a4",
+                        "sortIndex": 2,
+                        "categoryLinks": [
+                          {
+                            "targetId": "2764-7a1b-5320-5272",
+                            "id": "21a3-ac36-d29f-8792",
+                            "primary": false,
+                            "name": "Vanguard Veteran Relic Blade Equipped"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claw Vanguard Veteran",
+                        "hidden": false,
+                        "id": "019a-c95c-ca25-430b",
+                        "sortIndex": 3
+                      }
+                    ],
+                    "defaultSelectionEntryId": "934c-3582-fc2e-02dd"
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "ec40-192e-9eca-3af8",
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "9a9f-7d3c-8aa8-0807",
+            "hidden": false,
+            "sortIndex": 3,
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Frag Grenade",
+                "hidden": false,
+                "id": "3e83-b673-27b6-5e33",
+                "sortIndex": 1,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "7774-bace-5250-f464",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Krak Grenade",
+                "hidden": false,
+                "id": "8804-2960-e0ec-45cb",
+                "sortIndex": 2,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "c0af-509a-0a95-3c62",
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Melta Bomb",
+                "hidden": false,
+                "id": "51ca-4d47-b9a0-c370",
+                "sortIndex": 3,
+                "costs": [
+                  {
+                    "name": "Points",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "8ad9-0be5-1b56-a543",
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -32740,7 +34383,7 @@
     ],
     "authorName": "Varmint",
     "authorUrl": "https://discord.com/invite/BpjkaNmMVB",
-    "comment": "CURRENT STATE — SPACE MARINES 3.3.7 / GS26\nThe catalogue is broadly playable but remains under construction. Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans intentionally retain temporary Coming Soon payloads; use the army PDF for those four units.\nChapter is a required one-of-four Configuration: Ultramarines, Blood Angels, Space Wolves, or Salamanders. Chapter-specific roots use selected-safe hiding plus constructive wrong-Chapter validation while retaining their semantic Leader/Troop/Other categories.\nAll 17 counted Leaders cost 1 LP, use explicit attachment associations, and retain constructive missing-attachment validation. Eligible hosts enforce the one-attached-Leader limit. Assault Intercessors are the deliberate stateful exception: Jump Packs switch legal attachment state between normal and Jump Pack Leaders through permissive-corrective validation.\nAdditional Copy Costs are catalogue-local arithmetic over stable unit IDs: Troop families use 4 / 6 / 8 free copies by game size, Other families use 1 / 2 / 3, and each excess identical copy adds +20 Points.\nEliminators, Wolf Guard Terminators, and Thunderwolf Cavalry use hidden semantic counters plus constructive errors for cross-model equipment caps rather than cross-hiding legal options.\nThe ten chapter-independent Space Marine vehicle roots are the source side of the Manufactorum Imperium mirror. Manufactorum Library V10 was audited against Space Marines REV18 before REV19; the portable executable trees are current. REV19 changes no portable vehicle executable payload, so no library sync is required.\n\nAUTHORING / RUNTIME NOTES\nThe army PDF remains authoritative. Builder presentation models meaningful final-state decisions rather than reproducing every procedural replacement step.\nExisting stable IDs are preserved. Optional one-item upgrades should use direct checkbox-style constraints on the selectable entry; optional Additional Model wrappers may remain when the max-one constraint lives on the model entry.\nSource-derived rules text is not editorialized. Catalogue comments document implementation and runtime intent only.\nThe ten portable Space Marine vehicle root comments retain their existing source/mirror provenance wording in REV19 to avoid documentation-only divergence from Manufactorum V10.\n\nHISTORICAL REVISION LOG\nSPACE MARINES REV1 / GS18 — VEHICLE SCAFFOLD ONLY.\nThis catalogue is intentionally incomplete. It exists to establish the Space Marine Chapter selector, Chapter presentation semantics, Space Marines Vehicles presentation, stable vehicle unit IDs, source points/type/class metadata, and Additional Copy Costs infrastructure before any vehicle loadouts or rules are implemented. No Infantry, Leader, Troop, chapter-exclusive non-vehicle unit, weapon choice, paid wargear, unit rule, attachment rule, relic, psychic power, or other gameplay payload is implemented in this revision. The army rules PDF remains authoritative.\n\nREV2 — MANUFACTORUM-READY VEHICLE SCAFFOLD\nAligned native vehicle presentation with the established Astra Militarum / Manufactorum bridge pattern. All eleven native Space Marine vehicle shells now present under Other while retaining their existing Space Marines Vehicles category links as non-primary compatibility tags. The ten chapter-independent vehicle shells are mirrored into Manufactorum Imperium V6 using the same unit IDs. Baal Predator remains local to Space Marines / Blood Angels and is not exported through Manufactorum.\n\nREV3 — SPACE MARINES 3.3.6 / GS20 COMPLETE EMPTY UNIT SHELLS\nExpanded the catalogue from the eleven-vehicle scaffold to all 71 unit roots in source skeleton order while preserving the existing catalogue ID, Chapter Configuration IDs, Additional Copy Costs Configuration IDs, and all eleven established vehicle IDs / Space Marines Vehicles bridge tags. Updated to Game System revision 20.\nThis phase intentionally implements only unit-level list-building structure: Points, Leader/Troop/Other, Infantry/Vehicle, counted unit-type semantics, Chapter gating, base Leader attachment relationships, host one-Leader capacity, and GS20 Troop/Other Additional Copy Costs. No internal loadouts, model cards, paid wargear, unit rules/profiles, or Additional Model controls are implemented.\nASSAULT INTERCESSORS ATTACHMENT NOTE: the source skeleton's Jump Packs option contains the only attachment_override in the army. The 3.3.6 PDF confirms the distinction explicitly: normal Captain/Librarian/Lieutenant attach to Assault Intercessors without Fly, while Jump Pack Captain/Librarian/Lieutenant/Chaplain attach to Assault Intercessors with Fly. Base Assault Intercessors therefore use the normal-Leader host state in REV3; the Jump Pack Leader host state will be added when the deferred Jump Packs loadout is implemented.\n\nREV4 — CHAPTER-FIRST ARMY LIST PRESENTATION\nApplied the established Chaos Space Marines Legion presentation pattern to Space Marine Chapters. All 15 chapter-exclusive units now use Ultramarines, Blood Angels, Space Wolves, or Salamanders as their primary Army List presentation category. Their source Leader/Troop/Other role remains as a secondary semantic category, together with Infantry/Vehicle, Leader Capacity, Additional Copy Cost, attachment, and other existing tags. No unit IDs, category-link IDs, points, Chapter gating, Additional Copy Cost arithmetic, attachments, or other mechanics changed. Existing sort indices already place all chapter-specific units at 1-15 and generic Leaders from 16 onward, so the selected Chapter category appears above the standard Leader category.\n\nREV5 — BLOOD ANGELS LOADOUT BATCH 1\nImplemented player-facing loadouts for Sanguinary Guard, Sanguinary Priest, Death Company Assault Intercessors, Jump Pack Assault Death Company, Death Company Intercessors, and Baal Predator. Sanguinary Guard uses separate model cards, one optional +50 Point third model, and Sanguinary Banner Paid Wargear. Sanguinary Priest has its fixed weapon package and +10 Point Jump Pack. The two assault Death Company units use the approved three-card compressed layout; Death Company Intercessors use one veteran weapon card plus fixed models 2 and 3-5. Baal Predator keeps paid Sponson Weapons inside Loadout Options with (None) default; Dozer Blade remains Paid Wargear. No other unit roots, categories, Chapter presentation, attachments, Additional Copy Costs, points outside these loadouts, or existing stable IDs were changed.\n\nREV6 — SPACE WOLVES LOADOUT BATCH\nImplemented Wolf Guard Battle Leader, Blood Claws, Grey Hunters, Wolf Guard Terminators, and Wolf Scouts using the approved compact final-state presentations. Wolf Guard Terminators expose identical per-model final-state choices while constructive semantic validators preserve the source max-one special-melee and max-one Assault Cannon limits. Wolf Scouts use named role cards, including a checklist-style Melta Bomb upgrade on Trapmaster. Thunderwolf Cavalry remains intentionally unimplemented and now uses the same mandatory content-message pattern as Adepta Sororitas Sisters Novitiates, adapted to Space Marines. No other unit roots, Chapter presentation, attachments, Additional Copy Costs, points, or existing stable IDs were changed.\n\nREV7 — THUNDERWOLF CAVALRY PERMISSIVE-CORRECTIVE LOADOUT\nReplaced the Thunderwolf Cavalry placeholder with three clean model cards and enforced its cross-model equipment caps through constructive semantic errors rather than cross-hiding. Storm Shields may be selected independently by all three models for +10 each. Melee Power Fist, Great Axe/Thunder Hammer, Plasma Pistol, and sidearm Power Fist each retain their source max-one unit limits. Also standardized the Wolf Guard Terminator special-melee error repair instruction to 'Choose a different loadout for one of those models.' No other unit mechanics, categories, Chapter presentation, attachments, points, or Additional Copy Costs were changed.\n\nREV8 — RAPID-FIRE LOADOUT BATCH\nImplemented the 44 approved simple Space Marine unit loadouts from Pyroclasts through Astartes Basilisk. Presentation uses melee-first ordering where practical, explicit specialist/model cards where requested, atomic final-state packages, single-step Additional Model groups for the variable-size 2/3-model and 1/2-model units, and checklist-style direct Paid Wargear. Assault Intercessors now implement +20 Jump Packs with exact permissive-corrective attachment-state validation: normal Leaders are legal only without Jump Packs, while Jump Pack Captain/Librarian/Lieutenant/Chaplain are legal only with Jump Packs. The Sergeant melee dependency is also enforced constructively. Wolf Scouts Pack Leader was renamed to include its unit name while preserving its existing ID. Existing unit IDs, Chapter-first presentation, Additional Copy Costs, points outside newly represented wargear/additional-model choices, prior Blood Angels/Space Wolves loadouts, and unrelated mechanics remain unchanged.\n\nREV9 — GS21 CHAPTER CATEGORY ORDER\nRetargeted to Game System revision 21. GS21 moves the four Chapter presentation categories above Leader in Army section ordering. No Space Marine unit IDs, loadouts, categories, points, attachments, Additional Copy Costs, or other catalogue mechanics changed.\n\nREV10 — LOADOUT CORRECTION BATCH\nApplied focused presentation and role corrections to Pyroclasts, Astartes Basilisk, Predator, Scout Infiltrators, Scout Skirmishers, Techmarine, Aggressors, Inceptors, Sternguard Veterans, Devastators, Reivers, and Melta Eradicators; implemented Hellblasters; removed Eliminators from the playable catalogue. Eliminators were also removed from Other Additional Copy Cost arithmetic and from the constructive Phobos Leader attachment text. Existing surviving IDs are preserved where the same player-facing decision survives.\n\nREV11 — SPACE MARINES 3.3.7\nMelta Eradicators and Heavy Bolter Eradicators changed from 120 to 110 Points. Added an automatically present under-construction notice instead of the normal Patch Notes template. Game System remains revision 21. No other catalogue mechanics changed.\n\nREV12 — VICTRIX REWORK + FLY ATTACHMENT AUDIT\nAdded the new Victrix Guard and fully implemented the reworked Victrix Honour Guard from Space Marines 3.3.7. Both are 2-3 model Ultramarines Other units at 50 Points per model with an explicit +50 Additional Model. Victrix Guard carries Bolt Carbine, Power Weapon & Ultima Storm Shield; Victrix Honour Guard carries Bolt Carbine & Power Weapon. Both use the existing Captain/Librarian/Lieutenant/Chaplain host semantics. Added Victrix Guard as a new independent Other Additional Copy Cost family. Audited Assault Intercessor Fly-dependent Leader attachments against the current PDF: preserved all eight normal-vs-Jump-Pack Leader state validators because the new Unit Skeleton omits those qualifiers, and removed the stale Wolf Guard Battle Leader Fly restriction because the current PDF does not state one. The catalogue remains Space Marines 3.3.7 on Game System revision 21 and retains the under-construction notice.\n\nREV13 — TROOP LOADOUT BATCH + DEATH COMPANY / BAAL CLEANUP\nCorrected Death Company Intercessor 1 to the 3.3.7 conditional Bolt Rifle replacement structure. Suppressed the redundant Baal Predator Sponson Weapons header. Implemented complete player-facing loadout trees for Tactical Squad, Intercessors, and Heavy Intercessors using direct model-role presentation rather than procedural replacement wording. All source point costs are represented visibly: Tactical combi packages +10, Heavy Intercessor Hellstorm/Executor rifle upgrades +10 each, and Heavy Weapons Specialist Hellstorm/Executor Heavy Bolter upgrades +10. No root points, categories, attachments, Additional Copy Cost arithmetic, Fly-state validation, Victrix work, or unrelated mechanics changed.\n\nREV14 — VEHICLE LOADOUT BATCH\nImplemented complete listbuilder loadouts for Whirlwind, Vindicator, Land Speeder, Dreadnought, Contemptor Dreadnought, and Leviathan Dreadnought from the Space Marines 3.3.7 source. Player-facing architecture intentionally follows established CSM vehicle conventions where equivalent: anonymous weapon pools instead of physical arm labels, atomic fist + auxiliary packages, Venerable as a Unit Upgrade, and independent repeated selectors for 'any two' / 'four of any' source wording. No root points, categories, Additional Copy Cost arithmetic, attachment logic, Fly-state validation, Victrix work, Troop loadouts, or unrelated catalogue mechanics changed. The six stable vehicle roots are synchronized into Manufactorum Imperium Library V8 in the same pass.\n\nREV15 — CATALOGUE CORRECTION BATCH\nAdded the Vindicator's fixed Siege Shield; corrected Astartes Basilisk Paid Wargear so Smoke Launchers and Armour Piercing High Explosive Shells may be selected together; replaced Predator and Land Raider literal '(None)' options with genuinely optional selectors; removed Boltgun from the Scout Infiltrator Heavy Weapons Specialist; and split Techmarine Omnissian Axe & Servo-Arm into separate fixed equipment lines. No root points, categories, attachment logic, Additional Copy Cost arithmetic, Fly-state validation, chapter gating, or unrelated loadouts changed. The four affected shared vehicle roots are synchronized into Manufactorum Imperium Library V9.\n\nREV16 — ELIMINATORS RESTORED / PERMISSIVE-CORRECTIVE LOADOUT\nRestored Eliminators using their original stable root ID 17c7-9184-1413-efff. All three models now expose the same five loadout choices, with +10 Point Bolt Carbine & Covering Fire and +10 Point Las Fusil. Four catalogue-local hidden semantic categories and constructive errors enforce the source one-model caps for Hyperfrag, Executioner, Mortis Bolts, and Bolt Carbine & Covering Fire. Restored Eliminators as an eligible Phobos Captain / Librarian / Lieutenant attachment host and restored its six-modifier Other Additional Copy Cost family. No Game System change or unrelated mechanics changed.\n\nREV17 — CHECKBOX + PLACEHOLDER CLEANUP\nFlattened standalone optional one-item wrappers into direct checkbox-style selections for Cyclone Missile Launcher, Venerable, Advanced Jamming Beacon, Smoke Launchers, Whirlwind Storm Bolter, Armour Piercing High Explosive Shells, Hunter-Killer Missile, Dozer Blade, Combat Shield, Haywire Mine, Jump Packs, Storm Shield, and Wolf Scouts Trapmaster Melta Bomb. Only genuinely independent binary options were flattened: Land Speeder missile choices, Land Raider pintle choices, Predator/Baal weapon packages, Thunderwolf Storm Shields, Wolf Guard Storm Shields, and other mutually exclusive loadout choices remain radio-style selectors. Baal Predator Dozer Blade was converted by moving its existing Paid Wargear max1 constraint directly onto the existing selection. Sanguinary Banner was moved from Paid Wargear to Unit Upgrade and given the same direct checkbox treatment. Added a concise Coming Soon rule to Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans pointing players to the authoritative Space Marines PDF in the Reforged Discord. Root points, loadout legality, attachment rules, Eliminator permissive-corrective validation, Additional Copy Costs, GS21 target, and unrelated mechanics are unchanged.\n\nREV18 — ADDITIONAL MODEL CHECKBOXES\nConverted all seven optional Additional Model slots currently present in the Space Marines catalogue to direct checkbox-style selections by moving each existing group-level max-1 constraint onto its existing child entry. This affects Victrix Guard 3, Victrix Honour Guard 3, Sanguinary Guard 3, Sternguard Veteran 3, Bladeguard Veteran 3, Devastator Centurion 2, and Assault Centurion 2. No groups or entries were moved, renamed, reordered, added, or removed. Existing entry types, stable IDs, names, hidden values, sortIndex values, points costs, nested loadouts, rules, modifiers, categories, and infoLinks are unchanged. Existing REV17 checkbox cleanup, concise Coming Soon placeholders, Additional Copy Costs, GS21 target, root points, and unrelated mechanics are unchanged. Catalogue Bugfixes remains cumulative and the new checkbox entry was appended.\n\nREV19 — SANGUINARY PRIEST CHECKBOX + COMMENT CONSOLIDATION\nMoved the Sanguinary Priest Jump Pack's existing max-one constraint from its one-item Paid Wargear wrapper onto the existing Jump Pack entry so it renders as a direct checkbox while preserving the same ID, +10 Point cost, and source rule text. Consolidated live catalogue documentation: current-state guidance now precedes the historical build log, obsolete EMPTY UNIT SHELL declarations were removed from implemented non-library units, the four genuinely unfinished units are explicitly marked current/incomplete, and Chapter / Additional Copy Costs comments now describe GS21 behavior. No points, Chapter gating, attachment topology, Additional Copy Cost arithmetic, unit availability, source-derived rules text, or portable Manufactorum vehicle executable payload changed. Manufactorum Imperium Library V10 was audited against Space Marines REV18 and required no sync.\n\nREV20 — LEADER POINTS MIGRATION\nRetargeted the catalogue to Game System revision 24. Wolf Guard Battle Leader; Captain, Gravis Captain, Phobos Captain, Jump Pack Captain, Terminator Captain; Librarian, Phobos Librarian, Terminator Librarian, Jump Pack Librarian; Lieutenant, Phobos Lieutenant, Jump Pack Lieutenant; Chaplain, Terminator Chaplain, Jump Pack Chaplain; and Apothecary Biologis now each cost 1 LP, exactly matching the 17 existing Counts Toward Leader Maximum roots. The legacy count tags remain intact for parallel migration validation. Sanguinary Priest remains an Infantry non-Leader and receives no LP cost. Chapter selection/gating, Leader attachment topology, Assault Intercessor Fly-state validation, Coming Soon payloads, Additional Copy Costs, Eliminator/Wolf Guard Terminator/Thunderwolf semantic counters, points, loadouts, unit availability, and all ten portable Space Marine vehicle executable trees remain mechanically unchanged. No Manufactorum library sync is required for this Leader-only migration.\n\nREV21 — LEADER POINTS CLEANUP\nRuntime validation passed for ordinary paid Space Marine Leaders and the intentionally uncharged Sanguinary Priest. The 17 legacy Counts Toward Leader Maximum links matched the 17 1-LP Leader roots exactly and were removed. Sanguinary Priest remains without an LP cost object. Blood Angels units, Chapter gating, attachment rules, Additional Copy Costs, Manufactorum vehicle payloads, points, loadouts, shared vehicle content, and all unrelated Space Marines mechanics remain unchanged. Because this catalogue is still explicitly under construction, its automatically-present construction warning remains the player-facing Configuration item rather than being renamed to the normal Updated: September 14th marker. Its cumulative Catalogue Bugfixes header is dated September 14th and ordered newest-first.\n\nREV22 — CONTEMPTOR DOUBLE POWER FIST BUGFIX\nRemoved the two mutual-hide modifiers that prevented both Contemptor weapon selectors from choosing Dreadnought Power Fist &. Both arms are now independent. No points, profiles, mandatory selector constraints, or stable IDs changed. Portable shared content was synchronized to Manufactorum Imperium V15.",
+    "comment": "CURRENT STATE — SPACE MARINES 3.3.7 / GS26\nThe catalogue is broadly playable and the four former Coming Soon units now have complete loadout trees. The under-construction notice remains temporarily in place pending final runtime validation and catalogue-wide audit.\nChapter is a required one-of-four Configuration: Ultramarines, Blood Angels, Space Wolves, or Salamanders. Chapter-specific roots use selected-safe hiding plus constructive wrong-Chapter validation while retaining their semantic Leader/Troop/Other categories.\nAll 17 counted Leaders cost 1 LP, use explicit attachment associations, and retain constructive missing-attachment validation. Eligible hosts enforce the one-attached-Leader limit. Assault Intercessors are the deliberate stateful exception: Jump Packs switch legal attachment state between normal and Jump Pack Leaders through permissive-corrective validation.\nAdditional Copy Costs are catalogue-local arithmetic over stable unit IDs: Troop families use 4 / 6 / 8 free copies by game size, Other families use 1 / 2 / 3, and each excess identical copy adds +20 Points.\nEliminators, Wolf Guard Terminators, and Thunderwolf Cavalry use hidden semantic counters plus constructive errors for cross-model equipment caps rather than cross-hiding legal options.\nThe ten chapter-independent Space Marine vehicle roots are the source side of the Manufactorum Imperium mirror. Manufactorum Library V10 was audited against Space Marines REV18 before REV19; the portable executable trees are current. REV19 changes no portable vehicle executable payload, so no library sync is required.\n\nAUTHORING / RUNTIME NOTES\nThe army PDF remains authoritative. Builder presentation models meaningful final-state decisions rather than reproducing every procedural replacement step.\nExisting stable IDs are preserved. Optional one-item upgrades should use direct checkbox-style constraints on the selectable entry; optional Additional Model wrappers may remain when the max-one constraint lives on the model entry.\nSource-derived rules text is not editorialized. Catalogue comments document implementation and runtime intent only.\nThe ten portable Space Marine vehicle root comments retain their existing source/mirror provenance wording in REV19 to avoid documentation-only divergence from Manufactorum V10.\n\nHISTORICAL REVISION LOG\nSPACE MARINES REV1 / GS18 — VEHICLE SCAFFOLD ONLY.\nThis catalogue is intentionally incomplete. It exists to establish the Space Marine Chapter selector, Chapter presentation semantics, Space Marines Vehicles presentation, stable vehicle unit IDs, source points/type/class metadata, and Additional Copy Costs infrastructure before any vehicle loadouts or rules are implemented. No Infantry, Leader, Troop, chapter-exclusive non-vehicle unit, weapon choice, paid wargear, unit rule, attachment rule, relic, psychic power, or other gameplay payload is implemented in this revision. The army rules PDF remains authoritative.\n\nREV2 — MANUFACTORUM-READY VEHICLE SCAFFOLD\nAligned native vehicle presentation with the established Astra Militarum / Manufactorum bridge pattern. All eleven native Space Marine vehicle shells now present under Other while retaining their existing Space Marines Vehicles category links as non-primary compatibility tags. The ten chapter-independent vehicle shells are mirrored into Manufactorum Imperium V6 using the same unit IDs. Baal Predator remains local to Space Marines / Blood Angels and is not exported through Manufactorum.\n\nREV3 — SPACE MARINES 3.3.6 / GS20 COMPLETE EMPTY UNIT SHELLS\nExpanded the catalogue from the eleven-vehicle scaffold to all 71 unit roots in source skeleton order while preserving the existing catalogue ID, Chapter Configuration IDs, Additional Copy Costs Configuration IDs, and all eleven established vehicle IDs / Space Marines Vehicles bridge tags. Updated to Game System revision 20.\nThis phase intentionally implements only unit-level list-building structure: Points, Leader/Troop/Other, Infantry/Vehicle, counted unit-type semantics, Chapter gating, base Leader attachment relationships, host one-Leader capacity, and GS20 Troop/Other Additional Copy Costs. No internal loadouts, model cards, paid wargear, unit rules/profiles, or Additional Model controls are implemented.\nASSAULT INTERCESSORS ATTACHMENT NOTE: the source skeleton's Jump Packs option contains the only attachment_override in the army. The 3.3.6 PDF confirms the distinction explicitly: normal Captain/Librarian/Lieutenant attach to Assault Intercessors without Fly, while Jump Pack Captain/Librarian/Lieutenant/Chaplain attach to Assault Intercessors with Fly. Base Assault Intercessors therefore use the normal-Leader host state in REV3; the Jump Pack Leader host state will be added when the deferred Jump Packs loadout is implemented.\n\nREV4 — CHAPTER-FIRST ARMY LIST PRESENTATION\nApplied the established Chaos Space Marines Legion presentation pattern to Space Marine Chapters. All 15 chapter-exclusive units now use Ultramarines, Blood Angels, Space Wolves, or Salamanders as their primary Army List presentation category. Their source Leader/Troop/Other role remains as a secondary semantic category, together with Infantry/Vehicle, Leader Capacity, Additional Copy Cost, attachment, and other existing tags. No unit IDs, category-link IDs, points, Chapter gating, Additional Copy Cost arithmetic, attachments, or other mechanics changed. Existing sort indices already place all chapter-specific units at 1-15 and generic Leaders from 16 onward, so the selected Chapter category appears above the standard Leader category.\n\nREV5 — BLOOD ANGELS LOADOUT BATCH 1\nImplemented player-facing loadouts for Sanguinary Guard, Sanguinary Priest, Death Company Assault Intercessors, Jump Pack Assault Death Company, Death Company Intercessors, and Baal Predator. Sanguinary Guard uses separate model cards, one optional +50 Point third model, and Sanguinary Banner Paid Wargear. Sanguinary Priest has its fixed weapon package and +10 Point Jump Pack. The two assault Death Company units use the approved three-card compressed layout; Death Company Intercessors use one veteran weapon card plus fixed models 2 and 3-5. Baal Predator keeps paid Sponson Weapons inside Loadout Options with (None) default; Dozer Blade remains Paid Wargear. No other unit roots, categories, Chapter presentation, attachments, Additional Copy Costs, points outside these loadouts, or existing stable IDs were changed.\n\nREV6 — SPACE WOLVES LOADOUT BATCH\nImplemented Wolf Guard Battle Leader, Blood Claws, Grey Hunters, Wolf Guard Terminators, and Wolf Scouts using the approved compact final-state presentations. Wolf Guard Terminators expose identical per-model final-state choices while constructive semantic validators preserve the source max-one special-melee and max-one Assault Cannon limits. Wolf Scouts use named role cards, including a checklist-style Melta Bomb upgrade on Trapmaster. Thunderwolf Cavalry remains intentionally unimplemented and now uses the same mandatory content-message pattern as Adepta Sororitas Sisters Novitiates, adapted to Space Marines. No other unit roots, Chapter presentation, attachments, Additional Copy Costs, points, or existing stable IDs were changed.\n\nREV7 — THUNDERWOLF CAVALRY PERMISSIVE-CORRECTIVE LOADOUT\nReplaced the Thunderwolf Cavalry placeholder with three clean model cards and enforced its cross-model equipment caps through constructive semantic errors rather than cross-hiding. Storm Shields may be selected independently by all three models for +10 each. Melee Power Fist, Great Axe/Thunder Hammer, Plasma Pistol, and sidearm Power Fist each retain their source max-one unit limits. Also standardized the Wolf Guard Terminator special-melee error repair instruction to 'Choose a different loadout for one of those models.' No other unit mechanics, categories, Chapter presentation, attachments, points, or Additional Copy Costs were changed.\n\nREV8 — RAPID-FIRE LOADOUT BATCH\nImplemented the 44 approved simple Space Marine unit loadouts from Pyroclasts through Astartes Basilisk. Presentation uses melee-first ordering where practical, explicit specialist/model cards where requested, atomic final-state packages, single-step Additional Model groups for the variable-size 2/3-model and 1/2-model units, and checklist-style direct Paid Wargear. Assault Intercessors now implement +20 Jump Packs with exact permissive-corrective attachment-state validation: normal Leaders are legal only without Jump Packs, while Jump Pack Captain/Librarian/Lieutenant/Chaplain are legal only with Jump Packs. The Sergeant melee dependency is also enforced constructively. Wolf Scouts Pack Leader was renamed to include its unit name while preserving its existing ID. Existing unit IDs, Chapter-first presentation, Additional Copy Costs, points outside newly represented wargear/additional-model choices, prior Blood Angels/Space Wolves loadouts, and unrelated mechanics remain unchanged.\n\nREV9 — GS21 CHAPTER CATEGORY ORDER\nRetargeted to Game System revision 21. GS21 moves the four Chapter presentation categories above Leader in Army section ordering. No Space Marine unit IDs, loadouts, categories, points, attachments, Additional Copy Costs, or other catalogue mechanics changed.\n\nREV10 — LOADOUT CORRECTION BATCH\nApplied focused presentation and role corrections to Pyroclasts, Astartes Basilisk, Predator, Scout Infiltrators, Scout Skirmishers, Techmarine, Aggressors, Inceptors, Sternguard Veterans, Devastators, Reivers, and Melta Eradicators; implemented Hellblasters; removed Eliminators from the playable catalogue. Eliminators were also removed from Other Additional Copy Cost arithmetic and from the constructive Phobos Leader attachment text. Existing surviving IDs are preserved where the same player-facing decision survives.\n\nREV11 — SPACE MARINES 3.3.7\nMelta Eradicators and Heavy Bolter Eradicators changed from 120 to 110 Points. Added an automatically present under-construction notice instead of the normal Patch Notes template. Game System remains revision 21. No other catalogue mechanics changed.\n\nREV12 — VICTRIX REWORK + FLY ATTACHMENT AUDIT\nAdded the new Victrix Guard and fully implemented the reworked Victrix Honour Guard from Space Marines 3.3.7. Both are 2-3 model Ultramarines Other units at 50 Points per model with an explicit +50 Additional Model. Victrix Guard carries Bolt Carbine, Power Weapon & Ultima Storm Shield; Victrix Honour Guard carries Bolt Carbine & Power Weapon. Both use the existing Captain/Librarian/Lieutenant/Chaplain host semantics. Added Victrix Guard as a new independent Other Additional Copy Cost family. Audited Assault Intercessor Fly-dependent Leader attachments against the current PDF: preserved all eight normal-vs-Jump-Pack Leader state validators because the new Unit Skeleton omits those qualifiers, and removed the stale Wolf Guard Battle Leader Fly restriction because the current PDF does not state one. The catalogue remains Space Marines 3.3.7 on Game System revision 21 and retains the under-construction notice.\n\nREV13 — TROOP LOADOUT BATCH + DEATH COMPANY / BAAL CLEANUP\nCorrected Death Company Intercessor 1 to the 3.3.7 conditional Bolt Rifle replacement structure. Suppressed the redundant Baal Predator Sponson Weapons header. Implemented complete player-facing loadout trees for Tactical Squad, Intercessors, and Heavy Intercessors using direct model-role presentation rather than procedural replacement wording. All source point costs are represented visibly: Tactical combi packages +10, Heavy Intercessor Hellstorm/Executor rifle upgrades +10 each, and Heavy Weapons Specialist Hellstorm/Executor Heavy Bolter upgrades +10. No root points, categories, attachments, Additional Copy Cost arithmetic, Fly-state validation, Victrix work, or unrelated mechanics changed.\n\nREV14 — VEHICLE LOADOUT BATCH\nImplemented complete listbuilder loadouts for Whirlwind, Vindicator, Land Speeder, Dreadnought, Contemptor Dreadnought, and Leviathan Dreadnought from the Space Marines 3.3.7 source. Player-facing architecture intentionally follows established CSM vehicle conventions where equivalent: anonymous weapon pools instead of physical arm labels, atomic fist + auxiliary packages, Venerable as a Unit Upgrade, and independent repeated selectors for 'any two' / 'four of any' source wording. No root points, categories, Additional Copy Cost arithmetic, attachment logic, Fly-state validation, Victrix work, Troop loadouts, or unrelated catalogue mechanics changed. The six stable vehicle roots are synchronized into Manufactorum Imperium Library V8 in the same pass.\n\nREV15 — CATALOGUE CORRECTION BATCH\nAdded the Vindicator's fixed Siege Shield; corrected Astartes Basilisk Paid Wargear so Smoke Launchers and Armour Piercing High Explosive Shells may be selected together; replaced Predator and Land Raider literal '(None)' options with genuinely optional selectors; removed Boltgun from the Scout Infiltrator Heavy Weapons Specialist; and split Techmarine Omnissian Axe & Servo-Arm into separate fixed equipment lines. No root points, categories, attachment logic, Additional Copy Cost arithmetic, Fly-state validation, chapter gating, or unrelated loadouts changed. The four affected shared vehicle roots are synchronized into Manufactorum Imperium Library V9.\n\nREV16 — ELIMINATORS RESTORED / PERMISSIVE-CORRECTIVE LOADOUT\nRestored Eliminators using their original stable root ID 17c7-9184-1413-efff. All three models now expose the same five loadout choices, with +10 Point Bolt Carbine & Covering Fire and +10 Point Las Fusil. Four catalogue-local hidden semantic categories and constructive errors enforce the source one-model caps for Hyperfrag, Executioner, Mortis Bolts, and Bolt Carbine & Covering Fire. Restored Eliminators as an eligible Phobos Captain / Librarian / Lieutenant attachment host and restored its six-modifier Other Additional Copy Cost family. No Game System change or unrelated mechanics changed.\n\nREV17 — CHECKBOX + PLACEHOLDER CLEANUP\nFlattened standalone optional one-item wrappers into direct checkbox-style selections for Cyclone Missile Launcher, Venerable, Advanced Jamming Beacon, Smoke Launchers, Whirlwind Storm Bolter, Armour Piercing High Explosive Shells, Hunter-Killer Missile, Dozer Blade, Combat Shield, Haywire Mine, Jump Packs, Storm Shield, and Wolf Scouts Trapmaster Melta Bomb. Only genuinely independent binary options were flattened: Land Speeder missile choices, Land Raider pintle choices, Predator/Baal weapon packages, Thunderwolf Storm Shields, Wolf Guard Storm Shields, and other mutually exclusive loadout choices remain radio-style selectors. Baal Predator Dozer Blade was converted by moving its existing Paid Wargear max1 constraint directly onto the existing selection. Sanguinary Banner was moved from Paid Wargear to Unit Upgrade and given the same direct checkbox treatment. Added a concise Coming Soon rule to Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans pointing players to the authoritative Space Marines PDF in the Reforged Discord. Root points, loadout legality, attachment rules, Eliminator permissive-corrective validation, Additional Copy Costs, GS21 target, and unrelated mechanics are unchanged.\n\nREV18 — ADDITIONAL MODEL CHECKBOXES\nConverted all seven optional Additional Model slots currently present in the Space Marines catalogue to direct checkbox-style selections by moving each existing group-level max-1 constraint onto its existing child entry. This affects Victrix Guard 3, Victrix Honour Guard 3, Sanguinary Guard 3, Sternguard Veteran 3, Bladeguard Veteran 3, Devastator Centurion 2, and Assault Centurion 2. No groups or entries were moved, renamed, reordered, added, or removed. Existing entry types, stable IDs, names, hidden values, sortIndex values, points costs, nested loadouts, rules, modifiers, categories, and infoLinks are unchanged. Existing REV17 checkbox cleanup, concise Coming Soon placeholders, Additional Copy Costs, GS21 target, root points, and unrelated mechanics are unchanged. Catalogue Bugfixes remains cumulative and the new checkbox entry was appended.\n\nREV19 — SANGUINARY PRIEST CHECKBOX + COMMENT CONSOLIDATION\nMoved the Sanguinary Priest Jump Pack's existing max-one constraint from its one-item Paid Wargear wrapper onto the existing Jump Pack entry so it renders as a direct checkbox while preserving the same ID, +10 Point cost, and source rule text. Consolidated live catalogue documentation: current-state guidance now precedes the historical build log, obsolete EMPTY UNIT SHELL declarations were removed from implemented non-library units, the four genuinely unfinished units are explicitly marked current/incomplete, and Chapter / Additional Copy Costs comments now describe GS21 behavior. No points, Chapter gating, attachment topology, Additional Copy Cost arithmetic, unit availability, source-derived rules text, or portable Manufactorum vehicle executable payload changed. Manufactorum Imperium Library V10 was audited against Space Marines REV18 and required no sync.\n\nREV20 — LEADER POINTS MIGRATION\nRetargeted the catalogue to Game System revision 24. Wolf Guard Battle Leader; Captain, Gravis Captain, Phobos Captain, Jump Pack Captain, Terminator Captain; Librarian, Phobos Librarian, Terminator Librarian, Jump Pack Librarian; Lieutenant, Phobos Lieutenant, Jump Pack Lieutenant; Chaplain, Terminator Chaplain, Jump Pack Chaplain; and Apothecary Biologis now each cost 1 LP, exactly matching the 17 existing Counts Toward Leader Maximum roots. The legacy count tags remain intact for parallel migration validation. Sanguinary Priest remains an Infantry non-Leader and receives no LP cost. Chapter selection/gating, Leader attachment topology, Assault Intercessor Fly-state validation, Coming Soon payloads, Additional Copy Costs, Eliminator/Wolf Guard Terminator/Thunderwolf semantic counters, points, loadouts, unit availability, and all ten portable Space Marine vehicle executable trees remain mechanically unchanged. No Manufactorum library sync is required for this Leader-only migration.\n\nREV21 — LEADER POINTS CLEANUP\nRuntime validation passed for ordinary paid Space Marine Leaders and the intentionally uncharged Sanguinary Priest. The 17 legacy Counts Toward Leader Maximum links matched the 17 1-LP Leader roots exactly and were removed. Sanguinary Priest remains without an LP cost object. Blood Angels units, Chapter gating, attachment rules, Additional Copy Costs, Manufactorum vehicle payloads, points, loadouts, shared vehicle content, and all unrelated Space Marines mechanics remain unchanged. Because this catalogue is still explicitly under construction, its automatically-present construction warning remains the player-facing Configuration item rather than being renamed to the normal Updated: September 14th marker. Its cumulative Catalogue Bugfixes header is dated September 14th and ordered newest-first.\n\nREV22 — CONTEMPTOR DOUBLE POWER FIST BUGFIX\nRemoved the two mutual-hide modifiers that prevented both Contemptor weapon selectors from choosing Dreadnought Power Fist &. Both arms are now independent. No points, profiles, mandatory selector constraints, or stable IDs changed. Portable shared content was synchronized to Manufactorum Imperium V15.\n\nREV23 — FINAL FOUR LOADOUT IMPLEMENTATION\nReplaced the remaining Coming Soon payloads on Firedrake Terminators, Terminators, Assault Terminators, and Vanguard Veterans. Terminators use two flat model cards with independent ranged/melee selectors and a permissive-corrective one-heavy-weapon cap; Cyclone Missile Launcher is direct Paid Wargear. Firedrakes use polymorphic final-state roles: Dragonscale Shield Terminator, Lightning Claws Terminator, and +10 Point Combi-Bolter Terminator. Assault Terminators use atomic Lightning Claws vs +10 Thunder Hammer & Storm Shield per model. Vanguard Veterans use polymorphic ordinary / Relic Blade / Lightning Claw roles, a direct +40 third model, three independent +10 grenade/bomb upgrades, and a permissive-corrective max-one Relic Blade validator. No root points, categories, attachment topology, Additional Copy Cost arithmetic, or existing root IDs changed.",
     "categoryEntries": [
       {
         "name": "May Attach To: Wolf Guard Battle Leader",
@@ -32880,6 +34523,16 @@
       {
         "name": "Eliminator Covering Fire Equipped",
         "id": "a183-549f-b0ce-b865",
+        "hidden": true
+      },
+      {
+        "name": "Terminator Heavy Weapon Equipped",
+        "id": "06ec-0086-03f0-a801",
+        "hidden": true
+      },
+      {
+        "name": "Vanguard Veteran Relic Blade Equipped",
+        "id": "2764-7a1b-5320-5272",
         "hidden": true
       }
     ]
