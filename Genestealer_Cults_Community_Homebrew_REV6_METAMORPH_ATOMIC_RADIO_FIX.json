@@ -5,7 +5,7 @@
     "name": "...",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 26,
-    "revision": 5,
+    "revision": 6,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -3853,14 +3853,43 @@
                 "id": "d953-b54f-1e83-ef5d",
                 "hidden": false,
                 "sortIndex": 1,
-                "selectionEntries": [
+                "selectionEntryGroups": [
                   {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Tyrannic Mutations & Extra Tyrannic Mutations",
+                    "name": "​",
+                    "id": "f8ca-d21c-139b-567b",
                     "hidden": false,
-                    "id": "d52b-ddeb-0211-25d5",
-                    "sortIndex": 1
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "939c-441e-2331-2305",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "cf52-8440-9f10-a1dc",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Tyrannic Mutations & Extra Tyrannic Mutations",
+                        "hidden": false,
+                        "id": "d52b-ddeb-0211-25d5",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d52b-ddeb-0211-25d5"
                   }
                 ]
               },
@@ -3964,7 +3993,7 @@
             ]
           }
         ],
-        "comment": "REV4 LOADOUT MODEL: Hybrid Metamorph 1 has the fixed atomic loadout Tyrannic Mutations & Extra Tyrannic Mutations. Hybrid Metamorphs 2-5 remain the four-model common-loadout block with either 4x Autopistol & Tyrannic Mutations or 4x Hand Flamer & Tyrannic Mutations. Hive Icon remains a +10 Point unit upgrade."
+        "comment": "REV6 UI FIX: Hybrid Metamorph 1 keeps the single atomic 'Tyrannic Mutations & Extra Tyrannic Mutations' loadout inside a mandatory 1-of-1 selection group. This prevents New Recruit from rendering the fixed loadout as a quantity spinner."
       },
       {
         "type": "unit",
@@ -4529,6 +4558,6 @@
       }
     ],
     "authorName": "AlienDilo",
-    "comment": "CURRENT STATE — GENESTEALER CULTS COMMUNITY HOMEBREW / GS26\nThis catalogue implements the attached community Genestealer Cults homebrew as a fully functional companion to the Warhammer 40k Reforged listbuilder. Its catalogue display name is intentionally \"...\" so it is not presented alongside supported Reforged armies as though it were an official legal army.\nThis is a fun community creation by AlienDilo and is not an official Reforged army. It is not supported or maintained by the developers of Reforged. The supplied homebrew PDF remains authoritative for gameplay rules, weapon profiles, relics, psychic powers, and unusual per-model loadout mixtures.\nListbuilder philosophy matches the main project: meaningful final-state list decisions are represented directly; the PDF remains open for rules text and unusual/default mixed loadouts.\nREV1 — initial complete catalogue: all 11 source units, Leader Points, required Leader attachments, Rare enforcement, Troop/Other Additional Copy Costs, loadouts, paid upgrades, and GS26 integration.\n\nREV2 — LOADOUT CLEANUP\nReviewed the first-pass community catalogue against established Drukhari / World Eaters mixed-role squad presentation. The always-present disclaimer now prominently identifies the catalogue as an unofficial community creation by AlienDilo and explicitly unaffiliated with the Reforged development team. Psychic Familiar selectors were removed from The Patriarch and Magus because the source defines Psychic Familiar as an ability. Neophyte Hybrids and Acolyte Hybrids were rebuilt around explicit model roles with mandatory final-state weapon choices and no empty radio entries. Root unit IDs, root points, categories, attachments, Leader Points, Additional Copy Cost mechanics, Rare handling, and all untouched unit trees are unchanged.\n\nREV3 — MODEL ROLE CLEANUP\nRebuilt Atalan Jackals, Hybrid Metamorphs, Aberrants, and Purestrain Genestealers into explicit model-role presentation. Root points/categories and all other listbuilding systems remain unchanged.\n\nREV4 — LOADOUT REFINEMENT\nAtalan Jackal 2 now presents Grenade Launcher as a costed radio option instead of a checkbox. Hybrid Metamorph 1 is now one atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The +10 Mining Tool & Cult Claws & Knife option moved from Acolyte unit-level Paid Wargear onto Acolyte Hybrid 2. Separate leader selectors are ordered melee before sidearm. Root points, categories, attachments, Leader Points, Additional Copy Costs, Rare handling, and unrelated unit trees are unchanged.\n\nREV5 — CATALOGUE CREATE BASELINE\nFinalized visible fixed-size unit names for Neophyte Hybrids (10), Acolyte Hybrids (5), Purestrain Genestealers (10), Aberrants (5), and Hybrid Metamorphs (5). The Catalogue Bugfixes section no longer records implementation-stage construction work; all prior bullets were replaced by the single marker <catalogue create>. Stable root IDs, points, categories, loadouts, attachments, Leader Points, Additional Copy Costs, Rare handling, and all listbuilding mechanics are unchanged."
+    "comment": "CURRENT STATE — GENESTEALER CULTS COMMUNITY HOMEBREW / GS26\nThis catalogue implements the attached community Genestealer Cults homebrew as a fully functional companion to the Warhammer 40k Reforged listbuilder. Its catalogue display name is intentionally \"...\" so it is not presented alongside supported Reforged armies as though it were an official legal army.\nThis is a fun community creation by AlienDilo and is not an official Reforged army. It is not supported or maintained by the developers of Reforged. The supplied homebrew PDF remains authoritative for gameplay rules, weapon profiles, relics, psychic powers, and unusual per-model loadout mixtures.\nListbuilder philosophy matches the main project: meaningful final-state list decisions are represented directly; the PDF remains open for rules text and unusual/default mixed loadouts.\nREV1 — initial complete catalogue: all 11 source units, Leader Points, required Leader attachments, Rare enforcement, Troop/Other Additional Copy Costs, loadouts, paid upgrades, and GS26 integration.\n\nREV2 — LOADOUT CLEANUP\nReviewed the first-pass community catalogue against established Drukhari / World Eaters mixed-role squad presentation. The always-present disclaimer now prominently identifies the catalogue as an unofficial community creation by AlienDilo and explicitly unaffiliated with the Reforged development team. Psychic Familiar selectors were removed from The Patriarch and Magus because the source defines Psychic Familiar as an ability. Neophyte Hybrids and Acolyte Hybrids were rebuilt around explicit model roles with mandatory final-state weapon choices and no empty radio entries. Root unit IDs, root points, categories, attachments, Leader Points, Additional Copy Cost mechanics, Rare handling, and all untouched unit trees are unchanged.\n\nREV3 — MODEL ROLE CLEANUP\nRebuilt Atalan Jackals, Hybrid Metamorphs, Aberrants, and Purestrain Genestealers into explicit model-role presentation. Root points/categories and all other listbuilding systems remain unchanged.\n\nREV4 — LOADOUT REFINEMENT\nAtalan Jackal 2 now presents Grenade Launcher as a costed radio option instead of a checkbox. Hybrid Metamorph 1 is now one atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The +10 Mining Tool & Cult Claws & Knife option moved from Acolyte unit-level Paid Wargear onto Acolyte Hybrid 2. Separate leader selectors are ordered melee before sidearm. Root points, categories, attachments, Leader Points, Additional Copy Costs, Rare handling, and unrelated unit trees are unchanged.\n\nREV5 — CATALOGUE CREATE BASELINE\nFinalized visible fixed-size unit names for Neophyte Hybrids (10), Acolyte Hybrids (5), Purestrain Genestealers (10), Aberrants (5), and Hybrid Metamorphs (5). The Catalogue Bugfixes section no longer records implementation-stage construction work; all prior bullets were replaced by the single marker <catalogue create>. Stable root IDs, points, categories, loadouts, attachments, Leader Points, Additional Copy Costs, Rare handling, and all listbuilding mechanics are unchanged.\n\nREV6 — HYBRID METAMORPH 1 UI FIX\nRestored a mandatory 1-of-1 selection-group wrapper around the fixed atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The previous direct upgrade entry rendered as a quantity spinner in New Recruit. No points, categories, unit rules, or other catalogue mechanics changed."
   }
 }
