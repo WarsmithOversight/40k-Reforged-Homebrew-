@@ -4,8 +4,8 @@
     "id": "2266-0f05-edd4-21d7",
     "name": "...",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 26,
-    "revision": 6,
+    "gameSystemRevision": 37,
+    "revision": 7,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -52,7 +52,7 @@
       {
         "type": "upgrade",
         "import": true,
-        "name": "Updated: September 16th",
+        "name": "Updated: September 19th",
         "hidden": false,
         "id": "cf79-f939-ab49-fb6f",
         "sortIndex": 1,
@@ -69,7 +69,7 @@
             "name": "Catalogue Notes",
             "id": "0e3f-8996-9fd7-2a42",
             "hidden": false,
-            "description": "## Genestealer Cults Community Homebrew\n\n• All 11 source units are represented.\n• Leader Points, Leader attachments, Rare enforcement, Additional Copy Costs, loadouts, and paid upgrades are implemented.\n• Catalogue display name is intentionally `...` to avoid presenting this community army as a supported Reforged faction.\n\n*The supplied homebrew PDF remains authoritative.*\n\n## Catalogue Bugfixes (September 16th)\n\n<catalogue create>",
+            "description": "## Genestealer Cults Community Homebrew\n\n• All 11 source units are represented.\n• Leader Points, Leader attachments, Rare enforcement, Additional Copy Costs, loadouts, and paid upgrades are implemented.\n• Catalogue display name is intentionally `...` to avoid presenting this community army as a supported Reforged faction.\n\n*The supplied homebrew PDF remains authoritative.*\n\n## Catalogue Bugfixes (September 19th)\n\n• Game System compatibility: updated the catalogue for the current Game System, including 420 Point Practice lists.\n• Extra Unit Copy Costs: renamed the copy-cost accounting item and removed the duplicate visible Troops/Other ledger rows; Troop and Other thresholds remain separate, with Practice allowing three normal-cost Troop copies and no normal-cost Other copies.\n• Unit Abilities: added the top-level ability names for all 11 source datasheets to the listbuilder Profiles section.\n• Presentation: unit rows now use ▸; The Patriarch, Magus, and Primus use 🎖️; all model headers use the Genestealer Cults 🧬 marker; Loadout Options use 🧰; Leader Attachment uses 🔗; Infantry, Vehicle, and Rare category labels use the current Game System icons.\n\n## Catalogue Bugfixes (September 16th)\n\n<catalogue create>",
             "noindex": false
           }
         ],
@@ -87,12 +87,12 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV5: September 16th catalogue creation cleanup. Finalized visible model-count suffixes and replaced the implementation-history bugfix list with a single <catalogue create> marker."
+        "comment": "REV7 CURRENT TEMPLATE. The September 19th Catalogue Bugfixes section records only the actual player-facing delta from the live REV6 catalogue to the finished current-template state. The September 16th <catalogue create> baseline is preserved. The catalogue remains explicitly unofficial community homebrew by AlienDilo."
       },
       {
         "type": "upgrade",
         "import": true,
-        "name": "Additional Copy Costs",
+        "name": "Extra Unit Copy Costs",
         "hidden": false,
         "id": "6826-a5b1-395a-d703",
         "sortIndex": 2,
@@ -107,12 +107,12 @@
             "targetId": "54e9-a5b4-e275-00c5",
             "id": "8d91-bef2-e360-3b28",
             "primary": false,
-            "name": "Required Additional Copy Costs Configuration"
+            "name": "Required Extra Unit Copy Costs Configuration"
           }
         ],
         "infoLinks": [
           {
-            "name": "Additional Copy Costs",
+            "name": "Extra Unit Copy Costs",
             "id": "78f7-d8aa-3320-906d",
             "hidden": false,
             "type": "rule",
@@ -135,7 +135,7 @@
           {
             "type": "add",
             "field": "error",
-            "value": "Additional Copy Costs is automatically managed by the listbuilder and should appear only once. Remove any extra Additional Copy Costs entries.",
+            "value": "Extra Unit Copy Costs is automatically managed by the listbuilder and should appear only once. Remove any extra Extra Unit Copy Costs entries.",
             "conditions": [
               {
                 "type": "atLeast",
@@ -147,1646 +147,1916 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "Additional Copy Costs"
+                "childName": "Extra Unit Copy Costs"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 5,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "55b8-687c-ae78-be3c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Neophyte Hybrids (10)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "55b8-687c-ae78-be3c",
+                "childName": "▸ Neophyte Hybrids (10)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 80,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 5,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "55b8-687c-ae78-be3c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Neophyte Hybrids (10)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 7,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "55b8-687c-ae78-be3c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Neophyte Hybrids (10)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "55b8-687c-ae78-be3c",
+                "childName": "▸ Neophyte Hybrids (10)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 120,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 7,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "55b8-687c-ae78-be3c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Neophyte Hybrids (10)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 9,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "55b8-687c-ae78-be3c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Neophyte Hybrids (10)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "55b8-687c-ae78-be3c",
+                "childName": "▸ Neophyte Hybrids (10)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 160,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 9,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "55b8-687c-ae78-be3c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Neophyte Hybrids (10)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 5,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "905a-4429-9f1d-5c34",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Acolyte Hybrids (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "905a-4429-9f1d-5c34",
+                "childName": "▸ Acolyte Hybrids (5)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 80,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 5,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "905a-4429-9f1d-5c34",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Acolyte Hybrids (5)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 7,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "905a-4429-9f1d-5c34",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Acolyte Hybrids (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "905a-4429-9f1d-5c34",
+                "childName": "▸ Acolyte Hybrids (5)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 120,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 7,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "905a-4429-9f1d-5c34",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Acolyte Hybrids (5)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 9,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "905a-4429-9f1d-5c34",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Acolyte Hybrids (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "905a-4429-9f1d-5c34",
+                "childName": "▸ Acolyte Hybrids (5)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 160,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 9,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "905a-4429-9f1d-5c34",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Acolyte Hybrids (5)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f3d6-2b14-ebc0-9249",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Purestrain Genestealers (10)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "f3d6-2b14-ebc0-9249",
+                "childName": "▸ Purestrain Genestealers (10)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f3d6-2b14-ebc0-9249",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Purestrain Genestealers (10)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f3d6-2b14-ebc0-9249",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Purestrain Genestealers (10)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "f3d6-2b14-ebc0-9249",
+                "childName": "▸ Purestrain Genestealers (10)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f3d6-2b14-ebc0-9249",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Purestrain Genestealers (10)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f3d6-2b14-ebc0-9249",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Purestrain Genestealers (10)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "f3d6-2b14-ebc0-9249",
+                "childName": "▸ Purestrain Genestealers (10)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f3d6-2b14-ebc0-9249",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Purestrain Genestealers (10)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d62-0d41-d426-ae08",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Aberrants (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "2d62-0d41-d426-ae08",
+                "childName": "▸ Aberrants (5)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d62-0d41-d426-ae08",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Aberrants (5)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d62-0d41-d426-ae08",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Aberrants (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "2d62-0d41-d426-ae08",
+                "childName": "▸ Aberrants (5)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d62-0d41-d426-ae08",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Aberrants (5)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d62-0d41-d426-ae08",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Aberrants (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "2d62-0d41-d426-ae08",
+                "childName": "▸ Aberrants (5)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d62-0d41-d426-ae08",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Aberrants (5)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "802a-338f-8cc3-9cde",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Hybrid Metamorphs (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "802a-338f-8cc3-9cde",
+                "childName": "▸ Hybrid Metamorphs (5)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "802a-338f-8cc3-9cde",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Hybrid Metamorphs (5)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "802a-338f-8cc3-9cde",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Hybrid Metamorphs (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "802a-338f-8cc3-9cde",
+                "childName": "▸ Hybrid Metamorphs (5)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "802a-338f-8cc3-9cde",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Hybrid Metamorphs (5)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "802a-338f-8cc3-9cde",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Hybrid Metamorphs (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "802a-338f-8cc3-9cde",
+                "childName": "▸ Hybrid Metamorphs (5)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "802a-338f-8cc3-9cde",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Hybrid Metamorphs (5)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b232-a9d0-b77a-a5f2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Atalan Jackals (4) & Atalan Wolfquad"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "b232-a9d0-b77a-a5f2",
+                "childName": "▸ Atalan Jackals (4) & Atalan Wolfquad",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b232-a9d0-b77a-a5f2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Atalan Jackals (4) & Atalan Wolfquad"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b232-a9d0-b77a-a5f2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Atalan Jackals (4) & Atalan Wolfquad"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "b232-a9d0-b77a-a5f2",
+                "childName": "▸ Atalan Jackals (4) & Atalan Wolfquad",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b232-a9d0-b77a-a5f2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Atalan Jackals (4) & Atalan Wolfquad"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b232-a9d0-b77a-a5f2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Atalan Jackals (4) & Atalan Wolfquad"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "b232-a9d0-b77a-a5f2",
+                "childName": "▸ Atalan Jackals (4) & Atalan Wolfquad",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b232-a9d0-b77a-a5f2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Atalan Jackals (4) & Atalan Wolfquad"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57bf-19b9-96b1-9ad3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Goliath Rockgrinder"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "57bf-19b9-96b1-9ad3",
+                "childName": "▸ Goliath Rockgrinder",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57bf-19b9-96b1-9ad3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Goliath Rockgrinder"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57bf-19b9-96b1-9ad3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Goliath Rockgrinder"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "57bf-19b9-96b1-9ad3",
+                "childName": "▸ Goliath Rockgrinder",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 40,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57bf-19b9-96b1-9ad3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Goliath Rockgrinder"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57bf-19b9-96b1-9ad3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Goliath Rockgrinder"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "57bf-19b9-96b1-9ad3",
+                "childName": "▸ Goliath Rockgrinder",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57bf-19b9-96b1-9ad3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Goliath Rockgrinder"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "55b8-687c-ae78-be3c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Neophyte Hybrids (10)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "55b8-687c-ae78-be3c",
+                "childName": "▸ Neophyte Hybrids (10)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "55b8-687c-ae78-be3c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Neophyte Hybrids (10)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "905a-4429-9f1d-5c34",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Acolyte Hybrids (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "905a-4429-9f1d-5c34",
+                "childName": "▸ Acolyte Hybrids (5)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 60,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 4,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "905a-4429-9f1d-5c34",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Acolyte Hybrids (5)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f3d6-2b14-ebc0-9249",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Purestrain Genestealers (10)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "f3d6-2b14-ebc0-9249",
+                "childName": "▸ Purestrain Genestealers (10)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d62-0d41-d426-ae08",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Aberrants (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "2d62-0d41-d426-ae08",
+                "childName": "▸ Aberrants (5)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "802a-338f-8cc3-9cde",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Hybrid Metamorphs (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "802a-338f-8cc3-9cde",
+                "childName": "▸ Hybrid Metamorphs (5)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b232-a9d0-b77a-a5f2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Atalan Jackals (4) & Atalan Wolfquad"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "b232-a9d0-b77a-a5f2",
+                "childName": "▸ Atalan Jackals (4) & Atalan Wolfquad",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57bf-19b9-96b1-9ad3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "▸ Goliath Rockgrinder"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "57bf-19b9-96b1-9ad3",
+                "childName": "▸ Goliath Rockgrinder",
+                "repeats": 1,
+                "roundUp": false
               }
             ]
           }
         ],
-        "selectionEntryGroups": [
-          {
-            "name": "​",
-            "id": "4032-37b7-e825-ad63",
-            "hidden": false,
-            "sortIndex": 1,
-            "constraints": [
-              {
-                "type": "min",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "80f2-a36f-9463-fc88",
-                "includeChildSelections": false
-              },
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "5a18-7b17-67f3-f83b",
-                "includeChildSelections": false
-              }
-            ],
-            "selectionEntries": [
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Troops",
-                "hidden": false,
-                "id": "f6b7-10d3-a00b-fc5f",
-                "sortIndex": 1,
-                "costs": [
-                  {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 0
-                  }
-                ],
-                "modifiers": [
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 5,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "55b8-687c-ae78-be3c",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Neophyte Hybrids (10)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "55b8-687c-ae78-be3c",
-                        "childName": "Neophyte Hybrids (10)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 80,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 5,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "55b8-687c-ae78-be3c",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Neophyte Hybrids (10)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 7,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "55b8-687c-ae78-be3c",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Neophyte Hybrids (10)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "55b8-687c-ae78-be3c",
-                        "childName": "Neophyte Hybrids (10)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 120,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 7,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "55b8-687c-ae78-be3c",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Neophyte Hybrids (10)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 9,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "55b8-687c-ae78-be3c",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Neophyte Hybrids (10)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "55b8-687c-ae78-be3c",
-                        "childName": "Neophyte Hybrids (10)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 160,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 9,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "55b8-687c-ae78-be3c",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Neophyte Hybrids (10)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 5,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "905a-4429-9f1d-5c34",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Acolyte Hybrids (5)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "905a-4429-9f1d-5c34",
-                        "childName": "Acolyte Hybrids (5)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 80,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 5,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "905a-4429-9f1d-5c34",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Acolyte Hybrids (5)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 7,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "905a-4429-9f1d-5c34",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Acolyte Hybrids (5)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "905a-4429-9f1d-5c34",
-                        "childName": "Acolyte Hybrids (5)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 120,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 7,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "905a-4429-9f1d-5c34",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Acolyte Hybrids (5)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 9,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "905a-4429-9f1d-5c34",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Acolyte Hybrids (5)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "905a-4429-9f1d-5c34",
-                        "childName": "Acolyte Hybrids (5)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 160,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 9,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "905a-4429-9f1d-5c34",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Acolyte Hybrids (5)"
-                      }
-                    ]
-                  }
-                ],
-                "comment": "Troop copy-cost ledger: 4 / 6 / 8 normal copies per identical Troop family at 800 / 1200 / 1600 Points, then +20 Points per additional copy."
-              }
-            ],
-            "defaultSelectionEntryId": "f6b7-10d3-a00b-fc5f"
-          },
-          {
-            "name": "​",
-            "id": "d676-7ac0-ead5-3953",
-            "hidden": false,
-            "sortIndex": 2,
-            "constraints": [
-              {
-                "type": "min",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "587d-901b-33fe-e522",
-                "includeChildSelections": false
-              },
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "ad4f-332a-16b8-d77d",
-                "includeChildSelections": false
-              }
-            ],
-            "selectionEntries": [
-              {
-                "type": "upgrade",
-                "import": true,
-                "name": "Other",
-                "hidden": false,
-                "id": "4979-d858-d2cc-e359",
-                "sortIndex": 1,
-                "costs": [
-                  {
-                    "name": "Points",
-                    "typeId": "51b2-306e-1021-d207",
-                    "value": 0
-                  }
-                ],
-                "modifiers": [
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 2,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "f3d6-2b14-ebc0-9249",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Purestrain Genestealers (10)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "f3d6-2b14-ebc0-9249",
-                        "childName": "Purestrain Genestealers (10)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 2,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "f3d6-2b14-ebc0-9249",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Purestrain Genestealers (10)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 3,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "f3d6-2b14-ebc0-9249",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Purestrain Genestealers (10)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "f3d6-2b14-ebc0-9249",
-                        "childName": "Purestrain Genestealers (10)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 40,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 3,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "f3d6-2b14-ebc0-9249",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Purestrain Genestealers (10)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 4,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "f3d6-2b14-ebc0-9249",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Purestrain Genestealers (10)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "f3d6-2b14-ebc0-9249",
-                        "childName": "Purestrain Genestealers (10)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 60,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 4,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "f3d6-2b14-ebc0-9249",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Purestrain Genestealers (10)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 2,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "2d62-0d41-d426-ae08",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Aberrants (5)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "2d62-0d41-d426-ae08",
-                        "childName": "Aberrants (5)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 2,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "2d62-0d41-d426-ae08",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Aberrants (5)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 3,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "2d62-0d41-d426-ae08",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Aberrants (5)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "2d62-0d41-d426-ae08",
-                        "childName": "Aberrants (5)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 40,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 3,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "2d62-0d41-d426-ae08",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Aberrants (5)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 4,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "2d62-0d41-d426-ae08",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Aberrants (5)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "2d62-0d41-d426-ae08",
-                        "childName": "Aberrants (5)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 60,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 4,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "2d62-0d41-d426-ae08",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Aberrants (5)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 2,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "802a-338f-8cc3-9cde",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Hybrid Metamorphs (5)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "802a-338f-8cc3-9cde",
-                        "childName": "Hybrid Metamorphs (5)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 2,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "802a-338f-8cc3-9cde",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Hybrid Metamorphs (5)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 3,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "802a-338f-8cc3-9cde",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Hybrid Metamorphs (5)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "802a-338f-8cc3-9cde",
-                        "childName": "Hybrid Metamorphs (5)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 40,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 3,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "802a-338f-8cc3-9cde",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Hybrid Metamorphs (5)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 4,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "802a-338f-8cc3-9cde",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Hybrid Metamorphs (5)"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "802a-338f-8cc3-9cde",
-                        "childName": "Hybrid Metamorphs (5)",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 60,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 4,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "802a-338f-8cc3-9cde",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Hybrid Metamorphs (5)"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 2,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "b232-a9d0-b77a-a5f2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Atalan Jackals (4) & Atalan Wolfquad"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "b232-a9d0-b77a-a5f2",
-                        "childName": "Atalan Jackals (4) & Atalan Wolfquad",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 2,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "b232-a9d0-b77a-a5f2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Atalan Jackals (4) & Atalan Wolfquad"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 3,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "b232-a9d0-b77a-a5f2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Atalan Jackals (4) & Atalan Wolfquad"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "b232-a9d0-b77a-a5f2",
-                        "childName": "Atalan Jackals (4) & Atalan Wolfquad",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 40,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 3,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "b232-a9d0-b77a-a5f2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Atalan Jackals (4) & Atalan Wolfquad"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 4,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "b232-a9d0-b77a-a5f2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Atalan Jackals (4) & Atalan Wolfquad"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "b232-a9d0-b77a-a5f2",
-                        "childName": "Atalan Jackals (4) & Atalan Wolfquad",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 60,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 4,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "b232-a9d0-b77a-a5f2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Atalan Jackals (4) & Atalan Wolfquad"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 2,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "57bf-19b9-96b1-9ad3",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Goliath Rockgrinder"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "57bf-19b9-96b1-9ad3",
-                        "childName": "Goliath Rockgrinder",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "0b81-3579-ad7e-49b2",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "800 Points (Quick)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 2,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "57bf-19b9-96b1-9ad3",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Goliath Rockgrinder"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 3,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "57bf-19b9-96b1-9ad3",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Goliath Rockgrinder"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "57bf-19b9-96b1-9ad3",
-                        "childName": "Goliath Rockgrinder",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 40,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "d0e1-6785-e168-b595",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1200 Points (Standard)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 3,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "57bf-19b9-96b1-9ad3",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Goliath Rockgrinder"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "increment",
-                    "value": 20,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 4,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "57bf-19b9-96b1-9ad3",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Goliath Rockgrinder"
-                      }
-                    ],
-                    "repeats": [
-                      {
-                        "field": "selections",
-                        "scope": "roster",
-                        "value": 1,
-                        "percentValue": false,
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childId": "57bf-19b9-96b1-9ad3",
-                        "childName": "Goliath Rockgrinder",
-                        "repeats": 1,
-                        "roundUp": false
-                      }
-                    ]
-                  },
-                  {
-                    "type": "decrement",
-                    "value": 60,
-                    "field": "51b2-306e-1021-d207",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "91f0-51d4-3148-07c8",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "1600 Points (Long)"
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 4,
-                        "field": "selections",
-                        "scope": "roster",
-                        "childId": "57bf-19b9-96b1-9ad3",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "includeChildForces": true,
-                        "childName": "Goliath Rockgrinder"
-                      }
-                    ]
-                  }
-                ],
-                "comment": "Other copy-cost ledger: 1 / 2 / 3 normal copies per identical Other family at 800 / 1200 / 1600 Points, then +20 Points per additional copy."
-              }
-            ],
-            "defaultSelectionEntryId": "4979-d858-d2cc-e359"
-          }
-        ],
-        "comment": "Required automatic copy-cost accounting for the two Troop and five non-Rare Other families in this community catalogue."
+        "comment": "EXTRA UNIT COPY COSTS / GS37. Permanent required accounting entry. Troop and Other arithmetic remain logically separate but live directly on this single visible parent. Neophyte Hybrids and Acolyte Hybrids remain the two Troop copy families. Purestrain Genestealers, Aberrants, Hybrid Metamorphs, Atalan Jackals & Atalan Wolfquad, and Goliath Rockgrinder remain the five non-Rare Other copy families. Normal-copy allowances are Practice 3 / 0, Quick 4 / 1, Standard 6 / 2, and Long 8 / 3 for Troop / Other respectively. Each excess identical copy adds 20 Points."
       },
       {
         "type": "unit",
         "import": true,
-        "name": "The Patriarch",
+        "name": "▸ 🎖️The Patriarch",
         "hidden": false,
         "id": "3822-6cb5-5a24-a344",
         "sortIndex": 10,
@@ -1813,13 +2083,13 @@
             "targetId": "eac7-32d5-ecd7-ce9e",
             "id": "c366-d4f8-51c0-89eb",
             "primary": false,
-            "name": "Infantry"
+            "name": "🪖 Infantry"
           },
           {
             "targetId": "c417-3a43-73d4-f4bf",
             "id": "9e82-df81-2486-7fb5",
             "primary": false,
-            "name": "Rare"
+            "name": "💎 Rare"
           }
         ],
         "modifiers": [
@@ -1838,7 +2108,7 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "The Patriarch"
+                "childName": "▸ 🎖️The Patriarch"
               }
             ]
           },
@@ -1878,7 +2148,7 @@
         ],
         "rules": [
           {
-            "name": "Leader Attachment",
+            "name": "🔗 Leader Attachment",
             "id": "fb19-c0f9-499d-1457",
             "hidden": false,
             "description": "This unit must attach to either:\n● ACOLYTE HYBRIDS\n● PURESTRAIN GENESTEALERS",
@@ -1887,13 +2157,13 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout Options",
+            "name": "🧰 Loadout Options",
             "id": "b366-971c-b234-621a",
             "hidden": false,
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Patriarch",
+                "name": "🧬 Patriarch",
                 "id": "a28c-8cd9-3d1e-f376",
                 "hidden": false,
                 "sortIndex": 1,
@@ -1948,12 +2218,42 @@
             ]
           }
         ],
-        "comment": "Source composition: The Patriarch (1) & Psychic Familiar (1). Patriarch weapon is a mandatory Talons/Bonesword choice. Familiar is shown as fixed composition; gameplay Familiar rules remain in the PDF."
+        "comment": "Source composition: The Patriarch (1) & Psychic Familiar (1). Patriarch weapon is a mandatory Talons/Bonesword choice. Familiar is shown as fixed composition; gameplay Familiar rules remain in the PDF.",
+        "infoLinks": [
+          {
+            "name": "🔮 Psyker 3",
+            "id": "a446-1e88-32fc-bb80",
+            "hidden": false,
+            "targetId": "e19d-3153-6445-7e13",
+            "type": "profile"
+          },
+          {
+            "name": "👁️ Windfall of the Warp, Hypnotic Gaze",
+            "id": "b2af-b3cc-7bc9-7cda",
+            "hidden": false,
+            "targetId": "78ef-9729-0114-db2d",
+            "type": "profile"
+          },
+          {
+            "name": "👑 Father of Ascension",
+            "id": "a6fe-2b79-ac30-a6d1",
+            "hidden": false,
+            "targetId": "8be6-ccd2-d524-72a1",
+            "type": "profile"
+          },
+          {
+            "name": "🔮 Psychic Familiar",
+            "id": "0448-fc91-bff8-59b5",
+            "hidden": false,
+            "targetId": "6e96-71c7-e9b1-f867",
+            "type": "profile"
+          }
+        ]
       },
       {
         "type": "unit",
         "import": true,
-        "name": "Magus",
+        "name": "▸ 🎖️Magus",
         "hidden": false,
         "id": "e29f-31f0-70a3-0abd",
         "sortIndex": 11,
@@ -1980,7 +2280,7 @@
             "targetId": "eac7-32d5-ecd7-ce9e",
             "id": "289d-1cf4-3bc4-d447",
             "primary": false,
-            "name": "Infantry"
+            "name": "🪖 Infantry"
           }
         ],
         "associations": [
@@ -2000,7 +2300,7 @@
         ],
         "rules": [
           {
-            "name": "Leader Attachment",
+            "name": "🔗 Leader Attachment",
             "id": "834a-83a0-0831-bde2",
             "hidden": false,
             "description": "This unit must attach to either:\n● NEOPHYTE HYBRIDS\n● ACOLYTE HYBRIDS",
@@ -2029,13 +2329,13 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout Options",
+            "name": "🧰 Loadout Options",
             "id": "96bb-abf1-2ebf-d3c3",
             "hidden": false,
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Magus",
+                "name": "🧬 Magus",
                 "id": "9e2d-a7c8-9730-5e54",
                 "hidden": false,
                 "sortIndex": 1,
@@ -2119,12 +2419,42 @@
             ]
           }
         ],
-        "comment": "Source composition: Magus (1) & Psychic Familiar (1). Fixed Magus equipment and familiar composition are represented; gameplay psychic/familiar rules remain in the PDF."
+        "comment": "Source composition: Magus (1) & Psychic Familiar (1). Fixed Magus equipment and familiar composition are represented; gameplay psychic/familiar rules remain in the PDF.",
+        "infoLinks": [
+          {
+            "name": "🔮 Psyker 2",
+            "id": "9038-8d25-0bcf-42b4",
+            "hidden": false,
+            "targetId": "2f96-2d62-a932-dd86",
+            "type": "profile"
+          },
+          {
+            "name": "👁️ Windfall of the Warp, Hypnotic Gaze",
+            "id": "ed6d-aabb-4040-5a2c",
+            "hidden": false,
+            "targetId": "78ef-9729-0114-db2d",
+            "type": "profile"
+          },
+          {
+            "name": "❤️ Heart of the Cult",
+            "id": "8f62-3633-fc26-17d4",
+            "hidden": false,
+            "targetId": "27a5-6ed4-c326-7ec3",
+            "type": "profile"
+          },
+          {
+            "name": "🔮 Psychic Familiar",
+            "id": "15fe-d6e2-9b22-ee6b",
+            "hidden": false,
+            "targetId": "6e96-71c7-e9b1-f867",
+            "type": "profile"
+          }
+        ]
       },
       {
         "type": "unit",
         "import": true,
-        "name": "Primus",
+        "name": "▸ 🎖️Primus",
         "hidden": false,
         "id": "3b19-062e-52ea-a35a",
         "sortIndex": 12,
@@ -2151,7 +2481,7 @@
             "targetId": "eac7-32d5-ecd7-ce9e",
             "id": "a8eb-5aa3-76f1-caba",
             "primary": false,
-            "name": "Infantry"
+            "name": "🪖 Infantry"
           }
         ],
         "associations": [
@@ -2171,7 +2501,7 @@
         ],
         "rules": [
           {
-            "name": "Leader Attachment",
+            "name": "🔗 Leader Attachment",
             "id": "3597-097d-4c95-f5a8",
             "hidden": false,
             "description": "This unit must attach to either:\n● NEOPHYTE HYBRIDS\n● ACOLYTE HYBRIDS",
@@ -2200,13 +2530,13 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout Options",
+            "name": "🧰 Loadout Options",
             "id": "b9fc-dfd3-ce38-bb5b",
             "hidden": false,
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Primus",
+                "name": "🧬 Primus",
                 "id": "2fa6-cc69-2de7-a55d",
                 "hidden": false,
                 "sortIndex": 1,
@@ -2327,12 +2657,21 @@
             ]
           }
         ],
-        "comment": "Fixed Primus equipment; required Leader attachment is fully implemented."
+        "comment": "Fixed Primus equipment; required Leader attachment is fully implemented.",
+        "infoLinks": [
+          {
+            "name": "📣 Starborn Demagogue",
+            "id": "a136-4413-ee27-5d00",
+            "hidden": false,
+            "targetId": "21fc-9ef3-a4cc-415b",
+            "type": "profile"
+          }
+        ]
       },
       {
         "type": "unit",
         "import": true,
-        "name": "Abominant",
+        "name": "▸ Abominant",
         "hidden": false,
         "id": "0304-b935-b72d-abaf",
         "sortIndex": 13,
@@ -2354,7 +2693,7 @@
             "targetId": "eac7-32d5-ecd7-ce9e",
             "id": "721e-0379-def8-0251",
             "primary": false,
-            "name": "Infantry"
+            "name": "🪖 Infantry"
           }
         ],
         "associations": [
@@ -2374,7 +2713,7 @@
         ],
         "rules": [
           {
-            "name": "Leader Attachment",
+            "name": "🔗 Leader Attachment",
             "id": "7478-eb02-b41c-0398",
             "hidden": false,
             "description": "This unit must attach to:\n● ABERRANTS",
@@ -2410,13 +2749,13 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout Options",
+            "name": "🧰 Loadout Options",
             "id": "877c-3a6c-cc24-46b3",
             "hidden": false,
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Abominant",
+                "name": "🧬 Abominant",
                 "id": "d141-1366-415c-4dbe",
                 "hidden": false,
                 "sortIndex": 1,
@@ -2463,12 +2802,28 @@
             ]
           }
         ],
-        "comment": "Source-defined 0 LP Leader. No synthetic LP:0 cost object is added; the official 0 leader points text is preserved as a rule."
+        "comment": "Source-defined 0 LP Leader. No synthetic LP:0 cost object is added; the official 0 leader points text is preserved as a rule.",
+        "infoLinks": [
+          {
+            "name": "🧠 Mindwyrm Familiar",
+            "id": "385a-0f1e-21f5-1283",
+            "hidden": false,
+            "targetId": "d248-bcdc-451e-3cc3",
+            "type": "profile"
+          },
+          {
+            "name": "♻️ Saintly Regeneration",
+            "id": "557b-14b5-56b9-616a",
+            "hidden": false,
+            "targetId": "1423-b704-be5c-54ca",
+            "type": "profile"
+          }
+        ]
       },
       {
         "type": "unit",
         "import": true,
-        "name": "Neophyte Hybrids (10)",
+        "name": "▸ Neophyte Hybrids (10)",
         "hidden": false,
         "id": "55b8-687c-ae78-be3c",
         "sortIndex": 20,
@@ -2496,7 +2851,7 @@
             "targetId": "eac7-32d5-ecd7-ce9e",
             "id": "e5a7-c9ac-3ecb-74e4",
             "primary": false,
-            "name": "Infantry"
+            "name": "🪖 Infantry"
           },
           {
             "targetId": "1de3-a8d2-0ae8-df33",
@@ -2513,11 +2868,39 @@
         ],
         "infoLinks": [
           {
-            "name": "Additional Copy Cost - Troop",
+            "name": "Extra Unit Copy Cost - Troop",
             "id": "a1fd-5ce9-35bc-b255",
             "hidden": false,
             "type": "rule",
             "targetId": "e686-5b9a-d78a-91e5"
+          },
+          {
+            "name": "🏙️ Urban Guerrillas",
+            "id": "9c59-0681-04e5-f82b",
+            "hidden": false,
+            "targetId": "c4d5-3634-b6fe-10b0",
+            "type": "profile"
+          },
+          {
+            "name": "⚡ Uprising Ambush",
+            "id": "9dd6-3a1b-7578-fcb4",
+            "hidden": false,
+            "targetId": "aab0-353c-6d51-bbfc",
+            "type": "profile"
+          },
+          {
+            "name": "🔥 Unquestioning Fanaticism",
+            "id": "0e48-ea4d-54cb-ab87",
+            "hidden": false,
+            "targetId": "bd19-8ebf-cef8-078e",
+            "type": "profile"
+          },
+          {
+            "name": "🚩 Hive Icon",
+            "id": "02c3-2e2b-1e49-4359",
+            "hidden": false,
+            "targetId": "05c9-6371-18df-b9a4",
+            "type": "profile"
           }
         ],
         "modifiers": [
@@ -2542,13 +2925,13 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout Options",
+            "name": "🧰 Loadout Options",
             "id": "10a0-8912-bfd9-b6a1",
             "hidden": false,
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Neophyte Leader",
+                "name": "🧬 Neophyte Leader",
                 "id": "fe14-a9ed-47fe-bb38",
                 "hidden": false,
                 "sortIndex": 1,
@@ -2662,7 +3045,7 @@
                 ]
               },
               {
-                "name": "Neophytes 2-6",
+                "name": "🧬 Neophytes 2-6",
                 "id": "e7d4-986d-8156-2e3d",
                 "hidden": false,
                 "sortIndex": 2,
@@ -2715,7 +3098,7 @@
                 ]
               },
               {
-                "name": "Neophyte 7",
+                "name": "🧬 Neophyte 7",
                 "id": "7169-23e2-38b6-c7cd",
                 "hidden": false,
                 "sortIndex": 3,
@@ -2813,7 +3196,7 @@
                 ]
               },
               {
-                "name": "Neophyte 8",
+                "name": "🧬 Neophyte 8",
                 "id": "1e7d-6012-93cb-2e59",
                 "hidden": false,
                 "sortIndex": 4,
@@ -2911,7 +3294,7 @@
                 ]
               },
               {
-                "name": "Weapons Specialist 9",
+                "name": "🧬 Weapons Specialist 9",
                 "id": "a1ec-382a-5b2b-07eb",
                 "hidden": false,
                 "sortIndex": 5,
@@ -2972,7 +3355,7 @@
                 ]
               },
               {
-                "name": "Weapons Specialist 10",
+                "name": "🧬 Weapons Specialist 10",
                 "id": "ae35-2af4-9473-b3af",
                 "hidden": false,
                 "sortIndex": 6,
@@ -3084,7 +3467,7 @@
       {
         "type": "unit",
         "import": true,
-        "name": "Acolyte Hybrids (5)",
+        "name": "▸ Acolyte Hybrids (5)",
         "hidden": false,
         "id": "905a-4429-9f1d-5c34",
         "sortIndex": 21,
@@ -3112,7 +3495,7 @@
             "targetId": "eac7-32d5-ecd7-ce9e",
             "id": "7ee8-7ffe-1196-55e3",
             "primary": false,
-            "name": "Infantry"
+            "name": "🪖 Infantry"
           },
           {
             "targetId": "8c5c-4c70-6811-4206",
@@ -3135,11 +3518,25 @@
         ],
         "infoLinks": [
           {
-            "name": "Additional Copy Cost - Troop",
+            "name": "Extra Unit Copy Cost - Troop",
             "id": "5f44-ad77-a980-ebab",
             "hidden": false,
             "type": "rule",
             "targetId": "e686-5b9a-d78a-91e5"
+          },
+          {
+            "name": "🔥 Unquestioning Fanaticism",
+            "id": "9f28-3939-a57a-0033",
+            "hidden": false,
+            "targetId": "bd19-8ebf-cef8-078e",
+            "type": "profile"
+          },
+          {
+            "name": "🚩 Hive Icon",
+            "id": "5078-579c-4f53-0c95",
+            "hidden": false,
+            "targetId": "05c9-6371-18df-b9a4",
+            "type": "profile"
           }
         ],
         "modifiers": [
@@ -3164,13 +3561,13 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout Options",
+            "name": "🧰 Loadout Options",
             "id": "8ce3-bb77-c34c-f500",
             "hidden": false,
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Acolyte Leader",
+                "name": "🧬 Acolyte Leader",
                 "id": "f754-2ab1-b79b-0d82",
                 "hidden": false,
                 "sortIndex": 1,
@@ -3215,7 +3612,7 @@
                 ]
               },
               {
-                "name": "Acolyte Hybrid 2",
+                "name": "🧬 Acolyte Hybrid 2",
                 "id": "a851-767c-2b33-15d3",
                 "hidden": false,
                 "sortIndex": 2,
@@ -3295,7 +3692,7 @@
                 ]
               },
               {
-                "name": "Acolyte Hybrid 3",
+                "name": "🧬 Acolyte Hybrid 3",
                 "id": "7f91-8b5d-b2aa-7e75",
                 "hidden": false,
                 "sortIndex": 3,
@@ -3348,7 +3745,7 @@
                 ]
               },
               {
-                "name": "Weapons Specialist 4",
+                "name": "🧬 Weapons Specialist 4",
                 "id": "f45b-38bf-e5d1-437e",
                 "hidden": false,
                 "sortIndex": 4,
@@ -3401,7 +3798,7 @@
                 ]
               },
               {
-                "name": "Weapons Specialist 5",
+                "name": "🧬 Weapons Specialist 5",
                 "id": "796f-4f6c-31c9-b26a",
                 "hidden": false,
                 "sortIndex": 5,
@@ -3504,7 +3901,7 @@
       {
         "type": "unit",
         "import": true,
-        "name": "Purestrain Genestealers (10)",
+        "name": "▸ Purestrain Genestealers (10)",
         "hidden": false,
         "id": "f3d6-2b14-ebc0-9249",
         "sortIndex": 30,
@@ -3532,7 +3929,7 @@
             "targetId": "eac7-32d5-ecd7-ce9e",
             "id": "a6c6-4e78-3235-4014",
             "primary": false,
-            "name": "Infantry"
+            "name": "🪖 Infantry"
           },
           {
             "targetId": "8c5c-4c70-6811-4206",
@@ -3543,11 +3940,32 @@
         ],
         "infoLinks": [
           {
-            "name": "Additional Copy Cost - Other",
+            "name": "Extra Unit Copy Cost - Other",
             "id": "0c3f-5084-c0be-e7dd",
             "hidden": false,
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
+          },
+          {
+            "name": "🦿 Walker",
+            "id": "83c1-12c4-ab7d-dbf3",
+            "hidden": false,
+            "targetId": "458d-a1ac-dcfb-8211",
+            "type": "profile"
+          },
+          {
+            "name": "🕳️ Lurk & Strike",
+            "id": "4e71-ee22-0066-708a",
+            "hidden": false,
+            "targetId": "f59d-050e-b996-bcfb",
+            "type": "profile"
+          },
+          {
+            "name": "👹 Snatcher-devil",
+            "id": "3943-5029-f946-9460",
+            "hidden": false,
+            "targetId": "ee57-36e4-53f5-9cc6",
+            "type": "profile"
           }
         ],
         "modifiers": [
@@ -3572,13 +3990,13 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout Options",
+            "name": "🧰 Loadout Options",
             "id": "4151-9aa6-ef68-77d9",
             "hidden": false,
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Purestrain Genestealers 1-10",
+                "name": "🧬 Purestrain Genestealers 1-10",
                 "id": "4291-84d7-14b6-4432",
                 "hidden": false,
                 "sortIndex": 1,
@@ -3630,7 +4048,7 @@
       {
         "type": "unit",
         "import": true,
-        "name": "Aberrants (5)",
+        "name": "▸ Aberrants (5)",
         "hidden": false,
         "id": "2d62-0d41-d426-ae08",
         "sortIndex": 31,
@@ -3658,7 +4076,7 @@
             "targetId": "eac7-32d5-ecd7-ce9e",
             "id": "0825-e6ee-b9bd-a464",
             "primary": false,
-            "name": "Infantry"
+            "name": "🪖 Infantry"
           },
           {
             "targetId": "f82e-2e50-2e1f-8213",
@@ -3669,11 +4087,32 @@
         ],
         "infoLinks": [
           {
-            "name": "Additional Copy Cost - Other",
+            "name": "Extra Unit Copy Cost - Other",
             "id": "6cdb-aaf3-baa4-837a",
             "hidden": false,
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
+          },
+          {
+            "name": "❤️ Resilient 5+",
+            "id": "ae01-165a-2398-8c39",
+            "hidden": false,
+            "targetId": "fcab-b757-8480-061c",
+            "type": "profile"
+          },
+          {
+            "name": "💪 Pure Misshapen Muscle",
+            "id": "00b2-b14f-57a3-1ca4",
+            "hidden": false,
+            "targetId": "a0e3-5dcd-1f64-dce4",
+            "type": "profile"
+          },
+          {
+            "name": "🔥 Hulking Fanatics",
+            "id": "47c2-a7ac-1fd4-b39d",
+            "hidden": false,
+            "targetId": "0ed5-e14a-9756-a451",
+            "type": "profile"
           }
         ],
         "modifiers": [
@@ -3698,13 +4137,13 @@
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout Options",
+            "name": "🧰 Loadout Options",
             "id": "47b7-f485-839d-20e4",
             "hidden": false,
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Aberrant 1",
+                "name": "🧬 Aberrant 1",
                 "id": "dbba-1da2-4717-6f8e",
                 "hidden": false,
                 "sortIndex": 1,
@@ -3749,7 +4188,7 @@
                 ]
               },
               {
-                "name": "Aberrants 2-5",
+                "name": "🧬 Aberrants 2-5",
                 "id": "208d-934e-2ede-5fbc",
                 "hidden": false,
                 "sortIndex": 2,
@@ -3801,7 +4240,7 @@
       {
         "type": "unit",
         "import": true,
-        "name": "Hybrid Metamorphs (5)",
+        "name": "▸ Hybrid Metamorphs (5)",
         "hidden": false,
         "id": "802a-338f-8cc3-9cde",
         "sortIndex": 32,
@@ -3829,27 +4268,48 @@
             "targetId": "eac7-32d5-ecd7-ce9e",
             "id": "fee8-02cc-e6d1-355d",
             "primary": false,
-            "name": "Infantry"
+            "name": "🪖 Infantry"
           }
         ],
         "infoLinks": [
           {
-            "name": "Additional Copy Cost - Other",
+            "name": "Extra Unit Copy Cost - Other",
             "id": "88d5-9bd4-f938-f8a6",
             "hidden": false,
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
+          },
+          {
+            "name": "❤️ Resilient 6+",
+            "id": "6463-6752-1894-7ffe",
+            "hidden": false,
+            "targetId": "9ccd-b5c5-ca09-fd2f",
+            "type": "profile"
+          },
+          {
+            "name": "🧬 Broodkin Champions",
+            "id": "d5e8-1f63-ad0a-8ec8",
+            "hidden": false,
+            "targetId": "8d38-7015-a924-f3d1",
+            "type": "profile"
+          },
+          {
+            "name": "🚩 Hive Icon",
+            "id": "548e-60a2-ae6b-3564",
+            "hidden": false,
+            "targetId": "05c9-6371-18df-b9a4",
+            "type": "profile"
           }
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout Options",
+            "name": "🧰 Loadout Options",
             "id": "2810-7351-f373-c774",
             "hidden": false,
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Hybrid Metamorph 1",
+                "name": "🧬 Hybrid Metamorph 1",
                 "id": "d953-b54f-1e83-ef5d",
                 "hidden": false,
                 "sortIndex": 1,
@@ -3894,7 +4354,7 @@
                 ]
               },
               {
-                "name": "Hybrid Metamorphs 2-5",
+                "name": "🧬 Hybrid Metamorphs 2-5",
                 "id": "7989-51b2-d31c-4b46",
                 "hidden": false,
                 "sortIndex": 2,
@@ -3998,7 +4458,7 @@
       {
         "type": "unit",
         "import": true,
-        "name": "Atalan Jackals (4) & Atalan Wolfquad",
+        "name": "▸ Atalan Jackals (4) & Atalan Wolfquad",
         "hidden": false,
         "id": "b232-a9d0-b77a-a5f2",
         "sortIndex": 33,
@@ -4026,27 +4486,48 @@
             "targetId": "eac7-32d5-ecd7-ce9e",
             "id": "3c83-dc36-25cd-cac2",
             "primary": false,
-            "name": "Infantry"
+            "name": "🪖 Infantry"
           }
         ],
         "infoLinks": [
           {
-            "name": "Additional Copy Cost - Other",
+            "name": "Extra Unit Copy Cost - Other",
             "id": "1a8a-2d3c-23c0-6659",
             "hidden": false,
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
+          },
+          {
+            "name": "🏙️ Urban Guerrillas",
+            "id": "0e6c-ae47-5da2-9521",
+            "hidden": false,
+            "targetId": "c4d5-3634-b6fe-10b0",
+            "type": "profile"
+          },
+          {
+            "name": "🏍️ Dirtcycles",
+            "id": "0fb7-aa34-02d3-302b",
+            "hidden": false,
+            "targetId": "bf16-2fad-a533-c177",
+            "type": "profile"
+          },
+          {
+            "name": "💣 Demolition Run",
+            "id": "8b3c-3fad-fd59-88fd",
+            "hidden": false,
+            "targetId": "69a8-bfca-ca5a-8d56",
+            "type": "profile"
           }
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout Options",
+            "name": "🧰 Loadout Options",
             "id": "b523-bb7b-8421-c6b8",
             "hidden": false,
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Atalan Jackal 1",
+                "name": "🧬 Atalan Jackal 1",
                 "id": "623e-5953-b40e-79c8",
                 "hidden": false,
                 "sortIndex": 1,
@@ -4107,7 +4588,7 @@
                 ]
               },
               {
-                "name": "Atalan Jackal 2",
+                "name": "🧬 Atalan Jackal 2",
                 "id": "dd0b-21ce-04ea-2f91",
                 "hidden": false,
                 "sortIndex": 2,
@@ -4183,7 +4664,7 @@
                 ]
               },
               {
-                "name": "Atalan Jackals 3-4",
+                "name": "🧬 Atalan Jackals 3-4",
                 "id": "f663-ba29-3ee4-91cf",
                 "hidden": false,
                 "sortIndex": 3,
@@ -4245,7 +4726,7 @@
                 "comment": "Common equipment state for ordinary Jackals; mixed ordinary loadouts remain PDF-authoritative."
               },
               {
-                "name": "Atalan Wolfquad",
+                "name": "🧬 Atalan Wolfquad",
                 "id": "0b48-7b7d-c6d8-ddc5",
                 "hidden": false,
                 "sortIndex": 4,
@@ -4313,7 +4794,7 @@
       {
         "type": "unit",
         "import": true,
-        "name": "Goliath Rockgrinder",
+        "name": "▸ Goliath Rockgrinder",
         "hidden": false,
         "id": "57bf-19b9-96b1-9ad3",
         "sortIndex": 34,
@@ -4341,27 +4822,34 @@
             "targetId": "377b-09f7-ed4a-0767",
             "id": "d1de-d0e5-42b9-23d7",
             "primary": false,
-            "name": "Vehicle"
+            "name": "🔩 Vehicle"
           }
         ],
         "infoLinks": [
           {
-            "name": "Additional Copy Cost - Other",
+            "name": "Extra Unit Copy Cost - Other",
             "id": "a5cc-919e-80c8-1904",
             "hidden": false,
             "type": "rule",
             "targetId": "e02a-f56c-ccaa-b1a9"
+          },
+          {
+            "name": "⛏️ Drilldozer Blades",
+            "id": "ee54-49c3-7158-119d",
+            "hidden": false,
+            "targetId": "ce20-b81d-424d-183c",
+            "type": "profile"
           }
         ],
         "selectionEntryGroups": [
           {
-            "name": "Loadout Options",
+            "name": "🧰 Loadout Options",
             "id": "8ffa-8906-e5c8-48f4",
             "hidden": false,
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "Goliath Rockgrinder",
+                "name": "🧬 Goliath Rockgrinder",
                 "id": "c141-a6bd-ba7b-e477",
                 "hidden": false,
                 "sortIndex": 1,
@@ -4558,6 +5046,344 @@
       }
     ],
     "authorName": "AlienDilo",
-    "comment": "CURRENT STATE — GENESTEALER CULTS COMMUNITY HOMEBREW / GS26\nThis catalogue implements the attached community Genestealer Cults homebrew as a fully functional companion to the Warhammer 40k Reforged listbuilder. Its catalogue display name is intentionally \"...\" so it is not presented alongside supported Reforged armies as though it were an official legal army.\nThis is a fun community creation by AlienDilo and is not an official Reforged army. It is not supported or maintained by the developers of Reforged. The supplied homebrew PDF remains authoritative for gameplay rules, weapon profiles, relics, psychic powers, and unusual per-model loadout mixtures.\nListbuilder philosophy matches the main project: meaningful final-state list decisions are represented directly; the PDF remains open for rules text and unusual/default mixed loadouts.\nREV1 — initial complete catalogue: all 11 source units, Leader Points, required Leader attachments, Rare enforcement, Troop/Other Additional Copy Costs, loadouts, paid upgrades, and GS26 integration.\n\nREV2 — LOADOUT CLEANUP\nReviewed the first-pass community catalogue against established Drukhari / World Eaters mixed-role squad presentation. The always-present disclaimer now prominently identifies the catalogue as an unofficial community creation by AlienDilo and explicitly unaffiliated with the Reforged development team. Psychic Familiar selectors were removed from The Patriarch and Magus because the source defines Psychic Familiar as an ability. Neophyte Hybrids and Acolyte Hybrids were rebuilt around explicit model roles with mandatory final-state weapon choices and no empty radio entries. Root unit IDs, root points, categories, attachments, Leader Points, Additional Copy Cost mechanics, Rare handling, and all untouched unit trees are unchanged.\n\nREV3 — MODEL ROLE CLEANUP\nRebuilt Atalan Jackals, Hybrid Metamorphs, Aberrants, and Purestrain Genestealers into explicit model-role presentation. Root points/categories and all other listbuilding systems remain unchanged.\n\nREV4 — LOADOUT REFINEMENT\nAtalan Jackal 2 now presents Grenade Launcher as a costed radio option instead of a checkbox. Hybrid Metamorph 1 is now one atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The +10 Mining Tool & Cult Claws & Knife option moved from Acolyte unit-level Paid Wargear onto Acolyte Hybrid 2. Separate leader selectors are ordered melee before sidearm. Root points, categories, attachments, Leader Points, Additional Copy Costs, Rare handling, and unrelated unit trees are unchanged.\n\nREV5 — CATALOGUE CREATE BASELINE\nFinalized visible fixed-size unit names for Neophyte Hybrids (10), Acolyte Hybrids (5), Purestrain Genestealers (10), Aberrants (5), and Hybrid Metamorphs (5). The Catalogue Bugfixes section no longer records implementation-stage construction work; all prior bullets were replaced by the single marker <catalogue create>. Stable root IDs, points, categories, loadouts, attachments, Leader Points, Additional Copy Costs, Rare handling, and all listbuilding mechanics are unchanged.\n\nREV6 — HYBRID METAMORPH 1 UI FIX\nRestored a mandatory 1-of-1 selection-group wrapper around the fixed atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The previous direct upgrade entry rendered as a quantity spinner in New Recruit. No points, categories, unit rules, or other catalogue mechanics changed."
+    "comment": "CURRENT STATE — GENESTEALER CULTS COMMUNITY HOMEBREW / GS37\nThis catalogue implements AlienDilo's community Genestealer Cults homebrew as a functional companion to the Warhammer 40k Reforged listbuilder. Its catalogue display name intentionally remains \"...\" so it is not presented alongside supported Reforged armies as though it were an official legal army. The always-present unofficial-community-homebrew warning remains unchanged. The supplied homebrew PDF remains authoritative for gameplay rules, weapon profiles, relics, psychic powers, and unusual per-model loadout mixtures.\n\nAll 11 source datasheets remain represented. The Patriarch, Magus, and Primus retain their existing 1 LP costs. Abominant remains source-defined as a 0-LP Leader without a synthetic LP:0 cost object; its visible Leader Points rule remains the player-facing statement of that exception. Required Leader attachments and Rare enforcement remain intact.\n\nExtra Unit Copy Costs uses one visible accounting entry while preserving distinct Troop and Other arithmetic. Neophyte Hybrids and Acolyte Hybrids remain the two Troop copy families. Purestrain Genestealers, Aberrants, Hybrid Metamorphs, Atalan Jackals & Atalan Wolfquad, and Goliath Rockgrinder remain the five non-Rare Other copy families. Practice / Quick / Standard / Long normal-copy allowances are 3 / 4 / 6 / 8 for Troops and 0 / 1 / 2 / 3 for Other.\n\nAUTHORING / RUNTIME NOTES\nListbuilder philosophy matches the main project: meaningful final-state list decisions are represented directly while the PDF remains open for rules text and unusual/default mixed loadouts. Top-level Unit Ability names are represented as shared Profiles; nested sub-abilities are intentionally omitted. Unit rows use ▸; The Patriarch, Magus, and Primus use 🎖️; Loadout Options use 🧰; all model headers use the faction-default 🧬; and listbuilder-relevant Leader Attachment rules use 🔗.\n\nThe REV6 Hybrid Metamorph 1 UI fix remains intact: the atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout stays inside its mandatory 1-of-1 wrapper so New Recruit renders it as a fixed selection rather than a quantity spinner.\n\nHISTORICAL REVISION LOG\nREV1 — initial complete catalogue: all 11 source units, Leader Points, required Leader attachments, Rare enforcement, Troop/Other Additional Copy Costs, loadouts, paid upgrades, and GS26 integration.\n\nREV2 — LOADOUT CLEANUP\nReviewed the first-pass community catalogue against established Drukhari / World Eaters mixed-role squad presentation. The always-present disclaimer now prominently identifies the catalogue as an unofficial community creation by AlienDilo and explicitly unaffiliated with the Reforged development team. Psychic Familiar selectors were removed from The Patriarch and Magus because the source defines Psychic Familiar as an ability. Neophyte Hybrids and Acolyte Hybrids were rebuilt around explicit model roles with mandatory final-state weapon choices and no empty radio entries. Root unit IDs, root points, categories, attachments, Leader Points, Additional Copy Cost mechanics, Rare handling, and all untouched unit trees are unchanged.\n\nREV3 — MODEL ROLE CLEANUP\nRebuilt Atalan Jackals, Hybrid Metamorphs, Aberrants, and Purestrain Genestealers into explicit model-role presentation. Root points/categories and all other listbuilding systems remain unchanged.\n\nREV4 — LOADOUT REFINEMENT\nAtalan Jackal 2 now presents Grenade Launcher as a costed radio option instead of a checkbox. Hybrid Metamorph 1 is now one atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The +10 Mining Tool & Cult Claws & Knife option moved from Acolyte unit-level Paid Wargear onto Acolyte Hybrid 2. Separate leader selectors are ordered melee before sidearm. Root points, categories, attachments, Leader Points, Additional Copy Costs, Rare handling, and unrelated unit trees are unchanged.\n\nREV5 — CATALOGUE CREATE BASELINE\nFinalized visible fixed-size unit names for Neophyte Hybrids (10), Acolyte Hybrids (5), Purestrain Genestealers (10), Aberrants (5), and Hybrid Metamorphs (5). The Catalogue Bugfixes section no longer records implementation-stage construction work; all prior bullets were replaced by the single marker <catalogue create>. Stable root IDs, points, categories, loadouts, attachments, Leader Points, Additional Copy Costs, Rare handling, and all listbuilding mechanics are unchanged.\n\nREV6 — HYBRID METAMORPH 1 UI FIX\nRestored a mandatory 1-of-1 selection-group wrapper around the fixed atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The previous direct upgrade entry rendered as a quantity spinner in New Recruit. No points, categories, unit rules, or other catalogue mechanics changed.\n\nREV7 — CURRENT TEMPLATE / PRACTICE / UNIT ABILITIES\nConsolidated current-template update from the live REV6 baseline. Retargeted to Game System revision 37; added 420 Point Practice compatibility to Extra Unit Copy Costs; flattened the visible Troops/Other accounting children into one Extra Unit Copy Costs entry while preserving all existing Quick/Standard/Long arithmetic; adopted the current unit/loadout/model/category/attachment presentation; and added top-level Unit Ability profiles from the supplied Genestealer Cults ability map. The unofficial community-homebrew warning, catalogue display name \"...\", source-defined Abominant 0-LP exception, and REV6 Hybrid Metamorph 1 UI fix remain unchanged.",
+    "sharedProfiles": [
+      {
+        "name": "🔮 Psyker 3",
+        "id": "e19d-3153-6445-7e13",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "👁️ Windfall of the Warp, Hypnotic Gaze",
+        "id": "78ef-9729-0114-db2d",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "👑 Father of Ascension",
+        "id": "8be6-ccd2-d524-72a1",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "🔮 Psychic Familiar",
+        "id": "6e96-71c7-e9b1-f867",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "🔮 Psyker 2",
+        "id": "2f96-2d62-a932-dd86",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "❤️ Heart of the Cult",
+        "id": "27a5-6ed4-c326-7ec3",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "📣 Starborn Demagogue",
+        "id": "21fc-9ef3-a4cc-415b",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "🧠 Mindwyrm Familiar",
+        "id": "d248-bcdc-451e-3cc3",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "♻️ Saintly Regeneration",
+        "id": "1423-b704-be5c-54ca",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "🏙️ Urban Guerrillas",
+        "id": "c4d5-3634-b6fe-10b0",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "⚡ Uprising Ambush",
+        "id": "aab0-353c-6d51-bbfc",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "🔥 Unquestioning Fanaticism",
+        "id": "bd19-8ebf-cef8-078e",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "🚩 Hive Icon",
+        "id": "05c9-6371-18df-b9a4",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "🦿 Walker",
+        "id": "458d-a1ac-dcfb-8211",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "🕳️ Lurk & Strike",
+        "id": "f59d-050e-b996-bcfb",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "👹 Snatcher-devil",
+        "id": "ee57-36e4-53f5-9cc6",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "❤️ Resilient 5+",
+        "id": "fcab-b757-8480-061c",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "💪 Pure Misshapen Muscle",
+        "id": "a0e3-5dcd-1f64-dce4",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "🔥 Hulking Fanatics",
+        "id": "0ed5-e14a-9756-a451",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "❤️ Resilient 6+",
+        "id": "9ccd-b5c5-ca09-fd2f",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "🧬 Broodkin Champions",
+        "id": "8d38-7015-a924-f3d1",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "🏍️ Dirtcycles",
+        "id": "bf16-2fad-a533-c177",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "💣 Demolition Run",
+        "id": "69a8-bfca-ca5a-8d56",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      },
+      {
+        "name": "⛏️ Drilldozer Blades",
+        "id": "ce20-b81d-424d-183c",
+        "hidden": false,
+        "typeId": "9b19-41c8-205f-3055",
+        "typeName": "🏷️ Unit Abilities",
+        "characteristics": [
+          {
+            "name": "Text",
+            "$text": "",
+            "typeId": "7712-7866-d947-ad2a"
+          }
+        ]
+      }
+    ]
   }
 }
