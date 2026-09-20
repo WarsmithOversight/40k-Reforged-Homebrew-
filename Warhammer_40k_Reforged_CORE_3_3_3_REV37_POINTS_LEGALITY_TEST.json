@@ -589,10 +589,134 @@
                 "childName": "Game Size"
               }
             ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army exceeds the 420 Point limit for the selected Game Size. Remove units or wargear until the army costs 420 Points or less, or select a larger Game Size.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 421,
+                "field": "51b2-306e-1021-d207",
+                "scope": "roster",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Points"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army exceeds the 800 Point limit for the selected Game Size. Remove units or wargear until the army costs 800 Points or less, or select a larger Game Size.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "0b81-3579-ad7e-49b2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "800 Points (Quick)"
+              },
+              {
+                "type": "atLeast",
+                "value": 801,
+                "field": "51b2-306e-1021-d207",
+                "scope": "roster",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Points"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army exceeds the 1200 Point limit for the selected Game Size. Remove units or wargear until the army costs 1200 Points or less, or select a larger Game Size.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d0e1-6785-e168-b595",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "1200 Points (Standard)"
+              },
+              {
+                "type": "atLeast",
+                "value": 1201,
+                "field": "51b2-306e-1021-d207",
+                "scope": "roster",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Points"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "field": "error",
+            "value": "Your army exceeds the 1600 Point limit for the selected Game Size. Remove units or wargear until the army costs 1600 Points or less, or select a larger Game Size.",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "91f0-51d4-3148-07c8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "1600 Points (Long)"
+              },
+              {
+                "type": "atLeast",
+                "value": 1601,
+                "field": "51b2-306e-1021-d207",
+                "scope": "roster",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "Points"
+              }
+            ]
           }
         ],
         "sortIndex": 1,
-        "comment": "CURRENT GAME SIZE / LEADER POINTS: Game Size is the semantic source of the 420 / 800 / 1200 / 1600 army size and grants 1 / 2 / 3 / 4 Leader Points respectively. Game Size also owns the player-facing Core Rules text for Extra Unit Copy Cost thresholds. Practice is a two-battle-round rehearsal format, then reset. The permanent Leader Points Configuration entry reports the weighted LP budget and overspend state."
+        "comment": "CURRENT GAME SIZE / LEADER POINTS: Game Size is the semantic source of the 420 / 800 / 1200 / 1600 army size and grants 1 / 2 / 3 / 4 Leader Points respectively. Game Size also owns the player-facing Core Rules text for Extra Unit Copy Cost thresholds. Practice is a two-battle-round rehearsal format, then reset. The permanent Leader Points Configuration entry reports the weighted LP budget and overspend state.\n\nPOINTS LEGALITY TEST: New Recruit's native Points cost limit remains unlimited (Points defaultCostLimit = -1). Game Size now performs permissive-corrective roster validation against the total Points cost: Practice 420, Quick 800, Standard 1200, Long 1600. Oversized lists remain constructible but produce a corrective error explaining how to return the roster to legality."
       },
       {
         "type": "upgrade",
