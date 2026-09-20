@@ -5257,7 +5257,7 @@
             "name": "Patch Notes",
             "id": "299d-2951-de1a-7366",
             "hidden": false,
-            "description": "## Aeldari Craftworlds 3.3.4\n\n• Fire Dragons: 120 → 130 Points.\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 19th)\n\n• Game System compatibility: updated the catalogue for the current Game System, including 420 Point Practice lists.\n• Extra Unit Copy Costs: renamed the copy-cost accounting item and removed the duplicate visible Troops/Other ledger rows; Troop and Other thresholds remain separate, with Practice allowing three normal-cost Troop copies and no normal-cost Other copies.\n• Unit Abilities: added the top-level ability names for every native Aeldari Craftworlds datasheet to the listbuilder Profiles section.\n• Presentation: unit rows now use ▸; Autarch uses 🎖️; all model headers use the Aeldari 💠 marker; Loadout Options use 🧰; Leader Attachment uses 🔗; Infantry, Vehicle, Monster, and Rare category labels use the current Game System icons.\n• Shining Spears, Shadow Spectres, Wraithguards, and Wraithblades: optional third models now use explicit Additional [Model] Model labels for clearer list construction.\n\n## Catalogue Bugfixes (September 14th)\n\n• Leader Points: Autarch, Farseer, Skyrunner Farseer, Spiritseer, Warlock, and Wraithseer cost 1 LP each; imported Harlequin Leaders inherit their LP cost from the Harlequins shared library.\n• Catalogue maintenance: current implementation notes and historical comments consolidated for the live GS21 catalogue.\n• Harlequins library link display label updated from Harlequins 3.3.3 - Library to Harlequins 3.3.5 - Library; the linked library target is unchanged.\n• Shining Spears, Shadow Spectres, Wraithguards, and Wraithblades: optional third models now use checkbox-style Additional Model selections.\n• Catalogue created.",
+            "description": "## Aeldari Craftworlds 3.3.4\n\n• Fire Dragons: 120 → 130 Points.\n\n*Full patch notes and rules can be found in the Reforged Discord Server: https://discord.gg/BpjkaNmMVB*\n\n## Catalogue Bugfixes (September 19th)\n\n• Practice games are now supported at 420 Points, including Extra Unit Copy Cost rules.\n• Optional Unit Abilities now only appear when their matching upgrade is selected, including Black Guardians’ Webway and Pathfinders.\n• Unit Ability profiles and list presentation have been updated across the army, including cleaner unit, loadout, attachment, and additional-model labels.\n• Roaming Performers have been synchronized with the current Harlequins shared library.\n• Existing Leader Point, Aspect Warrior, attachment, Rare, Wraith, Roaming Performers, and copy-cost behavior has been preserved.\n\n## Catalogue Bugfixes (September 14th)\n\n• Leader Points: Autarch, Farseer, Skyrunner Farseer, Spiritseer, Warlock, and Wraithseer cost 1 LP each; imported Harlequin Leaders inherit their LP cost from the Harlequins shared library.\n• Catalogue maintenance: current implementation notes and historical comments consolidated for the live GS21 catalogue.\n• Harlequins library link display label updated from Harlequins 3.3.3 - Library to Harlequins 3.3.5 - Library; the linked library target is unchanged.\n• Shining Spears, Shadow Spectres, Wraithguards, and Wraithblades: optional third models now use checkbox-style Additional Model selections.\n• Catalogue created.",
             "noindex": false
           }
         ],
@@ -5280,7 +5280,7 @@
       {
         "type": "unit",
         "import": true,
-        "name": "▸ 🎖️Autarch",
+        "name": "▸ Autarch",
         "hidden": false,
         "id": "f9d8-cdec-1804-dc25",
         "costs": [
@@ -5578,7 +5578,7 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "queryFromSelf": false,
-                "childName": "▸ 🎖️Autarch"
+                "childName": "▸ Autarch"
               }
             ]
           }
@@ -6982,6 +6982,15 @@
                     "description": "After this unit is Activated in reserves, you may use ‘webway’. If you do, roll 3D6. Then, Deploy this unit anywhere on the battlefield at least X” away from all enemy units where X is the result of that roll. If you do, during this turn’s Move step, do not make a Move roll and this unit cannot Advance or Reposition.",
                     "noindex": false
                   }
+                ],
+                "infoLinks": [
+                  {
+                    "name": "🌀 Black Guardians’ Webway",
+                    "id": "5daf-3e65-74ca-7e2b",
+                    "hidden": false,
+                    "targetId": "0902-9ca4-b7e1-18ac",
+                    "type": "profile"
+                  }
                 ]
               }
             ]
@@ -7028,13 +7037,6 @@
             "id": "a3c9-f57d-9e90-f1aa",
             "hidden": false,
             "targetId": "9772-2910-2aed-e0b9",
-            "type": "profile"
-          },
-          {
-            "name": "🌀 Black Guardians’ Webway",
-            "id": "5daf-3e65-74ca-7e2b",
-            "hidden": false,
-            "targetId": "0902-9ca4-b7e1-18ac",
             "type": "profile"
           }
         ]
@@ -7167,6 +7169,15 @@
                     "description": "For each ranged attack this unit makes, ignore negative modifiers to the Hit Roll and reroll a failed Wound Roll of 1 for that attack.",
                     "noindex": false
                   }
+                ],
+                "infoLinks": [
+                  {
+                    "name": "🧭 Pathfinders",
+                    "id": "858d-5636-edcd-d3a9",
+                    "hidden": false,
+                    "targetId": "40aa-de1d-1ba3-4d47",
+                    "type": "profile"
+                  }
                 ]
               }
             ]
@@ -7206,13 +7217,6 @@
             "id": "962b-48ec-b93f-3f59",
             "hidden": false,
             "targetId": "68f5-77d4-6658-09a1",
-            "type": "profile"
-          },
-          {
-            "name": "🧭 Pathfinders",
-            "id": "858d-5636-edcd-d3a9",
-            "hidden": false,
-            "targetId": "40aa-de1d-1ba3-4d47",
             "type": "profile"
           }
         ],
@@ -12047,7 +12051,7 @@
     "entryLinks": [
       {
         "import": true,
-        "name": "Troupe Master",
+        "name": "▸ Troupe Master",
         "hidden": false,
         "id": "9356-813e-c190-a16e",
         "type": "selectionEntry",
@@ -12176,7 +12180,7 @@
       },
       {
         "import": true,
-        "name": "Shadowseer",
+        "name": "▸ Shadowseer",
         "hidden": false,
         "id": "af86-9a2c-1f5b-4a5d",
         "type": "selectionEntry",
@@ -12305,7 +12309,7 @@
       },
       {
         "import": true,
-        "name": "Light Troupe",
+        "name": "▸ Light Troupe (5)",
         "hidden": false,
         "id": "9862-78d7-7c8a-7c27",
         "type": "selectionEntry",
@@ -12434,7 +12438,7 @@
       },
       {
         "import": true,
-        "name": "Dark Troupe",
+        "name": "▸ Dark Troupe (5)",
         "hidden": false,
         "id": "537a-cbd0-7f46-223b",
         "type": "selectionEntry",
@@ -12563,7 +12567,7 @@
       },
       {
         "import": true,
-        "name": "Twilight Troupe",
+        "name": "▸ Twilight Troupe (5)",
         "hidden": false,
         "id": "0529-5217-2c4b-621a",
         "type": "selectionEntry",
@@ -12691,7 +12695,7 @@
         "comment": "ROAMING PERFORMERS ERROR UX: while Roaming Performers exists without Included, this choice is hidden only if this Harlequin unit is not already in the army. An already-included unit stays visible and reports a constructive Not Included error. Missing Roaming Performers and excess Roaming Leader/Troupe allowances are also validated locally so the affected Harlequin unit carries the error."
       }
     ],
-    "comment": "CURRENT STATE\nAeldari Craftworlds 3.3.4 targets Game System revision 37 and uses the current Leader Points, Practice, Extra Unit Copy Costs, Unit Abilities, and presentation infrastructure. Native Troop copy families remain Guardian Defenders, Rangers, and Windriders. Native non-Rare Other units retain their established copy-cost family membership. Practice uses three normal-cost Troop copies and no normal-cost Other copies; Quick / Standard / Long retain the existing 4 / 6 / 8 Troop and 1 / 2 / 3 Other allowances. Autarch, Farseer, Skyrunner Farseer, Spiritseer, Warlock, and Wraithseer continue to cost 1 LP each. Five native Leaders retain required attachment semantics; Wraithseer remains unable to attach. Roaming Performers continues to control access to the linked Harlequins 3.3.5 library while local Harlequin entryLinks own Aeldari presentation and validation. Fire Dragons remain 130 Points. Shining Spears, Shadow Spectres, Wraithguards, and Wraithblades retain their existing checkbox-style optional third-model implementation.\n\nAUTHORING & RUNTIME NOTES\nSource-derived rule descriptions are player-rule text and are not rewritten for style. Top-level Unit Ability names are represented as shared Profiles and linked to their native datasheets; sub-abilities are intentionally omitted. Unit rows use ▸, Autarch uses 🎖️, Loadout Options use 🧰, model headers use the faction-default 💠, and listbuilder-relevant Leader Attachment rules use 🔗. Roaming Performer Troupes remain excluded from the native Aeldari Troop copy-cost ledger because the one-Troupe cap prevents them from reaching the duplicate threshold. The Harlequin catalogue link remains a consumer relationship with importRootEntries=false; local entryLinks own Aeldari presentation and validation. Hidden legacy ID shells retained from earlier migrations remain compatibility objects and should not be removed without a reference-safety audit.\n\nHISTORICAL REVISION LOG\nREV14 — Constructive Error UX: migrated to Game System revision 11 and added constructive validation for Additional Copy Costs, required Leader attachments, host Leader capacity, Rare limits, and Roaming Performers interactions.\nREV16 — New Recruit Export Compatibility: updated to Game System revision 12 and canonical Points cost-type IDs.\nREV17 — Polish Pass: added explicit model headers, simplified weapon-slot presentation, standardized atomic package naming, Unit Upgrade terminology, Rare errors, and host-limit errors.\nREV18 — Variable Size Completion: added the authorized third models for Shining Spears, Shadow Spectres, Wraithguards, and Wraithblades while preserving their existing base loadouts and attachment semantics.\nREV19 — GS17 Troop Copy Costs: introduced Troops and Other child ledgers; Guardian Defenders, Rangers, and Windriders became independent 4 / 6 / 8 Troop copy families while the 16 native Other families retained 1 / 2 / 3 arithmetic.\nREV20 — Dark Reaper Exarch Reaper Launcher: added Reaper Launcher Starshot & Starswarm as the Exarch default weapon choice.\nREV21 — Shared Reaper Launcher Export Package: normalized Autarch, Dark Reaper Exarch, and Dark Reapers 2-5 onto one shared Reaper Launcher package while preserving compatibility IDs.\nREV22 — Shared Banshee Blade & Shuriken Pistol Export Package: normalized Howling Banshees 2-5 onto one shared fixed package while preserving compatibility IDs.\nREV23 — Export & Loadout Cleanup: standardized Aeldari Missile Launcher naming, corrected Wraithlord melee selection, compressed Shining Spear model loadouts, and normalized fixed Aspect Warrior export packages.\nREV24 — Export Presentation Cleanup: completed Missile Launcher naming, normalized Striking Scorpions and Rangers fixed packages, and flattened Fire Dragon Melta Bombs into five bearer checkboxes.\nREV25 — Shining Spear Exarch Wording: reordered the two Exarch atomic package names so the meaningful differentiator appears first.\nREV26 — GS20 Troop Rule + Fixed Package Cleanup: retargeted the three Troop families to the Game System short-form Troop rule and replaced older hidden export-payload techniques with literal fixed-count packages where appropriate.\nREV27 — Standard Patch Notes: added the automatically present two-section Patch Notes Configuration.\nREV28 — Aeldari Craftworlds 3.3.4: Fire Dragons changed 120 → 130 Points and the catalogue retargeted to Game System revision 21.\nREV29 — Additional Model Checkbox + Maintenance Pass: moved the existing max-1 constraints for Shining Spear 3, Shadow Spectre 3, Wraithguard 3, and Wraithblade 3 from their retained Additional Model wrappers onto the model entries; synchronized the Harlequins library display label to Harlequins 3.3.5 - Library; refreshed active Additional Copy Cost documentation; consolidated catalogue comments; and updated cumulative Catalogue Bugfixes. Existing stable IDs, model costs, model loadouts, Roaming Performers mechanics, Harlequin target IDs, copy-cost arithmetic, attachments, points, and unrelated catalogue semantics are unchanged.\n\nREV30 — LEADER POINTS MIGRATION\nRetargeted the catalogue to Game System revision 24. Autarch, Farseer, Skyrunner Farseer, Spiritseer, Warlock, and Wraithseer now each cost 1 LP, exactly matching the six existing Counts Toward Leader Maximum semantic roots. The legacy counted-Leader tags remain unchanged for the temporary parallel validator. Roaming Performers, the Harlequins catalogue link, and the five imported Harlequin entryLinks remain locally unchanged; imported Harlequin Leaders inherit their intrinsic LP costs from the Harlequins shared library exactly once. Rare limits, required attachments, Wraithseer non-attachment, host Leader limits, Additional Copy Costs, points, loadouts, optional-model checkboxes, and all unrelated Aeldari mechanics are unchanged.\n\nREV31 — LEADER POINTS CLEANUP\nRuntime validation passed for native 1-LP Leaders and imported Harlequin Leader inheritance. The six legacy Counts Toward Leader Maximum links matched the six native 1-LP roots exactly and were removed. The five Harlequin entryLinks remain locally uncharged and unchanged; Troupe Master and Shadowseer continue to inherit their LP costs from the shared Harlequins library. Roaming Performers, Rare limits, attachment legality, Wraithseer non-attachment, host Leader limits, Additional Copy Costs, points, loadouts, optional-model checkboxes, and all unrelated Aeldari mechanics remain unchanged. Patch Notes presentation was updated to the September 14th cleanup convention.\nREV32: consolidated current-template update from the live REV31 baseline. Retargeted to Game System revision 37; added 420 Point Practice compatibility to Extra Unit Copy Costs; flattened the visible Troops/Other accounting children into one Extra Unit Copy Costs entry while preserving all existing Quick/Standard/Long arithmetic; adopted the current unit/loadout/model/category/attachment presentation; semantically renamed the four optional paid third-model entries; and added top-level Unit Ability profiles from the supplied Aeldari Craftworlds ability map. The visible September 19th Catalogue Bugfixes section records only this actual delta.",
+    "comment": "CURRENT STATE\nAeldari Craftworlds 3.3.4 targets Game System revision 37 and uses the current Leader Points, Practice, Extra Unit Copy Costs, Unit Abilities, and presentation infrastructure. Native Troop copy families remain Guardian Defenders, Rangers, and Windriders. Native non-Rare Other units retain their established copy-cost family membership. Practice uses three normal-cost Troop copies and no normal-cost Other copies; Quick / Standard / Long retain the existing 4 / 6 / 8 Troop and 1 / 2 / 3 Other allowances. Autarch, Farseer, Skyrunner Farseer, Spiritseer, Warlock, and Wraithseer continue to cost 1 LP each. Five native Leaders retain required attachment semantics; Wraithseer remains unable to attach. Roaming Performers continues to control access to the linked Harlequins 3.3.5 library while local Harlequin entryLinks own Aeldari presentation and validation. Fire Dragons remain 130 Points. Shining Spears, Shadow Spectres, Wraithguards, and Wraithblades retain their existing checkbox-style optional third-model implementation.\n\nAUTHORING & RUNTIME NOTES\nSource-derived rule descriptions are player-rule text and are not rewritten for style. Top-level Unit Ability names are represented as shared Profiles and linked to their native datasheets; sub-abilities are intentionally omitted. Unit rows use ▸, Autarch uses , Loadout Options use 🧰, model headers use the faction-default 💠, and listbuilder-relevant Leader Attachment rules use 🔗. Roaming Performer Troupes remain excluded from the native Aeldari Troop copy-cost ledger because the one-Troupe cap prevents them from reaching the duplicate threshold. The Harlequin catalogue link remains a consumer relationship with importRootEntries=false; local entryLinks own Aeldari presentation and validation. Hidden legacy ID shells retained from earlier migrations remain compatibility objects and should not be removed without a reference-safety audit.\n\nOPTIONAL UNIT ABILITY PRESENTATION: top-level abilities granted by selectable upgrades are linked to the granting selection rather than the unit root. Black Guardians’ Webway is linked to its +10 Point Guardian Defenders upgrade, and Pathfinders is linked to its +10 Point Rangers upgrade. Shining Spears' Unstoppable remains intrinsic and root-linked; the optional Shimmershield does not grant that Unit Ability.\n\nHISTORICAL REVISION LOG\nREV14 — Constructive Error UX: migrated to Game System revision 11 and added constructive validation for Additional Copy Costs, required Leader attachments, host Leader capacity, Rare limits, and Roaming Performers interactions.\nREV16 — New Recruit Export Compatibility: updated to Game System revision 12 and canonical Points cost-type IDs.\nREV17 — Polish Pass: added explicit model headers, simplified weapon-slot presentation, standardized atomic package naming, Unit Upgrade terminology, Rare errors, and host-limit errors.\nREV18 — Variable Size Completion: added the authorized third models for Shining Spears, Shadow Spectres, Wraithguards, and Wraithblades while preserving their existing base loadouts and attachment semantics.\nREV19 — GS17 Troop Copy Costs: introduced Troops and Other child ledgers; Guardian Defenders, Rangers, and Windriders became independent 4 / 6 / 8 Troop copy families while the 16 native Other families retained 1 / 2 / 3 arithmetic.\nREV20 — Dark Reaper Exarch Reaper Launcher: added Reaper Launcher Starshot & Starswarm as the Exarch default weapon choice.\nREV21 — Shared Reaper Launcher Export Package: normalized Autarch, Dark Reaper Exarch, and Dark Reapers 2-5 onto one shared Reaper Launcher package while preserving compatibility IDs.\nREV22 — Shared Banshee Blade & Shuriken Pistol Export Package: normalized Howling Banshees 2-5 onto one shared fixed package while preserving compatibility IDs.\nREV23 — Export & Loadout Cleanup: standardized Aeldari Missile Launcher naming, corrected Wraithlord melee selection, compressed Shining Spear model loadouts, and normalized fixed Aspect Warrior export packages.\nREV24 — Export Presentation Cleanup: completed Missile Launcher naming, normalized Striking Scorpions and Rangers fixed packages, and flattened Fire Dragon Melta Bombs into five bearer checkboxes.\nREV25 — Shining Spear Exarch Wording: reordered the two Exarch atomic package names so the meaningful differentiator appears first.\nREV26 — GS20 Troop Rule + Fixed Package Cleanup: retargeted the three Troop families to the Game System short-form Troop rule and replaced older hidden export-payload techniques with literal fixed-count packages where appropriate.\nREV27 — Standard Patch Notes: added the automatically present two-section Patch Notes Configuration.\nREV28 — Aeldari Craftworlds 3.3.4: Fire Dragons changed 120 → 130 Points and the catalogue retargeted to Game System revision 21.\nREV29 — Additional Model Checkbox + Maintenance Pass: moved the existing max-1 constraints for Shining Spear 3, Shadow Spectre 3, Wraithguard 3, and Wraithblade 3 from their retained Additional Model wrappers onto the model entries; synchronized the Harlequins library display label to Harlequins 3.3.5 - Library; refreshed active Additional Copy Cost documentation; consolidated catalogue comments; and updated cumulative Catalogue Bugfixes. Existing stable IDs, model costs, model loadouts, Roaming Performers mechanics, Harlequin target IDs, copy-cost arithmetic, attachments, points, and unrelated catalogue semantics are unchanged.\n\nREV30 — LEADER POINTS MIGRATION\nRetargeted the catalogue to Game System revision 24. Autarch, Farseer, Skyrunner Farseer, Spiritseer, Warlock, and Wraithseer now each cost 1 LP, exactly matching the six existing Counts Toward Leader Maximum semantic roots. The legacy counted-Leader tags remain unchanged for the temporary parallel validator. Roaming Performers, the Harlequins catalogue link, and the five imported Harlequin entryLinks remain locally unchanged; imported Harlequin Leaders inherit their intrinsic LP costs from the Harlequins shared library exactly once. Rare limits, required attachments, Wraithseer non-attachment, host Leader limits, Additional Copy Costs, points, loadouts, optional-model checkboxes, and all unrelated Aeldari mechanics are unchanged.\n\nREV31 — LEADER POINTS CLEANUP\nRuntime validation passed for native 1-LP Leaders and imported Harlequin Leader inheritance. The six legacy Counts Toward Leader Maximum links matched the six native 1-LP roots exactly and were removed. The five Harlequin entryLinks remain locally uncharged and unchanged; Troupe Master and Shadowseer continue to inherit their LP costs from the shared Harlequins library. Roaming Performers, Rare limits, attachment legality, Wraithseer non-attachment, host Leader limits, Additional Copy Costs, points, loadouts, optional-model checkboxes, and all unrelated Aeldari mechanics remain unchanged. Patch Notes presentation was updated to the September 14th cleanup convention.\nREV32: consolidated current-template update from the live REV31 baseline. Retargeted to Game System revision 37; added 420 Point Practice compatibility to Extra Unit Copy Costs; flattened the visible Troops/Other accounting children into one Extra Unit Copy Costs entry while preserving all existing Quick/Standard/Long arithmetic; adopted the current unit/loadout/model/category/attachment presentation; semantically renamed the four optional paid third-model entries; and added top-level Unit Ability profiles from the supplied Aeldari Craftworlds ability map. The visible September 19th Catalogue Bugfixes section records only this actual delta.",
     "sharedSelectionEntries": [
       {
         "type": "upgrade",
