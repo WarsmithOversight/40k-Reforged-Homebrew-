@@ -4,8 +4,8 @@
     "id": "2266-0f05-edd4-21d7",
     "name": "...",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 38,
-    "revision": 9,
+    "gameSystemRevision": 39,
+    "revision": 10,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -52,7 +52,7 @@
       {
         "type": "upgrade",
         "import": true,
-        "name": "Updated: September 21st",
+        "name": "Updated: September 23rd",
         "hidden": false,
         "id": "cf79-f939-ab49-fb6f",
         "sortIndex": 90,
@@ -69,7 +69,7 @@
             "name": "Catalogue Notes",
             "id": "0e3f-8996-9fd7-2a42",
             "hidden": false,
-            "description": "## Genestealer Cults Community Homebrew\n\n• All 11 source units are represented.\n• Leader Points, Leader attachments, Rare enforcement, Additional Copy Costs, loadouts, and paid upgrades are implemented.\n• Catalogue display name is intentionally `...` to avoid presenting this community army as a supported Reforged faction.\n\n*The supplied homebrew PDF remains authoritative.*\n\n## Catalogue Bugfixes (September 21st)\n\n• Configuration: standardized setup, tracker, bookkeeping, and documentation ordering across the listbuilder.\n• Presentation: unit and linked-unit chevrons have been replaced with ◆.\n\n## Catalogue Bugfixes (September 19th)\n\n• Practice games are now supported at 420 Points, including Extra Unit Copy Cost rules.\n• Optional Unit Abilities now only appear when their matching upgrade is selected, including Hive Icons on Neophyte Hybrids, Acolyte Hybrids, and Hybrid Metamorphs.\n• Unit Ability profiles and list presentation have been updated across all 11 source units.\n• Existing loadouts, paid upgrades, nested unit relationships, and attachment behavior have been preserved.\n• Existing Leader Point, Rare, transport, and copy-cost behavior has been preserved.\n\n## Catalogue Bugfixes (September 16th)\n\n<catalogue create>",
+            "description": "## Genestealer Cults Community Homebrew\n\n• All 11 source units are represented.\n• Leader Points, Leader attachments, Rare enforcement, Additional Copy Costs, loadouts, and paid upgrades are implemented.\n• Catalogue display name is intentionally `...` to avoid presenting this community army as a supported Reforged faction.\n\n*The supplied homebrew PDF remains authoritative.*\n\n## Catalogue Bugfixes (September 23rd)\n\n• 420 Point Practice: reduced Leader Points to 0; units with an LP cost are hidden from Practice lists unless already selected, and Extra Unit Copy Cost allowances now match 800 Point Quick at four normal-cost Troop copies and one normal-cost Other copy.\n\n## Catalogue Bugfixes (September 21st)\n\n• Configuration: standardized setup, tracker, bookkeeping, and documentation ordering across the listbuilder.\n• Presentation: unit and linked-unit chevrons have been replaced with ◆.\n\n## Catalogue Bugfixes (September 19th)\n\n• Practice games are now supported at 420 Points, including Extra Unit Copy Cost rules.\n• Optional Unit Abilities now only appear when their matching upgrade is selected, including Hive Icons on Neophyte Hybrids, Acolyte Hybrids, and Hybrid Metamorphs.\n• Unit Ability profiles and list presentation have been updated across all 11 source units.\n• Existing loadouts, paid upgrades, nested unit relationships, and attachment behavior have been preserved.\n• Existing Leader Point, Rare, transport, and copy-cost behavior has been preserved.\n\n## Catalogue Bugfixes (September 16th)\n\n<catalogue create>",
             "noindex": false
           }
         ],
@@ -87,7 +87,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV8 CURRENT TEMPLATE. The September 19th Catalogue Bugfixes section records only the actual player-facing delta from the live REV6 catalogue to the finished current-template state. The September 16th <catalogue create> baseline is preserved. The catalogue remains explicitly unofficial community homebrew by AlienDilo. September 21st presentation pass replaces unit and linked-unit chevrons with ◆; no catalogue mechanics changed. REV9 adopts GS38 and the standardized Configuration ordering."
+        "comment": "REV8 CURRENT TEMPLATE. The September 19th Catalogue Bugfixes section records only the actual player-facing delta from the live REV6 catalogue to the finished current-template state. The September 16th <catalogue create> baseline is preserved. The catalogue remains explicitly unofficial community homebrew by AlienDilo. September 21st presentation pass replaces unit and linked-unit chevrons with ◆; no catalogue mechanics changed. REV9 adopts GS38 and the standardized Configuration ordering. REV10 adopts GS39 Practice: 0 LP, selected-safe hiding for LP-costing units, and Quick-equivalent copy thresholds."
       },
       {
         "type": "upgrade",
@@ -161,6 +161,50 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 5,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "55b8-687c-ae78-be3c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "◆ Neophyte Hybrids (10)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "55b8-687c-ae78-be3c",
+                "childName": "◆ Neophyte Hybrids (10)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
                 "childId": "0b81-3579-ad7e-49b2",
                 "shared": true,
                 "includeChildSelections": true,
@@ -192,6 +236,35 @@
                 "childName": "◆ Neophyte Hybrids (10)",
                 "repeats": 1,
                 "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 80,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 5,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "55b8-687c-ae78-be3c",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "◆ Neophyte Hybrids (10)"
               }
             ]
           },
@@ -380,6 +453,50 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 5,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "905a-4429-9f1d-5c34",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "◆ Acolyte Hybrids (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "905a-4429-9f1d-5c34",
+                "childName": "◆ Acolyte Hybrids (5)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
                 "childId": "0b81-3579-ad7e-49b2",
                 "shared": true,
                 "includeChildSelections": true,
@@ -411,6 +528,35 @@
                 "childName": "◆ Acolyte Hybrids (5)",
                 "repeats": 1,
                 "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 80,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 5,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "905a-4429-9f1d-5c34",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "◆ Acolyte Hybrids (5)"
               }
             ]
           },
@@ -599,6 +745,50 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f3d6-2b14-ebc0-9249",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "◆ Purestrain Genestealers (10)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "f3d6-2b14-ebc0-9249",
+                "childName": "◆ Purestrain Genestealers (10)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
                 "childId": "0b81-3579-ad7e-49b2",
                 "shared": true,
                 "includeChildSelections": true,
@@ -630,6 +820,35 @@
                 "childName": "◆ Purestrain Genestealers (10)",
                 "repeats": 1,
                 "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "f3d6-2b14-ebc0-9249",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "◆ Purestrain Genestealers (10)"
               }
             ]
           },
@@ -805,6 +1024,50 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "childName": "◆ Purestrain Genestealers (10)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d62-0d41-d426-ae08",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "◆ Aberrants (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "2d62-0d41-d426-ae08",
+                "childName": "◆ Aberrants (5)",
+                "repeats": 1,
+                "roundUp": false
               }
             ]
           },
@@ -862,6 +1125,35 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "2d62-0d41-d426-ae08",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "◆ Aberrants (5)"
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
                 "childId": "0b81-3579-ad7e-49b2",
                 "shared": true,
                 "includeChildSelections": true,
@@ -1037,6 +1329,50 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "802a-338f-8cc3-9cde",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "◆ Hybrid Metamorphs (5)"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "802a-338f-8cc3-9cde",
+                "childName": "◆ Hybrid Metamorphs (5)",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
                 "childId": "0b81-3579-ad7e-49b2",
                 "shared": true,
                 "includeChildSelections": true,
@@ -1068,6 +1404,35 @@
                 "childName": "◆ Hybrid Metamorphs (5)",
                 "repeats": 1,
                 "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "802a-338f-8cc3-9cde",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "◆ Hybrid Metamorphs (5)"
               }
             ]
           },
@@ -1256,6 +1621,50 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b232-a9d0-b77a-a5f2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "◆ Atalan Jackals (4) & Atalan Wolfquad"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "b232-a9d0-b77a-a5f2",
+                "childName": "◆ Atalan Jackals (4) & Atalan Wolfquad",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
                 "childId": "0b81-3579-ad7e-49b2",
                 "shared": true,
                 "includeChildSelections": true,
@@ -1287,6 +1696,35 @@
                 "childName": "◆ Atalan Jackals (4) & Atalan Wolfquad",
                 "repeats": 1,
                 "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "b232-a9d0-b77a-a5f2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "◆ Atalan Jackals (4) & Atalan Wolfquad"
               }
             ]
           },
@@ -1475,6 +1913,50 @@
                 "value": 1,
                 "field": "selections",
                 "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57bf-19b9-96b1-9ad3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "◆ Goliath Rockgrinder"
+              }
+            ],
+            "repeats": [
+              {
+                "field": "selections",
+                "scope": "roster",
+                "value": 1,
+                "percentValue": false,
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childId": "57bf-19b9-96b1-9ad3",
+                "childName": "◆ Goliath Rockgrinder",
+                "repeats": 1,
+                "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
                 "childId": "0b81-3579-ad7e-49b2",
                 "shared": true,
                 "includeChildSelections": true,
@@ -1506,6 +1988,35 @@
                 "childName": "◆ Goliath Rockgrinder",
                 "repeats": 1,
                 "roundUp": false
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "57bf-19b9-96b1-9ad3",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "◆ Goliath Rockgrinder"
               }
             ]
           },
@@ -1681,377 +2192,11 @@
                 "includeChildSelections": true,
                 "includeChildForces": true,
                 "childName": "◆ Goliath Rockgrinder"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "51b2-306e-1021-d207",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "6a2a-571e-0f56-5ed8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "420 Points (Practice)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "55b8-687c-ae78-be3c",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "◆ Neophyte Hybrids (10)"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "55b8-687c-ae78-be3c",
-                "childName": "◆ Neophyte Hybrids (10)",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 60,
-            "field": "51b2-306e-1021-d207",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "6a2a-571e-0f56-5ed8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "420 Points (Practice)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "55b8-687c-ae78-be3c",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "◆ Neophyte Hybrids (10)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "51b2-306e-1021-d207",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "6a2a-571e-0f56-5ed8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "420 Points (Practice)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "905a-4429-9f1d-5c34",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "◆ Acolyte Hybrids (5)"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "905a-4429-9f1d-5c34",
-                "childName": "◆ Acolyte Hybrids (5)",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "decrement",
-            "value": 60,
-            "field": "51b2-306e-1021-d207",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "6a2a-571e-0f56-5ed8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "420 Points (Practice)"
-              },
-              {
-                "type": "atLeast",
-                "value": 4,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "905a-4429-9f1d-5c34",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "◆ Acolyte Hybrids (5)"
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "51b2-306e-1021-d207",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "6a2a-571e-0f56-5ed8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "420 Points (Practice)"
-              },
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "f3d6-2b14-ebc0-9249",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "◆ Purestrain Genestealers (10)"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "f3d6-2b14-ebc0-9249",
-                "childName": "◆ Purestrain Genestealers (10)",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "51b2-306e-1021-d207",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "6a2a-571e-0f56-5ed8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "420 Points (Practice)"
-              },
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "2d62-0d41-d426-ae08",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "◆ Aberrants (5)"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "2d62-0d41-d426-ae08",
-                "childName": "◆ Aberrants (5)",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "51b2-306e-1021-d207",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "6a2a-571e-0f56-5ed8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "420 Points (Practice)"
-              },
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "802a-338f-8cc3-9cde",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "◆ Hybrid Metamorphs (5)"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "802a-338f-8cc3-9cde",
-                "childName": "◆ Hybrid Metamorphs (5)",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "51b2-306e-1021-d207",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "6a2a-571e-0f56-5ed8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "420 Points (Practice)"
-              },
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "b232-a9d0-b77a-a5f2",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "◆ Atalan Jackals (4) & Atalan Wolfquad"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "b232-a9d0-b77a-a5f2",
-                "childName": "◆ Atalan Jackals (4) & Atalan Wolfquad",
-                "repeats": 1,
-                "roundUp": false
-              }
-            ]
-          },
-          {
-            "type": "increment",
-            "value": 20,
-            "field": "51b2-306e-1021-d207",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "6a2a-571e-0f56-5ed8",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "420 Points (Practice)"
-              },
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "57bf-19b9-96b1-9ad3",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "◆ Goliath Rockgrinder"
-              }
-            ],
-            "repeats": [
-              {
-                "field": "selections",
-                "scope": "roster",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childId": "57bf-19b9-96b1-9ad3",
-                "childName": "◆ Goliath Rockgrinder",
-                "repeats": 1,
-                "roundUp": false
               }
             ]
           }
         ],
-        "comment": "EXTRA UNIT COPY COSTS / GS37. Permanent required accounting entry. Troop and Other arithmetic remain logically separate but live directly on this single visible parent. Neophyte Hybrids and Acolyte Hybrids remain the two Troop copy families. Purestrain Genestealers, Aberrants, Hybrid Metamorphs, Atalan Jackals & Atalan Wolfquad, and Goliath Rockgrinder remain the five non-Rare Other copy families. Normal-copy allowances are Practice 3 / 0, Quick 4 / 1, Standard 6 / 2, and Long 8 / 3 for Troop / Other respectively. Each excess identical copy adds 20 Points."
+        "comment": "GS39 PRACTICE: Practice now uses the exact same Extra Unit Copy Cost branch as Quick: four normal-cost Troop copies and one normal-cost Other copy. The Practice branch below is derived from the current Quick branch; Standard and Long arithmetic are unchanged.\n\nEXTRA UNIT COPY COSTS / GS37. Permanent required accounting entry. Troop and Other arithmetic remain logically separate but live directly on this single visible parent. Neophyte Hybrids and Acolyte Hybrids remain the two Troop copy families. Purestrain Genestealers, Aberrants, Hybrid Metamorphs, Atalan Jackals & Atalan Wolfquad, and Goliath Rockgrinder remain the five non-Rare Other copy families. Normal-copy allowances are Practice 3 / 0, Quick 4 / 1, Standard 6 / 2, and Long 8 / 3 for Troop / Other respectively. Each excess identical copy adds 20 Points."
       },
       {
         "type": "unit",
@@ -2127,6 +2272,37 @@
                 "includeChildSelections": false,
                 "includeChildForces": false,
                 "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "3822-6cb5-5a24-a344",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "◆ The Patriarch"
               }
             ]
           }
@@ -2323,6 +2499,37 @@
                 "includeChildSelections": false,
                 "includeChildForces": false,
                 "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "e29f-31f0-70a3-0abd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "◆ Magus"
               }
             ]
           }
@@ -2524,6 +2731,37 @@
                 "includeChildSelections": false,
                 "includeChildForces": false,
                 "queryFromSelf": false
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "true",
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "6a2a-571e-0f56-5ed8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "420 Points (Practice)"
+              },
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "3b19-062e-52ea-a35a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "queryFromSelf": false,
+                "childName": "◆ Primus"
               }
             ]
           }
@@ -5052,7 +5290,7 @@
       }
     ],
     "authorName": "AlienDilo",
-    "comment": "CURRENT SYSTEM-WIDE CONFIGURATION ORDER / GS38\nThis catalogue now targets Game System revision 38. Configuration presentation follows the shared lane doctrine: provenance warning 5 when applicable; Game Size 10; army identity 20; optional army structure 30; Leader Points 40; faction trackers 50; Extra Unit Copy Costs 80; Updated 90; About 100. Only locally-owned applicable lanes are stored in this file; Game Size, Leader Points, and About are supplied by the Game System. No unit IDs, costs, constraints, modifiers, attachment topology, loadout legality, or copy-cost arithmetic were changed by this pass.\n\nCURRENT STATE — GENESTEALER CULTS COMMUNITY HOMEBREW / GS37\nThis catalogue implements AlienDilo's community Genestealer Cults homebrew as a functional companion to the Warhammer 40k Reforged listbuilder. Its catalogue display name intentionally remains \"...\" so it is not presented alongside supported Reforged armies as though it were an official legal army. The always-present unofficial-community-homebrew warning remains unchanged. The supplied homebrew PDF remains authoritative for gameplay rules, weapon profiles, relics, psychic powers, and unusual per-model loadout mixtures.\n\nAll 11 source datasheets remain represented. The Patriarch, Magus, and Primus retain their existing 1 LP costs. Abominant remains source-defined as a 0-LP Leader without a synthetic LP:0 cost object; its visible Leader Points rule remains the player-facing statement of that exception. Required Leader attachments and Rare enforcement remain intact.\n\nExtra Unit Copy Costs uses one visible accounting entry while preserving distinct Troop and Other arithmetic. Neophyte Hybrids and Acolyte Hybrids remain the two Troop copy families. Purestrain Genestealers, Aberrants, Hybrid Metamorphs, Atalan Jackals & Atalan Wolfquad, and Goliath Rockgrinder remain the five non-Rare Other copy families. Practice / Quick / Standard / Long normal-copy allowances are 3 / 4 / 6 / 8 for Troops and 0 / 1 / 2 / 3 for Other.\n\nAUTHORING / RUNTIME NOTES\nListbuilder philosophy matches the main project: meaningful final-state list decisions are represented directly while the PDF remains open for rules text and unusual/default mixed loadouts. Top-level Unit Ability names are represented as shared Profiles; nested sub-abilities are intentionally omitted. Unit rows use ◆; Loadout Options use 🧰; all model headers use the faction-default 🧬; and listbuilder-relevant Leader Attachment rules use 🔗.\n\nThe REV6 Hybrid Metamorph 1 UI fix remains intact: the atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout stays inside its mandatory 1-of-1 wrapper so New Recruit renders it as a fixed selection rather than a quantity spinner.\n\nHISTORICAL REVISION LOG\nREV1 — initial complete catalogue: all 11 source units, Leader Points, required Leader attachments, Rare enforcement, Troop/Other Additional Copy Costs, loadouts, paid upgrades, and GS26 integration.\n\nREV2 — LOADOUT CLEANUP\nReviewed the first-pass community catalogue against established Drukhari / World Eaters mixed-role squad presentation. The always-present disclaimer now prominently identifies the catalogue as an unofficial community creation by AlienDilo and explicitly unaffiliated with the Reforged development team. Psychic Familiar selectors were removed from The Patriarch and Magus because the source defines Psychic Familiar as an ability. Neophyte Hybrids and Acolyte Hybrids were rebuilt around explicit model roles with mandatory final-state weapon choices and no empty radio entries. Root unit IDs, root points, categories, attachments, Leader Points, Additional Copy Cost mechanics, Rare handling, and all untouched unit trees are unchanged.\n\nREV3 — MODEL ROLE CLEANUP\nRebuilt Atalan Jackals, Hybrid Metamorphs, Aberrants, and Purestrain Genestealers into explicit model-role presentation. Root points/categories and all other listbuilding systems remain unchanged.\n\nREV4 — LOADOUT REFINEMENT\nAtalan Jackal 2 now presents Grenade Launcher as a costed radio option instead of a checkbox. Hybrid Metamorph 1 is now one atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The +10 Mining Tool & Cult Claws & Knife option moved from Acolyte unit-level Paid Wargear onto Acolyte Hybrid 2. Separate leader selectors are ordered melee before sidearm. Root points, categories, attachments, Leader Points, Additional Copy Costs, Rare handling, and unrelated unit trees are unchanged.\n\nREV5 — CATALOGUE CREATE BASELINE\nFinalized visible fixed-size unit names for Neophyte Hybrids (10), Acolyte Hybrids (5), Purestrain Genestealers (10), Aberrants (5), and Hybrid Metamorphs (5). The Catalogue Bugfixes section no longer records implementation-stage construction work; all prior bullets were replaced by the single marker <catalogue create>. Stable root IDs, points, categories, loadouts, attachments, Leader Points, Additional Copy Costs, Rare handling, and all listbuilding mechanics are unchanged.\n\nREV6 — HYBRID METAMORPH 1 UI FIX\nRestored a mandatory 1-of-1 selection-group wrapper around the fixed atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The previous direct upgrade entry rendered as a quantity spinner in New Recruit. No points, categories, unit rules, or other catalogue mechanics changed.\n\nREV7 — CURRENT TEMPLATE / PRACTICE / UNIT ABILITIES\nConsolidated current-template update from the live REV6 baseline. Retargeted to Game System revision 37; added 420 Point Practice compatibility to Extra Unit Copy Costs; flattened the visible Troops/Other accounting children into one Extra Unit Copy Costs entry while preserving all existing Quick/Standard/Long arithmetic; adopted the current unit/loadout/model/category/attachment presentation with The Patriarch as the sole  command root; and added top-level Unit Ability profiles from the supplied Genestealer Cults ability map. The unofficial community-homebrew warning, catalogue display name \"...\", source-defined Abominant 0-LP exception, and REV6 Hybrid Metamorph 1 UI fix remain unchanged.\n\nOPTIONAL UNIT ABILITY PRESENTATION: top-level abilities granted by selectable upgrades are linked to the granting selection rather than the unit root. Hive Icon is therefore linked to its +10 Point checkbox on Neophyte Hybrids, Acolyte Hybrids, and Hybrid Metamorphs. Drilldozer Blades remains root-linked because it is mandatory fixed equipment.\n\nREV8 — DIAMOND UNIT MARKERS\nReplaced remaining unit-row and linked-unit chevrons with ◆ throughout the catalogue and synchronized mirrored childName metadata. Genestealer Cults currently has no Additional Model checkbox entries, so no markerless Additional Model conversion was required. Existing 🧬 model headers, 🧰 Loadout Options, 🔗 Leader Attachment labels, themed Unit Ability profiles, Game System category icons, Leader Points, required attachments, Rare enforcement, IDs, points, constraints, modifiers, conditional Hive Icon Unit Ability ownership, loadout legality, and Extra Unit Copy Cost arithmetic are unchanged.",
+    "comment": "REV10 / GS39 — PRACTICE ZERO-LP MIGRATION\nThis component now targets Game System revision 39. Every locally owned unit root carrying a positive LP cost receives selected-safe Practice hiding: it is hidden while 420 Point Practice is active only when that unit is not already selected. Explicit 0-LP roots do not exist under the project convention, so no exception tags are required. The local Extra Unit Copy Costs Practice branch is now an exact clone of the current Quick branch, giving Practice four normal-cost Troop copies and one normal-cost Other copy. Points, intrinsic LP costs, IDs, loadouts, associations, category ownership, Quick/Standard/Long arithmetic, and unrelated mechanics are unchanged.\n\nCURRENT SYSTEM-WIDE CONFIGURATION ORDER / GS38\nThis catalogue now targets Game System revision 38. Configuration presentation follows the shared lane doctrine: provenance warning 5 when applicable; Game Size 10; army identity 20; optional army structure 30; Leader Points 40; faction trackers 50; Extra Unit Copy Costs 80; Updated 90; About 100. Only locally-owned applicable lanes are stored in this file; Game Size, Leader Points, and About are supplied by the Game System. No unit IDs, costs, constraints, modifiers, attachment topology, loadout legality, or copy-cost arithmetic were changed by this pass.\n\nCURRENT STATE — GENESTEALER CULTS COMMUNITY HOMEBREW / GS37\nThis catalogue implements AlienDilo's community Genestealer Cults homebrew as a functional companion to the Warhammer 40k Reforged listbuilder. Its catalogue display name intentionally remains \"...\" so it is not presented alongside supported Reforged armies as though it were an official legal army. The always-present unofficial-community-homebrew warning remains unchanged. The supplied homebrew PDF remains authoritative for gameplay rules, weapon profiles, relics, psychic powers, and unusual per-model loadout mixtures.\n\nAll 11 source datasheets remain represented. The Patriarch, Magus, and Primus retain their existing 1 LP costs. Abominant remains source-defined as a 0-LP Leader without a synthetic LP:0 cost object; its visible Leader Points rule remains the player-facing statement of that exception. Required Leader attachments and Rare enforcement remain intact.\n\nExtra Unit Copy Costs uses one visible accounting entry while preserving distinct Troop and Other arithmetic. Neophyte Hybrids and Acolyte Hybrids remain the two Troop copy families. Purestrain Genestealers, Aberrants, Hybrid Metamorphs, Atalan Jackals & Atalan Wolfquad, and Goliath Rockgrinder remain the five non-Rare Other copy families. Practice / Quick / Standard / Long normal-copy allowances are 3 / 4 / 6 / 8 for Troops and 0 / 1 / 2 / 3 for Other.\n\nAUTHORING / RUNTIME NOTES\nListbuilder philosophy matches the main project: meaningful final-state list decisions are represented directly while the PDF remains open for rules text and unusual/default mixed loadouts. Top-level Unit Ability names are represented as shared Profiles; nested sub-abilities are intentionally omitted. Unit rows use ◆; Loadout Options use 🧰; all model headers use the faction-default 🧬; and listbuilder-relevant Leader Attachment rules use 🔗.\n\nThe REV6 Hybrid Metamorph 1 UI fix remains intact: the atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout stays inside its mandatory 1-of-1 wrapper so New Recruit renders it as a fixed selection rather than a quantity spinner.\n\nHISTORICAL REVISION LOG\nREV1 — initial complete catalogue: all 11 source units, Leader Points, required Leader attachments, Rare enforcement, Troop/Other Additional Copy Costs, loadouts, paid upgrades, and GS26 integration.\n\nREV2 — LOADOUT CLEANUP\nReviewed the first-pass community catalogue against established Drukhari / World Eaters mixed-role squad presentation. The always-present disclaimer now prominently identifies the catalogue as an unofficial community creation by AlienDilo and explicitly unaffiliated with the Reforged development team. Psychic Familiar selectors were removed from The Patriarch and Magus because the source defines Psychic Familiar as an ability. Neophyte Hybrids and Acolyte Hybrids were rebuilt around explicit model roles with mandatory final-state weapon choices and no empty radio entries. Root unit IDs, root points, categories, attachments, Leader Points, Additional Copy Cost mechanics, Rare handling, and all untouched unit trees are unchanged.\n\nREV3 — MODEL ROLE CLEANUP\nRebuilt Atalan Jackals, Hybrid Metamorphs, Aberrants, and Purestrain Genestealers into explicit model-role presentation. Root points/categories and all other listbuilding systems remain unchanged.\n\nREV4 — LOADOUT REFINEMENT\nAtalan Jackal 2 now presents Grenade Launcher as a costed radio option instead of a checkbox. Hybrid Metamorph 1 is now one atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The +10 Mining Tool & Cult Claws & Knife option moved from Acolyte unit-level Paid Wargear onto Acolyte Hybrid 2. Separate leader selectors are ordered melee before sidearm. Root points, categories, attachments, Leader Points, Additional Copy Costs, Rare handling, and unrelated unit trees are unchanged.\n\nREV5 — CATALOGUE CREATE BASELINE\nFinalized visible fixed-size unit names for Neophyte Hybrids (10), Acolyte Hybrids (5), Purestrain Genestealers (10), Aberrants (5), and Hybrid Metamorphs (5). The Catalogue Bugfixes section no longer records implementation-stage construction work; all prior bullets were replaced by the single marker <catalogue create>. Stable root IDs, points, categories, loadouts, attachments, Leader Points, Additional Copy Costs, Rare handling, and all listbuilding mechanics are unchanged.\n\nREV6 — HYBRID METAMORPH 1 UI FIX\nRestored a mandatory 1-of-1 selection-group wrapper around the fixed atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The previous direct upgrade entry rendered as a quantity spinner in New Recruit. No points, categories, unit rules, or other catalogue mechanics changed.\n\nREV7 — CURRENT TEMPLATE / PRACTICE / UNIT ABILITIES\nConsolidated current-template update from the live REV6 baseline. Retargeted to Game System revision 37; added 420 Point Practice compatibility to Extra Unit Copy Costs; flattened the visible Troops/Other accounting children into one Extra Unit Copy Costs entry while preserving all existing Quick/Standard/Long arithmetic; adopted the current unit/loadout/model/category/attachment presentation with The Patriarch as the sole  command root; and added top-level Unit Ability profiles from the supplied Genestealer Cults ability map. The unofficial community-homebrew warning, catalogue display name \"...\", source-defined Abominant 0-LP exception, and REV6 Hybrid Metamorph 1 UI fix remain unchanged.\n\nOPTIONAL UNIT ABILITY PRESENTATION: top-level abilities granted by selectable upgrades are linked to the granting selection rather than the unit root. Hive Icon is therefore linked to its +10 Point checkbox on Neophyte Hybrids, Acolyte Hybrids, and Hybrid Metamorphs. Drilldozer Blades remains root-linked because it is mandatory fixed equipment.\n\nREV8 — DIAMOND UNIT MARKERS\nReplaced remaining unit-row and linked-unit chevrons with ◆ throughout the catalogue and synchronized mirrored childName metadata. Genestealer Cults currently has no Additional Model checkbox entries, so no markerless Additional Model conversion was required. Existing 🧬 model headers, 🧰 Loadout Options, 🔗 Leader Attachment labels, themed Unit Ability profiles, Game System category icons, Leader Points, required attachments, Rare enforcement, IDs, points, constraints, modifiers, conditional Hive Icon Unit Ability ownership, loadout legality, and Extra Unit Copy Cost arithmetic are unchanged.",
     "sharedProfiles": [
       {
         "name": "🔮 Psyker 3",
