@@ -5,7 +5,7 @@
     "name": "Chaos Space Marines 3.3.6 - Arsenal Library",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 38,
-    "revision": 22,
+    "revision": 23,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "sharedSelectionEntries": [
@@ -1641,7 +1641,7 @@
             ]
           }
         ],
-        "comment": "LOADOUT REV15: fixed five-model presentation compiled for listbuilder clarity. Chaos Champion has a mandatory Power Weapon / Power Fist / Daemon Hammer choice and a mandatory Bolt Pistol / Plasma Pistol choice; the player-facing Bolt Pistol label intentionally shortens the source Champion Bolt Pistol name. Legionary 2-3 share one two-model package choice: 2x Boltgun & Combat Knife or 2x Chainsword & Bolt Pistol. Those package buttons carry hidden semantic child items so one player-facing choice can still represent the separate underlying weapons. Legionary 4 and Legionary 5 each choose Special Weapon Legionary, Heavy Weapon Legionary, or Butcher Legionary. Special Weapon Legionaries retain Combat Knife and choose Meltagun / Plasmagun / Flamer; Heavy Weapon Legionaries retain Combat Knife and choose Autocannon / Heavy Bolter / Lascannon / Missile Launcher / Reaper Chaincannon; Butcher Legionaries retain Combat Knife and carry Heavy Chain Axe. The uncommon source-legal fallback where Legionary 4 or 5 remains a normal Boltgun/Combat Knife model is intentionally not given its own button under the companion-listbuilder presentation policy. Chaos Influence is an optional +10 choice between Khornate Bloodlust, Tzeentian Sorcery, Nurglite Contagion, and Slaaneshi Grace. Replenished Ranks zeroes both the root Legionaries cost and any selected Chaos Influence descendant cost when this unit is the Chaos Apothecary's host.\nSHARED LOADOUT PACKAGES REV25: Legionary 4 and Legionary 5 now represent every weapon-plus-Combat-Knife state as one shared meaningful package. Special Weapon Legionaries use Meltagun & Combat Knife / Plasmagun & Combat Knife / Flamer & Combat Knife; Heavy Weapon Legionaries use the equivalent Autocannon / Heavy Bolter / Lascannon / Missile Launcher / Reaper Chaincannon & Combat Knife packages; Butcher Legionaries use Heavy Chain Axe & Combat Knife. Each exact package is shared between Legionary 4 and Legionary 5. Existing weapon selection IDs are retained as link IDs; historical standalone Combat Knife IDs remain hidden and optional. Chaos Champion, Legionary 2-3, Chaos Influence, attachments, points, and all other Legionary mechanics are unchanged.\nREV33 / 3.3.5 LEGIONARIES CHAMPION GUN UPDATE: Chaos Champion ranged options are now Champion Boltgun, Champion Bolt Pistol, and Champion Plasma Pistol. Existing Bolt Pistol and Plasma Pistol selection IDs are preserved under their updated Champion names.\nARSENAL V20 CURRENT TEMPLATE SYNC: mirrored from playable Chaos Space Marines REV47 with stable root and subtree IDs preserved. Current unit-row, category-display, Loadout Options, model-header, Leader Attachment, semantic Additional Model naming where applicable, intrinsic LP, and top-level Unit Ability semantics are synchronized. Consumer catalogues continue to own local availability and consumer-local Extra Unit Copy Cost arithmetic.",
+        "comment": "LEGIONARIES FLAT SPECIALIST PRESENTATION REV52: Legionary 2-3 retains its existing two compact atomic package choices. Legionary 4 and Legionary 5 now each use two direct required radio groups: a singleton Combat Knife group and one flat nine-option specialist weapon group containing Meltagun, Plasmagun, Flamer, Autocannon, Heavy Bolter, Lascannon, Missile Launcher, Reaper Chaincannon, and Heavy Chain Axe. The former Special Weapon Legionary / Heavy Weapon Legionary / Butcher Legionary routing layer has been removed. Existing shared specialist weapon target IDs and both models' existing weapon-link IDs are preserved; the shared target names now contain only the specialist weapon so Combat Knife exports independently. No points, Chaos Influence, attachments, Replenished Ranks behavior, or unrelated Legionaries mechanics changed.\nLOADOUT REV15: fixed five-model presentation compiled for listbuilder clarity. Chaos Champion has a mandatory Power Weapon / Power Fist / Daemon Hammer choice and a mandatory Bolt Pistol / Plasma Pistol choice; the player-facing Bolt Pistol label intentionally shortens the source Champion Bolt Pistol name. Legionary 2-3 share one two-model package choice: 2x Boltgun & Combat Knife or 2x Chainsword & Bolt Pistol. Those package buttons carry hidden semantic child items so one player-facing choice can still represent the separate underlying weapons. Legionary 4 and Legionary 5 each choose Special Weapon Legionary, Heavy Weapon Legionary, or Butcher Legionary. Special Weapon Legionaries retain Combat Knife and choose Meltagun / Plasmagun / Flamer; Heavy Weapon Legionaries retain Combat Knife and choose Autocannon / Heavy Bolter / Lascannon / Missile Launcher / Reaper Chaincannon; Butcher Legionaries retain Combat Knife and carry Heavy Chain Axe. The uncommon source-legal fallback where Legionary 4 or 5 remains a normal Boltgun/Combat Knife model is intentionally not given its own button under the companion-listbuilder presentation policy. Chaos Influence is an optional +10 choice between Khornate Bloodlust, Tzeentian Sorcery, Nurglite Contagion, and Slaaneshi Grace. Replenished Ranks zeroes both the root Legionaries cost and any selected Chaos Influence descendant cost when this unit is the Chaos Apothecary's host.\nSHARED LOADOUT PACKAGES REV25: Legionary 4 and Legionary 5 now represent every weapon-plus-Combat-Knife state as one shared meaningful package. Special Weapon Legionaries use Meltagun & Combat Knife / Plasmagun & Combat Knife / Flamer & Combat Knife; Heavy Weapon Legionaries use the equivalent Autocannon / Heavy Bolter / Lascannon / Missile Launcher / Reaper Chaincannon & Combat Knife packages; Butcher Legionaries use Heavy Chain Axe & Combat Knife. Each exact package is shared between Legionary 4 and Legionary 5. Existing weapon selection IDs are retained as link IDs; historical standalone Combat Knife IDs remain hidden and optional. Chaos Champion, Legionary 2-3, Chaos Influence, attachments, points, and all other Legionary mechanics are unchanged.\nREV33 / 3.3.5 LEGIONARIES CHAMPION GUN UPDATE: Chaos Champion ranged options are now Champion Boltgun, Champion Bolt Pistol, and Champion Plasma Pistol. Existing Bolt Pistol and Plasma Pistol selection IDs are preserved under their updated Champion names.\nARSENAL V20 CURRENT TEMPLATE SYNC: mirrored from playable Chaos Space Marines REV47 with stable root and subtree IDs preserved. Current unit-row, category-display, Loadout Options, model-header, Leader Attachment, semantic Additional Model naming where applicable, intrinsic LP, and top-level Unit Ability semantics are synchronized. Consumer catalogues continue to own local availability and consumer-local Extra Unit Copy Cost arithmetic.",
         "selectionEntryGroups": [
           {
             "name": "🧰 Loadout Options",
@@ -1987,9 +1987,46 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "b8ab-e660-f077-0b80",
+                    "id": "c78f-f2d6-9111-1c1b",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "75ba-7db7-7f44-1bd2",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "d024-fcea-c2e2-73b7",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combat Knife",
+                        "hidden": false,
+                        "id": "35a1-1c14-1f6a-03c8",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "35a1-1c14-1f6a-03c8"
+                  },
+                  {
+                    "name": "​",
+                    "id": "b8ab-e660-f077-0b80",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -2010,314 +2047,90 @@
                         "includeChildSelections": false
                       }
                     ],
-                    "selectionEntries": [
+                    "entryLinks": [
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "Special Weapon Legionary",
+                        "name": "Meltagun",
                         "hidden": false,
-                        "id": "6d33-5440-4eeb-3c5b",
-                        "sortIndex": 1,
-                        "selectionEntryGroups": [
-                          {
-                            "name": "​",
-                            "id": "c78f-f2d6-9111-1c1b",
-                            "hidden": true,
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 0,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "75ba-7db7-7f44-1bd2",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "d024-fcea-c2e2-73b7",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "selectionEntries": [
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Combat Knife",
-                                "hidden": true,
-                                "id": "35a1-1c14-1f6a-03c8",
-                                "sortIndex": 1
-                              }
-                            ]
-                          },
-                          {
-                            "name": "​",
-                            "id": "0001-f537-09e9-b33a",
-                            "hidden": false,
-                            "sortIndex": 2,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "0c36-b430-37e9-d67d",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "e1eb-d8e9-94b3-a3c6",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "defaultSelectionEntryId": "3590-ac6c-aa36-4dfd",
-                            "entryLinks": [
-                              {
-                                "import": true,
-                                "name": "Meltagun & Combat Knife",
-                                "hidden": false,
-                                "id": "3590-ac6c-aa36-4dfd",
-                                "type": "selectionEntry",
-                                "targetId": "a92a-f834-6158-7c37",
-                                "sortIndex": 1
-                              },
-                              {
-                                "import": true,
-                                "name": "Plasmagun & Combat Knife",
-                                "hidden": false,
-                                "id": "0f57-fa51-ce02-142d",
-                                "type": "selectionEntry",
-                                "targetId": "f7ab-cb8a-634d-21cc",
-                                "sortIndex": 2
-                              },
-                              {
-                                "import": true,
-                                "name": "Flamer & Combat Knife",
-                                "hidden": false,
-                                "id": "9225-5990-92d2-710f",
-                                "type": "selectionEntry",
-                                "targetId": "b945-7820-2dcc-3cfe",
-                                "sortIndex": 3
-                              }
-                            ]
-                          }
-                        ]
+                        "id": "3590-ac6c-aa36-4dfd",
+                        "type": "selectionEntry",
+                        "targetId": "a92a-f834-6158-7c37",
+                        "sortIndex": 1
                       },
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "Heavy Weapon Legionary",
+                        "name": "Plasmagun",
                         "hidden": false,
-                        "id": "8efb-6940-8f40-a33e",
-                        "sortIndex": 2,
-                        "selectionEntryGroups": [
-                          {
-                            "name": "​",
-                            "id": "7574-038e-d047-aa46",
-                            "hidden": true,
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 0,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "346a-db79-926f-ec43",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "4330-a438-8fb4-4432",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "selectionEntries": [
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Combat Knife",
-                                "hidden": true,
-                                "id": "14e6-1d5a-26d9-6127",
-                                "sortIndex": 1
-                              }
-                            ]
-                          },
-                          {
-                            "name": "​",
-                            "id": "a716-a036-d172-3497",
-                            "hidden": false,
-                            "sortIndex": 2,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "32a2-77e6-0560-3242",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "ddf7-b979-a4a2-5830",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "defaultSelectionEntryId": "b027-186f-6728-b04c",
-                            "entryLinks": [
-                              {
-                                "import": true,
-                                "name": "Autocannon & Combat Knife",
-                                "hidden": false,
-                                "id": "b027-186f-6728-b04c",
-                                "type": "selectionEntry",
-                                "targetId": "ee81-6c10-a2ac-728d",
-                                "sortIndex": 1
-                              },
-                              {
-                                "import": true,
-                                "name": "Heavy Bolter & Combat Knife",
-                                "hidden": false,
-                                "id": "b29f-0725-0768-cdfd",
-                                "type": "selectionEntry",
-                                "targetId": "b294-106e-67b2-a88a",
-                                "sortIndex": 2
-                              },
-                              {
-                                "import": true,
-                                "name": "Lascannon & Combat Knife",
-                                "hidden": false,
-                                "id": "12ee-262e-308a-d2ae",
-                                "type": "selectionEntry",
-                                "targetId": "98f7-3943-afca-4e13",
-                                "sortIndex": 3
-                              },
-                              {
-                                "import": true,
-                                "name": "Missile Launcher & Combat Knife",
-                                "hidden": false,
-                                "id": "2307-7c04-15ae-8706",
-                                "type": "selectionEntry",
-                                "targetId": "e028-256b-021e-7640",
-                                "sortIndex": 4
-                              },
-                              {
-                                "import": true,
-                                "name": "Reaper Chaincannon & Combat Knife",
-                                "hidden": false,
-                                "id": "14f3-32bf-8221-53a1",
-                                "type": "selectionEntry",
-                                "targetId": "d241-9f3a-bc0a-7f74",
-                                "sortIndex": 5
-                              }
-                            ]
-                          }
-                        ]
+                        "id": "0f57-fa51-ce02-142d",
+                        "type": "selectionEntry",
+                        "targetId": "f7ab-cb8a-634d-21cc",
+                        "sortIndex": 2
                       },
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "Butcher Legionary",
+                        "name": "Flamer",
                         "hidden": false,
-                        "id": "8f28-da82-eb67-a416",
-                        "sortIndex": 3,
-                        "selectionEntryGroups": [
-                          {
-                            "name": "​",
-                            "id": "4482-42d8-b1da-0dda",
-                            "hidden": true,
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 0,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "9fed-8f06-c643-fcb6",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "6581-54ec-350e-c1fd",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "selectionEntries": [
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Combat Knife",
-                                "hidden": true,
-                                "id": "32ee-0a43-eea8-dc8c",
-                                "sortIndex": 1
-                              }
-                            ]
-                          },
-                          {
-                            "name": "​",
-                            "id": "f923-1be8-8328-b323",
-                            "hidden": false,
-                            "sortIndex": 2,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "f6f6-463d-4fc0-d655",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "1e5d-2ece-2a19-0b6c",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "defaultSelectionEntryId": "3f76-42a4-a44a-2040",
-                            "entryLinks": [
-                              {
-                                "import": true,
-                                "name": "Heavy Chain Axe & Combat Knife",
-                                "hidden": false,
-                                "id": "3f76-42a4-a44a-2040",
-                                "type": "selectionEntry",
-                                "targetId": "858b-13a3-40ac-73da",
-                                "sortIndex": 1
-                              }
-                            ]
-                          }
-                        ]
+                        "id": "9225-5990-92d2-710f",
+                        "type": "selectionEntry",
+                        "targetId": "b945-7820-2dcc-3cfe",
+                        "sortIndex": 3
+                      },
+                      {
+                        "import": true,
+                        "name": "Autocannon",
+                        "hidden": false,
+                        "id": "b027-186f-6728-b04c",
+                        "type": "selectionEntry",
+                        "targetId": "ee81-6c10-a2ac-728d",
+                        "sortIndex": 4
+                      },
+                      {
+                        "import": true,
+                        "name": "Heavy Bolter",
+                        "hidden": false,
+                        "id": "b29f-0725-0768-cdfd",
+                        "type": "selectionEntry",
+                        "targetId": "b294-106e-67b2-a88a",
+                        "sortIndex": 5
+                      },
+                      {
+                        "import": true,
+                        "name": "Lascannon",
+                        "hidden": false,
+                        "id": "12ee-262e-308a-d2ae",
+                        "type": "selectionEntry",
+                        "targetId": "98f7-3943-afca-4e13",
+                        "sortIndex": 6
+                      },
+                      {
+                        "import": true,
+                        "name": "Missile Launcher",
+                        "hidden": false,
+                        "id": "2307-7c04-15ae-8706",
+                        "type": "selectionEntry",
+                        "targetId": "e028-256b-021e-7640",
+                        "sortIndex": 7
+                      },
+                      {
+                        "import": true,
+                        "name": "Reaper Chaincannon",
+                        "hidden": false,
+                        "id": "14f3-32bf-8221-53a1",
+                        "type": "selectionEntry",
+                        "targetId": "d241-9f3a-bc0a-7f74",
+                        "sortIndex": 8
+                      },
+                      {
+                        "import": true,
+                        "name": "Heavy Chain Axe",
+                        "hidden": false,
+                        "id": "3f76-42a4-a44a-2040",
+                        "type": "selectionEntry",
+                        "targetId": "858b-13a3-40ac-73da",
+                        "sortIndex": 9
                       }
-                    ]
+                    ],
+                    "defaultSelectionEntryId": "3590-ac6c-aa36-4dfd"
                   }
                 ]
               },
@@ -2329,9 +2142,46 @@
                 "selectionEntryGroups": [
                   {
                     "name": "​",
-                    "id": "d0f4-3720-9a93-8c78",
+                    "id": "98a0-fd99-78d6-63e0",
                     "hidden": false,
                     "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c2ad-a76b-b3b1-0427",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "abdd-ee3e-c3cc-10e4",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combat Knife",
+                        "hidden": false,
+                        "id": "1a02-700b-a987-3746",
+                        "sortIndex": 1
+                      }
+                    ],
+                    "defaultSelectionEntryId": "1a02-700b-a987-3746"
+                  },
+                  {
+                    "name": "​",
+                    "id": "d0f4-3720-9a93-8c78",
+                    "hidden": false,
+                    "sortIndex": 2,
                     "constraints": [
                       {
                         "type": "min",
@@ -2352,314 +2202,90 @@
                         "includeChildSelections": false
                       }
                     ],
-                    "selectionEntries": [
+                    "entryLinks": [
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "Special Weapon Legionary",
+                        "name": "Meltagun",
                         "hidden": false,
-                        "id": "cb2e-dd25-ba19-a97f",
-                        "sortIndex": 1,
-                        "selectionEntryGroups": [
-                          {
-                            "name": "​",
-                            "id": "98a0-fd99-78d6-63e0",
-                            "hidden": true,
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 0,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "c2ad-a76b-b3b1-0427",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "abdd-ee3e-c3cc-10e4",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "selectionEntries": [
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Combat Knife",
-                                "hidden": true,
-                                "id": "1a02-700b-a987-3746",
-                                "sortIndex": 1
-                              }
-                            ]
-                          },
-                          {
-                            "name": "​",
-                            "id": "6b91-0f85-feb1-24f5",
-                            "hidden": false,
-                            "sortIndex": 2,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "32f4-c36d-4a27-f74a",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "ed43-9011-b8d5-2f69",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "defaultSelectionEntryId": "8561-10cf-bcd3-12f6",
-                            "entryLinks": [
-                              {
-                                "import": true,
-                                "name": "Meltagun & Combat Knife",
-                                "hidden": false,
-                                "id": "8561-10cf-bcd3-12f6",
-                                "type": "selectionEntry",
-                                "targetId": "a92a-f834-6158-7c37",
-                                "sortIndex": 1
-                              },
-                              {
-                                "import": true,
-                                "name": "Plasmagun & Combat Knife",
-                                "hidden": false,
-                                "id": "3f9e-828f-bb26-edad",
-                                "type": "selectionEntry",
-                                "targetId": "f7ab-cb8a-634d-21cc",
-                                "sortIndex": 2
-                              },
-                              {
-                                "import": true,
-                                "name": "Flamer & Combat Knife",
-                                "hidden": false,
-                                "id": "0591-103c-3b9b-fd66",
-                                "type": "selectionEntry",
-                                "targetId": "b945-7820-2dcc-3cfe",
-                                "sortIndex": 3
-                              }
-                            ]
-                          }
-                        ]
+                        "id": "8561-10cf-bcd3-12f6",
+                        "type": "selectionEntry",
+                        "targetId": "a92a-f834-6158-7c37",
+                        "sortIndex": 1
                       },
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "Heavy Weapon Legionary",
+                        "name": "Plasmagun",
                         "hidden": false,
-                        "id": "3edb-61fe-4441-a87f",
-                        "sortIndex": 2,
-                        "selectionEntryGroups": [
-                          {
-                            "name": "​",
-                            "id": "de8d-8d2e-2ae5-b159",
-                            "hidden": true,
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 0,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "3d63-38e8-c49a-8ab0",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "a833-f5e3-4b2a-37eb",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "selectionEntries": [
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Combat Knife",
-                                "hidden": true,
-                                "id": "af3c-1f4f-1e3a-05c3",
-                                "sortIndex": 1
-                              }
-                            ]
-                          },
-                          {
-                            "name": "​",
-                            "id": "810d-c2ca-2552-41d9",
-                            "hidden": false,
-                            "sortIndex": 2,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "9361-9cc2-437e-0000",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "7ece-cf1e-86aa-f0d3",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "defaultSelectionEntryId": "c59e-ec90-bcef-1674",
-                            "entryLinks": [
-                              {
-                                "import": true,
-                                "name": "Autocannon & Combat Knife",
-                                "hidden": false,
-                                "id": "c59e-ec90-bcef-1674",
-                                "type": "selectionEntry",
-                                "targetId": "ee81-6c10-a2ac-728d",
-                                "sortIndex": 1
-                              },
-                              {
-                                "import": true,
-                                "name": "Heavy Bolter & Combat Knife",
-                                "hidden": false,
-                                "id": "fef3-c56f-d61f-39c5",
-                                "type": "selectionEntry",
-                                "targetId": "b294-106e-67b2-a88a",
-                                "sortIndex": 2
-                              },
-                              {
-                                "import": true,
-                                "name": "Lascannon & Combat Knife",
-                                "hidden": false,
-                                "id": "1ba9-be27-765e-4b50",
-                                "type": "selectionEntry",
-                                "targetId": "98f7-3943-afca-4e13",
-                                "sortIndex": 3
-                              },
-                              {
-                                "import": true,
-                                "name": "Missile Launcher & Combat Knife",
-                                "hidden": false,
-                                "id": "0604-7a42-49bb-ac1e",
-                                "type": "selectionEntry",
-                                "targetId": "e028-256b-021e-7640",
-                                "sortIndex": 4
-                              },
-                              {
-                                "import": true,
-                                "name": "Reaper Chaincannon & Combat Knife",
-                                "hidden": false,
-                                "id": "c07e-b0d0-2ded-08d6",
-                                "type": "selectionEntry",
-                                "targetId": "d241-9f3a-bc0a-7f74",
-                                "sortIndex": 5
-                              }
-                            ]
-                          }
-                        ]
+                        "id": "3f9e-828f-bb26-edad",
+                        "type": "selectionEntry",
+                        "targetId": "f7ab-cb8a-634d-21cc",
+                        "sortIndex": 2
                       },
                       {
-                        "type": "upgrade",
                         "import": true,
-                        "name": "Butcher Legionary",
+                        "name": "Flamer",
                         "hidden": false,
-                        "id": "f86b-77e3-2c37-5ae5",
-                        "sortIndex": 3,
-                        "selectionEntryGroups": [
-                          {
-                            "name": "​",
-                            "id": "bb53-9af0-b3e1-862c",
-                            "hidden": true,
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 0,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "f402-f0ea-5395-d2ab",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "2381-ff8b-36d0-9b0d",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "selectionEntries": [
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Combat Knife",
-                                "hidden": true,
-                                "id": "bf7e-06f3-a3fe-968d",
-                                "sortIndex": 1
-                              }
-                            ]
-                          },
-                          {
-                            "name": "​",
-                            "id": "c561-e939-4eba-1e45",
-                            "hidden": false,
-                            "sortIndex": 2,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "4b66-d708-26bd-9e6d",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "edb5-1e5c-b7b3-64af",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "defaultSelectionEntryId": "dc63-ead0-4ae1-6a53",
-                            "entryLinks": [
-                              {
-                                "import": true,
-                                "name": "Heavy Chain Axe & Combat Knife",
-                                "hidden": false,
-                                "id": "dc63-ead0-4ae1-6a53",
-                                "type": "selectionEntry",
-                                "targetId": "858b-13a3-40ac-73da",
-                                "sortIndex": 1
-                              }
-                            ]
-                          }
-                        ]
+                        "id": "0591-103c-3b9b-fd66",
+                        "type": "selectionEntry",
+                        "targetId": "b945-7820-2dcc-3cfe",
+                        "sortIndex": 3
+                      },
+                      {
+                        "import": true,
+                        "name": "Autocannon",
+                        "hidden": false,
+                        "id": "c59e-ec90-bcef-1674",
+                        "type": "selectionEntry",
+                        "targetId": "ee81-6c10-a2ac-728d",
+                        "sortIndex": 4
+                      },
+                      {
+                        "import": true,
+                        "name": "Heavy Bolter",
+                        "hidden": false,
+                        "id": "fef3-c56f-d61f-39c5",
+                        "type": "selectionEntry",
+                        "targetId": "b294-106e-67b2-a88a",
+                        "sortIndex": 5
+                      },
+                      {
+                        "import": true,
+                        "name": "Lascannon",
+                        "hidden": false,
+                        "id": "1ba9-be27-765e-4b50",
+                        "type": "selectionEntry",
+                        "targetId": "98f7-3943-afca-4e13",
+                        "sortIndex": 6
+                      },
+                      {
+                        "import": true,
+                        "name": "Missile Launcher",
+                        "hidden": false,
+                        "id": "0604-7a42-49bb-ac1e",
+                        "type": "selectionEntry",
+                        "targetId": "e028-256b-021e-7640",
+                        "sortIndex": 7
+                      },
+                      {
+                        "import": true,
+                        "name": "Reaper Chaincannon",
+                        "hidden": false,
+                        "id": "c07e-b0d0-2ded-08d6",
+                        "type": "selectionEntry",
+                        "targetId": "d241-9f3a-bc0a-7f74",
+                        "sortIndex": 8
+                      },
+                      {
+                        "import": true,
+                        "name": "Heavy Chain Axe",
+                        "hidden": false,
+                        "id": "dc63-ead0-4ae1-6a53",
+                        "type": "selectionEntry",
+                        "targetId": "858b-13a3-40ac-73da",
+                        "sortIndex": 9
                       }
-                    ]
+                    ],
+                    "defaultSelectionEntryId": "8561-10cf-bcd3-12f6"
                   }
                 ]
               }
@@ -13488,63 +13114,63 @@
       {
         "type": "upgrade",
         "import": true,
-        "name": "Meltagun & Combat Knife",
+        "name": "Meltagun",
         "hidden": false,
         "id": "a92a-f834-6158-7c37"
       },
       {
         "type": "upgrade",
         "import": true,
-        "name": "Plasmagun & Combat Knife",
+        "name": "Plasmagun",
         "hidden": false,
         "id": "f7ab-cb8a-634d-21cc"
       },
       {
         "type": "upgrade",
         "import": true,
-        "name": "Flamer & Combat Knife",
+        "name": "Flamer",
         "hidden": false,
         "id": "b945-7820-2dcc-3cfe"
       },
       {
         "type": "upgrade",
         "import": true,
-        "name": "Autocannon & Combat Knife",
+        "name": "Autocannon",
         "hidden": false,
         "id": "ee81-6c10-a2ac-728d"
       },
       {
         "type": "upgrade",
         "import": true,
-        "name": "Heavy Bolter & Combat Knife",
+        "name": "Heavy Bolter",
         "hidden": false,
         "id": "b294-106e-67b2-a88a"
       },
       {
         "type": "upgrade",
         "import": true,
-        "name": "Lascannon & Combat Knife",
+        "name": "Lascannon",
         "hidden": false,
         "id": "98f7-3943-afca-4e13"
       },
       {
         "type": "upgrade",
         "import": true,
-        "name": "Missile Launcher & Combat Knife",
+        "name": "Missile Launcher",
         "hidden": false,
         "id": "e028-256b-021e-7640"
       },
       {
         "type": "upgrade",
         "import": true,
-        "name": "Reaper Chaincannon & Combat Knife",
+        "name": "Reaper Chaincannon",
         "hidden": false,
         "id": "d241-9f3a-bc0a-7f74"
       },
       {
         "type": "upgrade",
         "import": true,
-        "name": "Heavy Chain Axe & Combat Knife",
+        "name": "Heavy Chain Axe",
         "hidden": false,
         "id": "858b-13a3-40ac-73da"
       },
@@ -14067,7 +13693,7 @@
       }
     ],
     "authorName": "40k Reforged Homebrew",
-    "comment": "CURRENT SYSTEM-WIDE CONFIGURATION ORDER / GS38\nThis library now targets Game System revision 38. Configuration presentation follows the shared lane doctrine: provenance warning 5 when applicable; Game Size 10; army identity 20; optional army structure 30; Leader Points 40; faction trackers 50; Extra Unit Copy Costs 80; Updated 90; About 100. Only locally-owned applicable lanes are stored in this file; Game Size, Leader Points, and About are supplied by the Game System. No unit IDs, costs, constraints, modifiers, attachment topology, loadout legality, or copy-cost arithmetic were changed by this pass.\n\nCURRENT STATE\nGreat Traitors' Arsenal reusable library for Chaos Space Marines 3.3.6 on Game System revision 37. It contains the 28 mechanically portable generic Chaos Space Marines unit roots plus the shared weapon / loadout dependencies and CSM-local attachment / counts-as categories required by those roots. The portable trees are synchronized to playable Chaos Space Marines REV50 with stable root IDs preserved. Legion-section compilations remain intentionally excluded, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, Tyrant Siege Terminators, Iron Circle Automata, Nemesis Claw, Lernaean Terminators, Iron Armoury Legionaries, and Power Knife Legionaries.\n\nThe five portable Leader roots that intrinsically cost 1 LP remain Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary. Consumers inherit those costs exactly once and must not add duplicate local LP costs. Portable roots now also carry their current top-level Unit Ability links, with the required shared Unit Ability profiles defined locally in this library. Nested sub-abilities remain intentionally omitted.\n\nAUTHORING & RUNTIME NOTES\nPortable roots are mirrored from the playable catalogue rather than independently re-authored. Stable root IDs and shared package IDs are preserved. Intrinsic unit semantics live with the shared roots; host catalogues own availability, local presentation wrappers, and consumer-local Extra Unit Copy Cost arithmetic. The library is not itself a roster-accounting engine. The shadow-corrected Cultists structure is preserved: Cultist Champion, Cultist 2, and Cultist 3-10.\n\nSOURCE SYNC HISTORY\nV1: generated from the healthy CSM REV26 portable set.\nV2: synchronized Daemon Hammer terminology from CSM REV27.\nV3: retargeted to GS20.\nV4: rebuilt from the healthy line and synchronized the recovered post-REV27 portable changes through CSM REV30.\nV5: corrected the temporary library version-label typo.\nV6: synchronized the CSM 3.3.5 Defiler rework.\nV7: synchronized corrected Defiler cost and Legionaries Champion ranged choices; retargeted to GS21.\nV8: synchronized the Defiler Missile Launcher correction.\nV9: synchronized all portable roots touched by CSM REV35, including checkbox and vehicle-presentation cleanup.\nV10: synchronized the complete 28-root portable set to CSM REV37. This brings in REV36 Additional Model checkbox changes for Possessed, Havocs, and Warp Talons; REV37 checkbox changes for Chosen and Breacher Siege Squad; and the confirmed visible Cannot attach to anything rules for Terminator Chaos Sorcerer Lord and Warpsmith. Library comments were consolidated for the live GS21 state.\nV11 — CSM REV38 CHOSEN PRESENTATION SYNC\nSynchronized the portable Chosen root from Chaos Space Marines 3.3.5 REV38: the redundant preset-selector wrapper header is suppressed and No Preset is renamed Manual Loadout. Stable Chosen root/selection IDs, branch nesting, model loadouts, preset behavior, points, validation, and all unrelated portable roots remain unchanged. GS21 retained.\nV12 — CSM REV39 CHAOS TERMINATOR HEAVY WEAPON LIMIT SYNC\nSynchronized the portable Chaos Terminators root from playable CSM REV39 and added the shared hidden Heavy Weapon Terminator Role semantic category required by its permissive-corrective one-heavy-role limit. Lernaean Terminators remain Legion-bound and are intentionally not part of the Arsenal library. All other 27 portable unit roots remain unchanged; GS21 retained.\nV13 — CSM 3.3.6 / CHAOS VINDICATOR SIEGE SHIELD SYNC\nUpdated the library baseline to Chaos Space Marines 3.3.6 and Game System revision 23. Synchronized the portable Chaos Vindicator root from playable CSM REV40 so its fixed loadout now includes the missing Siege Shield. Lernaean Terminators are Legion-bound and remain outside the Arsenal library, so the 3.3.6 removal of their Heavy Weapon Terminator cap requires no library change. All other portable roots remain unchanged.\nV14 — CSM REV41 LEGIONARIES CHAMPION CHAINSWORD SYNC\nSynchronized the portable Legionaries root from playable CSM REV41 so the Chaos Champion melee selector now includes Chainsword alongside Power Weapon, Power Fist, and Daemon Hammer. The existing shared Chainsword target and stable entryLink ID from the playable root are preserved. All other portable roots and library mechanics remain unchanged.\nV15 — LEADER POINTS MIGRATION\nRetargeted the library to Game System revision 24. Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary are the only five portable shared roots carrying both Leader and Counts Toward Leader Maximum semantics; each now intrinsically costs 1 LP, synchronized from playable Chaos Space Marines REV42. Consumer catalogues inherit those costs through their existing entryLinks and must not add duplicate local LP costs. Legion-section compilations remain intentionally excluded from Arsenal, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, and other Legion-only roots. The other 23 portable unit roots receive no LP mechanics. Legacy counted-Leader tags remain unchanged for parallel migration validation. Shared IDs, points, loadouts, attachments, Rare semantics, Additional Copy Cost semantics, Counts As categories, and all unrelated library mechanics remain unchanged.\n\nV16 — LEADER POINTS CLEANUP\nRuntime validation passed through multiple Great Traitors consumer catalogues. The five legacy Counts Toward Leader Maximum links matched the five shared 1-LP Leader roots exactly and were removed. Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary retain intrinsic 1 LP costs on their shared semantic roots. Consumer catalogues remain locally uncharged, so imported Leaders continue to inherit exactly one LP cost. The other 23 portable shared unit roots receive no LP mechanics. Legion-specific compiled Leaders remain outside this library. No points, loadouts, attachments, category ownership, or other shared-library mechanics changed.\n\nV17 — TERMINATOR / CONTEMPTOR BUGFIX SYNC\nSynchronized the playable CSM REV44 fixes into portable shared content. Chaos Terminators no longer carry the obsolete Heavy Weapon Terminator role cap or its hidden counting category. Chaos Contemptor Dreadnought now permits Power Fist & in both weapon selectors. Stable unit, weapon, selector, auxiliary, and profile IDs are preserved.\n\nV18 — UNIT SIZE NAME SYNCHRONIZATION / SEPTEMBER 17\nSynchronized portable generic unit-root names with playable Chaos Space Marines REV45: Legionaries (5), Cultists (10), Chaos Terminators (2), Possessed (2 or 3), Chosen (3-5), Breacher Siege Squad (3-5), Raptors (3-5), Chaos Bikers (3), Havocs (2 or 3), Warp Talons (2 or 3), and Obliterators (2). Stable shared root IDs, points, loadouts, Leader Points, attachment semantics, and all other mechanics are unchanged.\nV20 — CSM REV47 CURRENT TEMPLATE / UNIT ABILITIES SYNC\nRetargeted the Arsenal to Game System revision 37 and synchronized all 28 portable generic roots from playable Chaos Space Marines REV47. The sync includes current unit-row, category-display, Loadout Options, model-header, Leader Attachment, semantic Additional Model naming, Terminator Chaos Sorcerer Lord's  command marker, intrinsic Leader Point, and top-level Unit Ability semantics while preserving stable root/subtree IDs. Added only the shared Unit Ability profiles required by those 28 portable roots. Legion-specific compiled roots remain outside the library, and no consumer-local Extra Unit Copy Cost arithmetic was moved into Arsenal.\n\nV20 CONDITIONAL UNIT ABILITY PRESENTATION CORRECTION: the portable shared roots now mirror the current selectable-profile ownership from playable CSM REV47. Chaos Influence, Chaos Allegiance, Daemonic Jump Pack, Smoke Launchers, Venerable, and Armour Piercing High Explosive Shells appear only when their corresponding selection is chosen. Siege Shield remains root-linked on Chaos Vindicator because it is mandatory fixed equipment. Stable shared root IDs and consumer ownership boundaries are unchanged.\n\nV21 — DIAMOND UNIT MARKERS / ADDITIONAL MODEL CLEANUP\nSynchronized the 28 portable shared unit roots to Chaos Space Marines REV50 presentation. Remaining unit-row and linked-unit chevrons now use ◆, while the nine mirrored optional Additional Model checkboxes use plain unprefixed labels. Stable shared root IDs, shared dependency IDs, Game System revision, categories, costs, constraints, modifiers, attachment semantics, conditional Unit Ability ownership, loadout legality, and all portable mechanics are unchanged.",
+    "comment": "V23 — LEGIONARIES FLAT SPECIALIST WEAPONS\nSynchronized the portable Legionaries root to CSM REV52. Legionary 4 and Legionary 5 now each expose Combat Knife as a separate required singleton radio choice and one flat required nine-weapon specialist list. Shared specialist target IDs and per-model weapon-link IDs are preserved; package names now contain only the specialist weapon. No portable unit mechanics changed.\n\nCURRENT SYSTEM-WIDE CONFIGURATION ORDER / GS38\nThis library now targets Game System revision 38. Configuration presentation follows the shared lane doctrine: provenance warning 5 when applicable; Game Size 10; army identity 20; optional army structure 30; Leader Points 40; faction trackers 50; Extra Unit Copy Costs 80; Updated 90; About 100. Only locally-owned applicable lanes are stored in this file; Game Size, Leader Points, and About are supplied by the Game System. No unit IDs, costs, constraints, modifiers, attachment topology, loadout legality, or copy-cost arithmetic were changed by this pass.\n\nCURRENT STATE\nGreat Traitors' Arsenal reusable library for Chaos Space Marines 3.3.6 on Game System revision 37. It contains the 28 mechanically portable generic Chaos Space Marines unit roots plus the shared weapon / loadout dependencies and CSM-local attachment / counts-as categories required by those roots. The portable trees are synchronized to playable Chaos Space Marines REV50 with stable root IDs preserved. Legion-section compilations remain intentionally excluded, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, Tyrant Siege Terminators, Iron Circle Automata, Nemesis Claw, Lernaean Terminators, Iron Armoury Legionaries, and Power Knife Legionaries.\n\nThe five portable Leader roots that intrinsically cost 1 LP remain Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary. Consumers inherit those costs exactly once and must not add duplicate local LP costs. Portable roots now also carry their current top-level Unit Ability links, with the required shared Unit Ability profiles defined locally in this library. Nested sub-abilities remain intentionally omitted.\n\nAUTHORING & RUNTIME NOTES\nPortable roots are mirrored from the playable catalogue rather than independently re-authored. Stable root IDs and shared package IDs are preserved. Intrinsic unit semantics live with the shared roots; host catalogues own availability, local presentation wrappers, and consumer-local Extra Unit Copy Cost arithmetic. The library is not itself a roster-accounting engine. The shadow-corrected Cultists structure is preserved: Cultist Champion, Cultist 2, and Cultist 3-10.\n\nSOURCE SYNC HISTORY\nV1: generated from the healthy CSM REV26 portable set.\nV2: synchronized Daemon Hammer terminology from CSM REV27.\nV3: retargeted to GS20.\nV4: rebuilt from the healthy line and synchronized the recovered post-REV27 portable changes through CSM REV30.\nV5: corrected the temporary library version-label typo.\nV6: synchronized the CSM 3.3.5 Defiler rework.\nV7: synchronized corrected Defiler cost and Legionaries Champion ranged choices; retargeted to GS21.\nV8: synchronized the Defiler Missile Launcher correction.\nV9: synchronized all portable roots touched by CSM REV35, including checkbox and vehicle-presentation cleanup.\nV10: synchronized the complete 28-root portable set to CSM REV37. This brings in REV36 Additional Model checkbox changes for Possessed, Havocs, and Warp Talons; REV37 checkbox changes for Chosen and Breacher Siege Squad; and the confirmed visible Cannot attach to anything rules for Terminator Chaos Sorcerer Lord and Warpsmith. Library comments were consolidated for the live GS21 state.\nV11 — CSM REV38 CHOSEN PRESENTATION SYNC\nSynchronized the portable Chosen root from Chaos Space Marines 3.3.5 REV38: the redundant preset-selector wrapper header is suppressed and No Preset is renamed Manual Loadout. Stable Chosen root/selection IDs, branch nesting, model loadouts, preset behavior, points, validation, and all unrelated portable roots remain unchanged. GS21 retained.\nV12 — CSM REV39 CHAOS TERMINATOR HEAVY WEAPON LIMIT SYNC\nSynchronized the portable Chaos Terminators root from playable CSM REV39 and added the shared hidden Heavy Weapon Terminator Role semantic category required by its permissive-corrective one-heavy-role limit. Lernaean Terminators remain Legion-bound and are intentionally not part of the Arsenal library. All other 27 portable unit roots remain unchanged; GS21 retained.\nV13 — CSM 3.3.6 / CHAOS VINDICATOR SIEGE SHIELD SYNC\nUpdated the library baseline to Chaos Space Marines 3.3.6 and Game System revision 23. Synchronized the portable Chaos Vindicator root from playable CSM REV40 so its fixed loadout now includes the missing Siege Shield. Lernaean Terminators are Legion-bound and remain outside the Arsenal library, so the 3.3.6 removal of their Heavy Weapon Terminator cap requires no library change. All other portable roots remain unchanged.\nV14 — CSM REV41 LEGIONARIES CHAMPION CHAINSWORD SYNC\nSynchronized the portable Legionaries root from playable CSM REV41 so the Chaos Champion melee selector now includes Chainsword alongside Power Weapon, Power Fist, and Daemon Hammer. The existing shared Chainsword target and stable entryLink ID from the playable root are preserved. All other portable roots and library mechanics remain unchanged.\nV15 — LEADER POINTS MIGRATION\nRetargeted the library to Game System revision 24. Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary are the only five portable shared roots carrying both Leader and Counts Toward Leader Maximum semantics; each now intrinsically costs 1 LP, synchronized from playable Chaos Space Marines REV42. Consumer catalogues inherit those costs through their existing entryLinks and must not add duplicate local LP costs. Legion-section compilations remain intentionally excluded from Arsenal, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, and other Legion-only roots. The other 23 portable unit roots receive no LP mechanics. Legacy counted-Leader tags remain unchanged for parallel migration validation. Shared IDs, points, loadouts, attachments, Rare semantics, Additional Copy Cost semantics, Counts As categories, and all unrelated library mechanics remain unchanged.\n\nV16 — LEADER POINTS CLEANUP\nRuntime validation passed through multiple Great Traitors consumer catalogues. The five legacy Counts Toward Leader Maximum links matched the five shared 1-LP Leader roots exactly and were removed. Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary retain intrinsic 1 LP costs on their shared semantic roots. Consumer catalogues remain locally uncharged, so imported Leaders continue to inherit exactly one LP cost. The other 23 portable shared unit roots receive no LP mechanics. Legion-specific compiled Leaders remain outside this library. No points, loadouts, attachments, category ownership, or other shared-library mechanics changed.\n\nV17 — TERMINATOR / CONTEMPTOR BUGFIX SYNC\nSynchronized the playable CSM REV44 fixes into portable shared content. Chaos Terminators no longer carry the obsolete Heavy Weapon Terminator role cap or its hidden counting category. Chaos Contemptor Dreadnought now permits Power Fist & in both weapon selectors. Stable unit, weapon, selector, auxiliary, and profile IDs are preserved.\n\nV18 — UNIT SIZE NAME SYNCHRONIZATION / SEPTEMBER 17\nSynchronized portable generic unit-root names with playable Chaos Space Marines REV45: Legionaries (5), Cultists (10), Chaos Terminators (2), Possessed (2 or 3), Chosen (3-5), Breacher Siege Squad (3-5), Raptors (3-5), Chaos Bikers (3), Havocs (2 or 3), Warp Talons (2 or 3), and Obliterators (2). Stable shared root IDs, points, loadouts, Leader Points, attachment semantics, and all other mechanics are unchanged.\nV20 — CSM REV47 CURRENT TEMPLATE / UNIT ABILITIES SYNC\nRetargeted the Arsenal to Game System revision 37 and synchronized all 28 portable generic roots from playable Chaos Space Marines REV47. The sync includes current unit-row, category-display, Loadout Options, model-header, Leader Attachment, semantic Additional Model naming, Terminator Chaos Sorcerer Lord's  command marker, intrinsic Leader Point, and top-level Unit Ability semantics while preserving stable root/subtree IDs. Added only the shared Unit Ability profiles required by those 28 portable roots. Legion-specific compiled roots remain outside the library, and no consumer-local Extra Unit Copy Cost arithmetic was moved into Arsenal.\n\nV20 CONDITIONAL UNIT ABILITY PRESENTATION CORRECTION: the portable shared roots now mirror the current selectable-profile ownership from playable CSM REV47. Chaos Influence, Chaos Allegiance, Daemonic Jump Pack, Smoke Launchers, Venerable, and Armour Piercing High Explosive Shells appear only when their corresponding selection is chosen. Siege Shield remains root-linked on Chaos Vindicator because it is mandatory fixed equipment. Stable shared root IDs and consumer ownership boundaries are unchanged.\n\nV21 — DIAMOND UNIT MARKERS / ADDITIONAL MODEL CLEANUP\nSynchronized the 28 portable shared unit roots to Chaos Space Marines REV50 presentation. Remaining unit-row and linked-unit chevrons now use ◆, while the nine mirrored optional Additional Model checkboxes use plain unprefixed labels. Stable shared root IDs, shared dependency IDs, Game System revision, categories, costs, constraints, modifiers, attachment semantics, conditional Unit Ability ownership, loadout legality, and all portable mechanics are unchanged.",
     "sharedProfiles": [
       {
         "name": "🛡️ Heavy Armour",
