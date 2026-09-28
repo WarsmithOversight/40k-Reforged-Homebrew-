@@ -2,10 +2,10 @@
   "catalogue": {
     "library": true,
     "id": "21eb-113e-8367-c075",
-    "name": "Chaos Space Marines 3.3.6 - Arsenal Library",
+    "name": "Chaos Space Marines 3.3.7 - Arsenal Library",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 40,
-    "revision": 28,
+    "gameSystemRevision": 41,
+    "revision": 30,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "sharedSelectionEntries": [
@@ -3234,7 +3234,7 @@
             "targetId": "e686-5b9a-d78a-91e5"
           },
           {
-            "name": "📣 Call of Chaos",
+            "name": "📣 Heretical Servants",
             "id": "3525-55ff-2323-2e1b",
             "hidden": false,
             "targetId": "b3e8-d062-8432-cc89",
@@ -4598,7 +4598,7 @@
             "type": "profile"
           }
         ],
-        "comment": "CHOSEN CURRENT STATE: 3-5 models at 40 Points per model. The preset-selector wrapper header is suppressed as redundant. Manual Loadout is the default and exposes Chosen 1-3 as the fixed three-model base and Chosen 4 / Chosen 5 as optional +40 Point model checkboxes; each selected model retains its independent ranged and melee choices. Chosen 1-2 include the source paid Combi-Bolter replacement packages; Chosen 3-5 use the normal ranged list. By project convention Lightning Claw is offered in both ranged and melee lists so selecting it in both represents the paired-claw state without a separate Lightning Claws option or one-model cap. Frag Grenade and Krak Grenade remain independent +10 Paid Wargear checkboxes in the Manual Loadout branch.\nSANDVICH'S CHOSEN: the alternate preset adds the two extra models as +80 Points and presents Chosen 1-5 with 5x Power Sword / 5x Plasma Pistol. The Power Sword label is an intentional player-specific presentation name for the source-generic Power Weapon. The preset remains a separate mutually exclusive branch rather than modifier-driven auto-selection.\nREV37 PRESENTATION: moved the existing Chosen 4 and Chosen 5 max-1 constraints from their retained structural wrappers onto the model entries so New Recruit renders the optional models as checkboxes. IDs, costs, loadouts, preset logic, and legality are unchanged.\nREV38 PRESENTATION: suppressed the redundant Presets wrapper header and renamed No Preset to Manual Loadout. The branch nesting, preset logic, model ownership, defaults, costs, IDs, and legality are unchanged.\nARSENAL V20 CURRENT TEMPLATE SYNC: mirrored from playable Chaos Space Marines REV47 with stable root and subtree IDs preserved. Current unit-row, category-display, Loadout Options, model-header, Leader Attachment, semantic Additional Model naming where applicable, intrinsic LP, and top-level Unit Ability semantics are synchronized. Consumer catalogues continue to own local availability and consumer-local Extra Unit Copy Cost arithmetic.",
+        "comment": "ARSENAL V30 CURRENT STATE: Generic Chosen (3–5) is mirrored from playable Chaos Space Marines REV67. Chosen 1–3 are independently configurable, Chosen 4–5 are optional +40 Points each, and the two base-model Combi packages and independent Frag/Krak purchases are preserved. All five model positions offer Shrapnel Boltgun using exactly the playable CSM selection IDs. Each Shrapnel choice is selected-safe hidden unless the roster selects the canonical Iron Warriors Legion option (3242-c851-6318-11cd); an already-selected choice instead raises a corrective error. This gating travels with the portable unit: consumers without the CSM Legion selector cannot normally select Shrapnel. The shared Chosen no longer contains the former Manual Loadout / Sandvich tribute preset branch. Standalone Black Legion-only Sandviches's Chosen remains CSM-local. The CSM-only Counts As: Chosen category is intentionally excluded from this portable root; each consumer owns its own copy-cost accounting. All surviving ordinary Chosen semantic IDs are preserved.\nV29 HISTORICAL: the previous shared Chosen contained a mutually exclusive Manual Loadout / Sandvich's Chosen branch and lacked Shrapnel Boltgun. Those now-superseded presentation branches were retired during V30 synchronization.",
         "modifiers": [
           {
             "type": "add",
@@ -4627,27 +4627,1372 @@
             "sortIndex": 1,
             "selectionEntryGroups": [
               {
-                "name": "☠️ ​",
-                "id": "fb89-21ea-7313-8115",
+                "name": "Chosen 1",
+                "id": "5a7b-0247-67d8-9eb1",
+                "hidden": false,
+                "sortIndex": 1,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "87c4-afce-c5dc-796d",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7dff-98c9-846e-9270",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "b949-4ece-b8a8-ca61",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Boltgun",
+                        "hidden": false,
+                        "id": "5adf-07e9-d396-7b7f",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Shrapnel Boltgun",
+                        "hidden": false,
+                        "id": "f95e-1efb-82dc-5aba",
+                        "sortIndex": 2,
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "true",
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "roster",
+                                "childId": "3242-c851-6318-11cd",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": true,
+                                "queryFromSelf": false,
+                                "childName": "Iron Warriors"
+                              },
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "childId": "f95e-1efb-82dc-5aba",
+                                "shared": true,
+                                "includeChildSelections": false,
+                                "includeChildForces": false,
+                                "queryFromSelf": false,
+                                "childName": "Shrapnel Boltgun"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "add",
+                            "field": "error",
+                            "value": "Chosen 1: Shrapnel Boltgun requires Iron Warriors. Select Iron Warriors under Legion, or replace this model’s Shrapnel Boltgun with another ranged weapon.",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "childId": "f95e-1efb-82dc-5aba",
+                                "shared": true,
+                                "includeChildSelections": false,
+                                "includeChildForces": false,
+                                "queryFromSelf": false,
+                                "childName": "Shrapnel Boltgun"
+                              },
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "roster",
+                                "childId": "3242-c851-6318-11cd",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": true,
+                                "queryFromSelf": false,
+                                "childName": "Iron Warriors"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Bolt Pistol",
+                        "hidden": false,
+                        "id": "e018-9bd7-d63d-2c1e",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plasma Gun",
+                        "hidden": false,
+                        "id": "d9a7-cea0-687a-7cb0",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plasma Pistol",
+                        "hidden": false,
+                        "id": "4e1d-6d53-1364-8563",
+                        "sortIndex": 5
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Meltagun",
+                        "hidden": false,
+                        "id": "0fbb-ce51-7bb0-7236",
+                        "sortIndex": 6
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Flamer",
+                        "hidden": false,
+                        "id": "daeb-f761-f3c2-ab81",
+                        "sortIndex": 7
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claw",
+                        "hidden": false,
+                        "id": "d3eb-a92b-440d-3687",
+                        "sortIndex": 8
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "2x Combi-Bolter",
+                        "hidden": false,
+                        "id": "5b8b-faa5-802e-0d63",
+                        "sortIndex": 9,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combi-Flamer & Combi-Bolter",
+                        "hidden": false,
+                        "id": "2567-6317-2d3f-b89d",
+                        "sortIndex": 10,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combi-Plasma & Combi-Bolter",
+                        "hidden": false,
+                        "id": "94fe-011a-4e28-e553",
+                        "sortIndex": 11,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combi-Melta & Combi-Bolter",
+                        "hidden": false,
+                        "id": "475b-5303-a8b1-e7ab",
+                        "sortIndex": 12,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 20
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "5adf-07e9-d396-7b7f"
+                  },
+                  {
+                    "name": "​",
+                    "id": "2582-d293-b0fb-78bc",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8dc5-9464-c0d8-ead0",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f917-ba3f-65c7-f02f",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainblade",
+                        "hidden": false,
+                        "id": "1278-c602-1609-7eb9",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Weapon",
+                        "hidden": false,
+                        "id": "4472-be6f-173e-c95d",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Fist",
+                        "hidden": false,
+                        "id": "f70c-22ea-66ac-3f48",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claw",
+                        "hidden": false,
+                        "id": "de26-7406-f23c-fb59",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Daemon Hammer",
+                        "hidden": false,
+                        "id": "a684-7765-d7c0-369a",
+                        "sortIndex": 5
+                      }
+                    ],
+                    "defaultSelectionEntryId": "1278-c602-1609-7eb9"
+                  }
+                ]
+              },
+              {
+                "name": "Chosen 2",
+                "id": "4b88-0975-77c8-4b2d",
+                "hidden": false,
+                "sortIndex": 2,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "c53a-82e9-68f0-75ac",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3624-a806-e4ab-8e5e",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3e57-f65c-f66f-d1b9",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Boltgun",
+                        "hidden": false,
+                        "id": "5263-818d-5b5d-8d6e",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Shrapnel Boltgun",
+                        "hidden": false,
+                        "id": "15ee-9809-ae4a-50bf",
+                        "sortIndex": 2,
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "true",
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "roster",
+                                "childId": "3242-c851-6318-11cd",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": true,
+                                "queryFromSelf": false,
+                                "childName": "Iron Warriors"
+                              },
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "childId": "15ee-9809-ae4a-50bf",
+                                "shared": true,
+                                "includeChildSelections": false,
+                                "includeChildForces": false,
+                                "queryFromSelf": false,
+                                "childName": "Shrapnel Boltgun"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "add",
+                            "field": "error",
+                            "value": "Chosen 2: Shrapnel Boltgun requires Iron Warriors. Select Iron Warriors under Legion, or replace this model’s Shrapnel Boltgun with another ranged weapon.",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "childId": "15ee-9809-ae4a-50bf",
+                                "shared": true,
+                                "includeChildSelections": false,
+                                "includeChildForces": false,
+                                "queryFromSelf": false,
+                                "childName": "Shrapnel Boltgun"
+                              },
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "roster",
+                                "childId": "3242-c851-6318-11cd",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": true,
+                                "queryFromSelf": false,
+                                "childName": "Iron Warriors"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Bolt Pistol",
+                        "hidden": false,
+                        "id": "3e9f-b8f4-5803-fe1b",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plasma Gun",
+                        "hidden": false,
+                        "id": "e95c-f42e-ce93-79d4",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plasma Pistol",
+                        "hidden": false,
+                        "id": "6db7-c2d3-4e89-6276",
+                        "sortIndex": 5
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Meltagun",
+                        "hidden": false,
+                        "id": "3339-6560-8e79-1690",
+                        "sortIndex": 6
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Flamer",
+                        "hidden": false,
+                        "id": "feff-f5c7-38aa-48f0",
+                        "sortIndex": 7
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claw",
+                        "hidden": false,
+                        "id": "c6be-364e-6295-f19c",
+                        "sortIndex": 8
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "2x Combi-Bolter",
+                        "hidden": false,
+                        "id": "404a-3b4c-5563-42e7",
+                        "sortIndex": 9,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combi-Flamer & Combi-Bolter",
+                        "hidden": false,
+                        "id": "f9ac-bd38-b298-3cc6",
+                        "sortIndex": 10,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combi-Plasma & Combi-Bolter",
+                        "hidden": false,
+                        "id": "f321-aa43-9d13-b37d",
+                        "sortIndex": 11,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Combi-Melta & Combi-Bolter",
+                        "hidden": false,
+                        "id": "c93f-41b5-2e58-47f1",
+                        "sortIndex": 12,
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 20
+                          }
+                        ]
+                      }
+                    ],
+                    "defaultSelectionEntryId": "5263-818d-5b5d-8d6e"
+                  },
+                  {
+                    "name": "​",
+                    "id": "8334-dc5b-4ca0-1c39",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2884-02c4-e13d-0f4d",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5ec3-ed17-260c-d1f4",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainblade",
+                        "hidden": false,
+                        "id": "92d2-7c3f-62de-e0c3",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Weapon",
+                        "hidden": false,
+                        "id": "b0b4-4623-e2e4-7274",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Fist",
+                        "hidden": false,
+                        "id": "4ea8-90c3-6f47-98f6",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claw",
+                        "hidden": false,
+                        "id": "1521-482c-ef53-e5ea",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Daemon Hammer",
+                        "hidden": false,
+                        "id": "920b-7033-35c8-a07e",
+                        "sortIndex": 5
+                      }
+                    ],
+                    "defaultSelectionEntryId": "92d2-7c3f-62de-e0c3"
+                  }
+                ]
+              },
+              {
+                "name": "Chosen 3",
+                "id": "39e3-14be-55f4-de24",
+                "hidden": false,
+                "sortIndex": 3,
+                "selectionEntryGroups": [
+                  {
+                    "name": "​",
+                    "id": "f447-520b-6e49-cf13",
+                    "hidden": false,
+                    "sortIndex": 1,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9418-baf6-e36b-c5e2",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9302-5bd9-e8b0-9949",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Boltgun",
+                        "hidden": false,
+                        "id": "2825-2f79-b854-c9a7",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Shrapnel Boltgun",
+                        "hidden": false,
+                        "id": "39ae-49b8-ad2d-58ba",
+                        "sortIndex": 2,
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "true",
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "roster",
+                                "childId": "3242-c851-6318-11cd",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": true,
+                                "queryFromSelf": false,
+                                "childName": "Iron Warriors"
+                              },
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "childId": "39ae-49b8-ad2d-58ba",
+                                "shared": true,
+                                "includeChildSelections": false,
+                                "includeChildForces": false,
+                                "queryFromSelf": false,
+                                "childName": "Shrapnel Boltgun"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "add",
+                            "field": "error",
+                            "value": "Chosen 3: Shrapnel Boltgun requires Iron Warriors. Select Iron Warriors under Legion, or replace this model’s Shrapnel Boltgun with another ranged weapon.",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "childId": "39ae-49b8-ad2d-58ba",
+                                "shared": true,
+                                "includeChildSelections": false,
+                                "includeChildForces": false,
+                                "queryFromSelf": false,
+                                "childName": "Shrapnel Boltgun"
+                              },
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "roster",
+                                "childId": "3242-c851-6318-11cd",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": true,
+                                "queryFromSelf": false,
+                                "childName": "Iron Warriors"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Bolt Pistol",
+                        "hidden": false,
+                        "id": "09fe-4f3c-59ba-e7b8",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plasma Gun",
+                        "hidden": false,
+                        "id": "229e-f03c-754b-b085",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plasma Pistol",
+                        "hidden": false,
+                        "id": "b6f4-7ff1-8760-83e3",
+                        "sortIndex": 5
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Meltagun",
+                        "hidden": false,
+                        "id": "264f-19c3-d297-6e7b",
+                        "sortIndex": 6
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Flamer",
+                        "hidden": false,
+                        "id": "feaa-dd1c-dfc2-c4c6",
+                        "sortIndex": 7
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claw",
+                        "hidden": false,
+                        "id": "0d44-0d7b-7cb5-89bb",
+                        "sortIndex": 8
+                      }
+                    ],
+                    "defaultSelectionEntryId": "2825-2f79-b854-c9a7"
+                  },
+                  {
+                    "name": "​",
+                    "id": "2002-c640-60a3-3102",
+                    "hidden": false,
+                    "sortIndex": 2,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "832e-b627-3b91-36be",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "7d5a-22b4-0320-fe7a",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Chainblade",
+                        "hidden": false,
+                        "id": "038a-d7f3-8c64-9ad9",
+                        "sortIndex": 1
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Weapon",
+                        "hidden": false,
+                        "id": "a26b-ed94-70fe-2c53",
+                        "sortIndex": 2
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Power Fist",
+                        "hidden": false,
+                        "id": "eb9b-0631-c46e-52f0",
+                        "sortIndex": 3
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Lightning Claw",
+                        "hidden": false,
+                        "id": "9d06-0e5a-b771-4f72",
+                        "sortIndex": 4
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Daemon Hammer",
+                        "hidden": false,
+                        "id": "f969-d09d-58b6-63fe",
+                        "sortIndex": 5
+                      }
+                    ],
+                    "defaultSelectionEntryId": "038a-d7f3-8c64-9ad9"
+                  }
+                ]
+              },
+              {
+                "name": "​",
+                "id": "342b-1c66-1b46-f12d",
+                "hidden": false,
+                "sortIndex": 4,
+                "selectionEntries": [
+                  {
+                    "type": "model",
+                    "import": true,
+                    "name": "Additional Chosen Model",
+                    "hidden": false,
+                    "id": "6acb-b3af-56e0-4400",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 40
+                      }
+                    ],
+                    "selectionEntryGroups": [
+                      {
+                        "name": "​",
+                        "id": "67ec-98f2-0600-7fd5",
+                        "hidden": false,
+                        "sortIndex": 1,
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "4d1d-8dfe-ba70-9234",
+                            "includeChildSelections": false
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "cc5f-d3c4-c172-2bf2",
+                            "includeChildSelections": false
+                          }
+                        ],
+                        "selectionEntries": [
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Boltgun",
+                            "hidden": false,
+                            "id": "3356-d8dc-8ec7-0153",
+                            "sortIndex": 1
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Shrapnel Boltgun",
+                            "hidden": false,
+                            "id": "2775-27ce-820d-5999",
+                            "sortIndex": 2,
+                            "modifiers": [
+                              {
+                                "type": "set",
+                                "value": "true",
+                                "field": "hidden",
+                                "conditions": [
+                                  {
+                                    "type": "lessThan",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "roster",
+                                    "childId": "3242-c851-6318-11cd",
+                                    "shared": true,
+                                    "includeChildSelections": true,
+                                    "includeChildForces": true,
+                                    "queryFromSelf": false,
+                                    "childName": "Iron Warriors"
+                                  },
+                                  {
+                                    "type": "lessThan",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "childId": "2775-27ce-820d-5999",
+                                    "shared": true,
+                                    "includeChildSelections": false,
+                                    "includeChildForces": false,
+                                    "queryFromSelf": false,
+                                    "childName": "Shrapnel Boltgun"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "add",
+                                "field": "error",
+                                "value": "Chosen 4: Shrapnel Boltgun requires Iron Warriors. Select Iron Warriors under Legion, or replace this model’s Shrapnel Boltgun with another ranged weapon.",
+                                "conditions": [
+                                  {
+                                    "type": "atLeast",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "childId": "2775-27ce-820d-5999",
+                                    "shared": true,
+                                    "includeChildSelections": false,
+                                    "includeChildForces": false,
+                                    "queryFromSelf": false,
+                                    "childName": "Shrapnel Boltgun"
+                                  },
+                                  {
+                                    "type": "lessThan",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "roster",
+                                    "childId": "3242-c851-6318-11cd",
+                                    "shared": true,
+                                    "includeChildSelections": true,
+                                    "includeChildForces": true,
+                                    "queryFromSelf": false,
+                                    "childName": "Iron Warriors"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Bolt Pistol",
+                            "hidden": false,
+                            "id": "c46a-c5a7-6b1d-1843",
+                            "sortIndex": 3
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Plasma Gun",
+                            "hidden": false,
+                            "id": "ef9b-8fff-f4dc-00a1",
+                            "sortIndex": 4
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Plasma Pistol",
+                            "hidden": false,
+                            "id": "c617-699f-46d5-a875",
+                            "sortIndex": 5
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Meltagun",
+                            "hidden": false,
+                            "id": "a7cb-69af-4b0c-268a",
+                            "sortIndex": 6
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Flamer",
+                            "hidden": false,
+                            "id": "f5d5-cc90-fbdc-c8a6",
+                            "sortIndex": 7
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Lightning Claw",
+                            "hidden": false,
+                            "id": "bc74-f627-afcd-7e1b",
+                            "sortIndex": 8
+                          }
+                        ],
+                        "defaultSelectionEntryId": "3356-d8dc-8ec7-0153"
+                      },
+                      {
+                        "name": "​",
+                        "id": "46cd-25e0-8bda-d68f",
+                        "hidden": false,
+                        "sortIndex": 2,
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "ed4c-6fcc-9600-726d",
+                            "includeChildSelections": false
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "867b-72bb-4c6d-2b3f",
+                            "includeChildSelections": false
+                          }
+                        ],
+                        "selectionEntries": [
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Chainblade",
+                            "hidden": false,
+                            "id": "19ef-c0bf-c60f-de96",
+                            "sortIndex": 1
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Power Weapon",
+                            "hidden": false,
+                            "id": "180f-28ab-c99e-f3a7",
+                            "sortIndex": 2
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Power Fist",
+                            "hidden": false,
+                            "id": "c223-62a7-701c-ad7f",
+                            "sortIndex": 3
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Lightning Claw",
+                            "hidden": false,
+                            "id": "c1e4-ad89-fdae-b8fe",
+                            "sortIndex": 4
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Daemon Hammer",
+                            "hidden": false,
+                            "id": "5646-61e7-cf55-9e29",
+                            "sortIndex": 5
+                          }
+                        ],
+                        "defaultSelectionEntryId": "19ef-c0bf-c60f-de96"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "899d-bf00-1684-7cfc",
+                        "includeChildSelections": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "​",
+                "id": "91f7-e30d-02a7-560a",
+                "hidden": false,
+                "sortIndex": 5,
+                "selectionEntries": [
+                  {
+                    "type": "model",
+                    "import": true,
+                    "name": "Additional Chosen Model",
+                    "hidden": false,
+                    "id": "cd33-8170-67ea-7a3e",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 40
+                      }
+                    ],
+                    "selectionEntryGroups": [
+                      {
+                        "name": "​",
+                        "id": "2b7c-3614-7636-9c34",
+                        "hidden": false,
+                        "sortIndex": 1,
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "5562-ab5b-f756-153d",
+                            "includeChildSelections": false
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "e362-21dd-ac74-c1c1",
+                            "includeChildSelections": false
+                          }
+                        ],
+                        "selectionEntries": [
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Boltgun",
+                            "hidden": false,
+                            "id": "8433-ff0a-c3b2-28f8",
+                            "sortIndex": 1
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Shrapnel Boltgun",
+                            "hidden": false,
+                            "id": "2ad7-4261-c2d8-539b",
+                            "sortIndex": 2,
+                            "modifiers": [
+                              {
+                                "type": "set",
+                                "value": "true",
+                                "field": "hidden",
+                                "conditions": [
+                                  {
+                                    "type": "lessThan",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "roster",
+                                    "childId": "3242-c851-6318-11cd",
+                                    "shared": true,
+                                    "includeChildSelections": true,
+                                    "includeChildForces": true,
+                                    "queryFromSelf": false,
+                                    "childName": "Iron Warriors"
+                                  },
+                                  {
+                                    "type": "lessThan",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "childId": "2ad7-4261-c2d8-539b",
+                                    "shared": true,
+                                    "includeChildSelections": false,
+                                    "includeChildForces": false,
+                                    "queryFromSelf": false,
+                                    "childName": "Shrapnel Boltgun"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "add",
+                                "field": "error",
+                                "value": "Chosen 5: Shrapnel Boltgun requires Iron Warriors. Select Iron Warriors under Legion, or replace this model’s Shrapnel Boltgun with another ranged weapon.",
+                                "conditions": [
+                                  {
+                                    "type": "atLeast",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "childId": "2ad7-4261-c2d8-539b",
+                                    "shared": true,
+                                    "includeChildSelections": false,
+                                    "includeChildForces": false,
+                                    "queryFromSelf": false,
+                                    "childName": "Shrapnel Boltgun"
+                                  },
+                                  {
+                                    "type": "lessThan",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "roster",
+                                    "childId": "3242-c851-6318-11cd",
+                                    "shared": true,
+                                    "includeChildSelections": true,
+                                    "includeChildForces": true,
+                                    "queryFromSelf": false,
+                                    "childName": "Iron Warriors"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Bolt Pistol",
+                            "hidden": false,
+                            "id": "ab53-9c8e-140c-2584",
+                            "sortIndex": 3
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Plasma Gun",
+                            "hidden": false,
+                            "id": "3c0f-f91e-b9e8-bc68",
+                            "sortIndex": 4
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Plasma Pistol",
+                            "hidden": false,
+                            "id": "de27-46a8-41eb-b14c",
+                            "sortIndex": 5
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Meltagun",
+                            "hidden": false,
+                            "id": "ffb6-c548-fc4a-988a",
+                            "sortIndex": 6
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Flamer",
+                            "hidden": false,
+                            "id": "ce0e-acf7-8961-ea52",
+                            "sortIndex": 7
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Lightning Claw",
+                            "hidden": false,
+                            "id": "b5e9-6ffd-a23d-a966",
+                            "sortIndex": 8
+                          }
+                        ],
+                        "defaultSelectionEntryId": "8433-ff0a-c3b2-28f8"
+                      },
+                      {
+                        "name": "​",
+                        "id": "c071-bcf1-b9fb-e4eb",
+                        "hidden": false,
+                        "sortIndex": 2,
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "cc1f-63e0-641d-5072",
+                            "includeChildSelections": false
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "192f-a5a6-7ebd-8f1d",
+                            "includeChildSelections": false
+                          }
+                        ],
+                        "selectionEntries": [
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Chainblade",
+                            "hidden": false,
+                            "id": "acfd-90d6-b338-d043",
+                            "sortIndex": 1
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Power Weapon",
+                            "hidden": false,
+                            "id": "c2f3-92fa-4115-5034",
+                            "sortIndex": 2
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Power Fist",
+                            "hidden": false,
+                            "id": "f461-b974-aa7a-5783",
+                            "sortIndex": 3
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Lightning Claw",
+                            "hidden": false,
+                            "id": "5886-c4eb-a0ee-7ba7",
+                            "sortIndex": 4
+                          },
+                          {
+                            "type": "upgrade",
+                            "import": true,
+                            "name": "Daemon Hammer",
+                            "hidden": false,
+                            "id": "8f74-bbf3-f673-b154",
+                            "sortIndex": 5
+                          }
+                        ],
+                        "defaultSelectionEntryId": "acfd-90d6-b338-d043"
+                      }
+                    ],
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "500b-2f54-0c74-ffb3",
+                        "includeChildSelections": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Paid Wargear",
+            "id": "9ade-0a8e-7706-fd57",
+            "hidden": false,
+            "sortIndex": 2,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "004d-27e0-5b69-986a",
                 "hidden": false,
                 "sortIndex": 1,
                 "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "2a6c-e293-5dd9-f005",
-                    "includeChildSelections": false
-                  },
                   {
                     "type": "max",
                     "value": 1,
                     "field": "selections",
                     "scope": "parent",
                     "shared": true,
-                    "id": "4aee-4de8-c1ef-8558",
+                    "id": "4c34-93d8-441b-2794",
                     "includeChildSelections": false
                   }
                 ],
@@ -4655,1184 +6000,53 @@
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Manual Loadout",
+                    "name": "Frag Grenade",
                     "hidden": false,
-                    "id": "3e12-7e63-1781-b139",
+                    "id": "34c7-a19d-2e53-1954",
                     "sortIndex": 1,
-                    "selectionEntryGroups": [
-                      {
-                        "name": "Chosen 1",
-                        "id": "5a7b-0247-67d8-9eb1",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "selectionEntryGroups": [
-                          {
-                            "name": "​",
-                            "id": "87c4-afce-c5dc-796d",
-                            "hidden": false,
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "7dff-98c9-846e-9270",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "b949-4ece-b8a8-ca61",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "selectionEntries": [
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Boltgun",
-                                "hidden": false,
-                                "id": "5adf-07e9-d396-7b7f",
-                                "sortIndex": 1
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Bolt Pistol",
-                                "hidden": false,
-                                "id": "e018-9bd7-d63d-2c1e",
-                                "sortIndex": 2
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Plasma Gun",
-                                "hidden": false,
-                                "id": "d9a7-cea0-687a-7cb0",
-                                "sortIndex": 3
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Plasma Pistol",
-                                "hidden": false,
-                                "id": "4e1d-6d53-1364-8563",
-                                "sortIndex": 4
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Meltagun",
-                                "hidden": false,
-                                "id": "0fbb-ce51-7bb0-7236",
-                                "sortIndex": 5
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Flamer",
-                                "hidden": false,
-                                "id": "daeb-f761-f3c2-ab81",
-                                "sortIndex": 6
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Lightning Claw",
-                                "hidden": false,
-                                "id": "d3eb-a92b-440d-3687",
-                                "sortIndex": 7
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "2x Combi-Bolter",
-                                "hidden": false,
-                                "id": "5b8b-faa5-802e-0d63",
-                                "sortIndex": 8,
-                                "costs": [
-                                  {
-                                    "name": "Points",
-                                    "typeId": "51b2-306e-1021-d207",
-                                    "value": 10
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Combi-Flamer & Combi-Bolter",
-                                "hidden": false,
-                                "id": "2567-6317-2d3f-b89d",
-                                "sortIndex": 9,
-                                "costs": [
-                                  {
-                                    "name": "Points",
-                                    "typeId": "51b2-306e-1021-d207",
-                                    "value": 10
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Combi-Plasma & Combi-Bolter",
-                                "hidden": false,
-                                "id": "94fe-011a-4e28-e553",
-                                "sortIndex": 10,
-                                "costs": [
-                                  {
-                                    "name": "Points",
-                                    "typeId": "51b2-306e-1021-d207",
-                                    "value": 10
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Combi-Melta & Combi-Bolter",
-                                "hidden": false,
-                                "id": "475b-5303-a8b1-e7ab",
-                                "sortIndex": 11,
-                                "costs": [
-                                  {
-                                    "name": "Points",
-                                    "typeId": "51b2-306e-1021-d207",
-                                    "value": 20
-                                  }
-                                ]
-                              }
-                            ],
-                            "defaultSelectionEntryId": "5adf-07e9-d396-7b7f"
-                          },
-                          {
-                            "name": "​",
-                            "id": "2582-d293-b0fb-78bc",
-                            "hidden": false,
-                            "sortIndex": 2,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "8dc5-9464-c0d8-ead0",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "f917-ba3f-65c7-f02f",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "selectionEntries": [
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Chainblade",
-                                "hidden": false,
-                                "id": "1278-c602-1609-7eb9",
-                                "sortIndex": 1
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Power Weapon",
-                                "hidden": false,
-                                "id": "4472-be6f-173e-c95d",
-                                "sortIndex": 2
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Power Fist",
-                                "hidden": false,
-                                "id": "f70c-22ea-66ac-3f48",
-                                "sortIndex": 3
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Lightning Claw",
-                                "hidden": false,
-                                "id": "de26-7406-f23c-fb59",
-                                "sortIndex": 4
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Daemon Hammer",
-                                "hidden": false,
-                                "id": "a684-7765-d7c0-369a",
-                                "sortIndex": 5
-                              }
-                            ],
-                            "defaultSelectionEntryId": "1278-c602-1609-7eb9"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "Chosen 2",
-                        "id": "4b88-0975-77c8-4b2d",
-                        "hidden": false,
-                        "sortIndex": 2,
-                        "selectionEntryGroups": [
-                          {
-                            "name": "​",
-                            "id": "c53a-82e9-68f0-75ac",
-                            "hidden": false,
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "3624-a806-e4ab-8e5e",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "3e57-f65c-f66f-d1b9",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "selectionEntries": [
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Boltgun",
-                                "hidden": false,
-                                "id": "5263-818d-5b5d-8d6e",
-                                "sortIndex": 1
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Bolt Pistol",
-                                "hidden": false,
-                                "id": "3e9f-b8f4-5803-fe1b",
-                                "sortIndex": 2
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Plasma Gun",
-                                "hidden": false,
-                                "id": "e95c-f42e-ce93-79d4",
-                                "sortIndex": 3
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Plasma Pistol",
-                                "hidden": false,
-                                "id": "6db7-c2d3-4e89-6276",
-                                "sortIndex": 4
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Meltagun",
-                                "hidden": false,
-                                "id": "3339-6560-8e79-1690",
-                                "sortIndex": 5
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Flamer",
-                                "hidden": false,
-                                "id": "feff-f5c7-38aa-48f0",
-                                "sortIndex": 6
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Lightning Claw",
-                                "hidden": false,
-                                "id": "c6be-364e-6295-f19c",
-                                "sortIndex": 7
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "2x Combi-Bolter",
-                                "hidden": false,
-                                "id": "404a-3b4c-5563-42e7",
-                                "sortIndex": 8,
-                                "costs": [
-                                  {
-                                    "name": "Points",
-                                    "typeId": "51b2-306e-1021-d207",
-                                    "value": 10
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Combi-Flamer & Combi-Bolter",
-                                "hidden": false,
-                                "id": "f9ac-bd38-b298-3cc6",
-                                "sortIndex": 9,
-                                "costs": [
-                                  {
-                                    "name": "Points",
-                                    "typeId": "51b2-306e-1021-d207",
-                                    "value": 10
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Combi-Plasma & Combi-Bolter",
-                                "hidden": false,
-                                "id": "f321-aa43-9d13-b37d",
-                                "sortIndex": 10,
-                                "costs": [
-                                  {
-                                    "name": "Points",
-                                    "typeId": "51b2-306e-1021-d207",
-                                    "value": 10
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Combi-Melta & Combi-Bolter",
-                                "hidden": false,
-                                "id": "c93f-41b5-2e58-47f1",
-                                "sortIndex": 11,
-                                "costs": [
-                                  {
-                                    "name": "Points",
-                                    "typeId": "51b2-306e-1021-d207",
-                                    "value": 20
-                                  }
-                                ]
-                              }
-                            ],
-                            "defaultSelectionEntryId": "5263-818d-5b5d-8d6e"
-                          },
-                          {
-                            "name": "​",
-                            "id": "8334-dc5b-4ca0-1c39",
-                            "hidden": false,
-                            "sortIndex": 2,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "2884-02c4-e13d-0f4d",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "5ec3-ed17-260c-d1f4",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "selectionEntries": [
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Chainblade",
-                                "hidden": false,
-                                "id": "92d2-7c3f-62de-e0c3",
-                                "sortIndex": 1
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Power Weapon",
-                                "hidden": false,
-                                "id": "b0b4-4623-e2e4-7274",
-                                "sortIndex": 2
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Power Fist",
-                                "hidden": false,
-                                "id": "4ea8-90c3-6f47-98f6",
-                                "sortIndex": 3
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Lightning Claw",
-                                "hidden": false,
-                                "id": "1521-482c-ef53-e5ea",
-                                "sortIndex": 4
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Daemon Hammer",
-                                "hidden": false,
-                                "id": "920b-7033-35c8-a07e",
-                                "sortIndex": 5
-                              }
-                            ],
-                            "defaultSelectionEntryId": "92d2-7c3f-62de-e0c3"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "Chosen 3",
-                        "id": "39e3-14be-55f4-de24",
-                        "hidden": false,
-                        "sortIndex": 3,
-                        "selectionEntryGroups": [
-                          {
-                            "name": "​",
-                            "id": "f447-520b-6e49-cf13",
-                            "hidden": false,
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "9418-baf6-e36b-c5e2",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "9302-5bd9-e8b0-9949",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "selectionEntries": [
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Boltgun",
-                                "hidden": false,
-                                "id": "2825-2f79-b854-c9a7",
-                                "sortIndex": 1
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Bolt Pistol",
-                                "hidden": false,
-                                "id": "09fe-4f3c-59ba-e7b8",
-                                "sortIndex": 2
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Plasma Gun",
-                                "hidden": false,
-                                "id": "229e-f03c-754b-b085",
-                                "sortIndex": 3
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Plasma Pistol",
-                                "hidden": false,
-                                "id": "b6f4-7ff1-8760-83e3",
-                                "sortIndex": 4
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Meltagun",
-                                "hidden": false,
-                                "id": "264f-19c3-d297-6e7b",
-                                "sortIndex": 5
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Flamer",
-                                "hidden": false,
-                                "id": "feaa-dd1c-dfc2-c4c6",
-                                "sortIndex": 6
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Lightning Claw",
-                                "hidden": false,
-                                "id": "0d44-0d7b-7cb5-89bb",
-                                "sortIndex": 7
-                              }
-                            ],
-                            "defaultSelectionEntryId": "2825-2f79-b854-c9a7"
-                          },
-                          {
-                            "name": "​",
-                            "id": "2002-c640-60a3-3102",
-                            "hidden": false,
-                            "sortIndex": 2,
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "832e-b627-3b91-36be",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "7d5a-22b4-0320-fe7a",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "selectionEntries": [
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Chainblade",
-                                "hidden": false,
-                                "id": "038a-d7f3-8c64-9ad9",
-                                "sortIndex": 1
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Power Weapon",
-                                "hidden": false,
-                                "id": "a26b-ed94-70fe-2c53",
-                                "sortIndex": 2
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Power Fist",
-                                "hidden": false,
-                                "id": "eb9b-0631-c46e-52f0",
-                                "sortIndex": 3
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Lightning Claw",
-                                "hidden": false,
-                                "id": "9d06-0e5a-b771-4f72",
-                                "sortIndex": 4
-                              },
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Daemon Hammer",
-                                "hidden": false,
-                                "id": "f969-d09d-58b6-63fe",
-                                "sortIndex": 5
-                              }
-                            ],
-                            "defaultSelectionEntryId": "038a-d7f3-8c64-9ad9"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "​",
-                        "id": "342b-1c66-1b46-f12d",
-                        "hidden": false,
-                        "sortIndex": 4,
-                        "selectionEntries": [
-                          {
-                            "type": "model",
-                            "import": true,
-                            "name": "Additional Chosen Model",
-                            "hidden": false,
-                            "id": "6acb-b3af-56e0-4400",
-                            "sortIndex": 1,
-                            "costs": [
-                              {
-                                "name": "Points",
-                                "typeId": "51b2-306e-1021-d207",
-                                "value": 40
-                              }
-                            ],
-                            "selectionEntryGroups": [
-                              {
-                                "name": "​",
-                                "id": "67ec-98f2-0600-7fd5",
-                                "hidden": false,
-                                "sortIndex": 1,
-                                "constraints": [
-                                  {
-                                    "type": "min",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "parent",
-                                    "shared": true,
-                                    "id": "4d1d-8dfe-ba70-9234",
-                                    "includeChildSelections": false
-                                  },
-                                  {
-                                    "type": "max",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "parent",
-                                    "shared": true,
-                                    "id": "cc5f-d3c4-c172-2bf2",
-                                    "includeChildSelections": false
-                                  }
-                                ],
-                                "selectionEntries": [
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Boltgun",
-                                    "hidden": false,
-                                    "id": "3356-d8dc-8ec7-0153",
-                                    "sortIndex": 1
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Bolt Pistol",
-                                    "hidden": false,
-                                    "id": "c46a-c5a7-6b1d-1843",
-                                    "sortIndex": 2
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Plasma Gun",
-                                    "hidden": false,
-                                    "id": "ef9b-8fff-f4dc-00a1",
-                                    "sortIndex": 3
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Plasma Pistol",
-                                    "hidden": false,
-                                    "id": "c617-699f-46d5-a875",
-                                    "sortIndex": 4
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Meltagun",
-                                    "hidden": false,
-                                    "id": "a7cb-69af-4b0c-268a",
-                                    "sortIndex": 5
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Flamer",
-                                    "hidden": false,
-                                    "id": "f5d5-cc90-fbdc-c8a6",
-                                    "sortIndex": 6
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Lightning Claw",
-                                    "hidden": false,
-                                    "id": "bc74-f627-afcd-7e1b",
-                                    "sortIndex": 7
-                                  }
-                                ],
-                                "defaultSelectionEntryId": "3356-d8dc-8ec7-0153"
-                              },
-                              {
-                                "name": "​",
-                                "id": "46cd-25e0-8bda-d68f",
-                                "hidden": false,
-                                "sortIndex": 2,
-                                "constraints": [
-                                  {
-                                    "type": "min",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "parent",
-                                    "shared": true,
-                                    "id": "ed4c-6fcc-9600-726d",
-                                    "includeChildSelections": false
-                                  },
-                                  {
-                                    "type": "max",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "parent",
-                                    "shared": true,
-                                    "id": "867b-72bb-4c6d-2b3f",
-                                    "includeChildSelections": false
-                                  }
-                                ],
-                                "selectionEntries": [
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Chainblade",
-                                    "hidden": false,
-                                    "id": "19ef-c0bf-c60f-de96",
-                                    "sortIndex": 1
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Power Weapon",
-                                    "hidden": false,
-                                    "id": "180f-28ab-c99e-f3a7",
-                                    "sortIndex": 2
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Power Fist",
-                                    "hidden": false,
-                                    "id": "c223-62a7-701c-ad7f",
-                                    "sortIndex": 3
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Lightning Claw",
-                                    "hidden": false,
-                                    "id": "c1e4-ad89-fdae-b8fe",
-                                    "sortIndex": 4
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Daemon Hammer",
-                                    "hidden": false,
-                                    "id": "5646-61e7-cf55-9e29",
-                                    "sortIndex": 5
-                                  }
-                                ],
-                                "defaultSelectionEntryId": "19ef-c0bf-c60f-de96"
-                              }
-                            ],
-                            "constraints": [
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "899d-bf00-1684-7cfc",
-                                "includeChildSelections": false
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "name": "​",
-                        "id": "91f7-e30d-02a7-560a",
-                        "hidden": false,
-                        "sortIndex": 5,
-                        "selectionEntries": [
-                          {
-                            "type": "model",
-                            "import": true,
-                            "name": "Additional Chosen Model",
-                            "hidden": false,
-                            "id": "cd33-8170-67ea-7a3e",
-                            "sortIndex": 1,
-                            "costs": [
-                              {
-                                "name": "Points",
-                                "typeId": "51b2-306e-1021-d207",
-                                "value": 40
-                              }
-                            ],
-                            "selectionEntryGroups": [
-                              {
-                                "name": "​",
-                                "id": "2b7c-3614-7636-9c34",
-                                "hidden": false,
-                                "sortIndex": 1,
-                                "constraints": [
-                                  {
-                                    "type": "min",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "parent",
-                                    "shared": true,
-                                    "id": "5562-ab5b-f756-153d",
-                                    "includeChildSelections": false
-                                  },
-                                  {
-                                    "type": "max",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "parent",
-                                    "shared": true,
-                                    "id": "e362-21dd-ac74-c1c1",
-                                    "includeChildSelections": false
-                                  }
-                                ],
-                                "selectionEntries": [
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Boltgun",
-                                    "hidden": false,
-                                    "id": "8433-ff0a-c3b2-28f8",
-                                    "sortIndex": 1
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Bolt Pistol",
-                                    "hidden": false,
-                                    "id": "ab53-9c8e-140c-2584",
-                                    "sortIndex": 2
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Plasma Gun",
-                                    "hidden": false,
-                                    "id": "3c0f-f91e-b9e8-bc68",
-                                    "sortIndex": 3
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Plasma Pistol",
-                                    "hidden": false,
-                                    "id": "de27-46a8-41eb-b14c",
-                                    "sortIndex": 4
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Meltagun",
-                                    "hidden": false,
-                                    "id": "ffb6-c548-fc4a-988a",
-                                    "sortIndex": 5
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Flamer",
-                                    "hidden": false,
-                                    "id": "ce0e-acf7-8961-ea52",
-                                    "sortIndex": 6
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Lightning Claw",
-                                    "hidden": false,
-                                    "id": "b5e9-6ffd-a23d-a966",
-                                    "sortIndex": 7
-                                  }
-                                ],
-                                "defaultSelectionEntryId": "8433-ff0a-c3b2-28f8"
-                              },
-                              {
-                                "name": "​",
-                                "id": "c071-bcf1-b9fb-e4eb",
-                                "hidden": false,
-                                "sortIndex": 2,
-                                "constraints": [
-                                  {
-                                    "type": "min",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "parent",
-                                    "shared": true,
-                                    "id": "cc1f-63e0-641d-5072",
-                                    "includeChildSelections": false
-                                  },
-                                  {
-                                    "type": "max",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "parent",
-                                    "shared": true,
-                                    "id": "192f-a5a6-7ebd-8f1d",
-                                    "includeChildSelections": false
-                                  }
-                                ],
-                                "selectionEntries": [
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Chainblade",
-                                    "hidden": false,
-                                    "id": "acfd-90d6-b338-d043",
-                                    "sortIndex": 1
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Power Weapon",
-                                    "hidden": false,
-                                    "id": "c2f3-92fa-4115-5034",
-                                    "sortIndex": 2
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Power Fist",
-                                    "hidden": false,
-                                    "id": "f461-b974-aa7a-5783",
-                                    "sortIndex": 3
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Lightning Claw",
-                                    "hidden": false,
-                                    "id": "5886-c4eb-a0ee-7ba7",
-                                    "sortIndex": 4
-                                  },
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "Daemon Hammer",
-                                    "hidden": false,
-                                    "id": "8f74-bbf3-f673-b154",
-                                    "sortIndex": 5
-                                  }
-                                ],
-                                "defaultSelectionEntryId": "acfd-90d6-b338-d043"
-                              }
-                            ],
-                            "constraints": [
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "500b-2f54-0c74-ffb3",
-                                "includeChildSelections": false
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "name": "Paid Wargear",
-                        "id": "9ade-0a8e-7706-fd57",
-                        "hidden": false,
-                        "sortIndex": 6,
-                        "selectionEntryGroups": [
-                          {
-                            "name": "​",
-                            "id": "004d-27e0-5b69-986a",
-                            "hidden": false,
-                            "sortIndex": 1,
-                            "constraints": [
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "4c34-93d8-441b-2794",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "selectionEntries": [
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Frag Grenade",
-                                "hidden": false,
-                                "id": "34c7-a19d-2e53-1954",
-                                "sortIndex": 1,
-                                "costs": [
-                                  {
-                                    "name": "Points",
-                                    "typeId": "51b2-306e-1021-d207",
-                                    "value": 10
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "name": "​",
-                            "id": "6803-d5b7-793f-c77a",
-                            "hidden": false,
-                            "sortIndex": 2,
-                            "constraints": [
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "c146-b17b-c2ba-8ecb",
-                                "includeChildSelections": false
-                              }
-                            ],
-                            "selectionEntries": [
-                              {
-                                "type": "upgrade",
-                                "import": true,
-                                "name": "Krak Grenade",
-                                "hidden": false,
-                                "id": "89e0-ffd0-5c73-397a",
-                                "sortIndex": 1,
-                                "costs": [
-                                  {
-                                    "name": "Points",
-                                    "typeId": "51b2-306e-1021-d207",
-                                    "value": 10
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Sandvich's Chosen",
-                    "hidden": false,
-                    "id": "7e73-e62d-2a45-dcac",
-                    "sortIndex": 2,
                     "costs": [
                       {
                         "name": "Points",
                         "typeId": "51b2-306e-1021-d207",
-                        "value": 80
-                      }
-                    ],
-                    "selectionEntryGroups": [
-                      {
-                        "name": "Sandviches:",
-                        "id": "9420-9bf9-f200-37ab",
-                        "hidden": false,
-                        "sortIndex": 1,
-                        "selectionEntryGroups": [
-                          {
-                            "name": "Chosen 1-5",
-                            "id": "a3e7-889f-e8a5-afeb",
-                            "hidden": false,
-                            "sortIndex": 1,
-                            "selectionEntryGroups": [
-                              {
-                                "name": "​",
-                                "id": "e738-b0e3-1658-6153",
-                                "hidden": false,
-                                "sortIndex": 1,
-                                "constraints": [
-                                  {
-                                    "type": "min",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "parent",
-                                    "shared": true,
-                                    "id": "65fe-c5d1-b4a8-aaa6",
-                                    "includeChildSelections": false
-                                  },
-                                  {
-                                    "type": "max",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "parent",
-                                    "shared": true,
-                                    "id": "4e46-003c-4a8b-da95",
-                                    "includeChildSelections": false
-                                  }
-                                ],
-                                "selectionEntries": [
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "5x Power Sword",
-                                    "hidden": false,
-                                    "id": "1748-7dce-68cb-ff7d",
-                                    "sortIndex": 1
-                                  }
-                                ],
-                                "defaultSelectionEntryId": "1748-7dce-68cb-ff7d"
-                              },
-                              {
-                                "name": "​",
-                                "id": "819c-c7d6-79c2-370c",
-                                "hidden": false,
-                                "sortIndex": 2,
-                                "constraints": [
-                                  {
-                                    "type": "min",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "parent",
-                                    "shared": true,
-                                    "id": "978b-c9df-17d1-4e64",
-                                    "includeChildSelections": false
-                                  },
-                                  {
-                                    "type": "max",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "parent",
-                                    "shared": true,
-                                    "id": "681c-dc0c-17e3-06b8",
-                                    "includeChildSelections": false
-                                  }
-                                ],
-                                "selectionEntries": [
-                                  {
-                                    "type": "upgrade",
-                                    "import": true,
-                                    "name": "5x Plasma Pistol",
-                                    "hidden": false,
-                                    "id": "fe25-e24f-482d-bd5a",
-                                    "sortIndex": 1
-                                  }
-                                ],
-                                "defaultSelectionEntryId": "fe25-e24f-482d-bd5a"
-                              }
-                            ]
-                          }
-                        ]
+                        "value": 10
                       }
                     ]
                   }
+                ]
+              },
+              {
+                "name": "​",
+                "id": "6803-d5b7-793f-c77a",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "c146-b17b-c2ba-8ecb",
+                    "includeChildSelections": false
+                  }
                 ],
-                "defaultSelectionEntryId": "3e12-7e63-1781-b139"
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Krak Grenade",
+                    "hidden": false,
+                    "id": "89e0-ffd0-5c73-397a",
+                    "sortIndex": 1,
+                    "costs": [
+                      {
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 10
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -13838,7 +14052,7 @@
       }
     ],
     "authorName": "40k Reforged Homebrew",
-    "comment": "V28 / GS40 — CURRENT SOURCE REFERENCE REFRESH\nUpdated the present-tense Arsenal provenance from GS37 / playable CSM REV50 to GS40 / verified playable CSM REV60. All 28 portable unit roots were rechecked against REV60 and remain executable-structure identical when internal comments are ignored. Historical V20/V21 source records remain unchanged. No shared payload or consumer-facing mechanics changed.\n\nREV27 / GS40 — DIAMOND EXPORT SPACING\nAdded exactly one additional literal space after every diamond unit-marker character in catalogue-owned strings. Unit names and childName mirrors therefore remain synchronized. No IDs, targets, costs, LP, constraints, modifiers, associations, loadouts, category ownership, or other executable mechanics changed.\n\nREV26 / GS40 — PRACTICE DESCRIPTION CLEANUP COMPATIBILITY\nRetargeted to Game System revision 40 after removal of redundant construction-summary text from the 420 Point Practice description. No catalogue-local executable data changed in this revision: Practice LP visibility, explicit 0-LP attachment-only exceptions where present, Extra Unit Copy Cost arithmetic, points, IDs, loadouts, associations, and all unit mechanics remain unchanged.\n\nREV25 / GS39 — PRACTICE ZERO-LP MIGRATION\nThis component now targets Game System revision 39. Every locally owned unit root carrying a positive LP cost receives selected-safe Practice hiding: it is hidden while 420 Point Practice is active only when that unit is not already selected. Explicit 0-LP roots do not exist under the project convention, so no exception tags are required. This shared library owns no local Extra Unit Copy Costs Configuration branch; its consumers own that arithmetic. Points, intrinsic LP costs, IDs, loadouts, associations, category ownership, Quick/Standard/Long arithmetic, and unrelated mechanics are unchanged.\n\nV24 — LEGIONARIES UNIT ABILITY OWNERSHIP FIX\nSynchronized the portable generic Legionaries root to CSM REV55 by removing the incorrectly inherited Shrapnel Boltguns and Power Knives profile links. The shared profiles remain available in the library, but generic Legionaries no longer expose them. All portable loadout, points, categories, attachments, constraints, and copy-cost semantics are unchanged.\n\nV23 — LEGIONARIES FLAT SPECIALIST WEAPONS\nSynchronized the portable Legionaries root to CSM REV52. Legionary 4 and Legionary 5 now each expose Combat Knife as a separate required singleton radio choice and one flat required nine-weapon specialist list. Shared specialist target IDs and per-model weapon-link IDs are preserved; package names now contain only the specialist weapon. No portable unit mechanics changed.\n\nCURRENT SYSTEM-WIDE CONFIGURATION ORDER / GS38\nThis library now targets Game System revision 38. Configuration presentation follows the shared lane doctrine: provenance warning 5 when applicable; Game Size 10; army identity 20; optional army structure 30; Leader Points 40; faction trackers 50; Extra Unit Copy Costs 80; Updated 90; About 100. Only locally-owned applicable lanes are stored in this file; Game Size, Leader Points, and About are supplied by the Game System. No unit IDs, costs, constraints, modifiers, attachment topology, loadout legality, or copy-cost arithmetic were changed by this pass.\n\nCURRENT STATE\nGreat Traitors' Arsenal reusable library for Chaos Space Marines 3.3.6 on Game System revision 40. It contains the 28 mechanically portable generic Chaos Space Marines unit roots plus the shared weapon / loadout dependencies and CSM-local attachment / counts-as categories required by those roots. The portable executable trees have been verified against playable Chaos Space Marines REV60 with stable root IDs preserved. Legion-section compilations remain intentionally excluded, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, Tyrant Siege Terminators, Iron Circle Automata, Nemesis Claw, Lernaean Terminators, Iron Armoury Legionaries, and Power Knife Legionaries.\n\nThe five portable Leader roots that intrinsically cost 1 LP remain Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary. Consumers inherit those costs exactly once and must not add duplicate local LP costs. Portable roots now also carry their current top-level Unit Ability links, with the required shared Unit Ability profiles defined locally in this library. Nested sub-abilities remain intentionally omitted.\n\nAUTHORING & RUNTIME NOTES\nPortable roots are mirrored from the playable catalogue rather than independently re-authored. Stable root IDs and shared package IDs are preserved. Intrinsic unit semantics live with the shared roots; host catalogues own availability, local presentation wrappers, and consumer-local Extra Unit Copy Cost arithmetic. The library is not itself a roster-accounting engine. The shadow-corrected Cultists structure is preserved: Cultist Champion, Cultist 2, and Cultist 3-10.\n\nSOURCE SYNC HISTORY\nV1: generated from the healthy CSM REV26 portable set.\nV2: synchronized Daemon Hammer terminology from CSM REV27.\nV3: retargeted to GS20.\nV4: rebuilt from the healthy line and synchronized the recovered post-REV27 portable changes through CSM REV30.\nV5: corrected the temporary library version-label typo.\nV6: synchronized the CSM 3.3.5 Defiler rework.\nV7: synchronized corrected Defiler cost and Legionaries Champion ranged choices; retargeted to GS21.\nV8: synchronized the Defiler Missile Launcher correction.\nV9: synchronized all portable roots touched by CSM REV35, including checkbox and vehicle-presentation cleanup.\nV10: synchronized the complete 28-root portable set to CSM REV37. This brings in REV36 Additional Model checkbox changes for Possessed, Havocs, and Warp Talons; REV37 checkbox changes for Chosen and Breacher Siege Squad; and the confirmed visible Cannot attach to anything rules for Terminator Chaos Sorcerer Lord and Warpsmith. Library comments were consolidated for the live GS21 state.\nV11 — CSM REV38 CHOSEN PRESENTATION SYNC\nSynchronized the portable Chosen root from Chaos Space Marines 3.3.5 REV38: the redundant preset-selector wrapper header is suppressed and No Preset is renamed Manual Loadout. Stable Chosen root/selection IDs, branch nesting, model loadouts, preset behavior, points, validation, and all unrelated portable roots remain unchanged. GS21 retained.\nV12 — CSM REV39 CHAOS TERMINATOR HEAVY WEAPON LIMIT SYNC\nSynchronized the portable Chaos Terminators root from playable CSM REV39 and added the shared hidden Heavy Weapon Terminator Role semantic category required by its permissive-corrective one-heavy-role limit. Lernaean Terminators remain Legion-bound and are intentionally not part of the Arsenal library. All other 27 portable unit roots remain unchanged; GS21 retained.\nV13 — CSM 3.3.6 / CHAOS VINDICATOR SIEGE SHIELD SYNC\nUpdated the library baseline to Chaos Space Marines 3.3.6 and Game System revision 23. Synchronized the portable Chaos Vindicator root from playable CSM REV40 so its fixed loadout now includes the missing Siege Shield. Lernaean Terminators are Legion-bound and remain outside the Arsenal library, so the 3.3.6 removal of their Heavy Weapon Terminator cap requires no library change. All other portable roots remain unchanged.\nV14 — CSM REV41 LEGIONARIES CHAMPION CHAINSWORD SYNC\nSynchronized the portable Legionaries root from playable CSM REV41 so the Chaos Champion melee selector now includes Chainsword alongside Power Weapon, Power Fist, and Daemon Hammer. The existing shared Chainsword target and stable entryLink ID from the playable root are preserved. All other portable roots and library mechanics remain unchanged.\nV15 — LEADER POINTS MIGRATION\nRetargeted the library to Game System revision 24. Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary are the only five portable shared roots carrying both Leader and Counts Toward Leader Maximum semantics; each now intrinsically costs 1 LP, synchronized from playable Chaos Space Marines REV42. Consumer catalogues inherit those costs through their existing entryLinks and must not add duplicate local LP costs. Legion-section compilations remain intentionally excluded from Arsenal, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, and other Legion-only roots. The other 23 portable unit roots receive no LP mechanics. Legacy counted-Leader tags remain unchanged for parallel migration validation. Shared IDs, points, loadouts, attachments, Rare semantics, Additional Copy Cost semantics, Counts As categories, and all unrelated library mechanics remain unchanged.\n\nV16 — LEADER POINTS CLEANUP\nRuntime validation passed through multiple Great Traitors consumer catalogues. The five legacy Counts Toward Leader Maximum links matched the five shared 1-LP Leader roots exactly and were removed. Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary retain intrinsic 1 LP costs on their shared semantic roots. Consumer catalogues remain locally uncharged, so imported Leaders continue to inherit exactly one LP cost. The other 23 portable shared unit roots receive no LP mechanics. Legion-specific compiled Leaders remain outside this library. No points, loadouts, attachments, category ownership, or other shared-library mechanics changed.\n\nV17 — TERMINATOR / CONTEMPTOR BUGFIX SYNC\nSynchronized the playable CSM REV44 fixes into portable shared content. Chaos Terminators no longer carry the obsolete Heavy Weapon Terminator role cap or its hidden counting category. Chaos Contemptor Dreadnought now permits Power Fist & in both weapon selectors. Stable unit, weapon, selector, auxiliary, and profile IDs are preserved.\n\nV18 — UNIT SIZE NAME SYNCHRONIZATION / SEPTEMBER 17\nSynchronized portable generic unit-root names with playable Chaos Space Marines REV45: Legionaries (5), Cultists (10), Chaos Terminators (2), Possessed (2 or 3), Chosen (3-5), Breacher Siege Squad (3-5), Raptors (3-5), Chaos Bikers (3), Havocs (2 or 3), Warp Talons (2 or 3), and Obliterators (2). Stable shared root IDs, points, loadouts, Leader Points, attachment semantics, and all other mechanics are unchanged.\nV20 — CSM REV47 CURRENT TEMPLATE / UNIT ABILITIES SYNC\nRetargeted the Arsenal to Game System revision 37 and synchronized all 28 portable generic roots from playable Chaos Space Marines REV47. The sync includes current unit-row, category-display, Loadout Options, model-header, Leader Attachment, semantic Additional Model naming, Terminator Chaos Sorcerer Lord's  command marker, intrinsic Leader Point, and top-level Unit Ability semantics while preserving stable root/subtree IDs. Added only the shared Unit Ability profiles required by those 28 portable roots. Legion-specific compiled roots remain outside the library, and no consumer-local Extra Unit Copy Cost arithmetic was moved into Arsenal.\n\nV20 CONDITIONAL UNIT ABILITY PRESENTATION CORRECTION: the portable shared roots now mirror the current selectable-profile ownership from playable CSM REV47. Chaos Influence, Chaos Allegiance, Daemonic Jump Pack, Smoke Launchers, Venerable, and Armour Piercing High Explosive Shells appear only when their corresponding selection is chosen. Siege Shield remains root-linked on Chaos Vindicator because it is mandatory fixed equipment. Stable shared root IDs and consumer ownership boundaries are unchanged.\n\nV21 — DIAMOND UNIT MARKERS / ADDITIONAL MODEL CLEANUP\nSynchronized the 28 portable shared unit roots to Chaos Space Marines REV50 presentation. Remaining unit-row and linked-unit chevrons now use ◆ , while the nine mirrored optional Additional Model checkboxes use plain unprefixed labels. Stable shared root IDs, shared dependency IDs, Game System revision, categories, costs, constraints, modifiers, attachment semantics, conditional Unit Ability ownership, loadout legality, and all portable mechanics are unchanged.",
+    "comment": "V30 / GS41 — AUTHORITATIVE CSM CHOSEN SYNCHRONIZATION\nRebuilt only the shared Chosen (3–5) definition from playable CSM REV67, preserving its canonical unit ID, surviving model/equipment IDs, intrinsic costs, and five selected-safe Iron Warriors-only Shrapnel Boltgun options. The faction-specific choices are portable because their availability is gated on the CSM Iron Warriors Legion selection; borrowing Chaos factions without that selector cannot normally select them. The obsolete nested Sandvich tribute branch is retired. Standalone Black Legion-only Sandviches's Chosen remains CSM-local and is not added to the Arsenal. CSM-local Counts As: Chosen accounting is intentionally absent from the library root. The other 27 portable unit definitions, all 32 shared equipment definitions, all shared ability profiles, the catalogue ID, and every remaining structural object are unchanged. No consumer catalogue or CSM player-facing changelog was modified.\n\nV29 AND EARLIER REVISION HISTORY (historical, not current executable state):\nV29 / GS41 — CULTISTS INTRINSIC ABILITY UPDATE / CSM 3.3.7\nRetargeted Great Traitors’ Arsenal to Game System 41 and Chaos Space Marines 3.3.7. Renamed the portable Cultists ability from Call of Chaos to Heretical Servants in the stable-ID ability profile and portable Cultists link. All 28 portable root IDs, equipment packages and costs remain unchanged. The new Iron Warriors-only selectable Shrapnel Boltgun for playable Chosen is deliberately excluded from generic shared Chosen; this is the single intentionally local source/library Chosen difference. All remaining portable unit trees and shared equipment packages remain executable-equivalent to playable CSM REV63. Preserve historic source-sync records below.\n\nV28 / GS40 — CURRENT SOURCE REFERENCE REFRESH\nUpdated the present-tense Arsenal provenance from GS37 / playable CSM REV50 to GS40 / verified playable CSM REV60. All 28 portable unit roots were rechecked against REV60 and remain executable-structure identical when internal comments are ignored. Historical V20/V21 source records remain unchanged. No shared payload or consumer-facing mechanics changed.\n\nREV27 / GS40 — DIAMOND EXPORT SPACING\nAdded exactly one additional literal space after every diamond unit-marker character in catalogue-owned strings. Unit names and childName mirrors therefore remain synchronized. No IDs, targets, costs, LP, constraints, modifiers, associations, loadouts, category ownership, or other executable mechanics changed.\n\nREV26 / GS40 — PRACTICE DESCRIPTION CLEANUP COMPATIBILITY\nRetargeted to Game System revision 40 after removal of redundant construction-summary text from the 420 Point Practice description. No catalogue-local executable data changed in this revision: Practice LP visibility, explicit 0-LP attachment-only exceptions where present, Extra Unit Copy Cost arithmetic, points, IDs, loadouts, associations, and all unit mechanics remain unchanged.\n\nREV25 / GS39 — PRACTICE ZERO-LP MIGRATION\nThis component now targets Game System revision 39. Every locally owned unit root carrying a positive LP cost receives selected-safe Practice hiding: it is hidden while 420 Point Practice is active only when that unit is not already selected. Explicit 0-LP roots do not exist under the project convention, so no exception tags are required. This shared library owns no local Extra Unit Copy Costs Configuration branch; its consumers own that arithmetic. Points, intrinsic LP costs, IDs, loadouts, associations, category ownership, Quick/Standard/Long arithmetic, and unrelated mechanics are unchanged.\n\nV24 — LEGIONARIES UNIT ABILITY OWNERSHIP FIX\nSynchronized the portable generic Legionaries root to CSM REV55 by removing the incorrectly inherited Shrapnel Boltguns and Power Knives profile links. The shared profiles remain available in the library, but generic Legionaries no longer expose them. All portable loadout, points, categories, attachments, constraints, and copy-cost semantics are unchanged.\n\nV23 — LEGIONARIES FLAT SPECIALIST WEAPONS\nSynchronized the portable Legionaries root to CSM REV52. Legionary 4 and Legionary 5 now each expose Combat Knife as a separate required singleton radio choice and one flat required nine-weapon specialist list. Shared specialist target IDs and per-model weapon-link IDs are preserved; package names now contain only the specialist weapon. No portable unit mechanics changed.\n\nCURRENT SYSTEM-WIDE CONFIGURATION ORDER / GS38\nThis library now targets Game System revision 38. Configuration presentation follows the shared lane doctrine: provenance warning 5 when applicable; Game Size 10; army identity 20; optional army structure 30; Leader Points 40; faction trackers 50; Extra Unit Copy Costs 80; Updated 90; About 100. Only locally-owned applicable lanes are stored in this file; Game Size, Leader Points, and About are supplied by the Game System. No unit IDs, costs, constraints, modifiers, attachment topology, loadout legality, or copy-cost arithmetic were changed by this pass.\n\nCURRENT STATE\nGreat Traitors' Arsenal reusable library for Chaos Space Marines 3.3.7 on Game System revision 41. It contains the 28 mechanically portable generic Chaos Space Marines unit roots plus the shared weapon / loadout dependencies and CSM-local attachment / counts-as categories required by those roots. All portable executable trees except Chosen's intentionally local Iron Warriors-only additions match playable Chaos Space Marines REV63, with stable root IDs preserved. Legion-section compilations remain intentionally excluded, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, Tyrant Siege Terminators, Iron Circle Automata, Nemesis Claw, Lernaean Terminators, Iron Armoury Legionaries, and Power Knife Legionaries.\n\nThe five portable Leader roots that intrinsically cost 1 LP remain Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary. Consumers inherit those costs exactly once and must not add duplicate local LP costs. Portable roots now also carry their current top-level Unit Ability links, with the required shared Unit Ability profiles defined locally in this library. Nested sub-abilities remain intentionally omitted.\n\nAUTHORING & RUNTIME NOTES\nPortable roots mirror intrinsic source data from the playable catalogue; Chosen's Iron Warriors-only optional Shrapnel Boltguns remain an intentionally local exception. Stable root IDs and shared package IDs are preserved. Intrinsic unit semantics live with the shared roots; host catalogues own availability, local presentation wrappers, and consumer-local Extra Unit Copy Cost arithmetic. The library is not itself a roster-accounting engine. The shadow-corrected Cultists structure is preserved: Cultist Champion, Cultist 2, and Cultist 3-10.\n\nSOURCE SYNC HISTORY\nV1: generated from the healthy CSM REV26 portable set.\nV2: synchronized Daemon Hammer terminology from CSM REV27.\nV3: retargeted to GS20.\nV4: rebuilt from the healthy line and synchronized the recovered post-REV27 portable changes through CSM REV30.\nV5: corrected the temporary library version-label typo.\nV6: synchronized the CSM 3.3.5 Defiler rework.\nV7: synchronized corrected Defiler cost and Legionaries Champion ranged choices; retargeted to GS21.\nV8: synchronized the Defiler Missile Launcher correction.\nV9: synchronized all portable roots touched by CSM REV35, including checkbox and vehicle-presentation cleanup.\nV10: synchronized the complete 28-root portable set to CSM REV37. This brings in REV36 Additional Model checkbox changes for Possessed, Havocs, and Warp Talons; REV37 checkbox changes for Chosen and Breacher Siege Squad; and the confirmed visible Cannot attach to anything rules for Terminator Chaos Sorcerer Lord and Warpsmith. Library comments were consolidated for the live GS21 state.\nV11 — CSM REV38 CHOSEN PRESENTATION SYNC\nSynchronized the portable Chosen root from Chaos Space Marines 3.3.5 REV38: the redundant preset-selector wrapper header is suppressed and No Preset is renamed Manual Loadout. Stable Chosen root/selection IDs, branch nesting, model loadouts, preset behavior, points, validation, and all unrelated portable roots remain unchanged. GS21 retained.\nV12 — CSM REV39 CHAOS TERMINATOR HEAVY WEAPON LIMIT SYNC\nSynchronized the portable Chaos Terminators root from playable CSM REV39 and added the shared hidden Heavy Weapon Terminator Role semantic category required by its permissive-corrective one-heavy-role limit. Lernaean Terminators remain Legion-bound and are intentionally not part of the Arsenal library. All other 27 portable unit roots remain unchanged; GS21 retained.\nV13 — CSM 3.3.6 / CHAOS VINDICATOR SIEGE SHIELD SYNC\nUpdated the library baseline to Chaos Space Marines 3.3.6 and Game System revision 23. Synchronized the portable Chaos Vindicator root from playable CSM REV40 so its fixed loadout now includes the missing Siege Shield. Lernaean Terminators are Legion-bound and remain outside the Arsenal library, so the 3.3.6 removal of their Heavy Weapon Terminator cap requires no library change. All other portable roots remain unchanged.\nV14 — CSM REV41 LEGIONARIES CHAMPION CHAINSWORD SYNC\nSynchronized the portable Legionaries root from playable CSM REV41 so the Chaos Champion melee selector now includes Chainsword alongside Power Weapon, Power Fist, and Daemon Hammer. The existing shared Chainsword target and stable entryLink ID from the playable root are preserved. All other portable roots and library mechanics remain unchanged.\nV15 — LEADER POINTS MIGRATION\nRetargeted the library to Game System revision 24. Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary are the only five portable shared roots carrying both Leader and Counts Toward Leader Maximum semantics; each now intrinsically costs 1 LP, synchronized from playable Chaos Space Marines REV42. Consumer catalogues inherit those costs through their existing entryLinks and must not add duplicate local LP costs. Legion-section compilations remain intentionally excluded from Arsenal, including the four Legion Chaos Lords, four Legion Terminator Chaos Lords, Terminator Warsmith, and other Legion-only roots. The other 23 portable unit roots receive no LP mechanics. Legacy counted-Leader tags remain unchanged for parallel migration validation. Shared IDs, points, loadouts, attachments, Rare semantics, Additional Copy Cost semantics, Counts As categories, and all unrelated library mechanics remain unchanged.\n\nV16 — LEADER POINTS CLEANUP\nRuntime validation passed through multiple Great Traitors consumer catalogues. The five legacy Counts Toward Leader Maximum links matched the five shared 1-LP Leader roots exactly and were removed. Terminator Chaos Sorcerer Lord, Chaos Sorcerer, Master of Possession, Warpsmith, and Chaos Apothecary retain intrinsic 1 LP costs on their shared semantic roots. Consumer catalogues remain locally uncharged, so imported Leaders continue to inherit exactly one LP cost. The other 23 portable shared unit roots receive no LP mechanics. Legion-specific compiled Leaders remain outside this library. No points, loadouts, attachments, category ownership, or other shared-library mechanics changed.\n\nV17 — TERMINATOR / CONTEMPTOR BUGFIX SYNC\nSynchronized the playable CSM REV44 fixes into portable shared content. Chaos Terminators no longer carry the obsolete Heavy Weapon Terminator role cap or its hidden counting category. Chaos Contemptor Dreadnought now permits Power Fist & in both weapon selectors. Stable unit, weapon, selector, auxiliary, and profile IDs are preserved.\n\nV18 — UNIT SIZE NAME SYNCHRONIZATION / SEPTEMBER 17\nSynchronized portable generic unit-root names with playable Chaos Space Marines REV45: Legionaries (5), Cultists (10), Chaos Terminators (2), Possessed (2 or 3), Chosen (3-5), Breacher Siege Squad (3-5), Raptors (3-5), Chaos Bikers (3), Havocs (2 or 3), Warp Talons (2 or 3), and Obliterators (2). Stable shared root IDs, points, loadouts, Leader Points, attachment semantics, and all other mechanics are unchanged.\nV20 — CSM REV47 CURRENT TEMPLATE / UNIT ABILITIES SYNC\nRetargeted the Arsenal to Game System revision 37 and synchronized all 28 portable generic roots from playable Chaos Space Marines REV47. The sync includes current unit-row, category-display, Loadout Options, model-header, Leader Attachment, semantic Additional Model naming, Terminator Chaos Sorcerer Lord's  command marker, intrinsic Leader Point, and top-level Unit Ability semantics while preserving stable root/subtree IDs. Added only the shared Unit Ability profiles required by those 28 portable roots. Legion-specific compiled roots remain outside the library, and no consumer-local Extra Unit Copy Cost arithmetic was moved into Arsenal.\n\nV20 CONDITIONAL UNIT ABILITY PRESENTATION CORRECTION: the portable shared roots now mirror the current selectable-profile ownership from playable CSM REV47. Chaos Influence, Chaos Allegiance, Daemonic Jump Pack, Smoke Launchers, Venerable, and Armour Piercing High Explosive Shells appear only when their corresponding selection is chosen. Siege Shield remains root-linked on Chaos Vindicator because it is mandatory fixed equipment. Stable shared root IDs and consumer ownership boundaries are unchanged.\n\nV21 — DIAMOND UNIT MARKERS / ADDITIONAL MODEL CLEANUP\nSynchronized the 28 portable shared unit roots to Chaos Space Marines REV50 presentation. Remaining unit-row and linked-unit chevrons now use ◆ , while the nine mirrored optional Additional Model checkboxes use plain unprefixed labels. Stable shared root IDs, shared dependency IDs, Game System revision, categories, costs, constraints, modifiers, attachment semantics, conditional Unit Ability ownership, loadout legality, and all portable mechanics are unchanged.",
     "sharedProfiles": [
       {
         "name": "🛡️ Heavy Armour",
@@ -14233,7 +14447,7 @@
         ]
       },
       {
-        "name": "📣 Call of Chaos",
+        "name": "📣 Heretical Servants",
         "id": "b3e8-d062-8432-cc89",
         "hidden": false,
         "typeId": "9b19-41c8-205f-3055",

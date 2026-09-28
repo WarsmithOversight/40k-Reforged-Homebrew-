@@ -4,8 +4,8 @@
     "id": "2266-0f05-edd4-21d7",
     "name": "...",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
-    "gameSystemRevision": 40,
-    "revision": 16,
+    "gameSystemRevision": 41,
+    "revision": 18,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -52,7 +52,7 @@
       {
         "type": "upgrade",
         "import": true,
-        "name": "Updated: September 24th",
+        "name": "Updated: September 28th",
         "hidden": false,
         "id": "cf79-f939-ab49-fb6f",
         "sortIndex": 90,
@@ -69,7 +69,7 @@
             "name": "Catalogue Notes",
             "id": "0e3f-8996-9fd7-2a42",
             "hidden": false,
-            "description": "## Genestealer Cults Community Homebrew\n\n• All 11 source units are represented.\n• Leader Points, Leader attachments, Rare enforcement, Additional Copy Costs, loadouts, and paid upgrades are implemented.\n• Catalogue display name is intentionally `...` to avoid presenting this community army as a supported Reforged faction.\n\n*The supplied homebrew PDF remains authoritative.*\n\n## Changelog (September 23rd)\n\n• Presentation: standardized ◆ unit markers to the project-wide two-space format in roster exports.\n• 420 Point Practice: now uses 0 Leader Points and Quick-equivalent Extra Unit Copy Cost allowances; LP-costing units are hidden unless already selected.\n\n## Changelog (September 21st)\n\n• Standardized Configuration ordering across the listbuilder.\n• Presentation: standardized ◆ unit presentation.\n\n## Changelog (September 19th)\n\n• Presentation: adopted the current emoji-enabled listbuilder presentation, including LP ⭐, 🏷️ Unit Abilities, 🧰 Loadout Options, and shared category icons.\n• Unit Abilities: added all top-level Unit Ability names across the army.\n• Added 420 Point Practice support.\n• Hive Icons on Neophyte Hybrids, Acolyte Hybrids, and Hybrid Metamorphs now show their Unit Abilities only when the matching upgrade is selected.\n• Existing loadouts, paid upgrades, nested unit relationships, attachment behavior, Leader Points, Rare, transport, and copy-cost behavior was preserved.\n\n## Changelog (September 16th)\n\n<catalogue create>\n",
+            "description": "## Genestealer Cults Community Homebrew\n\n• All 11 source units are represented.\n• Leader Points, Leader attachments, Rare enforcement, Additional Copy Costs, loadouts, and paid upgrades are implemented.\n• Catalogue display name is intentionally `...` to avoid presenting this community army as a supported Reforged faction.\n\n*The supplied homebrew PDF remains authoritative.*\n\n## Changelog (September 28th)\n\n• Hive Icon (Neophyte Hybrids, Acolyte Hybrids, Hybrid Metamorphs): now reduces Suppressed X by D3 after activation instead of improving Resolve.\n• Neophyte Hybrids: models 7-8 now share one +10-Point Special Weapon pair purchase, with independent Flamer / Grenade Launcher / Webber choices.\n• Acolyte Hybrids: the +10-Point model replacement now offers Mining Tool or Demolition Charges, replacing both Autopistol and Cult Claws & Knife.\n• Attachment and naming proofreading: Magus attachment and Hybrid Metamorph weapon names match the corrected source PDF; these catalogue references were already correct.\n\n## Changelog (September 23rd)\n\n• Presentation: standardized ◆ unit markers to the project-wide two-space format in roster exports.\n• 420 Point Practice: now uses 0 Leader Points and Quick-equivalent Extra Unit Copy Cost allowances; LP-costing units are hidden unless already selected.\n\n## Changelog (September 21st)\n\n• Standardized Configuration ordering across the listbuilder.\n• Presentation: standardized ◆ unit presentation.\n\n## Changelog (September 19th)\n\n• Presentation: adopted the current emoji-enabled listbuilder presentation, including LP ⭐, 🏷️ Unit Abilities, 🧰 Loadout Options, and shared category icons.\n• Unit Abilities: added all top-level Unit Ability names across the army.\n• Added 420 Point Practice support.\n• Hive Icons on Neophyte Hybrids, Acolyte Hybrids, and Hybrid Metamorphs now show their Unit Abilities only when the matching upgrade is selected.\n• Existing loadouts, paid upgrades, nested unit relationships, attachment behavior, Leader Points, Rare, transport, and copy-cost behavior was preserved.\n\n## Changelog (September 16th)\n\n<catalogue create>\n",
             "noindex": false
           }
         ],
@@ -87,7 +87,7 @@
             "field": "defaultAmount"
           }
         ],
-        "comment": "REV13 CHANGELOG CLEANUP. Renamed the player-facing maintenance history to Changelog, added the September 24 diamond-spacing presentation entry, and simplified repeated wording while preserving the unofficial community-homebrew framing, the three catalogue-summary bullets, and the September 16 <catalogue create> baseline. No list-construction mechanics changed.\nREV8 CURRENT TEMPLATE. The September 19th Changelog section records only the actual player-facing delta from the live REV6 catalogue to the finished current-template state. The September 16th <catalogue create> baseline is preserved. The catalogue remains explicitly unofficial community homebrew by AlienDilo. September 21st presentation pass replaces unit and linked-unit chevrons with ◆ ; no catalogue mechanics changed. REV9 adopts GS38 and the standardized Configuration ordering. REV10 adopts GS39 Practice: 0 LP, selected-safe hiding for LP-costing units, and Quick-equivalent copy thresholds."
+        "comment": "REV17: Actual catalogue artifact update date. Player-facing dated Changelog begins September 28th."
       },
       {
         "type": "upgrade",
@@ -3329,200 +3329,284 @@
                 ]
               },
               {
-                "name": "🧬 Neophyte 7",
-                "id": "7169-23e2-38b6-c7cd",
+                "name": "🧬 Neophytes 7-8",
+                "id": "7bf8-1f4c-0c6b-3414",
                 "hidden": false,
-                "sortIndex": 3,
-                "selectionEntryGroups": [
+                "selectionEntries": [
                   {
-                    "name": "​",
-                    "id": "317a-e52f-2515-98e3",
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Standard Neophytes 7-8",
                     "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
+                    "id": "5860-abd3-69d2-37ad",
+                    "selectionEntryGroups": [
                       {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "0d35-b71a-98a7-4e45",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "b788-c341-c661-d5a6",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Autogun",
+                        "name": "🧬 Neophyte 7",
+                        "id": "7169-23e2-38b6-c7cd",
                         "hidden": false,
-                        "id": "2d3b-b760-2173-a3e2",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Shotgun",
-                        "hidden": false,
-                        "id": "8688-8bdf-6029-6b7c",
-                        "sortIndex": 2
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Flamer",
-                        "hidden": false,
-                        "id": "0b60-e276-cd64-2fc1",
                         "sortIndex": 3,
-                        "costs": [
+                        "selectionEntryGroups": [
                           {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
+                            "name": "​",
+                            "id": "317a-e52f-2515-98e3",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "0d35-b71a-98a7-4e45",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "b788-c341-c661-d5a6",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Autogun",
+                                "hidden": false,
+                                "id": "2d3b-b760-2173-a3e2",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Shotgun",
+                                "hidden": false,
+                                "id": "8688-8bdf-6029-6b7c",
+                                "sortIndex": 2
+                              }
+                            ],
+                            "defaultSelectionEntryId": "2d3b-b760-2173-a3e2"
                           }
                         ]
                       },
                       {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Grenade Launcher",
+                        "name": "🧬 Neophyte 8",
+                        "id": "1e7d-6012-93cb-2e59",
                         "hidden": false,
-                        "id": "40df-8c27-07db-3cbb",
                         "sortIndex": 4,
-                        "costs": [
+                        "selectionEntryGroups": [
                           {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Webber",
-                        "hidden": false,
-                        "id": "bb3a-bdb2-b576-12d2",
-                        "sortIndex": 5,
-                        "costs": [
-                          {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
+                            "name": "​",
+                            "id": "79e4-2bff-2edc-479a",
+                            "hidden": false,
+                            "sortIndex": 1,
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "acab-313b-96e6-99af",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "5821-f520-f818-1c92",
+                                "includeChildSelections": false
+                              }
+                            ],
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Autogun",
+                                "hidden": false,
+                                "id": "edf5-b123-c0be-fc82",
+                                "sortIndex": 1
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Shotgun",
+                                "hidden": false,
+                                "id": "0d07-915f-66d7-d4a4",
+                                "sortIndex": 2
+                              }
+                            ],
+                            "defaultSelectionEntryId": "edf5-b123-c0be-fc82"
                           }
                         ]
                       }
                     ],
-                    "defaultSelectionEntryId": "2d3b-b760-2173-a3e2"
-                  }
-                ]
-              },
-              {
-                "name": "🧬 Neophyte 8",
-                "id": "1e7d-6012-93cb-2e59",
-                "hidden": false,
-                "sortIndex": 4,
-                "selectionEntryGroups": [
+                    "comment": "No extra cost. Existing individual Autogun/Shotgun choices for Neophytes 7 and 8 remain independent; IDs and defaults are preserved."
+                  },
                   {
-                    "name": "​",
-                    "id": "79e4-2bff-2edc-479a",
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Special Weapon Neophytes 7-8",
                     "hidden": false,
-                    "sortIndex": 1,
-                    "constraints": [
+                    "id": "709e-6518-88ec-76b7",
+                    "costs": [
                       {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "acab-313b-96e6-99af",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "5821-f520-f818-1c92",
-                        "includeChildSelections": false
+                        "name": "Points",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 10
                       }
                     ],
-                    "selectionEntries": [
+                    "selectionEntryGroups": [
                       {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Autogun",
+                        "name": "🧬 Neophyte 7",
+                        "id": "87c1-01f6-3cfa-19de",
                         "hidden": false,
-                        "id": "edf5-b123-c0be-fc82",
-                        "sortIndex": 1
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Shotgun",
-                        "hidden": false,
-                        "id": "0d07-915f-66d7-d4a4",
-                        "sortIndex": 2
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Flamer",
-                        "hidden": false,
-                        "id": "d9e8-ea58-2613-8da3",
-                        "sortIndex": 3,
-                        "costs": [
+                        "selectionEntryGroups": [
                           {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
+                            "name": "​",
+                            "id": "63ad-18e7-3dc4-5914",
+                            "hidden": false,
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Flamer",
+                                "hidden": false,
+                                "id": "0b60-e276-cd64-2fc1",
+                                "sortIndex": 3
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Grenade Launcher",
+                                "hidden": false,
+                                "id": "40df-8c27-07db-3cbb",
+                                "sortIndex": 4
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Webber",
+                                "hidden": false,
+                                "id": "bb3a-bdb2-b576-12d2",
+                                "sortIndex": 5
+                              }
+                            ],
+                            "defaultSelectionEntryId": "0b60-e276-cd64-2fc1",
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "fd40-2c20-6132-d3fa",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "7fb4-79aa-3123-9015",
+                                "includeChildSelections": false
+                              }
+                            ]
                           }
                         ]
                       },
                       {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Grenade Launcher",
+                        "name": "🧬 Neophyte 8",
+                        "id": "a326-5a48-057e-8bc1",
                         "hidden": false,
-                        "id": "6e27-90bd-da7b-58c7",
-                        "sortIndex": 4,
-                        "costs": [
+                        "selectionEntryGroups": [
                           {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Webber",
-                        "hidden": false,
-                        "id": "f3d2-b6d9-f2c4-4c3e",
-                        "sortIndex": 5,
-                        "costs": [
-                          {
-                            "name": "Points",
-                            "typeId": "51b2-306e-1021-d207",
-                            "value": 10
+                            "name": "​",
+                            "id": "ca10-7e6b-42c4-0cc0",
+                            "hidden": false,
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Flamer",
+                                "hidden": false,
+                                "id": "d9e8-ea58-2613-8da3",
+                                "sortIndex": 3
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Grenade Launcher",
+                                "hidden": false,
+                                "id": "6e27-90bd-da7b-58c7",
+                                "sortIndex": 4
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Webber",
+                                "hidden": false,
+                                "id": "f3d2-b6d9-f2c4-4c3e",
+                                "sortIndex": 5
+                              }
+                            ],
+                            "defaultSelectionEntryId": "d9e8-ea58-2613-8da3",
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "d240-6976-737a-69af",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "062c-cc09-485a-df1b",
+                                "includeChildSelections": false
+                              }
+                            ]
                           }
                         ]
                       }
                     ],
-                    "defaultSelectionEntryId": "edf5-b123-c0be-fc82"
+                    "comment": "REV17: One +10-Point purchase replaces the ordinary weapons of both Neophytes 7 and 8. Each paid model independently selects Flamer, Grenade Launcher, or Webber at no additional cost. Previous specialist selection IDs are retained."
                   }
-                ]
+                ],
+                "defaultSelectionEntryId": "5860-abd3-69d2-37ad",
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "d47e-ec52-9d92-35d2",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "4604-571d-9225-e899",
+                    "includeChildSelections": false
+                  }
+                ],
+                "comment": "REV17: Ork Boyz-style paid pair fork. Normal branch retains independent free equipment; the paid branch costs +10 once and offers independent 3-way special-weapon choices for both models."
               },
               {
                 "name": "🧬 Weapons Specialist 9",
@@ -3674,7 +3758,7 @@
                     "name": "Hive Icon",
                     "id": "0a2d-64db-0721-52d4",
                     "hidden": false,
-                    "description": "Improve the Resolve of this unit by 1.",
+                    "description": "After this unit activates, if it has Suppressed X, reduce X by D3.",
                     "noindex": false
                   }
                 ],
@@ -3702,7 +3786,7 @@
             ]
           }
         ],
-        "comment": "REV2 LOADOUT MODEL: Neophyte Leader carries the source one-model melee specialist loadout via separate melee and sidearm selectors. Neophytes 2-6 are the ordinary five-model block. Neophytes 7 and 8 each choose Autogun / Shotgun or one +10 Point Flamer / Grenade Launcher / Webber upgrade. Weapons Specialists 9 and 10 must each choose Heavy Stubber / Mining Laser / Seismic Cannon. No empty / (None) radios are used. Hive Icon remains unit-level Paid Wargear."
+        "comment": "REV17 CURRENT LOADOUT: Neophytes 7-8 select Standard (independent Autogun / Shotgun choices, no extra cost) or Special Weapon pair (+10 Points total). The paid branch gives both models independent Flamer / Grenade Launcher / Webber choices. Existing model- and weapon-selection IDs are retained and +10 per-weapon costs removed. Weapons Specialists 9-10 and other models are unchanged. Hive Icon now clears D3 Suppression after activation rather than modifying Resolve.\n\nHISTORICAL REV2 LOADOUT MODEL: Neophyte Leader carries the source one-model melee specialist loadout via separate melee and sidearm selectors. Neophytes 2-6 are the ordinary five-model block. Neophytes 7 and 8 each choose Autogun / Shotgun or one +10 Point Flamer / Grenade Launcher / Webber upgrade. Weapons Specialists 9 and 10 must each choose Heavy Stubber / Mining Laser / Seismic Cannon. No empty / (None) radios are used. Hive Icon remains unit-level Paid Wargear."
       },
       {
         "type": "unit",
@@ -3895,7 +3979,7 @@
                       {
                         "type": "upgrade",
                         "import": true,
-                        "name": "Mining Tool & Cult Claws & Knife",
+                        "name": "Mining Tool",
                         "hidden": false,
                         "id": "01f0-e304-15cb-7dd4",
                         "sortIndex": 3,
@@ -3916,6 +4000,20 @@
                             "shared": true,
                             "id": "9d29-0061-d13b-19c4",
                             "includeChildSelections": false
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Demolition Charges",
+                        "hidden": false,
+                        "id": "f86d-fd94-b72d-08d1",
+                        "costs": [
+                          {
+                            "name": "Points",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
                           }
                         ]
                       }
@@ -4110,7 +4208,7 @@
                     "name": "Hive Icon",
                     "id": "9795-26aa-b1dd-e535",
                     "hidden": false,
-                    "description": "Improve the Resolve of this unit by 1.",
+                    "description": "After this unit activates, if it has Suppressed X, reduce X by D3.",
                     "noindex": false
                   }
                 ],
@@ -4138,7 +4236,7 @@
             ]
           }
         ],
-        "comment": "REV4 LOADOUT MODEL: Acolyte Leader is the fixed Bonesword & Lash Whip model. Acolyte Hybrid 2 chooses Autopistol & Cult Claws & Knife / Hand Flamer & Cult Claws & Knife / +10 Point Mining Tool & Cult Claws & Knife. Acolyte Hybrid 3 keeps the two ordinary loadouts. Weapons Specialists 4 and 5 must each choose Demolition Charges or Mining Tool. Hive Icon remains the only unit-level Paid Wargear item."
+        "comment": "REV17 CURRENT LOADOUT: The paid +10-Point Acolyte Hybrid 2 replacement is either Mining Tool or Demolition Charges. Either replaces both Autopistol and Cult Claws & Knife; the pre-existing Mining Tool purchase retains its ID. Weapons Specialists 4-5 and other equipment are unchanged. Hive Icon now clears D3 Suppression after activation rather than modifying Resolve.\n\nHISTORICAL REV4 LOADOUT MODEL: Acolyte Leader is the fixed Bonesword & Lash Whip model. Acolyte Hybrid 2 chooses Autopistol & Cult Claws & Knife / Hand Flamer & Cult Claws & Knife / +10 Point Mining Tool & Cult Claws & Knife. Acolyte Hybrid 3 keeps the two ordinary loadouts. Weapons Specialists 4 and 5 must each choose Demolition Charges or Mining Tool. Hive Icon remains the only unit-level Paid Wargear item."
       },
       {
         "type": "unit",
@@ -4669,7 +4767,7 @@
                     "name": "Hive Icon",
                     "id": "55ee-1475-0be1-75b5",
                     "hidden": false,
-                    "description": "Improve the Resolve of this unit by 1.",
+                    "description": "After this unit activates, if it has Suppressed X, reduce X by D3.",
                     "noindex": false
                   }
                 ],
@@ -4697,7 +4795,7 @@
             ]
           }
         ],
-        "comment": "REV6 UI FIX: Hybrid Metamorph 1 keeps the single atomic 'Tyrannic Mutations & Extra Tyrannic Mutations' loadout inside a mandatory 1-of-1 selection group. This prevents New Recruit from rendering the fixed loadout as a quantity spinner."
+        "comment": "REV17 CURRENT ABILITY/WEAPON NAMING: Hive Icon clears D3 Suppression after activation instead of improving Resolve. Autopistol and Hand Flamer are already singular in this builder’s loadout labels, and the source PDF’s weapon-profile names are also singular. Retain the previously verified mandatory 1-of-1 Tyrannic Mutations & Extra Tyrannic Mutations wrapper.\n\nHISTORICAL REV6 UI FIX: Hybrid Metamorph 1 keeps the single atomic 'Tyrannic Mutations & Extra Tyrannic Mutations' loadout inside a mandatory 1-of-1 selection group. This prevents New Recruit from rendering the fixed loadout as a quantity spinner."
       },
       {
         "type": "unit",
@@ -5290,7 +5388,7 @@
       }
     ],
     "authorName": "AlienDilo",
-    "comment": "REV16 / GS40 — CHANGELOG ROLLOVER CONSOLIDATION\nApplied the one-day Changelog rollover rule retroactively: the September 24th player-facing Changelog section was folded into September 23rd, with the September 24 entries moved to the top of that section in their existing order. The `Updated: September 24th` Configuration marker remains unchanged because it records the actual artifact update date. No IDs, targets, points, LP, constraints, modifiers, associations, loadouts, categories, copy-cost arithmetic, Practice behavior, Unit Ability ownership, or other executable mechanics changed.\n\nREV15 / GS40 — GLOBAL CHANGELOG STANDARDIZATION\nStandardized the shared September 19/21/23/24 player-facing Changelog events across the live faction set: emoji-enabled presentation, complete top-level Unit Ability-name presentation, Configuration ordering, 420 Point Practice 0-LP/Quick-equivalent behavior, and the project-wide two-space ◆ export format. Faction-specific Changelog bullets and historical implementation details were preserved. No executable list-construction mechanics changed.\n\nREV14 / GS40 — CURRENT-STATE DOCUMENTATION REFRESH\nCorrected only the present-tense CURRENT STATE documentation to the live GS40 state. Practice copy allowances now reflect the GS39+ Quick-equivalent 4 Troop / 1 Other baseline where the stale GS37 text still described 3 / 0. Historical revision notes and separate shared-library/version references remain unchanged for their own audit passes. No IDs, targets, costs, LP objects or modifiers, constraints, associations, loadouts, category ownership, copy-cost arithmetic, Practice hiding logic, or other executable mechanics changed.\n\nREV13 / GS40 — CHANGELOG CLEANUP\nPreserved the intentionally anonymous catalogue display name `...`, the AlienDilo unofficial-community-homebrew warning, and Catalogue Notes presentation. Added the missing September 24 presentation entry and standardized the player-facing maintenance sections as Changelog while preserving the substantive dated history. No IDs, targets, points, LP, constraints, modifiers, associations, loadouts, transport rules, Rare enforcement, copy-cost arithmetic, or other executable mechanics changed.\n\nREV12 / GS40 — DIAMOND EXPORT SPACING\nAdded exactly one additional literal space after every diamond unit-marker character in catalogue-owned strings. Unit names and childName mirrors therefore remain synchronized. No IDs, targets, costs, LP, constraints, modifiers, associations, loadouts, category ownership, or other executable mechanics changed.\n\nREV11 / GS40 — PRACTICE DESCRIPTION CLEANUP COMPATIBILITY\nRetargeted to Game System revision 40 after removal of redundant construction-summary text from the 420 Point Practice description. No catalogue-local executable data changed in this revision: Practice LP visibility, explicit 0-LP attachment-only exceptions where present, Extra Unit Copy Cost arithmetic, points, IDs, loadouts, associations, and all unit mechanics remain unchanged.\n\nREV10 / GS39 — PRACTICE ZERO-LP MIGRATION\nThis component now targets Game System revision 39. Every locally owned unit root carrying a positive LP cost receives selected-safe Practice hiding: it is hidden while 420 Point Practice is active only when that unit is not already selected. Explicit 0-LP roots do not exist under the project convention, so no exception tags are required. The local Extra Unit Copy Costs Practice branch is now an exact clone of the current Quick branch, giving Practice four normal-cost Troop copies and one normal-cost Other copy. Points, intrinsic LP costs, IDs, loadouts, associations, category ownership, Quick/Standard/Long arithmetic, and unrelated mechanics are unchanged.\n\nCURRENT SYSTEM-WIDE CONFIGURATION ORDER / GS38\nThis catalogue now targets Game System revision 38. Configuration presentation follows the shared lane doctrine: provenance warning 5 when applicable; Game Size 10; army identity 20; optional army structure 30; Leader Points 40; faction trackers 50; Extra Unit Copy Costs 80; Updated 90; About 100. Only locally-owned applicable lanes are stored in this file; Game Size, Leader Points, and About are supplied by the Game System. No unit IDs, costs, constraints, modifiers, attachment topology, loadout legality, or copy-cost arithmetic were changed by this pass.\n\nCURRENT STATE — GENESTEALER CULTS COMMUNITY HOMEBREW / GS40\nThis catalogue implements AlienDilo's community Genestealer Cults homebrew as a functional companion to the Warhammer 40k Reforged listbuilder. Its catalogue display name intentionally remains \"...\" so it is not presented alongside supported Reforged armies as though it were an official legal army. The always-present unofficial-community-homebrew warning remains unchanged. The supplied homebrew PDF remains authoritative for gameplay rules, weapon profiles, relics, psychic powers, and unusual per-model loadout mixtures.\n\nAll 11 source datasheets remain represented. The Patriarch, Magus, and Primus retain their existing 1 LP costs. Abominant remains source-defined as a 0-LP Leader without a synthetic LP:0 cost object; its visible Leader Points rule remains the player-facing statement of that exception. Required Leader attachments and Rare enforcement remain intact.\n\nExtra Unit Copy Costs uses one visible accounting entry while preserving distinct Troop and Other arithmetic. Neophyte Hybrids and Acolyte Hybrids remain the two Troop copy families. Purestrain Genestealers, Aberrants, Hybrid Metamorphs, Atalan Jackals & Atalan Wolfquad, and Goliath Rockgrinder remain the five non-Rare Other copy families. Practice / Quick / Standard / Long normal-copy allowances are 4 / 4 / 6 / 8 for Troops and 1 / 1 / 2 / 3 for Other.\n\nAUTHORING / RUNTIME NOTES\nListbuilder philosophy matches the main project: meaningful final-state list decisions are represented directly while the PDF remains open for rules text and unusual/default mixed loadouts. Top-level Unit Ability names are represented as shared Profiles; nested sub-abilities are intentionally omitted. Unit rows use ◆ ; Loadout Options use 🧰; all model headers use the faction-default 🧬; and listbuilder-relevant Leader Attachment rules use 🔗.\n\nThe REV6 Hybrid Metamorph 1 UI fix remains intact: the atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout stays inside its mandatory 1-of-1 wrapper so New Recruit renders it as a fixed selection rather than a quantity spinner.\n\nHISTORICAL REVISION LOG\nREV1 — initial complete catalogue: all 11 source units, Leader Points, required Leader attachments, Rare enforcement, Troop/Other Additional Copy Costs, loadouts, paid upgrades, and GS26 integration.\n\nREV2 — LOADOUT CLEANUP\nReviewed the first-pass community catalogue against established Drukhari / World Eaters mixed-role squad presentation. The always-present disclaimer now prominently identifies the catalogue as an unofficial community creation by AlienDilo and explicitly unaffiliated with the Reforged development team. Psychic Familiar selectors were removed from The Patriarch and Magus because the source defines Psychic Familiar as an ability. Neophyte Hybrids and Acolyte Hybrids were rebuilt around explicit model roles with mandatory final-state weapon choices and no empty radio entries. Root unit IDs, root points, categories, attachments, Leader Points, Additional Copy Cost mechanics, Rare handling, and all untouched unit trees are unchanged.\n\nREV3 — MODEL ROLE CLEANUP\nRebuilt Atalan Jackals, Hybrid Metamorphs, Aberrants, and Purestrain Genestealers into explicit model-role presentation. Root points/categories and all other listbuilding systems remain unchanged.\n\nREV4 — LOADOUT REFINEMENT\nAtalan Jackal 2 now presents Grenade Launcher as a costed radio option instead of a checkbox. Hybrid Metamorph 1 is now one atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The +10 Mining Tool & Cult Claws & Knife option moved from Acolyte unit-level Paid Wargear onto Acolyte Hybrid 2. Separate leader selectors are ordered melee before sidearm. Root points, categories, attachments, Leader Points, Additional Copy Costs, Rare handling, and unrelated unit trees are unchanged.\n\nREV5 — CATALOGUE CREATE BASELINE\nFinalized visible fixed-size unit names for Neophyte Hybrids (10), Acolyte Hybrids (5), Purestrain Genestealers (10), Aberrants (5), and Hybrid Metamorphs (5). The Changelog section no longer records implementation-stage construction work; all prior bullets were replaced by the single marker <catalogue create>. Stable root IDs, points, categories, loadouts, attachments, Leader Points, Additional Copy Costs, Rare handling, and all listbuilding mechanics are unchanged.\n\nREV6 — HYBRID METAMORPH 1 UI FIX\nRestored a mandatory 1-of-1 selection-group wrapper around the fixed atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The previous direct upgrade entry rendered as a quantity spinner in New Recruit. No points, categories, unit rules, or other catalogue mechanics changed.\n\nREV7 — CURRENT TEMPLATE / PRACTICE / UNIT ABILITIES\nConsolidated current-template update from the live REV6 baseline. Retargeted to Game System revision 37; added 420 Point Practice compatibility to Extra Unit Copy Costs; flattened the visible Troops/Other accounting children into one Extra Unit Copy Costs entry while preserving all existing Quick/Standard/Long arithmetic; adopted the current unit/loadout/model/category/attachment presentation with The Patriarch as the sole  command root; and added top-level Unit Ability profiles from the supplied Genestealer Cults ability map. The unofficial community-homebrew warning, catalogue display name \"...\", source-defined Abominant 0-LP exception, and REV6 Hybrid Metamorph 1 UI fix remain unchanged.\n\nOPTIONAL UNIT ABILITY PRESENTATION: top-level abilities granted by selectable upgrades are linked to the granting selection rather than the unit root. Hive Icon is therefore linked to its +10 Point checkbox on Neophyte Hybrids, Acolyte Hybrids, and Hybrid Metamorphs. Drilldozer Blades remains root-linked because it is mandatory fixed equipment.\n\nREV8 — DIAMOND UNIT MARKERS\nReplaced remaining unit-row and linked-unit chevrons with ◆  throughout the catalogue and synchronized mirrored childName metadata. Genestealer Cults currently has no Additional Model checkbox entries, so no markerless Additional Model conversion was required. Existing 🧬 model headers, 🧰 Loadout Options, 🔗 Leader Attachment labels, themed Unit Ability profiles, Game System category icons, Leader Points, required attachments, Rare enforcement, IDs, points, constraints, modifiers, conditional Hive Icon Unit Ability ownership, loadout legality, and Extra Unit Copy Cost arithmetic are unchanged.",
+    "comment": "REV18 / GS41 — COMPATIBILITY-ONLY GAME SYSTEM MIGRATION\nRetargeted the completed REV17 Genestealer Cults community-homebrew catalogue to the Core Rules 3.3.6 Game System revision 41. Core REV41 preserves the stable Game System ID and contains metadata/documentation changes only. Preserved the intentionally anonymous catalogue name and the unofficial-homebrew warning. All source REV17 rules options, user-facing Changelog history, current Updated marker, unit and equipment IDs, paid upgrades, attachments, copy-cost arithmetic, conditions, modifiers, and other executable catalogue structures are unchanged. No new player-visible game mechanics were introduced by this compatibility sync.\n\nREV17 / GS40 — HIVE ICON AND PAIRED LOADOUT UPDATE\nImplemented the September 28 Genestealer Cults homebrew update from the current source PDF. All three paid Hive Icon rule descriptions now clear D3 Suppression instead of improving Resolve, retaining purchase-only ability ownership and existing IDs. Neophytes 7-8 now use one +10-Point specialist-pair purchase with independent three-choice equipment for both models; ordinary equipment retains independent free choices, old model/group/weapon IDs and defaults. Acolyte Hybrid 2 now offers +10 Mining Tool or +10 Demolition Charges, replacing both Autopistol and Cult Claws & Knife, preserving the existing Mining Tool ID. Magus/Primus attachment spellings and singular Hybrid Metamorph weapon loadout labels already match the requested corrections. The supplied PDF uses the corrected singular weapon profile names. Preserved all unrelated game mechanics and existing GS40 target; no GS41 migration was requested.\n\nREV16 / GS40 — CHANGELOG ROLLOVER CONSOLIDATION\nApplied the one-day Changelog rollover rule retroactively: the September 24th player-facing Changelog section was folded into September 23rd, with the September 24 entries moved to the top of that section in their existing order. The `Updated: September 24th` Configuration marker remains unchanged because it records the actual artifact update date. No IDs, targets, points, LP, constraints, modifiers, associations, loadouts, categories, copy-cost arithmetic, Practice behavior, Unit Ability ownership, or other executable mechanics changed.\n\nREV15 / GS40 — GLOBAL CHANGELOG STANDARDIZATION\nStandardized the shared September 19/21/23/24 player-facing Changelog events across the live faction set: emoji-enabled presentation, complete top-level Unit Ability-name presentation, Configuration ordering, 420 Point Practice 0-LP/Quick-equivalent behavior, and the project-wide two-space ◆ export format. Faction-specific Changelog bullets and historical implementation details were preserved. No executable list-construction mechanics changed.\n\nREV14 / GS40 — CURRENT-STATE DOCUMENTATION REFRESH\nCorrected only the present-tense CURRENT STATE documentation to the live GS40 state. Practice copy allowances now reflect the GS39+ Quick-equivalent 4 Troop / 1 Other baseline where the stale GS37 text still described 3 / 0. Historical revision notes and separate shared-library/version references remain unchanged for their own audit passes. No IDs, targets, costs, LP objects or modifiers, constraints, associations, loadouts, category ownership, copy-cost arithmetic, Practice hiding logic, or other executable mechanics changed.\n\nREV13 / GS40 — CHANGELOG CLEANUP\nPreserved the intentionally anonymous catalogue display name `...`, the AlienDilo unofficial-community-homebrew warning, and Catalogue Notes presentation. Added the missing September 24 presentation entry and standardized the player-facing maintenance sections as Changelog while preserving the substantive dated history. No IDs, targets, points, LP, constraints, modifiers, associations, loadouts, transport rules, Rare enforcement, copy-cost arithmetic, or other executable mechanics changed.\n\nREV12 / GS40 — DIAMOND EXPORT SPACING\nAdded exactly one additional literal space after every diamond unit-marker character in catalogue-owned strings. Unit names and childName mirrors therefore remain synchronized. No IDs, targets, costs, LP, constraints, modifiers, associations, loadouts, category ownership, or other executable mechanics changed.\n\nREV11 / GS40 — PRACTICE DESCRIPTION CLEANUP COMPATIBILITY\nRetargeted to Game System revision 40 after removal of redundant construction-summary text from the 420 Point Practice description. No catalogue-local executable data changed in this revision: Practice LP visibility, explicit 0-LP attachment-only exceptions where present, Extra Unit Copy Cost arithmetic, points, IDs, loadouts, associations, and all unit mechanics remain unchanged.\n\nREV10 / GS39 — PRACTICE ZERO-LP MIGRATION\nThis component now targets Game System revision 39. Every locally owned unit root carrying a positive LP cost receives selected-safe Practice hiding: it is hidden while 420 Point Practice is active only when that unit is not already selected. Explicit 0-LP roots do not exist under the project convention, so no exception tags are required. The local Extra Unit Copy Costs Practice branch is now an exact clone of the current Quick branch, giving Practice four normal-cost Troop copies and one normal-cost Other copy. Points, intrinsic LP costs, IDs, loadouts, associations, category ownership, Quick/Standard/Long arithmetic, and unrelated mechanics are unchanged.\n\nCURRENT SYSTEM-WIDE CONFIGURATION ORDER / GS38\nThis catalogue now targets Game System revision 38. Configuration presentation follows the shared lane doctrine: provenance warning 5 when applicable; Game Size 10; army identity 20; optional army structure 30; Leader Points 40; faction trackers 50; Extra Unit Copy Costs 80; Updated 90; About 100. Only locally-owned applicable lanes are stored in this file; Game Size, Leader Points, and About are supplied by the Game System. No unit IDs, costs, constraints, modifiers, attachment topology, loadout legality, or copy-cost arithmetic were changed by this pass.\n\nCURRENT STATE — GENESTEALER CULTS COMMUNITY HOMEBREW / GS40\nThis catalogue implements AlienDilo's community Genestealer Cults homebrew as a functional companion to the Warhammer 40k Reforged listbuilder. Its catalogue display name intentionally remains \"...\" so it is not presented alongside supported Reforged armies as though it were an official legal army. The always-present unofficial-community-homebrew warning remains unchanged. The supplied homebrew PDF remains authoritative for gameplay rules, weapon profiles, relics, psychic powers, and unusual per-model loadout mixtures.\n\nAll 11 source datasheets remain represented. The Patriarch, Magus, and Primus retain their existing 1 LP costs. Abominant remains source-defined as a 0-LP Leader without a synthetic LP:0 cost object; its visible Leader Points rule remains the player-facing statement of that exception. Required Leader attachments and Rare enforcement remain intact.\n\nExtra Unit Copy Costs uses one visible accounting entry while preserving distinct Troop and Other arithmetic. Neophyte Hybrids and Acolyte Hybrids remain the two Troop copy families. Purestrain Genestealers, Aberrants, Hybrid Metamorphs, Atalan Jackals & Atalan Wolfquad, and Goliath Rockgrinder remain the five non-Rare Other copy families. Practice / Quick / Standard / Long normal-copy allowances are 4 / 4 / 6 / 8 for Troops and 1 / 1 / 2 / 3 for Other.\n\nAUTHORING / RUNTIME NOTES\nListbuilder philosophy matches the main project: meaningful final-state list decisions are represented directly while the PDF remains open for rules text and unusual/default mixed loadouts. Top-level Unit Ability names are represented as shared Profiles; nested sub-abilities are intentionally omitted. Unit rows use ◆ ; Loadout Options use 🧰; all model headers use the faction-default 🧬; and listbuilder-relevant Leader Attachment rules use 🔗.\n\nThe REV6 Hybrid Metamorph 1 UI fix remains intact: the atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout stays inside its mandatory 1-of-1 wrapper so New Recruit renders it as a fixed selection rather than a quantity spinner.\n\nHISTORICAL REVISION LOG\nREV1 — initial complete catalogue: all 11 source units, Leader Points, required Leader attachments, Rare enforcement, Troop/Other Additional Copy Costs, loadouts, paid upgrades, and GS26 integration.\n\nREV2 — LOADOUT CLEANUP\nReviewed the first-pass community catalogue against established Drukhari / World Eaters mixed-role squad presentation. The always-present disclaimer now prominently identifies the catalogue as an unofficial community creation by AlienDilo and explicitly unaffiliated with the Reforged development team. Psychic Familiar selectors were removed from The Patriarch and Magus because the source defines Psychic Familiar as an ability. Neophyte Hybrids and Acolyte Hybrids were rebuilt around explicit model roles with mandatory final-state weapon choices and no empty radio entries. Root unit IDs, root points, categories, attachments, Leader Points, Additional Copy Cost mechanics, Rare handling, and all untouched unit trees are unchanged.\n\nREV3 — MODEL ROLE CLEANUP\nRebuilt Atalan Jackals, Hybrid Metamorphs, Aberrants, and Purestrain Genestealers into explicit model-role presentation. Root points/categories and all other listbuilding systems remain unchanged.\n\nREV4 — LOADOUT REFINEMENT\nAtalan Jackal 2 now presents Grenade Launcher as a costed radio option instead of a checkbox. Hybrid Metamorph 1 is now one atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The +10 Mining Tool & Cult Claws & Knife option moved from Acolyte unit-level Paid Wargear onto Acolyte Hybrid 2. Separate leader selectors are ordered melee before sidearm. Root points, categories, attachments, Leader Points, Additional Copy Costs, Rare handling, and unrelated unit trees are unchanged.\n\nREV5 — CATALOGUE CREATE BASELINE\nFinalized visible fixed-size unit names for Neophyte Hybrids (10), Acolyte Hybrids (5), Purestrain Genestealers (10), Aberrants (5), and Hybrid Metamorphs (5). The Changelog section no longer records implementation-stage construction work; all prior bullets were replaced by the single marker <catalogue create>. Stable root IDs, points, categories, loadouts, attachments, Leader Points, Additional Copy Costs, Rare handling, and all listbuilding mechanics are unchanged.\n\nREV6 — HYBRID METAMORPH 1 UI FIX\nRestored a mandatory 1-of-1 selection-group wrapper around the fixed atomic Tyrannic Mutations & Extra Tyrannic Mutations loadout. The previous direct upgrade entry rendered as a quantity spinner in New Recruit. No points, categories, unit rules, or other catalogue mechanics changed.\n\nREV7 — CURRENT TEMPLATE / PRACTICE / UNIT ABILITIES\nConsolidated current-template update from the live REV6 baseline. Retargeted to Game System revision 37; added 420 Point Practice compatibility to Extra Unit Copy Costs; flattened the visible Troops/Other accounting children into one Extra Unit Copy Costs entry while preserving all existing Quick/Standard/Long arithmetic; adopted the current unit/loadout/model/category/attachment presentation with The Patriarch as the sole  command root; and added top-level Unit Ability profiles from the supplied Genestealer Cults ability map. The unofficial community-homebrew warning, catalogue display name \"...\", source-defined Abominant 0-LP exception, and REV6 Hybrid Metamorph 1 UI fix remain unchanged.\n\nOPTIONAL UNIT ABILITY PRESENTATION: top-level abilities granted by selectable upgrades are linked to the granting selection rather than the unit root. Hive Icon is therefore linked to its +10 Point checkbox on Neophyte Hybrids, Acolyte Hybrids, and Hybrid Metamorphs. Drilldozer Blades remains root-linked because it is mandatory fixed equipment.\n\nREV8 — DIAMOND UNIT MARKERS\nReplaced remaining unit-row and linked-unit chevrons with ◆  throughout the catalogue and synchronized mirrored childName metadata. Genestealer Cults currently has no Additional Model checkbox entries, so no markerless Additional Model conversion was required. Existing 🧬 model headers, 🧰 Loadout Options, 🔗 Leader Attachment labels, themed Unit Ability profiles, Game System category icons, Leader Points, required attachments, Rare enforcement, IDs, points, constraints, modifiers, conditional Hive Icon Unit Ability ownership, loadout legality, and Extra Unit Copy Cost arithmetic are unchanged.",
     "sharedProfiles": [
       {
         "name": "🔮 Psyker 3",
