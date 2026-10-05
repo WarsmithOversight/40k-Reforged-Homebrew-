@@ -2,10 +2,10 @@
   "catalogue": {
     "library": false,
     "id": "08ec-05e9-e427-8151",
-    "name": "Tyranids 3.3.6",
+    "name": "Tyranids 3.3.7",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 41,
-    "revision": 62,
+    "revision": 63,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [
@@ -7085,7 +7085,7 @@
       {
         "type": "upgrade",
         "import": true,
-        "name": "Updated: October 2nd",
+        "name": "Updated: October 5th",
         "hidden": false,
         "id": "3c61-4962-79fd-d880",
         "sortIndex": 90,
@@ -7102,7 +7102,7 @@
             "name": "Patch Notes",
             "id": "04ad-f5b1-8bfb-d85b",
             "hidden": false,
-            "description": "Patch Notes:\nTyranids 3.3.6\n\n• Frenzied Feeders: corrected its created unit name to Ripper Swarms.\n• Warrior and Warrior Brood: updated Bone Sword naming and added Rending Claws weapon choices.\n• Warrior Brood: added a +10-point Winged upgrade with Warrior Wings and Fly.\n• Tyranid Prime: added the new unit, including its optional +10-point Winged upgrade and matching Warrior Brood attachment restrictions.\n• Venomthrope: updated ability names to Gas Bladders and Toxic Spores.\n• Carnifex: increased to 130 points; now chooses any two main weapons and has new +10-point optional weapons and ability upgrades.\n• Hive Guard: gained Unstoppable.\n• Exocrine: increased to 170 points, lost Unstoppable and gained Slaved Will.\n• Added the following units: Winged Tyranid Prime, Raveners, Von Ryan’s Leapers, Stone-Crusher Carnifex, Screamer-Killer, Tyrannofex, Pyrovore, Maleceptor, Toxicrene and Biovore.\n\nFull patch notes and rules can be found in the Reforged Discord Server:\nhttps://discord.gg/BpjkaNmMVB\n\n## Changelog (October 2nd)\n\n• Presentation: removed embedded Rules text from unit upgrades; upgrade choices, costs, and any Unit Ability labels remain unchanged.\n\nChangelog (September 29th)\n• Presentation: removed redundant single-model unit-name headers, placing their existing equipment choices directly under Loadout Options.\n\n## Changelog (September 23rd)\n\n• Presentation: standardized ◆ unit markers to the project-wide two-space format in roster exports.\n• 420 Point Practice: now uses 0 Leader Points and Quick-equivalent Extra Unit Copy Cost allowances; LP-costing units are hidden unless already selected.\n\n## Changelog (September 21st)\n\n• Standardized Configuration ordering across the listbuilder.\n• Presentation: standardized ◆ unit presentation; cleaned Additional Model labels for Ripper Swarms, Hive Guard, and Tyrant Guard.\n\n## Changelog (September 19th)\n\n• Presentation: adopted the current emoji-enabled listbuilder presentation, including LP ⭐, 🏷️ Unit Abilities, 🧰 Loadout Options, and shared category icons.\n• Unit Abilities: added all top-level Unit Ability names across the army.\n• Added 420 Point Practice support across Leader Points, Living Incubator, and Extra Unit Copy Costs; Living Incubator grants no free broods in Practice.\n• Neurothrope - Leech Essence and Trygon Prime - Synapse now appear only with their matching upgrades.\n\n## Changelog (September 17th)\n\n• Added source model-count suffixes across Tyranid multi-model units.\n• Hive Tyrant, Tervigon, and Neurotyrant now spend all Leader Points granted by Game Size; Warrior remains 0 LP.\n• Standardized checkbox controls for Ripper Swarm extra models, Attached Warrior, Hive/Tyrant Guard extra models, and Zoanthrope/Trygon upgrades.\n• Hive Guard loadouts now use atomic cannon & Powerful Limbs packages; added the Frenzied Feeders Ripper Swarm model counter.\n",
+            "description": "Patch Notes:\nTyranids 3.3.7\n\n• Warrior: updated the two weapon choices so the first is melee-only and the second retains the full weapon list; Gargoyles may now include an Attached Warrior w/ Wings with Warrior Wings locked into its first weapon choice.\n• Winged Tyranid Prime: gained Unstoppable.\n• Tyranid Prime: updated the two weapon choices so the first is melee-only and the second retains the full weapon list; the +10-point Winged upgrade and matching Winged / unwinged Warrior Brood attachment states are supported.\n• Gargoyles: gained Forward Deploy.\n• Genestealers: increased from 100 to 120 points.\n• Warrior Brood: updated each Warrior's two weapon choices so the first is melee-only and the second retains the full weapon list; the +10-point Winged upgrade and matching Tyranid Prime attachment state are supported.\n• Tyrannofex: gained Titan.\n\n## Changelog (October 5th)\n\n• Attached Warrior: Hormagaunts and Termagants now lose Instinctive Swarm while a Warrior is attached; Gargoyles now lose Screaming Swarm while a Warrior is attached.",
             "noindex": false
           }
         ],
@@ -9233,7 +9233,27 @@
                         "id": "0e4b-5c1c-377a-2a4e",
                         "hidden": false,
                         "targetId": "09bd-46e9-d2b4-35f6",
-                        "type": "profile"
+                        "type": "profile",
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "true",
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "childId": "95e6-81e5-2943-cbac",
+                                "shared": false,
+                                "includeChildSelections": true,
+                                "includeChildForces": false,
+                                "queryFromSelf": false
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "name": "🎯 Synaptic Targeting",
@@ -9874,7 +9894,27 @@
                         "id": "92bb-266d-0117-d2a7",
                         "hidden": false,
                         "targetId": "09bd-46e9-d2b4-35f6",
-                        "type": "profile"
+                        "type": "profile",
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "true",
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "childId": "95e6-81e5-2943-cbac",
+                                "shared": false,
+                                "includeChildSelections": true,
+                                "includeChildForces": false,
+                                "queryFromSelf": false
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "name": "🎯 Synaptic Targeting",
@@ -10527,7 +10567,27 @@
                         "id": "efcf-50c2-ecb4-b96f",
                         "hidden": false,
                         "targetId": "09bd-46e9-d2b4-35f6",
-                        "type": "profile"
+                        "type": "profile",
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "true",
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "childId": "95e6-81e5-2943-cbac",
+                                "shared": false,
+                                "includeChildSelections": true,
+                                "includeChildForces": false,
+                                "queryFromSelf": false
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "name": "🎯 Synaptic Targeting",
@@ -11409,7 +11469,7 @@
             "type": "profile"
           }
         ],
-        "comment": "REV57 / GS41, Tyranid Prime loadout: two independent required Prime-specific ten-option weapon radios, both default Scything Talons. The +10 Winged checkbox conditionally renames ONLY first-slot Scything Talons to Warrior Wings and hides other unselected first-slot weapons (already selected alternatives remain visible for correction). The second slot is unrestricted. Linked 🪽 Winged profile grants Fly and +1D6 Move Rolls. Zero LP unchanged. Two independent normal/Winged associations follow Chaos Lord/Master of Possession. Incoming association IDs are checked on the PARTICULAR Warrior Brood, using the proven Space Marines Assault Intercessors inbound attachment technique, so other broods in the same roster cannot accidentally satisfy the match. New Recruit runtime test required for 4 combinations and toggling after association.\nA zero-LP external Leader, requires Warrior Brood with matching Winged state. The Winged purchase and matching restriction were implemented in REV57.",
+        "comment": "3.3.7 OPEN / Tyranid Prime loadout: the first required weapon radio is melee-only (Scything Talons, Rending Claws, 2x Bone Sword, Bone Sword & Lash Whip, Rending Claw & Lash Whip); the second required weapon radio retains the full ten-option Prime weapon list. Both default to Scything Talons. The +10 Winged checkbox conditionally renames ONLY first-slot Scything Talons to Warrior Wings and hides other unselected first-slot weapons (already selected alternatives remain visible for correction). The second slot is unrestricted. The +10 Winged selection retains its existing loadout/attachment mechanics; its redundant visible 🪽 Winged profile text is omitted from the loadout presentation. Zero LP unchanged. Two independent normal/Winged associations follow Chaos Lord/Master of Possession. Incoming association IDs are checked on the PARTICULAR Warrior Brood, using the proven Space Marines Assault Intercessors inbound attachment technique, so other broods in the same roster cannot accidentally satisfy the match. New Recruit runtime test required for 4 combinations and toggling after association.\nA zero-LP external Leader, requires Warrior Brood with matching Winged state. The Winged purchase and matching restriction were implemented in REV57.",
         "rules": [
           {
             "name": "🔗 Leader Attachment",
@@ -11818,211 +11878,6 @@
                         ]
                       }
                     ]
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Death Spitter",
-                    "hidden": false,
-                    "id": "f242-0f29-f4c9-5fc4",
-                    "sortIndex": 6,
-                    "modifiers": [
-                      {
-                        "type": "set",
-                        "value": "true",
-                        "field": "hidden",
-                        "conditions": [
-                          {
-                            "type": "atLeast",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "8f78-0aed-3e68-5f72",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "includeChildForces": false,
-                            "queryFromSelf": false,
-                            "childName": "Winged"
-                          },
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "f242-0f29-f4c9-5fc4",
-                            "shared": true,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "queryFromSelf": false,
-                            "childName": "Death Spitter"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Venom Cannon",
-                    "hidden": false,
-                    "id": "5a74-81a2-9abe-5abd",
-                    "sortIndex": 7,
-                    "modifiers": [
-                      {
-                        "type": "set",
-                        "value": "true",
-                        "field": "hidden",
-                        "conditions": [
-                          {
-                            "type": "atLeast",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "8f78-0aed-3e68-5f72",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "includeChildForces": false,
-                            "queryFromSelf": false,
-                            "childName": "Winged"
-                          },
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "5a74-81a2-9abe-5abd",
-                            "shared": true,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "queryFromSelf": false,
-                            "childName": "Venom Cannon"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Barbed Strangler",
-                    "hidden": false,
-                    "id": "26b1-3a68-d30b-5f5b",
-                    "sortIndex": 8,
-                    "modifiers": [
-                      {
-                        "type": "set",
-                        "value": "true",
-                        "field": "hidden",
-                        "conditions": [
-                          {
-                            "type": "atLeast",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "8f78-0aed-3e68-5f72",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "includeChildForces": false,
-                            "queryFromSelf": false,
-                            "childName": "Winged"
-                          },
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "26b1-3a68-d30b-5f5b",
-                            "shared": true,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "queryFromSelf": false,
-                            "childName": "Barbed Strangler"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Devourer",
-                    "hidden": false,
-                    "id": "25f9-9b65-684b-5438",
-                    "sortIndex": 9,
-                    "modifiers": [
-                      {
-                        "type": "set",
-                        "value": "true",
-                        "field": "hidden",
-                        "conditions": [
-                          {
-                            "type": "atLeast",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "8f78-0aed-3e68-5f72",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "includeChildForces": false,
-                            "queryFromSelf": false,
-                            "childName": "Winged"
-                          },
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "25f9-9b65-684b-5438",
-                            "shared": true,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "queryFromSelf": false,
-                            "childName": "Devourer"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Spinefists",
-                    "hidden": false,
-                    "id": "fb79-18ea-e025-5d2d",
-                    "sortIndex": 10,
-                    "modifiers": [
-                      {
-                        "type": "set",
-                        "value": "true",
-                        "field": "hidden",
-                        "conditions": [
-                          {
-                            "type": "atLeast",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "8f78-0aed-3e68-5f72",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "includeChildForces": false,
-                            "queryFromSelf": false,
-                            "childName": "Winged"
-                          },
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "fb79-18ea-e025-5d2d",
-                            "shared": true,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "queryFromSelf": false,
-                            "childName": "Spinefists"
-                          }
-                        ]
-                      }
-                    ]
                   }
                 ],
                 "defaultSelectionEntryId": "79ae-c3c7-3401-5a21"
@@ -12158,15 +12013,6 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "3d31-d29f-185e-51ac"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "🪽 Winged",
-                    "id": "33f9-6e70-dcb7-5587",
-                    "hidden": false,
-                    "targetId": "bb3e-4419-18b8-e194",
-                    "type": "profile"
                   }
                 ],
                 "modifiers": [
@@ -12338,7 +12184,27 @@
             "id": "65eb-54f5-5af1-acfd",
             "hidden": false,
             "targetId": "09bd-46e9-d2b4-35f6",
-            "type": "profile"
+            "type": "profile",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "true",
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "95e6-81e5-2943-cbac",
+                    "shared": false,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "queryFromSelf": false
+                  }
+                ]
+              }
+            ]
           },
           {
             "name": "💨 Bounding Leaps",
@@ -12824,7 +12690,27 @@
             "id": "cc87-3ced-fdd2-896a",
             "hidden": false,
             "targetId": "09bd-46e9-d2b4-35f6",
-            "type": "profile"
+            "type": "profile",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "true",
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "95e6-81e5-2943-cbac",
+                    "shared": false,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "queryFromSelf": false
+                  }
+                ]
+              }
+            ]
           },
           {
             "name": "🎯 Synaptic Targeting",
@@ -12871,10 +12757,36 @@
         "sortIndex": 8,
         "selectionEntryGroups": [
           {
+            "name": "🔗 Attached Warrior",
+            "id": "604a-e02b-e680-4ebb",
+            "hidden": false,
+            "sortIndex": 1,
+            "entryLinks": [
+              {
+                "import": true,
+                "name": "◆  Warrior w/ Wings",
+                "hidden": false,
+                "id": "490a-93ae-418c-4eeb",
+                "type": "selectionEntry",
+                "targetId": "2787-c07a-df92-46eb",
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "2c35-d282-3eeb-449f"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "name": "🧰 Loadout Options",
             "id": "5512-cfe9-a11e-8d26",
             "hidden": false,
-            "sortIndex": 1,
+            "sortIndex": 2,
             "selectionEntryGroups": [
               {
                 "name": "🧬 Gargoyles 1-10",
@@ -12941,13 +12853,40 @@
             "id": "08a8-5f1f-7417-2e48",
             "hidden": false,
             "targetId": "0105-b9c5-8d8e-097e",
-            "type": "profile"
+            "type": "profile",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "true",
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "2787-c07a-df92-46eb",
+                    "shared": false,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "queryFromSelf": false
+                  }
+                ]
+              }
+            ]
           },
           {
             "name": "🧠 Hive Mind Direction",
             "id": "58d4-7a87-085f-d340",
             "hidden": false,
             "targetId": "9b5b-d803-3f55-b1f7",
+            "type": "profile"
+          },
+          {
+            "name": "🧭 Forward Deploy",
+            "id": "f56e-3888-0a0d-47ba",
+            "hidden": false,
+            "targetId": "0bc9-54c8-ea55-aa5e",
             "type": "profile"
           }
         ]
@@ -13176,211 +13115,6 @@
                                 "includeChildForces": false,
                                 "queryFromSelf": false,
                                 "childName": "Bone Sword & Lash Whip"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Death Spitter",
-                        "hidden": false,
-                        "id": "32b4-6d74-4b7f-5863",
-                        "sortIndex": 5,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "32b4-6d74-4b7f-5863",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Death Spitter"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Venom Cannon",
-                        "hidden": false,
-                        "id": "a8d5-6117-8059-1c3b",
-                        "sortIndex": 6,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "a8d5-6117-8059-1c3b",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Venom Cannon"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Barbed Strangler",
-                        "hidden": false,
-                        "id": "88d0-0f4e-0e13-521f",
-                        "sortIndex": 7,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "88d0-0f4e-0e13-521f",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Barbed Strangler"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Devourer",
-                        "hidden": false,
-                        "id": "3024-e254-066f-047e",
-                        "sortIndex": 8,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "3024-e254-066f-047e",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Devourer"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Spinefists",
-                        "hidden": false,
-                        "id": "a0db-ef9e-e754-513f",
-                        "sortIndex": 9,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "a0db-ef9e-e754-513f",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Spinefists"
                               }
                             ]
                           }
@@ -13671,211 +13405,6 @@
                             ]
                           }
                         ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Death Spitter",
-                        "hidden": false,
-                        "id": "dcca-21b4-78dd-bce7",
-                        "sortIndex": 5,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "dcca-21b4-78dd-bce7",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Death Spitter"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Venom Cannon",
-                        "hidden": false,
-                        "id": "7e8d-1ecc-ee86-a13b",
-                        "sortIndex": 6,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "7e8d-1ecc-ee86-a13b",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Venom Cannon"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Barbed Strangler",
-                        "hidden": false,
-                        "id": "facf-bfda-0e23-59d9",
-                        "sortIndex": 7,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "facf-bfda-0e23-59d9",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Barbed Strangler"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Devourer",
-                        "hidden": false,
-                        "id": "d7b6-4080-c4f7-ef34",
-                        "sortIndex": 8,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "d7b6-4080-c4f7-ef34",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Devourer"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Spinefists",
-                        "hidden": false,
-                        "id": "850f-18cd-4d71-a173",
-                        "sortIndex": 9,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "850f-18cd-4d71-a173",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Spinefists"
-                              }
-                            ]
-                          }
-                        ]
                       }
                     ],
                     "defaultSelectionEntryId": "38c0-3192-80ac-d30d"
@@ -14162,211 +13691,6 @@
                             ]
                           }
                         ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Death Spitter",
-                        "hidden": false,
-                        "id": "5847-fd84-42aa-6218",
-                        "sortIndex": 5,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "5847-fd84-42aa-6218",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Death Spitter"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Venom Cannon",
-                        "hidden": false,
-                        "id": "b677-ffc5-9be3-5e7b",
-                        "sortIndex": 6,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "b677-ffc5-9be3-5e7b",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Venom Cannon"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Barbed Strangler",
-                        "hidden": false,
-                        "id": "a2bb-2a08-2153-0ba5",
-                        "sortIndex": 7,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "a2bb-2a08-2153-0ba5",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Barbed Strangler"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Devourer",
-                        "hidden": false,
-                        "id": "dc70-ba91-5bff-db9a",
-                        "sortIndex": 8,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "dc70-ba91-5bff-db9a",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Devourer"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Spinefists",
-                        "hidden": false,
-                        "id": "867a-06f0-d1b6-fb3a",
-                        "sortIndex": 9,
-                        "modifiers": [
-                          {
-                            "type": "set",
-                            "value": "true",
-                            "field": "hidden",
-                            "conditions": [
-                              {
-                                "type": "atLeast",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "ancestor",
-                                "childId": "4623-0939-ca0a-a4da",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Winged Warriors"
-                              },
-                              {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "867a-06f0-d1b6-fb3a",
-                                "shared": true,
-                                "includeChildSelections": false,
-                                "includeChildForces": false,
-                                "queryFromSelf": false,
-                                "childName": "Spinefists"
-                              }
-                            ]
-                          }
-                        ]
                       }
                     ],
                     "defaultSelectionEntryId": "ccfd-1c23-0cdf-346f"
@@ -14607,7 +13931,7 @@
             ]
           }
         ],
-        "comment": "REV60 / GS41: Rending Claws are added to both mandatory weapon slots for all three Warriors. First-slot Rending Claws follow the existing Winged Warriors selected-safe conditional hiding; second slots retain full regular choices. Existing IDs, defaults, Winged upgrade cost, conditional renaming of first-slot Scything Talons and corrective errors are unchanged.\nREV57 attachment validation: two host-side instance-specific error rules compare this brood’s Winged Warriors selection to the incoming Tyranid Prime normal vs Winged association slot IDs, preserving the existing single-Prime restriction. Pattern is taken from Space Marines Assault Intercessors Jump Pack attachment matching, not a roster-wide Winged count.\nREV55 FIX: Each of the three Winged corrective errors now requires the single Winged Warriors upgrade to be selected in its parent Loadout Options group before testing for missing first-slot Wings. This prevents error indicators on ordinary wingless broods.\nREV54: Expanded Winged Warriors corrective errors to explain the invalid first-slot loadout, the unit-wide Wings requirement, and both available remedies. No equipment/visibility mechanics changed.\nREV53 WINGED UX: selecting Winged Warriors (+10) renames each Warrior’s first-slot Scything Talons option Warrior Wings and hides all other UNSELECTED alternatives in the first-slot groups. A previously selected incompatible option stays visible so the user can switch it to Wings, prompted by a concise per-model error. The second-slot groups are unchanged, all equipment/default IDs preserved. Unticking Winged restores all first-slot alternatives. Live New Recruit behavior still needs testing for this selected-safe local visibility pattern.\nREV52 WINGED LOADOUT: one optional +10-point Winged Warriors upgrade in 🧰 Loadout Options. When selected, conditionally rename only the EXISTING first-slot Scything Talons choice of each Warrior to Warrior Wings; keep the second-slot choices, minimums, defaults and all existing IDs untouched. The selected Winged upgrade owns one model-specific corrective error for each first slot lacking its Scything Talons choice. Do NOT create actual extra Wings selections or hide mandatory selections. Warrior Brood Rending Claws, the Tyranid Prime Winged upgrade, and matching attachment validation are now implemented.\nCURRENT EQUIPMENT NOMENCLATURE: Bone Sword, not Warrior Bone Sword. Existing IDs and the original equipment choices are retained. Rending Claws and the Winged conversion are now implemented.\nLOADOUT UI: each Warrior is represented by two final-state arm-pair lists rather than procedural replace-a-Scything-Talons controls.\nREV22 EXPORT WORDING: the six Warrior Brood arm-pair options formerly named '2x Warrior Bone Sword' are now named 'Paired Warrior Bone Swords'. All six existing selection IDs are preserved. This avoids New Recruit producing quantity text such as '6x 2x Warrior Bone Sword' when multiple identical arm pairs are selected.",
+        "comment": "REV60 / GS41: Rending Claws are added to both mandatory weapon slots for all three Warriors. First-slot Rending Claws follow the existing Winged Warriors selected-safe conditional hiding; second slots retain full regular choices. Existing IDs, defaults, Winged upgrade cost, conditional renaming of first-slot Scything Talons and corrective errors are unchanged.\nREV57 attachment validation: two host-side instance-specific error rules compare this brood’s Winged Warriors selection to the incoming Tyranid Prime normal vs Winged association slot IDs, preserving the existing single-Prime restriction. Pattern is taken from Space Marines Assault Intercessors Jump Pack attachment matching, not a roster-wide Winged count.\nREV55 FIX: Each of the three Winged corrective errors now requires the single Winged Warriors upgrade to be selected in its parent Loadout Options group before testing for missing first-slot Wings. This prevents error indicators on ordinary wingless broods.\nREV54: Expanded Winged Warriors corrective errors to explain the invalid first-slot loadout, the unit-wide Wings requirement, and both available remedies. No equipment/visibility mechanics changed.\nREV53 WINGED UX: selecting Winged Warriors (+10) renames each Warrior’s first-slot Scything Talons option Warrior Wings and hides all other UNSELECTED alternatives in the first-slot groups. A previously selected incompatible option stays visible so the user can switch it to Wings, prompted by a concise per-model error. The second-slot groups are unchanged, all equipment/default IDs preserved. Unticking Winged restores all first-slot alternatives. Live New Recruit behavior still needs testing for this selected-safe local visibility pattern.\nREV52 WINGED LOADOUT: one optional +10-point Winged Warriors upgrade in 🧰 Loadout Options. When selected, conditionally rename only the EXISTING first-slot Scything Talons choice of each Warrior to Warrior Wings; keep the second-slot choices, minimums, defaults and all existing IDs untouched. The selected Winged upgrade owns one model-specific corrective error for each first slot lacking its Scything Talons choice. Do NOT create actual extra Wings selections or hide mandatory selections. Warrior Brood Rending Claws, the Tyranid Prime Winged upgrade, and matching attachment validation are now implemented.\nCURRENT EQUIPMENT NOMENCLATURE: Bone Sword, not Warrior Bone Sword. Existing IDs and the original equipment choices are retained. Rending Claws and the Winged conversion are now implemented.\n3.3.7 OPEN LOADOUT UI: each Warrior uses two final-state arm-pair lists. The first list is melee-only (Scything Talons, Rending Claws, Paired Bone Swords, Bone Sword & Lash Whip); the second list retains the full melee-or-ranged weapon list. Existing Winged Warriors logic continues to convert the first-slot Scything Talons choice into Warrior Wings.\nREV22 EXPORT WORDING: the six Warrior Brood arm-pair options formerly named '2x Warrior Bone Sword' are now named 'Paired Warrior Bone Swords'. All six existing selection IDs are preserved. This avoids New Recruit producing quantity text such as '6x 2x Warrior Bone Sword' when multiple identical arm pairs are selected.",
         "infoLinks": [
           {
             "name": "Additional Copy Costs",
@@ -14731,7 +14055,7 @@
           {
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
-            "value": 100
+            "value": 120
           }
         ],
         "categoryLinks": [
@@ -17317,6 +16641,13 @@
             "hidden": false,
             "targetId": "1597-7bc3-9d58-556b",
             "type": "profile"
+          },
+          {
+            "name": "🗿 Titan",
+            "id": "e15c-f836-4137-4d8d",
+            "hidden": false,
+            "targetId": "f9b7-e04d-e741-3f64",
+            "type": "profile"
           }
         ],
         "comment": "REV59 / GS41: Display name of the existing paired fleshborer-hive package is now 2x Fleshborer Hive. Same single selection and same equipment ID; no cost or loadout mechanics changed.\nREV58 / GS41: completed previously staged unit loadout per Tyranids 3.3.6. One required choice of the source’s three primary weapon packages and one independent +20 Stinger Salvoes optional native-empty radio. Source spellings retained. Existing root ID, base cost, category links, copy-cost accounting and top-level ability references unchanged. Nested ability representations are beyond this pass.\nSource does not print Titan/Rare despite 250 points; do not synthesize those traits.",
@@ -19323,46 +18654,6 @@
                     "hidden": false,
                     "id": "f5e6-5f90-b16d-47dc",
                     "sortIndex": 4
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Death Spitter",
-                    "hidden": false,
-                    "id": "770b-e364-be8c-ded5",
-                    "sortIndex": 5
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Venom Cannon",
-                    "hidden": false,
-                    "id": "6e51-fd92-2a4e-d99f",
-                    "sortIndex": 6
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Barbed Strangler",
-                    "hidden": false,
-                    "id": "a08b-9f87-9ee3-1603",
-                    "sortIndex": 7
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Devourer",
-                    "hidden": false,
-                    "id": "3a79-4912-c7e8-eadc",
-                    "sortIndex": 8
-                  },
-                  {
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Spinefists",
-                    "hidden": false,
-                    "id": "1081-67a2-7c86-20f5",
-                    "sortIndex": 9
                   }
                 ],
                 "defaultSelectionEntryId": "d53e-b462-24dc-c530"
@@ -19469,7 +18760,7 @@
             ]
           }
         ],
-        "comment": "REV60 / GS41: Rending Claws are now available in both mandatory Warrior weapon slots. Existing choices, defaults, attachment behavior and option IDs remain unchanged. Both options have the same display name, consistent with natural equipment consolidation.\nCURRENT EQUIPMENT NOMENCLATURE: Bone Sword, not Warrior Bone Sword. Existing IDs and the original equipment choices are retained. Rending Claws are available in both arm-pair selectors.\nCURRENT LOADOUT UI: the Warrior uses two final-state arm-pair lists; each arm pair records one melee package or one ranged bio-weapon.\nNESTED COUNTLESS LEADER: Warrior is a shared full unit rather than a root Leader. Eligible Hormagaunt and Termagant hosts, including Living Incubator broods, expose it through checkbox-style Attached Warrior entryLinks. It remains Countless and costs 0 leader points; no LP cost object is added.",
+        "comment": "REV60 / GS41: Rending Claws are now available in both mandatory Warrior weapon slots. Existing choices, defaults, attachment behavior and option IDs remain unchanged. Both options have the same display name, consistent with natural equipment consolidation.\nCURRENT EQUIPMENT NOMENCLATURE: Bone Sword, not Warrior Bone Sword. Existing IDs and the original equipment choices are retained. Rending Claws are available in both arm-pair selectors.\nCURRENT LOADOUT UI / 3.3.7 OPEN: the Warrior uses two final-state arm-pair lists. The first list is melee-only (Scything Talons, Rending Claws, 2x Bone Sword, Bone Sword & Lash Whip); the second list retains the full melee-or-ranged Warrior weapon list.\nNESTED COUNTLESS LEADER: Warrior is a shared full unit rather than a root Leader. Eligible Hormagaunt and Termagant hosts, including Living Incubator broods, expose it through checkbox-style Attached Warrior entryLinks. It remains Countless and costs 0 leader points; no LP cost object is added.",
         "infoLinks": [
           {
             "name": "🧬 Adaptive Bioform",
@@ -19481,6 +18772,211 @@
           {
             "name": "🧠 Synaptic Node",
             "id": "4db5-d8f8-c5c6-2978",
+            "hidden": false,
+            "targetId": "fbf0-d463-dfb8-e30a",
+            "type": "profile"
+          }
+        ]
+      },
+      {
+        "type": "unit",
+        "import": true,
+        "name": "◆  Warrior w/ Wings",
+        "hidden": false,
+        "id": "2787-c07a-df92-46eb",
+        "costs": [
+          {
+            "name": "Points",
+            "typeId": "51b2-306e-1021-d207",
+            "value": 30
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "ec16-a3ad-02de-9bf1",
+            "id": "05dc-92d0-333c-426d",
+            "primary": true,
+            "name": "Leader"
+          },
+          {
+            "targetId": "eac7-32d5-ecd7-ce9e",
+            "id": "dcf0-4794-d1b8-4d5d",
+            "primary": false,
+            "name": "🪖 Infantry"
+          }
+        ],
+        "rules": [
+          {
+            "name": "🔗 Leader Attachment",
+            "id": "770e-7b69-1980-40b5",
+            "hidden": false,
+            "description": "This unit must attach to:\n● GARGOYLES",
+            "noindex": false
+          },
+          {
+            "name": "Leader Points",
+            "id": "8ad2-2862-1da9-45e0",
+            "hidden": false,
+            "description": "This unit costs 0 leader points.",
+            "noindex": false
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "🧰 Loadout Options",
+            "id": "7089-fc8b-055f-4df7",
+            "hidden": false,
+            "sortIndex": 1,
+            "selectionEntryGroups": [
+              {
+                "name": "​",
+                "id": "9e1f-0934-e01e-4674",
+                "hidden": false,
+                "sortIndex": 1,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "2e78-428e-9789-4bd3"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "693f-10bd-f779-47ed"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Warrior Wings",
+                    "hidden": false,
+                    "id": "78ea-51cd-a246-4f37",
+                    "sortIndex": 1
+                  }
+                ],
+                "defaultSelectionEntryId": "78ea-51cd-a246-4f37"
+              },
+              {
+                "name": "​",
+                "id": "4cd6-e680-3b5f-415b",
+                "hidden": false,
+                "sortIndex": 2,
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "8780-adba-0758-4c93"
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "16ab-3b3a-ee8a-4c99"
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Scything Talons",
+                    "hidden": false,
+                    "id": "7dd7-4aca-bfa7-42cc",
+                    "sortIndex": 1
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Rending Claws",
+                    "hidden": false,
+                    "id": "04d0-5854-b4e3-42f7",
+                    "sortIndex": 2
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "2x Bone Sword",
+                    "hidden": false,
+                    "id": "13fc-0520-3982-4557",
+                    "sortIndex": 3
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Bone Sword & Lash Whip",
+                    "hidden": false,
+                    "id": "7ca8-7470-066d-480d",
+                    "sortIndex": 4
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Death Spitter",
+                    "hidden": false,
+                    "id": "7423-aa8d-732a-4067",
+                    "sortIndex": 5
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Venom Cannon",
+                    "hidden": false,
+                    "id": "d9e6-e09e-f8bc-4aef",
+                    "sortIndex": 6
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Barbed Strangler",
+                    "hidden": false,
+                    "id": "3b86-362b-6436-4c38",
+                    "sortIndex": 7
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Devourer",
+                    "hidden": false,
+                    "id": "0ef2-bac5-ca1e-4e71",
+                    "sortIndex": 8
+                  },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Spinefists",
+                    "hidden": false,
+                    "id": "7e5d-b6d3-9020-4ed5",
+                    "sortIndex": 9
+                  }
+                ],
+                "defaultSelectionEntryId": "7dd7-4aca-bfa7-42cc"
+              }
+            ]
+          }
+        ],
+        "comment": "3.3.7 OPEN / NESTED WINGED WARRIOR: dedicated attached-Warrior state for Gargoyle hosts. The first weapon selector is fixed to Warrior Wings; the second selector retains the normal full Warrior weapon list. This shared unit is exposed only through Gargoyles, so no separate Winged toggle or attachment-state switch is needed.",
+        "infoLinks": [
+          {
+            "name": "🧬 Adaptive Bioform",
+            "id": "f0f8-3e3a-1c9d-40e0",
+            "hidden": false,
+            "targetId": "19b5-fb6c-8ffe-a98f",
+            "type": "profile"
+          },
+          {
+            "name": "🧠 Synaptic Node",
+            "id": "b4f9-b8c6-6f36-406e",
             "hidden": false,
             "targetId": "fbf0-d463-dfb8-e30a",
             "type": "profile"
