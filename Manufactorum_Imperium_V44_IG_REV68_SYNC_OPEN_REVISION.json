@@ -5,7 +5,7 @@
     "name": "Manufactorum Imperium 3.3.3 - Library REV 36 GS 41",
     "gameSystemId": "sys-b298-09dc-9597-23fd",
     "gameSystemRevision": 41,
-    "revision": 38,
+    "revision": 44,
     "battleScribeVersion": "2.03",
     "type": "catalogue",
     "selectionEntries": [],
@@ -778,14 +778,22 @@
                     "includeChildSelections": false
                   }
                 ]
-              },
+              }
+            ]
+          },
+          {
+            "name": "Field Requisitions",
+            "id": "500b-0604-9f50-9098",
+            "hidden": false,
+            "sortIndex": 3,
+            "selectionEntries": [
               {
                 "type": "upgrade",
                 "import": true,
                 "name": "Smoke Launchers",
                 "hidden": false,
                 "id": "236d-4ea9-7c3d-a8fd",
-                "sortIndex": 2,
+                "sortIndex": 1,
                 "costs": [
                   {
                     "name": "Points",
@@ -853,7 +861,7 @@
           {
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
-            "value": 80
+            "value": 70
           }
         ],
         "categoryLinks": [
@@ -993,14 +1001,22 @@
                     "includeChildSelections": false
                   }
                 ]
-              },
+              }
+            ]
+          },
+          {
+            "name": "Field Requisitions",
+            "id": "43b4-8ac1-8a4c-b8ce",
+            "hidden": false,
+            "sortIndex": 3,
+            "selectionEntries": [
               {
                 "type": "upgrade",
                 "import": true,
                 "name": "Smoke Launchers",
                 "hidden": false,
                 "id": "befa-cfc8-0eff-9239",
-                "sortIndex": 2,
+                "sortIndex": 1,
                 "costs": [
                   {
                     "name": "Points",
@@ -1478,14 +1494,22 @@
                     "includeChildSelections": false
                   }
                 ]
-              },
+              }
+            ]
+          },
+          {
+            "name": "Field Requisitions",
+            "id": "102d-3972-29e7-dbd3",
+            "hidden": false,
+            "sortIndex": 3,
+            "selectionEntries": [
               {
                 "type": "upgrade",
                 "import": true,
                 "name": "Smoke Launchers",
                 "hidden": false,
                 "id": "86a6-3eca-c7d9-b285",
-                "sortIndex": 3,
+                "sortIndex": 1,
                 "costs": [
                   {
                     "name": "Points",
@@ -1900,7 +1924,7 @@
             ]
           },
           {
-            "name": "Paid Wargear",
+            "name": "Field Requisitions",
             "id": "585e-6c38-5eb0-b421",
             "hidden": false,
             "sortIndex": 2,
@@ -2368,7 +2392,7 @@
             ]
           },
           {
-            "name": "Paid Wargear",
+            "name": "Field Requisitions",
             "id": "098c-9588-e844-d541",
             "hidden": false,
             "sortIndex": 2,
@@ -3222,7 +3246,7 @@
           {
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
-            "value": 240
+            "value": 220
           }
         ],
         "categoryLinks": [
@@ -3280,7 +3304,7 @@
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Storm Eagle Rocket 1-4",
+                    "name": "Storm Eagle Rocket 1/2/3/4",
                     "hidden": false,
                     "id": "af11-c380-be6f-23fd",
                     "sortIndex": 1
@@ -3839,13 +3863,6 @@
             "hidden": false,
             "targetId": "0be7-82ee-e6f6-2a0d",
             "type": "profile"
-          },
-          {
-            "name": "🛡️ Unstoppable",
-            "id": "d2e3-f7f6-f746-5668",
-            "hidden": false,
-            "targetId": "b8be-0327-136d-f6df",
-            "type": "profile"
           }
         ],
         "comment": "V32 / GS41 — SPACE MARINES 3.3.9: added intrinsic Unstoppable as a library-local top-level ability profile link. All existing Land Raider IDs and other executable data remain unchanged.\nREV1 VEHICLE SHELL ONLY. Source: LAND RAIDER. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=190 Points. Source characteristics recorded for future population only: T 5, Sv 4+, H 11, Rv 4+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nREV3 EMPTY UNIT SHELL. Source skeleton: LAND RAIDER. unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=190 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV15 PRESENTATION CORRECTION: removed the literal '(None)' pseudo-option from the optional Pintle selector. The selector is now genuinely empty by default with max 1 selection. Existing Pintle weapon IDs and costs are unchanged.\nMANUFACTORUM IMPERIUM LIBRARY V18 / SPACE MARINES CURRENT PRESENTATION SYNC: mirrored from Space Marines 3.3.7 REV29 with the stable source root ID preserved. Current unit-row, loadout/model-header, category-display, attachment presentation, and top-level Unit Ability links are synchronized. Consumer-local availability and Extra Unit Copy Cost arithmetic remain outside the library.",
@@ -4379,7 +4396,7 @@
           {
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
-            "value": 140
+            "value": 130
           }
         ],
         "categoryLinks": [
@@ -4424,7 +4441,7 @@
             "type": "profile"
           }
         ],
-        "comment": "REV1 VEHICLE SHELL ONLY. Source: ASTARTES BASILISK. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=140 Points. Source characteristics recorded for future population only: T 3, Sv 4+, H 10, Rv 6+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nREV3 EMPTY UNIT SHELL. Source skeleton: ASTARTES BASILISK. unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=140 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV10: Smoke Launchers and Armour Piercing High Explosive Shells moved from Unit Upgrade to Paid Wargear. Their source max-one mutual exclusivity is preserved in one optional unnamed list.\nREV15 CORRECTION: Smoke Launchers and Armour Piercing High Explosive Shells are now represented as two independent optional Paid Wargear selections, so the model may take both. Both existing item IDs and their +10 Point costs are preserved. Hunter-Killer Missile remains independent.\nMANUFACTORUM IMPERIUM LIBRARY V18 / SPACE MARINES CURRENT PRESENTATION SYNC: mirrored from Space Marines 3.3.7 REV29 with the stable source root ID preserved. Current unit-row, loadout/model-header, category-display, attachment presentation, and top-level Unit Ability links are synchronized. Consumer-local availability and Extra Unit Copy Cost arithmetic remain outside the library.",
+        "comment": "V41 / OPEN 3.4: Portable Astartes Basilisk cost synchronized with Space Marines REV53 (140 -> 130).\nREV1 VEHICLE SHELL ONLY. Source: ASTARTES BASILISK. UUS semantics: unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base cost=140 Points. Source characteristics recorded for future population only: T 3, Sv 4+, H 10, Rv 6+. No equipment, rules, profiles, paid wargear, or loadout choices are implemented yet.\nREV2 MANUFACTORUM PRESENTATION: native Space Marines presentation is now Other. The existing Space Marines Vehicles category link is retained as a non-primary semantic bridge tag so all REV1 IDs survive; AdMech supplies its own primary Space Marines Vehicles presentation on the importing entryLink.\nREV3 EMPTY UNIT SHELL. Source skeleton: ASTARTES BASILISK. unit_type=other; unit_class=vehicle; rare=false; counts_toward_unit_type_limit=true; base=1 base model; base cost represented here=140 Points. Internal model cards, equipment, paid wargear, loadout choices, and Additional Model controls are intentionally deferred.\nREV10: Smoke Launchers and Armour Piercing High Explosive Shells moved from Unit Upgrade to Paid Wargear. Their source max-one mutual exclusivity is preserved in one optional unnamed list.\nREV15 CORRECTION: Smoke Launchers and Armour Piercing High Explosive Shells are now represented as two independent optional Paid Wargear selections, so the model may take both. Both existing item IDs and their +10 Point costs are preserved. Hunter-Killer Missile remains independent.\nMANUFACTORUM IMPERIUM LIBRARY V18 / SPACE MARINES CURRENT PRESENTATION SYNC: mirrored from Space Marines 3.3.7 REV29 with the stable source root ID preserved. Current unit-row, loadout/model-header, category-display, attachment presentation, and top-level Unit Ability links are synchronized. Consumer-local availability and Extra Unit Copy Cost arithmetic remain outside the library.",
         "selectionEntryGroups": [
           {
             "name": "🧰 Loadout Options",
@@ -4633,7 +4650,7 @@
           {
             "name": "Points",
             "typeId": "51b2-306e-1021-d207",
-            "value": 160
+            "value": 140
           }
         ],
         "categoryLinks": [
@@ -5547,21 +5564,14 @@
             "targetId": "e02a-f56c-ccaa-b1a9"
           },
           {
-            "name": "🦿 Walker",
-            "id": "1eb6-a475-e4e2-3787",
-            "hidden": false,
-            "targetId": "5ff9-78df-ef3b-f1ca",
-            "type": "profile"
-          },
-          {
-            "name": "🏛️ Ancient’s Wisdom",
+            "name": "🏛️ Duty Eternal",
             "id": "ab7a-62a5-4dde-acf9",
             "hidden": false,
             "targetId": "d78a-c3f5-4e23-42ed",
             "type": "profile"
           }
         ],
-        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Uses the same asymmetric two-pool presentation as the Chaos Dreadnought while suppressing physical left/right arm headers. Dreadnought Power Fist + auxiliary weapon combinations are atomic final-state choices. Missile Launcher costs +20 in the first pool. Venerable is a separate +10 Unit Upgrade because it improves Health rather than adding wargear.\nMANUFACTORUM IMPERIUM LIBRARY V18 / SPACE MARINES CURRENT PRESENTATION SYNC: mirrored from Space Marines 3.3.7 REV29 with the stable source root ID preserved. Current unit-row, loadout/model-header, category-display, attachment presentation, and top-level Unit Ability links are synchronized. Consumer-local availability and Extra Unit Copy Cost arithmetic remain outside the library.",
+        "comment": "V41 / OPEN 3.4: Power Scourge renamed Power Weapon; Ancient’s Wisdom ability renamed Duty Eternal. Walker remains absent.\nREV14 / 3.3.7 LOADOUT IMPLEMENTATION. Uses the same asymmetric two-pool presentation as the Chaos Dreadnought while suppressing physical left/right arm headers. Dreadnought Power Fist + auxiliary weapon combinations are atomic final-state choices. Missile Launcher costs +20 in the first pool. Venerable is a separate +10 Unit Upgrade because it improves Health rather than adding wargear.\nMANUFACTORUM IMPERIUM LIBRARY V18 / SPACE MARINES CURRENT PRESENTATION SYNC: mirrored from Space Marines 3.3.7 REV29 with the stable source root ID preserved. Current unit-row, loadout/model-header, category-display, attachment presentation, and top-level Unit Ability links are synchronized. Consumer-local availability and Extra Unit Copy Cost arithmetic remain outside the library.",
         "selectionEntryGroups": [
           {
             "name": "🧰 Loadout Options",
@@ -5606,7 +5616,7 @@
                   {
                     "type": "upgrade",
                     "import": true,
-                    "name": "Power Scourge",
+                    "name": "Power Weapon",
                     "hidden": false,
                     "id": "d02b-049e-af49-251d",
                     "sortIndex": 2
@@ -5833,14 +5843,14 @@
             "type": "profile"
           },
           {
-            "name": "🏛️ Ancient’s Wisdom",
+            "name": "🏛️ Duty Eternal",
             "id": "deb2-3ee7-f390-3ef4",
             "hidden": false,
             "targetId": "d78a-c3f5-4e23-42ed",
             "type": "profile"
           }
         ],
-        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Mirrors the normalized Chaos Contemptor architecture: two identical anonymous weapon selectors instead of exposing replacement plumbing. Each selector offers the six normal guns, Heavy Conversion Beamer, Dreadnought Chainfist &, or Dreadnought Power Fist &. Fist packages reveal a mandatory Combi-Bolter / Graviton Gun / Heavy Flamer / Meltagun / Plasma Blaster auxiliary choice, with the fist itself retained as a hidden semantic child. Duplicate normal guns, Chainfists, Heavy Conversion Beamers, and Dreadnought Power Fists are permitted. Cyclone Missile Launcher is optional +10 Paid Wargear.\nREV16 BUGFIX: removed the mutual-hide restriction between the two Power Fist selectors. Both arms may now independently select the Power Fist package.\nMANUFACTORUM IMPERIUM LIBRARY V18 / SPACE MARINES CURRENT PRESENTATION SYNC: mirrored from Space Marines 3.3.7 REV29 with the stable source root ID preserved. Current unit-row, loadout/model-header, category-display, attachment presentation, and top-level Unit Ability links are synchronized. Consumer-local availability and Extra Unit Copy Cost arithmetic remain outside the library.",
+        "comment": "V41 / OPEN 3.4: Ancient’s Wisdom displayed ability renamed Duty Eternal; other unit configuration unchanged.\nREV14 / 3.3.7 LOADOUT IMPLEMENTATION. Mirrors the normalized Chaos Contemptor architecture: two identical anonymous weapon selectors instead of exposing replacement plumbing. Each selector offers the six normal guns, Heavy Conversion Beamer, Dreadnought Chainfist &, or Dreadnought Power Fist &. Fist packages reveal a mandatory Combi-Bolter / Graviton Gun / Heavy Flamer / Meltagun / Plasma Blaster auxiliary choice, with the fist itself retained as a hidden semantic child. Duplicate normal guns, Chainfists, Heavy Conversion Beamers, and Dreadnought Power Fists are permitted. Cyclone Missile Launcher is optional +10 Paid Wargear.\nREV16 BUGFIX: removed the mutual-hide restriction between the two Power Fist selectors. Both arms may now independently select the Power Fist package.\nMANUFACTORUM IMPERIUM LIBRARY V18 / SPACE MARINES CURRENT PRESENTATION SYNC: mirrored from Space Marines 3.3.7 REV29 with the stable source root ID preserved. Current unit-row, loadout/model-header, category-display, attachment presentation, and top-level Unit Ability links are synchronized. Consumer-local availability and Extra Unit Copy Cost arithmetic remain outside the library.",
         "selectionEntryGroups": [
           {
             "name": "🧰 Loadout Options",
@@ -6576,13 +6586,6 @@
             "type": "profile"
           },
           {
-            "name": "🛡️ Unstoppable",
-            "id": "c93b-ee59-0020-4ed5",
-            "hidden": false,
-            "targetId": "b8be-0327-136d-f6df",
-            "type": "profile"
-          },
-          {
             "name": "🦿 Walker",
             "id": "e756-359d-226d-aade",
             "hidden": false,
@@ -6590,14 +6593,14 @@
             "type": "profile"
           },
           {
-            "name": "🏛️ Ancient’s Wisdom",
+            "name": "🏛️ Duty Eternal",
             "id": "f187-0f63-75bd-37df",
             "hidden": false,
             "targetId": "d78a-c3f5-4e23-42ed",
             "type": "profile"
           }
         ],
-        "comment": "REV14 / 3.3.7 LOADOUT IMPLEMENTATION. Mirrors the established Chaos Leviathan presentation. The source 'any two' main weapons are represented as two independent identical selectors and may duplicate the same armament by project convention. Leviathan Siege Drill & Meltagun and Leviathan Siege Claw & Meltagun are inseparable atomic packages. Twin Volkite Caliver / Twin Heavy Flamer is an independent mandatory secondary choice.\nMANUFACTORUM IMPERIUM LIBRARY V8: synchronized from Space Marines 3.3.7 REV14 using the same stable root ID and full loadout tree. This library copy owns no primary presentation; consuming catalogues provide their local Space Marines Vehicles presentation through entryLinks.\nMANUFACTORUM IMPERIUM LIBRARY V18 / SPACE MARINES CURRENT PRESENTATION SYNC: mirrored from Space Marines 3.3.7 REV29 with the stable source root ID preserved. Current unit-row, loadout/model-header, category-display, attachment presentation, and top-level Unit Ability links are synchronized. Consumer-local availability and Extra Unit Copy Cost arithmetic remain outside the library.",
+        "comment": "V41 / OPEN 3.4: Ancient’s Wisdom displayed ability renamed Duty Eternal; other unit configuration unchanged.\nREV14 / 3.3.7 LOADOUT IMPLEMENTATION. Mirrors the established Chaos Leviathan presentation. The source 'any two' main weapons are represented as two independent identical selectors and may duplicate the same armament by project convention. Leviathan Siege Drill & Meltagun and Leviathan Siege Claw & Meltagun are inseparable atomic packages. Twin Volkite Caliver / Twin Heavy Flamer is an independent mandatory secondary choice.\nMANUFACTORUM IMPERIUM LIBRARY V8: synchronized from Space Marines 3.3.7 REV14 using the same stable root ID and full loadout tree. This library copy owns no primary presentation; consuming catalogues provide their local Space Marines Vehicles presentation through entryLinks.\nMANUFACTORUM IMPERIUM LIBRARY V18 / SPACE MARINES CURRENT PRESENTATION SYNC: mirrored from Space Marines 3.3.7 REV29 with the stable source root ID preserved. Current unit-row, loadout/model-header, category-display, attachment presentation, and top-level Unit Ability links are synchronized. Consumer-local availability and Extra Unit Copy Cost arithmetic remain outside the library.",
         "selectionEntryGroups": [
           {
             "name": "🧰 Loadout Options",
@@ -6793,7 +6796,7 @@
         ]
       }
     ],
-    "comment": "REV38 / GS41 — UNIT MARKER EXPORT SPACING (FIGURE SPACE FINAL)\nReplaced the two ordinary spaces after the ◆ unit marker with one U+2007 FIGURE SPACE across executable unit names and childName mirrors so imported units preserve the same roster-export spacing as native units. No listbuilding mechanics changed.\n\nV37 / GS41 — UNIT UPGRADE RULE-TEXT CLEANUP\nRemoved embedded local Rules text from 2 unit upgrade selections. Upgrade selection IDs, costs, constraints, modifiers, profile links, Unit Ability labels, loadout logic, and all executable listbuilding mechanics are unchanged. Only the 2 local descriptive rule IDs attached to those upgrades were retired.\n\nREV36 / GS41 — REMOVE EMPTY SINGLE-MODEL LOADOUT WRAPPERS (September 28, 2026)\nRemoved 19 zero-width presentation-only duplicate-name wrappers that still rendered as empty rows. Lifted the existing child groups and/or equipment options directly into each existing Loadout Options group; for the one-of-one direct radios, transferred exactly their existing group constraints and default to Loadout Options. Retired only obsolete, unreferenced wrapper IDs. All unit IDs, selection IDs, group/constraint IDs other than removed wrappers, equipment, costs, links, modifiers and association logic remain untouched. No new Patch Notes or Changelog: this completes the existing presentation fix rather than documenting an intermediate implementation step. New Recruit visual verification pending.\n\nV35 / GS41 — IMPERIAL GUARD SINGLE-MODEL PRESENTATION SYNC (SEPTEMBER 28, 2026)\nMirrored the REV58 zero-width redundant loadout subsection header cleanup on nine existing portable one-model Imperial Guard vehicle roots. Scout and Armoured Sentinels retain meaningful individual model group headings. Preserved the prior V34 Space Marines header cleanup and all 21 library root IDs, points, profiles, selection groups, constraints, equipment, defaults, categories, availability and import targets.\n\nV34 / GS41 — SPACE MARINES SINGLE-MODEL PRESENTATION SYNC (SEPTEMBER 28, 2026)\nMirrored the REV41 zero-width redundant loadout subsection header cleanup on ten existing Space Marine portable vehicle roots. All existing shared-unit/profile/group IDs, weapon choices, costs, constraints, defaults, intrinsic abilities, availability and consumer link targets remain unchanged. Existing Imperial Guard and Mechanicus vehicle presentations were not changed.\n\nV33 / GS41 — IMPERIAL GUARD 3.3.8 CHIMERA TURRET SYNC\nSynchronized the intrinsic Chimera weapon-selector change from Twin Autocannon to Autocannon, retaining the same selection ID and current 4-option turret selector. Completed legacy faction-name terminology cleanup in comments. All other shared roots, costs, categories and library identity remain unchanged.\n\nV32 / GS41 — SPACE MARINES 3.3.9 LAND RAIDER UNSTOPPABLE\nAdded Land Raider intrinsic Unstoppable to the portable shared root using the existing library-local Unstoppable ability profile. Vindicator Siege Shield remains mandatory, preselected and unchanged. This library now targets GS41; its ID, root IDs, costs, profiles and all other mechanics remain unchanged. The consuming Mechanicus catalogue is not retargeted in this pass.\n\nV31 / GS40 — MECHANICUS INTERNAL REFERENCE AUDIT\nUpdated present-tense source provenance, CURRENT STATE, authoring notes and casual historical consumer labels to the official Mechanicus name. Preserved the documented former name in V30 history. All shared roots, profiles, dependencies, executable content and IDs are unchanged.\n\nV30 / GS40 — MECHANICUS SOURCE-NAME CORRECTION\nAligned current Manufactorum source provenance with the official Mechanicus 3.3.5 name (formerly referenced as Adeptus Mechanicus). Imperial Guard / Space Marines permitted vehicle-source documents and all executable shared-library payload remain unchanged.\n\nV29 / GS40 — MECHANICUS 3.3.5 PERMITTED-SOURCE VERIFICATION\nThe Mechanicus 3.3.5 Manufactorum permission names Imperial Guard and Space Marines as its two vehicle-source documents. Verified that the existing shared library and consumer-facing source names already use those current names, so no imported vehicle root, source target, unit profile, ID, points value, category, or loadout requires a mechanical change. Updated this current-source provenance note only; retained the established Imperial Guard REV53 and Space Marines source sync history.\n\nV28 / GS40 — FINAL SOURCE REFERENCE REFRESH\nUpdated only the present-tense Imperial Guard source provenance from REV52 to current REV53 after the terminology-only Guard revision. The V27 Chimera turret sort-order correction remains intact. No shared payload or executable mechanics changed.\n\nV27 / GS40 — CHIMERA TURRET SORT-ORDER SYNC\nCorrected the shared Chimera turret selector ordering to match the canonical Imperial Guard REV53 source: Multi-Laser 1, Twin Autocannon 2, Twin Heavy Bolter 3, Twin Heavy Flamer 4. Only the stale sortIndex values on Twin Heavy Bolter and Twin Heavy Flamer changed. No IDs, targets, costs, constraints, defaults, loadout legality, category ownership, or other executable library semantics changed.\n\nV26 / GS40 — IMPERIAL GUARD TERMINOLOGY CLEANUP\nRemoved the final legacy faction-name wording from Manufactorum documentation so current Imperial Guard provenance uses the finished faction name consistently. The known Chimera turret sort-order presentation issue remains untouched for its separate correction. No shared roots, IDs, targets, points, LP, constraints, modifiers, loadouts, category ownership, or other executable library mechanics changed.\n\nV25 / GS40 — CURRENT SOURCE REFERENCE REFRESH\nUpdated the present-tense Manufactorum provenance from GS37 / Imperial Guard 3.3.5 REV42 to GS40 / the current Imperial Guard 3.3.6 REV52 source line. All eleven Imperial Guard source root IDs remain present. This pass intentionally does not alter historical source notes, older faction terminology elsewhere, or the known Chimera turret sort-order presentation issue reserved for its separate correction. No executable mechanics changed.\n\nV24 / GS40 — IMPERIAL GUARD 3.3.6 CHIMERA SYNC\nSynchronized the shared Chimera root to the current Imperial Guard 3.3.6 source by adding the free Twin Autocannon turret option (stable source selection ID f4d9-7ea0-12b6-9c31) to the existing mandatory turret selector. The Chimera shared root ID, existing options, points, categories, loadout constraints, Unit Abilities, Other soft-copy semantics, and all other Manufactorum roots remain unchanged. Consumer catalogues inherit the new option through their existing Chimera entryLink.\n\nV23 / GS40 — IMPERIAL GUARD TERMINOLOGY SYNC\nUpdated all remaining legacy faction terminology to `Imperial Guard` throughout catalogue-owned player-facing text, comments, and historical documentation following the faction rename. No IDs, targets, costs, LP, constraints, modifiers, associations, loadouts, categories, copy-cost arithmetic, shared-root content, or other executable mechanics changed.\n\nREV22 / GS40 — DIAMOND EXPORT SPACING\nAdded exactly one additional literal space after every diamond unit-marker character in catalogue-owned strings. Unit names and childName mirrors therefore remain synchronized. No IDs, targets, costs, LP, constraints, modifiers, associations, loadouts, category ownership, or other executable mechanics changed.\n\nREV21 / GS40 — PRACTICE DESCRIPTION CLEANUP COMPATIBILITY\nRetargeted to Game System revision 40 after removal of redundant construction-summary text from the 420 Point Practice description. No catalogue-local executable data changed in this revision: Practice LP visibility, explicit 0-LP attachment-only exceptions where present, Extra Unit Copy Cost arithmetic, points, IDs, loadouts, associations, and all unit mechanics remain unchanged.\n\nREV20 / GS39 — PRACTICE ZERO-LP MIGRATION\nThis component now targets Game System revision 39. Every locally owned unit root carrying a positive LP cost receives selected-safe Practice hiding: it is hidden while 420 Point Practice is active only when that unit is not already selected. Explicit 0-LP roots do not exist under the project convention, so no exception tags are required. This shared library owns no local Extra Unit Copy Costs Configuration branch; its consumers own that arithmetic. Points, intrinsic LP costs, IDs, loadouts, associations, category ownership, Quick/Standard/Long arithmetic, and unrelated mechanics are unchanged.\n\nCURRENT SYSTEM-WIDE CONFIGURATION ORDER / GS38\nThis library now targets Game System revision 38. Configuration presentation follows the shared lane doctrine: provenance warning 5 when applicable; Game Size 10; army identity 20; optional army structure 30; Leader Points 40; faction trackers 50; Extra Unit Copy Costs 80; Updated 90; About 100. Only locally-owned applicable lanes are stored in this file; Game Size, Leader Points, and About are supplied by the Game System. No unit IDs, costs, constraints, modifiers, attachment topology, loadout legality, or copy-cost arithmetic were changed by this pass.\n\nCURRENT STATE\nReusable cross-faction shared vehicle library for the Mechanicus Manufactorum Imperium rule on Game System revision 41. This catalogue contains no root selectionEntries; all twenty-one portable vehicle roots live in sharedSelectionEntries. The library derives eleven Imperial Guard vehicle roots from the current Imperial Guard 3.3.8 synchronized source state and ten chapter-independent Space Marine vehicle roots from their existing synchronized source state, with Land Raider Unstoppable synchronized from Space Marines 3.3.9 REV39. Stable shared root IDs are preserved across all mirrors.\n\nThe eleven Imperial Guard roots now carry their current top-level Unit Ability profile links. The corresponding shared Unit Ability profiles are defined locally in this library so those intrinsic abilities remain available when the roots are consumed outside the Imperial Guard catalogue. Nested sub-abilities remain intentionally omitted, matching the listbuilder-wide Unit Abilities presentation policy.\n\nAUTHORING & RUNTIME NOTES\nShared entries keep their intrinsic source semantics, including points, loadouts, Rare markers, Leader Points, Extra Unit Copy Cost rule links, and top-level Unit Ability links, but the library itself does not own consumer-local availability or accounting. Imperial Guard-derived source categories remain non-primary inside the library. Consuming catalogues own visible entryLink presentation, availability switches, primary category ownership, and consumer-local copy-cost arithmetic. Mechanicus consumes this library through separate Imperial Guard Vehicles and Space Marines Vehicles switches. Baal Predator remains intentionally excluded because the consuming catalogue cannot satisfy its Blood Angels restriction.\n\nSOURCE SYNC HISTORY\nV1: initial Imperial Guard vehicle bridge from Imperial Guard 3.3.3 REV18.\nV2: retargeted to Game System REV14.\nV3-V4: mirrored Imperial Guard REV19-20 presentation polish across all eleven Imperial Guard vehicles.\nV5: retargeted to Game System REV17.\nV6: retargeted to Game System REV18 and added ten chapter-independent Space Marine vehicle bridge roots.\nV7: retargeted to Game System REV21.\nV8: populated the six previously empty Space Marine vehicle bridge roots from Space Marines 3.3.7 REV14.\nV9: synchronized Space Marine Vindicator, Astartes Basilisk, Predator, and Land Raider from Space Marines REV15.\nV10: synchronized all portable Space Marine roots touched by Space Marines REV17.\nV11: synchronized all eleven Imperial Guard vehicle roots from Imperial Guard 3.3.5 REV37 and consolidated library comments for the live GS21 state.\nV12: retargeted to Game System REV24 for the Leader Points migration. Tank Commander is the only shared Manufactorum root carrying both Leader and Counts Toward Leader Maximum semantics, and now intrinsically costs 1 LP. The other twenty portable vehicle roots receive no LP mechanics. The old Tank Commander count tag remains unchanged for parallel migration validation. Mechanicus continues to consume the library through its existing local entryLinks, source switches, presentation categories, selected-safe hiding, and local copy-cost arithmetic; no consumer-local LP cost is required. No shared root IDs, points, loadouts, Rare semantics, Other soft-copy semantics, or unrelated executable mechanics changed.\n\nV13 — LEADER POINTS CLEANUP\nRuntime inheritance was previously validated through the Mechanicus consumer catalogue: Tank Commander contributes exactly 1 LP from this shared Manufactorum root with no consumer-local double-charge. The single legacy Counts Toward Leader Maximum link on Tank Commander matched that 1-LP ownership exactly and was removed. Tank Commander retains its intrinsic 1 LP cost. The other 20 shared Manufactorum unit roots remain without Leader Points mechanics. No shared-unit costs, profiles, loadouts, category ownership, or other library mechanics changed. This library carries no player-facing Patch Notes / Updated configuration item, so no export-marker presentation change was added.\n\nV14 — IMPERIAL GUARD PINTLE PRESENTATION SYNC\nSynchronized Imperial Guard REV40 presentation for Tank Commander, Chimera, Taurox, Leman Russ Battle Tank, and Hellhound. Their existing max-one Pintle Weapons selector objects were moved intact beneath the unit/model block at the bottom of Loadout Options, with the wrapper heading suppressed. Chimera and Taurox now bake the Pintle prefix into their pintle weapon names. Stable root, group, selection, constraint, cost, and infoLink IDs are preserved. The touched library was compatibility-only retargeted from GS24 to GS26.\n\nV15 — CONTEMPTOR DOUBLE POWER FIST SYNC\nSynchronized Space Marines REV22: Contemptor Dreadnought may now select Dreadnought Power Fist & in both weapon selectors. The previous mutual-hide modifiers were removed; all weapon package IDs, hidden fist semantic children, auxiliary selectors, costs, and profiles are unchanged.\nV16 — IMPERIAL GUARD CURRENT TEMPLATE / UNIT ABILITIES SYNC\nRetargeted the library to Game System revision 37 and synchronized all eleven portable Imperial Guard roots from Imperial Guard 3.3.5 REV42. The sync includes the current unit-row, loadout, model-header, category-display, Sentinel additional-model, and top-level Unit Ability presentation while preserving stable source IDs and library-specific non-primary category ownership. Added only the shared Unit Ability profiles required by those eleven Imperial Guard roots. The ten Space Marine vehicle roots are byte-for-byte unchanged from V15. No consumer-local availability, primary category, or Extra Unit Copy Cost arithmetic was moved into the library.\n\nV17 — SPACE MARINES CURRENT TEMPLATE / UNIT ABILITIES SYNC\nSynchronized the ten portable Space Marine vehicle roots from Space Marines 3.3.7 REV27 while preserving all stable root IDs and the existing library ownership boundary. Rhino, Land Raider, Predator, Astartes Basilisk, Whirlwind, Vindicator, Land Speeder, Dreadnought, Contemptor Dreadnought, and Leviathan Dreadnought now carry the current ◆  unit-row, 🧰 loadout, 🛡️ model-header, category-display, and top-level Unit Ability presentation. Manufactorum's existing Leviathan non-primary Other category override is preserved. Existing Imperial Guard shared roots are byte-for-byte unchanged from V16. Unit Ability profiles already present from the Imperial Guard sync are reused where names match; only additional profiles required by the Space Marine roots were added. No consumer-local availability, primary presentation overrides, Chapter restrictions, or Extra Unit Copy Cost arithmetic was moved into the library.\n\nV17 SPACE MARINE CONDITIONAL ABILITY PRESENTATION CORRECTION\nThe ten portable Space Marine roots remain synchronized to Space Marines REV27. Optional top-level Unit Ability links now live on the actual selectable upgrade for Smoke Launchers, Armour Piercing High Explosive Shells, Advanced Jamming Beacon, and Venerable. Vindicator Siege Shield remains root-linked because it is mandatory fixed equipment. The eleven Imperial Guard shared roots are intentionally untouched by this Space Marine-scoped correction.\n\nV17 IMPERIAL GUARD CONDITIONAL ABILITY PRESENTATION CORRECTION\nThe eleven portable Imperial Guard roots remain synchronized to Imperial Guard REV42. Optional top-level Unit Ability links now live on the actual selectable upgrade for Smoke Launchers and Armour Piercing High Explosive Shells. Tank Commander remains medal-free and otherwise unchanged. The ten Space Marine shared roots retain the previously validated V17 conditional-ability correction byte-for-byte.\n\nLIBRARY V18 — DIAMOND UNIT MARKERS / CURRENT CONSUMER PRESENTATION SYNC\nReplaced remaining shared-unit and linked-unit chevrons with ◆  throughout the library and synchronized mirrored childName metadata. The Scout Sentinel and Armoured Sentinel optional second-model entries now use the plain label Additional Sentinel Model with no prefix marker. All eleven Imperial Guard shared roots match Imperial Guard REV43 presentation by stable root ID, and all ten Space Marine shared roots match Space Marines REV29 presentation by stable root ID. Existing shared root IDs, points, Leader Points, loadouts, paid wargear, Unit Ability ownership, Rare semantics, attachment associations, Other soft-copy semantics, categories, constraints, modifiers, and Manufactorum consumer semantics are unchanged.",
+    "comment": "V43 / GS41 — NOVEMBER 1 IMPERIAL GUARD 3.4 OPEN REVISION POINT SYNC\nTaurox cost 80 -> 70 and Manticore 240 -> 220, mirrored from Imperial Guard REV66. Existing shared-unit IDs, equipment, Unit Ability links and other mechanics unchanged.\nV41 / GS41 — OCTOBER 30 SPACE MARINES REV53 SHARED UNIT SYNC\nSynchronized Astartes Basilisk base cost 140 -> 130; Dreadnought Power Scourge -> Power Weapon; and Duty Eternal ability label/profile for Dreadnought, Contemptor Dreadnought and Leviathan Dreadnought. Preserved shared profile/selection IDs, existing Walker/Unstoppable configuration, other Imperial units and historic maintenance comments; no Changelog edit.\nV40 / GS41 — OCTOBER 24 MANTICORE PRESENTATION MIRROR SYNC\nMirrored the Imperial Guard REV64 Manticore fixed equipment display label 'Storm Eagle Rocket 1/2/3/4' (formerly 'Storm Eagle Rocket 1-4') in the Manufactorum portable Manticore definition. All IDs, costs, model/loadout structure, category ownership, library identity, validations and other mechanics unchanged. No player-facing Changelog lives in this shared library.\n\nV39 / GS41 — SPACE MARINES 3.4 OPEN REVISION MANUFACTORUM SYNCHRONIZATION\nWhirlwind base points 160 to 140 and Dreadnought intrinsic Walker Unit Ability link removed, matching Space Marines 3.4 Open Revision REV47. Retained all library-owned IDs, imported unit roots, portable profile IDs and all other unit choices, costs, model groups, categories, optional upgrades, associations, modifiers, validation, and comments. Shared Walker profile remains, since Contemptor and Leviathan Dreadnoughts still use it. This is an unpublished library update; public name and link identity remain unchanged.\n\nREV38 / GS41 — UNIT MARKER EXPORT SPACING (FIGURE SPACE FINAL)\nReplaced the two ordinary spaces after the ◆ unit marker with one U+2007 FIGURE SPACE across executable unit names and childName mirrors so imported units preserve the same roster-export spacing as native units. No listbuilding mechanics changed.\n\nV37 / GS41 — UNIT UPGRADE RULE-TEXT CLEANUP\nRemoved embedded local Rules text from 2 unit upgrade selections. Upgrade selection IDs, costs, constraints, modifiers, profile links, Unit Ability labels, loadout logic, and all executable listbuilding mechanics are unchanged. Only the 2 local descriptive rule IDs attached to those upgrades were retired.\n\nREV36 / GS41 — REMOVE EMPTY SINGLE-MODEL LOADOUT WRAPPERS (September 28, 2026)\nRemoved 19 zero-width presentation-only duplicate-name wrappers that still rendered as empty rows. Lifted the existing child groups and/or equipment options directly into each existing Loadout Options group; for the one-of-one direct radios, transferred exactly their existing group constraints and default to Loadout Options. Retired only obsolete, unreferenced wrapper IDs. All unit IDs, selection IDs, group/constraint IDs other than removed wrappers, equipment, costs, links, modifiers and association logic remain untouched. No new Patch Notes or Changelog: this completes the existing presentation fix rather than documenting an intermediate implementation step. New Recruit visual verification pending.\n\nV35 / GS41 — IMPERIAL GUARD SINGLE-MODEL PRESENTATION SYNC (SEPTEMBER 28, 2026)\nMirrored the REV58 zero-width redundant loadout subsection header cleanup on nine existing portable one-model Imperial Guard vehicle roots. Scout and Armoured Sentinels retain meaningful individual model group headings. Preserved the prior V34 Space Marines header cleanup and all 21 library root IDs, points, profiles, selection groups, constraints, equipment, defaults, categories, availability and import targets.\n\nV34 / GS41 — SPACE MARINES SINGLE-MODEL PRESENTATION SYNC (SEPTEMBER 28, 2026)\nMirrored the REV41 zero-width redundant loadout subsection header cleanup on ten existing Space Marine portable vehicle roots. All existing shared-unit/profile/group IDs, weapon choices, costs, constraints, defaults, intrinsic abilities, availability and consumer link targets remain unchanged. Existing Imperial Guard and Mechanicus vehicle presentations were not changed.\n\nV33 / GS41 — IMPERIAL GUARD 3.3.8 CHIMERA TURRET SYNC\nSynchronized the intrinsic Chimera weapon-selector change from Twin Autocannon to Autocannon, retaining the same selection ID and current 4-option turret selector. Completed legacy faction-name terminology cleanup in comments. All other shared roots, costs, categories and library identity remain unchanged.\n\nV32 / GS41 — SPACE MARINES 3.3.9 LAND RAIDER UNSTOPPABLE\nAdded Land Raider intrinsic Unstoppable to the portable shared root using the existing library-local Unstoppable ability profile. Vindicator Siege Shield remains mandatory, preselected and unchanged. This library now targets GS41; its ID, root IDs, costs, profiles and all other mechanics remain unchanged. The consuming Mechanicus catalogue is not retargeted in this pass.\n\nV31 / GS40 — MECHANICUS INTERNAL REFERENCE AUDIT\nUpdated present-tense source provenance, CURRENT STATE, authoring notes and casual historical consumer labels to the official Mechanicus name. Preserved the documented former name in V30 history. All shared roots, profiles, dependencies, executable content and IDs are unchanged.\n\nV30 / GS40 — MECHANICUS SOURCE-NAME CORRECTION\nAligned current Manufactorum source provenance with the official Mechanicus 3.3.5 name (formerly referenced as Adeptus Mechanicus). Imperial Guard / Space Marines permitted vehicle-source documents and all executable shared-library payload remain unchanged.\n\nV29 / GS40 — MECHANICUS 3.3.5 PERMITTED-SOURCE VERIFICATION\nThe Mechanicus 3.3.5 Manufactorum permission names Imperial Guard and Space Marines as its two vehicle-source documents. Verified that the existing shared library and consumer-facing source names already use those current names, so no imported vehicle root, source target, unit profile, ID, points value, category, or loadout requires a mechanical change. Updated this current-source provenance note only; retained the established Imperial Guard REV53 and Space Marines source sync history.\n\nV28 / GS40 — FINAL SOURCE REFERENCE REFRESH\nUpdated only the present-tense Imperial Guard source provenance from REV52 to current REV53 after the terminology-only Guard revision. The V27 Chimera turret sort-order correction remains intact. No shared payload or executable mechanics changed.\n\nV27 / GS40 — CHIMERA TURRET SORT-ORDER SYNC\nCorrected the shared Chimera turret selector ordering to match the canonical Imperial Guard REV53 source: Multi-Laser 1, Twin Autocannon 2, Twin Heavy Bolter 3, Twin Heavy Flamer 4. Only the stale sortIndex values on Twin Heavy Bolter and Twin Heavy Flamer changed. No IDs, targets, costs, constraints, defaults, loadout legality, category ownership, or other executable library semantics changed.\n\nV26 / GS40 — IMPERIAL GUARD TERMINOLOGY CLEANUP\nRemoved the final legacy faction-name wording from Manufactorum documentation so current Imperial Guard provenance uses the finished faction name consistently. The known Chimera turret sort-order presentation issue remains untouched for its separate correction. No shared roots, IDs, targets, points, LP, constraints, modifiers, loadouts, category ownership, or other executable library mechanics changed.\n\nV25 / GS40 — CURRENT SOURCE REFERENCE REFRESH\nUpdated the present-tense Manufactorum provenance from GS37 / Imperial Guard 3.3.5 REV42 to GS40 / the current Imperial Guard 3.3.6 REV52 source line. All eleven Imperial Guard source root IDs remain present. This pass intentionally does not alter historical source notes, older faction terminology elsewhere, or the known Chimera turret sort-order presentation issue reserved for its separate correction. No executable mechanics changed.\n\nV24 / GS40 — IMPERIAL GUARD 3.3.6 CHIMERA SYNC\nSynchronized the shared Chimera root to the current Imperial Guard 3.3.6 source by adding the free Twin Autocannon turret option (stable source selection ID f4d9-7ea0-12b6-9c31) to the existing mandatory turret selector. The Chimera shared root ID, existing options, points, categories, loadout constraints, Unit Abilities, Other soft-copy semantics, and all other Manufactorum roots remain unchanged. Consumer catalogues inherit the new option through their existing Chimera entryLink.\n\nV23 / GS40 — IMPERIAL GUARD TERMINOLOGY SYNC\nUpdated all remaining legacy faction terminology to `Imperial Guard` throughout catalogue-owned player-facing text, comments, and historical documentation following the faction rename. No IDs, targets, costs, LP, constraints, modifiers, associations, loadouts, categories, copy-cost arithmetic, shared-root content, or other executable mechanics changed.\n\nREV22 / GS40 — DIAMOND EXPORT SPACING\nAdded exactly one additional literal space after every diamond unit-marker character in catalogue-owned strings. Unit names and childName mirrors therefore remain synchronized. No IDs, targets, costs, LP, constraints, modifiers, associations, loadouts, category ownership, or other executable mechanics changed.\n\nREV21 / GS40 — PRACTICE DESCRIPTION CLEANUP COMPATIBILITY\nRetargeted to Game System revision 40 after removal of redundant construction-summary text from the 420 Point Practice description. No catalogue-local executable data changed in this revision: Practice LP visibility, explicit 0-LP attachment-only exceptions where present, Extra Unit Copy Cost arithmetic, points, IDs, loadouts, associations, and all unit mechanics remain unchanged.\n\nREV20 / GS39 — PRACTICE ZERO-LP MIGRATION\nThis component now targets Game System revision 39. Every locally owned unit root carrying a positive LP cost receives selected-safe Practice hiding: it is hidden while 420 Point Practice is active only when that unit is not already selected. Explicit 0-LP roots do not exist under the project convention, so no exception tags are required. This shared library owns no local Extra Unit Copy Costs Configuration branch; its consumers own that arithmetic. Points, intrinsic LP costs, IDs, loadouts, associations, category ownership, Quick/Standard/Long arithmetic, and unrelated mechanics are unchanged.\n\nCURRENT SYSTEM-WIDE CONFIGURATION ORDER / GS38\nThis library now targets Game System revision 38. Configuration presentation follows the shared lane doctrine: provenance warning 5 when applicable; Game Size 10; army identity 20; optional army structure 30; Leader Points 40; faction trackers 50; Extra Unit Copy Costs 80; Updated 90; About 100. Only locally-owned applicable lanes are stored in this file; Game Size, Leader Points, and About are supplied by the Game System. No unit IDs, costs, constraints, modifiers, attachment topology, loadout legality, or copy-cost arithmetic were changed by this pass.\n\nCURRENT STATE\nReusable cross-faction shared vehicle library for the Mechanicus Manufactorum Imperium rule on Game System revision 41. This catalogue contains no root selectionEntries; all twenty-one portable vehicle roots live in sharedSelectionEntries. The library derives eleven Imperial Guard vehicle roots from the current Imperial Guard 3.3.8 synchronized source state and ten chapter-independent Space Marine vehicle roots from their existing synchronized source state, with Land Raider Unstoppable synchronized from Space Marines 3.3.9 REV39. Stable shared root IDs are preserved across all mirrors.\n\nThe eleven Imperial Guard roots now carry their current top-level Unit Ability profile links. The corresponding shared Unit Ability profiles are defined locally in this library so those intrinsic abilities remain available when the roots are consumed outside the Imperial Guard catalogue. Nested sub-abilities remain intentionally omitted, matching the listbuilder-wide Unit Abilities presentation policy.\n\nAUTHORING & RUNTIME NOTES\nShared entries keep their intrinsic source semantics, including points, loadouts, Rare markers, Leader Points, Extra Unit Copy Cost rule links, and top-level Unit Ability links, but the library itself does not own consumer-local availability or accounting. Imperial Guard-derived source categories remain non-primary inside the library. Consuming catalogues own visible entryLink presentation, availability switches, primary category ownership, and consumer-local copy-cost arithmetic. Mechanicus consumes this library through separate Imperial Guard Vehicles and Space Marines Vehicles switches. Baal Predator remains intentionally excluded because the consuming catalogue cannot satisfy its Blood Angels restriction.\n\nSOURCE SYNC HISTORY\nV1: initial Imperial Guard vehicle bridge from Imperial Guard 3.3.3 REV18.\nV2: retargeted to Game System REV14.\nV3-V4: mirrored Imperial Guard REV19-20 presentation polish across all eleven Imperial Guard vehicles.\nV5: retargeted to Game System REV17.\nV6: retargeted to Game System REV18 and added ten chapter-independent Space Marine vehicle bridge roots.\nV7: retargeted to Game System REV21.\nV8: populated the six previously empty Space Marine vehicle bridge roots from Space Marines 3.3.7 REV14.\nV9: synchronized Space Marine Vindicator, Astartes Basilisk, Predator, and Land Raider from Space Marines REV15.\nV10: synchronized all portable Space Marine roots touched by Space Marines REV17.\nV11: synchronized all eleven Imperial Guard vehicle roots from Imperial Guard 3.3.5 REV37 and consolidated library comments for the live GS21 state.\nV12: retargeted to Game System REV24 for the Leader Points migration. Tank Commander is the only shared Manufactorum root carrying both Leader and Counts Toward Leader Maximum semantics, and now intrinsically costs 1 LP. The other twenty portable vehicle roots receive no LP mechanics. The old Tank Commander count tag remains unchanged for parallel migration validation. Mechanicus continues to consume the library through its existing local entryLinks, source switches, presentation categories, selected-safe hiding, and local copy-cost arithmetic; no consumer-local LP cost is required. No shared root IDs, points, loadouts, Rare semantics, Other soft-copy semantics, or unrelated executable mechanics changed.\n\nV13 — LEADER POINTS CLEANUP\nRuntime inheritance was previously validated through the Mechanicus consumer catalogue: Tank Commander contributes exactly 1 LP from this shared Manufactorum root with no consumer-local double-charge. The single legacy Counts Toward Leader Maximum link on Tank Commander matched that 1-LP ownership exactly and was removed. Tank Commander retains its intrinsic 1 LP cost. The other 20 shared Manufactorum unit roots remain without Leader Points mechanics. No shared-unit costs, profiles, loadouts, category ownership, or other library mechanics changed. This library carries no player-facing Patch Notes / Updated configuration item, so no export-marker presentation change was added.\n\nV14 — IMPERIAL GUARD PINTLE PRESENTATION SYNC\nSynchronized Imperial Guard REV40 presentation for Tank Commander, Chimera, Taurox, Leman Russ Battle Tank, and Hellhound. Their existing max-one Pintle Weapons selector objects were moved intact beneath the unit/model block at the bottom of Loadout Options, with the wrapper heading suppressed. Chimera and Taurox now bake the Pintle prefix into their pintle weapon names. Stable root, group, selection, constraint, cost, and infoLink IDs are preserved. The touched library was compatibility-only retargeted from GS24 to GS26.\n\nV15 — CONTEMPTOR DOUBLE POWER FIST SYNC\nSynchronized Space Marines REV22: Contemptor Dreadnought may now select Dreadnought Power Fist & in both weapon selectors. The previous mutual-hide modifiers were removed; all weapon package IDs, hidden fist semantic children, auxiliary selectors, costs, and profiles are unchanged.\nV16 — IMPERIAL GUARD CURRENT TEMPLATE / UNIT ABILITIES SYNC\nRetargeted the library to Game System revision 37 and synchronized all eleven portable Imperial Guard roots from Imperial Guard 3.3.5 REV42. The sync includes the current unit-row, loadout, model-header, category-display, Sentinel additional-model, and top-level Unit Ability presentation while preserving stable source IDs and library-specific non-primary category ownership. Added only the shared Unit Ability profiles required by those eleven Imperial Guard roots. The ten Space Marine vehicle roots are byte-for-byte unchanged from V15. No consumer-local availability, primary category, or Extra Unit Copy Cost arithmetic was moved into the library.\n\nV17 — SPACE MARINES CURRENT TEMPLATE / UNIT ABILITIES SYNC\nSynchronized the ten portable Space Marine vehicle roots from Space Marines 3.3.7 REV27 while preserving all stable root IDs and the existing library ownership boundary. Rhino, Land Raider, Predator, Astartes Basilisk, Whirlwind, Vindicator, Land Speeder, Dreadnought, Contemptor Dreadnought, and Leviathan Dreadnought now carry the current ◆  unit-row, 🧰 loadout, 🛡️ model-header, category-display, and top-level Unit Ability presentation. Manufactorum's existing Leviathan non-primary Other category override is preserved. Existing Imperial Guard shared roots are byte-for-byte unchanged from V16. Unit Ability profiles already present from the Imperial Guard sync are reused where names match; only additional profiles required by the Space Marine roots were added. No consumer-local availability, primary presentation overrides, Chapter restrictions, or Extra Unit Copy Cost arithmetic was moved into the library.\n\nV17 SPACE MARINE CONDITIONAL ABILITY PRESENTATION CORRECTION\nThe ten portable Space Marine roots remain synchronized to Space Marines REV27. Optional top-level Unit Ability links now live on the actual selectable upgrade for Smoke Launchers, Armour Piercing High Explosive Shells, Advanced Jamming Beacon, and Venerable. Vindicator Siege Shield remains root-linked because it is mandatory fixed equipment. The eleven Imperial Guard shared roots are intentionally untouched by this Space Marine-scoped correction.\n\nV17 IMPERIAL GUARD CONDITIONAL ABILITY PRESENTATION CORRECTION\nThe eleven portable Imperial Guard roots remain synchronized to Imperial Guard REV42. Optional top-level Unit Ability links now live on the actual selectable upgrade for Smoke Launchers and Armour Piercing High Explosive Shells. Tank Commander remains medal-free and otherwise unchanged. The ten Space Marine shared roots retain the previously validated V17 conditional-ability correction byte-for-byte.\n\nLIBRARY V18 — DIAMOND UNIT MARKERS / CURRENT CONSUMER PRESENTATION SYNC\nReplaced remaining shared-unit and linked-unit chevrons with ◆  throughout the library and synchronized mirrored childName metadata. The Scout Sentinel and Armoured Sentinel optional second-model entries now use the plain label Additional Sentinel Model with no prefix marker. All eleven Imperial Guard shared roots match Imperial Guard REV43 presentation by stable root ID, and all ten Space Marine shared roots match Space Marines REV29 presentation by stable root ID. Existing shared root IDs, points, Leader Points, loadouts, paid wargear, Unit Ability ownership, Rare semantics, attachment associations, Other soft-copy semantics, categories, constraints, modifiers, and Manufactorum consumer semantics are unchanged.",
     "sharedProfiles": [
       {
         "name": "📣 Regimental Orders",
@@ -7034,7 +7037,7 @@
         ]
       },
       {
-        "name": "🏛️ Ancient’s Wisdom",
+        "name": "🏛️ Duty Eternal",
         "id": "d78a-c3f5-4e23-42ed",
         "hidden": false,
         "typeId": "9b19-41c8-205f-3055",
@@ -7050,20 +7053,6 @@
       {
         "name": "🏛️ Venerable",
         "id": "cfc7-b791-79d2-1cc2",
-        "hidden": false,
-        "typeId": "9b19-41c8-205f-3055",
-        "typeName": "🏷️ Unit Abilities",
-        "characteristics": [
-          {
-            "name": "Text",
-            "$text": "",
-            "typeId": "7712-7866-d947-ad2a"
-          }
-        ]
-      },
-      {
-        "name": "🛡️ Unstoppable",
-        "id": "b8be-0327-136d-f6df",
         "hidden": false,
         "typeId": "9b19-41c8-205f-3055",
         "typeName": "🏷️ Unit Abilities",
